@@ -30,8 +30,8 @@ Documentation examples library was added.
 ## Remaining Issues
 
 - Public Glossary example is not yet created.
-- Authority Matrix example is not yet created.
-- ADR example is not yet created.
+- Design Philosophy example is not yet created.
+- Template Lifecycle example is not yet created.
 
 ## Retrospective
 
@@ -41,8 +41,7 @@ and AI can compare new requests against concrete references.
 ## Recommended Improvements
 
 - Add a `docs/examples/public_glossary.md` example.
-- Add a `docs/examples/authority_matrix.md` example.
-- Add a `docs/examples/adr_example.md` example.
+- Add a `docs/examples/design_philosophy_example.md` example.
 - Add a `docs/examples/template_lifecycle.md` example.
 
 ## Improvement Review
@@ -64,7 +63,7 @@ and AI can compare new requests against concrete references.
 ## Recommended Next Q
 
 ```text
-Documentation Examples Phase 2 - Glossary, Authority Matrix, ADR
+Documentation Examples Phase 2 - Design Philosophy and Template Lifecycle
 ```
 
 ## Suggested Commit Message

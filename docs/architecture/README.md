@@ -1,0 +1,56 @@
+# Architecture
+
+## Purpose
+
+This folder explains the architecture of the Ghost Development System knowledge
+base.
+
+Architecture documents describe responsibility boundaries, design philosophy,
+and how the roadmap relates to future implementation. They do not implement
+runtime behavior.
+
+## Contains
+
+- `responsibility_boundary.md`: ownership boundaries for DevelopmentSystem,
+  Gray Ghost Core, Archive Modules, and Launcher.
+- `design_philosophy.md`: principles that guide architecture and documentation.
+
+## Does NOT Contain
+
+- Runtime code.
+- Module-specific implementation details.
+- Migration scripts.
+- GitHub Actions.
+- Release artifacts.
+
+## Relationship To Roadmap
+
+Roadmap records long-term direction and future candidates.
+
+Architecture explains the stable concepts behind that direction. A roadmap item
+may propose a future architecture change, but the architecture document should
+only describe boundaries and principles that are accepted enough to guide work.
+
+## Responsibility Boundary Summary
+
+- DevelopmentSystem owns development infrastructure.
+- Gray Ghost Core owns analysis, recommendation, and cross-module intelligence.
+- Archive Modules own business logic, schema, metadata, and import rules.
+- Launcher owns the user entry point.
+
+## Database Philosophy Summary
+
+DevelopmentSystem owns Database Utility.
+
+Archive Modules own Schema Ownership.
+
+DevelopmentSystem may provide reusable database helpers, validation,
+migration-assistance, backup coordination, and health checks. Archive Modules
+remain responsible for their own schemas and module-specific data meaning.
+
+## Update Policy
+
+Update architecture documents when responsibility boundaries, design philosophy,
+or accepted architecture terms change.
+
+Do not use this folder to approve Future Candidates by implication.

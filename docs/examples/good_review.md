@@ -69,12 +69,11 @@ Console CSV, and manual recovery without locking the roadmap to one parser.
 ## Future Candidates
 
 - Public Glossary.
-- Authority Matrix.
-- ADR example.
 - Documentation Health Check.
+- Knowledge Base Index.
 
 ## Recommended Next Q
 
 ```text
-Purpose-Oriented Naming Examples - Roadmap Item Naming Guide
+Documentation Health Check - Knowledge Base Review Standard
 ```

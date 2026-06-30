@@ -15,6 +15,8 @@ It records:
 - long-term development direction;
 - responsibility boundaries between DevelopmentSystem, Gray Ghost Core,
   Archive Modules, and Launcher;
+- architecture principles and workflow guidance;
+- shared glossary terms for humans and AI;
 - rules for human and AI collaboration;
 - reusable request, review, planning, and delivery templates;
 - future candidates that should be considered without being implemented too
@@ -31,6 +33,8 @@ It may define or improve:
 - templates;
 - workflow guidance;
 - architecture notes;
+- glossary terms;
+- examples;
 - public knowledge base structure.
 
 It does not contain runtime code, private archive data, migration scripts,
@@ -42,6 +46,7 @@ GitHub Actions, release artifacts, or module-specific implementation.
 docs/
   architecture/  Architecture notes and responsibility boundaries.
   examples/      Example documents and usage samples.
+  glossary/      Public terms used across the knowledge base.
   roadmap/       Version roadmap and future candidate direction.
   rules/         Official operating rules for development and documentation.
   templates/     Reusable templates for Q files, reviews, specs, and reports.
@@ -57,3 +62,11 @@ architecture, destructive changes, releases, and standardization decisions.
 
 The knowledge base should help both humans and AI understand the same project
 state without relying on memory, private context, or hidden assumptions.
+
+## Knowledge Growth
+
+Knowledge evolves through implementation.
+
+Reusable knowledge should be promoted to templates, rules, examples, or
+documentation whenever practical. Future Candidates should be preserved, but
+they are not approved implementation scope until reviewed and promoted.

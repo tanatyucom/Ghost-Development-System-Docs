@@ -18,6 +18,8 @@ reports, and documentation requests can start from a clear reference.
   purpose-oriented naming.
 - `repository_information.md`: example of repository boundaries, source of
   truth, scope guard, and completion criteria.
+- `authority_matrix.md`: example edit and reference authority matrix.
+- `adr_example.md`: example Architecture Decision Record.
 
 ## Does NOT Contain
 
@@ -60,6 +62,10 @@ what a complete, well-scoped document should feel like.
   knowledge base topics.
 - Use `repository_information.md` when a task may involve multiple
   repositories, documentation roots, runtime roots, or reference-only sources.
+- Use `authority_matrix.md` when a task needs explicit Editable, Reference
+  Only, and Forbidden boundaries.
+- Use `adr_example.md` when documenting a decision that should remain
+  understandable over time.
 
 ## AI Usage Notes
 
@@ -73,9 +79,6 @@ When examples conflict with rules or templates, follow:
 
 ## Future Example Candidates
 
-- Public Glossary example.
-- Authority Matrix example.
-- Architecture Decision Record example.
 - Design Philosophy document example.
 - Template Lifecycle example.
 - Documentation Health Check example.
