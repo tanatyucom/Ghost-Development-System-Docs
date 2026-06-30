@@ -1,4 +1,4 @@
-# Qファイルテンプレート
+# Q File Template
 
 Status:
 
@@ -11,191 +11,144 @@ Priority:
 Commit:
 
 ```text
-Commit は行わないでください。レビュー待ちにしてください。
+Do not commit unless explicitly requested. Provide a suggested commit message
+instead.
 ```
 
----
+## Purpose
 
-# 目的
+Describe what this Q should achieve.
 
-この Q で何を達成したいかを短く書く。
+Write the goal so a human can understand the expected result without private
+context.
 
-人間が読み直したときに、作業のゴールがすぐ分かることを優先する。
+## Background
 
----
+Explain why this Q is needed.
 
-# 背景
+Include related roadmap review, decision, queue item, current focus, or previous
+work if relevant.
 
-なぜこの Q が必要になったかを書く。
+## Approved Decisions
 
-関連する Roadmap Review、Decision、Queue、Current Focus、過去の作業があれば
-ここに書く。
+List decisions that are already approved.
 
----
+Unapproved ideas should be placed in Review Requests or Future Candidates, not
+here.
 
-# 決定事項
+## Scope
 
-すでに Roadmap Review や設計レビューで承認済みの判断を書く。
+Describe the work that is included in this Q.
 
-未承認の案や迷っている内容は、ここではなく「レビュー依頼」または
-「Future送り候補」に書く。
-
----
-
-# 作業範囲
-
-今回扱う範囲を書く。
-
-例:
+Examples:
 
 - Documentation update only.
 - Roadmap review only.
 - Template update only.
-- Runtime code は変更しない。
+- Rules review only.
 
----
+## Do
 
-# やること
+List concrete work items.
 
-Codex に実行してほしい具体的な作業を書く。
+Examples:
 
-例:
+- Update `docs/roadmap/roadmap.md`.
+- Review `docs/rules/`.
+- Improve `docs/templates/q_file_template.md`.
+- Align README purpose, scope, and repository structure.
 
-- `docs/templates/q_file_template.md` を作成または更新する。
-- `docs/templates/README.md` に参照を追加する。
-- 既存テンプレートと重複しないように整理する。
+## Do Not
 
----
+List out-of-scope items explicitly.
 
-# やらないこと
+Examples:
 
-スコープ外を明確に書く。
+- Do not change runtime code.
+- Do not run Git migration.
+- Do not update GitHub Actions.
+- Do not create a release.
+- Do not sync another repository.
+- Do not commit.
+- Do not implement Future Candidates.
 
-例:
+## Target Files
 
-- Runtime code は変更しない。
-- Git migration は行わない。
-- ファイル移動は行わない。
-- Commit は行わない。
-- 未承認の Future 機能は実装しない。
+List expected files or folders.
 
----
+Examples:
 
-# 対象ファイル
+- `README.md`
+- `docs/roadmap/`
+- `docs/rules/`
+- `docs/templates/`
 
-変更候補のファイルを書く。
+## Review Requests
 
-例:
+Ask for review perspectives.
 
-- `docs/templates/q_file_template.md`
-- `docs/templates/ai_implementation_request.md`
-- `docs/templates/README.md`
-- `docs/queue/README.md`
+Examples:
 
-対象外のファイルがある場合もここに書く。
+- long-term maintainability;
+- AI collaboration quality;
+- public knowledge base clarity;
+- responsibility boundaries;
+- roadmap consistency;
+- workflow fit;
+- template reusability.
 
----
+## Future Candidates
 
-# 納品物
+List ideas that should be considered later but not implemented in this Q.
 
-Codex に報告してほしい項目を書く。
+Examples:
 
-例:
+- Development Knowledge Platform.
+- Development Knowledge DB.
+- Dependency Index.
+- Universal Project Search.
+- DB Impact Analyzer.
+- Documentation Impact Analyzer.
+- Architecture Viewer.
+- Rename Compatibility Analyzer.
 
-- Changed Files
-- 更新内容
-- 既存テンプレートとの関係
-- Workflow / Queue への反映内容
-- Verification
-- Remaining Issues
-- Recommended Next Q
-- Suggested Commit Message
+## Acceptance Criteria
 
----
+Define completion conditions.
 
-# 受け入れ条件
+Examples:
 
-完了判定に使う条件を書く。
+- Target documents are updated.
+- Scope and non-scope are respected.
+- Future Candidates remain separate from approved work.
+- Rules, roadmap, templates, and README are consistent.
+- Commit is not created when the Q says not to commit.
 
-例:
+## Deliverables
 
-- 日本語 Q ファイルテンプレートが作成または更新されている。
-- 目的 / 背景 / 作業範囲 / やること / やらないこと / 納品物 /
-  受け入れ条件が含まれている。
-- 推奨・任意事項と Future 送り候補を書ける欄がある。
-- Commit しない方針が明記されている。
-- Runtime code、Git migration、ファイル移動が行われていない。
+Request the final report format.
 
----
+Recommended:
 
-# 推奨・任意事項
+- Changed Files.
+- Summary.
+- Verification.
+- Remaining Issues.
+- Future Candidate Proposals.
+- Recommended Next Q.
+- Suggested Commit Message.
 
-Codex が必要に応じて採用してよい改善案を書く。
-
-採用する場合は、既存の Roadmap、Rules、Workflow、Queue、Templates と矛盾しない
-ことを確認する。
-
-複雑さが増える場合は、今回入れずに Future 送り候補へ回す。
-
----
-
-# Future送り候補
-
-今回は入れないが、将来検討してよい項目を書く。
-
-例:
-
-- Architecture Decision Record
-- Plugin System
-- Event Bus
-- Module SDK
-- Extension API
-- Documentation Impact Analyzer
-- Dead Documentation Detector
-- Duplicate Idea Checker
-- Improvement Collector
-- Technical Debt Tracker
-
----
-
-# レビュー依頼
-
-Codex にレビューしてほしい観点を書く。
-
-例:
-
-- architectural consistency
-- long-term maintainability
-- documentation quality
-- roadmap clarity
-- responsibility boundaries
-- implementation guardrails
-- naming clarity
-- workflow fit
-
----
-
-# Commit方針
-
-基本方針:
+## Suggested Commit Message
 
 ```text
-Commit は行わないでください。レビュー待ちにしてください。
+docs: update ghost development system knowledge base
 ```
 
-Suggested Commit Message:
+## Writing Notes
 
-```text
-docs: add japanese q file template
-```
-
----
-
-# 記述ルール
-
-- 本文は日本語を基本にする。
-- 固有名詞、コマンド、ファイル名、識別子は英語のままでよい。
-- 人間が読んで判断しやすいことを優先する。
-- Codex 向けだけのブラックボックス的な指示にしない。
-- Roadmap Review では、採用 / 追加 / Future 送りを判断しやすく書く。
-- スコープ外を明確にして、暴走を防ぐ。
+- Japanese-first Q files are recommended for human review when the project
+  owner works primarily in Japanese.
+- Proper nouns, commands, paths, filenames, identifiers, and commit messages may
+  remain in English.
+- Keep Future Candidates separate from approved work.
+- Make out-of-scope items explicit to prevent scope drift.

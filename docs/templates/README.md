@@ -1,72 +1,83 @@
 # Templates
 
-## Development Workflow Version 2.0 Trial
+## Purpose
 
-For Ver1.4 trial work, use:
+This folder contains reusable templates for Ghost Development System Docs.
 
-```text
-docs/workflow/development_workflow_v2_trial.md
-```
+Templates help humans and AI create consistent Q files, specifications, reviews,
+reports, roadmap items, and release documents.
 
-Trial-sensitive templates:
+## Contains
 
-- `ai_implementation_request.md`
-- `completion_report_template.md`
-- `q_file_template.md`
-- `review_checklist.md`
+### Planning
+
 - `roadmap_template.md`
+- `queue_template.md`
+- `decision_template.md`
 
-These templates include Current Focus and retrospective checks to improve
-resume quality and reduce operational mistakes.
+### Development
 
-このディレクトリは Gray Ghost Archive の標準テンプレート集です。
+- `specification_template.md`
+- `architecture_template.md`
+- `feature_template.md`
+- `bugfix_template.md`
+- `refactoring_template.md`
 
-## Development
+### AI Collaboration
 
-specification_template.md
-→ 新しい実装仕様書
+- `q_file_template.md`
+- `ai_implementation_request.md`
+- `codex_review_template.md`
+- `review_checklist.md`
+- `completion_report_template.md`
 
-architecture_template.md
-→ Architecture変更
+### Release
 
-refactoring_template.md
-→ リファクタリング
+- `release_checklist.md`
+- `release_notes_template.md`
 
-feature_template.md
-→ 新機能
+## Does NOT Contain
 
-bugfix_template.md
-→ バグ修正
+- Runtime code.
+- Active Queue state.
+- Private project data.
+- Release artifacts.
 
-## Planning
+## Template Policy
 
-roadmap_template.md
-queue_template.md
-decision_template.md
+Templates should be updated when repeated work shows a better standard pattern.
 
-## AI
+Promote improvements into templates when they help future Q files become:
 
-ai_implementation_request.md
-q_file_template.md
-review_checklist.md
-completion_report_template.md
-codex_review_template.md
+- clearer;
+- safer;
+- easier to review;
+- easier for AI to execute without guessing;
+- better at separating approved scope from Future Candidates.
 
 ## Q Files
 
-`q_file_template.md` is the standard Japanese template for Codex request files.
+`q_file_template.md` is the standard template for reusable Codex request files.
 
-Use it when preparing a human-readable request for Roadmap Review, Queue
-drafting, documentation updates, or future DMS-generated fix proposals.
+Use it for:
 
-The request body should be Japanese-first. Proper nouns, commands, file names,
-paths, and identifiers may remain in English.
+- roadmap review;
+- documentation update;
+- rules review;
+- template update;
+- architecture review;
+- future DMS-generated fix proposals.
 
-## Release
+Q files should make scope, non-scope, target files, deliverables, and commit
+policy explicit.
 
-release_checklist.md
-release_notes_template.md
+Japanese-first Q files are recommended when the project owner reviews requests
+in Japanese. Proper nouns, commands, paths, filenames, identifiers, and commit
+messages may remain in English.
 
-## Workflow
+## Update Policy
 
-development_cycle.md
+When a real Q reveals a reusable pattern, update the related template as part of
+the same documentation review when it is in scope.
+
+Do not add one-off request details to templates. Add only reusable structure.

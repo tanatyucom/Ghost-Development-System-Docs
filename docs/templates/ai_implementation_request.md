@@ -1,42 +1,69 @@
 # AI Implementation Request
 
-If the implementation request is prepared as a Q file, prefer:
+Use this template when asking AI to implement or update project artifacts.
+
+If the request is prepared as a Q file, prefer:
 
 ```text
 docs/templates/q_file_template.md
 ```
 
-Q files should be Japanese-first so future human review remains easy.
-Proper nouns, commands, file names, paths, and identifiers may remain in
-English.
+## Read First
 
-Workflow Version:
-
-- Use `docs/workflow/development_workflow_v2_trial.md` when the task is part of
-  the Ver1.4 workflow trial.
-- Rules take precedence over the trial workflow and over this request.
-
-Read documents in the following order:
+Read documents in this order:
 
 1. `docs/rules/`
-2. `docs/workflow/development_cycle.md`
-3. `docs/workflow/development_workflow.md`
-4. `docs/status/current_focus.md`
-5. `<Implementation Specification>`
+2. `docs/roadmap/`
+3. `docs/workflow/`
+4. related templates
+5. the target specification or Q file
 
-Implement according to the Specification.
+Rules take precedence over workflow drafts, roadmap, templates, and Queue
+items.
 
-Do not implement features outside the Scope.
+## Scope
 
-After implementation report:
+Implement only the accepted scope.
 
-- Changed Files
-- Verification
-- Remaining Issues
-- Current Focus updates
-- Retrospective notes
-- Suggested Commit Message
+Do not implement Future Candidates unless the request explicitly promotes them
+to current scope.
 
-Do not commit.
+## Human Approval Gate
 
-Wait for review.
+Stop and ask for approval before:
+
+- destructive changes;
+- Git migration;
+- release creation;
+- GitHub Actions changes;
+- runtime implementation outside the request;
+- architecture changes that exceed the accepted scope;
+- commits when the request says not to commit.
+
+## Documentation-Only Requests
+
+For documentation-only requests:
+
+- update Markdown only;
+- do not change runtime code;
+- do not run migrations;
+- do not create releases;
+- do not sync other repositories;
+- do not commit unless explicitly requested.
+
+## Report After Work
+
+Report:
+
+- Changed Files.
+- Summary.
+- Verification.
+- Remaining Issues.
+- Future Candidate Proposals.
+- Recommended Next Q.
+- Suggested Commit Message.
+
+## Goal
+
+AI should produce reviewable work that improves the project without expanding
+scope or relying on hidden assumptions.

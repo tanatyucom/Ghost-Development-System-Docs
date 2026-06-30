@@ -2,33 +2,45 @@
 
 ## Purpose
 
-中長期開発計画を管理します。
+This folder manages long-term development direction for Gray Ghost Archive and
+the Ghost Development System.
 
----
+The roadmap explains where the system is going, which architectural boundaries
+are accepted, and which ideas are still future candidates.
 
 ## Contains
 
-- Version Roadmap
-- 将来機能
-- 長期計画
-
----
+- Version roadmap.
+- Development evolution.
+- Responsibility boundaries.
+- Database philosophy.
+- Future candidates.
+- Roadmap review points.
 
 ## Does NOT Contain
 
-- Current Focus
-- 実装手順
-
----
+- Runtime implementation.
+- Queue execution details.
+- Git migration operations.
+- Release artifacts.
+- Module-specific implementation specifications.
 
 ## Update Policy
 
-大型機能追加・優先順位変更時のみ更新します。
+Update roadmap documents when:
 
----
+- a version direction changes;
+- a future candidate is promoted, rejected, or clarified;
+- responsibility boundaries change;
+- a retrospective produces roadmap-level learning;
+- a major documentation or workflow review changes long-term direction.
+
+Future candidates must remain explicitly marked as Future until a later roadmap
+review promotes them.
 
 ## Related Documents
 
-status
-
-architecture
+- `docs/roadmap/roadmap.md`
+- `docs/rules/`
+- `docs/templates/roadmap_template.md`
+- `docs/workflow/`

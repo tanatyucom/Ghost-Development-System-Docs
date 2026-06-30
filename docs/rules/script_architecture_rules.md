@@ -1,302 +1,77 @@
 # Script Architecture Rules
 
+**Version:** 2.1
+
+**Last Updated:** 2026-06-30
+
 ## Purpose
 
-本ルールは Game Ghost の Script Architecture に関する恒久ルールを定義する。
+This document records script architecture principles used by related Ghost
+Development System implementation repositories.
 
-本ルールは全ての Specification より優先される。
+This public docs repository is documentation-only. These rules are guidance for
+implementation repositories and must not be treated as permission to modify
+runtime code from this repository.
 
-Script Structure Design や Script Refactoring は、本ルールを前提として設計・実装を行う。
+## Core Rules
 
----
+### One Script One Responsibility
 
-# Rule 1
+One script should have one primary responsibility.
 
-## One Script = One Responsibility
+Avoid mixing review, database update, report generation, migration, and UI logic
+in the same script.
 
-1つのスクリプトは1つの責務のみを持つ。
+### One Folder One Domain
 
-例
+Folders should be grouped by domain, such as:
 
-```
-review_duplicate_titles.py
-
-→ レビューのみ
-```
-
-NG
-
-```
-review_duplicate_titles.py
-
-レビュー
-
-DB更新
-
-レポート生成
-```
-
-複数責務を持たせてはならない。
-
----
-
-# Rule 2
-
-## One Folder = One Domain
-
-フォルダは役割単位で分類する。
-
-例
-
-```
+```text
 database/
-
 import/
-
 review/
-
 report/
+shared/
 ```
 
-目的の異なるスクリプトを混在させない。
+### Dependency Direction
 
----
+Higher-level entry points may depend on business scripts and shared utilities.
+Shared utilities must not depend on launchers, GUIs, or module-specific
+business logic.
 
-# Rule 3
+### Shared Layer
 
-## Dependency Direction
+Shared code should contain reusable utilities only.
 
-依存方向は以下を原則とする。
+It should not own module-specific business logic, schema content, or import
+rules.
 
-```
-Launcher / GUI
-        │
-        ▼
-Business Scripts
-        │
-        ▼
-Shared / Utils
-```
+### Launcher Responsibility
 
-下位レイヤーは上位レイヤーへ依存してはならない。
+Launcher owns user entry points and startup routing.
 
----
+Launcher should not own database utilities, module business logic, workflow, or
+DMS behavior.
 
-# Rule 4
+### Module Responsibility
 
-## Shared Layer
+Archive modules own business logic, schema, metadata, and import rules.
 
-shared は共通ライブラリのみ配置する。
+### DevelopmentSystem Responsibility
 
-shared は以下へ依存してはならない。
+DevelopmentSystem owns development infrastructure and database utility
+frameworks, not module schemas.
 
-```
-database
+### Backward Compatibility
 
-launcher
+When changing names, paths, commands, or public document terms, review
+compatibility before applying the change.
 
-gui
+The future Rename Compatibility Analyzer should support this rule.
 
-report
+## Goal
 
-review
-```
-
-shared は最下位レイヤーとする。
-
----
-
-# Rule 5
-
-## Utils Layer
-
-utils は単独実行可能な補助スクリプトとする。
-
-Business Logic を保持してはならない。
-
----
-
-# Rule 6
-
-## Launcher Responsibility
-
-Launcher は
-
-・実行
-・メニュー
-・起動制御
-
-のみ担当する。
-
-Business Logic を実装してはならない。
-
----
-
-# Rule 7
-
-## GUI Responsibility
-
-GUI は
-
-・入力
-
-・表示
-
-のみ担当する。
-
-解析・DB更新・レビュー生成は既存 Script を呼び出して実行する。
-
-GUI に Business Logic を持たせない。
-
----
-
-# Rule 8
-
-## Import Rules
-
-許可
-
-```
-database → shared
-
-import → shared
-
-review → shared
-
-report → shared
-```
-
-禁止
-
-```
-shared → database
-
-shared → launcher
-
-shared → gui
-```
-
-循環参照は禁止する。
-
----
-
-# Rule 9
-
-## Root Policy
-
-scripts/ 直下には原則として .py を置かない。
-
-例外
-
-```
-run_all.py
-```
-
-例外を追加する場合は Rule を更新する。
-
----
-
-# Rule 10
-
-## Naming Rules
-
-役割が分かる名前を使用する。
-
-例
-
-```
-review_*
-
-report_*
-
-import_*
-
-apply_*
-
-migrate_*
-
-validate_*
-
-*_gui.py
-```
-
----
-
-# Rule 11
-
-## Reserved Categories
-
-将来的なカテゴリ名として以下を予約する。
-
-```
-api/
-
-web/
-
-ai/
-```
-
-使用時は Specification を追加する。
-
----
-
-# Rule 12
-
-## Architecture First
-
-新しい Script を追加する前に、
-
-Category
-
-Naming
-
-Dependency
-
-を確認する。
-
-Rule に反する実装は禁止する。
-
----
-
-# Rule Changes
-
-本ルールの変更は
-
-Architecture Level の変更とみなす。
-
-変更時は
-
-Roadmap
-
-Decision Log
-
-Specification
-
-への影響を確認する。
-
-
----
-
-# Rule 13
-
-## Don't Duplicate Logic
-
-同一の Business Logic を複数の Script に実装してはならない。
-
-共通化可能な処理は `shared/` へ集約する。
-
----
-
-# Rule 14
-
-## Backward Compatibility
-
-既存コマンド・パス・起動方法を変更する場合は、以下を同時更新する。
-
-* README
-* Documentation
-* Launcher
-* GUI
-* Implementation Specification
-
-互換性を失う変更は禁止する。
+Script architecture should keep implementation repositories modular,
+reviewable, and aligned with the responsibility boundaries defined in the
+roadmap.

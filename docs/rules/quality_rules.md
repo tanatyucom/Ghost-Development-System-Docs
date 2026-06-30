@@ -1,155 +1,59 @@
 # Quality Rules
 
-**Version:** 2.0
+**Version:** 2.1
 
-**Last Updated:** 2026-06-27
+**Last Updated:** 2026-06-30
 
----
+## Purpose
 
-# Purpose
+This document defines quality standards for Ghost Development System Docs.
 
-このドキュメントは Gray Ghost Archive における品質基準を定義する。
+## Quality Philosophy
 
-品質は完成時ではなく、開発工程全体を通して継続的に作り込むものとする。
+### Quality Is Built During Work
 
----
+Quality is not a final cleanup step. It is built through clear scope, readable
+documents, review, verification, and continuous improvement.
 
-# Quality Philosophy
+### Maintainability Over Speed
 
-## Quality First
+Prefer documents that remain understandable months later over documents that are
+quick but ambiguous.
 
-開発速度より品質を優先する。
+### Human And AI Readability
 
-品質を犠牲にした短期的な効率化は行わない。
+Documents should be explicit enough that AI does not need to guess and humans do
+not need private context.
 
----
+## Review Standards
 
-## Build Quality
+Review documentation for:
 
-品質は最後のレビューで作るものではない。
+- purpose;
+- scope;
+- ownership;
+- terminology;
+- consistency with roadmap and rules;
+- missing related updates;
+- future candidate handling;
+- acceptance criteria.
 
-設計・実装・レビューのすべての工程で積み重ねる。
+## Error Prevention
 
----
+Prevent common errors by:
 
-## Long-term Maintainability
-
-短期的な便利さより、
-
-長期運用しやすい構造を優先する。
-
-未来の自分が迷わないことを品質と考える。
-
----
-
-## Human & AI Readability
-
-人にもAIにも理解しやすい構造を維持する。
-
-推測ではなく、
-
-構造から正しく判断できる状態を目指す。
-
----
-
-# Review Standards
-
-## Review First
-
-レビューは品質保証工程である。
-
-レビューを省略しない。
-
----
-
-## No Assumption Rule
-
-思い込みで「大丈夫」と判断しない。
-
-構造・コード・ドキュメント・差分を確認した上で判断する。
-
----
+- writing explicit out-of-scope sections;
+- separating Future Candidates from approved work;
+- requiring Human Approval Gate for high-impact changes;
+- keeping templates current;
+- checking related documents when rules or workflow change.
 
 ## Evidence First
 
-レビュー結果は実際の成果物を基準とする。
+Do not rely on memory when reviewing. Check the actual document, folder, or
+request whenever possible.
 
-推測ではなく、
+## Goal
 
-確認できる事実を優先する。
-
----
-
-# Error Prevention
-
-## Human Error Prevention
-
-人はミスをする前提で設計する。
-
-ヒューマンエラーを防ぐ構造を優先する。
-
----
-
-## AI Error Prevention
-
-AIも誤認識・推測・勘違いを行う前提で設計する。
-
-レビューと構造化によって誤判断を減らす。
-
----
-
-## Safety Before Speed
-
-速く終わることより、
-
-安全に終わることを優先する。
-
----
-
-# Continuous Improvement
-
-## Learn from Practice
-
-改善案は実運用から学ぶ。
-
-実際に効果が確認されたものだけを標準化する。
-
----
-
-## Continuous Review
-
-品質改善は一度で終わらない。
-
-継続的にレビューし、
-
-改善を積み重ねる。
-
----
-
-# Quality Goals
-
-Gray Ghost Archive は、
-
-品質を最優先とする個人アーカイブを目指す。
-
-品質とは、
-
-コードだけではなく、
-
-設計・ドキュメント・Git・レビュー・運用を含めたプロジェクト全体の品質を意味する。
-
----
-
-# Goal
-
-品質とは、
-
-「問題が起きないこと」ではなく、
-
-「問題が起きても安全に改善できること」である。
-
-Gray Ghost Archive は、
-
-品質を積み重ね続けるプロジェクトであり、
-
-人にもAIにも信頼される品質基準を維持する。
+Quality means the knowledge base can be trusted, resumed, reviewed, and evolved
+without losing architectural intent.

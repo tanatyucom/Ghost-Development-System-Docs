@@ -1,151 +1,74 @@
 # Core Principles
 
-**Version:** 2.0
+**Version:** 2.1
 
-**Last Updated:** 2026-06-27
+**Last Updated:** 2026-06-30
 
----
+## Purpose
 
-# Purpose
+This document defines the core philosophy used to maintain Ghost Development
+System Docs.
 
-このドキュメントは Gray Ghost Archive の開発における基本思想を定義する。
+## Principles
 
-すべての設計・実装・運用は、本ドキュメントの原則を基準として判断する。
+### Archive First
 
----
+Design for Gray Ghost Archive first.
 
-# Core Principles
+External reuse is valuable only when it emerges naturally from good internal
+architecture.
 
-## Future Self First
+### Future Self First
 
-数か月後・数年後の自分が理解できることを最優先とする。
+Write documents so a future maintainer can understand purpose, scope, ownership,
+and status without relying on memory.
 
-現在の作業効率よりも、長期的な保守性を重視する。
+### Human And AI Friendly
 
----
+Documents should be readable by humans and structured enough for AI to use
+without guessing.
 
-## Human & AI Friendly
+### Evidence First
 
-人にもAIにも理解しやすい構造を目指す。
+Base decisions on actual files, reviewed designs, implementation results, and
+documented history.
 
-可読性・責務分離・命名・レビューしやすさを重視する。
+### One File One Theme
 
-AIが推測ではなく、構造から正しく判断できる設計を目指す。
+One document should have one primary purpose. Split documents when unrelated
+responsibilities start to mix.
 
----
+### One Folder One Responsibility
 
-## One File One Theme
+One folder should represent one clear responsibility. Avoid mixing roadmap,
+rules, templates, workflow, and implementation details.
 
-1つのMarkdownには1つのテーマだけを書く。
+### Documentation First
 
-内容が大きくなった場合は、新しいMarkdownへ分割する。
+When design, workflow, or ownership changes, documentation should be updated as
+part of the work, not left as a later cleanup.
 
----
+### Incremental Development
 
-## One Folder One Responsibility
+Prefer small reviewed changes over large unreviewed rewrites.
 
-1つのフォルダには1つの役割だけを持たせる。
+### Review Before Standardization
 
-異なる責務を混在させない。
+Do not turn an idea into a rule or platform feature until practice proves it is
+useful.
 
----
+### Human Approval Gate
 
-## Single Entry Principle
+Humans retain final authority over architecture, destructive changes,
+standardization, releases, and scope expansion.
 
-利用者が最初に触る入口は可能な限り一つとする。
+### Continuous Improvement
 
-起動方法・入口・導線を分散させない。
+Retrospectives should produce concrete improvements to rules, templates,
+workflow, or roadmap when the learning is reusable.
 
----
+## Development Philosophy
 
-## Three Second Rule
-
-初めて見る人でも、3秒以内に
-
-* 目的
-* 役割
-* 起動方法
-
-がおおよそ理解できる構造を目指す。
-
----
-
-## Clear Naming
-
-名前だけで役割が分かる命名を採用する。
-
-省略形よりも分かりやすさを優先する。
-
----
-
-## Separation of Development and Operation
-
-開発用と運用用を明確に分離する。
-
-利用者向け入口と内部実装を混在させない。
-
----
-
-## Documentation First
-
-設計・運用・構造を変更した場合は、ドキュメントも同時に更新する。
-
-ドキュメントを後回しにしない。
-
----
-
-## Incremental Development
-
-小さく改善し、小さくレビューし、小さく完成させる。
-
-一度に大規模な変更を行わない。
-
-各工程はレビュー・承認を経て次工程へ進む。
-
----
-
-## Review Before Standardization
-
-改善案はまず実際に運用する。
-
-有効性が確認できたものだけを標準ルールとして採用する。
-
----
-
-## Continuous Improvement
-
-Gray Ghost Archive は完成して終わるプロジェクトではない。
-
-実際の運用から得られた知見を継続的に反映し、品質向上を続ける。
-
----
-
-# Development Philosophy
-
-Gray Ghost Archive はコードを書くことを目的としない。
-
-人生のアーカイブを長期的に維持できる仕組みを構築することを目的とする。
-
-コードを書くことよりも、品質を積み重ねることを重視する。
-
-そのために、
-
-* 設計
-* 品質
-* 保守性
-* 可読性
-* 標準化
-
-を継続的に改善する。
-
----
-
-# Goal
-
-Gray Ghost Archive は、
-
-確かな仕事の積み重ねにより、
-
-人にもAIにも理解しやすく、
-
-長期運用できる個人アーカイブを構築する。
+The goal is not merely to write code or documents. The goal is to build a
+durable development system that keeps knowledge, decisions, and responsibilities
+clear across time.

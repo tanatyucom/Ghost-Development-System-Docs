@@ -2,34 +2,58 @@
 
 ## Purpose
 
-This roadmap is the long-term project map for Gray Ghost Archive.
+This roadmap is the long-term project map for Gray Ghost Archive and the Ghost
+Development System.
 
-It records version themes, architectural direction, major work items, and review
-gates. Short-term execution details belong in `docs/status/current_focus.md`.
-Implementation details belong in Queue specifications.
+It records version themes, architectural direction, responsibility boundaries,
+major work items, future candidates, and review gates. Short-term execution
+details belong in status or Queue documents. Implementation details belong in
+specifications.
+
+## Development Evolution
+
+```text
+Ver1.4
+  Ghost Development Toolkit Trial
+
+Ver1.5
+  Archive Foundation
+
+Ver2.x
+  Ghost Development System
+
+Future
+  Reusable Development Platform
+```
+
+The system evolves from practical archive work. Architecture is validated by
+implementation, review, and repeated operation.
 
 ## Current Direction
 
 Gray Ghost Archive is moving from a GameGhost-centered project into an
-Archive-centered platform.
+archive-wide development platform.
 
-The current architecture direction is:
+The current direction is:
 
-- Ver1.4 proves the first archive-level foundations and Ghost Development
-  Toolkit Trial in normal operation.
-- Ver1.5 becomes Archive Foundation.
-- Ver2.0 introduces Ghost Development System as the broader archive-wide
-  development platform direction.
+- Ver1.4 proves the Ghost Development Toolkit Trial through real development.
+- Ver1.5 establishes Archive Foundation.
+- Ver2.x formalizes Ghost Development System as an archive-wide development
+  platform.
+- Future work may extract reusable platform ideas after they are proven inside
+  Gray Ghost Archive.
 
-Architecture evolves through implementation.
+## Design Philosophy
 
-Implementation validates architecture.
-
-Roadmap records validated direction.
-
-Gray Ghost Archive should evolve through practical project development.
-Speculative architecture should remain a future candidate until it is
-validated by real archive work.
+- Archive First: design for Gray Ghost Archive before designing for external
+  reuse.
+- Architecture evolves through implementation.
+- External reuse is a consequence of good architecture, not the primary goal.
+- Human Approval Gate: AI may recommend and prepare work, but humans approve
+  scope, destructive changes, architecture changes, releases, and
+  standardization.
+- Future Scope Guard: unvalidated or large ideas stay in Future Candidates
+  until promoted by roadmap review.
 
 ## Ver1.4 Roadmap
 
@@ -38,46 +62,19 @@ Status: active.
 Theme:
 
 ```text
-First release that actively uses the Ver1.3 Foundation.
+Ghost Development Toolkit Trial
 ```
 
-Ver1.4 moves the Ver1.3 Foundation from structure-building into real operation.
-Development Workflow Version 2.0 is part of the trial operation for the whole
-Ver1.4 cycle.
-
-Trial reference:
+Purpose:
 
 ```text
-docs/workflow/development_workflow_v2_trial.md
+Use the Ver1.3 Foundation in normal operation and prove the first archive-wide
+development utilities.
 ```
 
-### Operating Principles
-
-- Roadmap is the project map, not a task dump.
-- Current Focus is the short resume dashboard.
-- Queue items are created only after Roadmap Planning and Stop Gate.
-- Codex implements only the accepted Queue scope.
-- Retrospective findings are recorded as improvements, not silently folded into
-  unrelated work.
-
-### Ver1.4 Work Items
-
-| ID | Category | Priority | Title | Roadmap Role | Success Criteria | Exit Definition |
-|---|---|---:|---|---|---|---|
-| Ver1.4-A | Architecture / Feature | Critical | Archive Launcher and Archive Target Registry | First archive-level entry point and shared target catalog | Launcher starts, registry loads targets, and archive-level files are accounted for | Launcher and registry are reviewed, documented, and ready for the next iteration |
-| Ver1.4-B | Research | High | OCR Import Health Check | Confirm whether OCR import survived structure/output changes | OCR import, review output, debug images, logs, `run_all.py`, and `tool.py health` are checked | PASS moves to normal operation; FAIL creates Ver1.4-C |
-| Ver1.4-C | Maintenance | High, conditional | OCR Import Recovery | Fix only if Ver1.4-B finds breakage | Caller/path/output/import issues are repaired without expanding scope | Recovery verification passes, or blocker is documented |
-| Ver1.4-D | Trial | High | Development Workflow Version 2.0 Trial | Operate the whole Ver1.4 cycle through the trial workflow | Multiple Queue items complete using Rev.2 flow; trial review is recorded | Promote / revise / reject recommendation is ready |
-| Ver1.4-E | Architecture | Normal | `unified_title` Migration Design | Design only; no deletion | Caller audit, migration plan, and cleanup plan are written | Ver1.5+ cleanup scope is clear |
-| Ver1.4-F | Feature | Normal | Nintendo 3DS Activity Log Parser | Convert completed research into parser implementation | Parser starts or implementation specification is confirmed | Parser work is started or ready for next Queue item |
-
-### Ghost Development Toolkit Trial
-
 Ver1.4 treats Ghost Development Toolkit as a practical trial of archive-wide
-development utilities.
-
-The purpose is to prove usefulness through actual Gray Ghost Archive
-development before formalizing a larger system.
+development utilities. The trial should stay small enough to learn from real
+work before formal system boundaries are created.
 
 Trial candidates include:
 
@@ -89,36 +86,30 @@ Trial candidates include:
 - Archive Target Registry.
 - Documentation practices.
 
-Toolkit items may remain small, experimental, or loosely connected during
-Ver1.4. Formal system boundaries belong to Ver2.0 or later.
+### Ver1.4 Work Items
+
+| ID | Category | Priority | Title | Roadmap Role | Success Criteria | Exit Definition |
+|---|---|---:|---|---|---|---|
+| Ver1.4-A | Architecture / Feature | Critical | Archive Launcher and Archive Target Registry | First archive-level entry point and shared target catalog | Launcher starts, registry loads targets, and archive-level files are accounted for | Launcher and registry are reviewed, documented, and ready for the next iteration |
+| Ver1.4-B | Research | High | OCR Import Health Check | Confirm whether OCR import survived structure/output changes | OCR import, review output, debug images, logs, `run_all.py`, and `tool.py health` are checked | PASS moves to normal operation; FAIL creates Ver1.4-C |
+| Ver1.4-C | Maintenance | High, conditional | OCR Import Recovery | Fix only if Ver1.4-B finds breakage | Caller/path/output/import issues are repaired without expanding scope | Recovery verification passes, or blocker is documented |
+| Ver1.4-D | Trial | High | Development Workflow Version 2.0 Trial | Operate the Ver1.4 cycle through the trial workflow | Multiple Queue items complete using Rev.2 flow; trial review is recorded | Promote, revise, or reject recommendation is ready |
+| Ver1.4-E | Architecture | Normal | `unified_title` Migration Design | Design only; no deletion | Caller audit, migration plan, and cleanup plan are written | Ver1.5+ cleanup scope is clear |
+| Ver1.4-F | Feature | Normal | Nintendo 3DS Activity Log Parser | Convert completed research into parser implementation | Parser starts or implementation specification is confirmed | Parser work is started or ready for next Queue item |
 
 ### Ver1.4 Exit Definition
 
 Ver1.4 can close when:
 
-- Ver1.4-A Launcher and Archive Target Registry work is complete.
-- Ver1.4-B OCR Health Check is complete.
-- Ver1.4-C OCR Recovery is complete if needed, or explicitly skipped because
-  Ver1.4-B passed.
-- Ver1.4-D Workflow Trial review is complete.
-- Ver1.4-E `unified_title` Migration Design is complete.
-- Ver1.4-F 3DS Parser is started or its implementation specification is ready.
-- Roadmap, Current Focus, Queue, and Development History are aligned after the
-  final retrospective.
-
-### Ver1.4 Trial Metrics
-
-Track these during Ver1.4:
-
-- Current Focus update misses.
-- Completed move misses.
-- Development History update misses.
-- Rule improvement proposals.
-- Workflow improvement proposals.
-- Template improvement proposals.
-- Roadmap update proposals.
-- Resume quality after reopening a task.
-- Copy/paste or command-example mistakes.
+- Launcher and Archive Target Registry work is complete.
+- OCR Health Check is complete.
+- OCR Recovery is complete if needed, or explicitly skipped because the health
+  check passed.
+- Workflow Trial review is complete.
+- `unified_title` Migration Design is complete.
+- 3DS Parser is started or its implementation specification is ready.
+- Roadmap, status, Queue, and development history are aligned after the final
+  retrospective.
 
 ## Ver1.5 Roadmap
 
@@ -134,7 +125,7 @@ Purpose:
 
 ```text
 Transform Gray Ghost Archive from a GameGhost-centered repository into an
-Archive-centered platform.
+archive-centered platform.
 ```
 
 ### Ver1.5-A Archive Root Git Migration
@@ -148,22 +139,12 @@ Purpose:
 - Make `C:\GrayGhostArchive` the long-term Git repository root.
 - Preserve existing GameGhost history.
 - Avoid nested repositories.
-- Use Staged Migration through clean clone + `git mv`.
+- Use staged migration through clean clone and `git mv`.
 
-Success Criteria:
+Scope note:
 
-- Archive root is the repository root.
-- GameGhost history remains available.
-- `launcher.py`, `archive_target_registry.py`, and `archive_targets.json` are
-  tracked at archive root.
-- Runtime, private, generated, and imported data remain excluded.
-- Repository verification passes.
-
-Exit Definition:
-
-- Migration Freeze exit criteria pass.
-- Repository layout is documented.
-- Rollback path is documented.
+Migration is a future implementation activity. This knowledge base may document
+the plan, but it must not perform migration work.
 
 ### Ver1.5-B Archive Docs Hierarchy
 
@@ -173,7 +154,7 @@ Priority: High
 
 Purpose:
 
-- Separate Archive Documentation from Module Documentation.
+- Separate archive documentation from module documentation.
 - Clarify document ownership.
 - Prepare docs for future modules.
 
@@ -181,19 +162,13 @@ Ownership model:
 
 ```text
 Archive docs:
-  Archive-wide rules, workflow, roadmap, current focus, architecture,
-  Command Center, DMS, registry, and cross-module decisions.
+  Archive-wide rules, workflow, roadmap, architecture, Command Center, DMS,
+  registry, and cross-module decisions.
 
 Module docs:
-  Module-specific schema, scripts, imports, reports, GUI, validation,
-  and implementation details.
+  Module-specific schema, scripts, imports, reports, GUI, validation, and
+  implementation details.
 ```
-
-Success Criteria:
-
-- Archive-wide docs have a clear home.
-- GameGhost docs are scoped to GameGhost-specific content.
-- Future AnimeGhost, ComicGhost, and MemoryGhost docs can follow the same model.
 
 ### Ver1.5-C Registry Stabilization
 
@@ -207,13 +182,6 @@ Purpose:
 - Stabilize target naming rules.
 - Add validation expectations.
 - Prepare for future Registry Health without implementing full DMS behavior.
-
-Success Criteria:
-
-- Registry fields are documented.
-- Required and optional fields are separated.
-- Future placeholders are represented consistently.
-- Launcher, future Command Center, and future DMS can read the same catalog.
 
 ### Ver1.5-D Launcher V2
 
@@ -232,53 +200,11 @@ Possible improvements:
 Scope note:
 
 Launcher V2 should remain a human entry point. Command Center and DMS behavior
-belongs to Ver2.0 or later.
+belongs to Ver2.x or later.
 
-## Migration Freeze Rule
+## Ver2.x Direction
 
-During Archive Root Git Migration:
-
-- Avoid unrelated feature work.
-- Avoid launcher redesign.
-- Avoid registry redesign.
-- Avoid output structure changes.
-- Avoid module feature expansion.
-
-Migration should focus only on repository migration, documentation alignment,
-and verification.
-
-### Migration Freeze Exit Criteria
-
-Migration Freeze ends only after:
-
-- Launcher Verification passes.
-- Registry Verification passes.
-- Documentation Verification passes.
-- Repository Verification passes.
-
-## Archive Platform Foundation
-
-The Archive Platform Foundation consists of:
-
-- Archive Launcher.
-- Archive Target Registry.
-- Archive Root repository ownership.
-- Archive Documentation hierarchy.
-- Module boundaries.
-
-The Archive Target Registry is an Archive-wide shared catalog. It is not a
-Launcher-only configuration file.
-
-Expected readers:
-
-- Launcher.
-- Command Center.
-- Development Management System.
-- Future module dashboards.
-
-## Ver2.0 Direction
-
-Ver2.0 direction:
+Theme:
 
 ```text
 Ghost Development System
@@ -287,98 +213,117 @@ Ghost Development System
 Ghost Development System is the formal successor and expansion of Ghost
 Development Toolkit Trial.
 
-It is an archive-wide development system that supports all archive modules.
+It is the official archive-wide development platform for Gray Ghost Archive. It
+provides development infrastructure, coordination, knowledge management, and
+quality gates across archive modules.
 
-It provides development infrastructure, not module business logic.
-
-Roadmap / prose name:
+Roadmap and prose name:
 
 ```text
 Ghost Development System
 ```
 
-Possible future implementation or folder name:
+Future implementation or folder name candidate:
 
 ```text
 DevelopmentSystem
 ```
 
-Architecture boundary:
+`DevelopmentSystem` is a candidate implementation folder name, not a commitment
+to create a folder in the current phase.
 
-```text
-DevelopmentSystem owns development infrastructure.
-Archive modules own content and business logic.
-Gray Ghost Core owns analysis and cross-archive intelligence.
-Launcher owns user-facing entry points.
-```
+## Responsibility Boundary
 
-DevelopmentSystem supports archive modules.
-It should never own module-specific business logic.
-Archive modules remain independently evolvable.
+### DevelopmentSystem
 
-Candidate responsibilities:
+DevelopmentSystem owns archive-wide development infrastructure:
 
-- Command Center.
-- DMS.
-- Shared Archive Target Registry.
 - Workflow.
 - Queue.
 - Review.
-- Documentation Management.
-- Database Utility Framework.
+- Documentation.
 - Templates.
+- Database Utility Framework.
 - Release Coordination.
 - Backup Coordination.
-- Cross-module health checks.
-- Human approval gates.
+- Archive Target Registry.
+- Health.
+- Command Center.
+- DMS.
 
-Database philosophy:
+DevelopmentSystem must not own module-specific business logic, schema content,
+or import rules.
 
-DevelopmentSystem may provide import, export, validation, backup, migration,
-schema helper, cross-module health, and database quality reporting frameworks.
+### Gray Ghost Core
 
-Each archive module owns its own schema definition.
+Gray Ghost Core owns:
 
-DevelopmentSystem provides tools, not content ownership.
+- Analysis.
+- Recommendation.
+- Cross-module Intelligence.
 
-Design principles:
+Gray Ghost Core may provide insight across modules, but it should not replace
+module ownership or bypass human approval.
 
-Ghost Development System shall remain modular, archive-first, incrementally
-expandable, AI-assisted, human-reviewed, and module-independent.
+### Archive Modules
 
-Success criteria:
+Archive Modules own:
+
+- Business Logic.
+- Schema.
+- Metadata.
+- Import Rules.
+
+Each module remains independently evolvable. Module-specific behavior belongs
+inside the module unless it has been proven reusable and promoted by review.
+
+### Launcher
+
+Launcher owns:
+
+- User Entry Point.
+
+Launcher may present archive targets and start tools. It should not become the
+owner of workflow, DMS, module business logic, or database utilities.
+
+## Database Philosophy
+
+DevelopmentSystem owns Database Utility.
+
+This includes reusable frameworks for:
+
+- import and export assistance;
+- validation;
+- backup coordination;
+- migration assistance;
+- schema helper tooling;
+- database quality reporting;
+- cross-module health checks.
+
+Archive Modules own Schema Ownership.
+
+This includes:
+
+- schema definitions;
+- module metadata;
+- import rules;
+- module-specific data contracts;
+- business logic that interprets module data.
+
+DevelopmentSystem provides tools and coordination. Modules retain content and
+schema authority.
+
+## Success Criteria
 
 Ghost Development System is considered established when:
 
-- Shared workflow is used across archive modules.
-- Health operates archive-wide.
-- Archive Target Registry supports all modules.
-- Command Center becomes the common entry point.
-- Documentation workflow is unified.
-
-Future scope guard:
-
-Before introducing a new feature, determine whether it belongs to:
-
-- DevelopmentSystem.
-- Gray Ghost Core.
-- Archive Module.
-- Launcher.
-
-before implementation.
-
-Human approval remains mandatory. DMS may recommend and prepare work, but it
-does not silently apply architectural or destructive changes.
-
-Long-term reuse:
-
-Ghost Development System should remain archive-first.
-
-If the architecture naturally matures over time, it may eventually become
-reusable outside Gray Ghost Archive.
-
-External reuse should be a consequence of good architecture, not the primary
-design goal.
+- shared workflow is used across archive modules;
+- health operates archive-wide;
+- Archive Target Registry supports all modules;
+- Command Center becomes the common development entry point;
+- documentation workflow is unified;
+- DMS can recommend and prepare work without bypassing human approval;
+- responsibility boundaries are clear enough for both humans and AI to follow.
 
 ## Future Candidates
 
@@ -387,7 +332,6 @@ Keep these as Future unless a later roadmap review promotes them:
 - Architecture Decision Records.
 - Reusable Development Platform.
 - Registry Health.
-- Documentation Impact Analyzer.
 - Dead Documentation Detector.
 - Duplicate Idea Checker.
 - Improvement Collector.
@@ -395,34 +339,107 @@ Keep these as Future unless a later roadmap review promotes them:
 - Knowledge Synchronization Design.
 - Tool Modularization.
 
+### Knowledge Platform
+
+- Development Knowledge Platform.
+
+Purpose:
+
+Create an organized knowledge layer for development history, rules,
+architecture, decisions, templates, and cross-module learning.
+
+### Development Knowledge DB
+
+Purpose:
+
+Create a metadata database that manages project knowledge.
+
+Candidate contents:
+
+- documents;
+- decisions;
+- rules;
+- templates;
+- roadmap items;
+- Queue history;
+- module ownership;
+- dependency metadata;
+- review findings.
+
+### Dependency Index
+
+Purpose:
+
+Track dependencies across:
+
+- Python;
+- JSON;
+- Database;
+- Documentation.
+
+This should help humans and AI understand what may be affected before a change
+is made.
+
+### Universal Project Search
+
+Purpose:
+
+Search across the whole project, including code, docs, rules, templates,
+schemas, metadata, and historical decisions.
+
+### DB Impact Analyzer
+
+Purpose:
+
+Analyze the impact of database changes before implementation.
+
+Candidate checks:
+
+- schema references;
+- import scripts;
+- reports;
+- validators;
+- documentation;
+- backup and migration implications.
+
+### Documentation Impact Analyzer
+
+Purpose:
+
+Analyze which documents must be updated when rules, workflow, architecture, or
+templates change.
+
+### Architecture Viewer
+
+Purpose:
+
+Visualize dependencies, ownership boundaries, and structure across archive
+modules and DevelopmentSystem.
+
+### Rename Compatibility Analyzer
+
+Purpose:
+
+Analyze compatibility risks when names, paths, commands, modules, database
+fields, or public document terms are renamed.
+
+### OCR Golden Sample Calibration
+
+Purpose:
+
+Use expected titles or golden samples to validate and tune OCR settings.
+
+This should remain a verification candidate until the OCR import workflow and
+sample management rules are stable.
+
 ## Repository Growth Policy
 
-Keep Archive Root small.
+Keep archive root small.
 
 Archive root should contain only archive-level entry points, shared
 infrastructure, archive-wide docs, and module directories.
 
 Module-specific functionality belongs inside modules.
-
-## Architecture Evolution Timeline
-
-```text
-Ver1.4:
-  Launcher Foundation
-  Archive Target Registry
-  Workflow Version 2.0 Trial
-
-Ver1.5:
-  Archive Foundation
-  Archive Root Git Migration
-  Archive Docs Hierarchy
-  Registry Stabilization
-
-Ver2.0:
-  Command Center
-  Development Management System
-  Multi-module Archive Platform
-```
 
 ## Roadmap Review Points
 
@@ -434,23 +451,5 @@ Review the roadmap after:
 - Ver1.4-D trial review;
 - Ver1.4 closeout;
 - Archive Root migration design approval;
-- Archive Root migration completion.
-
-## Ver1.3-A Project Rename
-
-Status: completed for the active environment.
-
-Official project path:
-
-```text
-C:\GrayGhostArchive\GameGhost
-```
-
-Migration policy:
-
-```text
-GitHub Clone + User Data Migration
-```
-
-`C:\SteamAI\GrayGhost` remains a backup environment. Do not use Directory Move
-as the standard Project Rename procedure.
+- Archive Root migration completion;
+- any accepted change to DevelopmentSystem boundaries.

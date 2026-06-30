@@ -1,12 +1,14 @@
 # Workflow Rules
 
-**Version:** 2.0
+**Version:** 2.1
 
-**Last Updated:** 2026-06-27
+**Last Updated:** 2026-06-30
 
----
+## Purpose
 
-# Development Workflow Version 2.0 Trial
+This document defines workflow rules for human-led, AI-assisted development.
+
+## Development Workflow Version 2.0 Trial
 
 Development Workflow Version 2.0 is in trial for Ver1.4.
 
@@ -16,9 +18,9 @@ Reference:
 docs/workflow/development_workflow_v2_trial.md
 ```
 
-The trial may be used for Ver1.4 operations, but it is not yet promoted to
-permanent workflow rules. Promote it only after retrospective evidence shows
-that it reduces operational mistakes and improves resume quality.
+The trial may be used for Ver1.4 operations, but it is not yet permanent.
+Promote it only after retrospective evidence shows that it reduces operational
+mistakes and improves resume quality.
 
 During the trial:
 
@@ -26,177 +28,69 @@ During the trial:
 - update Current Focus after completing a Queue item;
 - move completed Queue items before moving Current Focus to the next task;
 - run a short retrospective after completion;
-- record proposed rule/template/workflow improvements as future candidates
-  unless the active specification explicitly includes them.
+- record proposed rule, template, workflow, or roadmap improvements.
 
----
+## Core Workflow Rules
 
-# Purpose
+### Scope Freeze Rule
 
-このドキュメントは Gray Ghost Archive の標準開発フローを定義する。
+Do the accepted scope first.
 
-すべての開発は、本ドキュメントの手順を基本として進める。
+New ideas discovered during work should be recorded as improvements or Future
+Candidates unless they are required to complete the accepted scope.
 
----
+### Stop Gate
 
-# Development Workflow
+Stop and return to planning when:
 
-## Incremental Development
+- scope becomes unclear;
+- implementation would require destructive change;
+- a future candidate is being treated as approved work;
+- documents conflict in a way that affects the result;
+- the task would require runtime, migration, release, or CI work outside the
+  accepted request.
 
-開発は小さな単位で進める。
+### Review Gate
 
-一度に大規模な変更を行わず、
+Review before marking work complete.
 
-* 作成
-* レビュー
-* 修正
-* 完成
+For documentation work, review for:
 
-を繰り返しながら品質を高める。
+- purpose clarity;
+- scope control;
+- terminology consistency;
+- responsibility boundaries;
+- future candidate handling;
+- template impact.
 
----
+### Retrospective Rule
 
-## Scope Freeze Rule
+After substantial work, record reusable learning as:
 
-現在の工程に集中する。
+- rule improvement;
+- template improvement;
+- workflow improvement;
+- roadmap future candidate;
+- remaining issue.
 
-次工程の内容を先取りしない。
+## AI Workflow Rules
 
-改善案は記録し、現在の工程完了後に反映する。
+AI should:
 
----
+- read existing context before editing;
+- state assumptions when needed;
+- prefer narrow, complete changes;
+- avoid runtime work when the request is documentation-only;
+- report verification and remaining issues.
 
-## Critical Improvement Rule
+AI should not:
 
-ただし、
+- commit unless explicitly requested;
+- migrate repositories unless explicitly requested;
+- silently change scope;
+- promote future candidates without review.
 
-後工程で大きな手戻りが発生すると判断した場合は例外とする。
+## Goal
 
-その場合は
-
-* 問題点
-* 後回しにした場合のリスク
-* 今対応する理由
-
-を説明した上で、
-
-現在の工程を一時停止して改善を優先する。
-
-改善後は元の工程へ戻る。
-
----
-
-## Review Gate Rule
-
-レビューを完了してから次工程へ進む。
-
-未レビューの成果物を正式版として扱わない。
-
----
-
-## Completed Draft Rule
-
-レビュー用ではなく、
-
-最初から完成版を提示する。
-
-部分的な差分ではなく、
-
-ファイル全体を提示することで、
-
-コピペミスや編集漏れを防止する。
-
----
-
-## Copy & Paste Safety Rule
-
-修正は可能な限り一括コピペで行う。
-
-部分修正よりも、
-
-ファイル全体の置き換えを優先する。
-
-ヒューマンエラーを最小限に抑えることを目的とする。
-
----
-
-## Feedback Loop Rule
-
-成果物をレビューし、
-
-改善点を洗い出し、
-
-必要に応じて修正する。
-
-レビュー結果は次回以降の標準フローへ反映する。
-
----
-
-## Standardization Rule
-
-改善方法は、
-
-実際に効果が確認できたものだけを標準ルールとする。
-
-机上の理論ではなく、
-
-運用実績を重視する。
-
----
-
-## Verification Rule
-
-各工程は以下の流れで進める。
-
-1. 作成
-2. レビュー
-3. 修正
-4. 再レビュー
-5. 完了判定
-6. Commit
-
-「完成した」と判断する前に、必ずレビューを実施する。
-
-レビューで問題が見つかった場合は、修正後に再レビューを行う。
-
----
-
-# Development Cycle
-
-標準的な開発手順は以下とする。
-
-1. 完成版を作成する
-2. 一括コピペで反映する
-3. レビューを実施する
-4. 必要に応じて完成版を再生成する
-5. 再レビューを行う
-6. Commitする
-7. 次の工程へ進む
-
----
-
-# AI Collaboration
-
-AI は改善提案を歓迎する。
-
-ただし、
-
-Scope Freeze Rule を基本とし、
-
-重大な手戻りを防ぐ場合のみ例外として改善を提案する。
-
-推測ではなく、
-
-実際の構造・ファイル・レビュー結果を基に判断する。
-
----
-
-# Goal
-
-開発品質を継続的に向上させ、
-
-人にもAIにも分かりやすく、
-
-安全かつ再現性の高い開発フローを維持する。
-
-本フローは、人・AIを問わず同じ品質基準で運用する。
+Workflow rules keep development resumable, reviewable, and safe across humans,
+AI, and long-running archive work.
