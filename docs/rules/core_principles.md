@@ -43,6 +43,19 @@ responsibilities start to mix.
 One folder should represent one clear responsibility. Avoid mixing roadmap,
 rules, templates, workflow, and implementation details.
 
+### Purpose-Oriented Naming
+
+Name roadmap items, Q files, and public knowledge base topics by their intended
+purpose before naming a specific implementation method.
+
+Implementation terms such as parser, OCR, API, CSV import, migration, or script
+may appear in descriptions, target lists, or specifications when they are useful.
+They should not be the public title when the real goal is broader than one
+technique.
+
+Use purpose-oriented names to keep future implementation options open and to
+make roadmap items understandable outside a single technical approach.
+
 ### Documentation First
 
 When design, workflow, or ownership changes, documentation should be updated as

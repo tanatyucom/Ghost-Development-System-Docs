@@ -53,7 +53,33 @@ Promote improvements into templates when they help future Q files become:
 - safer;
 - easier to review;
 - easier for AI to execute without guessing;
+- better at naming public roadmap items by purpose rather than by a single
+  implementation method;
 - better at separating approved scope from Future Candidates.
+
+## Improvement Review
+
+Every Q file, implementation request, review, and completion report should
+include an Improvement Review.
+
+Improvement Review asks whether the completed work revealed reusable knowledge
+that should improve:
+
+- Documentation.
+- Templates.
+- Workflow.
+- Roadmap.
+- Rules.
+- Architecture.
+- Knowledge Base.
+
+Separate proposals into:
+
+- Recommended: high-value improvements suitable for near-term adoption.
+- Future Candidates: useful ideas that should remain future work.
+
+Knowledge evolves through implementation. Reusable knowledge should be promoted
+to templates, rules, examples, or documentation whenever practical.
 
 ## Q Files
 
@@ -70,6 +96,9 @@ Use it for:
 
 Q files should make scope, non-scope, target files, deliverables, and commit
 policy explicit.
+
+Q files should state naming policy when a request renames roadmap items,
+architecture topics, templates, or public knowledge base concepts.
 
 Q files should also include Repository Information near the top of the request.
 This prevents AI from confusing the active repository, documentation root,

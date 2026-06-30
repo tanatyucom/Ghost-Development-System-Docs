@@ -46,6 +46,15 @@ Implement only the accepted scope.
 Do not implement Future Candidates unless the request explicitly promotes them
 to current scope.
 
+## Naming Policy
+
+When creating or renaming roadmap items, Q titles, architecture topics, or
+public knowledge base concepts, prefer purpose-oriented names.
+
+Use implementation terms in descriptions when they clarify the current method,
+but avoid making a single method the public title when the project goal is
+broader.
+
 ## Human Approval Gate
 
 Stop and ask for approval before:
@@ -80,9 +89,32 @@ Report:
 - Verification.
 - Repository Information followed.
 - Remaining Issues.
+- Recommended Improvements.
+- Future Candidates.
 - Future Candidate Proposals.
 - Recommended Next Q.
 - Suggested Commit Message.
+
+## Improvement Review
+
+After completing the accepted scope, review whether the work revealed reusable
+knowledge that should improve:
+
+- Documentation.
+- Templates.
+- Workflow.
+- Roadmap.
+- Rules.
+- Architecture.
+- Knowledge Base.
+
+Separate output into:
+
+- Recommended: high-value improvements suitable for near-term adoption.
+- Future Candidates: useful ideas that should remain future work.
+
+Knowledge evolves through implementation. Reusable knowledge should be promoted
+to templates, rules, examples, or documentation whenever practical.
 
 ## Goal
 

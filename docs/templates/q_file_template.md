@@ -115,6 +115,19 @@ List decisions that are already approved.
 Unapproved ideas should be placed in Review Requests or Future Candidates, not
 here.
 
+## Naming Policy
+
+Describe any naming rules that apply to this Q.
+
+Recommended default:
+
+- Prefer purpose-oriented names for roadmap items, Q titles, and public
+  knowledge base topics.
+- Use implementation names in descriptions only when they clarify the current
+  target or method.
+- Keep legacy or implementation-specific names as Current Target, Current
+  Implementation, or Background when they remain useful.
+
 ## Scope
 
 Describe the work that is included in this Q.
@@ -187,6 +200,7 @@ Examples:
 - long-term maintainability;
 - AI collaboration quality;
 - public knowledge base clarity;
+- purpose-oriented naming;
 - responsibility boundaries;
 - roadmap consistency;
 - workflow fit;
@@ -217,6 +231,7 @@ Examples:
 - Scope and non-scope are respected.
 - Repository Information is complete enough to prevent repository or edit-target
   confusion.
+- Public names describe purpose before implementation technique.
 - Future Candidates remain separate from approved work.
 - Rules, roadmap, templates, and README are consistent.
 - Commit is not created when the Q says not to commit.
@@ -231,9 +246,31 @@ Recommended:
 - Summary.
 - Verification.
 - Remaining Issues.
+- Recommended Improvements.
+- Future Candidates.
 - Future Candidate Proposals.
 - Recommended Next Q.
 - Suggested Commit Message.
+
+## Improvement Review
+
+Review the completed work and propose improvements for:
+
+- Documentation.
+- Templates.
+- Workflow.
+- Roadmap.
+- Rules.
+- Architecture.
+- Knowledge Base.
+
+### Recommended
+
+List high-value improvements suitable for near-term adoption.
+
+### Future Candidates
+
+List interesting ideas that should remain future work.
 
 ## Suggested Commit Message
 
@@ -252,3 +289,6 @@ docs: update ghost development system knowledge base
 - Put Repository Information near the top of each Q so AI can confirm the
   working directory, documentation root, source of truth, and related repository
   boundaries before editing.
+- Knowledge evolves through implementation.
+- Reusable knowledge should be promoted to templates, rules, examples, or
+  documentation whenever practical.

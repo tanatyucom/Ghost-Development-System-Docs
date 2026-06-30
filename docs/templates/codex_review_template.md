@@ -29,6 +29,7 @@ Select relevant perspectives:
 - responsibility boundaries;
 - scope control;
 - repository boundary control;
+- purpose-oriented naming;
 - template reusability;
 - future candidate handling.
 
@@ -44,6 +45,7 @@ Describe what a successful review should confirm.
 - Codex did not confuse the active repository, documentation root, runtime root,
   or related repository.
 - Files outside the Scope Guard were not changed.
+- Public names describe the purpose before a specific implementation method.
 - Future Candidates are not treated as approved work.
 - Related documents are updated or listed as remaining issues.
 - Human Approval Gate is respected.
@@ -56,5 +58,26 @@ Recommended:
 - Findings.
 - Suggested Improvements.
 - Remaining Issues.
+- Recommended Improvements.
 - Future Candidates.
 - Recommended Next Q.
+
+## Improvement Review
+
+Review whether the target reveals reusable improvements for:
+
+- Documentation.
+- Templates.
+- Workflow.
+- Roadmap.
+- Rules.
+- Architecture.
+- Knowledge Base.
+
+### Recommended
+
+High-value improvements suitable for near-term adoption.
+
+### Future Candidates
+
+Useful ideas that should remain future work.

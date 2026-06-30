@@ -12,4 +12,8 @@
 - Queue updates are complete when required.
 - Current Focus updates are complete when required.
 - Retrospective need is checked.
+- Improvement Review is included.
+- Recommended Improvements are separated from Future Candidates.
+- Reusable knowledge is promoted to templates, rules, examples, or
+  documentation when practical.
 - Suggested commit message is clear.

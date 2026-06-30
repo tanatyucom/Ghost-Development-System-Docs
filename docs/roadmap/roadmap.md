@@ -49,6 +49,8 @@ The current direction is:
   reuse.
 - Architecture evolves through implementation.
 - External reuse is a consequence of good architecture, not the primary goal.
+- Purpose-Oriented Naming: roadmap items should describe the intended outcome
+  before naming a specific implementation technique.
 - Human Approval Gate: AI may recommend and prepare work, but humans approve
   scope, destructive changes, architecture changes, releases, and
   standardization.
@@ -95,7 +97,31 @@ Trial candidates include:
 | Ver1.4-C | Maintenance | High, conditional | OCR Import Recovery | Fix only if Ver1.4-B finds breakage | Caller/path/output/import issues are repaired without expanding scope | Recovery verification passes, or blocker is documented |
 | Ver1.4-D | Trial | High | Development Workflow Version 2.0 Trial | Operate the Ver1.4 cycle through the trial workflow | Multiple Queue items complete using Rev.2 flow; trial review is recorded | Promote, revise, or reject recommendation is ready |
 | Ver1.4-E | Architecture | Normal | `unified_title` Migration Design | Design only; no deletion | Caller audit, migration plan, and cleanup plan are written | Ver1.5+ cleanup scope is clear |
-| Ver1.4-F | Feature | Normal | Nintendo 3DS Activity Log Parser | Convert completed research into parser implementation | Parser starts or implementation specification is confirmed | Parser work is started or ready for next Queue item |
+| Ver1.4-F | Feature / Recovery | Normal | Legacy Play History Recovery | Recover historical play records from legacy platforms using the most appropriate acquisition method | Current targets and recovery methods are documented; first implementation path is confirmed | Recovery work is started or ready for the next Queue item |
+
+### Ver1.4-F Legacy Play History Recovery
+
+Purpose:
+
+```text
+Recover historical play records from legacy platforms using the most
+appropriate acquisition method.
+```
+
+Current Targets / Current Implementations:
+
+- Nintendo 3DS Activity Log / metadata research.
+- Switch OCR / screenshots.
+- FF11 / FF14 historical recovery.
+- Steam / PSN / Console CSV recovery.
+- Manual recovery where automated sources are unavailable.
+
+Naming note:
+
+`Legacy Play History Recovery` is the public roadmap name because it describes
+the archive purpose. Specific techniques such as parser implementation, OCR,
+CSV import, API use, save data inspection, metadata research, or manual entry
+belong in the implementation description or Queue item.
 
 ### Ver1.4 Exit Definition
 
@@ -107,7 +133,8 @@ Ver1.4 can close when:
   check passed.
 - Workflow Trial review is complete.
 - `unified_title` Migration Design is complete.
-- 3DS Parser is started or its implementation specification is ready.
+- Legacy Play History Recovery is started or its first implementation
+  specification is ready.
 - Roadmap, status, Queue, and development history are aligned after the final
   retrospective.
 
