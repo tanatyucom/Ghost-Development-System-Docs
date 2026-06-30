@@ -71,6 +71,24 @@ Use it for:
 Q files should make scope, non-scope, target files, deliverables, and commit
 policy explicit.
 
+Q files should also include Repository Information near the top of the request.
+This prevents AI from confusing the active repository, documentation root,
+runtime root, source of truth, or related repositories.
+
+Recommended Repository Information fields:
+
+- Repository.
+- Working Directory.
+- Documentation Root.
+- Runtime Root, only when needed.
+- Single Source of Truth.
+- Related Repository, when another repository may be referenced.
+- Scope Guard.
+
+For documentation-only work, the Scope Guard should explicitly say which docs
+folder may be edited and which runtime or related repositories must remain
+reference-only.
+
 Japanese-first Q files are recommended when the project owner reviews requests
 in Japanese. Proper nouns, commands, paths, filenames, identifiers, and commit
 messages may remain in English.

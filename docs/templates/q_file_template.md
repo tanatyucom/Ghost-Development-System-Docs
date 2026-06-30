@@ -1,5 +1,7 @@
 # Q File Template
 
+Version:
+
 Status:
 
 Workflow:
@@ -14,6 +16,83 @@ Commit:
 Do not commit unless explicitly requested. Provide a suggested commit message
 instead.
 ```
+
+## Repository Information
+
+Define the repository and edit boundaries before describing the task.
+
+### Repository
+
+Repository name.
+
+Example:
+
+```text
+Ghost-Development-System-Docs
+```
+
+### Working Directory
+
+Absolute path to the repository root that AI should treat as the working
+directory.
+
+Example:
+
+```text
+C:\GitHub\Ghost-Development-System-Docs
+```
+
+### Documentation Root
+
+Absolute path to the documentation root when the task is documentation-related.
+
+Example:
+
+```text
+C:\GitHub\Ghost-Development-System-Docs\docs
+```
+
+### Runtime Root
+
+Use only when runtime implementation is explicitly in scope.
+
+For documentation-only work, write:
+
+```text
+Not in scope.
+```
+
+### Single Source Of Truth
+
+Repository or document set that should be treated as authoritative for this Q.
+
+Example:
+
+```text
+Ghost-Development-System-Docs
+```
+
+### Related Repository
+
+Optional repository that may be referenced but should not be edited unless
+explicitly listed in scope.
+
+Example:
+
+```text
+GameGhost: reference only. Do not update, sync, or copy files.
+```
+
+### Scope Guard
+
+State the hard edit boundary.
+
+Examples:
+
+- Edit only `Ghost-Development-System-Docs/docs`.
+- Treat GameGhost as reference only.
+- Do not update files outside the listed target repository.
+- Do not sync changes to related repositories.
 
 ## Purpose
 
@@ -83,6 +162,22 @@ Examples:
 - `docs/rules/`
 - `docs/templates/`
 
+## Completion Criteria
+
+Define concrete conditions for completion.
+
+Examples:
+
+- Only files under `docs/` are updated.
+- Runtime Code is not changed.
+- Git Migration is not performed.
+- Commit is not created.
+- Related repositories are not updated, synced, or copied.
+- Updated templates are delivered.
+- Changed files and summary are reported.
+- Remaining Issues, improvement proposals, Recommended Next Q, and Suggested
+  Commit Message are included.
+
 ## Review Requests
 
 Ask for review perspectives.
@@ -120,6 +215,8 @@ Examples:
 
 - Target documents are updated.
 - Scope and non-scope are respected.
+- Repository Information is complete enough to prevent repository or edit-target
+  confusion.
 - Future Candidates remain separate from approved work.
 - Rules, roadmap, templates, and README are consistent.
 - Commit is not created when the Q says not to commit.
@@ -152,3 +249,6 @@ docs: update ghost development system knowledge base
   remain in English.
 - Keep Future Candidates separate from approved work.
 - Make out-of-scope items explicit to prevent scope drift.
+- Put Repository Information near the top of each Q so AI can confirm the
+  working directory, documentation root, source of truth, and related repository
+  boundaries before editing.

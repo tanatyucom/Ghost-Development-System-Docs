@@ -21,6 +21,24 @@ Read documents in this order:
 Rules take precedence over workflow drafts, roadmap, templates, and Queue
 items.
 
+## Repository Information
+
+Before editing, identify and follow the Repository Information in the Q file or
+request.
+
+Confirm:
+
+- Repository.
+- Working Directory.
+- Documentation Root.
+- Runtime Root, if runtime work is explicitly in scope.
+- Single Source of Truth.
+- Related Repository boundaries.
+- Scope Guard.
+
+If Repository Information is missing or conflicts with the requested work, stop
+and clarify before editing files.
+
 ## Scope
 
 Implement only the accepted scope.
@@ -45,6 +63,8 @@ Stop and ask for approval before:
 For documentation-only requests:
 
 - update Markdown only;
+- edit only the repository and documentation root listed in Repository
+  Information;
 - do not change runtime code;
 - do not run migrations;
 - do not create releases;
@@ -58,6 +78,7 @@ Report:
 - Changed Files.
 - Summary.
 - Verification.
+- Repository Information followed.
 - Remaining Issues.
 - Future Candidate Proposals.
 - Recommended Next Q.
