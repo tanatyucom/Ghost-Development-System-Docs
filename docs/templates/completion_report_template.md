@@ -6,6 +6,14 @@
 
 ## Verification
 
+## Repository Information Followed
+
+- Target Project:
+- Repository:
+- Single Source Of Truth:
+- Cross Project Impact:
+- Scope Guard:
+
 ## Remaining Issues
 
 ## Current Focus Update

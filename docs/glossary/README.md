@@ -15,6 +15,10 @@ The archive-wide development platform direction for Gray Ghost Archive. It
 supports workflow, review, documentation, templates, coordination, and
 development infrastructure.
 
+It is the parent development foundation for projects such as GameGhost,
+AnimeGhost, ComicGhost, and Other. It does not automatically own
+project-specific runtime behavior.
+
 ### DevelopmentSystem
 
 Candidate implementation or folder name for the Ghost Development System
@@ -42,8 +46,36 @@ not own module business logic or DMS behavior.
 
 ### Repository Information
 
-The Q file section that identifies Repository, Working Directory, Documentation
-Root, Runtime Root, Single Source Of Truth, Related Repository, and Scope Guard.
+The Q file section that identifies Target Project, Repository, Working
+Directory, Documentation Root, Runtime Root, Single Source Of Truth, Related
+Repository, Cross Project Impact, and Scope Guard.
+
+### Target Project
+
+The project responsibility that a Q is about.
+
+Examples include Ghost Development System, GameGhost, AnimeGhost, ComicGhost,
+and Other.
+
+### Cross Project Impact
+
+The field that explains whether a Q affects another project.
+
+Common values include None, Reference Only, Documentation Impact, Runtime
+Impact, and Requires Separate Q.
+
+### Project First Principle
+
+The rule that every Q declares Target Project before implementation.
+
+This prevents AI and humans from confusing the editable repository with the
+project responsibility being discussed.
+
+### Japanese First
+
+The rule that Ghost Development System Docs uses Japanese by default for
+human-facing judgment, approval, review, Q files, templates, rules, roadmap,
+and completion reports.
 
 ### Scope Guard
 

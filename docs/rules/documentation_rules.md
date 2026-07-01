@@ -1,8 +1,8 @@
 # Documentation Rules
 
-**Version:** 2.1
+**Version:** 2.2
 
-**Last Updated:** 2026-06-30
+**Last Updated:** 2026-07-01
 
 ## Purpose
 
@@ -30,6 +30,22 @@ abbreviations, hidden assumptions, and outdated references.
 
 Every substantial documentation request should say what is in scope and what is
 out of scope.
+
+### Project First Documentation
+
+Every substantial documentation request should declare Target Project before
+implementation.
+
+Repository, Documentation Root, Single Source Of Truth, Related Repository,
+Cross Project Impact, and Scope Guard should be written before the task details
+when practical.
+
+### Japanese First Documentation
+
+Human-facing documentation should be written in Japanese by default.
+
+Keep English where required for source code, APIs, identifiers, filenames,
+paths, Git commands, commit messages, and established proper nouns.
 
 ## README Rules
 

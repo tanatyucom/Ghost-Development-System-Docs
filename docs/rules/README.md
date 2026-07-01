@@ -12,6 +12,8 @@ Ghost Development System knowledge base.
 
 - `rules.md`: rules index and priority.
 - `core_principles.md`: core development philosophy.
+- `project_rules.md`: Project First Principle and Cross Project rules.
+- `language_rules.md`: Japanese-first documentation operation rules.
 - `documentation_rules.md`: documentation structure and update rules.
 - `workflow_rules.md`: development workflow and gates.
 - `git_rules.md`: Git history and commit rules.
@@ -32,12 +34,14 @@ Ghost Development System knowledge base.
 
 1. `rules.md`
 2. `core_principles.md`
-3. `documentation_rules.md`
-4. `workflow_rules.md`
-5. `quality_rules.md`
-6. `ai_collaboration_rules.md`
-7. `git_rules.md`
-8. `script_architecture_rules.md`
+3. `project_rules.md`
+4. `language_rules.md`
+5. `documentation_rules.md`
+6. `workflow_rules.md`
+7. `quality_rules.md`
+8. `ai_collaboration_rules.md`
+9. `git_rules.md`
+10. `script_architecture_rules.md`
 
 ## Update Policy
 

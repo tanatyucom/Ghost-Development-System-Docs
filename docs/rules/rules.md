@@ -1,8 +1,8 @@
 # Ghost Development System Rules
 
-**Version:** 2.1
+**Version:** 2.2
 
-**Last Updated:** 2026-06-30
+**Last Updated:** 2026-07-01
 
 ## Purpose
 
@@ -29,6 +29,8 @@ Rules follow these principles:
 
 - One File One Theme.
 - One Folder One Responsibility.
+- Project First Principle.
+- Japanese First.
 - Evidence First.
 - Human Approval Gate.
 - Future Scope Guard.
@@ -39,6 +41,8 @@ own files.
 ## Official Rule Documents
 
 - `core_principles.md`
+- `project_rules.md`
+- `language_rules.md`
 - `documentation_rules.md`
 - `workflow_rules.md`
 - `git_rules.md`
@@ -60,6 +64,25 @@ Humans approve:
 
 AI may propose, draft, compare, and review. AI must not silently promote future
 candidates, expand scope, or perform destructive work.
+
+## Project First Principle
+
+すべての Q は、実装前に Target Project を宣言しなければなりません。
+
+AI は Target Project、Repository、Single Source Of Truth、Related Repository、
+Cross Project Impact、Scope Guard を確認してから編集します。
+
+詳細は `project_rules.md` に従います。
+
+## Japanese First
+
+Ghost Development System Docs は日本語運用を基本とします。
+
+人間が判断、承認、レビューする文章は日本語で書くことを基本とします。
+ソースコード、API、クラス名、関数名、ファイル名、パス、Commit Message、
+Git コマンドなど、英語である必要があるものは英語のまま扱ってよいです。
+
+詳細は `language_rules.md` に従います。
 
 ## Future Scope Guard
 

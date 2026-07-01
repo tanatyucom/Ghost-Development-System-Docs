@@ -10,6 +10,18 @@ major work items, future candidates, and review gates. Short-term execution
 details belong in status or Queue documents. Implementation details belong in
 specifications.
 
+## Roadmap Separation
+
+Ghost Development System 自身の Knowledge Base、Workflow、Rules、Templates、
+Architecture、AI Collaboration、Development Platform、Command Center の進化は
+`docs/roadmap/ghost_development_system_roadmap.md` で管理します。
+
+この文書は、Gray Ghost Archive との関係、Ghost Development Toolkit Trial から
+Ghost Development System へ至る大きな流れ、責任境界、Future Candidates を
+保持します。
+
+GameGhost など各 project 固有の feature roadmap は、各 project 側で管理します。
+
 ## Development Evolution
 
 ```text

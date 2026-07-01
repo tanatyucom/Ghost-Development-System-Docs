@@ -106,21 +106,23 @@ runtime root, source of truth, or related repositories.
 
 Recommended Repository Information fields:
 
+- Target Project.
 - Repository.
 - Working Directory.
 - Documentation Root.
 - Runtime Root, only when needed.
 - Single Source of Truth.
 - Related Repository, when another repository may be referenced.
+- Cross Project Impact.
 - Scope Guard.
 
 For documentation-only work, the Scope Guard should explicitly say which docs
 folder may be edited and which runtime or related repositories must remain
 reference-only.
 
-Japanese-first Q files are recommended when the project owner reviews requests
-in Japanese. Proper nouns, commands, paths, filenames, identifiers, and commit
-messages may remain in English.
+Japanese-first Q files are the default for Ghost Development System Docs.
+Proper nouns, commands, paths, filenames, identifiers, and commit messages may
+remain in English.
 
 ## Update Policy
 

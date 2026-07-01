@@ -1,29 +1,70 @@
-Version
+# Roadmap Template
 
-Purpose
+## Version
 
-Theme
+## Target Project
 
-Goals
+この roadmap item が扱う project responsibility を記載する。
 
-Category
+例:
 
-Priority
+- Ghost Development System
+- GameGhost
+- AnimeGhost
+- ComicGhost
+- Other
 
-Requirements
+## Roadmap Scope
 
-Dependencies
+この roadmap が扱う責務を記載する。
 
-Success Criteria
+例:
 
-Exit Definition
+- Ghost Development System platform direction.
+- Project-specific feature direction.
+- Documentation-only roadmap.
+- Architecture review roadmap.
 
-Trial Metrics
+## Responsibility Separation
 
-Current Focus Handoff
+Ghost Development System が持つ責務と、各 project が持つ責務を分けて記載する。
 
-Resume Notes
+## Cross Project Impact
 
-Future Expansion
+他 project への影響を記載する。
 
-Related Specification
+推奨値:
+
+- None
+- Reference Only
+- Documentation Impact
+- Runtime Impact
+- Requires Separate Q
+
+## Purpose
+
+## Theme
+
+## Goals
+
+## Category
+
+## Priority
+
+## Requirements
+
+## Dependencies
+
+## Success Criteria
+
+## Exit Definition
+
+## Trial Metrics
+
+## Current Focus Handoff
+
+## Resume Notes
+
+## Future Expansion
+
+## Related Specification

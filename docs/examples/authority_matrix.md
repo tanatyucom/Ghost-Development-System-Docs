@@ -31,6 +31,7 @@ The authoritative source for the current Q.
 
 | Target | Authority | Notes |
 |---|---|---|
+| Ghost Development System | Target Project | Parent development foundation for the current Q. |
 | Ghost-Development-System-Docs | Editable / Single Source Of Truth | Public Knowledge Base for the current Q. |
 | `docs/` | Editable | Documentation root. |
 | `docs/examples/` | Editable | Example library. |
@@ -44,8 +45,10 @@ The authoritative source for the current Q.
 ## Review Checklist
 
 - Is the Single Source Of Truth explicit?
+- Is the Target Project explicit?
 - Are editable paths listed narrowly?
 - Are related repositories marked Reference Only when appropriate?
+- Is Cross Project Impact explicit?
 - Are forbidden areas explicit?
 - Does the matrix match the Scope Guard?
 - Does the final report confirm these boundaries were respected?

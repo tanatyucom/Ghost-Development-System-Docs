@@ -1,8 +1,8 @@
 # Workflow Rules
 
-**Version:** 2.1
+**Version:** 2.2
 
-**Last Updated:** 2026-06-30
+**Last Updated:** 2026-07-01
 
 ## Purpose
 
@@ -38,6 +38,22 @@ Do the accepted scope first.
 
 New ideas discovered during work should be recorded as improvements or Future
 Candidates unless they are required to complete the accepted scope.
+
+### Project First Gate
+
+Before implementation, confirm:
+
+- Target Project.
+- Repository.
+- Working Directory.
+- Documentation Root.
+- Runtime Root.
+- Single Source Of Truth.
+- Related Repository.
+- Cross Project Impact.
+- Scope Guard.
+
+If these are missing or conflicting, stop and clarify before editing.
 
 ### Stop Gate
 
@@ -78,6 +94,8 @@ After substantial work, record reusable learning as:
 AI should:
 
 - read existing context before editing;
+- confirm Target Project before editing;
+- confirm Cross Project Impact before editing;
 - state assumptions when needed;
 - prefer narrow, complete changes;
 - avoid runtime work when the request is documentation-only;

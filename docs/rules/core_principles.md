@@ -1,8 +1,8 @@
 # Core Principles
 
-**Version:** 2.1
+**Version:** 2.2
 
-**Last Updated:** 2026-06-30
+**Last Updated:** 2026-07-01
 
 ## Purpose
 
@@ -27,6 +27,24 @@ and status without relying on memory.
 
 Documents should be readable by humans and structured enough for AI to use
 without guessing.
+
+### Project First
+
+Every Q must declare its Target Project before implementation.
+
+Target Project, Repository, Single Source Of Truth, Related Repository,
+Cross Project Impact, and Scope Guard should be clear enough to prevent AI from
+editing the wrong project or mixing parent platform responsibilities with
+project-specific responsibilities.
+
+### Japanese First
+
+Ghost Development System Docs uses Japanese as the default language for human
+judgment, approval, review, Q files, templates, rules, roadmap, and completion
+reports.
+
+English may remain for code, APIs, identifiers, filenames, paths, Git commands,
+commit messages, and terms that need English form.
 
 ### Evidence First
 

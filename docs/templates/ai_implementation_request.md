@@ -28,16 +28,26 @@ request.
 
 Confirm:
 
+- Target Project.
 - Repository.
 - Working Directory.
 - Documentation Root.
 - Runtime Root, if runtime work is explicitly in scope.
 - Single Source of Truth.
 - Related Repository boundaries.
+- Cross Project Impact.
 - Scope Guard.
 
 If Repository Information is missing or conflicts with the requested work, stop
 and clarify before editing files.
+
+## Language
+
+Ghost Development System Docs uses Japanese-first documentation.
+
+Human-facing purpose, scope, review, completion, and approval text should be
+written in Japanese by default. Code, APIs, identifiers, filenames, paths, Git
+commands, and commit messages may remain in English.
 
 ## Scope
 

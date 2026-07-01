@@ -30,6 +30,11 @@ Responsibilities:
 DevelopmentSystem does not own module-specific business logic, module schema
 content, or module import rules.
 
+DevelopmentSystem is the parent development foundation for multiple projects.
+It may define shared workflow, documentation, rules, templates, AI
+collaboration, and cross-project coordination. It must not silently take over a
+child project's runtime responsibilities.
+
 ## Gray Ghost Core
 
 Gray Ghost Core owns:
@@ -54,6 +59,16 @@ Examples of Archive Modules may include GameGhost and future modules.
 
 Module-specific behavior should stay in the module unless repeated use proves it
 belongs in DevelopmentSystem or Gray Ghost Core.
+
+Examples of future or related projects may include:
+
+- GameGhost.
+- AnimeGhost.
+- ComicGhost.
+- Other.
+
+Each project should keep its own runtime ownership unless a later reviewed Q
+promotes shared behavior into Ghost Development System.
 
 ## Launcher
 
@@ -98,3 +113,5 @@ Before accepting a new feature or document, ask:
 - Is this only a user entry point?
 - Does this require Human Approval Gate?
 - Is this a Future Candidate rather than approved scope?
+- What is the Target Project?
+- Does this Q have Cross Project Impact?
