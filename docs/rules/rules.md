@@ -32,6 +32,7 @@ Rules follow these principles:
 - Project First Principle.
 - Japanese First.
 - Evidence First.
+- Knowledge Before Automation.
 - Human Approval Gate.
 - Future Scope Guard.
 

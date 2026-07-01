@@ -71,6 +71,33 @@ Work Items:
 | GDS-1.1-D | Templates | High | Repository Information 強化 | Target Project と Cross Project Impact がテンプレートに含まれる |
 | GDS-1.1-E | Roadmap | High | GDS 専用 Roadmap | GameGhost と分離された GDS 自身の Roadmap を持つ |
 
+## Ver1.2 Roadmap
+
+Status: active.
+
+Theme:
+
+```text
+Navigation And Review Quality
+```
+
+Purpose:
+
+```text
+Knowledge Base の navigation、project management、review quality、history を強化し、
+Human と AI の共同開発をより安定させる。
+```
+
+Work Items:
+
+| ID | Category | Priority | Title | Success Criteria |
+|---|---|---:|---|---|
+| GDS-1.2-A | Roadmap | High | Roadmap README 改善 | Roadmap 一覧と責務分離が分かる |
+| GDS-1.2-B | Architecture / Rules | High | Project Hierarchy | GDS、Archive Projects、Individual Modules の階層が分かる |
+| GDS-1.2-C | Templates | High | Review Checklist 強化 | Target Project、Cross Project Impact、Japanese First、Human Approval、Scope Guard、Purpose-Oriented Naming を review できる |
+| GDS-1.2-D | Documentation | Normal | Folder README 統一 | 高価値 folder README が標準構成に近づく |
+| GDS-1.2-E | Knowledge Base | Normal | Knowledge Base History | Knowledge Base 自身の進化を振り返れる |
+
 ## Ver1.2 Candidate Direction
 
 Theme:

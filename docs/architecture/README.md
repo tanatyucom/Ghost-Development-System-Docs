@@ -48,9 +48,26 @@ DevelopmentSystem may provide reusable database helpers, validation,
 migration-assistance, backup coordination, and health checks. Archive Modules
 remain responsible for their own schemas and module-specific data meaning.
 
+## Design Philosophy Summary
+
+Accepted design principles include Evidence First, Purpose-Oriented Naming,
+Human Approval Gate, and Knowledge Before Automation.
+
+Knowledge Before Automation means that when automation fails, the system should
+first capture reusable reviewed knowledge before adding more automation
+complexity.
+
 ## Update Policy
 
 Update architecture documents when responsibility boundaries, design philosophy,
 or accepted architecture terms change.
 
 Do not use this folder to approve Future Candidates by implication.
+
+## Related Documents
+
+- `docs/architecture/responsibility_boundary.md`
+- `docs/architecture/design_philosophy.md`
+- `docs/rules/project_rules.md`
+- `docs/roadmap/ghost_development_system_roadmap.md`
+- `docs/roadmap/roadmap.md`

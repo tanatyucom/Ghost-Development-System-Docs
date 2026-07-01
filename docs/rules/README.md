@@ -8,6 +8,9 @@ Docs.
 Rules define how humans and AI should plan, document, review, and maintain the
 Ghost Development System knowledge base.
 
+Core rules include Evidence First, Purpose-Oriented Naming, Human Approval Gate,
+and Knowledge Before Automation.
+
 ## Contains
 
 - `rules.md`: rules index and priority.
@@ -54,3 +57,13 @@ protect long-term maintainability.
 Use one file for one theme. If a rule does not clearly belong in an existing
 file, create a new rule document only after confirming that the responsibility
 is distinct.
+
+## Decision Background Policy
+
+Important rules may include a short `Decision Background` section.
+
+Use it to explain why the rule exists in a few lines.
+
+Do not use it as a full Decision Log. Detailed alternatives, rejected options,
+approval history, and long rationale should be handled by a separate decision
+document or ADR when needed.

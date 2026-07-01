@@ -55,6 +55,7 @@ docs/
   architecture/  Architecture notes と responsibility boundaries。
   examples/      Example documents と usage samples。
   glossary/      Knowledge Base 全体で使う public terms。
+  history/       Knowledge Base 自身の version history。
   roadmap/       Ghost Development System と関連方針の roadmap。
   rules/         development と documentation の official operating rules。
   templates/     Q file、review、spec、report の reusable templates。
@@ -98,3 +99,17 @@ Knowledge Base は、人間と AI が private context や hidden assumptions に
 再利用できる知識は、必要に応じて templates、rules、examples、documentation
 へ昇格します。Future Candidates は保存しますが、review と promotion が行われる
 まで approved implementation scope ではありません。
+
+## Knowledge Before Automation
+
+Ghost Development System は、Knowledge Before Automation を主要思想として
+扱います。
+
+Automation が失敗したときは、まず不足している reusable knowledge を確認します。
+Review、Human Approval、Knowledge Base、Alias、Metadata、Rules、Examples などで
+知識を蓄積してから、automation に利用させます。
+
+GameGhost OCR では、OCR Profile を増やすよりも Alias Review、Safe Alias、
+Unicode Normalizer、Alias Candidate Report、Review GUI、Human Approval によって
+知識を蓄積したことが品質改善につながりました。この考え方は AnimeGhost、
+ComicGhost、将来プロジェクトにも適用できます。

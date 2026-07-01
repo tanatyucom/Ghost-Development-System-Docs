@@ -51,6 +51,17 @@ commit messages, and terms that need English form.
 Base decisions on actual files, reviewed designs, implementation results, and
 documented history.
 
+### Knowledge Before Automation
+
+When automation fails, first ask whether the system lacks reusable knowledge
+before making the automation more complex.
+
+Prefer mechanisms that capture, review, approve, and reuse knowledge, such as
+Review, Human Approval, Knowledge Base, Alias, Metadata, and Rules.
+
+Automation should improve because the knowledge base improves. It should not
+become a pile of hidden exceptions, AI guesses, or one-off complexity.
+
 ### One File One Theme
 
 One document should have one primary purpose. Split documents when unrelated

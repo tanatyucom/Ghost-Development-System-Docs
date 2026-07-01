@@ -35,6 +35,36 @@ It may define shared workflow, documentation, rules, templates, AI
 collaboration, and cross-project coordination. It must not silently take over a
 child project's runtime responsibilities.
 
+## Project Hierarchy
+
+```mermaid
+flowchart TD
+  GDS["Ghost Development System"]
+  ArchiveProjects["Archive Projects"]
+  GameGhost["GameGhost"]
+  AnimeGhost["AnimeGhost (Future)"]
+  ComicGhost["ComicGhost (Future)"]
+  Other["Other Projects"]
+  Modules["Individual Modules"]
+
+  GDS --> ArchiveProjects
+  ArchiveProjects --> GameGhost
+  ArchiveProjects --> AnimeGhost
+  ArchiveProjects --> ComicGhost
+  ArchiveProjects --> Other
+  GameGhost --> Modules
+  AnimeGhost --> Modules
+  ComicGhost --> Modules
+  Other --> Modules
+```
+
+Ghost Development System defines shared development infrastructure.
+
+Archive Projects own project-specific direction and runtime behavior.
+
+Individual Modules own module-specific business logic, schema, metadata, and
+import rules.
+
 ## Gray Ghost Core
 
 Gray Ghost Core owns:

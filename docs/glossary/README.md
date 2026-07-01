@@ -7,6 +7,21 @@ human-readable language.
 
 Use it to keep humans and AI aligned on public Knowledge Base vocabulary.
 
+## Contains
+
+- Shared public terms.
+- Short definitions for humans and AI.
+- Cross-document vocabulary used by rules, templates, roadmap, architecture,
+  workflow, and examples.
+
+## Does NOT Contain
+
+- Long-form architecture explanation.
+- Detailed workflow rules.
+- Project-specific runtime terminology that belongs in a project repository.
+- Decision Log entries.
+- Historical changelog entries.
+
 ## Terms
 
 ### Ghost Development System
@@ -118,3 +133,11 @@ important for AI collaboration.
 
 Keep definitions short. Longer explanations belong in architecture, workflow,
 rules, templates, or examples.
+
+## Related Documents
+
+- `docs/README.md`
+- `docs/rules/project_rules.md`
+- `docs/rules/language_rules.md`
+- `docs/architecture/responsibility_boundary.md`
+- `docs/history/knowledge_base_history.md`

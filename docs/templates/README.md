@@ -130,3 +130,12 @@ When a real Q reveals a reusable pattern, update the related template as part of
 the same documentation review when it is in scope.
 
 Do not add one-off request details to templates. Add only reusable structure.
+
+## Related Documents
+
+- `docs/templates/q_file_template.md`
+- `docs/templates/review_checklist.md`
+- `docs/templates/completion_report_template.md`
+- `docs/rules/project_rules.md`
+- `docs/rules/language_rules.md`
+- `docs/workflow/README.md`

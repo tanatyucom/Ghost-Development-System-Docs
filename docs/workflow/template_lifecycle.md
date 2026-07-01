@@ -82,6 +82,24 @@ Recommended
 
 Future Candidates should be preserved but not promoted until reviewed.
 
+## Knowledge Before Automation
+
+If an improvement is requested because automation failed, promote reusable
+knowledge before expanding the automation.
+
+Preferred path:
+
+```text
+Observed failure
+  -> Review
+  -> Human Approval
+  -> Knowledge Asset
+  -> Automation consumes the asset
+```
+
+This keeps future automation understandable and portable across GameGhost,
+AnimeGhost, ComicGhost, and new archive projects.
+
 ## Promotion Checklist
 
 - Is this reusable beyond the current Q?

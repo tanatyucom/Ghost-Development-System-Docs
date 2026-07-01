@@ -72,6 +72,36 @@ Cross Project Impact が `None` 以外の場合、Related Repository と Scope G
 
 Ghost Development System は、各プロジェクトの親となる開発基盤です。
 
+## Project Hierarchy
+
+```mermaid
+flowchart TD
+  GDS["Ghost Development System"]
+  ArchiveProjects["Archive Projects"]
+  GameGhost["GameGhost"]
+  AnimeGhost["AnimeGhost (Future)"]
+  ComicGhost["ComicGhost (Future)"]
+  Other["Other Projects"]
+  Modules["Individual Modules"]
+
+  GDS --> ArchiveProjects
+  ArchiveProjects --> GameGhost
+  ArchiveProjects --> AnimeGhost
+  ArchiveProjects --> ComicGhost
+  ArchiveProjects --> Other
+  GameGhost --> Modules
+  AnimeGhost --> Modules
+  ComicGhost --> Modules
+  Other --> Modules
+```
+
+Ghost Development System は、各 Archive Project に共通する開発基盤を扱います。
+
+Archive Projects は、それぞれの project 固有の目的、runtime、schema、metadata、
+import rules、features を扱います。
+
+Individual Modules は、各 project 内の module-specific responsibility を扱います。
+
 Ghost Development System が扱うもの:
 
 - Knowledge Base.
@@ -105,6 +135,18 @@ Cross Project Impact を確認してから編集します。
 これらが欠けている、または矛盾している場合は、実装前に停止して確認します。
 
 AI は、参照専用の関連リポジトリを編集、同期、コピー、移行してはいけません。
+
+## Decision Background
+
+Project First Principle の理由:
+
+Target Project を先に宣言しないと、AI が editable repository と project
+responsibility を混同し、誤編集や scope drift を起こす可能性があるため。
+
+Cross Project Impact の理由:
+
+Ghost Development System が複数 project の親になるほど、1 つの Q が他 project
+へ与える影響を事前に分離しておく必要があるため。
 
 ## Update Policy
 
