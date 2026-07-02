@@ -34,7 +34,7 @@ Idea
   -> Verification
   -> Improvement Review
   -> Recommended / Future Candidates
-  -> Template / Rule / Knowledge Base
+  -> Template / Rule / Knowledge Base / Knowledge Asset
 ```
 
 ## Knowledge Before Automation Flow
@@ -56,6 +56,49 @@ updates.
 
 Automation should consume explicit knowledge. It should not hide repeated human
 judgment inside increasingly complex code or AI prompts.
+
+## Evidence Feedback Loop
+
+When a completed task produces measurable results, feed those results back into
+the knowledge base.
+
+```text
+Implementation
+  -> Review
+  -> Metrics
+  -> Knowledge
+  -> Rule
+  -> Next Improvement
+```
+
+Metrics are reviewed evidence, not automatic decisions. They should explain
+what changed, where the data came from, what period or sample was measured, and
+what interpretation still needs human review.
+
+Use this loop when a change affects OCR quality, review workload, documentation
+reuse, automation behavior, or workflow efficiency.
+
+## Knowledge Asset Promotion Flow
+
+When a task discovers reusable project knowledge, use this flow:
+
+```text
+Observed result
+  -> Review
+  -> Candidate Knowledge Asset
+  -> Human Approval when required
+  -> Knowledge Asset Layer
+  -> Automation / Candidate Engine / Review GUI consumes asset
+  -> Improvement Review checks whether workflow, rules, or roadmap need updates
+```
+
+Knowledge Assets may include Approved Alias, Metadata Override, Unicode Rules,
+Golden Samples, OCR Confusion Rules, Review Decisions, Series Rules, Platform
+Rules, and User Overrides.
+
+Knowledge Asset Layer is used after review has identified reusable knowledge
+and before automation relies on that knowledge. Raw observations, unreviewed
+CSV edits, and one-off AI guesses should not be treated as approved assets.
 
 ## Step Meanings
 
@@ -102,6 +145,12 @@ Separate near-term improvements from ideas that should remain future work.
 Template / Rule / Knowledge Base:
 
 Promote reusable knowledge into the right durable location.
+
+Knowledge Asset:
+
+Promote reviewed operational knowledge into Knowledge Asset Layer when it
+should be consumed by tools, candidate engines, review GUI, Knowledge Editor, or
+future project automation.
 
 ## Improvement Review As Completion Gate
 

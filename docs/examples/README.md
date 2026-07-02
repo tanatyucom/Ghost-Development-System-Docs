@@ -18,6 +18,10 @@ reports, and documentation requests can start from a clear reference.
   purpose-oriented naming.
 - `knowledge_before_automation.md`: good and bad examples for converting
   automation failures into reusable knowledge before adding complexity.
+- `field_driven_development_cycle.md`: example for promoting field project
+  learning into Ghost Development System.
+- `evidence_feedback_loop.md`: example for connecting implementation results,
+  metrics, knowledge promotion, and next improvement.
 - `repository_information.md`: example of repository boundaries, source of
   truth, scope guard, and completion criteria.
 - `authority_matrix.md`: example edit and reference authority matrix.
@@ -65,6 +69,10 @@ what a complete, well-scoped document should feel like.
 - Use `knowledge_before_automation.md` when an automation failure may be better
   solved by Review, Human Approval, Alias, Metadata, Rules, or Knowledge Base
   updates before adding more automation.
+- Use `field_driven_development_cycle.md` when a field project reveals reusable
+  workflow, architecture, rule, or knowledge platform learning.
+- Use `evidence_feedback_loop.md` when a completed task should be evaluated
+  with metrics and converted into reviewed evidence.
 - Use `repository_information.md` when a task may involve multiple
   repositories, documentation roots, runtime roots, or reference-only sources.
 - Use `authority_matrix.md` when a task needs explicit Editable, Reference
@@ -89,6 +97,7 @@ When examples conflict with rules or templates, follow:
 - Documentation Health Check example.
 - Documentation Coverage Report example.
 - Knowledge Base Index example.
+- Metrics / Evidence completion report example.
 
 ## Update Policy
 

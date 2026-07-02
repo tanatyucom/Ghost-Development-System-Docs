@@ -87,7 +87,18 @@ After substantial work, record reusable learning as:
 - template improvement;
 - workflow improvement;
 - roadmap future candidate;
+- Knowledge Asset candidate;
+- metric or evidence improvement;
 - remaining issue.
+
+Knowledge Asset candidates require review before use. If automation will depend
+on the asset, confirm ownership, approval state, and whether the asset belongs
+to a project-specific repository or the shared Knowledge Asset Layer.
+
+When metrics are available, record whether they support the improvement. Useful
+signals may include completion time, review iterations, reuse count,
+automation rate, human review time, duplicate prevention, or OCR quality
+changes. Do not treat raw metrics as automatic approval.
 
 ## AI Workflow Rules
 

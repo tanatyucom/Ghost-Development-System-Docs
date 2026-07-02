@@ -289,6 +289,7 @@ out-of-scope items を明示します。
 - Changed Files.
 - Summary.
 - Verification.
+- Metrics / Evidence.
 - Improvement Review.
 - Recommended Improvements.
 - Future Candidates.
@@ -307,6 +308,7 @@ out-of-scope items を明示します。
 - Rules.
 - Architecture.
 - Knowledge Base.
+- Metrics / Evidence.
 
 ### Recommended Improvements
 

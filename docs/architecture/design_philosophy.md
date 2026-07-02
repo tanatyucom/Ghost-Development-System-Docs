@@ -41,6 +41,26 @@ results, and explicit user intent.
 
 Avoid hidden assumptions.
 
+## Evidence First With Metrics
+
+Evidence First should grow from "there is evidence" to "the evidence can be
+reviewed and measured."
+
+Metrics do not replace human judgment. They make repeated improvement visible
+by recording comparable signals such as success rate, review rate, review
+iterations, reuse count, automation rate, and human review time.
+
+Use metrics to answer:
+
+- Did the change improve real operation?
+- Did the change reduce repeated review work?
+- Did the change create reusable knowledge?
+- Did the change prevent duplication or hidden assumptions?
+
+Metrics should be connected to reviewed artifacts. Raw numbers without context
+are not evidence. A metric becomes useful when its source, owner, meaning, and
+review boundary are clear.
+
 ## Purpose-Oriented Naming
 
 Public names should describe the intended outcome before a specific
@@ -86,6 +106,19 @@ but the stronger improvement came from Alias Review, Safe Alias, Human Approval,
 Unicode Normalizer, Alias Candidate Report, and Review GUI. Those mechanisms
 made future OCR results better by accumulating reusable knowledge rather than
 only making the OCR engine more complex.
+
+## Knowledge As Assets
+
+Reusable knowledge should be treated as an asset when it can improve future
+automation, review, or project quality.
+
+Knowledge Assets may include Approved Alias, Metadata, Unicode Rules, Golden
+Samples, OCR Confusion Rules, Review Decisions, Series Rules, Platform Rules,
+User Overrides, and future AI knowledge.
+
+The user-facing direction is to edit Knowledge, not implementation storage.
+CSV, JSON, or database tables may remain internal forms, but the public design
+should expose reviewed meaning, approval state, and reuse boundaries.
 
 ## Knowledge Evolves Through Implementation
 

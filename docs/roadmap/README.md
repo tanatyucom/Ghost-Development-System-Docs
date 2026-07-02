@@ -13,7 +13,7 @@ roadmap を混同しないために使います。
 
 - `ghost_development_system_roadmap.md`: Ghost Development System 自身の
   Knowledge Base、Workflow、Rules、Templates、Architecture、AI Collaboration、
-  Development Platform、Command Center の Roadmap。
+  Knowledge Platform、Development Platform、Command Center の Roadmap。
 - `roadmap.md`: Gray Ghost Archive との関係、Ghost Development Toolkit Trial から
   Ghost Development System へ至る大きな流れ、責任境界、Future Candidates。
 
@@ -21,12 +21,22 @@ roadmap を混同しないために使います。
 
 | Roadmap | Status | Owner | Purpose |
 |---|---|---|---|
-| Ghost Development System Roadmap | Active | Ghost Development System Docs | Knowledge Base、Workflow、Architecture、AI Collaboration、Development Platform を管理する |
+| Ghost Development System Roadmap | Active | Ghost Development System Docs | Knowledge Base、Knowledge Platform、Workflow、Architecture、AI Collaboration、Development Platform を管理する |
 | Gray Ghost Archive / GDS Relationship Roadmap | Active | Ghost Development System Docs | Gray Ghost Archive と Ghost Development System の関係、移行方向、責任境界を管理する |
 | GameGhost Roadmap | Separate project | GameGhost | GameGhost 固有の features、runtime、schema、import rules を管理する |
 | AnimeGhost Roadmap | Future | Future project | AnimeGhost 固有の project roadmap として将来作成する |
 | ComicGhost Roadmap | Future | Future project | ComicGhost 固有の project roadmap として将来作成する |
 | Other Project Roadmap | Future | Each project | Other project 固有の責務として必要に応じて作成する |
+
+## Metrics Direction
+
+Development Metrics and Evidence Framework are managed in
+`ghost_development_system_roadmap.md`.
+
+They connect Evidence First, Metrics Layer, Evidence Feedback Loop, Knowledge
+Platform, and Improvement Review. Metrics are roadmap-level evidence inputs;
+they do not approve runtime implementation, release work, or rule
+standardization by themselves.
 
 ## Does NOT Contain
 
@@ -75,7 +85,8 @@ review promotes them.
 
 `ghost_development_system_roadmap.md` manages the evolution of Ghost Development
 System itself: Knowledge Base, Workflow, Rules, Templates, Architecture, AI
-Collaboration, Development Platform, and Command Center direction.
+Collaboration, Knowledge Platform, Development Platform, and Command Center
+direction.
 
 `roadmap.md` preserves the broader Gray Ghost Archive direction and the
 historical relationship between Ghost Development Toolkit Trial, Archive

@@ -62,6 +62,10 @@ Promote improvements into templates when they help future Q files become:
 Every Q file, implementation request, review, and completion report should
 include an Improvement Review.
 
+When measurable results are available, reports should also include Metrics /
+Evidence. Metrics should identify source, sample or period, interpretation, and
+what was not measured.
+
 Improvement Review asks whether the completed work revealed reusable knowledge
 that should improve:
 
@@ -72,6 +76,7 @@ that should improve:
 - Rules.
 - Architecture.
 - Knowledge Base.
+- Metrics / Evidence.
 
 Separate proposals into:
 

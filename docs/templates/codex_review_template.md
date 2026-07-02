@@ -32,6 +32,7 @@ Select relevant perspectives:
 - purpose-oriented naming;
 - template reusability;
 - future candidate handling.
+- metrics and evidence handling.
 
 ## Expected Result
 
@@ -48,6 +49,8 @@ Describe what a successful review should confirm.
 - Public names describe the purpose before a specific implementation method.
 - Future Candidates are not treated as approved work.
 - Related documents are updated or listed as remaining issues.
+- Metrics are reported when measurable results are available, and unmeasured
+  items are stated.
 - Human Approval Gate is respected.
 - Suggested commit message is provided when commit is not requested.
 
@@ -73,6 +76,7 @@ Review whether the target reveals reusable improvements for:
 - Rules.
 - Architecture.
 - Knowledge Base.
+- Metrics / Evidence.
 
 ### Recommended
 

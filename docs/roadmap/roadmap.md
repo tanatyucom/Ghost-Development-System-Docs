@@ -387,6 +387,23 @@ Purpose:
 Create an organized knowledge layer for development history, rules,
 architecture, decisions, templates, and cross-module learning.
 
+Management note:
+
+The active Ghost Development System Knowledge Platform roadmap is maintained in
+`docs/roadmap/ghost_development_system_roadmap.md`. This broader roadmap keeps
+the Gray Ghost Archive relationship and long-term candidate context.
+
+Current promoted direction includes:
+
+- Knowledge Asset Layer.
+- Knowledge Editor.
+- Knowledge Assets Dashboard.
+- Knowledge Asset API.
+- Knowledge Asset Registry.
+- Knowledge Asset Search.
+- Knowledge Asset Versioning.
+- Knowledge Asset Validation.
+
 ### Development Knowledge DB
 
 Purpose:

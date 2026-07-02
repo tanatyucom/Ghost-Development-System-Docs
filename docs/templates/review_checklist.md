@@ -56,6 +56,15 @@
 - schema validation が必要な作業では確認されている。
 - documentation-only work では、Markdown と参照パスの確認が行われている。
 
+## Metrics And Evidence
+
+- Metrics が利用できる場合、source、sample、period、interpretation が明示されている。
+- OCR quality、review workload、documentation reuse、automation rate などの変化が
+  必要に応じて確認されている。
+- raw metrics が Human Approval Gate や rule standardization を自動的に置き換えて
+  いない。
+- 測定していない項目は Remaining Issues または Not measured として明示されている。
+
 ## Improvement Review
 
 - Improvement Review が含まれている。

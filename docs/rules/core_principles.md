@@ -51,6 +51,10 @@ commit messages, and terms that need English form.
 Base decisions on actual files, reviewed designs, implementation results, and
 documented history.
 
+When repeated operation produces comparable results, preserve the relevant
+metrics as evidence. Metrics should have clear source, meaning, owner, and
+review boundary. They support judgment; they do not replace Human Approval Gate.
+
 ### Knowledge Before Automation
 
 When automation fails, first ask whether the system lacks reusable knowledge
@@ -61,6 +65,12 @@ Review, Human Approval, Knowledge Base, Alias, Metadata, and Rules.
 
 Automation should improve because the knowledge base improves. It should not
 become a pile of hidden exceptions, AI guesses, or one-off complexity.
+
+When reusable operational knowledge should be consumed by tools, treat it as a
+Knowledge Asset. Knowledge Assets should be reviewed, have clear ownership, and
+be promoted through Knowledge Asset Layer before automation depends on them.
+Raw CSV edits, unreviewed guesses, or hidden prompt exceptions are not approved
+Knowledge Assets.
 
 ### One File One Theme
 

@@ -97,6 +97,7 @@ Report:
 - Changed Files.
 - Summary.
 - Verification.
+- Metrics / Evidence, when measurable results are available.
 - Repository Information followed.
 - Remaining Issues.
 - Recommended Improvements.
@@ -117,6 +118,7 @@ knowledge that should improve:
 - Rules.
 - Architecture.
 - Knowledge Base.
+- Metrics / Evidence.
 
 Separate output into:
 

@@ -6,6 +6,13 @@
 
 ## Verification
 
+## Metrics / Evidence
+
+- Metrics checked:
+- Evidence source:
+- Interpretation:
+- Not measured:
+
 ## Repository Information Followed
 
 - Target Project:

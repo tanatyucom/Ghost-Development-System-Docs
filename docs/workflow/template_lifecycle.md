@@ -71,13 +71,16 @@ Recommended improvements may be promoted when they are:
 - useful to both humans and AI;
 - aligned with existing rules and roadmap direction.
 
+If the learning is operational knowledge that tools should consume, promote it
+as a Knowledge Asset rather than only as prose documentation.
+
 Promotion path:
 
 ```text
 Recommended
   -> Template candidate
   -> Rule candidate
-  -> Knowledge Base
+  -> Knowledge Base / Knowledge Asset
 ```
 
 Future Candidates should be preserved but not promoted until reviewed.
@@ -94,6 +97,7 @@ Observed failure
   -> Review
   -> Human Approval
   -> Knowledge Asset
+  -> Knowledge Asset Layer
   -> Automation consumes the asset
 ```
 
@@ -107,5 +111,7 @@ AnimeGhost, ComicGhost, and new archive projects.
 - Does it prevent a repeated mistake?
 - Does it belong in a template, rule, example, architecture note, workflow
   guide, glossary, or roadmap?
+- Does it belong in Knowledge Asset Layer so tools can consume it?
+- Is there metric evidence that supports the promotion?
 - Does it need Human Approval Gate?
 - Should it remain a Future Candidate?
