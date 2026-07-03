@@ -13,6 +13,7 @@ gate.
 
 - `README.md`: workflow folder guide.
 - `output_policy.md`: chat versus file artifact output decision policy.
+- `commit_safety_checklist.md`: dirty workspace and commit safety workflow.
 - `template_lifecycle.md`: how useful knowledge becomes a template, rule, or
   Knowledge Base document.
 
@@ -58,6 +59,24 @@ redline, approval review, or offline reading is expected.
 
 When an artifact is the authoritative output, chat should contain only a short
 summary, artifact paths or links, verification notes, and remaining issues.
+
+## Commit Safety Workflow
+
+Before committing, use the standard dirty workspace review:
+
+```text
+git status
+  -> Classify changes
+  -> Review unrelated files
+  -> Restore accidental files
+  -> git diff --check
+  -> Commit
+  -> Push
+```
+
+Every completion report should state whether a dirty workspace was detected,
+whether unrelated files were present, any suggested restore commands, and the
+safe commit set.
 
 ## Q Artifact Workflow
 
@@ -242,7 +261,9 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 
 - `docs/workflow/template_lifecycle.md`
 - `docs/workflow/output_policy.md`
+- `docs/workflow/commit_safety_checklist.md`
 - `docs/rules/workflow_rules.md`
+- `docs/rules/git_rules.md`
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/q_file_artifact_standard.md`
 - `docs/requests/README.md`

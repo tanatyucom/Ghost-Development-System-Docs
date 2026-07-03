@@ -34,6 +34,16 @@
 - Commit Hash:
 - Commit Status:
 
+## Dirty Workspace Review
+
+- Dirty workspace detected:
+- Unrelated files:
+- Suggested restore commands:
+- Safe commit set:
+- Files intentionally not staged or committed:
+- `git status` checked:
+- `git diff --check` result:
+
 ## Follow-up Q
 
 - Follow-up Q required:
@@ -56,6 +66,16 @@
 ## Changed Files
 
 ## Verification
+
+## Commit Safety Verification
+
+- `git status` reviewed:
+- Changed files classified:
+- Unrelated files reviewed:
+- Accidental files restored:
+- Safe commit set identified:
+- Commit performed:
+- Push performed:
 
 ## Metrics / Evidence
 

@@ -24,7 +24,8 @@ Knowledge Before Automation, and Artifact First.
   status movement, naming, completion report pairing, notes, attachments, and
   commit linkage standard for Q file artifacts.
 - `workflow_rules.md`: development workflow and gates.
-- `git_rules.md`: Git history and commit rules.
+- `git_rules.md`: Git history, dirty workspace policy, file classification,
+  and commit safety rules.
 - `quality_rules.md`: quality and review standards.
 - `ai_collaboration_rules.md`: human and AI collaboration rules.
 - `script_architecture_rules.md`: script architecture principles for related

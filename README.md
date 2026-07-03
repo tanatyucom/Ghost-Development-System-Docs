@@ -43,6 +43,17 @@ Simple single-file Q artifacts may use
 `docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md`
 when a full workspace is not needed yet.
 
+## Commit Safety
+
+Before commit, classify every changed file and keep unrelated runtime data,
+local cache, temporary files, and accidental review outputs out of the commit.
+
+Start from:
+
+- [`docs/rules/git_rules.md`](docs/rules/git_rules.md)
+- [`docs/workflow/commit_safety_checklist.md`](docs/workflow/commit_safety_checklist.md)
+- [`docs/examples/dirty_workspace_examples.md`](docs/examples/dirty_workspace_examples.md)
+
 ## Purpose
 
 Ghost Development System Docs は、開発知識を耐久性のある形で残すための

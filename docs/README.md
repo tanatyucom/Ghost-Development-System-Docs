@@ -65,6 +65,33 @@ Simple allowed form:
 docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md
 ```
 
+## Commit Safety Index
+
+Dirty workspaces must be reviewed before staging or committing.
+
+Reference points:
+
+- Rules: `docs/rules/git_rules.md`
+- Workflow: `docs/workflow/commit_safety_checklist.md`
+- Completion Report Template: `docs/templates/completion_report_template.md`
+- Codex Review Template: `docs/templates/codex_review_template.md`
+- Examples: `docs/examples/dirty_workspace_examples.md`
+
+Core flow:
+
+```text
+git status
+  -> Classify changes
+  -> Review unrelated files
+  -> Restore accidental files
+  -> git diff --check
+  -> Commit
+  -> Push
+```
+
+Completion reports should include dirty workspace state, unrelated files,
+suggested restore commands, and safe commit set.
+
 ## Knowledge Before Automation Index
 
 When automation fails, do not make automation more complex first. First capture

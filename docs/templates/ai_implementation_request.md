@@ -134,6 +134,10 @@ Report:
 - Source Q path.
 - Artifact Workspace path.
 - Output artifacts.
+- Dirty workspace detected?
+- Unrelated files?
+- Suggested restore commands.
+- Safe commit set.
 - Metrics / Evidence, when measurable results are available.
 - Repository Information followed.
 - Remaining Issues.

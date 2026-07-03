@@ -175,6 +175,21 @@ A saved completion report that links finished work back to the source Q file,
 generated files, output artifacts, commit hash when one exists, and follow-up
 Q. It should be stored beside the source Q file.
 
+### Dirty Workspace
+
+A Git working tree state where modified, added, deleted, or untracked files
+exist before commit review.
+
+Dirty workspaces must be classified before staging or committing.
+
+### Safe Commit Set
+
+The set of changed files that belongs to the accepted scope and may be staged
+or committed after review.
+
+Unrelated runtime data, local cache, temporary files, and accidental outputs do
+not belong in the safe commit set.
+
 ## Update Policy
 
 Add glossary terms when a concept appears across multiple documents or is
@@ -190,6 +205,8 @@ rules, templates, or examples.
 - `docs/rules/language_rules.md`
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/q_file_artifact_standard.md`
+- `docs/rules/git_rules.md`
+- `docs/workflow/commit_safety_checklist.md`
 - `docs/requests/README.md`
 - `docs/workflow/output_policy.md`
 - `docs/architecture/responsibility_boundary.md`

@@ -38,6 +38,7 @@ Select relevant perspectives:
 - future candidate handling.
 - metrics and evidence handling.
 - artifact location and workspace status.
+- dirty workspace and commit safety.
 
 ## Expected Result
 
@@ -60,6 +61,10 @@ Describe what a successful review should confirm.
 - Approved Q files are stored in the correct workspace.
 - Completion report is stored alongside the source Q.
 - Missing Q artifact path is treated as a review issue.
+- Dirty workspace state is reported.
+- Unrelated files are identified.
+- Suggested restore commands are provided when accidental files are detected.
+- Safe commit set is clear.
 - Suggested commit message is provided when commit is not requested.
 
 ## Output Format

@@ -27,6 +27,9 @@ reports, and documentation requests can start from a clear reference.
 - `q_file_artifact_workflow.md`: good and bad examples for Task Artifact
   Workspaces, Q files, completion reports, notes, attachments, and related
   commit information.
+- `dirty_workspace_examples.md`: good and bad examples for classifying dirty
+  workspace files, restoring accidental runtime changes, and keeping commits
+  scoped.
 - `repository_information.md`: example of repository boundaries, source of
   truth, scope guard, and completion criteria.
 - `authority_matrix.md`: example edit and reference authority matrix.
@@ -86,6 +89,9 @@ what a complete, well-scoped document should feel like.
   `docs/requests/<target_project>/<status>/` workspace, naming it, linking it
   to a completion report, storing notes or attachments, moving status, or
   recording related commit status.
+- Use `dirty_workspace_examples.md` before staging or committing when the
+  workspace contains unrelated files, runtime data, local cache, temporary
+  files, or review outputs.
 - Use `repository_information.md` when a task may involve multiple
   repositories, documentation roots, runtime roots, or reference-only sources.
 - Use `authority_matrix.md` when a task needs explicit Editable, Reference
@@ -129,4 +135,6 @@ Do not use examples to introduce new rules. Promote reusable standards to
 - `docs/templates/completion_report_template.md`
 - `docs/requests/README.md`
 - `docs/rules/q_file_artifact_standard.md`
+- `docs/rules/git_rules.md`
+- `docs/workflow/commit_safety_checklist.md`
 - `docs/history/knowledge_base_history.md`

@@ -156,6 +156,31 @@ attachments.
 Knowledge Base evolved from saved Q files into task workspaces that preserve
 the whole request-to-review chain.
 
+## Ver1.6
+
+### Added
+
+- Dirty Workspace Policy.
+- File classification table for commit review.
+- Commit Safety Checklist.
+- Completion report fields for dirty workspace state, unrelated files,
+  suggested restore commands, and safe commit set.
+- Dirty workspace examples for restoring unrelated runtime files and keeping
+  commits scoped.
+
+### Reason
+
+Local runtime files, generated reports, cache, and temporary outputs can remain
+modified after successful work. Without a standard safety check, unrelated
+files may be accidentally committed with documentation or implementation
+changes.
+
+### Evolution
+
+Knowledge Base evolved from artifact traceability into commit safety practice:
+every changed file should be classified before commit, and the safe commit set
+should be explicit.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

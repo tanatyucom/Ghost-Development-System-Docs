@@ -14,6 +14,10 @@ Q-related templates use the Task Artifact Workspace standard for request,
 completion report, notes, attachments, status movement, and related commit
 tracking.
 
+Completion and review templates also include dirty workspace and commit safety
+fields so unrelated files, restore suggestions, and safe commit sets are
+visible before commit.
+
 ## Contains
 
 ### Planning
@@ -169,6 +173,8 @@ Do not add one-off request details to templates. Add only reusable structure.
 - `docs/templates/completion_report_template.md`
 - `docs/requests/README.md`
 - `docs/rules/q_file_artifact_standard.md`
+- `docs/rules/git_rules.md`
+- `docs/workflow/commit_safety_checklist.md`
 - `docs/rules/project_rules.md`
 - `docs/rules/language_rules.md`
 - `docs/workflow/README.md`
