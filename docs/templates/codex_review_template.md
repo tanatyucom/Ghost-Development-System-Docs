@@ -15,6 +15,10 @@ Confirm the request identifies:
 - Single Source of Truth.
 - Related Repository, if any.
 - Scope Guard.
+- Source Q path.
+- Artifact Workspace path.
+- Status folder.
+- Related Completion Report path.
 
 Review whether Codex edited only the intended repository and target folder.
 
@@ -33,6 +37,7 @@ Select relevant perspectives:
 - template reusability;
 - future candidate handling.
 - metrics and evidence handling.
+- artifact location and workspace status.
 
 ## Expected Result
 
@@ -52,6 +57,9 @@ Describe what a successful review should confirm.
 - Metrics are reported when measurable results are available, and unmeasured
   items are stated.
 - Human Approval Gate is respected.
+- Approved Q files are stored in the correct workspace.
+- Completion report is stored alongside the source Q.
+- Missing Q artifact path is treated as a review issue.
 - Suggested commit message is provided when commit is not requested.
 
 ## Output Format

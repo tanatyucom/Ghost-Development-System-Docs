@@ -21,6 +21,40 @@ Read documents in this order:
 Rules take precedence over workflow drafts, roadmap, templates, and Queue
 items.
 
+## Output Format
+
+For reusable, reviewable, or Git-managed requests, prepare the request as a
+file artifact instead of relying on the chat body.
+
+Standard formats:
+
+- Markdown `.md`
+- Word `.docx`
+
+Markdown is required for Git-managed work and AI handoff. `.docx` is required
+when human review, comments, approval, or offline reading is expected.
+
+When an artifact is authoritative, the chat response should contain only a
+summary, artifact path or link, verification notes, and remaining issues.
+
+## Task Artifact Workspace
+
+When the request is a Q artifact, use the workspace path defined by the Q.
+
+Confirm:
+
+- Target Project folder.
+- Status folder.
+- Artifact Workspace path.
+- Source Q path.
+- Related Completion Report path.
+- Output artifacts.
+- Related Commit placeholder.
+
+If the Q is approved for execution, it should be in the `approved` workspace.
+After work is completed and reviewed, the completion report should be stored
+beside the source Q.
+
 ## Repository Information
 
 Before editing, identify and follow the Repository Information in the Q file or
@@ -97,6 +131,9 @@ Report:
 - Changed Files.
 - Summary.
 - Verification.
+- Source Q path.
+- Artifact Workspace path.
+- Output artifacts.
 - Metrics / Evidence, when measurable results are available.
 - Repository Information followed.
 - Remaining Issues.

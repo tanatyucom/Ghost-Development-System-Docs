@@ -1,8 +1,8 @@
 # Documentation Rules
 
-**Version:** 2.2
+**Version:** 2.4
 
-**Last Updated:** 2026-07-01
+**Last Updated:** 2026-07-04
 
 ## Purpose
 
@@ -25,6 +25,32 @@ multiple responsibilities, split it.
 
 Public documents should be readable without private context. Avoid unexplained
 abbreviations, hidden assumptions, and outdated references.
+
+### Artifact First
+
+Reusable, reviewable, or Git-managed documentation should be generated as a
+file artifact instead of being delivered only in chat.
+
+Use Markdown `.md` as the standard Git and AI handoff format. Use Word `.docx`
+when human review, redline, approval, or offline reading is expected.
+
+Chat should contain a summary and artifact links or paths, not the full
+authoritative long-form document, unless explicitly requested.
+
+### Task Artifact Workspace Documentation
+
+Q artifacts, completion reports, notes, and attachments should be stored in a
+human-readable and AI-readable workspace:
+
+```text
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/
+```
+
+The path should show Target Project, workflow status, and task purpose.
+
+Artifact location is part of documentation quality. A missing Q artifact path,
+wrong project folder, wrong status folder, or missing completion report pairing
+should be treated as a documentation review issue.
 
 ### Current Scope Must Be Explicit
 
@@ -64,6 +90,8 @@ The README is an operating guide for the folder, not a decorative summary.
 - `architecture/`: architecture notes and responsibility boundaries.
 - `examples/`: reusable examples.
 - `roadmap/`: long-term direction and future candidates.
+- `requests/`: Q artifacts, task workspaces, completion reports, notes, and
+  attachments.
 - `rules/`: official operating rules.
 - `templates/`: reusable request, review, planning, and report templates.
 - `workflow/`: development process and trial workflows.

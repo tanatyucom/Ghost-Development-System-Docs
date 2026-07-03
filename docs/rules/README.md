@@ -9,7 +9,7 @@ Rules define how humans and AI should plan, document, review, and maintain the
 Ghost Development System knowledge base.
 
 Core rules include Evidence First, Purpose-Oriented Naming, Human Approval Gate,
-and Knowledge Before Automation.
+Knowledge Before Automation, and Artifact First.
 
 ## Contains
 
@@ -18,6 +18,11 @@ and Knowledge Before Automation.
 - `project_rules.md`: Project First Principle and Cross Project rules.
 - `language_rules.md`: Japanese-first documentation operation rules.
 - `documentation_rules.md`: documentation structure and update rules.
+- `artifact_first_rules.md`: file generation rules for reusable Q files,
+  design documents, AI requests, roadmap proposals, and long reviews.
+- `q_file_artifact_standard.md`: Task Artifact Workspace, save location,
+  status movement, naming, completion report pairing, notes, attachments, and
+  commit linkage standard for Q file artifacts.
 - `workflow_rules.md`: development workflow and gates.
 - `git_rules.md`: Git history and commit rules.
 - `quality_rules.md`: quality and review standards.
@@ -40,11 +45,13 @@ and Knowledge Before Automation.
 3. `project_rules.md`
 4. `language_rules.md`
 5. `documentation_rules.md`
-6. `workflow_rules.md`
-7. `quality_rules.md`
-8. `ai_collaboration_rules.md`
-9. `git_rules.md`
-10. `script_architecture_rules.md`
+6. `artifact_first_rules.md`
+7. `q_file_artifact_standard.md`
+8. `workflow_rules.md`
+9. `quality_rules.md`
+10. `ai_collaboration_rules.md`
+11. `git_rules.md`
+12. `script_architecture_rules.md`
 
 ## Update Policy
 

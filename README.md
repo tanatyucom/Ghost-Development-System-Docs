@@ -8,6 +8,41 @@ Ghost Development System の公式 Knowledge Base です。
 このページの次に、公式 Knowledge Base Index として
 [`docs/README.md`](docs/README.md) を読んでください。
 
+## Artifact First
+
+Reusable, reviewable, AI-handoff, human-approval, or Git-managed outputs should
+be generated as file artifacts instead of being delivered only in chat.
+
+Task Artifact Workspace standardizes where Q files, completion reports, notes,
+and attachments live.
+
+Standard formats are Markdown `.md` and Word `.docx`.
+
+Start from:
+
+- [`docs/rules/artifact_first_rules.md`](docs/rules/artifact_first_rules.md)
+- [`docs/rules/q_file_artifact_standard.md`](docs/rules/q_file_artifact_standard.md)
+- [`docs/requests/README.md`](docs/requests/README.md)
+- [`docs/workflow/output_policy.md`](docs/workflow/output_policy.md)
+- [`docs/examples/artifact_first_examples.md`](docs/examples/artifact_first_examples.md)
+
+Chat should contain a short summary and artifact paths or links when the
+artifact is authoritative.
+
+Q files are saved in Task Artifact Workspaces under `docs/requests/`:
+
+```text
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/
+  request.md
+  completion_report.md
+  notes.md
+  attachments/
+```
+
+Simple single-file Q artifacts may use
+`docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md`
+when a full workspace is not needed yet.
+
 ## Purpose
 
 Ghost Development System Docs は、開発知識を耐久性のある形で残すための

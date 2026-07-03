@@ -17,6 +17,190 @@ Commit:
 Suggested Commit Message を提示する。
 ```
 
+## Output Format
+
+この Q 自体、およびこの Q から生成される再利用・レビュー・Git 管理対象の成果物は、
+原則としてチャット本文ではなくファイル Artifact として生成します。
+
+標準形式:
+
+- Markdown `.md`
+- Word `.docx`
+
+Markdown `.md` は Git 管理、AI handoff、差分レビューの標準形式です。
+人間によるレビュー、コメント、承認、オフライン確認が想定される場合は `.docx` も生成します。
+
+チャット本文には、目的の要約、Artifact のパスまたはリンク、検証結果、残課題のみを記載します。
+長文 Q、設計書、仕様書、Codex / Gemini / Claude 依頼文、Roadmap 更新案、
+長文レビュー依頼の全文をチャット本文だけに置かないでください。
+
+## Required Artifacts
+
+この Q で必要な成果物を明記します。
+
+推奨項目:
+
+- Markdown required: Yes / No
+- `.docx` required when human review is expected: Yes / No
+- PDF required: Yes / No
+- CSV / XLSX / PPTX required: Yes / No
+- Chat body should contain summary only: Yes / No
+
+例:
+
+```text
+Markdown required: Yes
+.docx required when human review is expected: Yes
+Chat body should contain summary only: Yes
+```
+
+## Artifact Output
+
+この Q は原則として保存済み Artifact を authoritative source とします。
+チャット本文には Q の全文を貼らず、要約と保存ファイルのパスまたはリンクのみを記載します。
+
+Required:
+
+- Markdown `.md`
+
+Required when human review is expected:
+
+- Word `.docx`
+
+## Request ID / Task ID
+
+Request ID or Task ID:
+
+```text
+Not assigned / <ID>
+```
+
+Examples:
+
+```text
+GG-0001
+GDS-0001
+EXP-0001
+```
+
+## Save Location
+
+Q file artifacts are saved under:
+
+```text
+docs/requests/
+```
+
+## Artifact Workspace
+
+Preferred full task workspace:
+
+```text
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/
+  request.md
+  completion_report.md
+  notes.md
+  attachments/
+```
+
+Simple allowed form when no task workspace is needed yet:
+
+```text
+docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md
+```
+
+Artifact Workspace path:
+
+```text
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/
+```
+
+## Status Folder
+
+Status folder:
+
+```text
+draft / approved / completed / archived
+```
+
+Status meaning:
+
+- `draft`: Q is being prepared and is not approved for execution.
+- `approved`: Q is approved and ready for Codex / AI implementation.
+- `completed`: implementation and completion report are returned and reviewed.
+- `archived`: old, superseded, cancelled after review, or retained for history.
+
+## File Naming
+
+Use this naming pattern:
+
+```text
+YYYY-MM-DD_<target_project>_<short_title>.md
+```
+
+Example:
+
+```text
+2026-07-03_gameghost_steam_ownership_gap_audit.md
+```
+
+Use lowercase ASCII and snake_case for `target_project` and `short_title`.
+
+## Related Completion Report
+
+Expected completion report artifact:
+
+```text
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/completion_report.md
+```
+
+Status:
+
+```text
+Planned / Generated / Not required
+```
+
+## Output Artifacts
+
+Expected output artifacts:
+
+- Request artifact:
+- Completion report artifact:
+- Human review artifact, when expected:
+- Notes artifact:
+- Attachments folder:
+
+## Related Commit
+
+Commit policy:
+
+```text
+Do not commit / Commit only when explicitly requested / Commit expected after review
+```
+
+Commit hash:
+
+```text
+Not created.
+```
+
+## Movement Instructions
+
+Expected movement:
+
+```text
+draft -> approved -> completed -> archived
+```
+
+Current movement instruction:
+
+```text
+Create in draft / Move to approved / Move to completed / Move to archived / Do not move
+```
+
+Move the whole task workspace folder when using full workspace form. Do not
+separate `request.md`, `completion_report.md`, `notes.md`, and `attachments/`.
+
 ## Repository Information
 
 実装内容を書く前に、対象プロジェクト、リポジトリ、編集境界を定義します。
@@ -232,6 +416,24 @@ out-of-scope items を明示します。
 - Remaining Issues, improvement proposals, Recommended Next Q, and Suggested
   Commit Message are included.
 
+### Artifact Completion Criteria
+
+- Output Format is specified.
+- Required Artifacts are specified.
+- Artifact Output is specified.
+- Request ID or Task ID is specified when available.
+- Artifact Workspace path is specified.
+- Status Folder is specified.
+- Save Location is under `docs/requests/`.
+- File Naming follows `YYYY-MM-DD_<target_project>_<short_title>.md`.
+- Related Completion Report is specified.
+- Output Artifacts are specified.
+- Related Commit policy is specified.
+- Movement Instructions are specified.
+- Markdown `.md` is generated for reusable, AI-handoff, or Git-managed output.
+- `.docx` is generated when human review is expected.
+- Chat body contains summary only when artifacts are authoritative.
+
 ## Review Requests
 
 レビュー観点を記載します。
@@ -279,6 +481,15 @@ out-of-scope items を明示します。
 - Future Candidates remain separate from approved work.
 - Rules, roadmap, templates, and README are consistent.
 - Commit is not created when the Q says not to commit.
+- Output Format and Required Artifacts are clear.
+- Artifact Output, Save Location, File Naming, Related Completion Report, and
+  Related Commit are clear.
+- Artifact Workspace, Status Folder, Output Artifacts, and Movement
+  Instructions are clear.
+- Missing Q artifact path is treated as a review issue.
+- Markdown `.md` is generated for reusable, AI-handoff, or Git-managed output.
+- `.docx` is generated when human review is expected.
+- Chat body contains summary only when artifacts are authoritative.
 
 ## Deliverables
 

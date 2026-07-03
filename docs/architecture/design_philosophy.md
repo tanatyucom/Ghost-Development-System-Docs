@@ -83,6 +83,22 @@ Humans approve:
 AI may propose, draft, review, and prepare work, but it must not bypass human
 approval.
 
+## Artifact First
+
+Reusable, reviewable, or Git-managed outputs should be generated as file
+artifacts before they become implementation or approval inputs.
+
+Markdown `.md` is the standard format for Git-managed documentation, AI
+handoff, and diff review. Word `.docx` is required when human review,
+comments, approval, redline, or offline reading is expected.
+
+Chat is useful for short consultation and status, but it should not be the
+authoritative copy for long Q files, design documents, specifications, review
+requests, AI implementation requests, or roadmap proposals.
+
+Artifact First supports Human Approval Gate, prevents copy loss, and makes
+Knowledge Promotion easier.
+
 ## Knowledge Before Automation
 
 When automation fails, the first architectural question is whether the system

@@ -1,5 +1,70 @@
 # Knowledge Base Index
 
+## Artifact First Index
+
+Reusable, reviewable, AI-handoff, human-approval, or Git-managed outputs should
+be generated as file artifacts instead of being delivered only in chat.
+
+Task Artifact Workspace standardizes where Q files, completion reports, notes,
+and attachments live.
+
+Reference points:
+
+- Rules: `docs/rules/artifact_first_rules.md`
+- Task Artifact Workspace / Q File Artifact Standard:
+  `docs/rules/q_file_artifact_standard.md`
+- Request Artifacts: `docs/requests/README.md`
+- Workflow: `docs/workflow/output_policy.md`
+- Templates: `docs/templates/q_file_template.md`
+- Completion Reports: `docs/templates/completion_report_template.md`
+- AI Request Template: `docs/templates/ai_implementation_request.md`
+- Architecture: `docs/architecture/responsibility_boundary.md`
+- Examples: `docs/examples/artifact_first_examples.md`
+- Q Artifact Examples: `docs/examples/q_file_artifact_workflow.md`
+- Glossary: `docs/glossary/README.md`
+
+Core flow:
+
+```text
+Idea / Request
+  -> Q Artifact Workspace
+  -> Approval
+  -> Codex / AI Implementation
+  -> Completion Report Artifact
+  -> Human Review
+  -> Commit
+  -> Knowledge Promotion
+  -> Archive
+```
+
+Standard artifact formats:
+
+- Markdown `.md`
+- Word `.docx`
+
+Markdown is required for reusable, AI-handoff, or Git-managed outputs. `.docx`
+is required when human review, comments, approval, redline, or offline reading
+is expected.
+
+Q files and related completion reports are saved in Task Artifact Workspaces
+under `docs/requests/`.
+
+Full workspace form:
+
+```text
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/
+  request.md
+  completion_report.md
+  notes.md
+  attachments/
+```
+
+Simple allowed form:
+
+```text
+docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md
+```
+
 ## Knowledge Before Automation Index
 
 When automation fails, do not make automation more complex first. First capture

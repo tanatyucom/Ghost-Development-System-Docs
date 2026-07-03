@@ -7,6 +7,13 @@ This folder contains reusable templates for Ghost Development System Docs.
 Templates help humans and AI create consistent Q files, specifications, reviews,
 reports, roadmap items, and release documents.
 
+Templates also define when reusable outputs should be generated as file
+artifacts instead of being delivered only in chat.
+
+Q-related templates use the Task Artifact Workspace standard for request,
+completion report, notes, attachments, status movement, and related commit
+tracking.
+
 ## Contains
 
 ### Planning
@@ -51,6 +58,7 @@ Promote improvements into templates when they help future Q files become:
 
 - clearer;
 - safer;
+- easier to generate as durable file artifacts;
 - easier to review;
 - easier for AI to execute without guessing;
 - better at naming public roadmap items by purpose rather than by a single
@@ -102,6 +110,24 @@ Use it for:
 Q files should make scope, non-scope, target files, deliverables, and commit
 policy explicit.
 
+Q files should also make Output Format and Required Artifacts explicit.
+
+Default artifact policy:
+
+- Markdown `.md` is required for reusable, AI-handoff, or Git-managed Q files.
+- Word `.docx` is required when human review, comments, approval, or offline
+  reading is expected.
+- Chat should contain the summary and artifact paths or links only when the
+  file artifact is authoritative.
+- Q artifacts should be saved in Task Artifact Workspaces under
+  `docs/requests/<target_project>/<status>/`.
+- Full workspaces should use `request.md`, `completion_report.md`, `notes.md`,
+  and `attachments/`.
+- Simple Q artifacts may use
+  `YYYY-MM-DD_<target_project>_<short_title>.md` when a full workspace is not
+  needed yet.
+- Completion report artifacts should be saved beside the source Q.
+
 Q files should state naming policy when a request renames roadmap items,
 architecture topics, templates, or public knowledge base concepts.
 
@@ -141,6 +167,8 @@ Do not add one-off request details to templates. Add only reusable structure.
 - `docs/templates/q_file_template.md`
 - `docs/templates/review_checklist.md`
 - `docs/templates/completion_report_template.md`
+- `docs/requests/README.md`
+- `docs/rules/q_file_artifact_standard.md`
 - `docs/rules/project_rules.md`
 - `docs/rules/language_rules.md`
 - `docs/workflow/README.md`

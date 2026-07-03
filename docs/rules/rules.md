@@ -1,8 +1,8 @@
 # Ghost Development System Rules
 
-**Version:** 2.2
+**Version:** 2.3
 
-**Last Updated:** 2026-07-01
+**Last Updated:** 2026-07-03
 
 ## Purpose
 
@@ -33,6 +33,7 @@ Rules follow these principles:
 - Japanese First.
 - Evidence First.
 - Knowledge Before Automation.
+- Artifact First.
 - Human Approval Gate.
 - Future Scope Guard.
 
@@ -45,6 +46,8 @@ own files.
 - `project_rules.md`
 - `language_rules.md`
 - `documentation_rules.md`
+- `artifact_first_rules.md`
+- `q_file_artifact_standard.md`
 - `workflow_rules.md`
 - `git_rules.md`
 - `quality_rules.md`

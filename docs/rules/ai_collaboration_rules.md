@@ -1,8 +1,8 @@
 # AI Collaboration Rules
 
-**Version:** 2.1
+**Version:** 2.2
 
-**Last Updated:** 2026-06-30
+**Last Updated:** 2026-07-03
 
 ## Purpose
 
@@ -31,12 +31,23 @@ decisions, and explicit user requests.
 Reusable learning should move into rules, templates, roadmap, workflow, or
 architecture documents. It should not remain only in conversation.
 
+### Artifact First
+
+Reusable AI requests, long review prompts, Q files, design documents,
+specifications, and roadmap update proposals should be generated as managed
+file artifacts before execution or review.
+
+AI should summarize the artifact in chat and provide the file path or link
+instead of making the chat body the authoritative copy.
+
 ## AI Responsibilities
 
 AI may:
 
 - review documentation structure;
 - draft and revise Markdown;
+- generate Markdown and `.docx` artifacts for reusable requests or human
+  review packets;
 - identify missing related updates;
 - propose future candidates;
 - suggest commit messages;

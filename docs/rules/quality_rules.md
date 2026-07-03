@@ -1,8 +1,8 @@
 # Quality Rules
 
-**Version:** 2.1
+**Version:** 2.2
 
-**Last Updated:** 2026-06-30
+**Last Updated:** 2026-07-04
 
 ## Purpose
 
@@ -37,6 +37,10 @@ Review documentation for:
 - missing related updates;
 - future candidate handling;
 - acceptance criteria.
+- artifact location;
+- source Q path;
+- completion report pairing;
+- correct project/status workspace.
 
 ## Error Prevention
 
@@ -47,6 +51,9 @@ Prevent common errors by:
 - requiring Human Approval Gate for high-impact changes;
 - keeping templates current;
 - checking related documents when rules or workflow change.
+- treating missing Q artifact paths as review issues;
+- storing completion reports beside the source Q artifact;
+- keeping notes and attachments in the task workspace.
 
 ## Evidence First
 

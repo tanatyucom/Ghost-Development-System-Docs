@@ -22,6 +22,11 @@ reports, and documentation requests can start from a clear reference.
   learning into Ghost Development System.
 - `evidence_feedback_loop.md`: example for connecting implementation results,
   metrics, knowledge promotion, and next improvement.
+- `artifact_first_examples.md`: good and bad examples for file-first Q files,
+  design documents, AI requests, review requests, and roadmap proposals.
+- `q_file_artifact_workflow.md`: good and bad examples for Task Artifact
+  Workspaces, Q files, completion reports, notes, attachments, and related
+  commit information.
 - `repository_information.md`: example of repository boundaries, source of
   truth, scope guard, and completion criteria.
 - `authority_matrix.md`: example edit and reference authority matrix.
@@ -73,6 +78,14 @@ what a complete, well-scoped document should feel like.
   workflow, architecture, rule, or knowledge platform learning.
 - Use `evidence_feedback_loop.md` when a completed task should be evaluated
   with metrics and converted into reviewed evidence.
+- Use `artifact_first_examples.md` when deciding whether a long Q, design
+  document, review request, Codex / Gemini / Claude request, or roadmap update
+  proposal should be generated as `.md` / `.docx` artifacts instead of pasted
+  into chat.
+- Use `q_file_artifact_workflow.md` when saving a Q file in a
+  `docs/requests/<target_project>/<status>/` workspace, naming it, linking it
+  to a completion report, storing notes or attachments, moving status, or
+  recording related commit status.
 - Use `repository_information.md` when a task may involve multiple
   repositories, documentation roots, runtime roots, or reference-only sources.
 - Use `authority_matrix.md` when a task needs explicit Editable, Reference
@@ -113,4 +126,7 @@ Do not use examples to introduce new rules. Promote reusable standards to
 - `docs/rules/`
 - `docs/templates/review_checklist.md`
 - `docs/templates/q_file_template.md`
+- `docs/templates/completion_report_template.md`
+- `docs/requests/README.md`
+- `docs/rules/q_file_artifact_standard.md`
 - `docs/history/knowledge_base_history.md`

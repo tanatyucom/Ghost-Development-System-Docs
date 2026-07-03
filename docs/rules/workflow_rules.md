@@ -1,8 +1,8 @@
 # Workflow Rules
 
-**Version:** 2.2
+**Version:** 2.4
 
-**Last Updated:** 2026-07-01
+**Last Updated:** 2026-07-04
 
 ## Purpose
 
@@ -55,6 +55,61 @@ Before implementation, confirm:
 
 If these are missing or conflicting, stop and clarify before editing.
 
+### Artifact First Gate
+
+Before implementation or review, decide whether the requested output belongs
+in chat or in a file artifact.
+
+Use a file artifact by default for long Q files, design documents,
+specifications, review requests, Codex / Gemini / Claude requests, roadmap
+update proposals, and any output expected to be stored in Git.
+
+Use chat only for short consultation, clarification, or status that is not the
+authoritative copy of reusable work.
+
+Q artifacts should be saved in the correct Task Artifact Workspace under:
+
+```text
+docs/requests/<target_project>/<status>/
+```
+
+Use full workspace form when the task has related artifacts:
+
+```text
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/
+  request.md
+  completion_report.md
+  notes.md
+  attachments/
+```
+
+Completion report artifacts should be stored alongside the source Q artifact.
+
+Approved Q files should not remain only in chat and should not remain outside
+the correct project/status workspace.
+
+Missing Q artifact path is a review issue.
+
+### Task Artifact Movement Rule
+
+Move Q artifacts through this status path:
+
+```text
+draft -> approved -> completed -> archived
+```
+
+Movement rules:
+
+- `draft`: Q is being prepared and is not approved for execution.
+- `approved`: Q is approved and ready for Codex / AI implementation.
+- `completed`: implementation and completion report artifacts are returned and
+  reviewed.
+- `archived`: old, superseded, cancelled after review, or retained only for
+  history.
+
+When using a task workspace, move the whole workspace folder. Do not separate
+`request.md`, `completion_report.md`, `notes.md`, and `attachments/`.
+
 ### Stop Gate
 
 Stop and return to planning when:
@@ -78,6 +133,10 @@ For documentation work, review for:
 - responsibility boundaries;
 - future candidate handling;
 - template impact.
+- artifact location;
+- source Q path;
+- completion report pairing;
+- correct project/status workspace.
 
 ### Retrospective Rule
 

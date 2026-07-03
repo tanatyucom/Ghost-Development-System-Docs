@@ -19,6 +19,7 @@ Responsibilities:
 - Review.
 - Documentation.
 - Templates.
+- Output Layer.
 - Knowledge Asset Layer.
 - Metrics Layer.
 - Database Utility Framework.
@@ -36,6 +37,52 @@ DevelopmentSystem is the parent development foundation for multiple projects.
 It may define shared workflow, documentation, rules, templates, AI
 collaboration, and cross-project coordination. It must not silently take over a
 child project's runtime responsibilities.
+
+## Output Layer
+
+Output Layer owns the durable boundary between temporary chat communication and
+managed artifacts.
+
+Output Layer responsibilities:
+
+- classify output as Chat or Artifact before implementation or review;
+- make reusable Q files, design documents, specifications, review requests,
+  AI requests, roadmap proposals, and human approval packets file-based by
+  default;
+- route Q file artifacts and completion report artifacts to Task Artifact
+  Workspaces under `docs/requests/`;
+- use Markdown `.md` as the standard Git and AI handoff format;
+- use Word `.docx` when human review, comments, approval, redline, or offline
+  reading is expected;
+- keep chat responses limited to summary, artifact links or paths,
+  verification notes, and remaining issues when an artifact is authoritative;
+- reduce copy mistakes, truncated prompts, broken Markdown, and incomplete AI
+  input;
+- support Human Approval Gate by preserving complete approval context;
+- support Knowledge Promotion by making reusable outputs easy to store,
+  review, diff, and promote.
+
+Output Layer does not own:
+
+- final human approval authority;
+- project-specific runtime artifacts;
+- Knowledge Asset definitions;
+- Metrics interpretation;
+- Git commit approval.
+
+Architecture flow:
+
+```text
+Idea / Request
+  -> Output Layer
+  -> Q Artifact Workspace
+  -> Approval
+  -> Codex / AI Implementation
+  -> Completion Report Artifact
+  -> Human Review
+  -> Commit / Knowledge Promotion
+  -> Archive
+```
 
 ## Knowledge Asset Layer
 
@@ -271,6 +318,8 @@ through Knowledge Editor, not raw CSV columns.
 
 Before accepting a new feature or document, ask:
 
+- Is this temporary chat, or should it be a managed artifact?
+- Does this need Markdown `.md`, Word `.docx`, or another artifact format?
 - Is this development infrastructure?
 - Is this shared Knowledge Asset infrastructure?
 - Is this shared Metrics Layer responsibility?

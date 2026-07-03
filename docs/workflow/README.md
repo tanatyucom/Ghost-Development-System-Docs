@@ -12,6 +12,7 @@ gate.
 ## Contains
 
 - `README.md`: workflow folder guide.
+- `output_policy.md`: chat versus file artifact output decision policy.
 - `template_lifecycle.md`: how useful knowledge becomes a template, rule, or
   Knowledge Base document.
 
@@ -28,14 +29,77 @@ gate.
 ```text
 Idea
   -> Knowledge Check
+  -> Output Decision
   -> Review
-  -> Q File
-  -> Implementation
-  -> Verification
-  -> Improvement Review
-  -> Recommended / Future Candidates
-  -> Template / Rule / Knowledge Base / Knowledge Asset
+  -> Q Artifact Workspace
+  -> Approval
+  -> Codex / AI Implementation
+  -> Completion Report Artifact
+  -> Human Review
+  -> Commit
+  -> Knowledge Promotion
+  -> Archive
 ```
+
+## Output Policy
+
+Before implementation or review, decide whether the requested output should be
+chat or a file artifact.
+
+Use chat for short consultation, clarification, and temporary status.
+
+Use file artifacts for long Q files, design documents, specifications, review
+requests, Codex / Gemini / Claude requests, roadmap update proposals, human
+approval packets, and Git-managed documentation.
+
+Standard artifact formats are Markdown `.md` and Word `.docx`. Markdown is the
+default for Git and AI handoff. `.docx` is required when human review,
+redline, approval review, or offline reading is expected.
+
+When an artifact is the authoritative output, chat should contain only a short
+summary, artifact paths or links, verification notes, and remaining issues.
+
+## Q Artifact Workflow
+
+Q files are generated and saved before Codex or another AI executes the work.
+
+Standard flow:
+
+```text
+Idea
+  -> Q Artifact Workspace
+  -> Approval
+  -> Codex / AI Implementation
+  -> Completion Report Artifact
+  -> Human Review
+  -> Commit
+  -> Knowledge Promotion
+  -> Archive
+```
+
+Q artifacts and completion report artifacts are saved under:
+
+```text
+docs/requests/
+```
+
+Use this workspace pattern when the task has related artifacts:
+
+```text
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/
+  request.md
+  completion_report.md
+  notes.md
+  attachments/
+```
+
+Simple file form is allowed for small tasks:
+
+```text
+docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md
+```
+
+Status folders are `draft`, `approved`, `completed`, and `archived`.
 
 ## Knowledge Before Automation Flow
 
@@ -117,10 +181,19 @@ Review:
 Clarify scope, risk, repository boundaries, and whether the idea should be
 handled now or preserved as a Future Candidate.
 
-Q File:
+Q Artifact Workspace:
 
 A structured request that defines Repository Information, Scope Guard, Do / Do
-Not, completion criteria, and deliverables.
+Not, completion criteria, and deliverables, plus the task folder that preserves
+the request, completion report, notes, and attachments. It should be saved in
+`docs/requests/<target_project>/<status>/` before implementation when it is
+reusable, reviewable, AI-handoff, or Git-managed.
+
+Completion Report Artifact:
+
+A saved report that links the completed work back to the source Q file,
+generated files, output artifacts, commit hash when one exists, and follow-up Q.
+It should be stored alongside the source Q artifact.
 
 Implementation:
 
@@ -168,7 +241,11 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 ## Related Documents
 
 - `docs/workflow/template_lifecycle.md`
+- `docs/workflow/output_policy.md`
 - `docs/rules/workflow_rules.md`
+- `docs/rules/artifact_first_rules.md`
+- `docs/rules/q_file_artifact_standard.md`
+- `docs/requests/README.md`
 - `docs/rules/project_rules.md`
 - `docs/templates/q_file_template.md`
 - `docs/templates/review_checklist.md`

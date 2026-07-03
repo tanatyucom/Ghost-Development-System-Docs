@@ -126,6 +126,55 @@ rules, examples, workflow, architecture, glossary, or other documentation.
 The rule that humans approve architecture changes, destructive changes, scope
 expansion, releases, standardization, and migration work.
 
+### Artifact First
+
+The rule that reusable, reviewable, AI-handoff, human-approval, or Git-managed
+outputs should be generated as file artifacts before they become execution or
+approval inputs.
+
+Markdown `.md` is the standard format for Git and AI handoff. Word `.docx` is
+used when human review, comments, approval, redline, or offline reading is
+expected.
+
+### Output Layer
+
+The architecture boundary that decides whether an output should remain chat or
+become a managed artifact.
+
+It supports Human Approval Gate, prevents copy loss, and makes Knowledge
+Promotion easier.
+
+### Q File Artifact
+
+A saved Q file used as the authoritative request for Codex, Gemini, Claude, or
+human review.
+
+Q file artifacts are stored in Task Artifact Workspaces under
+`docs/requests/<target_project>/<status>/`.
+
+### Task Artifact Workspace
+
+A task folder that keeps the source request, completion report, notes, and
+attachments together.
+
+Standard form:
+
+```text
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/
+  request.md
+  completion_report.md
+  notes.md
+  attachments/
+```
+
+Status folders are `draft`, `approved`, `completed`, and `archived`.
+
+### Completion Report Artifact
+
+A saved completion report that links finished work back to the source Q file,
+generated files, output artifacts, commit hash when one exists, and follow-up
+Q. It should be stored beside the source Q file.
+
 ## Update Policy
 
 Add glossary terms when a concept appears across multiple documents or is
@@ -139,5 +188,9 @@ rules, templates, or examples.
 - `docs/README.md`
 - `docs/rules/project_rules.md`
 - `docs/rules/language_rules.md`
+- `docs/rules/artifact_first_rules.md`
+- `docs/rules/q_file_artifact_standard.md`
+- `docs/requests/README.md`
+- `docs/workflow/output_policy.md`
 - `docs/architecture/responsibility_boundary.md`
 - `docs/history/knowledge_base_history.md`

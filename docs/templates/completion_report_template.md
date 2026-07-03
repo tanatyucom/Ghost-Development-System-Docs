@@ -1,5 +1,56 @@
 # Completion Report Template
 
+## Source Q File
+
+- Q artifact path:
+- Q artifact format:
+- Q artifact version:
+- Q artifact status:
+
+## Artifact Workspace
+
+- Artifact Workspace path:
+- Status folder:
+- Request ID / Task ID:
+- Task workspace form:
+
+## Output Artifacts
+
+- Completion report artifact:
+- Human review artifact, when generated:
+- Other output artifacts:
+- Notes artifact:
+- Attachments folder:
+
+## Generated Files
+
+- Files created:
+- Files updated:
+- Files intentionally not generated:
+
+## Commit Tracking
+
+- Related Commit:
+- Commit Hash:
+- Commit Status:
+
+## Follow-up Q
+
+- Follow-up Q required:
+- Follow-up Q artifact path:
+- Recommended Next Q:
+
+## Knowledge Promotion Target
+
+- Documentation:
+- Templates:
+- Workflow:
+- Roadmap:
+- Rules:
+- Architecture:
+- Knowledge Base:
+- Metrics / Evidence:
+
 ## Implementation Complete
 
 ## Changed Files
@@ -20,6 +71,14 @@
 - Single Source Of Truth:
 - Cross Project Impact:
 - Scope Guard:
+
+## Artifact Location Review
+
+- Source Q is stored in the correct project/status workspace:
+- Completion report is stored alongside the source Q:
+- Missing Q artifact path:
+- Movement performed:
+- Archive needed:
 
 ## Remaining Issues
 
@@ -61,6 +120,12 @@ Knowledge evolves through implementation. Reusable knowledge should be promoted
 to templates, rules, examples, or documentation whenever practical.
 
 ## Recommended Commit
+
+## Related Commit
+
+- Commit policy:
+- Commit hash:
+- Commit message:
 
 ## Known Limitations
 
