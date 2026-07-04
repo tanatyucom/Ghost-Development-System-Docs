@@ -60,6 +60,16 @@ docs/requests/ghost-development-system/approved/GDS-0001_artifact_first_update/r
 docs/requests/ghost-development-system/approved/GDS-0001_artifact_first_update/request.docx
 ```
 
+The workspace also reserves the related completion report and notes locations:
+
+```text
+docs/requests/ghost-development-system/approved/GDS-0001_artifact_first_update/
+  request.md
+  completion_report.md
+  notes.md
+  attachments/
+```
+
 The Markdown file is used for:
 
 - Git review;
@@ -85,6 +95,21 @@ Result:
 
 Codex receives the full file. Reviewers can inspect the same source. The Q can
 be committed, reused, or promoted later.
+
+## Bad Example: Artifact Outside Workspace
+
+The Q is generated as a file but left only in a download or temporary folder.
+
+Problem:
+
+- the artifact is not under `docs/requests/`;
+- no status folder shows whether it is draft, approved, completed, or archived;
+- the completion report has no guaranteed location beside the Q;
+- Git-managed review cannot treat the file as the authoritative source.
+
+Result:
+
+The work still depends on fragile handoff even though a file exists.
 
 ## Good Example: AI Implementation Request
 

@@ -33,6 +33,7 @@ Idea
   -> Output Decision
   -> Review
   -> Q Artifact Workspace
+  -> Workspace Save Verification
   -> Approval
   -> Codex / AI Implementation
   -> Completion Report Artifact
@@ -87,6 +88,8 @@ Standard flow:
 ```text
 Idea
   -> Q Artifact Workspace
+  -> Save request.md in docs/requests/
+  -> Workspace Save Verification
   -> Approval
   -> Codex / AI Implementation
   -> Completion Report Artifact
@@ -119,6 +122,12 @@ docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title
 ```
 
 Status folders are `draft`, `approved`, `completed`, and `archived`.
+
+Workspace save verification means confirming that the authoritative Q exists
+as `request.md` or an approved simple-form `.md` file under
+`docs/requests/<target_project>/<status>/`. A Q that exists only in chat, a
+download folder, clipboard, or temporary sandbox path should not be treated as
+the official task input. Save the Q first, then begin implementation.
 
 ## Knowledge Before Automation Flow
 
@@ -207,6 +216,15 @@ Not, completion criteria, and deliverables, plus the task folder that preserves
 the request, completion report, notes, and attachments. It should be saved in
 `docs/requests/<target_project>/<status>/` before implementation when it is
 reusable, reviewable, AI-handoff, or Git-managed.
+
+The minimum full workspace is:
+
+```text
+request.md
+completion_report.md
+notes.md
+attachments/
+```
 
 Completion Report Artifact:
 

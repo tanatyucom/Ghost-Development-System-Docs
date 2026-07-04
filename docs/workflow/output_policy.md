@@ -1,6 +1,6 @@
 # Output Policy
 
-**Version:** 1.1
+**Version:** 1.2
 
 **Last Updated:** 2026-07-04
 
@@ -18,6 +18,10 @@ Use chat for short, temporary conversation.
 
 Use a file artifact for reusable, reviewable, AI-handoff, or Git-managed
 content.
+
+For Q files, file artifact means saved in the Task Artifact Workspace under
+`docs/requests/`, not only generated in chat, a download folder, or a temporary
+sandbox path.
 
 ## Output Decision Table
 
@@ -84,6 +88,8 @@ Recommended flow:
 ```text
 Idea
   -> Q Artifact Workspace
+  -> Save request.md in docs/requests/
+  -> Workspace Save Verification
   -> Approval
   -> Codex / AI Implementation
   -> Completion Report Artifact
@@ -99,6 +105,10 @@ promote it to a file artifact before continuing.
 Q artifacts and completion report artifacts should be saved under
 `docs/requests/<target_project>/<status>/` using the Task Artifact Workspace
 standard from `docs/rules/q_file_artifact_standard.md`.
+
+Implementation should begin only after the source Q has a workspace path and
+the chat response or completion report can name that path. The matching
+completion report should be saved in the same workspace as `request.md`.
 
 ## Failure Modes Prevented
 

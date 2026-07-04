@@ -55,6 +55,32 @@ Result:
 
 The project loses reusable knowledge even if the implementation succeeds.
 
+## Bad Example: Q Generated But Not Saved To Workspace
+
+A Q file is generated in a download folder or temporary sandbox path:
+
+```text
+C:/Users/example/Downloads/Q_GameGhost_Steam_Repair.md
+```
+
+Codex starts implementation from that file, but the file is never saved under:
+
+```text
+docs/requests/<target_project>/<status>/
+```
+
+Problem:
+
+- the request is easy to lose after the chat session;
+- the completion report has no stable workspace beside the source Q;
+- reviewers cannot rely on Git history to find the approved request;
+- follow-up Q files cannot link to a durable source artifact.
+
+Result:
+
+The Q exists as a file, but it is not an official Task Artifact Workspace
+record.
+
 ## Bad Example: Ambiguous Flat File
 
 A Q file is saved as:
@@ -93,6 +119,16 @@ The Q is saved before implementation as:
 
 ```text
 docs/requests/gameghost/approved/GG-0001_steam_ocr/request.md
+```
+
+The minimum workspace files are:
+
+```text
+docs/requests/gameghost/approved/GG-0001_steam_ocr/
+  request.md
+  completion_report.md
+  notes.md
+  attachments/
 ```
 
 If human review is expected, also generate:
@@ -145,6 +181,26 @@ Q Artifact
   -> Commit
   -> Knowledge Promotion
 ```
+
+## Good Example: Notes And Attachments
+
+Use `notes.md` for review notes, migration uncertainty, or context that should
+not clutter the Q itself:
+
+```text
+docs/requests/gameghost/completed/GG-0001_steam_ocr/notes.md
+```
+
+Use `attachments/` for task-specific supporting files:
+
+```text
+docs/requests/gameghost/completed/GG-0001_steam_ocr/attachments/
+```
+
+Result:
+
+The source Q, completion report, notes, and supporting files stay together
+when the workspace moves from `approved` to `completed` or `archived`.
 
 ## Good Example: Related Commit
 

@@ -49,6 +49,11 @@ is expected.
 Q files and related completion reports are saved in Task Artifact Workspaces
 under `docs/requests/`.
 
+Save the Q into the workspace before implementation begins. A Q that exists
+only in chat, a download folder, clipboard, or temporary sandbox path is not an
+official executable task until it is saved as `request.md` or an approved
+simple-form `.md` file under `docs/requests/<target_project>/<status>/`.
+
 Full workspace form:
 
 ```text

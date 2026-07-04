@@ -115,6 +115,30 @@ Artifact Workspace path:
 docs/requests/<target_project>/<status>/<request_id>_<short_title>/
 ```
 
+Workspace save required:
+
+```text
+Yes
+```
+
+Workspace save verification:
+
+```text
+request.md saved before implementation / Not yet saved
+```
+
+Authoritative request file:
+
+```text
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/request.md
+```
+
+Rule:
+
+```text
+Do not start Codex / AI implementation until request.md is saved in this workspace.
+```
+
 ## Status Folder
 
 Status folder:
@@ -160,6 +184,12 @@ Status:
 Planned / Generated / Not required
 ```
 
+Completion report workspace rule:
+
+```text
+Save completion_report.md in the same Task Artifact Workspace as request.md.
+```
+
 ## Output Artifacts
 
 Expected output artifacts:
@@ -169,6 +199,15 @@ Expected output artifacts:
 - Human review artifact, when expected:
 - Notes artifact:
 - Attachments folder:
+
+Minimum workspace files:
+
+```text
+request.md
+completion_report.md
+notes.md
+attachments/
+```
 
 ## Related Commit
 

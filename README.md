@@ -39,6 +39,11 @@ docs/requests/<target_project>/<status>/<request_id>_<short_title>/
   attachments/
 ```
 
+After a Q is created, save `request.md` in the workspace before implementation
+starts. A Q that exists only in chat, a download folder, clipboard, or
+sandbox-local path is not the authoritative task input. Completion reports
+should be saved as `completion_report.md` in the same workspace.
+
 Simple single-file Q artifacts may use
 `docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md`
 when a full workspace is not needed yet.

@@ -1,6 +1,6 @@
 # Artifact First Rules
 
-**Version:** 1.0
+**Version:** 1.1
 
 **Last Updated:** 2026-07-03
 
@@ -16,6 +16,11 @@ files instead of being delivered only in chat.
 
 When an output is expected to be reused, reviewed, shared with another AI, or
 managed in Git, create a managed file artifact first.
+
+For Q files, creating the artifact is not complete until the file has been
+saved into the Task Artifact Workspace under `docs/requests/`. A Q that remains
+only in chat, a download folder, clipboard, or sandbox-local path is not the
+authoritative execution input.
 
 Chat should contain only:
 
@@ -74,13 +79,19 @@ Q files should be generated as files by default.
 Preferred form:
 
 ```text
-docs/requests/YYYY-MM-DD_<target_project>_<short_title>.md
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/request.md
 ```
 
 When human review is expected before execution, also generate:
 
 ```text
-docs/requests/YYYY-MM-DD_<target_project>_<short_title>.docx
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/request.docx
+```
+
+Simple file form is allowed when a full workspace is not needed yet:
+
+```text
+docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md
 ```
 
 The chat response should not contain the full Q unless explicitly requested. It
@@ -89,6 +100,12 @@ the file.
 
 Q file artifacts and their related completion reports should follow
 `docs/rules/q_file_artifact_standard.md`.
+
+The completion report should be saved into the same workspace as the source Q:
+
+```text
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/completion_report.md
+```
 
 ## Design And Specification Rule
 

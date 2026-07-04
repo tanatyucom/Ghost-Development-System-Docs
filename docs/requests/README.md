@@ -91,6 +91,15 @@ Files:
 - `notes.md`: optional review notes, migration notes, or working notes.
 - `attachments/`: supporting files that belong with the task.
 
+The first action after creating an official Q artifact is to save
+`request.md` in this workspace. Codex / AI implementation should not start from
+an unsaved Q when the task is reusable, reviewable, AI-handoff, Git-managed, or
+expected to produce a completion report.
+
+`completion_report.md` should be saved in the same workspace after the work is
+completed. Keep `request.md`, `completion_report.md`, `notes.md`, and
+`attachments/` together through status moves.
+
 ## Simple File Form
 
 For small Q artifacts that do not need a full task workspace yet, this simpler
@@ -159,6 +168,8 @@ approves that documentation scope.
 ```text
 Idea
   -> Q Artifact Workspace
+  -> Save request.md in docs/requests/
+  -> Workspace Save Verification
   -> Approval
   -> Codex / AI Implementation
   -> Completion Report Artifact

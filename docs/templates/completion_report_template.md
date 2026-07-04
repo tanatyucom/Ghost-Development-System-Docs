@@ -6,6 +6,7 @@
 - Q artifact format:
 - Q artifact version:
 - Q artifact status:
+- Q saved in Task Artifact Workspace before implementation:
 
 ## Artifact Workspace
 
@@ -13,6 +14,10 @@
 - Status folder:
 - Request ID / Task ID:
 - Task workspace form:
+- `request.md` present:
+- `completion_report.md` saved beside `request.md`:
+- `notes.md` present or intentionally omitted:
+- `attachments/` present or intentionally omitted:
 
 ## Output Artifacts
 
@@ -96,6 +101,7 @@
 
 - Source Q is stored in the correct project/status workspace:
 - Completion report is stored alongside the source Q:
+- Workspace save was completed before implementation:
 - Missing Q artifact path:
 - Movement performed:
 - Archive needed:

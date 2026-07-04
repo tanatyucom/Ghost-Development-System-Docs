@@ -1,6 +1,6 @@
 # Q File Artifact Standard
 
-**Version:** 1.1
+**Version:** 1.2
 
 **Last Updated:** 2026-07-04
 
@@ -18,6 +18,11 @@ for Codex, Gemini, Claude, or human review.
 
 The chat body should not be the authoritative copy of a Q file.
 
+The first action after creating a reusable, reviewable, AI-handoff, or
+Git-managed Q is to save it into the Task Artifact Workspace. Implementation
+must not start from an unsaved Q when the Q is expected to be reused, reviewed,
+tracked in Git, or connected to a completion report.
+
 Chat should contain:
 
 - a short summary;
@@ -32,6 +37,11 @@ Save Q file artifacts under:
 ```text
 docs/requests/
 ```
+
+Saving under `docs/requests/` is required for official Q artifacts. A Q that
+exists only as a chat message, download, clipboard copy, or sandbox-local file
+is not an official executable task until it has been saved in the correct
+workspace path.
 
 Reason:
 
@@ -108,6 +118,15 @@ Task workspace files:
 Use a task workspace by default when the task has attachments, a `.docx`
 review copy, multiple generated files, long review history, or a known request
 ID / task ID.
+
+For normal Codex / AI implementation work, the preferred artifact is:
+
+```text
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/request.md
+```
+
+`request.md` is the authoritative input. Chat may point to it, but should not
+replace it.
 
 ## Simple File Form
 
@@ -229,6 +248,16 @@ docs/requests/gameghost/completed/GG-0001_steam_ownership_gap/completion_report.
 
 If the work is not completed yet, use `Planned`.
 
+The completion report should be saved in the same Task Artifact Workspace as
+the source Q:
+
+```text
+docs/requests/<target_project>/<status>/<request_id>_<short_title>/completion_report.md
+```
+
+If the task uses simple file form, save the completion report beside the source
+Q with the same basename and `_completion_report.md` suffix.
+
 ## Related Commit
 
 Q files should identify commit policy before implementation.
@@ -277,6 +306,8 @@ Reviewers should treat these as issues:
 
 - missing Q artifact path;
 - approved Q left only in chat;
+- Q generated outside `docs/requests/` but never saved into the workspace;
+- Codex / AI implementation started before workspace save is complete;
 - approved Q stored outside the correct project/status workspace;
 - completion report not stored beside the source Q;
 - missing or ambiguous Target Project in the path;
@@ -312,6 +343,7 @@ Standard Q artifact workflow:
 ```text
 Idea
   -> Q Artifact Workspace
+  -> Workspace Save Verification
   -> Approval
   -> Codex / AI Implementation
   -> Completion Report Artifact
