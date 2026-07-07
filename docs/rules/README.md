@@ -9,7 +9,8 @@ Rules define how humans and AI should plan, document, review, and maintain the
 Ghost Development System knowledge base.
 
 Core rules include Evidence First, Purpose-Oriented Naming, Human Approval Gate,
-Knowledge Before Automation, and Artifact First.
+Knowledge Before Automation, Artifact First, Audit Before Repair, Debug Artifact
+Review, and Migration First.
 
 ## Contains
 
@@ -23,6 +24,14 @@ Knowledge Before Automation, and Artifact First.
 - `q_file_artifact_standard.md`: Task Artifact Workspace, save location,
   status movement, naming, completion report pairing, notes, attachments, and
   commit linkage standard for Q file artifacts.
+- `audit_before_repair_rules.md`: audit, classification, evidence, human
+  review, scoped repair Q, verification, and commit flow for repair work.
+- `debug_artifact_review_rules.md`: Debug Mode, intermediate artifact review,
+  expected normal state, review entry point, completion report announcement,
+  AI review handoff, and Git policy for debug artifacts.
+- `migration_first_rules.md`: internal architecture rule for preferring
+  standard migration, reference update, verification, and legacy removal over
+  permanent compatibility fallback.
 - `workflow_rules.md`: development workflow and gates.
 - `git_rules.md`: Git history, dirty workspace policy, file classification,
   and commit safety rules.
@@ -48,11 +57,14 @@ Knowledge Before Automation, and Artifact First.
 5. `documentation_rules.md`
 6. `artifact_first_rules.md`
 7. `q_file_artifact_standard.md`
-8. `workflow_rules.md`
-9. `quality_rules.md`
-10. `ai_collaboration_rules.md`
-11. `git_rules.md`
-12. `script_architecture_rules.md`
+8. `audit_before_repair_rules.md`
+9. `debug_artifact_review_rules.md`
+10. `migration_first_rules.md`
+11. `workflow_rules.md`
+12. `quality_rules.md`
+13. `ai_collaboration_rules.md`
+14. `git_rules.md`
+15. `script_architecture_rules.md`
 
 ## Update Policy
 

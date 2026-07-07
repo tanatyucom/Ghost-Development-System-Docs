@@ -18,6 +18,7 @@ and attachments live.
 
 Standard formats are Markdown `.md` and Word `.docx`.
 
+
 Start from:
 
 - [`docs/rules/artifact_first_rules.md`](docs/rules/artifact_first_rules.md)
@@ -48,6 +49,62 @@ Simple single-file Q artifacts may use
 `docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md`
 when a full workspace is not needed yet.
 
+## Debug Artifact Review
+
+Debug Artifact や review artifact が複数生成される場合、Completion Report
+には `Review Entry Point` を書きます。これは、人間、ChatGPT、Codex、または
+別の AI reviewer が最初に見るべき artifact の順番です。
+
+AI、OCR、recommendation、auto-detection、candidate extraction、fuzzy
+matching、visual processing のように中間挙動の確認が必要な作業では、開発中に
+Debug Mode を使います。
+
+通常実行では、Debug Mode が明示されていない限り Debug Artifact を生成しません。
+
+Start from:
+
+- [`docs/rules/debug_artifact_review_rules.md`](docs/rules/debug_artifact_review_rules.md)
+- [`docs/workflow/debug_artifact_review_workflow.md`](docs/workflow/debug_artifact_review_workflow.md)
+- [`examples/debug_artifact_review_examples.md`](examples/debug_artifact_review_examples.md)
+- [`templates/q_file_template.md`](templates/q_file_template.md)
+- [`templates/completion_report_template.md`](templates/completion_report_template.md)
+- [`templates/codex_review_template.md`](templates/codex_review_template.md)
+- [`pip/PIP_README_v1.0.md`](pip/PIP_README_v1.0.md)
+
+Completion Report には、Debug Artifact の保存場所、verification target、
+expected normal state、review viewpoints、必要に応じた AI review target
+artifacts、Debug Artifact の Git policy を記載します。
+
+## Audit Before Repair
+
+Repair work should begin with audit, classification, evidence, and human review
+before scoped repair begins.
+
+Standard flow:
+
+```text
+Idea / Bug
+  -> Audit
+  -> Classification
+  -> Evidence
+  -> Human Review
+  -> Repair Q
+  -> Verification
+  -> Commit
+```
+
+Start from:
+
+- [`docs/rules/audit_before_repair_rules.md`](docs/rules/audit_before_repair_rules.md)
+- [`docs/workflow/audit_before_repair_workflow.md`](docs/workflow/audit_before_repair_workflow.md)
+- [`docs/examples/audit_before_repair_examples.md`](docs/examples/audit_before_repair_examples.md)
+- [`docs/templates/q_file_template.md`](docs/templates/q_file_template.md)
+- [`docs/templates/completion_report_template.md`](docs/templates/completion_report_template.md)
+
+Repair Q files should identify the source audit artifact, target scope,
+excluded items, classification used, verification method, safe commit set, and
+restore guidance.
+
 ## Commit Safety
 
 Before commit, classify every changed file and keep unrelated runtime data,
@@ -58,6 +115,34 @@ Start from:
 - [`docs/rules/git_rules.md`](docs/rules/git_rules.md)
 - [`docs/workflow/commit_safety_checklist.md`](docs/workflow/commit_safety_checklist.md)
 - [`docs/examples/dirty_workspace_examples.md`](docs/examples/dirty_workspace_examples.md)
+
+## Migration First
+
+内部 architecture の変更では、恒久的な compatibility fallback を増やす前に、
+標準構造へ移行する方針を優先します。
+
+標準フロー:
+
+```text
+New Standard
+  -> Migration Plan
+  -> Reference Update
+  -> Verification
+  -> Legacy Removal
+```
+
+Start from:
+
+- [`docs/rules/migration_first_rules.md`](docs/rules/migration_first_rules.md)
+- [`docs/workflow/migration_first_workflow.md`](docs/workflow/migration_first_workflow.md)
+- [`docs/examples/migration_first_examples.md`](docs/examples/migration_first_examples.md)
+
+Public Compatibility は public release、API / CLI、documented external
+workflow、exported artifact schema、DB schema、user-facing data format を守る
+ために使います。内部 folder structure、script layout、adapter interface、
+prototype script、shared utility、artifact workspace layout、queue / request
+structure、future GhostCore / GDS internal modules は、恒久 legacy fallback を
+積み増さない方針です。
 
 ## Purpose
 

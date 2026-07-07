@@ -181,6 +181,89 @@ Knowledge Base evolved from artifact traceability into commit safety practice:
 every changed file should be classified before commit, and the safe commit set
 should be explicit.
 
+## Ver1.7
+
+### Added
+
+- Debug Artifact Review Rules.
+- Debug Artifact Review Workflow.
+- Q template fields for Debug Mode, intermediate artifacts, expected normal
+  state, review viewpoints, AI review targets, and debug artifact Git policy.
+- Completion report fields for debug artifact save location, verification
+  target, expected normal state, review viewpoints, and follow-up Fix Q.
+- Codex / AI implementation and review template guidance for Debug Mode.
+- Debug Artifact Review examples.
+- Glossary terms for Debug Artifact Review and Debug Artifact.
+
+### Reason
+
+AI, OCR, recommendation, auto-detection, candidate extraction, fuzzy matching,
+and visual processing work can look successful in final output while
+intermediate behavior is wrong.
+
+Debug artifacts make the process inspectable, but they must not pollute normal
+execution or enter Git accidentally.
+
+### Evolution
+
+Knowledge Base evolved from artifact traceability and commit safety into
+development-time evidence review: intermediate artifacts can support human
+approval, AI review, design review, and future Fix Q drafting without becoming
+normal output.
+
+## Ver1.8
+
+### Added
+
+- Audit Before Repair Rules.
+- Audit Before Repair Workflow.
+- Q template fields for source audit artifact, classification, repair scope,
+  exclusions, evidence review, verification, safe commit set, and restore
+  guidance.
+- Completion report fields for Source Audit Artifact, Classification Summary,
+  Repair Scope, Excluded Items, Fixed Files, Remaining Candidates, Safe Commit
+  Set, and Suggested Restore Commands.
+- AI collaboration guidance for audit-first repair handoff.
+- Audit Before Repair examples.
+- Glossary terms for Audit Before Repair and Repair Q.
+
+### Reason
+
+Repair work can damage source data, generated artifacts, DB files, OCR raw
+evidence, or unrelated dirty workspace changes when the target is not audited
+and classified first.
+
+### Evolution
+
+Knowledge Base evolved from development-time evidence review into
+audit-first repair practice: repair work now starts from visible evidence and a
+scoped Repair Q instead of broad one-shot modification.
+
+## Ver1.9
+
+### Added
+
+- Review Entry Point Rule for Debug Artifact Review.
+- Completion Report Template section for first artifact path, reason, and
+  priority.
+- Q File Template field for expected Review Entry Point.
+- Codex Review Template checks for Review Entry Point.
+- Steam OCR example showing contact sheet, overlay, crop, CSV, and Markdown
+  report review order.
+- PIP Rule Story candidate: Review Entry Point Rule / Too Many Artifacts.
+
+### Reason
+
+Debug Artifact Review can generate many artifacts: contact sheets, overlays,
+crops, CSV files, and Markdown reports. Without a clear entry point, humans and
+AI reviewers may not know where to start.
+
+### Evolution
+
+Knowledge Base evolved from "generate evidence" into "make evidence reviewable":
+Completion Reports now identify the first artifact to inspect before listing
+the full artifact set.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

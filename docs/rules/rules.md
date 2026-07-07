@@ -1,8 +1,8 @@
 # Ghost Development System Rules
 
-**Version:** 2.3
+**Version:** 2.4
 
-**Last Updated:** 2026-07-03
+**Last Updated:** 2026-07-05
 
 ## Purpose
 
@@ -34,6 +34,9 @@ Rules follow these principles:
 - Evidence First.
 - Knowledge Before Automation.
 - Artifact First.
+- Audit Before Repair.
+- Debug Artifact Review.
+- Migration First.
 - Human Approval Gate.
 - Future Scope Guard.
 
@@ -48,6 +51,9 @@ own files.
 - `documentation_rules.md`
 - `artifact_first_rules.md`
 - `q_file_artifact_standard.md`
+- `audit_before_repair_rules.md`
+- `debug_artifact_review_rules.md`
+- `migration_first_rules.md`
 - `workflow_rules.md`
 - `git_rules.md`
 - `quality_rules.md`
@@ -68,6 +74,76 @@ Humans approve:
 
 AI may propose, draft, compare, and review. AI must not silently promote future
 candidates, expand scope, or perform destructive work.
+
+## Debug Artifact Review
+
+AI, OCR, recommendation, auto-detection, candidate extraction, fuzzy matching,
+and visual processing work should use Debug Mode during development when
+intermediate behavior needs review.
+
+Normal execution must not generate debug artifacts unless Debug Mode is
+explicitly requested.
+
+Completion reports should name the debug artifact save location, verification
+target, expected normal state, review viewpoints, AI review target artifacts
+when applicable, and whether the artifacts are excluded from Git.
+
+When many debug or review artifacts are generated, completion reports should
+also include a Review Entry Point: the first artifact path or ordered artifact
+list for human and AI review.
+
+Details follow `debug_artifact_review_rules.md`.
+
+## Audit Before Repair
+
+Repair work should start with audit, classification, evidence, and human review
+before scoped repair begins.
+
+Standard flow:
+
+```text
+Idea / Bug
+  -> Audit
+  -> Classification
+  -> Evidence
+  -> Human Review
+  -> Repair Q
+  -> Verification
+  -> Commit
+```
+
+Audit results should classify findings as `fix_candidate`,
+`needs_human_review`, `generated_artifact`, `raw_data`, or `false_positive`.
+
+AI must not perform broad one-shot repair when the target includes raw data,
+generated artifacts, OCR evidence, DB files, or unrelated dirty workspace
+changes.
+
+Details follow `audit_before_repair_rules.md`.
+
+## Migration First
+
+Internal architecture changes should prefer migration to a new standard over
+permanent compatibility fallback.
+
+Standard flow:
+
+```text
+New Standard
+  -> Migration Plan
+  -> Reference Update
+  -> Verification
+  -> Legacy Removal
+```
+
+Public compatibility is protected for public release, public API / CLI,
+documented external workflow, exported artifact schema, DB schema, and
+user-facing data formats. Internal folder structure, script layout, adapter
+interfaces, prototype scripts, shared utility locations, artifact workspace
+layout, queue / request structure, and future GhostCore / GDS internal modules
+should not accumulate permanent legacy fallback.
+
+Details follow `migration_first_rules.md`.
 
 ## Project First Principle
 

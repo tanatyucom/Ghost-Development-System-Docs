@@ -70,6 +70,94 @@ Simple allowed form:
 docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md
 ```
 
+## Audit Before Repair Index
+
+Repair, cleanup, OCR result correction, DB correction, mojibake correction,
+duplicate resolution, metadata correction, and other repair work should start
+with audit, classification, evidence, and human review before scoped repair.
+
+Reference points:
+
+- Rules: `docs/rules/audit_before_repair_rules.md`
+- Workflow: `docs/workflow/audit_before_repair_workflow.md`
+- Q Template: `docs/templates/q_file_template.md`
+- Completion Report Template: `docs/templates/completion_report_template.md`
+- AI Collaboration Rules: `docs/rules/ai_collaboration_rules.md`
+- Examples: `docs/examples/audit_before_repair_examples.md`
+
+Core flow:
+
+```text
+Idea / Bug
+  -> Audit
+  -> Classification
+  -> Evidence
+  -> Human Review
+  -> Repair Q
+  -> Verification
+  -> Commit
+```
+
+Standard classification:
+
+- `fix_candidate`
+- `needs_human_review`
+- `generated_artifact`
+- `raw_data`
+- `false_positive`
+
+## Debug Artifact Review Index
+
+Debug Artifact Review は、AI、OCR、recommendation、auto-detection、
+candidate extraction、fuzzy matching、visual overlay など、不確実な処理の
+中間 evidence を人間と AI が確認するための標準です。
+
+Reference points:
+
+- Rules: `docs/rules/debug_artifact_review_rules.md`
+- Workflow: `docs/workflow/debug_artifact_review_workflow.md`
+- Q Template: `docs/templates/q_file_template.md`
+- Completion Report Template: `docs/templates/completion_report_template.md`
+- AI Request Template: `docs/templates/ai_implementation_request.md`
+- Codex Review Template: `docs/templates/codex_review_template.md`
+- Architecture: `docs/architecture/responsibility_boundary.md`
+- Examples: `docs/examples/debug_artifact_review_examples.md`
+- Glossary: `docs/glossary/README.md`
+- Current Templates: `templates/q_file_template.md`,
+  `templates/completion_report_template.md`,
+  `templates/codex_review_template.md`
+- Current Examples: `examples/debug_artifact_review_examples.md`
+- PIP Rule Story Candidate: `pip/PIP_README_v1.0.md`
+
+Core flow:
+
+```text
+Issue / Idea
+  -> Debug Mode Decision
+  -> Intermediate Artifact Generation
+  -> Visual / Intermediate Review
+  -> Expected State Check
+  -> Design Review, when needed
+  -> Fix Q Draft or Implementation
+  -> Verification
+  -> Completion Report
+```
+
+Completion Report には、Debug Artifact の保存場所、verification target、
+expected normal state、review viewpoints、必要に応じた AI review target
+artifacts、Git policy を記載します。
+
+通常実行では、Debug Mode が明示されていない限り Debug Artifact を生成しません。
+Debug Artifact は標準では Git 管理対象外です。
+
+Review Entry Point:
+
+- Debug Artifact や review artifact が複数生成される場合、Completion Report
+  は最初に見る場所を順番付きで示します。
+- 視覚確認は contact sheet または overlay から始めます。
+- 集計確認は CSV、判断理由確認は Markdown Report を使います。
+- Review Entry Point には、最初に見る場所、理由、重要度を含めます。
+
 ## Commit Safety Index
 
 Dirty workspaces must be reviewed before staging or committing.
@@ -96,6 +184,46 @@ git status
 
 Completion reports should include dirty workspace state, unrelated files,
 suggested restore commands, and safe commit set.
+
+## Migration First Index
+
+Internal architecture changes should migrate to a new standard before adding
+permanent compatibility fallback.
+
+Reference points:
+
+- Rules: `docs/rules/migration_first_rules.md`
+- Script Architecture: `docs/rules/script_architecture_rules.md`
+- Workflow: `docs/workflow/migration_first_workflow.md`
+- Workflow Index: `docs/workflow/README.md`
+- Q Template: `docs/templates/q_file_template.md`
+- AI Request Template: `docs/templates/ai_implementation_request.md`
+- Completion Report Template: `docs/templates/completion_report_template.md`
+- Codex Review Template: `docs/templates/codex_review_template.md`
+- Architecture: `docs/architecture/responsibility_boundary.md`
+- Design Philosophy: `docs/architecture/design_philosophy.md`
+- Roadmap: `docs/roadmap/ghost_development_system_roadmap.md`
+- Examples: `docs/examples/migration_first_examples.md`
+
+Core flow:
+
+```text
+Internal Architecture Change
+  -> New Standard
+  -> Migration Plan
+  -> Reference Update
+  -> Verification
+  -> Legacy Removal
+  -> Completion Report
+  -> Commit
+```
+
+Public Compatibility is limited to public release, public API / CLI,
+documented external workflow, exported artifact schema, DB schema, and
+user-facing data format. Internal folder structure, script layout, adapter
+internal interface, prototype scripts, shared utility location, artifact
+workspace layout, queue / request structure, and future GhostCore / GDS
+internal modules should not keep permanent legacy fallback.
 
 ## Knowledge Before Automation Index
 
