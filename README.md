@@ -49,6 +49,30 @@ Simple single-file Q artifacts may use
 `docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md`
 when a full workspace is not needed yet.
 
+## PIP v1.1 Stable
+
+PIP (Project Information Package) は、Ghost Development System の正式な
+project briefing subsystem です。
+
+PIP は「今どこにいて、なぜその状態なのか」を説明します。GitHub Docs は
+Single Source of Truth のまま維持します。Information Package / evidence
+package は、その状態を支える証拠を説明します。
+
+Start from:
+
+- [`pip/README.md`](pip/README.md)
+- [`pip/PIP_README_v1.1.md`](pip/PIP_README_v1.1.md)
+- [`pip/improvement_history.md`](pip/improvement_history.md)
+- [`pip/decision_history.md`](pip/decision_history.md)
+- [`pip/Migration_1.0_to_1.1.md`](pip/Migration_1.0_to_1.1.md)
+- [`pip/CHANGELOG.md`](pip/CHANGELOG.md)
+- [`pip/delta_integration_summary.md`](pip/delta_integration_summary.md)
+- [`pip/case_index.md`](pip/case_index.md)
+- [`pip/reconciliation_report_20260708.md`](pip/reconciliation_report_20260708.md)
+
+Command Center は PIP を briefing source として利用できます。GIP は、別途
+review 済み specification が作られるまで future package concept として予約します。
+
 ## Debug Artifact Review
 
 Debug Artifact や review artifact が複数生成される場合、Completion Report

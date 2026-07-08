@@ -264,6 +264,85 @@ Knowledge Base evolved from "generate evidence" into "make evidence reviewable":
 Completion Reports now identify the first artifact to inspect before listing
 the full artifact set.
 
+## Ver1.10
+
+### Added
+
+- PIP v1.1 Stable。
+- PIP directory README。
+- PIP Improvement History。
+- PIP Decision History。
+- Migration guide from PIP v1.0 to v1.1。
+- PIP Changelog。
+- Knowledge Base Index entry for PIP。
+- Architecture boundary entry for PIP。
+- Workflow guidance for PIP update and AI handoff。
+
+### Reason
+
+Roadmap2 と OCR review work により、PIP は単なる handoff document ではなく、
+現在の project state と、なぜその状態になったかを説明する reusable briefing layer
+であることが分かりました。
+
+PIP が GitHub Docs、Information Package、roadmap archive、completion reports、
+chat summaries と重複しないように、GDS 内での stable position が必要でした。
+
+### Evolution
+
+Knowledge Base は、reviewable debug artifacts から、briefing と history を含む
+より完全な system へ進化しました。PIP は current state、Improvement History、
+Decision History、AI handoff を扱い、GitHub Docs は Single Source of Truth のまま
+維持されます。
+
+## Ver1.11
+
+### Added
+
+- Roadmap2 Completion Delta integration for PIP v1.1。
+- PIP Review Methodology。
+- Trace Before Tune。
+- First Broken Step。
+- Review Entry Point。
+- Human Visual Review。
+- Evolution Chain。
+- PIP Delta Integration Summary。
+
+### Reason
+
+Roadmap2 の OCR review では、最終結果だけではなく、中間 trace、最初に壊れた step、
+review artifact の入口、人間による visual review が品質保証に必要であることが
+確認されました。
+
+### Evolution
+
+PIP は current state と decision history だけでなく、その state に到達するための
+review methodology も保存する briefing layer へ拡張されました。
+
+## Ver1.12
+
+### Added
+
+- PIP v1.1 package reconciliation with `PIP_v1.0_stable.zip` and
+  `GDS_PIP_v1.1_delta_package_20260708.zip`。
+- PIP Case Index。
+- Reconciliation Report。
+- Evaluate What Actually Matters。
+- Metrics can pass while visual containment fails。
+- Target Row Identity / Title BBox traceability。
+- Target Row Trace / Pipeline Trace as standard artifact option。
+- Steam OCR v2 debugging sequence as reusable cases。
+
+### Reason
+
+実Delta Packageを確認した結果、前回のQ本文ベース統合では主要テーマは反映済みでしたが、
+PIP v1.0 stable の improvement knowledge database という位置付けと、metric proxy /
+visual containment / trace artifact option / case index の明示が不足していました。
+
+### Evolution
+
+PIP は briefing layer と improvement knowledge database の両方として整理され、
+evidence package と実装文書の整合性を確認する reconciliation process も記録対象になりました。
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

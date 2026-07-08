@@ -70,6 +70,53 @@ Simple allowed form:
 docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md
 ```
 
+## PIP v1.1 Index
+
+PIP (Project Information Package) は、Ghost Development System の正式な
+project briefing subsystem です。
+
+Reference points:
+
+- PIP folder: `pip/README.md`
+- Current stable standard: `pip/PIP_README_v1.1.md`
+- Improvement History: `pip/improvement_history.md`
+- Decision History: `pip/decision_history.md`
+- Migration Guide: `pip/Migration_1.0_to_1.1.md`
+- Changelog: `pip/CHANGELOG.md`
+- Delta Integration Summary: `pip/delta_integration_summary.md`
+- Case Index: `pip/case_index.md`
+- Reconciliation Report: `pip/reconciliation_report_20260708.md`
+- Architecture boundary: `docs/architecture/responsibility_boundary.md`
+- Workflow entry: `docs/workflow/README.md`
+- Knowledge Base History: `docs/history/knowledge_base_history.md`
+
+Role separation:
+
+```text
+GitHub Docs
+  -> official source of truth
+PIP
+  -> current state and why
+Information Package
+  -> evidence and observations
+Roadmap Archive
+  -> direction and historical planning
+Chat
+  -> short operational summary and links
+```
+
+PIP v1.1 では Improvement History と Decision History を必須概念として扱います。
+Command Center は PIP を briefing source として利用できます。GIP は future
+definition として予約し、現時点では stable package として扱いません。
+
+Roadmap2 Delta により、PIP v1.1 は Trace Before Tune、First Broken Step、
+Review Entry Point、Human Visual Review、Evolution Chain を review methodology
+として扱います。
+
+Package reconciliation により、PIP v1.1 は improvement knowledge database としての
+v1.0 stable philosophy、Evaluate What Actually Matters、Target Row Trace /
+Pipeline Trace、Steam OCR v2 Case Index も保持します。
+
 ## Audit Before Repair Index
 
 Repair, cleanup, OCR result correction, DB correction, mojibake correction,
