@@ -40,6 +40,8 @@ only describe boundaries and principles that are accepted enough to guide work.
 - Debug Artifact Review owns the development-time evidence boundary for
   Debug Mode, intermediate artifacts, expected normal state, and review
   handoff.
+- Debug Escalation Ladder owns the escalation order from phenomenon check to
+  algorithm change.
 - Migration First Boundary owns the distinction between internal structures
   that should migrate to a new standard and public compatibility contracts that
   must remain stable.
@@ -82,6 +84,11 @@ Debug Artifact Review supports AI, OCR, recommendation, auto-detection,
 candidate extraction, fuzzy matching, and visual processing work by making
 intermediate evidence inspectable during development while keeping normal
 execution free from debug outputs.
+
+Debug Escalation Ladder keeps uncertain defects from jumping directly to
+algorithm change. It orders investigation as phenomenon check, metrics check,
+human review, debug artifacts, pipeline trace, first broken step, root cause,
+and only then algorithm change.
 
 Migration First supports internal architecture by preferring New Standard,
 Migration Plan, Reference Update, Verification, and Legacy Removal over
@@ -128,10 +135,12 @@ Do not use this folder to approve Future Candidates by implication.
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/q_file_artifact_standard.md`
 - `docs/rules/debug_artifact_review_rules.md`
+- `docs/rules/debug_escalation_ladder_rules.md`
 - `docs/rules/migration_first_rules.md`
 - `docs/requests/README.md`
 - `docs/workflow/output_policy.md`
 - `docs/workflow/debug_artifact_review_workflow.md`
+- `docs/workflow/debug_escalation_ladder.md`
 - `docs/workflow/migration_first_workflow.md`
 - `docs/rules/project_rules.md`
 - `docs/roadmap/ghost_development_system_roadmap.md`

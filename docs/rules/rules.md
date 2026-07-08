@@ -36,6 +36,7 @@ Rules follow these principles:
 - Artifact First.
 - Audit Before Repair.
 - Debug Artifact Review.
+- Debug Escalation Ladder.
 - Migration First.
 - PIP Case Knowledge Base.
 - Human Approval Gate.
@@ -54,6 +55,7 @@ own files.
 - `q_file_artifact_standard.md`
 - `audit_before_repair_rules.md`
 - `debug_artifact_review_rules.md`
+- `debug_escalation_ladder_rules.md`
 - `migration_first_rules.md`
 - `pip_case_knowledge_base_rules.md`
 - `workflow_rules.md`
@@ -95,6 +97,28 @@ also include a Review Entry Point: the first artifact path or ordered artifact
 list for human and AI review.
 
 Details follow `debug_artifact_review_rules.md`.
+
+## Debug Escalation Ladder
+
+Uncertain defects and quality issues should move through evidence and review
+before algorithm change.
+
+Standard ladder:
+
+```text
+Phenomenon Check
+  -> Metrics Check
+  -> Human Review
+  -> Debug Artifact Generation
+  -> Pipeline Trace
+  -> First Broken Step Identification
+  -> Root Cause Confirmation
+  -> Algorithm Change
+```
+
+Algorithm change must not be the first reaction to a symptom or metric.
+
+Details follow `debug_escalation_ladder_rules.md`.
 
 ## Audit Before Repair
 

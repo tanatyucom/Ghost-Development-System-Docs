@@ -398,6 +398,34 @@ PIP evolved from case-based knowledge storage into a master-document-driven
 knowledge structure. Roadmap2 lessons can now be reviewed from a single master
 document, then followed into classified candidate files for future promotion.
 
+## Ver1.15
+
+### Added
+
+- Debug Escalation Ladder Rules.
+- Debug Escalation Ladder Workflow.
+- Debug Escalation Ladder entry in README and Knowledge Base Index.
+- Architecture boundary for debug escalation order.
+- PIP Master Document section for Debug Escalation Ladder.
+- Glossary terms for Debug Escalation Ladder, Phenomenon Check, Metrics Check,
+  Pipeline Trace, and Root Cause Confirmation.
+
+### Reason
+
+Roadmap2 debugging showed that defects should not jump directly from symptom or
+metric to parameter tuning or algorithm change.
+
+GDS needed a standard escalation order that puts phenomenon confirmation,
+metrics, human review, debug artifacts, pipeline trace, first broken step, and
+root cause before algorithm modification.
+
+### Evolution
+
+Knowledge Base evolved from debug artifact review into a broader debugging
+decision ladder. Debug Artifact Review now sits inside a larger escalation
+sequence that protects evidence-first debugging and root-cause-first
+improvement.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

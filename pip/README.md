@@ -45,6 +45,8 @@ Start from:
 - `case_index.md`
 - `tagging_standard.md`
 - `templates/case_template.md`
+- `../docs/rules/debug_escalation_ladder_rules.md`
+- `../docs/workflow/debug_escalation_ladder.md`
 
 Each CASE should include metadata for Case ID, Date, Status, Related Q, Related Report, Related Rule, Related PIP, Tags, and Keywords.
 
@@ -59,6 +61,10 @@ Use these files when reviewing Roadmap2-derived GDS / PIP methodology:
 - `evolutions/evolution_candidates_from_master_title_list.md`
 - `investigations/investigation_candidates_from_master_title_list.md`
 - `rule_stories/rule_story_candidates_from_master_title_list.md`
+
+Debug Escalation Ladder is part of the master methodology. Use it when deciding
+whether an issue has enough evidence to move from phenomenon and metrics to
+algorithm change.
 
 ## Role
 

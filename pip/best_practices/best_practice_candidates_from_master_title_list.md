@@ -13,6 +13,7 @@
 - Fix Identity Before Crop
 - End-to-End Traceability
 - Start With Human-Readable Artifact
+- Root Cause Before Algorithm Change
 
 ## Promotion Rule
 

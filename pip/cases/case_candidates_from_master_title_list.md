@@ -17,6 +17,7 @@
 | Review Entry Point Rule | GDS | Review, Workflow, Rule | Review Entry Point, Human Review | P1 | Standardized |
 | Too Many Artifacts | GDS | Review, Workflow | Review Entry Point, Human Review | P1 | Validated |
 | Evaluate What Actually Matters | GDS | Review, Pipeline | Human Review, Pipeline Trace | P1 | Standardized |
+| Debug Escalation Ladder | GDS | Debug, Review, Pipeline | Trace Before Tune, First Broken Step, Pipeline Trace | P1 | Standardized |
 
 ## Promotion Rule
 

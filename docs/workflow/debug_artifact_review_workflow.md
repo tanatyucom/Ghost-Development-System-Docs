@@ -4,6 +4,24 @@
 
 **Last Updated:** 2026-07-05
 
+## Relationship To Debug Escalation Ladder
+
+Debug Artifact Review is one stage inside this standard ladder:
+
+```text
+Phenomenon Check
+  -> Metrics Check
+  -> Human Review
+  -> Debug Artifact Generation
+  -> Pipeline Trace
+  -> First Broken Step Identification
+  -> Root Cause Confirmation
+  -> Algorithm Change
+```
+
+This workflow covers the Debug Artifact Generation and intermediate artifact
+review part of that ladder.
+
 ## Purpose
 
 この workflow は、Debug Mode、中間 Artifact、Human Review、AI Review、

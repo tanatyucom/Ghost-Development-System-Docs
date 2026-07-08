@@ -13,6 +13,8 @@
 - Human Visual Review Can Override Automated Geometry Metrics
 - Evaluate What Actually Matters
 - End-to-End Traceability
+- Debug Escalation Ladder
+- Root Cause Before Algorithm Change
 
 ## Promotion Rule
 

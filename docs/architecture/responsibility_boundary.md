@@ -21,6 +21,7 @@ Responsibilities:
 - Templates.
 - Output Layer.
 - Debug Artifact Review.
+- Debug Escalation Ladder.
 - Migration First Boundary.
 - Knowledge Asset Layer.
 - Metrics Layer.
@@ -122,6 +123,46 @@ Issue / Idea
   -> Expected State Check
   -> Design Review, when needed
   -> Fix Q Draft or Implementation
+```
+
+## Debug Escalation Ladder
+
+Debug Escalation Ladder owns the escalation order for uncertain defects and
+quality issues before algorithm change.
+
+Responsibilities:
+
+- require phenomenon check before metric-only judgment;
+- treat metrics as evidence input, not final authority;
+- require human review before expanding debug artifacts for visual or approval
+  sensitive problems;
+- escalate to Debug Artifact Review when intermediate behavior must be
+  inspected;
+- require pipeline trace before parameter tuning or algorithm change in complex
+  debugging;
+- require first broken step before root cause confirmation;
+- keep algorithm change as the final stage after evidence, trace, and root
+  cause are reviewed.
+
+Debug Escalation Ladder does not own:
+
+- debug artifact storage policy;
+- project-specific runtime implementation;
+- final human approval authority;
+- production adoption;
+- Git commit approval.
+
+Architecture flow:
+
+```text
+Phenomenon Check
+  -> Metrics Check
+  -> Human Review
+  -> Debug Artifact Generation
+  -> Pipeline Trace
+  -> First Broken Step Identification
+  -> Root Cause Confirmation
+  -> Algorithm Change
 ```
 
 ## Migration First Boundary
@@ -471,6 +512,7 @@ Before accepting a new feature or document, ask:
 - Is this temporary chat, or should it be a managed artifact?
 - Does this need Markdown `.md`, Word `.docx`, or another artifact format?
 - Does this need Debug Mode and intermediate artifact review?
+- Does this need Debug Escalation Ladder before algorithm change?
 - What should normal look like in the debug artifacts?
 - Are debug artifacts excluded from normal execution and Git by default?
 - Is this an internal architecture change that should use Migration First?

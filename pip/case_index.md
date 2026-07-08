@@ -70,6 +70,7 @@ Classification candidate lists:
 | CASE-0003 | Metrics Passed But Visual Containment Failed | Steam | OCR, Review | Human Review, Audit Before Repair | P1 | Validated | Human Visual Review |
 | CASE-0004 | Target Row Identity Drift | Steam | OCR, Pipeline | First Broken Step, Pipeline Trace | P1 | Validated | Trace Before Tune |
 | CASE-0005 | Title BBox Was The First Broken Step | Steam | OCR, Debug | First Broken Step, Trace Before Tune | P1 | Validated | Debug Artifact Review |
+| CASE-0006 | Debug Escalation Ladder | GDS | Debug, Review, Pipeline | Trace Before Tune, First Broken Step, Pipeline Trace | P1 | Standardized | Debug Escalation Ladder |
 
 ## Candidate Index From Master Title List
 

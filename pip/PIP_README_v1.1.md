@@ -219,6 +219,30 @@ Field Issue
   -> Next Q
 ```
 
+### Debug Escalation Ladder
+
+Complex debugging should not jump directly from symptom or metric to algorithm
+change.
+
+Standard ladder:
+
+```text
+Phenomenon Check
+  -> Metrics Check
+  -> Human Review
+  -> Debug Artifact Generation
+  -> Pipeline Trace
+  -> First Broken Step Identification
+  -> Root Cause Confirmation
+  -> Algorithm Change
+```
+
+Related documents:
+
+- `docs/rules/debug_escalation_ladder_rules.md`
+- `docs/workflow/debug_escalation_ladder.md`
+- `MASTER_DOCUMENT_JP.md`
+
 ## Case Index
 
 PIP v1.1 は、Roadmap2 から得た Steam OCR v2 debugging sequence を case index として

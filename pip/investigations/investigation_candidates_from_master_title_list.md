@@ -17,6 +17,7 @@
 - Crop Containment Audit
 - Pipeline Trace
 - First Broken Step Analysis
+- Debug Escalation Ladder
 
 ## Promotion Rule
 

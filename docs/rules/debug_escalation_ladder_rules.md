@@ -1,0 +1,113 @@
+# Debug Escalation Ladder Rules
+
+## Purpose
+
+Debug Escalation Ladder は、GDS における debugging の標準段階です。
+
+不具合、品質問題、不確実な AI / OCR / import / recommendation / classification / UI review の問題では、すぐに algorithm change や parameter tuning を行わず、証跡から root cause まで順に確認します。
+
+## Core Rule
+
+Algorithm change は最後です。
+
+次の順序を標準とします。
+
+```text
+Phenomenon Check
+  -> Metrics Check
+  -> Human Review
+  -> Debug Artifact Generation
+  -> Pipeline Trace
+  -> First Broken Step Identification
+  -> Root Cause Confirmation
+  -> Algorithm Change
+```
+
+## Escalation Rules
+
+### 1. Phenomenon Before Metrics
+
+まず現象を確認します。
+
+Metric や log がある場合でも、何が問題なのかを人間が説明できる状態にします。
+
+### 2. Metrics Are Evidence, Not Authority
+
+Metrics は判断材料です。
+
+Metric が `ok` でも、human review が問題を示す場合は investigation を続けます。
+
+### 3. Human Review Before Debug Expansion
+
+Debug artifact を大量に作る前に、人間が読める artifact を確認します。
+
+Contact sheet、overlay、review report、representative sample を優先します。
+
+### 4. Debug Artifact With Review Entry Point
+
+Debug Artifact を生成する場合は、Review Entry Point を必ず示します。
+
+Review Entry Point には、最初に見る artifact、理由、重要度を含めます。
+
+### 5. Trace Before Tune
+
+Parameter tuning や algorithm change の前に、pipeline trace を確認します。
+
+Trace がない状態の tuning は、症状を隠す可能性があります。
+
+### 6. First Broken Step Before Root Cause
+
+Root cause を語る前に、first broken step を特定します。
+
+最終出力が壊れているだけでは、root cause は確定しません。
+
+### 7. Root Cause Before Algorithm Change
+
+Algorithm change は root cause が確認されてから行います。
+
+Root cause が未確認の場合は、fix ではなく investigation として扱います。
+
+## Required Outputs
+
+Debug Escalation Ladder を適用した completion report には次を含めます。
+
+- Reached ladder step.
+- Stop reason.
+- Evidence reviewed.
+- Metrics reviewed.
+- Human review result.
+- Debug artifact location, when generated.
+- Pipeline trace location, when generated.
+- First broken step, when identified.
+- Root cause confirmation.
+- Algorithm change decision.
+
+## Do Not
+
+- 現象確認なしに metric だけで修正しない。
+- Human Review なしに visual quality を判断しない。
+- Debug Artifact を生成して Review Entry Point を示さないまま完了しない。
+- Pipeline Trace なしに complex debugging の tuning を開始しない。
+- First Broken Step 未特定のまま root cause を断定しない。
+- Root Cause 未確認のまま algorithm change を実施しない。
+
+## Relationship To Debug Artifact Review
+
+Debug Escalation Ladder は、Debug Artifact Review の前後を含む上位 rule です。
+
+Debug Artifact Review は次を扱います。
+
+- Debug Mode decision.
+- Intermediate artifact generation.
+- Expected normal state.
+- Review viewpoints.
+- Review Entry Point.
+- Debug artifact Git policy.
+
+Debug Escalation Ladder は、Debug Artifact Review をいつ使い、いつ Pipeline Trace や First Broken Step に進むかを定義します。
+
+## Decision Background
+
+Roadmap2 の Steam OCR v2 調査では、metrics が成功に見えても human review では失敗している例、crop score が良くても title text が欠ける例、target row identity が先にずれる例が確認されました。
+
+この経験から、GDS では root cause と algorithm change を急がず、現象、metrics、human review、debug artifact、pipeline trace、first broken step の順で evidence を積み上げる標準が必要になりました。

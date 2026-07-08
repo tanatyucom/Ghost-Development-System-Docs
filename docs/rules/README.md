@@ -10,7 +10,7 @@ Ghost Development System knowledge base.
 
 Core rules include Evidence First, Purpose-Oriented Naming, Human Approval Gate,
 Knowledge Before Automation, Artifact First, Audit Before Repair, Debug Artifact
-Review, Migration First, and PIP Case Knowledge Base.
+Review, Debug Escalation Ladder, Migration First, and PIP Case Knowledge Base.
 
 ## Contains
 
@@ -29,6 +29,9 @@ Review, Migration First, and PIP Case Knowledge Base.
 - `debug_artifact_review_rules.md`: Debug Mode, intermediate artifact review,
   expected normal state, review entry point, completion report announcement,
   AI review handoff, and Git policy for debug artifacts.
+- `debug_escalation_ladder_rules.md`: standard escalation order from
+  phenomenon check, metrics, human review, debug artifacts, pipeline trace,
+  first broken step, root cause, to algorithm change.
 - `migration_first_rules.md`: internal architecture rule for preferring
   standard migration, reference update, verification, and legacy removal over
   permanent compatibility fallback.
@@ -62,13 +65,14 @@ Review, Migration First, and PIP Case Knowledge Base.
 7. `q_file_artifact_standard.md`
 8. `audit_before_repair_rules.md`
 9. `debug_artifact_review_rules.md`
-10. `migration_first_rules.md`
-11. `pip_case_knowledge_base_rules.md`
-12. `workflow_rules.md`
-13. `quality_rules.md`
-14. `ai_collaboration_rules.md`
-15. `git_rules.md`
-16. `script_architecture_rules.md`
+10. `debug_escalation_ladder_rules.md`
+11. `migration_first_rules.md`
+12. `pip_case_knowledge_base_rules.md`
+13. `workflow_rules.md`
+14. `quality_rules.md`
+15. `ai_collaboration_rules.md`
+16. `git_rules.md`
+17. `script_architecture_rules.md`
 
 ## Update Policy
 

@@ -232,6 +232,36 @@ Review Entry Point:
 - 集計確認は CSV、判断理由確認は Markdown Report を使います。
 - Review Entry Point には、最初に見る場所、理由、重要度を含めます。
 
+## Debug Escalation Ladder Index
+
+Debug Escalation Ladder defines the standard escalation order for uncertain
+defects and quality issues.
+
+Reference points:
+
+- Rules: `docs/rules/debug_escalation_ladder_rules.md`
+- Workflow: `docs/workflow/debug_escalation_ladder.md`
+- Debug Artifact Review Rules: `docs/rules/debug_artifact_review_rules.md`
+- Debug Artifact Review Workflow: `docs/workflow/debug_artifact_review_workflow.md`
+- PIP Master Document: `pip/MASTER_DOCUMENT_JP.md`
+- Glossary: `docs/glossary/README.md`
+
+Core ladder:
+
+```text
+Phenomenon Check
+  -> Metrics Check
+  -> Human Review
+  -> Debug Artifact Generation
+  -> Pipeline Trace
+  -> First Broken Step Identification
+  -> Root Cause Confirmation
+  -> Algorithm Change
+```
+
+Use this ladder when a task may otherwise jump from a symptom or metric
+directly to parameter tuning or algorithm change.
+
 ## Commit Safety Index
 
 Dirty workspaces must be reviewed before staging or committing.

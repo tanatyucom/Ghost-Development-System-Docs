@@ -4,6 +4,14 @@
 
 **Last Updated:** 2026-07-05
 
+## Relationship To Debug Escalation Ladder
+
+Debug Artifact Review is one stage inside Debug Escalation Ladder.
+
+Use Debug Artifact Review after phenomenon check, metrics check, and human
+review are not enough to identify the cause. Debug artifacts then support
+pipeline trace, first broken step identification, and root cause confirmation.
+
 ## Purpose
 
 この文書は、Ghost Development System Docs における Debug Artifact

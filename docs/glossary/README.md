@@ -238,6 +238,34 @@ intermediate JSON file, log, or report used to inspect process behavior.
 Debug artifacts are not Git-managed by default. They may be promoted only by an
 explicit Q or review decision.
 
+### Debug Escalation Ladder
+
+The standard GDS escalation order for uncertain defects and quality issues.
+
+The ladder is Phenomenon Check, Metrics Check, Human Review, Debug Artifact
+Generation, Pipeline Trace, First Broken Step Identification, Root Cause
+Confirmation, and Algorithm Change.
+
+### Phenomenon Check
+
+The first debug step that confirms what is happening, where it happens, and
+whether the issue is reproducible or human-visible.
+
+### Metrics Check
+
+The step that reviews logs, scores, measurements, or counters as evidence
+input. Metrics do not override human review by themselves.
+
+### Pipeline Trace
+
+The step that records how data moves through processing stages so humans and AI
+can see where state changes.
+
+### Root Cause Confirmation
+
+The step that confirms why the first broken step happened before algorithm
+change or tuning is performed.
+
 ### Audit Before Repair
 
 The rule and workflow for auditing, classifying, preserving evidence, and
@@ -284,6 +312,7 @@ rules, templates, or examples.
 - `docs/rules/q_file_artifact_standard.md`
 - `docs/rules/audit_before_repair_rules.md`
 - `docs/rules/debug_artifact_review_rules.md`
+- `docs/rules/debug_escalation_ladder_rules.md`
 - `docs/rules/pip_case_knowledge_base_rules.md`
 - `docs/rules/git_rules.md`
 - `docs/workflow/commit_safety_checklist.md`
@@ -291,6 +320,7 @@ rules, templates, or examples.
 - `docs/workflow/output_policy.md`
 - `docs/workflow/audit_before_repair_workflow.md`
 - `docs/workflow/debug_artifact_review_workflow.md`
+- `docs/workflow/debug_escalation_ladder.md`
 - `docs/workflow/pip_case_knowledge_base_workflow.md`
 - `docs/architecture/responsibility_boundary.md`
 - `docs/history/knowledge_base_history.md`

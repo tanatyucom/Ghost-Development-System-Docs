@@ -18,6 +18,8 @@ gate.
 - `commit_safety_checklist.md`: dirty workspace and commit safety workflow.
 - `debug_artifact_review_workflow.md`: Debug Mode, intermediate artifact
   review, expected state check, AI review handoff, and Fix Q draft workflow.
+- `debug_escalation_ladder.md`: standard escalation order from phenomenon
+  check to algorithm change.
 - `migration_first_workflow.md`: internal architecture change workflow for
   new standard, migration plan, reference update, verification, legacy removal,
   completion report, and commit.
@@ -46,6 +48,7 @@ Idea
   -> Audit Before Repair, when repairing or cleaning up
   -> Approval
   -> Codex / AI Implementation
+  -> Debug Escalation Ladder, when cause is uncertain
   -> Debug Artifact Review, when applicable
   -> Completion Report Artifact
   -> PIP Update, when project state or decisions changed
@@ -141,6 +144,23 @@ Issue / Idea
 Debug Mode が適用される場合、Completion Report には Debug Artifact の保存場所、
 verification target、expected normal state、review viewpoints、必要に応じた
 AI review target artifacts、Git policy を記載します。
+
+## Debug Escalation Ladder Workflow
+
+When cause is uncertain, use the standard ladder before changing algorithms:
+
+```text
+Phenomenon Check
+  -> Metrics Check
+  -> Human Review
+  -> Debug Artifact Generation
+  -> Pipeline Trace
+  -> First Broken Step Identification
+  -> Root Cause Confirmation
+  -> Algorithm Change
+```
+
+Details follow `debug_escalation_ladder.md`.
 
 ## Q Artifact Workflow
 
@@ -423,11 +443,13 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/workflow/output_policy.md`
 - `docs/workflow/commit_safety_checklist.md`
 - `docs/workflow/debug_artifact_review_workflow.md`
+- `docs/workflow/debug_escalation_ladder.md`
 - `docs/workflow/migration_first_workflow.md`
 - `docs/workflow/pip_case_knowledge_base_workflow.md`
 - `docs/rules/workflow_rules.md`
 - `docs/rules/migration_first_rules.md`
 - `docs/rules/debug_artifact_review_rules.md`
+- `docs/rules/debug_escalation_ladder_rules.md`
 - `docs/rules/git_rules.md`
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/q_file_artifact_standard.md`

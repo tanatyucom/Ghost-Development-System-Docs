@@ -136,6 +136,27 @@ Contact Sheet、Overlay、Review Report は、CSV や数値より先に見るべ
 
 Crop Score が高くても title text が欠けていれば失敗です。
 
+### 3.14 Debug Escalation Ladder
+
+不確実な defect や quality issue は、現象から algorithm change へ直接進めません。
+
+GDS では次の escalation order を標準とします。
+
+```text
+Phenomenon Check
+  -> Metrics Check
+  -> Human Review
+  -> Debug Artifact Generation
+  -> Pipeline Trace
+  -> First Broken Step Identification
+  -> Root Cause Confirmation
+  -> Algorithm Change
+```
+
+この ladder は Trace Before Tune、First Broken Step、Human Review、Review Entry Point、Evidence Before Fix、Root Cause Before Algorithm Change をひとつの運用順序として扱います。
+
+Algorithm change は最後の段階です。現象、metrics、human review、debug artifact、pipeline trace、first broken step、root cause が揃って初めて検討します。
+
 ## 4. Evolution
 
 Steam OCR v2 の調査は次のように進化しました。
