@@ -343,6 +343,61 @@ visual containment / trace artifact option / case index の明示が不足して
 PIP は briefing layer と improvement knowledge database の両方として整理され、
 evidence package と実装文書の整合性を確認する reconciliation process も記録対象になりました。
 
+## Ver1.13
+
+### Added
+
+- PIP Case Knowledge Base rule.
+- PIP Case Knowledge Base workflow.
+- Standard PIP folders: `pip/cases/`, `pip/rule_stories/`,
+  `pip/evolutions/`, `pip/best_practices/`, and `pip/templates/`.
+- PIP Tagging Standard.
+- CASE template with required metadata and sections.
+- Case Index search axes for Project, Category, Methodology, Priority,
+  Lifecycle, and Related Rule.
+- Glossary entries for PIP, PIP Case, PIP Case Index, and PIP Tagging Standard.
+
+### Reason
+
+PIP v1.1 established PIP as an improvement knowledge database, but reusable
+cases still needed a stable structure, tag vocabulary, index policy, and CASE
+template.
+
+Without standard metadata and tags, future humans and AI cannot reliably find
+cases by project, methodology, related rule, or lifecycle state.
+
+### Evolution
+
+Knowledge Base evolved from PIP package reconciliation into a case-based
+knowledge system. Field issues and completion reports can now be promoted into
+searchable CASE entries, then into Rule Stories, Best Practices, Evolutions,
+or official rules and workflows when approved.
+
+## Ver1.14
+
+### Added
+
+- Japanese PIP Master Document: `pip/MASTER_DOCUMENT_JP.md`.
+- Japanese PIP Master Title List: `pip/MASTER_TITLE_LIST_JP.md`.
+- `pip/investigations/` as a PIP Knowledge Base category.
+- Candidate lists for CASE, Best Practice, Evolution, Investigation, and Rule
+  Story entries derived from the master title list.
+- README and Knowledge Base Index links to the master document and title list.
+- Rule and workflow guidance for maintaining PIP Master Document / Title List
+  integration.
+
+### Reason
+
+Roadmap2 produced reusable GDS / PIP methodology from Steam OCR v2
+investigation work. The master document and title list needed to become
+official PIP Knowledge Base entry points, not loose external evidence.
+
+### Evolution
+
+PIP evolved from case-based knowledge storage into a master-document-driven
+knowledge structure. Roadmap2 lessons can now be reviewed from a single master
+document, then followed into classified candidate files for future promotion.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

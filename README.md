@@ -62,16 +62,29 @@ Start from:
 
 - [`pip/README.md`](pip/README.md)
 - [`pip/PIP_README_v1.1.md`](pip/PIP_README_v1.1.md)
+- [`pip/MASTER_DOCUMENT_JP.md`](pip/MASTER_DOCUMENT_JP.md)
+- [`pip/MASTER_TITLE_LIST_JP.md`](pip/MASTER_TITLE_LIST_JP.md)
 - [`pip/improvement_history.md`](pip/improvement_history.md)
 - [`pip/decision_history.md`](pip/decision_history.md)
 - [`pip/Migration_1.0_to_1.1.md`](pip/Migration_1.0_to_1.1.md)
 - [`pip/CHANGELOG.md`](pip/CHANGELOG.md)
 - [`pip/delta_integration_summary.md`](pip/delta_integration_summary.md)
 - [`pip/case_index.md`](pip/case_index.md)
+- [`pip/tagging_standard.md`](pip/tagging_standard.md)
+- [`pip/templates/case_template.md`](pip/templates/case_template.md)
 - [`pip/reconciliation_report_20260708.md`](pip/reconciliation_report_20260708.md)
 
 Command Center は PIP を briefing source として利用できます。GIP は、別途
 review 済み specification が作られるまで future package concept として予約します。
+
+PIP Case Knowledge Base stores reusable cases under `pip/cases/` and uses
+`pip/tagging_standard.md` for Project, Category, Methodology, Priority, and
+Lifecycle tags.
+
+For Roadmap2-derived GDS / PIP methodology, start from
+[`pip/MASTER_DOCUMENT_JP.md`](pip/MASTER_DOCUMENT_JP.md), then use
+[`pip/MASTER_TITLE_LIST_JP.md`](pip/MASTER_TITLE_LIST_JP.md) to find CASE,
+Best Practice, Evolution, Investigation, and Rule Story candidates.
 
 ## Debug Artifact Review
 

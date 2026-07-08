@@ -79,12 +79,19 @@ Reference points:
 
 - PIP folder: `pip/README.md`
 - Current stable standard: `pip/PIP_README_v1.1.md`
+- Master Document JP: `pip/MASTER_DOCUMENT_JP.md`
+- Master Title List JP: `pip/MASTER_TITLE_LIST_JP.md`
 - Improvement History: `pip/improvement_history.md`
 - Decision History: `pip/decision_history.md`
 - Migration Guide: `pip/Migration_1.0_to_1.1.md`
 - Changelog: `pip/CHANGELOG.md`
 - Delta Integration Summary: `pip/delta_integration_summary.md`
 - Case Index: `pip/case_index.md`
+- Tagging Standard: `pip/tagging_standard.md`
+- CASE Template: `pip/templates/case_template.md`
+- PIP Case Rules: `docs/rules/pip_case_knowledge_base_rules.md`
+- PIP Case Workflow: `docs/workflow/pip_case_knowledge_base_workflow.md`
+- PIP Case Examples: `docs/examples/pip_case_knowledge_base_examples.md`
 - Reconciliation Report: `pip/reconciliation_report_20260708.md`
 - Architecture boundary: `docs/architecture/responsibility_boundary.md`
 - Workflow entry: `docs/workflow/README.md`
@@ -116,6 +123,26 @@ Review Entry Point、Human Visual Review、Evolution Chain を review methodolog
 Package reconciliation により、PIP v1.1 は improvement knowledge database としての
 v1.0 stable philosophy、Evaluate What Actually Matters、Target Row Trace /
 Pipeline Trace、Steam OCR v2 Case Index も保持します。
+
+PIP Case Knowledge Base standardizes:
+
+- `pip/cases/`
+- `pip/rule_stories/`
+- `pip/evolutions/`
+- `pip/best_practices/`
+- `pip/investigations/`
+- `pip/templates/`
+
+CASE entries use required metadata, standard tags, and the CASE template so
+they can be searched by Project, Methodology, Rule, Priority, and Lifecycle.
+
+Master title list candidate files:
+
+- `pip/cases/case_candidates_from_master_title_list.md`
+- `pip/best_practices/best_practice_candidates_from_master_title_list.md`
+- `pip/evolutions/evolution_candidates_from_master_title_list.md`
+- `pip/investigations/investigation_candidates_from_master_title_list.md`
+- `pip/rule_stories/rule_story_candidates_from_master_title_list.md`
 
 ## Audit Before Repair Index
 

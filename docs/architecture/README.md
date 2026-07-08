@@ -12,8 +12,8 @@ runtime behavior.
 ## Contains
 
 - `responsibility_boundary.md`: ownership boundaries for DevelopmentSystem,
-  Output Layer, Knowledge Asset Layer, Metrics Layer, Gray Ghost Core, Archive
-  Modules, Command Center, and Launcher.
+  Output Layer, Migration First Boundary, Knowledge Asset Layer, Metrics Layer,
+  PIP, Gray Ghost Core, Archive Modules, Command Center, and Launcher.
 - `design_philosophy.md`: principles that guide architecture and documentation.
 
 ## Does NOT Contain
@@ -37,8 +37,16 @@ only describe boundaries and principles that are accepted enough to guide work.
 - DevelopmentSystem owns development infrastructure.
 - Output Layer owns the durable boundary between chat summaries and managed
   artifacts.
+- Debug Artifact Review owns the development-time evidence boundary for
+  Debug Mode, intermediate artifacts, expected normal state, and review
+  handoff.
+- Migration First Boundary owns the distinction between internal structures
+  that should migrate to a new standard and public compatibility contracts that
+  must remain stable.
 - Knowledge Asset Layer owns the shared boundary for reviewed Knowledge Assets.
 - Metrics Layer owns the shared boundary for reviewed measurement and evidence.
+- PIP owns the project briefing boundary for current state, Improvement
+  History, Decision History, Case Knowledge Base, and AI handoff.
 - Gray Ghost Core owns analysis, recommendation, and cross-module intelligence.
 - Archive Modules own business logic, schema, metadata, and import rules.
 - Command Center owns the operational entry point and may route to Knowledge
@@ -63,11 +71,23 @@ not replace project-owned schema or runtime behavior.
 ## Design Philosophy Summary
 
 Accepted design principles include Evidence First, Purpose-Oriented Naming,
-Human Approval Gate, Knowledge Before Automation, and Artifact First.
+Human Approval Gate, Knowledge Before Automation, Artifact First, Debug
+Artifact Review, and Migration First.
 
 Output Layer supports Artifact First by making reusable Q files, design
 documents, specifications, review requests, AI requests, roadmap proposals, and
 human approval packets durable, reviewable, and Git-manageable.
+
+Debug Artifact Review supports AI, OCR, recommendation, auto-detection,
+candidate extraction, fuzzy matching, and visual processing work by making
+intermediate evidence inspectable during development while keeping normal
+execution free from debug outputs.
+
+Migration First supports internal architecture by preferring New Standard,
+Migration Plan, Reference Update, Verification, and Legacy Removal over
+permanent compatibility fallback. It protects Public Compatibility for public
+release, API / CLI, documented external workflow, exported artifact schema, DB
+schema, and user-facing data formats.
 
 Q file artifacts and related completion report artifacts are stored in Task
 Artifact Workspaces under `docs/requests/` so the request, execution report,
@@ -85,6 +105,15 @@ Metrics Layer extends Evidence First by turning field results into comparable
 signals such as success rate, review rate, reuse count, review iterations, and
 automation rate.
 
+PIP は current state とその理由を要約し、AI handoff と Command Center briefing
+を支えます。PIP は official GDS Docs、Information Package evidence、roadmap
+archives、completion reports を置き換えません。
+
+PIP Case Knowledge Base stores reusable cases, rule stories, evolutions, best
+practices, investigations, and case templates under `pip/`. It summarizes
+reviewed knowledge and links evidence, but it does not own official rule
+authority or raw evidence.
+
 ## Update Policy
 
 Update architecture documents when responsibility boundaries, design philosophy,
@@ -98,8 +127,12 @@ Do not use this folder to approve Future Candidates by implication.
 - `docs/architecture/design_philosophy.md`
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/q_file_artifact_standard.md`
+- `docs/rules/debug_artifact_review_rules.md`
+- `docs/rules/migration_first_rules.md`
 - `docs/requests/README.md`
 - `docs/workflow/output_policy.md`
+- `docs/workflow/debug_artifact_review_workflow.md`
+- `docs/workflow/migration_first_workflow.md`
 - `docs/rules/project_rules.md`
 - `docs/roadmap/ghost_development_system_roadmap.md`
 - `docs/roadmap/roadmap.md`

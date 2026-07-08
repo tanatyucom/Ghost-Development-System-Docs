@@ -10,7 +10,7 @@ Ghost Development System knowledge base.
 
 Core rules include Evidence First, Purpose-Oriented Naming, Human Approval Gate,
 Knowledge Before Automation, Artifact First, Audit Before Repair, Debug Artifact
-Review, and Migration First.
+Review, Migration First, and PIP Case Knowledge Base.
 
 ## Contains
 
@@ -32,6 +32,9 @@ Review, and Migration First.
 - `migration_first_rules.md`: internal architecture rule for preferring
   standard migration, reference update, verification, and legacy removal over
   permanent compatibility fallback.
+- `pip_case_knowledge_base_rules.md`: standard locations, metadata, tags,
+  case sections, evidence linking, PIP Master Document / Title List handling,
+  and promotion rules for PIP cases.
 - `workflow_rules.md`: development workflow and gates.
 - `git_rules.md`: Git history, dirty workspace policy, file classification,
   and commit safety rules.
@@ -60,11 +63,12 @@ Review, and Migration First.
 8. `audit_before_repair_rules.md`
 9. `debug_artifact_review_rules.md`
 10. `migration_first_rules.md`
-11. `workflow_rules.md`
-12. `quality_rules.md`
-13. `ai_collaboration_rules.md`
-14. `git_rules.md`
-15. `script_architecture_rules.md`
+11. `pip_case_knowledge_base_rules.md`
+12. `workflow_rules.md`
+13. `quality_rules.md`
+14. `ai_collaboration_rules.md`
+15. `git_rules.md`
+16. `script_architecture_rules.md`
 
 ## Update Policy
 

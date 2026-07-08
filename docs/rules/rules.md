@@ -37,6 +37,7 @@ Rules follow these principles:
 - Audit Before Repair.
 - Debug Artifact Review.
 - Migration First.
+- PIP Case Knowledge Base.
 - Human Approval Gate.
 - Future Scope Guard.
 
@@ -54,6 +55,7 @@ own files.
 - `audit_before_repair_rules.md`
 - `debug_artifact_review_rules.md`
 - `migration_first_rules.md`
+- `pip_case_knowledge_base_rules.md`
 - `workflow_rules.md`
 - `git_rules.md`
 - `quality_rules.md`
@@ -144,6 +146,25 @@ layout, queue / request structure, and future GhostCore / GDS internal modules
 should not accumulate permanent legacy fallback.
 
 Details follow `migration_first_rules.md`.
+
+## PIP Case Knowledge Base
+
+Reusable failures, investigations, review methods, first broken steps, root causes, fixes, validation results, and lessons learned should be promoted to PIP Case entries when they are useful beyond a single task.
+
+Standard locations:
+
+```text
+pip/cases/
+pip/rule_stories/
+pip/evolutions/
+pip/best_practices/
+pip/investigations/
+pip/templates/
+```
+
+Each CASE must include required metadata, standard tags, evidence links, related rules, and related cases.
+
+Details follow `pip_case_knowledge_base_rules.md`.
 
 ## Project First Principle
 

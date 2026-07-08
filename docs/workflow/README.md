@@ -13,7 +13,16 @@ gate.
 
 - `README.md`: workflow folder guide.
 - `output_policy.md`: chat versus file artifact output decision policy.
+- `audit_before_repair_workflow.md`: audit, classification, evidence, human
+  review, scoped repair Q, verification, and commit flow before repair work.
 - `commit_safety_checklist.md`: dirty workspace and commit safety workflow.
+- `debug_artifact_review_workflow.md`: Debug Mode, intermediate artifact
+  review, expected state check, AI review handoff, and Fix Q draft workflow.
+- `migration_first_workflow.md`: internal architecture change workflow for
+  new standard, migration plan, reference update, verification, legacy removal,
+  completion report, and commit.
+- `pip_case_knowledge_base_workflow.md`: how reusable lessons become tagged
+  PIP cases, rule stories, best practices, evolutions, and Knowledge Promotion.
 - `template_lifecycle.md`: how useful knowledge becomes a template, rule, or
   Knowledge Base document.
 
@@ -34,9 +43,13 @@ Idea
   -> Review
   -> Q Artifact Workspace
   -> Workspace Save Verification
+  -> Audit Before Repair, when repairing or cleaning up
   -> Approval
   -> Codex / AI Implementation
+  -> Debug Artifact Review, when applicable
   -> Completion Report Artifact
+  -> PIP Update, when project state or decisions changed
+  -> PIP Case Candidate, when reusable knowledge was found
   -> Human Review
   -> Commit
   -> Knowledge Promotion
@@ -61,6 +74,30 @@ redline, approval review, or offline reading is expected.
 When an artifact is the authoritative output, chat should contain only a short
 summary, artifact paths or links, verification notes, and remaining issues.
 
+## Audit Before Repair Workflow
+
+Before repair, cleanup, OCR result correction, DB correction, text encoding
+fixes, metadata correction, duplicate resolution, or other destructive-looking
+maintenance, use this flow:
+
+```text
+Idea / Bug
+  -> Audit
+  -> Classification
+  -> Evidence
+  -> Human Review
+  -> Repair Q
+  -> Verification
+  -> Commit
+```
+
+Audit results should classify findings as `fix_candidate`,
+`needs_human_review`, `generated_artifact`, `raw_data`, or `false_positive`.
+Repair Q files should name the source audit artifact, target scope, exclusions,
+verification method, safe commit set, and restore guidance.
+
+Details follow `audit_before_repair_workflow.md`.
+
 ## Commit Safety Workflow
 
 Before committing, use the standard dirty workspace review:
@@ -78,6 +115,32 @@ git status
 Every completion report should state whether a dirty workspace was detected,
 whether unrelated files were present, any suggested restore commands, and the
 safe commit set.
+
+## Debug Artifact Review Workflow
+
+AI output、OCR output、recommendation、auto-detection、candidate extraction、
+fuzzy matching、image overlay、その他の中間処理を扱う場合は Debug Artifact
+Review を使います。
+
+Standard flow:
+
+```text
+Issue / Idea
+  -> Debug Mode Decision
+  -> Intermediate Artifact Generation
+  -> Visual / Intermediate Review
+  -> Expected State Check
+  -> Design Review, when needed
+  -> Fix Q Draft or Implementation
+  -> Verification
+  -> Completion Report
+```
+
+通常実行では、Debug Mode が明示されていない限り Debug Artifact を生成しません。
+
+Debug Mode が適用される場合、Completion Report には Debug Artifact の保存場所、
+verification target、expected normal state、review viewpoints、必要に応じた
+AI review target artifacts、Git policy を記載します。
 
 ## Q Artifact Workflow
 
@@ -128,6 +191,34 @@ as `request.md` or an approved simple-form `.md` file under
 `docs/requests/<target_project>/<status>/`. A Q that exists only in chat, a
 download folder, clipboard, or temporary sandbox path should not be treated as
 the official task input. Save the Q first, then begin implementation.
+
+## Migration First Workflow
+
+When a task changes internal architecture, internal folder structure, script
+layout, adapter internal interface, prototype scripts, shared utility location,
+artifact workspace layout, queue / request internal structure, or future
+GhostCore / GDS internal modules, use Migration First.
+
+Standard flow:
+
+```text
+Internal Architecture Change
+  -> New Standard
+  -> Migration Plan
+  -> Reference Update
+  -> Verification
+  -> Legacy Removal
+  -> Completion Report
+  -> Commit
+```
+
+Public compatibility should be reviewed only for public release, public API /
+CLI, documented external workflow, exported artifact schema, DB schema, and
+user-facing data format.
+
+If temporary legacy fallback is kept, the Q and completion report should state
+the reason, removal plan, verification result, Remaining Legacy, and Restore /
+Rollback Guidance.
 
 ## Knowledge Before Automation Flow
 
@@ -191,6 +282,57 @@ Rules, and User Overrides.
 Knowledge Asset Layer is used after review has identified reusable knowledge
 and before automation relies on that knowledge. Raw observations, unreviewed
 CSV edits, and one-off AI guesses should not be treated as approved assets.
+
+## PIP Update Flow
+
+Current project state、priorities、architecture summary、known issues、next
+task、reusable improvement history、accepted decisions が変わった場合は PIP を
+更新します。
+
+Standard flow:
+
+```text
+Completed Q / Reviewed Work
+  -> Completion Report
+  -> Improvement Review
+  -> PIP Improvement History
+  -> PIP Decision History, when accepted decisions changed
+  -> PIP Current Status / Next Task
+  -> Human Review
+```
+
+PIP は briefing artifact です。Official documents を要約し、リンクしますが、
+rules、workflow、architecture、roadmap、templates、examples、evidence artifacts
+を置き換えません。
+
+Command Center は PIP を current briefing source として読めます。GIP は reviewed
+specification が作られるまで future candidate として扱います。
+
+## PIP Case Knowledge Base Flow
+
+When a completed Q or review produces reusable knowledge, use this flow:
+
+```text
+Field Issue / Completed Q
+  -> Completion Report
+  -> Improvement Review
+  -> Case Candidate
+  -> Tagging
+  -> PIP Case
+  -> Case Index Update
+  -> Rule Story / Best Practice / Evolution, when needed
+  -> Knowledge Promotion
+  -> Human Review
+```
+
+Use `pip/templates/case_template.md`, tag cases with
+`pip/tagging_standard.md`, and update `pip/case_index.md`.
+
+For PIP Master Document / Title List integration, use:
+
+- `pip/MASTER_DOCUMENT_JP.md`
+- `pip/MASTER_TITLE_LIST_JP.md`
+- `docs/workflow/pip_case_knowledge_base_workflow.md`
 
 ## Step Meanings
 
@@ -280,10 +422,16 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/workflow/template_lifecycle.md`
 - `docs/workflow/output_policy.md`
 - `docs/workflow/commit_safety_checklist.md`
+- `docs/workflow/debug_artifact_review_workflow.md`
+- `docs/workflow/migration_first_workflow.md`
+- `docs/workflow/pip_case_knowledge_base_workflow.md`
 - `docs/rules/workflow_rules.md`
+- `docs/rules/migration_first_rules.md`
+- `docs/rules/debug_artifact_review_rules.md`
 - `docs/rules/git_rules.md`
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/q_file_artifact_standard.md`
+- `pip/PIP_README_v1.1.md`
 - `docs/requests/README.md`
 - `docs/rules/project_rules.md`
 - `docs/templates/q_file_template.md`

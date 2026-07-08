@@ -20,8 +20,11 @@ Responsibilities:
 - Documentation.
 - Templates.
 - Output Layer.
+- Debug Artifact Review.
+- Migration First Boundary.
 - Knowledge Asset Layer.
 - Metrics Layer.
+- PIP.
 - Database Utility Framework.
 - Release Coordination.
 - Backup Coordination.
@@ -82,6 +85,84 @@ Idea / Request
   -> Human Review
   -> Commit / Knowledge Promotion
   -> Archive
+```
+
+## Debug Artifact Review
+
+Debug Artifact Review owns the development-time evidence boundary for uncertain
+AI, OCR, recommendation, auto-detection, candidate extraction, fuzzy matching,
+and visual processing work.
+
+Responsibilities:
+
+- decide whether Debug Mode applies before final judgment;
+- generate inspectable intermediate artifacts during development;
+- require expected normal state and review viewpoints;
+- support future AI review handoff by naming the artifacts and questions;
+- keep normal execution free from debug artifact generation unless Debug Mode
+  is explicitly requested;
+- keep debug artifacts out of Git unless a Q explicitly promotes them to
+  documentation, golden samples, fixtures, or approved review evidence.
+
+Debug Artifact Review does not own:
+
+- final human approval authority;
+- project-specific runtime behavior;
+- Git promotion decisions;
+- Knowledge Asset approval;
+- production output contracts.
+
+Architecture flow:
+
+```text
+Issue / Idea
+  -> Debug Mode Decision
+  -> Intermediate Artifact Generation
+  -> Visual / Intermediate Review
+  -> Expected State Check
+  -> Design Review, when needed
+  -> Fix Q Draft or Implementation
+```
+
+## Migration First Boundary
+
+Migration First Boundary owns the distinction between internal structures that
+should migrate to a new standard and public compatibility contracts that must
+remain stable.
+
+Responsibilities:
+
+- define the new internal standard before changing structure;
+- require Migration Plan, Reference Update, Verification, and Legacy Removal
+  for internal architecture changes;
+- limit Public Compatibility to public release, public API / CLI, documented
+  external workflow, exported artifact schema, DB schema, and user-facing data
+  format;
+- prevent permanent fallback for internal folder structure, script layout,
+  adapter internal interface, prototype scripts, shared utility location,
+  artifact workspace layout, queue / request internal structure, and future
+  GhostCore / GDS internal modules;
+- record Remaining Legacy, removal conditions, follow-up Q, and restore /
+  rollback guidance when temporary fallback remains.
+
+Migration First Boundary does not own:
+
+- final human approval authority;
+- runtime implementation;
+- project-specific public release decisions;
+- DB schema ownership for archive modules;
+- external user support policy.
+
+Architecture flow:
+
+```text
+Internal Architecture Change
+  -> New Standard
+  -> Migration Plan
+  -> Reference Update
+  -> Verification
+  -> Legacy Removal
+  -> Completion Report
 ```
 
 ## Knowledge Asset Layer
@@ -185,6 +266,75 @@ Metrics Layer does not own:
 Metrics are evidence inputs. They do not automatically promote a rule,
 workflow, architecture change, or automation behavior. Promotion still requires
 review and, when needed, Human Approval Gate.
+
+## Project Information Package
+
+Project Information Package (PIP) は project briefing boundary を所有します。
+
+PIP responsibilities:
+
+- current project status を要約する。
+- current priorities を要約する。
+- なぜ project が現在の状態になっているかを説明する。
+- source documents、Q artifacts、completion reports、roadmap direction を接続する。
+- Improvement History と Decision History の summary を維持する。
+- reusable improvement cases を Case Knowledge Base として整理する。
+- standard tags と case index により、project、methodology、rule、lifecycle で検索できるようにする。
+- AI collaboration と handoff を支える。
+- Command Center の briefing source になる。
+- next task と known issues を示す。
+
+PIP does not own:
+
+- official rule authority。
+- workflow authority。
+- architecture authority。
+- roadmap approval。
+- raw evidence。
+- raw debug artifacts。
+- runtime code。
+- DB schema。
+- Import / Apply behavior。
+- Command Center implementation。
+- final human approval authority。
+
+Responsibility relationship:
+
+```text
+GitHub Docs
+  -> PIP
+  -> Q Artifact / Completion Report
+  -> Information Package / Evidence
+  -> Command Center briefing
+```
+
+Information Package は evidence-focused のまま維持します。PIP は briefing-focused
+のまま維持します。GIP は future reviewed standard として予約し、独自の
+specification が作られるまでは stable package として扱いません。
+
+### PIP Case Knowledge Base Boundary
+
+PIP Case Knowledge Base は、completion reports や field issues から得た reusable knowledge を要約し、証跡へリンクします。
+
+It owns:
+
+- `pip/cases/`
+- `pip/rule_stories/`
+- `pip/evolutions/`
+- `pip/best_practices/`
+- `pip/investigations/`
+- `pip/templates/`
+- PIP Case metadata and tag consistency.
+- Case Index searchability.
+
+It does not own:
+
+- official rule authority;
+- workflow authority;
+- raw evidence packages;
+- task artifact workspaces;
+- runtime implementation;
+- final human approval.
 
 ## Project Hierarchy
 
@@ -320,9 +470,16 @@ Before accepting a new feature or document, ask:
 
 - Is this temporary chat, or should it be a managed artifact?
 - Does this need Markdown `.md`, Word `.docx`, or another artifact format?
+- Does this need Debug Mode and intermediate artifact review?
+- What should normal look like in the debug artifacts?
+- Are debug artifacts excluded from normal execution and Git by default?
+- Is this an internal architecture change that should use Migration First?
+- Is any compatibility requirement public, or is it only internal legacy?
+- What legacy will be removed, and what Remaining Legacy must be reported?
 - Is this development infrastructure?
 - Is this shared Knowledge Asset infrastructure?
 - Is this shared Metrics Layer responsibility?
+- Is this PIP briefing responsibility or official source-of-truth content?
 - Is this Knowledge Editor, Dashboard, or KAL responsibility?
 - Is this cross-module analysis or recommendation?
 - Is this module-specific business logic?

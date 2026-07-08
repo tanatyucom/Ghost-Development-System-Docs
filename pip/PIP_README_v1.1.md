@@ -228,6 +228,44 @@ Current case index:
 
 - `case_index.md`
 
+## Case Knowledge Base Standard
+
+PIP v1.1 は improvement knowledge database として、再利用可能な事例を CASE として保存します。
+
+Standard structure:
+
+```text
+pip/cases/
+pip/rule_stories/
+pip/evolutions/
+pip/best_practices/
+pip/templates/
+```
+
+Required reference documents:
+
+- `MASTER_DOCUMENT_JP.md`
+- `MASTER_TITLE_LIST_JP.md`
+- `case_index.md`
+- `tagging_standard.md`
+- `templates/case_template.md`
+
+Each CASE records Case ID, Date, Status, Related Q, Related Report, Related Rule, Related PIP, Tags, and Keywords.
+
+CASE body sections are Problem, Symptoms, Investigation, Evidence, First Broken Step, Root Cause, Fix, Validation, Lessons Learned, Related Rules, and Related Cases.
+
+Tags follow Project, Category, Methodology, Priority, and Lifecycle axes so that cases can be searched by project, methodology, rule, and reuse state.
+
+Master title list classifications are stored as candidate files under:
+
+```text
+pip/cases/
+pip/best_practices/
+pip/evolutions/
+pip/investigations/
+pip/rule_stories/
+```
+
 ## Command Center And GIP Relationship
 
 Command Center は PIP を primary briefing source として利用できます。
