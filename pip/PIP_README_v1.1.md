@@ -288,7 +288,69 @@ pip/best_practices/
 pip/evolutions/
 pip/investigations/
 pip/rule_stories/
+pip/concepts/
 ```
+
+## Roadmap2 Knowledge Salvage
+
+PIP v1.1 treats Roadmap2 as an active review source only until salvage is
+complete.
+
+Standard loop:
+
+```text
+Roadmap2 Review Request
+  -> Review Result
+  -> Missing Knowledge Extraction
+  -> Q Artifact
+  -> Codex Documentation Update
+  -> GitHub Push / Review
+  -> Roadmap2 Re-review
+  -> Repeat Until No Missing Knowledge
+```
+
+After completion, Roadmap2 becomes history and GDS Knowledge Base is the active
+source.
+
+Related documents:
+
+- `docs/rules/roadmap2_knowledge_salvage_rules.md`
+- `docs/workflow/roadmap2_knowledge_salvage_loop.md`
+- `concepts/concept_candidates_from_roadmap2_salvage.md`
+
+## Concept Promotion
+
+Concepts are early reusable ideas. They are reviewed through:
+
+```text
+Candidate
+  -> Under Review
+  -> Experiment
+  -> Validated
+  -> Promoted
+```
+
+If a concept should not become a stronger knowledge unit, it moves to
+`Archived` with a reason.
+
+Concept IDs use `CONCEPT-YYYY-NNN`, with optional short form `C-YYYY-NNN`.
+Concept status and history are tracked in `concepts/concept_index.md`.
+
+Standard workflow:
+
+- `docs/rules/concept_id_naming_rules.md`
+- `docs/workflow/concept_promotion_workflow.md`
+- `concepts/concept_index.md`
+- `concepts/README.md`
+
+Operation templates:
+
+- `templates/concept_template.md`
+- `templates/concept_status_change_report_template.md`
+- `templates/concept_review_checklist.md`
+
+Initial Roadmap2-derived core concepts are registered from `CONCEPT-2026-001`
+through `CONCEPT-2026-012`.
 
 ## Command Center And GIP Relationship
 

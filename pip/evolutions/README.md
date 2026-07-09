@@ -22,3 +22,4 @@ Use this folder when one issue becomes a chain of reusable knowledge rather than
 ## Candidate Lists
 
 - `evolution_candidates_from_master_title_list.md`
+- `evolution_candidates_from_roadmap2_salvage.md`

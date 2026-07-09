@@ -1,8 +1,8 @@
 # Quality Rules
 
-**Version:** 2.2
+**Version:** 2.3
 
-**Last Updated:** 2026-07-04
+**Last Updated:** 2026-07-05
 
 ## Purpose
 
@@ -41,6 +41,9 @@ Review documentation for:
 - source Q path;
 - completion report pairing;
 - correct project/status workspace.
+- debug artifact location, when Debug Mode applies;
+- expected normal state for intermediate artifacts;
+- whether normal execution avoids debug artifact generation.
 
 ## Error Prevention
 
@@ -54,6 +57,11 @@ Prevent common errors by:
 - treating missing Q artifact paths as review issues;
 - storing completion reports beside the source Q artifact;
 - keeping notes and attachments in the task workspace.
+- requiring intermediate artifact review for AI, OCR, recommendation,
+  auto-detection, candidate extraction, fuzzy matching, or visual processing
+  work when Debug Mode applies;
+- reviewing process unit, data flow, and responsibility boundary before code
+  edits when debug artifacts feel wrong or ambiguous.
 
 ## Evidence First
 

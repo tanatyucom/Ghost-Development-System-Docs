@@ -426,6 +426,141 @@ decision ladder. Debug Artifact Review now sits inside a larger escalation
 sequence that protects evidence-first debugging and root-cause-first
 improvement.
 
+## Ver1.16
+
+### Added
+
+- Roadmap2 Knowledge Salvage Rules.
+- Roadmap2 Knowledge Salvage Loop Workflow.
+- Roadmap2 Knowledge Salvage entries in README, docs index, rules index,
+  workflow index, architecture, glossary, and PIP index files.
+- `pip/concepts/` as a PIP Knowledge Base category.
+- Roadmap2 salvage candidate files for Concept, CASE, Best Practice,
+  Evolution, Investigation, and Rule Story entries.
+- PIP Case Index and Tagging Standard updates for Knowledge Salvage and
+  Concept candidates.
+
+### Reason
+
+Roadmap2 still functioned as an external review source for reusable GDS / PIP
+knowledge. To make GDS the single active Knowledge Base, remaining Roadmap2
+knowledge needed a formal salvage loop instead of ad hoc review.
+
+The loop prevents reusable knowledge from being lost in reviews, chats, or
+external roadmap archives. It also separates documentation salvage from new
+feature approval.
+
+### Evolution
+
+Knowledge Base evolved from storing PIP master documents into actively
+extracting the remaining Roadmap2 knowledge until no missing reusable knowledge
+remains.
+
+Roadmap2 can become history only after remaining reusable knowledge is migrated,
+classified as duplicate, classified as future candidate, or rejected as
+non-reusable with review evidence.
+
+## Ver1.17
+
+### Added
+
+- Concept Promotion Workflow.
+- Concept status definitions: Candidate, Under Review, Experiment, Validated,
+  Promoted, and Archived.
+- Promotion criteria and archive criteria for `pip/concepts/`.
+- PIP Case Knowledge Base rule updates for Concept Lifecycle.
+- README, docs index, workflow index, PIP README, glossary, and architecture
+  links for Concept Promotion.
+- PIP Tagging Standard lifecycle values for concept review states.
+
+### Reason
+
+Roadmap2 Knowledge Salvage introduced `pip/concepts/`, but the concept folder
+needed a lifecycle. Without status, promotion criteria, and archive criteria,
+concepts could become loose notes instead of reviewed knowledge.
+
+### Evolution
+
+PIP evolved from preserving concept candidates into managing them through a
+reviewed lifecycle. Concepts can now become stronger knowledge units such as
+Rule, Best Practice, Workflow, Principle, CASE, Rule Story, Evolution,
+Investigation, template, glossary, or architecture, or they can be archived
+with a reason.
+
+## Ver1.18
+
+### Added
+
+- Concept Template: `pip/templates/concept_template.md`.
+- Concept Status Change Report Template:
+  `pip/templates/concept_status_change_report_template.md`.
+- Concept Review Checklist: `pip/templates/concept_review_checklist.md`.
+- README, docs index, workflow index, PIP README, concepts README, tagging
+  standard, and PIP Case Knowledge Base rule links for Concept operation
+  templates.
+
+### Reason
+
+Concept Promotion Workflow defined statuses and promotion / archive criteria,
+but the daily operation still needed standard artifacts for writing individual
+concepts, recording status changes, and reviewing promotion or archive
+decisions.
+
+### Evolution
+
+Concept management evolved from lifecycle definition into a repeatable artifact
+set. New concepts can now be written consistently, status changes can be traced,
+and promotion or archive decisions can be reviewed from a standard checklist.
+
+## Ver1.19
+
+### Added
+
+- Concept ID Naming Rules: `docs/rules/concept_id_naming_rules.md`.
+- Concept Index: `pip/concepts/concept_index.md`.
+- `CONCEPT-YYYY-NNN` official ID format and `C-YYYY-NNN` short form.
+- Concept Index status sections for Candidate, Under Review, Experiment,
+  Validated, Promoted, and Archived.
+- Promoted destination tracking and archive reason tracking.
+- README, docs index, rules index, workflow, PIP README, concepts README,
+  tagging standard, Concept Template, and Concept Status Change Report updates
+  for Concept IDs and Concept Index.
+
+### Reason
+
+Concept templates and status reports made individual operation possible, but
+Concepts still needed a stable ID and index standard before many Roadmap2
+Salvage concepts are added.
+
+### Evolution
+
+Concept management evolved from file-level templates into indexed knowledge
+management. Concepts can now be found by ID, grouped by status, and traced after
+promotion or archive.
+
+## Ver1.20
+
+### Added
+
+- Initial Roadmap2-derived core Concept entries:
+  `CONCEPT-2026-001` through `CONCEPT-2026-012`.
+- Concept Index registration for 12 Validated concepts.
+- Related CASE, rule, workflow, source, last reviewed date, and next action for
+  each initial core Concept.
+- Initial core Concept references in README, docs index, PIP README, and
+  concepts README.
+
+### Reason
+
+The Concept management system needed initial real data from Roadmap2 to prove
+that lifecycle, templates, ID naming, and Concept Index can support reusable GDS
+design philosophy.
+
+### Evolution
+
+Concept management evolved from structure-only documentation into an active
+Knowledge Base containing validated Roadmap2 design concepts.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

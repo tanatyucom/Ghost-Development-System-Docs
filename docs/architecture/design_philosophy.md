@@ -99,6 +99,34 @@ requests, AI implementation requests, or roadmap proposals.
 Artifact First supports Human Approval Gate, prevents copy loss, and makes
 Knowledge Promotion easier.
 
+## Migration First
+
+Internal architecture should stay simple enough for humans and AI to review.
+
+When an internal folder structure, script layout, adapter internal interface,
+prototype script, shared utility location, artifact workspace layout, queue /
+request internal structure, or future GhostCore / GDS internal module changes,
+prefer migration to the new standard over accumulating permanent compatibility
+fallback.
+
+Use:
+
+```text
+New Standard
+  -> Migration Plan
+  -> Reference Update
+  -> Verification
+  -> Legacy Removal
+```
+
+Public Compatibility is protected for public release, public API / CLI,
+documented external workflow, exported artifact schema, DB schema, and
+user-facing data format. Internal legacy fallback should be temporary,
+documented, verified, and removed.
+
+Migration First supports Human Approval Gate by making migration intent,
+public impact, remaining legacy, and restore / rollback guidance explicit.
+
 ## Knowledge Before Automation
 
 When automation fails, the first architectural question is whether the system

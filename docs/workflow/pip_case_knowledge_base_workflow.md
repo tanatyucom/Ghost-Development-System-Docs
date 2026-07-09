@@ -15,6 +15,7 @@ Field Issue / Completed Q
   -> PIP Case
   -> Case Index Update
   -> Rule Story / Best Practice / Evolution, when needed
+  -> Concept Promotion, when the lesson is still an early concept
   -> Knowledge Promotion
   -> Human Review
 ```
@@ -41,6 +42,7 @@ pip/cases/
 pip/best_practices/
 pip/evolutions/
 pip/investigations/
+pip/concepts/
 pip/rule_stories/
 ```
 
@@ -86,10 +88,21 @@ Use this decision path:
 ```text
 Reusable lesson
   -> PIP Case
+  -> Concept Candidate, when not mature enough for a stronger unit
+  -> Concept Promotion Workflow
   -> Repeated pattern?
   -> Rule Story or Best Practice
   -> Official Rule / Workflow / Template update, when approved
 ```
+
+Concept Candidate status and promotion follow
+`docs/workflow/concept_promotion_workflow.md`.
+
+Use these templates for concept operation:
+
+- `pip/templates/concept_template.md`
+- `pip/templates/concept_status_change_report_template.md`
+- `pip/templates/concept_review_checklist.md`
 
 ## Review Entry Point
 

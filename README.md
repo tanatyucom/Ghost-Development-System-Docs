@@ -86,6 +86,26 @@ For Roadmap2-derived GDS / PIP methodology, start from
 [`pip/MASTER_TITLE_LIST_JP.md`](pip/MASTER_TITLE_LIST_JP.md) to find CASE,
 Best Practice, Evolution, Investigation, and Rule Story candidates.
 
+Concepts are managed under [`pip/concepts/`](pip/concepts/) and move through
+Candidate, Under Review, Experiment, Validated, Promoted, or Archived status.
+Concept IDs use `CONCEPT-YYYY-NNN` and are tracked in
+[`pip/concepts/concept_index.md`](pip/concepts/concept_index.md).
+Use [`docs/workflow/concept_promotion_workflow.md`](docs/workflow/concept_promotion_workflow.md)
+when a concept should mature into a Rule, Best Practice, Workflow, Principle,
+CASE, Rule Story, Evolution, Investigation, template, glossary, or architecture
+note.
+
+Concept operation templates:
+
+- [`docs/rules/concept_id_naming_rules.md`](docs/rules/concept_id_naming_rules.md)
+- [`pip/concepts/concept_index.md`](pip/concepts/concept_index.md)
+- [`pip/templates/concept_template.md`](pip/templates/concept_template.md)
+- [`pip/templates/concept_status_change_report_template.md`](pip/templates/concept_status_change_report_template.md)
+- [`pip/templates/concept_review_checklist.md`](pip/templates/concept_review_checklist.md)
+
+Initial Roadmap2-derived core concepts are registered from
+`CONCEPT-2026-001` through `CONCEPT-2026-012`.
+
 ## Debug Artifact Review
 
 Debug Artifact や review artifact が複数生成される場合、Completion Report
@@ -138,6 +158,23 @@ Start from:
 
 Root cause and algorithm change come after evidence, metrics, human review,
 debug artifacts when needed, pipeline trace, and first broken step.
+
+## Roadmap2 Knowledge Salvage
+
+Roadmap2 Knowledge Salvage Loop is the final migration loop for Roadmap2
+knowledge. It repeats review, missing knowledge extraction, Q artifact creation,
+documentation update, and re-review until no reusable knowledge remains only in
+Roadmap2.
+
+Start from:
+
+- [`docs/rules/roadmap2_knowledge_salvage_rules.md`](docs/rules/roadmap2_knowledge_salvage_rules.md)
+- [`docs/workflow/roadmap2_knowledge_salvage_loop.md`](docs/workflow/roadmap2_knowledge_salvage_loop.md)
+- [`pip/MASTER_DOCUMENT_JP.md`](pip/MASTER_DOCUMENT_JP.md)
+- [`pip/concepts/concept_candidates_from_roadmap2_salvage.md`](pip/concepts/concept_candidates_from_roadmap2_salvage.md)
+
+Completion means Roadmap2 can be treated as history and GDS Knowledge Base is
+the active source.
 
 ## Audit Before Repair
 

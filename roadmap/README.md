@@ -38,6 +38,16 @@ Platform, and Improvement Review. Metrics are roadmap-level evidence inputs;
 they do not approve runtime implementation, release work, or rule
 standardization by themselves.
 
+## Migration First Direction
+
+Migration First direction is managed in
+`ghost_development_system_roadmap.md`.
+
+It keeps future GDS v2 / AI Development Management System work simple by
+preferring New Standard, Migration Plan, Reference Update, Verification, and
+Legacy Removal over permanent internal compatibility fallback. This matters for
+future Command Center, Queue Manager, Artifact Manager, and Automation work.
+
 ## Does NOT Contain
 
 - Runtime implementation.
@@ -77,6 +87,7 @@ review promotes them.
 - `docs/roadmap/ghost_development_system_roadmap.md`
 - `docs/roadmap/roadmap.md`
 - `docs/rules/project_rules.md`
+- `docs/rules/migration_first_rules.md`
 - `docs/rules/`
 - `docs/templates/roadmap_template.md`
 - `docs/workflow/`

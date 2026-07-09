@@ -28,3 +28,4 @@ They are shorter than a full rule document and more reusable than a single compl
 ## Candidate Lists
 
 - `rule_story_candidates_from_master_title_list.md`
+- `rule_story_candidates_from_roadmap2_salvage.md`

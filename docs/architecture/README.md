@@ -117,9 +117,17 @@ PIP は current state とその理由を要約し、AI handoff と Command Cente
 archives、completion reports を置き換えません。
 
 PIP Case Knowledge Base stores reusable cases, rule stories, evolutions, best
-practices, investigations, and case templates under `pip/`. It summarizes
+practices, investigations, concepts, and case templates under `pip/`. It summarizes
 reviewed knowledge and links evidence, but it does not own official rule
 authority or raw evidence.
+
+Roadmap2 Knowledge Salvage is the review loop that moves remaining Roadmap2
+knowledge into GDS / PIP before Roadmap2 becomes history. It is a documentation
+and knowledge-promotion boundary, not approval for new runtime features.
+
+Concept Promotion is the lifecycle boundary for `pip/concepts/`. It decides
+whether an early idea becomes a stronger knowledge unit or is archived, but it
+does not itself approve runtime implementation.
 
 ## Update Policy
 
@@ -137,11 +145,14 @@ Do not use this folder to approve Future Candidates by implication.
 - `docs/rules/debug_artifact_review_rules.md`
 - `docs/rules/debug_escalation_ladder_rules.md`
 - `docs/rules/migration_first_rules.md`
+- `docs/rules/roadmap2_knowledge_salvage_rules.md`
 - `docs/requests/README.md`
 - `docs/workflow/output_policy.md`
 - `docs/workflow/debug_artifact_review_workflow.md`
 - `docs/workflow/debug_escalation_ladder.md`
 - `docs/workflow/migration_first_workflow.md`
+- `docs/workflow/concept_promotion_workflow.md`
+- `docs/workflow/roadmap2_knowledge_salvage_loop.md`
 - `docs/rules/project_rules.md`
 - `docs/roadmap/ghost_development_system_roadmap.md`
 - `docs/roadmap/roadmap.md`

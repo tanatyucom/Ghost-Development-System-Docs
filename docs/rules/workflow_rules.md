@@ -1,8 +1,8 @@
 # Workflow Rules
 
-**Version:** 2.4
+**Version:** 2.5
 
-**Last Updated:** 2026-07-04
+**Last Updated:** 2026-07-05
 
 ## Purpose
 
@@ -89,6 +89,26 @@ Approved Q files should not remain only in chat and should not remain outside
 the correct project/status workspace.
 
 Missing Q artifact path is a review issue.
+
+### Debug Artifact Review Gate
+
+When a task involves AI output, OCR output, recommendation behavior,
+auto-detection, candidate extraction, fuzzy matching, image overlays, or other
+intermediate processing, decide whether Debug Mode applies before judging the
+result.
+
+If Debug Mode applies:
+
+- generate inspectable intermediate artifacts;
+- inspect at least one relevant artifact before final judgment or fixes;
+- state the expected normal state;
+- review process unit, data flow, and responsibility boundary when artifacts
+  feel wrong or ambiguous;
+- report debug artifact save location, verification target, review viewpoints,
+  and Git policy in the completion report.
+
+Normal execution must not generate debug artifacts unless Debug Mode is
+explicitly requested.
 
 ### Task Artifact Movement Rule
 

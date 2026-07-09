@@ -364,9 +364,11 @@ It owns:
 - `pip/evolutions/`
 - `pip/best_practices/`
 - `pip/investigations/`
+- `pip/concepts/`
 - `pip/templates/`
 - PIP Case metadata and tag consistency.
 - Case Index searchability.
+- Roadmap2 Knowledge Salvage classification outputs.
 
 It does not own:
 
@@ -376,6 +378,18 @@ It does not own:
 - task artifact workspaces;
 - runtime implementation;
 - final human approval.
+
+Roadmap2 Knowledge Salvage is a PIP / workflow bridge. It classifies reusable
+Roadmap2 knowledge into CASE, Best Practice, Evolution, Investigation, Rule
+Story, Concept, rule update, workflow update, glossary update, architecture
+boundary, or history entry. It does not approve new runtime features or replace
+human review.
+
+Concept Promotion owns the lifecycle decision for `pip/concepts/`: Candidate,
+Under Review, Experiment, Validated, Promoted, or Archived. It does not approve
+runtime implementation, rule standardization, architecture changes, or public
+terminology by itself; those destinations still require the appropriate review
+and Human Approval Gate.
 
 ## Project Hierarchy
 

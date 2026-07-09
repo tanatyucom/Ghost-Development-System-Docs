@@ -222,3 +222,26 @@ Steam OCR v2 は単なる OCR tuning から始まりました。
 Roadmap2 の最大の成果は OCR の一部改善ではなく、GDS / PIP に再利用できる開発文化を作ったことです。
 
 Roadmap3 では、この知識を GitHub 上の正式な PIP Knowledge Base として育てます。
+
+## 8. Roadmap2 Knowledge Salvage Loop
+
+Roadmap2 由来の知識は、GDS Knowledge Base へ移植されるまで active review source として扱います。
+
+標準 loop:
+
+```text
+Roadmap2 Review Request
+  -> Review Result
+  -> Missing Knowledge Extraction
+  -> Q Artifact
+  -> Codex Documentation Update
+  -> GitHub Push / Review
+  -> Roadmap2 Re-review
+  -> Repeat Until No Missing Knowledge
+  -> Roadmap2 Becomes History
+  -> GDS Becomes Single Knowledge Base
+```
+
+この loop は新機能追加ではありません。Roadmap2 が保持している CASE、Best Practice、Evolution、Investigation、Rule Story、Concept、PIP principle、GDS reflection gap を漏れなく移植するための最終サルベージです。
+
+完了条件は、Roadmap2 側に GDS 未移植の reusable knowledge が残っていないことです。

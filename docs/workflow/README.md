@@ -23,8 +23,12 @@ gate.
 - `migration_first_workflow.md`: internal architecture change workflow for
   new standard, migration plan, reference update, verification, legacy removal,
   completion report, and commit.
+- `concept_promotion_workflow.md`: how concepts move from Candidate to
+  Under Review, Experiment, Validated, Promoted, or Archived.
 - `pip_case_knowledge_base_workflow.md`: how reusable lessons become tagged
   PIP cases, rule stories, best practices, evolutions, and Knowledge Promotion.
+- `roadmap2_knowledge_salvage_loop.md`: final Roadmap2 knowledge migration
+  loop from review request to no remaining missing knowledge.
 - `template_lifecycle.md`: how useful knowledge becomes a template, rule, or
   Knowledge Base document.
 
@@ -53,6 +57,8 @@ Idea
   -> Completion Report Artifact
   -> PIP Update, when project state or decisions changed
   -> PIP Case Candidate, when reusable knowledge was found
+  -> Concept Promotion, when knowledge is still an early concept
+  -> Roadmap2 Knowledge Salvage, when Roadmap2-only knowledge remains
   -> Human Review
   -> Commit
   -> Knowledge Promotion
@@ -341,6 +347,7 @@ Field Issue / Completed Q
   -> PIP Case
   -> Case Index Update
   -> Rule Story / Best Practice / Evolution, when needed
+  -> Concept Promotion, when the lesson is still an early concept
   -> Knowledge Promotion
   -> Human Review
 ```
@@ -348,11 +355,62 @@ Field Issue / Completed Q
 Use `pip/templates/case_template.md`, tag cases with
 `pip/tagging_standard.md`, and update `pip/case_index.md`.
 
+Concept status and promotion follow `concept_promotion_workflow.md`.
+
+## Concept Promotion Workflow
+
+Concepts under `pip/concepts/` should move through a reviewed lifecycle instead
+of staying as loose notes.
+
+```text
+Idea
+  -> Concept Candidate
+  -> Under Review
+  -> Experiment
+  -> Validated Concept
+  -> Rule / Best Practice / Workflow / Principle
+  -> Promoted
+```
+
+Archive path:
+
+```text
+Concept Candidate
+  -> Under Review
+  -> Archived
+```
+
+Details follow `concept_promotion_workflow.md`.
+
+Concept operation templates:
+
+- `pip/templates/concept_template.md`
+- `pip/templates/concept_status_change_report_template.md`
+- `pip/templates/concept_review_checklist.md`
+
 For PIP Master Document / Title List integration, use:
 
 - `pip/MASTER_DOCUMENT_JP.md`
 - `pip/MASTER_TITLE_LIST_JP.md`
 - `docs/workflow/pip_case_knowledge_base_workflow.md`
+
+## Roadmap2 Knowledge Salvage Loop
+
+Use this loop until Roadmap2 no longer contains reusable knowledge that is
+missing from GDS.
+
+```text
+Roadmap2 Review Request
+  -> Review Result
+  -> Missing Knowledge Extraction
+  -> Q Artifact
+  -> Codex Documentation Update
+  -> GitHub Push / Review
+  -> Roadmap2 Re-review
+  -> Repeat Until No Missing Knowledge
+```
+
+Details follow `roadmap2_knowledge_salvage_loop.md`.
 
 ## Step Meanings
 
@@ -445,11 +503,14 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/workflow/debug_artifact_review_workflow.md`
 - `docs/workflow/debug_escalation_ladder.md`
 - `docs/workflow/migration_first_workflow.md`
+- `docs/workflow/concept_promotion_workflow.md`
 - `docs/workflow/pip_case_knowledge_base_workflow.md`
+- `docs/workflow/roadmap2_knowledge_salvage_loop.md`
 - `docs/rules/workflow_rules.md`
 - `docs/rules/migration_first_rules.md`
 - `docs/rules/debug_artifact_review_rules.md`
 - `docs/rules/debug_escalation_ladder_rules.md`
+- `docs/rules/roadmap2_knowledge_salvage_rules.md`
 - `docs/rules/git_rules.md`
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/q_file_artifact_standard.md`

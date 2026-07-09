@@ -39,6 +39,9 @@ Rules follow these principles:
 - Debug Escalation Ladder.
 - Migration First.
 - PIP Case Knowledge Base.
+- Concept Promotion.
+- Concept ID Naming.
+- Roadmap2 Knowledge Salvage.
 - Human Approval Gate.
 - Future Scope Guard.
 
@@ -58,6 +61,8 @@ own files.
 - `debug_escalation_ladder_rules.md`
 - `migration_first_rules.md`
 - `pip_case_knowledge_base_rules.md`
+- `concept_id_naming_rules.md`
+- `roadmap2_knowledge_salvage_rules.md`
 - `workflow_rules.md`
 - `git_rules.md`
 - `quality_rules.md`
@@ -183,12 +188,51 @@ pip/rule_stories/
 pip/evolutions/
 pip/best_practices/
 pip/investigations/
+pip/concepts/
 pip/templates/
 ```
 
 Each CASE must include required metadata, standard tags, evidence links, related rules, and related cases.
 
+Concepts under `pip/concepts/` move through Candidate, Under Review,
+Experiment, Validated, Promoted, or Archived status before they become a
+stronger knowledge unit or are preserved as history.
+
+Use `pip/templates/concept_template.md`,
+`pip/templates/concept_status_change_report_template.md`, and
+`pip/templates/concept_review_checklist.md` for Concept operation.
+
+Concept IDs use `CONCEPT-YYYY-NNN`, with optional short form `C-YYYY-NNN`.
+Every tracked Concept should appear in `pip/concepts/concept_index.md`.
+Promoted Concepts must record destination. Archived Concepts must record
+archive reason.
+
 Details follow `pip_case_knowledge_base_rules.md`.
+
+Details for ID assignment follow `concept_id_naming_rules.md`.
+
+## Roadmap2 Knowledge Salvage
+
+Roadmap2 knowledge should be reviewed, extracted, and migrated until no
+reusable knowledge remains only in Roadmap2.
+
+Standard loop:
+
+```text
+Roadmap2 Review Request
+  -> Review Result
+  -> Missing Knowledge Extraction
+  -> Q Artifact
+  -> Codex Documentation Update
+  -> GitHub Push / Review
+  -> Roadmap2 Re-review
+  -> Repeat Until No Missing Knowledge
+```
+
+After completion, Roadmap2 becomes history and GDS Knowledge Base is the active
+source.
+
+Details follow `roadmap2_knowledge_salvage_rules.md`.
 
 ## Project First Principle
 

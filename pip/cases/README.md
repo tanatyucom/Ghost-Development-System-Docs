@@ -37,6 +37,7 @@ pip/case_index.md
 ## Candidate Lists
 
 - `case_candidates_from_master_title_list.md`
+- `case_candidates_from_roadmap2_salvage.md`
 
 ## Scope
 

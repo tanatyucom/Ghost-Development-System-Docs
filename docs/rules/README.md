@@ -10,7 +10,10 @@ Ghost Development System knowledge base.
 
 Core rules include Evidence First, Purpose-Oriented Naming, Human Approval Gate,
 Knowledge Before Automation, Artifact First, Audit Before Repair, Debug Artifact
-Review, Debug Escalation Ladder, Migration First, and PIP Case Knowledge Base.
+Review, Debug Escalation Ladder, Migration First, PIP Case Knowledge Base, and
+Roadmap2 Knowledge Salvage. Concept Promotion is handled as part of PIP Case
+Knowledge Base. Concept ID Naming is the standard for assigning stable Concept
+IDs and keeping the Concept Index traceable.
 
 ## Contains
 
@@ -37,7 +40,12 @@ Review, Debug Escalation Ladder, Migration First, and PIP Case Knowledge Base.
   permanent compatibility fallback.
 - `pip_case_knowledge_base_rules.md`: standard locations, metadata, tags,
   case sections, evidence linking, PIP Master Document / Title List handling,
-  and promotion rules for PIP cases.
+  concept lifecycle, and promotion rules for PIP cases.
+- `concept_id_naming_rules.md`: Concept ID format, sequence rules, Concept
+  Index requirements, and promoted / archived tracking.
+- `roadmap2_knowledge_salvage_rules.md`: final Roadmap2 knowledge migration
+  loop, missing knowledge classification, destination rules, and completion
+  criteria.
 - `workflow_rules.md`: development workflow and gates.
 - `git_rules.md`: Git history, dirty workspace policy, file classification,
   and commit safety rules.
@@ -68,11 +76,13 @@ Review, Debug Escalation Ladder, Migration First, and PIP Case Knowledge Base.
 10. `debug_escalation_ladder_rules.md`
 11. `migration_first_rules.md`
 12. `pip_case_knowledge_base_rules.md`
-13. `workflow_rules.md`
-14. `quality_rules.md`
-15. `ai_collaboration_rules.md`
-16. `git_rules.md`
-17. `script_architecture_rules.md`
+13. `concept_id_naming_rules.md`
+14. `roadmap2_knowledge_salvage_rules.md`
+15. `workflow_rules.md`
+16. `quality_rules.md`
+17. `ai_collaboration_rules.md`
+18. `git_rules.md`
+19. `script_architecture_rules.md`
 
 ## Update Policy
 

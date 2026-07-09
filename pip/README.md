@@ -35,6 +35,7 @@ pip/rule_stories/
 pip/evolutions/
 pip/best_practices/
 pip/investigations/
+pip/concepts/
 pip/templates/
 ```
 
@@ -61,10 +62,64 @@ Use these files when reviewing Roadmap2-derived GDS / PIP methodology:
 - `evolutions/evolution_candidates_from_master_title_list.md`
 - `investigations/investigation_candidates_from_master_title_list.md`
 - `rule_stories/rule_story_candidates_from_master_title_list.md`
+- `concepts/concept_candidates_from_roadmap2_salvage.md`
 
 Debug Escalation Ladder is part of the master methodology. Use it when deciding
 whether an issue has enough evidence to move from phenomenon and metrics to
 algorithm change.
+
+## Roadmap2 Knowledge Salvage
+
+Roadmap2 Knowledge Salvage Loop is the final migration loop for Roadmap2
+knowledge. It repeats review, missing knowledge extraction, Q artifact creation,
+documentation update, and re-review until Roadmap2 has no remaining reusable
+knowledge that is missing from GDS.
+
+Start from:
+
+- `../docs/rules/roadmap2_knowledge_salvage_rules.md`
+- `../docs/workflow/roadmap2_knowledge_salvage_loop.md`
+- `concepts/concept_candidates_from_roadmap2_salvage.md`
+- `cases/case_candidates_from_roadmap2_salvage.md`
+- `best_practices/best_practice_candidates_from_roadmap2_salvage.md`
+- `evolutions/evolution_candidates_from_roadmap2_salvage.md`
+- `investigations/investigation_candidates_from_roadmap2_salvage.md`
+- `rule_stories/rule_story_candidates_from_roadmap2_salvage.md`
+
+Completion means Roadmap2 becomes history and GDS Knowledge Base is the active
+source.
+
+## Concept Promotion
+
+Concepts under `pip/concepts/` use a reviewed lifecycle:
+
+```text
+Candidate
+  -> Under Review
+  -> Experiment
+  -> Validated
+  -> Promoted
+```
+
+Concepts that should not be promoted move to `Archived` with a reason.
+
+Concept IDs use `CONCEPT-YYYY-NNN`, with optional short form `C-YYYY-NNN`.
+Use `concepts/concept_index.md` before assigning a new ID or changing status.
+
+Use `../docs/workflow/concept_promotion_workflow.md` when a concept needs to
+be promoted to Rule, Best Practice, Workflow, Principle, CASE, Rule Story,
+Evolution, Investigation, template, glossary, or architecture.
+
+Concept operation templates:
+
+- `../docs/rules/concept_id_naming_rules.md`
+- `concepts/concept_index.md`
+- `templates/concept_template.md`
+- `templates/concept_status_change_report_template.md`
+- `templates/concept_review_checklist.md`
+
+Initial Roadmap2-derived core concepts are registered from `CONCEPT-2026-001`
+through `CONCEPT-2026-012`.
 
 ## Role
 

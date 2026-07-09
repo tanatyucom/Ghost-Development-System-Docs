@@ -295,6 +295,44 @@ or committed after review.
 Unrelated runtime data, local cache, temporary files, and accidental outputs do
 not belong in the safe commit set.
 
+### Roadmap2 Knowledge Salvage
+
+The loop that reviews Roadmap2, extracts reusable knowledge that has not yet
+been migrated, creates Q artifacts for the missing knowledge, updates GDS / PIP,
+and repeats until Roadmap2 has no remaining reusable knowledge outside the
+official Knowledge Base.
+
+### Missing Knowledge Extraction
+
+The classification step that separates already migrated knowledge, missing
+knowledge, duplicates, future candidates, non-reusable notes, human-approval
+items, and source-evidence needs during Roadmap2 review.
+
+### Concept Candidate
+
+A reusable idea or vocabulary item that is not yet a CASE, Best Practice,
+Evolution, Investigation, Rule Story, official rule, or workflow.
+
+### Concept Promotion
+
+The reviewed lifecycle that moves a concept from Candidate to Under Review,
+Experiment, Validated, Promoted, or Archived.
+
+Concept Promotion decides whether an idea becomes a stronger knowledge unit
+such as Rule, Best Practice, Workflow, Principle, CASE, Rule Story, Evolution,
+Investigation, template, glossary, or architecture.
+
+### Validated Concept
+
+A concept that has been tested in a real Q, review, documentation workflow, or
+project workflow and is consistent with GDS principles.
+
+### Salvage Completion Condition
+
+The condition that Roadmap2 can become history only after reusable Roadmap2
+knowledge has either been migrated into GDS / PIP, classified as duplicate,
+classified as future candidate, or explicitly rejected as non-reusable.
+
 ## Update Policy
 
 Add glossary terms when a concept appears across multiple documents or is
@@ -314,6 +352,7 @@ rules, templates, or examples.
 - `docs/rules/debug_artifact_review_rules.md`
 - `docs/rules/debug_escalation_ladder_rules.md`
 - `docs/rules/pip_case_knowledge_base_rules.md`
+- `docs/rules/roadmap2_knowledge_salvage_rules.md`
 - `docs/rules/git_rules.md`
 - `docs/workflow/commit_safety_checklist.md`
 - `docs/requests/README.md`
@@ -322,5 +361,7 @@ rules, templates, or examples.
 - `docs/workflow/debug_artifact_review_workflow.md`
 - `docs/workflow/debug_escalation_ladder.md`
 - `docs/workflow/pip_case_knowledge_base_workflow.md`
+- `docs/workflow/concept_promotion_workflow.md`
+- `docs/workflow/roadmap2_knowledge_salvage_loop.md`
 - `docs/architecture/responsibility_boundary.md`
 - `docs/history/knowledge_base_history.md`

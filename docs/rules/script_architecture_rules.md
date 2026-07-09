@@ -70,6 +70,30 @@ compatibility before applying the change.
 
 The future Rename Compatibility Analyzer should support this rule.
 
+### Migration First For Internal Structure
+
+For internal folder structure, script layout, adapter interfaces, prototype
+scripts, shared utility locations, artifact workspace layout, queue / request
+structure, and future GhostCore / GDS internal modules, prefer migration to the
+new standard over permanent fallback.
+
+Use:
+
+```text
+New Standard
+  -> Migration Plan
+  -> Reference Update
+  -> Verification
+  -> Legacy Removal
+```
+
+Public compatibility remains protected for public API / CLI, documented
+external workflow, exported artifact schema, DB schema, and user-facing data
+formats.
+
+Temporary legacy fallback must include a reason, removal plan, verification
+criteria, remaining legacy report, and restore / rollback guidance when needed.
+
 ## Goal
 
 Script architecture should keep implementation repositories modular,

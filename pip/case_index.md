@@ -30,6 +30,7 @@ pip/evolutions/
 pip/best_practices/
 pip/investigations/
 pip/templates/
+pip/concepts/
 ```
 
 ## Search Keys
@@ -60,6 +61,12 @@ Classification candidate lists:
 - `evolutions/evolution_candidates_from_master_title_list.md`
 - `investigations/investigation_candidates_from_master_title_list.md`
 - `rule_stories/rule_story_candidates_from_master_title_list.md`
+- `concepts/concept_candidates_from_roadmap2_salvage.md`
+- `cases/case_candidates_from_roadmap2_salvage.md`
+- `best_practices/best_practice_candidates_from_roadmap2_salvage.md`
+- `evolutions/evolution_candidates_from_roadmap2_salvage.md`
+- `investigations/investigation_candidates_from_roadmap2_salvage.md`
+- `rule_stories/rule_story_candidates_from_roadmap2_salvage.md`
 
 ## Case Index
 
@@ -71,6 +78,7 @@ Classification candidate lists:
 | CASE-0004 | Target Row Identity Drift | Steam | OCR, Pipeline | First Broken Step, Pipeline Trace | P1 | Validated | Trace Before Tune |
 | CASE-0005 | Title BBox Was The First Broken Step | Steam | OCR, Debug | First Broken Step, Trace Before Tune | P1 | Validated | Debug Artifact Review |
 | CASE-0006 | Debug Escalation Ladder | GDS | Debug, Review, Pipeline | Trace Before Tune, First Broken Step, Pipeline Trace | P1 | Standardized | Debug Escalation Ladder |
+| CASE-0007 | Roadmap2 Knowledge Salvage Loop | GDS | Workflow, Review | Knowledge Salvage, Human Review, Review Entry Point | P1 | Standardized | Roadmap2 Knowledge Salvage |
 
 ## Candidate Index From Master Title List
 
@@ -81,6 +89,17 @@ Classification candidate lists:
 | Evolution Candidates | `evolutions/evolution_candidates_from_master_title_list.md` |
 | Investigation Candidates | `investigations/investigation_candidates_from_master_title_list.md` |
 | Rule Story Candidates | `rule_stories/rule_story_candidates_from_master_title_list.md` |
+
+## Candidate Index From Roadmap2 Knowledge Salvage
+
+| Type | File |
+|---|---|
+| Concept Candidates | `concepts/concept_candidates_from_roadmap2_salvage.md` |
+| CASE Candidates | `cases/case_candidates_from_roadmap2_salvage.md` |
+| Best Practice Candidates | `best_practices/best_practice_candidates_from_roadmap2_salvage.md` |
+| Evolution Candidates | `evolutions/evolution_candidates_from_roadmap2_salvage.md` |
+| Investigation Candidates | `investigations/investigation_candidates_from_roadmap2_salvage.md` |
+| Rule Story Candidates | `rule_stories/rule_story_candidates_from_roadmap2_salvage.md` |
 
 ## Steam OCR v2 Debugging Sequence
 

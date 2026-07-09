@@ -131,6 +131,7 @@ PIP Case Knowledge Base standardizes:
 - `pip/evolutions/`
 - `pip/best_practices/`
 - `pip/investigations/`
+- `pip/concepts/`
 - `pip/templates/`
 
 CASE entries use required metadata, standard tags, and the CASE template so
@@ -143,6 +144,20 @@ Master title list candidate files:
 - `pip/evolutions/evolution_candidates_from_master_title_list.md`
 - `pip/investigations/investigation_candidates_from_master_title_list.md`
 - `pip/rule_stories/rule_story_candidates_from_master_title_list.md`
+
+Concept lifecycle:
+
+- Concepts: `pip/concepts/`
+- Concept Index: `pip/concepts/concept_index.md`
+- Concept ID Naming Rules: `docs/rules/concept_id_naming_rules.md`
+- Concept Promotion Workflow: `docs/workflow/concept_promotion_workflow.md`
+- Concept Template: `pip/templates/concept_template.md`
+- Concept Status Change Report:
+  `pip/templates/concept_status_change_report_template.md`
+- Concept Review Checklist: `pip/templates/concept_review_checklist.md`
+- Concept statuses: `Candidate`, `Under Review`, `Experiment`, `Validated`,
+  `Promoted`, `Archived`
+- Initial Core Concepts: `CONCEPT-2026-001` through `CONCEPT-2026-012`
 
 ## Audit Before Repair Index
 
@@ -261,6 +276,45 @@ Phenomenon Check
 
 Use this ladder when a task may otherwise jump from a symptom or metric
 directly to parameter tuning or algorithm change.
+
+## Roadmap2 Knowledge Salvage Index
+
+Roadmap2 Knowledge Salvage Loop is the final migration loop for Roadmap2
+knowledge.
+
+Reference points:
+
+- Rules: `docs/rules/roadmap2_knowledge_salvage_rules.md`
+- Workflow: `docs/workflow/roadmap2_knowledge_salvage_loop.md`
+- Concept Promotion Workflow: `docs/workflow/concept_promotion_workflow.md`
+- PIP Master Document: `pip/MASTER_DOCUMENT_JP.md`
+- PIP Master Title List: `pip/MASTER_TITLE_LIST_JP.md`
+- Concepts: `pip/concepts/concept_candidates_from_roadmap2_salvage.md`
+- Case Candidates: `pip/cases/case_candidates_from_roadmap2_salvage.md`
+- Best Practice Candidates:
+  `pip/best_practices/best_practice_candidates_from_roadmap2_salvage.md`
+- Evolution Candidates:
+  `pip/evolutions/evolution_candidates_from_roadmap2_salvage.md`
+- Investigation Candidates:
+  `pip/investigations/investigation_candidates_from_roadmap2_salvage.md`
+- Rule Story Candidates:
+  `pip/rule_stories/rule_story_candidates_from_roadmap2_salvage.md`
+
+Core loop:
+
+```text
+Roadmap2 Review Request
+  -> Review Result
+  -> Missing Knowledge Extraction
+  -> Q Artifact
+  -> Codex Documentation Update
+  -> GitHub Push / Review
+  -> Roadmap2 Re-review
+  -> Repeat Until No Missing Knowledge
+```
+
+Completion means Roadmap2 becomes history and GDS Knowledge Base becomes the
+active source.
 
 ## Commit Safety Index
 

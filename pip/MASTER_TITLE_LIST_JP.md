@@ -61,6 +61,8 @@
 - Too Many Artifacts
 - Start With Human-Readable Artifact
 - Evaluate What Actually Matters
+- Debug Escalation Ladder
+- Root Cause Before Algorithm Change
 
 ## 4. Evolution
 
@@ -85,6 +87,8 @@ Activity Extent
 - Review Entry Point Rule
 - Too Many Artifacts
 - Evaluate What Actually Matters
+- Debug Escalation Ladder
+- Root Cause Before Algorithm Change
 
 ### Best Practice Candidates
 
@@ -94,6 +98,7 @@ Activity Extent
 - Fix Identity Before Crop
 - End-to-End Traceability
 - Start With Human-Readable Artifact
+- Root Cause Before Algorithm Change
 
 ### Evolution Candidates
 
@@ -111,6 +116,7 @@ Activity Extent
 - Crop Containment Audit
 - Pipeline Trace
 - First Broken Step Analysis
+- Debug Escalation Ladder
 
 ### Rule Story Candidates
 
@@ -120,3 +126,4 @@ Activity Extent
 - Human Visual Review Can Override Automated Geometry Metrics
 - Evaluate What Actually Matters
 - End-to-End Traceability
+- Debug Escalation Ladder

@@ -1,5 +1,7 @@
 # PIP README v1.0
 
+> 現在の stable GDS usage では `PIP_README_v1.1.md` を参照してください。
+
 # Project Information Package (PIP)
 
 ## Purpose

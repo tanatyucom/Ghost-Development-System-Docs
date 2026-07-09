@@ -1,8 +1,8 @@
 # Output Policy
 
-**Version:** 1.2
+**Version:** 1.3
 
-**Last Updated:** 2026-07-04
+**Last Updated:** 2026-07-05
 
 ## Purpose
 
@@ -23,6 +23,11 @@ For Q files, file artifact means saved in the Task Artifact Workspace under
 `docs/requests/`, not only generated in chat, a download folder, or a temporary
 sandbox path.
 
+Debug artifacts are not automatically authoritative output artifacts. They are
+development-time evidence used for review. Generate them only in Debug Mode,
+announce their paths in the completion report when relevant, and do not commit
+them unless a Q explicitly promotes them to Git-managed knowledge.
+
 ## Output Decision Table
 
 | Output Type | Default Output |
@@ -41,6 +46,7 @@ sandbox path.
 | Roadmap update proposal | Artifact |
 | Human approval packet | Artifact |
 | Git-managed documentation | Artifact |
+| Debug overlay / intermediate evidence | Debug artifact, not chat |
 
 ## Artifact Format Policy
 
@@ -77,6 +83,11 @@ When the authoritative output is an artifact, the chat body should contain:
 
 The chat body should not contain the full long-form Q, design document,
 specification, review request, or AI request unless explicitly requested.
+
+When Debug Artifact Review applies, the chat body or completion report should
+summarize the debug artifact location and expected normal state. It should not
+embed large debug logs, generated overlays, or intermediate data directly in
+chat unless explicitly requested.
 
 ## Workflow Placement
 
@@ -121,12 +132,17 @@ Artifact First prevents:
 - AI execution from incomplete input;
 - weak Git history;
 - hard-to-review approval context.
+- silent intermediate processing failures;
+- accidental debug artifact commits;
+- debug output leaking into normal execution.
 
 ## Related Documents
 
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/q_file_artifact_standard.md`
+- `docs/rules/debug_artifact_review_rules.md`
 - `docs/requests/README.md`
 - `docs/templates/q_file_template.md`
 - `docs/templates/ai_implementation_request.md`
 - `docs/examples/artifact_first_examples.md`
+- `docs/examples/debug_artifact_review_examples.md`

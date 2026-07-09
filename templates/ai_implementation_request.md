@@ -99,6 +99,48 @@ Use implementation terms in descriptions when they clarify the current method,
 but avoid making a single method the public title when the project goal is
 broader.
 
+## Migration First / Internal Architecture
+
+When the request changes internal folder structure, script layout, adapter
+internal interface, prototype scripts, shared utility location, artifact
+workspace layout, queue / request internal structure, or future GhostCore / GDS
+internal modules, prefer migration to the new standard over permanent
+compatibility fallback.
+
+Confirm:
+
+- New Standard.
+- Migration Plan.
+- Reference Update.
+- Verification.
+- Legacy Removal.
+- Public Compatibility Impact.
+- Remaining Legacy.
+- Restore / Rollback Guidance.
+
+Protect public compatibility for public release, public API / CLI, documented
+external workflow, exported artifact schema, DB schema, and user-facing data
+format. Do not preserve internal legacy fallback permanently unless the Q
+explicitly approves a temporary reason and removal plan.
+
+## Debug Artifact Review
+
+When the request involves AI output, OCR output, recommendation behavior,
+auto-detection, candidate extraction, fuzzy matching, image overlays, or other
+intermediate processing, confirm whether Debug Mode applies before judging the
+result.
+
+If Debug Mode applies:
+
+- generate inspectable intermediate artifacts during development;
+- inspect at least one relevant artifact before final judgment or fixes;
+- state the expected normal state;
+- review process unit, data flow, and responsibility boundary when artifacts
+  feel wrong or ambiguous;
+- do not generate debug artifacts during normal execution unless Debug Mode is
+  explicitly requested;
+- do not commit debug artifacts unless the Q explicitly promotes them.
+
 ## Human Approval Gate
 
 Stop and ask for approval before:
@@ -138,6 +180,16 @@ Report:
 - Unrelated files?
 - Suggested restore commands.
 - Safe commit set.
+- Migration Plan result, when applicable.
+- Reference Update result, when applicable.
+- Legacy Removal result, when applicable.
+- Public Compatibility Impact, when applicable.
+- Remaining Legacy, when applicable.
+- Restore / Rollback Guidance, when applicable.
+- Debug artifact save location, when applicable.
+- Verification target and expected normal state, when applicable.
+- Review viewpoints and AI review target artifacts, when applicable.
+- Debug artifact Git policy, when applicable.
 - Metrics / Evidence, when measurable results are available.
 - Repository Information followed.
 - Remaining Issues.

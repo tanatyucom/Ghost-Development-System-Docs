@@ -18,6 +18,7 @@ pip/rule_stories/
 pip/evolutions/
 pip/best_practices/
 pip/investigations/
+pip/concepts/
 pip/templates/
 ```
 
@@ -105,6 +106,35 @@ PIP Case から rule standardization、workflow standardization、architecture d
 When these files change, update the relevant candidate list, `pip/case_index.md`, `pip/README.md`, and `docs/README.md`.
 
 Candidate files are not official rules by themselves. Promotion to official rule, workflow, template, or architecture still requires review and Human Approval Gate.
+
+## Concept Lifecycle Rule
+
+Concept entries under `pip/concepts/` preserve reusable ideas before they are
+strong enough to become CASE, Rule Story, Best Practice, Evolution,
+Investigation, official Rule, Workflow, Principle, template, glossary, or
+architecture.
+
+Concept status values are:
+
+- `Candidate`
+- `Under Review`
+- `Experiment`
+- `Validated`
+- `Promoted`
+- `Archived`
+
+Concepts must not remain permanent unreviewed storage. They should move toward
+promotion or archive through `docs/workflow/concept_promotion_workflow.md`.
+
+Promotion requires source evidence, reuse value, consistency with GDS
+principles, documentation, review, and the required Human Approval Gate when
+the destination is a rule, workflow, architecture boundary, public terminology,
+or principle.
+
+Use `pip/templates/concept_template.md` for individual Concept entries,
+`pip/templates/concept_status_change_report_template.md` for status changes,
+and `pip/templates/concept_review_checklist.md` before promotion or archive
+decisions.
 
 ## Decision Background
 

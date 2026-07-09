@@ -24,3 +24,4 @@ They are used when the main value is the investigation approach itself: what to 
 - `pip/MASTER_DOCUMENT_JP.md`
 - `pip/MASTER_TITLE_LIST_JP.md`
 - `pip/investigations/investigation_candidates_from_master_title_list.md`
+- `pip/investigations/investigation_candidates_from_roadmap2_salvage.md`

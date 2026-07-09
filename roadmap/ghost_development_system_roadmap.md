@@ -449,6 +449,32 @@ Candidate scope:
 Ver2.x の platform work は、実装承認ではありません。各項目は Future Candidate
 として扱い、別 Q と Human Approval Gate によって昇格します。
 
+### Migration First Direction
+
+GDS v2 / AI Development Management System では、Command Center、Queue
+Manager、Artifact Manager、Automation が増えるほど内部構造が複雑になりやすい。
+
+そのため、内部 architecture は compatibility fallback を積み増すのではなく、
+標準構造へ移行する方針を優先する。
+
+```text
+New Standard
+  -> Migration Plan
+  -> Reference Update
+  -> Verification
+  -> Legacy Removal
+```
+
+この方向性は、internal folder structure、internal script layout、adapter
+internal interface、prototype scripts、shared utility location、artifact
+workspace layout、queue / request internal structure、future GhostCore / GDS
+internal modules に適用する。
+
+Public Compatibility は public release、public API / CLI、documented external
+workflow、exported artifact schema、DB schema、user-facing data format に限定して
+守る。内部 fallback が残る場合は、Remaining Legacy として理由、削除条件、
+follow-up Q を記録する。
+
 ## Review Points
 
 この Roadmap は次のタイミングで見直します。

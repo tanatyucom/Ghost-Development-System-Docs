@@ -27,9 +27,18 @@ reports, and documentation requests can start from a clear reference.
 - `q_file_artifact_workflow.md`: good and bad examples for Task Artifact
   Workspaces, Q files, completion reports, notes, attachments, and related
   commit information.
+- `audit_before_repair_examples.md`: good and bad examples for auditing,
+  classifying, reviewing evidence, scoping repair Q files, and avoiding broad
+  one-shot repair.
 - `dirty_workspace_examples.md`: good and bad examples for classifying dirty
   workspace files, restoring accidental runtime changes, and keeping commits
   scoped.
+- `migration_first_examples.md`: good and bad examples for migrating internal
+  architecture to a new standard, updating references, verifying, removing
+  legacy, and reporting public compatibility impact.
+- `debug_artifact_review_examples.md`: good and bad examples for Debug Mode,
+  intermediate artifact review, expected normal state, design review before
+  fixes, and debug artifact Git policy.
 - `repository_information.md`: example of repository boundaries, source of
   truth, scope guard, and completion criteria.
 - `authority_matrix.md`: example edit and reference authority matrix.
@@ -89,9 +98,19 @@ what a complete, well-scoped document should feel like.
   `docs/requests/<target_project>/<status>/` workspace, naming it, linking it
   to a completion report, storing notes or attachments, moving status, or
   recording related commit status.
+- Use `audit_before_repair_examples.md` before repair, cleanup, OCR result
+  correction, DB correction, mojibake correction, duplicate resolution, or
+  metadata correction when the target should be audited and classified first.
 - Use `dirty_workspace_examples.md` before staging or committing when the
   workspace contains unrelated files, runtime data, local cache, temporary
   files, or review outputs.
+- Use `migration_first_examples.md` when changing internal folder structure,
+  script layout, adapter internal interface, prototype scripts, shared utility
+  location, artifact workspace layout, queue / request structure, or future
+  GhostCore / GDS internal modules.
+- Use `debug_artifact_review_examples.md` when AI, OCR, recommendation,
+  auto-detection, candidate extraction, fuzzy matching, visual overlays, or
+  intermediate artifacts need review before fixes or final judgment.
 - Use `repository_information.md` when a task may involve multiple
   repositories, documentation roots, runtime roots, or reference-only sources.
 - Use `authority_matrix.md` when a task needs explicit Editable, Reference
@@ -135,6 +154,11 @@ Do not use examples to introduce new rules. Promote reusable standards to
 - `docs/templates/completion_report_template.md`
 - `docs/requests/README.md`
 - `docs/rules/q_file_artifact_standard.md`
+- `docs/rules/audit_before_repair_rules.md`
+- `docs/rules/migration_first_rules.md`
+- `docs/rules/debug_artifact_review_rules.md`
 - `docs/rules/git_rules.md`
 - `docs/workflow/commit_safety_checklist.md`
+- `docs/workflow/audit_before_repair_workflow.md`
+- `docs/workflow/debug_artifact_review_workflow.md`
 - `docs/history/knowledge_base_history.md`
