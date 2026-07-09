@@ -10,11 +10,17 @@
 - Related Q: Q_GDS_Initial_Core_Concepts_From_Roadmap2_JP.md
 - Related Report: PIP Master Document
 - Related PIP: pip/MASTER_DOCUMENT_JP.md
-- Related CASE: CASE-0004, CASE-0005, CASE-0006
+- Related CASE: CASE-0004, CASE-0005, CASE-0006, CASE-0008
 - Related Rule: docs/rules/debug_escalation_ladder_rules.md
 - Related Workflow: docs/workflow/debug_escalation_ladder.md
 - Tags: GDS, Debug, Pipeline, First Broken Step, Validated
 - Keywords: root cause, first broken step, pipeline
+
+## Related Concepts
+
+- CONCEPT-2026-003: Pipeline Traceability
+- CONCEPT-2026-013: Evidence Driven Development
+- CONCEPT-2026-014: Negative Knowledge
 
 ## Background
 

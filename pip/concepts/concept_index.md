@@ -36,7 +36,7 @@ Details follow `docs/rules/concept_id_naming_rules.md`.
 | Candidate | 0 | Needs initial review and destination check. |
 | Under Review | 0 | Source evidence, reuse value, and overlap are being checked. |
 | Experiment | 0 | Being tested in a real Q, review, or workflow. |
-| Validated | 12 | Evidence exists and promotion destination should be considered. |
+| Validated | 14 | Evidence exists and promotion destination should be considered. |
 | Promoted | 0 | Became a stronger knowledge unit. |
 | Archived | 0 | Preserved for history and not currently promoted. |
 
@@ -74,6 +74,8 @@ Details follow `docs/rules/concept_id_naming_rules.md`.
 | CONCEPT-2026-010 | Progressive Narrowing | Roadmap2 / Steam OCR v2 investigation | CASE-0001, CASE-0004, CASE-0006 | docs/rules/debug_escalation_ladder_rules.md | docs/workflow/debug_escalation_ladder.md | 2026-07-10 | Reference from future investigation templates. |
 | CONCEPT-2026-011 | Compare Candidates Side By Side | Roadmap2 / Steam OCR v2 investigation | CASE-0003, CASE-0006 | docs/rules/debug_artifact_review_rules.md | docs/workflow/debug_artifact_review_workflow.md | 2026-07-10 | Reference from debug artifact review examples. |
 | CONCEPT-2026-012 | Debug Reference | Roadmap2 / Steam OCR v2 investigation | CASE-0002, CASE-0006 | docs/rules/debug_artifact_review_rules.md | docs/workflow/debug_artifact_review_workflow.md | 2026-07-10 | Reference from future completion report and review templates. |
+| CONCEPT-2026-013 | Evidence Driven Development | Roadmap2 final review follow-up | CASE-0006, CASE-0008 | docs/rules/debug_escalation_ladder_rules.md | docs/workflow/debug_escalation_ladder.md | 2026-07-10 | Link from investigation patterns and CASE entries that preserve rejected hypotheses. |
+| CONCEPT-2026-014 | Negative Knowledge | Roadmap2 final review follow-up | CASE-0008 | docs/rules/pip_case_knowledge_base_rules.md | docs/workflow/pip_case_knowledge_base_workflow.md | 2026-07-10 | Use in root cause CASE entries and investigation templates. |
 
 ## Promoted
 

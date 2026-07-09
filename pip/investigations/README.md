@@ -19,6 +19,26 @@ They are used when the main value is the investigation approach itself: what to 
 - Validation Criteria
 - Promotion Candidate
 
+## Standard Template
+
+Use:
+
+```text
+pip/templates/investigation_pattern_template.md
+```
+
+The standard investigation flow is:
+
+```text
+Symptom
+  -> Hypothesis
+  -> Rejected Hypothesis
+  -> New Hypothesis
+  -> Evidence
+  -> First Broken Step
+  -> Root Cause
+```
+
 ## Current Source
 
 - `pip/MASTER_DOCUMENT_JP.md`

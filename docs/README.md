@@ -157,7 +157,9 @@ Concept lifecycle:
 - Concept Review Checklist: `pip/templates/concept_review_checklist.md`
 - Concept statuses: `Candidate`, `Under Review`, `Experiment`, `Validated`,
   `Promoted`, `Archived`
-- Initial Core Concepts: `CONCEPT-2026-001` through `CONCEPT-2026-012`
+- Initial Core Concepts: `CONCEPT-2026-001` through `CONCEPT-2026-014`
+- Root Cause CASE: `pip/cases/CASE-0008_steam_ocr_root_cause_investigation.md`
+- Investigation Template: `pip/templates/investigation_pattern_template.md`
 
 ## Audit Before Repair Index
 

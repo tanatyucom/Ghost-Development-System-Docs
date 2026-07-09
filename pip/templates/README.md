@@ -12,6 +12,9 @@ This folder stores reusable templates for PIP Case Knowledge Base entries.
   changes, promotion decisions, and archive decisions.
 - `concept_review_checklist.md`: checklist for reviewing Concept maturity,
   destination, and archive conditions.
+- `investigation_pattern_template.md`: template for reusable investigation
+  patterns that preserve symptom, hypothesis, rejected hypothesis, evidence,
+  first broken step, and root cause.
 
 ## Use
 

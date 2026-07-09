@@ -34,6 +34,11 @@ After adding or changing a case, update:
 pip/case_index.md
 ```
 
+## Current Cases
+
+- `CASE-0008_steam_ocr_root_cause_investigation.md`: reusable root cause
+  investigation case from Roadmap2 final review follow-up.
+
 ## Candidate Lists
 
 - `case_candidates_from_master_title_list.md`

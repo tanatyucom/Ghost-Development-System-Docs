@@ -350,7 +350,12 @@ Operation templates:
 - `templates/concept_review_checklist.md`
 
 Initial Roadmap2-derived core concepts are registered from `CONCEPT-2026-001`
-through `CONCEPT-2026-012`.
+through `CONCEPT-2026-014`.
+
+Roadmap2 final review follow-up adds:
+
+- `cases/CASE-0008_steam_ocr_root_cause_investigation.md`
+- `templates/investigation_pattern_template.md`
 
 ## Command Center And GIP Relationship
 

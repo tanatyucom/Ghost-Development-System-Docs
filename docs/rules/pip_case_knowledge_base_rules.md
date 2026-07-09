@@ -136,6 +136,23 @@ Use `pip/templates/concept_template.md` for individual Concept entries,
 and `pip/templates/concept_review_checklist.md` before promotion or archive
 decisions.
 
+## Knowledge Classification Rule
+
+Classify Roadmap2 follow-up knowledge by reusable form:
+
+- Concept: reusable thinking, principle, or design philosophy.
+- PIP: experiment result, parameter note, implementation detail, or
+  project-specific status information.
+- CASE: a real case with problem, investigation, evidence, first broken step,
+  root cause, lessons learned, related concepts, rules, and workflow.
+- Investigation: reusable investigation pattern or method.
+- Negative Knowledge: an important rejected hypothesis or proven non-cause that
+  prevents repeated investigation.
+
+Do not promote parameter values, OCR tuning values, band widths, BBox tuning
+results, or one-off experiment results into Concept entries unless they reveal a
+reusable cross-project idea.
+
 ## Decision Background
 
 PIP v1.0 stable は Importance と Tags による読みやすさを持っていました。PIP v1.1 delta は Trace Before Tune、First Broken Step、Review Entry Point、Human Visual Review を reusable methodology として追加しました。このルールは、その流れを CASE、タグ、索引、テンプレートとして固定します。

@@ -10,11 +10,17 @@
 - Related Q: Q_GDS_Initial_Core_Concepts_From_Roadmap2_JP.md
 - Related Report: PIP Master Document
 - Related PIP: pip/MASTER_DOCUMENT_JP.md
-- Related CASE: CASE-0001, CASE-0004, CASE-0006
+- Related CASE: CASE-0001, CASE-0004, CASE-0006, CASE-0008
 - Related Rule: docs/rules/debug_artifact_review_rules.md
 - Related Workflow: docs/workflow/debug_artifact_review_workflow.md
 - Tags: GDS, Debug, Pipeline Trace, Validated
 - Keywords: pipeline, traceability, intermediate state
+
+## Related Concepts
+
+- CONCEPT-2026-002: First Broken Step
+- CONCEPT-2026-013: Evidence Driven Development
+- CONCEPT-2026-014: Negative Knowledge
 
 ## Background
 

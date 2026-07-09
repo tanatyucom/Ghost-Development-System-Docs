@@ -104,7 +104,12 @@ Concept operation templates:
 - [`pip/templates/concept_review_checklist.md`](pip/templates/concept_review_checklist.md)
 
 Initial Roadmap2-derived core concepts are registered from
-`CONCEPT-2026-001` through `CONCEPT-2026-012`.
+`CONCEPT-2026-001` through `CONCEPT-2026-014`.
+
+Roadmap2 final review follow-up also registers:
+
+- `pip/cases/CASE-0008_steam_ocr_root_cause_investigation.md`
+- `pip/templates/investigation_pattern_template.md`
 
 ## Debug Artifact Review
 

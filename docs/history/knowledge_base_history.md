@@ -561,6 +561,34 @@ design philosophy.
 Concept management evolved from structure-only documentation into an active
 Knowledge Base containing validated Roadmap2 design concepts.
 
+## Ver1.21
+
+### Added
+
+- Roadmap2 final review follow-up integration.
+- `CONCEPT-2026-013`: Evidence Driven Development.
+- `CONCEPT-2026-014`: Negative Knowledge.
+- Related Concept links from First Broken Step and Pipeline Traceability.
+- Investigation Pattern Template:
+  `pip/templates/investigation_pattern_template.md`.
+- `CASE-0008`: Steam OCR Root Cause Investigation.
+- Knowledge Classification Rule for Concept, PIP, CASE, Investigation, and
+  Negative Knowledge.
+- README, docs index, PIP README, Concept Index, CASE Index, and folder README
+  links for the follow-up knowledge.
+
+### Reason
+
+Roadmap2 final review found additional reusable knowledge after migration was
+judged mostly complete. The remaining items needed to be placed into normal GDS
+operation rather than treated as another salvage loop.
+
+### Evolution
+
+GDS Knowledge Base evolved from Roadmap2 salvage into normal reusable knowledge
+operation. Final review knowledge is now classified into Concepts, CASE, and
+Investigation templates with negative knowledge preserved where useful.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

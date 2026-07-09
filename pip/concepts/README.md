@@ -108,6 +108,8 @@ Initial Roadmap2-derived core concepts are registered as Validated entries:
 - CONCEPT-2026-010: Progressive Narrowing
 - CONCEPT-2026-011: Compare Candidates Side By Side
 - CONCEPT-2026-012: Debug Reference
+- CONCEPT-2026-013: Evidence Driven Development
+- CONCEPT-2026-014: Negative Knowledge
 
 ## Workflow
 

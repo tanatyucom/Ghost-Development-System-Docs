@@ -36,6 +36,8 @@ Concept entries.
 | CONCEPT-2026-010 | Progressive Narrowing | `CONCEPT-2026-010_progressive_narrowing.md` |
 | CONCEPT-2026-011 | Compare Candidates Side By Side | `CONCEPT-2026-011_compare_candidates_side_by_side.md` |
 | CONCEPT-2026-012 | Debug Reference | `CONCEPT-2026-012_debug_reference.md` |
+| CONCEPT-2026-013 | Evidence Driven Development | `CONCEPT-2026-013_evidence_driven_development.md` |
+| CONCEPT-2026-014 | Negative Knowledge | `CONCEPT-2026-014_negative_knowledge.md` |
 
 ## Promotion Rule
 

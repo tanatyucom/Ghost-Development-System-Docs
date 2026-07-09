@@ -79,6 +79,7 @@ Classification candidate lists:
 | CASE-0005 | Title BBox Was The First Broken Step | Steam | OCR, Debug | First Broken Step, Trace Before Tune | P1 | Validated | Debug Artifact Review |
 | CASE-0006 | Debug Escalation Ladder | GDS | Debug, Review, Pipeline | Trace Before Tune, First Broken Step, Pipeline Trace | P1 | Standardized | Debug Escalation Ladder |
 | CASE-0007 | Roadmap2 Knowledge Salvage Loop | GDS | Workflow, Review | Knowledge Salvage, Human Review, Review Entry Point | P1 | Standardized | Roadmap2 Knowledge Salvage |
+| CASE-0008 | Steam OCR Root Cause Investigation | Steam | OCR, Debug, Investigation | Evidence Driven Development, First Broken Step, Pipeline Trace, Negative Knowledge | P1 | Validated | Debug Escalation Ladder |
 
 ## Candidate Index From Master Title List
 
