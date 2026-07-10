@@ -48,6 +48,15 @@ REQUIRED_PROJECT_PROFILE_FILES = [
     Path("project_profiles/gameghost/ai_context.md"),
     Path("project_profiles/gameghost/completion_policy.md"),
 ]
+PLATFORM_REGISTRY_PATH = Path("docs/architecture/platform_standard_registry.md")
+PLATFORM_REGISTRY_README_ENTRY_POINTS = [
+    Path("README.md"),
+    Path("docs/README.md"),
+    Path("docs/architecture/README.md"),
+]
+PLATFORM_REGISTRY_ROADMAP = Path("roadmap/ghost_development_system_roadmap.md")
+PLATFORM_REGISTRY_AI_INDEX = Path("docs/ai_repository_index.md")
+PLATFORM_REGISTRY_ALLOWED_STATUSES = {"Standard", "Candidate", "Deprecated", "Replaced"}
 
 
 @dataclass
@@ -258,6 +267,160 @@ def check_markdown_structure(root: Path) -> CheckResult:
     return CheckResult("Markdown Validation", "PASS", ["Markdown files には H1 heading があります。"])
 
 
+def split_markdown_table_row(line: str) -> list[str]:
+    return [cell.strip() for cell in line.strip().strip("|").split("|")]
+
+
+def extract_registry_rows(root: Path) -> tuple[list[dict[str, str]], list[str]]:
+    registry_path = root / PLATFORM_REGISTRY_PATH
+    if not registry_path.exists():
+        return [], [f"Missing Standard: {PLATFORM_REGISTRY_PATH.as_posix()} が存在しません。"]
+
+    lines = registry_path.read_text(encoding="utf-8", errors="replace").splitlines()
+    header_index: int | None = None
+    headers: list[str] = []
+    for index, line in enumerate(lines):
+        if line.startswith("| Standard Name | Type | Status |"):
+            header_index = index
+            headers = split_markdown_table_row(line)
+            break
+
+    if header_index is None:
+        return [], ["Registry Health: Initial Registry table が見つかりません。"]
+
+    rows: list[dict[str, str]] = []
+    for line in lines[header_index + 2 :]:
+        if not line.startswith("|"):
+            break
+        cells = split_markdown_table_row(line)
+        if len(cells) != len(headers):
+            rows.append({"__parse_error__": line})
+            continue
+        rows.append(dict(zip(headers, cells)))
+    return rows, []
+
+
+def extract_paths_from_cell(cell: str) -> list[Path]:
+    paths: list[Path] = []
+    candidates = re.findall(r"`([^`]+)`", cell)
+    if not candidates and "/" in cell:
+        candidates = [cell]
+    for candidate in candidates:
+        candidate = candidate.strip()
+        if not candidate or candidate == "-":
+            continue
+        if candidate.startswith(("http://", "https://")):
+            continue
+        paths.append(Path(candidate))
+    return paths
+
+
+def registry_row_paths(row: dict[str, str]) -> list[Path]:
+    paths: list[Path] = []
+    for field_name in ("Related Rule", "Related Workflow", "Related Template", "Related Report"):
+        paths.extend(extract_paths_from_cell(row.get(field_name, "")))
+    return paths
+
+
+def has_readme_entry(root: Path, standard_name: str, related_paths: list[Path]) -> bool:
+    needles = {standard_name}
+    needles.update(path.as_posix() for path in related_paths)
+    for readme_path in PLATFORM_REGISTRY_README_ENTRY_POINTS:
+        full_path = root / readme_path
+        if not full_path.exists():
+            continue
+        text = full_path.read_text(encoding="utf-8", errors="replace")
+        if any(needle and needle in text for needle in needles):
+            return True
+    return False
+
+
+def is_ai_index_registered(root: Path, standard_name: str, related_paths: list[Path]) -> bool:
+    index_path = root / PLATFORM_REGISTRY_AI_INDEX
+    if not index_path.exists():
+        return False
+    text = index_path.read_text(encoding="utf-8", errors="replace")
+    if standard_name in text:
+        return True
+    return any(path.as_posix() in text for path in related_paths)
+
+
+def is_roadmap_consistent(root: Path) -> bool:
+    roadmap_path = root / PLATFORM_REGISTRY_ROADMAP
+    if not roadmap_path.exists():
+        return False
+    text = roadmap_path.read_text(encoding="utf-8", errors="replace")
+    return PLATFORM_REGISTRY_PATH.as_posix() in text or "Platform Standard Registry" in text
+
+
+def check_platform_registry_consistency(root: Path) -> CheckResult:
+    rows, setup_findings = extract_registry_rows(root)
+    missing_standard: list[str] = []
+    broken_registry_link: list[str] = []
+    deprecated_review_needed: list[str] = []
+    replaced_review_needed: list[str] = []
+    structure_mismatch: list[str] = []
+
+    missing_standard.extend(setup_findings)
+    for row in rows:
+        if "__parse_error__" in row:
+            structure_mismatch.append(f"Registry row parse failed: {row['__parse_error__']}")
+            continue
+
+        standard_name = row.get("Standard Name", "").strip()
+        status = row.get("Status", "").strip()
+        notes = row.get("Notes", "").strip()
+        related_paths = registry_row_paths(row)
+
+        if not standard_name:
+            structure_mismatch.append("Registry項目に Standard Name がありません。")
+        if status not in PLATFORM_REGISTRY_ALLOWED_STATUSES:
+            structure_mismatch.append(f"{standard_name}: unknown status `{status}`.")
+
+        for rel_path in related_paths:
+            if not (root / rel_path).exists():
+                broken_registry_link.append(f"{standard_name}: {rel_path.as_posix()} が存在しません。")
+
+        if status == "Standard":
+            if not related_paths:
+                missing_standard.append(f"{standard_name}: related document path がありません。")
+            if not has_readme_entry(root, standard_name, related_paths):
+                missing_standard.append(f"{standard_name}: README導線が見つかりません。")
+            if not is_ai_index_registered(root, standard_name, related_paths):
+                missing_standard.append(f"{standard_name}: AI Repository Index に登録されていません。")
+
+        if status == "Deprecated" and not notes:
+            deprecated_review_needed.append(f"{standard_name}: Deprecated reason が Notes にありません。")
+
+        if status == "Replaced" and "Replaced by" not in notes and "Replaced By" not in notes:
+            replaced_review_needed.append(f"{standard_name}: Replaced By が Notes にありません。")
+
+    if rows and not is_roadmap_consistent(root):
+        structure_mismatch.append(
+            "RegistryとRoadmapの整合性確認: roadmap に Platform Standard Registry 導線がありません。"
+        )
+
+    details = [
+        f"Registry Health: {len(rows)} registry items checked.",
+        "Missing Standard: none." if not missing_standard else "Missing Standard:",
+        *missing_standard,
+        "Broken Registry Link: none." if not broken_registry_link else "Broken Registry Link:",
+        *broken_registry_link,
+        "Deprecated Review Needed: none." if not deprecated_review_needed else "Deprecated Review Needed:",
+        *deprecated_review_needed,
+        "Replaced Review Needed: none." if not replaced_review_needed else "Replaced Review Needed:",
+        *replaced_review_needed,
+        "Registry Structure / Roadmap Consistency: pass."
+        if not structure_mismatch
+        else "Registry Structure / Roadmap Consistency:",
+        *structure_mismatch,
+    ]
+
+    if missing_standard or broken_registry_link or deprecated_review_needed or replaced_review_needed or structure_mismatch:
+        return CheckResult("Platform Registry Consistency Check", "WARN", details)
+    return CheckResult("Platform Registry Consistency Check", "PASS", details)
+
+
 def render_result_list(title: str, results: list[CheckResult]) -> list[str]:
     lines = [f"## {title}", ""]
     if not results:
@@ -274,6 +437,30 @@ def render_result_list(title: str, results: list[CheckResult]) -> list[str]:
             if len(result.details) > 50:
                 lines.append(f"  - ... 他 {len(result.details) - 50} 件")
         lines.append("")
+    return lines
+
+
+def render_registry_health(state: AuditState) -> list[str]:
+    registry_results = [
+        result
+        for result in [*state.passed, *state.warnings, *state.errors]
+        if result.name == "Platform Registry Consistency Check"
+    ]
+    lines = ["## Registry Health", ""]
+    if not registry_results:
+        lines.extend(["Platform Registry Consistency Check は実行されませんでした。", ""])
+        return lines
+
+    result = registry_results[0]
+    lines.append(f"- Status: `{result.status}`")
+    lines.append("")
+    for detail in result.details:
+        if detail.endswith(":") or detail.startswith("Registry Health:"):
+            lines.append(f"### {detail.rstrip(':')}")
+            lines.append("")
+        else:
+            lines.append(f"- {detail}")
+    lines.append("")
     return lines
 
 
@@ -306,6 +493,7 @@ def render_report(root: Path, state: AuditState) -> str:
         f"- Errors: `{len(state.errors)}`",
         "",
     ]
+    lines.extend(render_registry_health(state))
     lines.extend(render_result_list("通過したチェック (Passed Checks)", state.passed))
     lines.extend(render_result_list("警告 (Warnings)", state.warnings))
     lines.extend(render_result_list("エラー (Errors)", state.errors))
@@ -339,6 +527,7 @@ def run_audit(root: Path) -> AuditState:
         check_missing_history,
         check_project_profiles,
         check_markdown_structure,
+        check_platform_registry_consistency,
     ]
     for check in checks:
         state.add(check(root))

@@ -129,6 +129,7 @@ python scripts/repository_quality_audit.py
 
 Repository Quality Report は生成直後から日本語本文で出力します。
 command、path、status value は互換性維持のため英語表記を残します。
+Platform Standard Registry の整合性も Registry Health として確認します。
 
 Report:
 
@@ -151,6 +152,8 @@ Start from:
 
 Innovation Pipeline と Platform Promotion Decision Report で昇格判断した標準は、
 Registry に `Standard` または `Candidate` として登録します。
+Repository Quality Audit は、Registry登録済み標準の related file、README導線、
+AI Repository Index登録、Deprecated理由、Replaced By、Roadmap導線を確認します。
 
 ## Artifact First
 

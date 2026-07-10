@@ -194,6 +194,7 @@ python scripts/repository_quality_audit.py
 
 Repository Quality Report は生成直後から日本語本文で出力します。
 command、path、status value は互換性維持のため英語表記を残します。
+Platform Standard Registry の整合性は Registry Health として出力されます。
 
 ## Platform Standard Registry Index
 
@@ -234,6 +235,14 @@ Registry status values:
 - `Candidate`
 - `Deprecated`
 - `Replaced`
+
+Repository Quality Audit checks:
+
+- Missing Standard
+- Broken Registry Link
+- Deprecated Review Needed
+- Replaced Review Needed
+- Registry Structure / Roadmap Consistency
 
 ## Startup Checklist Index
 
