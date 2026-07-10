@@ -904,6 +904,8 @@ Reference points:
   `docs/architecture/artifact_schema_standard.md`
 - Structured Artifact Metadata Template:
   `templates/structured_artifact_metadata_template.md`
+- Artifact Metadata Reference Examples:
+  `examples/artifact_metadata_reference_examples.md`
 - Platform Era Classification:
   `docs/architecture/platform_era_core_principles.md`
 - Workflow: `docs/workflow/README.md`

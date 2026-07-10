@@ -195,6 +195,7 @@ Command Center must not:
 ## Related Documents
 
 - `docs/architecture/artifact_schema_standard.md`
+- `examples/artifact_metadata_reference_examples.md`
 - `docs/architecture/command_center_architecture.md`
 - `templates/completion_report_template.md`
 - `templates/information_package_template.md`

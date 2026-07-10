@@ -51,6 +51,7 @@ to express.
 Structured Artifact Metadata Template defines the optional YAML front matter
 format for new managed artifacts. It maps Artifact Schema Standard fields into
 machine-readable metadata while keeping Markdown body content human-readable.
+Reference examples live in `examples/artifact_metadata_reference_examples.md`.
 
 Health documents such as `docs/health/gds_health_dashboard.md` may be used
 beside templates when a task should record GDS operating health rather than

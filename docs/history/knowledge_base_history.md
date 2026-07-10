@@ -1900,6 +1900,34 @@ Structured metadata now has a recommended expression format: YAML front matter.
 It is optional for new artifacts and does not create runtime parser, validator,
 API, database, or SDK contracts.
 
+## Ver1.69
+
+### Added
+
+- Artifact Metadata Reference Examples:
+  `examples/artifact_metadata_reference_examples.md`.
+- Good examples for Q, Completion Report, Information Package, Multi-AI
+  Handoff, Registry Update, and Health Report metadata.
+- Bad examples and anti-patterns for missing required fields, invalid lifecycle
+  combinations, approval misuse, unknown overuse, empty string references,
+  null lists, long metadata duplication, absolute local paths, and treating
+  drafts as execution commands.
+- Field Pressure Review for artifact type fit and future validation candidates.
+- README, docs index, templates index, examples index, and metadata template
+  links.
+
+### Reason
+
+Structured Artifact Metadata Template needed real examples before validators,
+parsers, Command Center routing, Component Interfaces, or Ghost SDK contracts
+are designed.
+
+### Evolution
+
+Metadata design can now be reviewed through concrete good and bad examples.
+This gives future validation work evidence without mass-migrating existing
+artifacts or creating runtime contracts.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。
