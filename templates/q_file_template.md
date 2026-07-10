@@ -438,6 +438,7 @@ or Q execution begins.
 - Commit policy confirmed:
 - Proactive Proposal check required:
 - Better approach / time saving / concern to report:
+- Collaborative Decision required when classification or design is uncertain:
 - Ready to start:
 
 Reference:
@@ -445,6 +446,7 @@ Reference:
 - `docs/rules/startup_checklist_rules.md`
 - `docs/rules/repository_root_validation_rules.md`
 - `docs/rules/ai_proactive_proposal_rules.md`
+- `docs/workflow/collaborative_decision_workflow.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `templates/startup_checklist_template.md`
 
@@ -487,6 +489,25 @@ previous work を含めます。
 すでに承認済みの decision を記載します。
 
 未承認の idea はここに入れず、Review Requests または Future Candidates に置きます。
+
+## Collaborative Decision
+
+Use this section when AI Proposal and User Proposal require discussion,
+evidence review, knowledge classification, and a documented decision.
+
+- Collaborative Decision applies: Yes / No
+- AI Proposal:
+- User Proposal:
+- Evidence Review:
+- Knowledge Classification:
+- Decision:
+- Documentation Target:
+- Follow-up Q:
+
+Reference:
+
+- `docs/workflow/collaborative_decision_workflow.md`
+- `templates/collaborative_decision_template.md`
 
 ## Naming Policy
 

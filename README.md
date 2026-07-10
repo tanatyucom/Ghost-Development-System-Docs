@@ -105,6 +105,18 @@ Start from:
 - [`examples/ai_proactive_proposal_examples.md`](examples/ai_proactive_proposal_examples.md)
 - [`docs/rules/ai_collaboration_rules.md`](docs/rules/ai_collaboration_rules.md)
 
+## Collaborative Decision
+
+AI 提案とユーザー提案が分かれる場合、または Rule / CASE / Concept / Workflow /
+Methodology / Template への分類が必要な場合は、Collaborative Decision Workflow で
+議論、証拠確認、知識分類確認、決定、文書化へ進みます。
+
+Start from:
+
+- [`docs/workflow/collaborative_decision_workflow.md`](docs/workflow/collaborative_decision_workflow.md)
+- [`templates/collaborative_decision_template.md`](templates/collaborative_decision_template.md)
+- [`examples/collaborative_decision_examples.md`](examples/collaborative_decision_examples.md)
+
 ## PIP v1.1 Stable
 
 PIP (Project Information Package) は、Ghost Development System の正式な

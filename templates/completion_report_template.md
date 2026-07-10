@@ -92,6 +92,8 @@
 - Commit policy confirmed:
 - Proactive Proposal check performed:
 - Proactive proposals made:
+- Collaborative Decision used:
+- Collaborative Decision result:
 - Startup blockers:
 
 ## Completion Checklist

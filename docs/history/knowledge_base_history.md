@@ -726,6 +726,35 @@ AI collaboration evolved from instruction execution into human-led proposal
 collaboration: AI may surface evidence-based options and concerns, while the
 user keeps final judgment and implementation authority.
 
+## Ver1.27
+
+### Added
+
+- Collaborative Decision Workflow:
+  `docs/workflow/collaborative_decision_workflow.md`.
+- Collaborative Decision Template:
+  `templates/collaborative_decision_template.md`.
+- Collaborative Decision Examples:
+  `examples/collaborative_decision_examples.md`.
+- Decision Template fields for AI Proposal, User Proposal, Discussion Summary,
+  Evidence Reviewed, Knowledge Classification, Documentation Target, and
+  Follow-up Q.
+- README, Knowledge Base Index, Workflow Index, Architecture, Glossary, and AI
+  Collaboration links for Collaborative Decision.
+
+### Reason
+
+AI Proactive Proposal lets AI raise evidence-based options and concerns, but
+GDS also needs a standard path for turning AI proposals and user proposals into
+discussed, evidence-reviewed, classified decisions.
+
+### Evolution
+
+AI collaboration evolved from proactive proposal into collaborative decision
+making. Disagreement and alternative classification can now become durable
+knowledge through discussion, evidence review, knowledge classification, and
+documentation.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

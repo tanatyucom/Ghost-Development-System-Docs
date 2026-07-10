@@ -101,6 +101,32 @@ Reference points:
 - AI Collaboration: `docs/rules/ai_collaboration_rules.md`
 - Startup Checklist: `docs/rules/startup_checklist_rules.md`
 
+## Collaborative Decision Index
+
+Collaborative Decision は、AI Proposal と User Proposal を起点に、Discussion、
+Evidence Review、Knowledge Classification Review、Decision、Documentation へ進む
+共同判断 workflow です。
+
+Reference points:
+
+- Workflow: `docs/workflow/collaborative_decision_workflow.md`
+- Template: `templates/collaborative_decision_template.md`
+- Examples: `examples/collaborative_decision_examples.md`
+- AI Proactive Proposal: `docs/rules/ai_proactive_proposal_rules.md`
+
+Core flow:
+
+```text
+Idea
+  -> AI Proposal
+  -> User Proposal
+  -> Discussion
+  -> Evidence Review
+  -> Knowledge Classification Review
+  -> Decision
+  -> Documentation
+```
+
 ## Artifact First Index
 
 Reusable, reviewable, AI-handoff, human-approval, or Git-managed outputs should

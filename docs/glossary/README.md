@@ -152,6 +152,14 @@ changing implementation.
 
 AI Proactive Proposal keeps final judgment with the user.
 
+### Collaborative Decision
+
+The workflow where AI proposals and user proposals are discussed, reviewed
+against evidence, classified as knowledge, and turned into a documented
+decision or follow-up.
+
+It supports disagreement as a design process, not as an error.
+
 ### Completion Checklist
 
 The completion confirmation system used before work is treated as complete,
@@ -396,6 +404,7 @@ rules, templates, or examples.
 - `docs/workflow/commit_safety_checklist.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/workflow/repository_root_validation_workflow.md`
+- `docs/workflow/collaborative_decision_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`
 - `docs/requests/README.md`
 - `docs/workflow/output_policy.md`

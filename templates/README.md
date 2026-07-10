@@ -71,6 +71,7 @@ restore guidance.
 
 - `startup_checklist_template.md`
 - `repository_root_validation_template.md`
+- `collaborative_decision_template.md`
 - `completion_checklist_template.md`
 - `q_file_template.md`
 - `ai_implementation_request.md`
@@ -229,6 +230,7 @@ Do not add one-off request details to templates. Add only reusable structure.
 - `templates/q_file_template.md`
 - `templates/startup_checklist_template.md`
 - `templates/repository_root_validation_template.md`
+- `templates/collaborative_decision_template.md`
 - `templates/completion_checklist_template.md`
 - `templates/review_checklist.md`
 - `templates/completion_report_template.md`

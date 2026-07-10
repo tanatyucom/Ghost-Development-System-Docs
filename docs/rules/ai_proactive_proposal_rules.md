@@ -73,6 +73,25 @@ Proactive Proposal:
 file artifact、Recommended Improvements、Future Candidates、Concept、CASE、Rule、
 Workflow 候補として残します。
 
+## Collaborative Decision Handoff
+
+提案が分類、設計、Rule 化、CASE 化、Concept 化、Workflow 化、Methodology 化、
+Template 化に関わる場合は、Collaborative Decision Workflow へ渡します。
+
+標準フロー:
+
+```text
+AI Proposal
+  -> User Proposal
+  -> Discussion
+  -> Evidence Review
+  -> Knowledge Classification Review
+  -> Decision
+  -> Documentation
+```
+
+AI は提案を出せますが、分類と最終判断はユーザーとの共同判断として扱います。
+
 ## Boundaries
 
 AI Proactive Proposal は以下を意味しません。
@@ -98,6 +117,7 @@ Startup Checklist では以下を確認します。
 ## Related Documents
 
 - `docs/rules/ai_collaboration_rules.md`
+- `docs/workflow/collaborative_decision_workflow.md`
 - `docs/rules/startup_checklist_rules.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `templates/startup_checklist_template.md`

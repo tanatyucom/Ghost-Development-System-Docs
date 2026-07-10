@@ -40,6 +40,14 @@ methodology conflict, future maintenance risk, or knowledge opportunity.
 AI must separate proposal from implementation. AI should not silently expand
 scope, alter the implementation plan, or bypass user judgment.
 
+### Collaborative Decision
+
+When AI and user proposals require discussion, evidence review, or knowledge
+classification, use Collaborative Decision Workflow.
+
+The goal is not to prove that AI or the user is right. The goal is to find the
+most maintainable, reusable, and understandable decision together.
+
 ### Artifact First
 
 Reusable AI requests, long review prompts, Q files, design documents,
@@ -136,6 +144,7 @@ AI should report:
 - recommended next Q;
 - suggested commit message.
 - proactive proposals made, when applicable.
+- collaborative decisions made, when applicable.
 
 ## Goal
 

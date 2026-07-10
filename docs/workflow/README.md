@@ -17,6 +17,9 @@ gate.
   commit policy before implementation or review begins.
 - `repository_root_validation_workflow.md`: startup workflow for checking the
   actual Git repository root against the Q Working Repository.
+- `collaborative_decision_workflow.md`: workflow for AI and user proposals,
+  discussion, evidence review, knowledge classification review, decision, and
+  documentation.
 - `completion_checklist_workflow.md`: completion confirmation flow for
   verification, review, completion report, Improvement Review, commit, tag,
   release, next Q, and workspace clean confirmation.
@@ -57,6 +60,7 @@ Idea
   -> Startup Checklist
   -> Repository Root Validation
   -> Knowledge Check
+  -> Collaborative Decision, when classification or design is uncertain
   -> Output Decision
   -> Review
   -> Q Artifact Workspace
@@ -133,6 +137,26 @@ Start
 ```
 
 Details follow `repository_root_validation_workflow.md`.
+
+## Collaborative Decision Workflow
+
+Use this workflow when AI and user proposals need discussion before deciding
+whether knowledge belongs in a Rule, Workflow, Methodology, CASE, Concept,
+Template, Example, Glossary, Architecture, PIP Decision History, Future
+Candidate, or no durable document.
+
+```text
+Idea
+  -> AI Proposal
+  -> User Proposal
+  -> Discussion
+  -> Evidence Review
+  -> Knowledge Classification Review
+  -> Decision
+  -> Documentation
+```
+
+Details follow `collaborative_decision_workflow.md`.
 
 ## Completion Checklist Workflow
 
@@ -590,6 +614,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/workflow/template_lifecycle.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/workflow/repository_root_validation_workflow.md`
+- `docs/workflow/collaborative_decision_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`
 - `docs/workflow/output_policy.md`
 - `docs/workflow/commit_safety_checklist.md`

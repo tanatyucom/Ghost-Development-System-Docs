@@ -22,6 +22,7 @@ Responsibilities:
 - Startup Checklist.
 - Repository Root Validation.
 - AI Proactive Proposal.
+- Collaborative Decision.
 - Completion Checklist.
 - Output Layer.
 - Debug Artifact Review.
@@ -124,6 +125,31 @@ AI Proactive Proposal does not own:
 - commit, tag, or release approval;
 - automatic implementation changes;
 - promotion of Future Candidates into approved scope.
+
+## Collaborative Decision
+
+Collaborative Decision owns the discussion and classification boundary where AI
+proposals and user proposals become reviewed decisions and documentation
+targets.
+
+Responsibilities:
+
+- separate AI Proposal and User Proposal;
+- support discussion without treating disagreement as failure;
+- require evidence review before durable classification;
+- review whether knowledge belongs in Rule, Workflow, Methodology, CASE,
+  Concept, Template, Example, Glossary, Architecture, PIP Decision History,
+  Future Candidate, or no durable document;
+- document the decision, rationale, documentation target, and follow-up Q when
+  needed.
+
+Collaborative Decision does not own:
+
+- final human approval authority;
+- automatic rule promotion;
+- automatic workflow standardization;
+- release approval;
+- implementation approval beyond the accepted Q scope.
 
 ## Completion Checklist
 

@@ -32,6 +32,9 @@ reports, and documentation requests can start from a clear reference.
 - `ai_proactive_proposal_examples.md`: good and bad examples for AI proposals
   that share evidence-based improvements, risks, conflicts, and knowledge
   opportunities without silently changing implementation.
+- `collaborative_decision_examples.md`: good and bad examples for AI proposal,
+  user proposal, discussion, evidence review, knowledge classification,
+  decision, and documentation target.
 - `completion_checklist_examples.md`: good and bad examples for completion
   verification, review, completion report, Improvement Review, commit / tag /
   release decisions, next Q, and workspace clean confirmation.
@@ -115,6 +118,9 @@ what a complete, well-scoped document should feel like.
 - Use `ai_proactive_proposal_examples.md` when AI should raise a better
   approach, time saving opportunity, conflict, risk, or knowledge opportunity
   before changing work.
+- Use `collaborative_decision_examples.md` when proposals need discussion and
+  knowledge classification before becoming a rule, workflow, CASE, concept,
+  template, or future candidate.
 - Use `completion_checklist_examples.md` before treating work as complete,
   committing, tagging, releasing, or handing off the next Q.
 - Use `q_file_artifact_workflow.md` when saving a Q file in a
@@ -178,9 +184,11 @@ Do not use examples to introduce new rules. Promote reusable standards to
 - `docs/rules/completion_checklist_rules.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/workflow/repository_root_validation_workflow.md`
+- `docs/workflow/collaborative_decision_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`
 - `templates/startup_checklist_template.md`
 - `templates/repository_root_validation_template.md`
+- `templates/collaborative_decision_template.md`
 - `templates/completion_checklist_template.md`
 - `docs/templates/review_checklist.md`
 - `docs/templates/q_file_template.md`
