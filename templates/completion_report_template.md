@@ -30,9 +30,23 @@
 
 - Completion report artifact:
 - Human review artifact, when generated:
+- Information Package artifact, when generated:
 - Other output artifacts:
 - Notes artifact:
 - Attachments folder:
+
+## Information Package
+
+- Information Package needed:
+- Information Package artifact:
+- Project Summary updated:
+- Current Status updated:
+- Current Focus updated:
+- Recent Decisions updated:
+- Open Issues updated:
+- Recent Artifacts updated:
+- Recommended Next Q updated:
+- Command Center readiness noted:
 
 ## Multi-AI Handoff
 

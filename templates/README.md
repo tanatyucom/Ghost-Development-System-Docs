@@ -37,6 +37,12 @@ handoff checklist template reviews whether that artifact is complete enough for
 the receiver. Reference examples live in
 `examples/multi_ai_handoff_reference_examples.md`.
 
+Information Package templates help AI assistants, humans, and future Command
+Center workflows share Project Summary, Current Status, Current Focus, Active
+Repository, Related Rules, Related Templates, Recent Decisions, Open Issues,
+Recent Artifacts, Recommended Next Q, and Notes without treating chat as the
+source of truth.
+
 Health documents such as `docs/health/gds_health_dashboard.md` may be used
 beside templates when a task should record GDS operating health rather than
 only task completion.
@@ -94,6 +100,7 @@ restore guidance.
 - `daily_operation_checklist_template.md`
 - `repository_root_validation_template.md`
 - `collaborative_decision_template.md`
+- `information_package_template.md`
 - `multi_ai_handoff_template.md`
 - `multi_ai_handoff_checklist_template.md`
 - `completion_checklist_template.md`
@@ -137,6 +144,8 @@ Promote improvements into templates when they help future Q files become:
   knowledge access.
 - better at handing work off between AI tools without losing repository
   context, scope boundaries, verification results, or next action.
+- better at packaging current project state for AI, human review, and future
+  Command Center use without replacing repository source-of-truth documents.
 
 ## Improvement Review
 

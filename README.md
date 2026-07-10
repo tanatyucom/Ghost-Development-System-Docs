@@ -342,6 +342,23 @@ PIP Case Knowledge Base stores reusable cases under `pip/cases/` and uses
 `pip/tagging_standard.md` for Project, Category, Methodology, Priority, and
 Lifecycle tags.
 
+## Information Package
+
+Information Package は、AI・人間・将来の Command Center が Project Summary、
+Current Status、Current Focus、Active Repository、Recent Decisions、Open Issues、
+Recent Artifacts、Recommended Next Q を同じ形式で共有するための状態共有
+Artifact です。
+
+Information Package は repository source of truth や PIP を置き換えません。
+PIP が project briefing subsystem であるのに対し、Information Package は現在の
+状態、成果物、論点、次アクションをまとめる共有パッケージです。
+
+Start from:
+
+- [`templates/information_package_template.md`](templates/information_package_template.md)
+- [`templates/completion_report_template.md`](templates/completion_report_template.md)
+- [`templates/multi_ai_handoff_template.md`](templates/multi_ai_handoff_template.md)
+
 For Roadmap2-derived GDS / PIP methodology, start from
 [`pip/MASTER_DOCUMENT_JP.md`](pip/MASTER_DOCUMENT_JP.md), then use
 [`pip/MASTER_TITLE_LIST_JP.md`](pip/MASTER_TITLE_LIST_JP.md) to find CASE,

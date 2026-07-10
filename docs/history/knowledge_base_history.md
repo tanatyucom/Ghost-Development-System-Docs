@@ -1756,6 +1756,32 @@ receiver readiness checklist, and reference examples. This makes cross-AI
 continuity more reproducible across ChatGPT, Codex, Claude, Gemini, and human
 review.
 
+## Ver1.64
+
+### Added
+
+- Information Package Template:
+  `templates/information_package_template.md`.
+- Completion Report Template integration for Information Package artifacts.
+- README, docs index, and Templates README routes for Information Package.
+- Relationship guidance that Information Package supports AI / human /
+  Command Center state sharing without replacing repository source-of-truth
+  documents or PIP.
+
+### Reason
+
+Persistent Collaboration, Multi-AI Handoff, and Completion Report standards made
+task-level continuity stronger. GDS also needed a project-state package format
+that can summarize current status, focus, repository boundaries, recent
+decisions, open issues, artifacts, and next Q for humans, AI assistants, and
+future Command Center workflows.
+
+### Evolution
+
+Project state can now be packaged as a reusable Markdown artifact. This gives
+future automation a stable structure while keeping automation out of scope for
+the current standardization step.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。
