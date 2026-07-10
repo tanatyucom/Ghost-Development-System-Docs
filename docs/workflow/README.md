@@ -24,6 +24,7 @@ gate.
   Next Q Planning, and the next startup.
 - `gds_health_update_workflow.md`: update workflow for GDS Health Dashboard
   status, notes, improvement candidates, and completion report reflection.
+  Validate related structure and links with `scripts/validate_gds_health.py`.
 - `repository_root_validation_workflow.md`: startup workflow for checking the
   actual Git repository root against the Q Working Repository.
 - `collaborative_decision_workflow.md`: workflow for AI and user proposals,
@@ -142,6 +143,9 @@ knowledge, workflow, template, example, automation, CI, or project profile
 health issues that should be visible across tasks.
 
 Details follow `gds_health_update_workflow.md`.
+
+Run `python scripts/validate_gds_health.py` after changing Health Dashboard
+structure, Health links, README entry points, or AI Repository Index entries.
 
 ## Startup Checklist Workflow
 

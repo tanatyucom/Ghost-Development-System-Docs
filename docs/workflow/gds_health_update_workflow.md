@@ -35,6 +35,7 @@ Change Detected
   -> Update Target State
   -> Update Notes
   -> Record improvement candidate
+  -> Run GDS Health validation
   -> Reflect in Completion Report
 ```
 
@@ -78,10 +79,24 @@ record:
 
 - whether GDS Health was reviewed;
 - whether the dashboard was updated;
+- whether GDS Health validation passed;
 - affected health areas;
 - status changes;
 - improvement candidates;
 - Recommended Next Q, when needed.
+
+## Validation
+
+Run the validation script after changing Health Dashboard structure, Health
+links, README entry points, or AI Repository Index entries:
+
+```bash
+python scripts/validate_gds_health.py
+```
+
+This check is intended for both local completion verification and future CI
+integration. It supports Knowledge Poka-Yoke by making missing Health areas,
+invalid status values, blank table fields, and broken major references visible.
 
 ## Non Goals
 
@@ -107,6 +122,7 @@ This workflow does not:
 
 - `docs/health/gds_health_dashboard.md`
 - `docs/health/README.md`
+- `scripts/validate_gds_health.py`
 - `docs/workflow/ai_daily_operation_cycle.md`
 - `templates/daily_operation_checklist_template.md`
 - `templates/completion_report_template.md`

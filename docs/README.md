@@ -130,6 +130,7 @@ Reference points:
 - Health Dashboard: `docs/health/gds_health_dashboard.md`
 - Health Folder: `docs/health/README.md`
 - Health Update Workflow: `docs/workflow/gds_health_update_workflow.md`
+- Health Validation Script: `scripts/validate_gds_health.py`
 - AI Repository Index: `docs/ai_repository_index.md`
 - Daily Operation Cycle: `docs/workflow/ai_daily_operation_cycle.md`
 - Daily Operation Checklist:
@@ -157,6 +158,12 @@ Update timing:
 - CI or automation added or changed.
 - Major release.
 - Monthly review.
+
+Validation command:
+
+```bash
+python scripts/validate_gds_health.py
+```
 
 ## Startup Checklist Index
 

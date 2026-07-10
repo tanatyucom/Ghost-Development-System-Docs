@@ -50,6 +50,15 @@
 - Raw URL entries added / updated:
 - Not required reason:
 
+## GDS Health
+
+- GDS Health review required:
+- GDS Health dashboard updated:
+- GDS Health validation required:
+- GDS Health validation passed:
+- GDS Health validation command:
+- Affected health areas:
+
 ## Commit / Tag / Release
 
 - Commit Required:

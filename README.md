@@ -97,6 +97,12 @@ Start from:
 - [`docs/health/gds_health_dashboard.md`](docs/health/gds_health_dashboard.md)
 - [`docs/workflow/gds_health_update_workflow.md`](docs/workflow/gds_health_update_workflow.md)
 
+Validate health structure and links with:
+
+```bash
+python scripts/validate_gds_health.py
+```
+
 ## Artifact First
 
 Reusable, reviewable, AI-handoff, human-approval, or Git-managed outputs should

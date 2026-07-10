@@ -1058,6 +1058,32 @@ GDS Health evolved from a visible dashboard into a maintained operating loop.
 Health can now be reviewed and updated when the Knowledge Base changes, then
 reported through completion evidence.
 
+## Ver1.38
+
+### Added
+
+- GDS Health validation script:
+  `scripts/validate_gds_health.py`.
+- Local validation for Health Dashboard existence, required Health areas,
+  `Green` / `Yellow` / `Red` status values, required table fields, AI
+  Repository Index registration, Workflow links, and README links.
+- GDS Health validation command in README, Health README, Health Dashboard,
+  and Health Update Workflow.
+- Completion Report and Completion Checklist fields for GDS Health validation.
+
+### Reason
+
+GDS Health Dashboard and GDS Health Update Workflow made Health visible and
+maintainable, but the repository still needed a mechanical guard against
+missing areas, invalid statuses, blank Health fields, and broken entry-point
+links.
+
+### Evolution
+
+GDS Health evolved from maintained documentation into checkable operational
+health. Health state can now be reviewed by humans and validated by scripts,
+preparing the path for CI-backed Health checks.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

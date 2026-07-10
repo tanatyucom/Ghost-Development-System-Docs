@@ -217,6 +217,8 @@
 
 - GDS Health review required:
 - GDS Health dashboard updated:
+- GDS Health validation passed:
+- GDS Health validation command:
 - Affected health areas:
 - Status changes:
 - Improvement candidates:

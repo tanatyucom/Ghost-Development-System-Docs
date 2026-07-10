@@ -34,6 +34,7 @@ safe daily operation.
 ## Health Review Checklist
 
 - AI Repository Index is generated and validation passes.
+- GDS Health validation script passes.
 - README and docs index point to current major entry points.
 - Rules index includes current official rules and references.
 - Workflow index includes current operating flows.
@@ -59,7 +60,14 @@ Change Detected
   -> Update Target State
   -> Update Notes
   -> Record improvement candidate
+  -> Run GDS Health validation
   -> Reflect in Completion Report
+```
+
+After updating this dashboard, run:
+
+```bash
+python scripts/validate_gds_health.py
 ```
 
 ## Future Extension
@@ -70,6 +78,7 @@ Change Detected
 - Daily Health Report.
 - Release Readiness.
 - GDS Health validation script.
+- `scripts/validate_gds_health.py` CI integration.
 
 These are future candidates. This dashboard does not approve implementation by
 itself.
@@ -77,9 +86,11 @@ itself.
 ## Related Documents
 
 - `docs/ai_repository_index.md`
+- `scripts/validate_gds_health.py`
 - `docs/workflow/ai_daily_operation_cycle.md`
 - `docs/workflow/gds_health_update_workflow.md`
 - `templates/daily_operation_checklist_template.md`
+- `templates/completion_report_template.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/workflow/completion_checklist_workflow.md`
 - `docs/rules/core_principles.md`
