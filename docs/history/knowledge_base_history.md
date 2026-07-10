@@ -1141,6 +1141,30 @@ and report. The system can now surface UTF-8, mojibake, index, health, link,
 README, history, project profile, and Markdown structure findings in one place
 without treating warnings as blame.
 
+## Ver1.41
+
+### Added
+
+- Japanese Documentation Localization Workflow:
+  `docs/workflow/japanese_documentation_localization_workflow.md`.
+- Japanese Documentation Localization Report:
+  `reports/japanese_documentation_localization_report.md`.
+- Language Rules update for documentation localization scope, English keep
+  cases, and candidate classification.
+
+### Reason
+
+GDS Docs is Japanese-first, but newly added reports and workflows can still
+contain English explanatory text. Human Approval requires that humans can read
+the purpose, background, scope, result, and review guidance in Japanese.
+
+### Evolution
+
+Japanese First evolved from a general language rule into a localization
+workflow. GDS can now distinguish explanation text that should be Japanese
+from commands, paths, URLs, identifiers, status values, and external technical
+terms that should remain English.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

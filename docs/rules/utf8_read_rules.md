@@ -2,57 +2,56 @@
 
 ## Purpose
 
-UTF-8 Read Rules prevent mojibake when humans or AI read Japanese Markdown,
-Q files, request artifacts, completion reports, and other text artifacts on
-Windows.
+UTF-8 Read Rules は、人間または AI が Windows 上で日本語 Markdown、Q file、
+request artifact、completion report、その他の text artifact を読むときの
+文字化けを防ぐためのルールです。
 
-The rule exists because Windows PowerShell 5.1 can misread UTF-8 files without
-BOM when `Get-Content` is used without an explicit encoding.
+Windows PowerShell 5.1 では、BOM なし UTF-8 file を `Get-Content` だけで読むと
+誤った encoding として解釈されることがあります。
 
 ## Core Rule
 
-When reading Markdown, Q files, request artifacts, completion reports, or other
-Japanese text artifacts with Windows PowerShell 5.1, always specify UTF-8.
+Windows PowerShell 5.1 で Markdown、Q file、request artifact、completion report、
+その他の日本語 text artifact を読む場合は、必ず UTF-8 を明示します。
 
-Correct:
+正しい例:
 
 ```powershell
 Get-Content -LiteralPath <path> -Encoding UTF8
 ```
 
-Incorrect:
+避ける例:
 
 ```powershell
 Get-Content -LiteralPath <path>
 ```
 
-Codex and other AI agents must not use plain `Get-Content` for Q file reading
-when the file may contain Japanese text.
+Codex や他の AI agent は、日本語を含む可能性がある Q file を読むときに
+plain `Get-Content` を使ってはいけません。
 
 ## Applies To
 
-- Q files.
-- Markdown documentation.
-- Request artifacts.
-- Completion reports.
-- Review artifacts.
-- Templates.
-- Roadmap, rules, workflow, examples, PIP, project profile, and history files.
+- Q file。
+- Markdown documentation。
+- Request artifact。
+- Completion report。
+- Review artifact。
+- Template。
+- Roadmap、rules、workflow、examples、PIP、project profile、history file。
 
 ## Mojibake Detection Rule
 
-If mojibake is reported, the report must include:
+文字化けを報告する場合は、必ず次を含めます。
 
-- file name;
-- line number;
-- mojibake string;
-- expected string;
-- command used to read the file;
-- inferred cause.
+- file name。
+- line number。
+- mojibake string。
+- expected string。
+- command used to read the file。
+- inferred cause。
 
-If the file can be read correctly with `Get-Content -Encoding UTF8` or Python
-UTF-8 strict decoding, and no concrete line number plus mojibake string can be
-shown, report:
+`Get-Content -Encoding UTF8` または Python UTF-8 strict decoding で正しく読め、
+具体的な line number と mojibake string を提示できない場合は、次のように報告します。
 
 ```text
 文字化けなし。過去報告はテンプレートまたは表示上の問題の可能性。
@@ -80,32 +79,31 @@ python -c "from pathlib import Path; pats=('縺','繧','譁','荳','螟','蜿','
 
 ## Repair Policy
 
-Mojibake repair is allowed only when the expected original text is clear enough
-to review.
+mojibake repair は、期待される原文が review 可能な程度に明確な場合だけ行います。
 
 Do:
 
-- repair only verified lines;
-- preserve line intent;
-- record repaired files in the completion report;
-- record uncertain findings in a Mojibake Audit Report.
+- verified line だけを修正する。
+- 行の意図を維持する。
+- repaired files を Completion Report に記録する。
+- 推定不能な finding は Mojibake Audit Report に記録する。
 
-Do not:
+Do Not:
 
-- perform broad one-shot encoding conversion;
-- guess text when the original cannot be inferred;
-- treat terminal display mojibake as file corruption without UTF-8 verification;
-- edit GameGhost or another reference-only repository from a GDS Docs task.
+- broad one-shot encoding conversion を行わない。
+- 原文を推定できない text を推測で修正しない。
+- UTF-8 verification なしに terminal display mojibake を file corruption と扱わない。
+- GDS Docs task から GameGhost や reference-only repository を編集しない。
 
 ## Decision Background
 
-Recent Q files were valid UTF-8, but plain Windows PowerShell 5.1
-`Get-Content` displayed Japanese text as mojibake such as `縺`, `繧`, and `譁`.
+直近の Q file は valid UTF-8 でしたが、Windows PowerShell 5.1 の plain
+`Get-Content` により、日本語が `縺`、`繧`、`譁` などの mojibake として表示されました。
 
-The files were not damaged. The reading command was wrong.
+file は破損していませんでした。誤っていたのは reading command です。
 
-This rule turns that discovery into a repeatable safeguard so future Codex and
-AI work does not report false file corruption or implement from misread Q text.
+このルールは、その発見を再利用可能な safeguard にし、将来の Codex / AI 作業で
+false file corruption report や misread Q text に基づく実装を防ぐためのものです。
 
 ## Related Documents
 

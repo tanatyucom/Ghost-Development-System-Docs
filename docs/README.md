@@ -75,6 +75,10 @@ Reference points:
 - Startup Checklist Template: `templates/startup_checklist_template.md`
 - Project Profiles: `project_profiles/README.md`
 - UTF-8 Read Rule: `docs/rules/utf8_read_rules.md`
+- Japanese Documentation Localization:
+  `docs/workflow/japanese_documentation_localization_workflow.md`
+- Localization Report:
+  `reports/japanese_documentation_localization_report.md`
 
 Core flow:
 
@@ -97,6 +101,9 @@ Get-Content -LiteralPath <path> -Encoding UTF8
 
 Mojibake reports must include file name, line number, mojibake string,
 expected string, command used, and inferred cause.
+
+人間が読む説明文書は日本語優先で維持します。command、path、URL、identifier、
+status value は互換性のため必要に応じて英語のまま維持できます。
 
 ## AI Daily Operation Cycle Index
 

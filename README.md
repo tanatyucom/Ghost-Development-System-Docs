@@ -60,6 +60,12 @@ Rule:
 
 - [`docs/rules/utf8_read_rules.md`](docs/rules/utf8_read_rules.md)
 
+説明文書の日本語化方針:
+
+- [`docs/rules/language_rules.md`](docs/rules/language_rules.md)
+- [`docs/workflow/japanese_documentation_localization_workflow.md`](docs/workflow/japanese_documentation_localization_workflow.md)
+- [`reports/japanese_documentation_localization_report.md`](reports/japanese_documentation_localization_report.md)
+
 標準順序:
 
 ```text

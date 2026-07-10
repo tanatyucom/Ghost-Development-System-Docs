@@ -76,6 +76,34 @@ Approval を満たしません。
 
 ただし、英語の概念を使う場合でも、人間の判断に必要な説明は日本語で補足します。
 
+## Documentation Localization Rule
+
+GDS Docs 内の説明文書は、日本語を第一言語として維持します。
+
+対象:
+
+- README。
+- docs。
+- roadmap。
+- templates。
+- examples。
+- project_profiles。
+- reports。
+
+次は英語のまま維持してよいです。
+
+- command。
+- file name。
+- path。
+- URL。
+- identifier。
+- status value。
+- GitHub Actions key。
+- Python / API / CI など外部仕様上の用語。
+
+説明文として英語が残る場合は、`keep` または `candidate` に分類します。
+`candidate` は確認可能な単位で日本語化します。
+
 ## Template Rule
 
 テンプレートは日本語を基本とします。

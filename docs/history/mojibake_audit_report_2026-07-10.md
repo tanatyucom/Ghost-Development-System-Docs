@@ -2,13 +2,13 @@
 
 ## Purpose
 
-This report records the mojibake audit performed after identifying that
-Windows PowerShell 5.1 can misread UTF-8 Japanese Q files when `Get-Content`
-is used without `-Encoding UTF8`.
+この report は、Windows PowerShell 5.1 が `Get-Content` を `-Encoding UTF8`
+なしで実行した場合に、UTF-8 日本語 Q file を文字化け表示することがあると
+確認した後に実施した mojibake audit を記録します。
 
 ## Scope
 
-Audited Markdown files under:
+監査対象 Markdown:
 
 - `README.md`
 - `docs/**/*.md`
@@ -19,7 +19,7 @@ Audited Markdown files under:
 - `project_profiles/**/*.md`
 - `requests/**/*.md`
 
-GameGhost and `C:\SteamAI` were out of scope and were not edited.
+GameGhost と `C:\SteamAI` は scope 外であり、編集していません。
 
 ## Commands Used
 
@@ -43,7 +43,7 @@ python -c "from pathlib import Path; [p.read_text(encoding='utf-8') for p in Pat
 
 ## Detection Patterns
 
-The scan searched for common Japanese mojibake markers:
+監査では、よくある日本語 mojibake marker として次を検索しました。
 
 - `縺`
 - `繧`
@@ -55,55 +55,54 @@ The scan searched for common Japanese mojibake markers:
 
 ## Result
 
-No mojibake candidates were detected in repository Markdown files.
+repository Markdown files には mojibake candidate は検出されませんでした。
 
 ```text
 files_with_hits= 0
 total_hit_lines= 0
 ```
 
-After adding the UTF-8 Read Rule and this report, the literal detection
-patterns appear intentionally in:
+UTF-8 Read Rule とこの report を追加した後は、literal detection pattern が
+意図的な例として次の文書に含まれます。
 
 - `docs/rules/utf8_read_rules.md`
 - `docs/history/mojibake_audit_report_2026-07-10.md`
 
-Those intentional examples should be excluded from future repository-wide
-candidate counts unless the audit is specifically checking the rule text
-itself.
+将来の repository-wide candidate count では、この2ファイルは除外します。
+rule text 自体を監査する場合だけ対象にします。
 
 ## Repaired Files
 
-None.
+なし。
 
-No Markdown file required mojibake repair during this audit.
+この監査では、mojibake repair が必要な Markdown file はありませんでした。
 
 ## Unrepaired / Need Confirmation
 
-None.
+なし。
 
-No concrete file, line number, or mojibake string remained after UTF-8
-verification and repository scan.
+UTF-8 verification と repository scan の結果、具体的な file、line number、
+mojibake string は残りませんでした。
 
 ## Interpretation
 
-The previous "Q本文が一部文字化け" reports were caused by the reading command,
-not by damaged Q files or damaged repository Markdown.
+過去の「Q本文が一部文字化け」報告は、damaged Q file や damaged repository
+Markdown が原因ではなく、reading command が原因でした。
 
-For Windows PowerShell 5.1, use:
+Windows PowerShell 5.1 では次を使います。
 
 ```powershell
 Get-Content -LiteralPath <path> -Encoding UTF8
 ```
 
-Do not treat plain `Get-Content` mojibake as file corruption until the file has
-also been checked with explicit UTF-8 reading.
+explicit UTF-8 reading で確認する前に、plain `Get-Content` の mojibake 表示を
+file corruption と扱ってはいけません。
 
 ## Follow-up
 
-The UTF-8 Read Rule was added as:
+UTF-8 Read Rule を追加しました。
 
 - `docs/rules/utf8_read_rules.md`
 
-Templates and startup guidance were updated so future Q reading records UTF-8
-handling and mojibake checks.
+今後の Q reading では、template と startup guidance に UTF-8 handling と
+mojibake check を記録します。

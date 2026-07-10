@@ -2,8 +2,8 @@
 
 ## Purpose
 
-This report summarizes repository-wide quality audit results for Ghost
-Development System Docs.
+この report は、Ghost Development System Docs の repository-wide quality audit
+結果を要約します。
 
 ## Summary
 
@@ -20,19 +20,19 @@ Development System Docs.
 
 - Status: `PASS`
 - Details:
-  - 171 Markdown files decoded as UTF-8.
+  - 173 Markdown files decoded as UTF-8.
 
 ### Mojibake Audit
 
 - Status: `PASS`
 - Details:
-  - No mojibake candidates found outside intentional rule/report examples.
+  - 意図的な rule / report examples を除き、mojibake candidate は検出されませんでした。
 
 ### AI Repository Index Validation
 
 - Status: `PASS`
 - Details:
-  - OK: 171 Markdown files indexed.
+  - OK: 173 Markdown files indexed.
 
 ### GDS Health Validation
 
@@ -44,25 +44,25 @@ Development System Docs.
 
 - Status: `PASS`
 - Details:
-  - No broken local Markdown links found.
+  - broken local Markdown links は検出されませんでした。
 
 ### Missing README Check
 
 - Status: `PASS`
 - Details:
-  - Required README entry points exist.
+  - required README entry points は存在します。
 
 ### Missing History Check
 
 - Status: `PASS`
 - Details:
-  - Knowledge Base history exists.
+  - Knowledge Base history は存在します。
 
 ### Project Profile Validation
 
 - Status: `PASS`
 - Details:
-  - Required project profile files exist.
+  - required project profile files は存在します。
 
 ## Warnings
 
@@ -70,25 +70,26 @@ Development System Docs.
 
 - Status: `WARN`
 - Details:
-  - templates/architecture_template.md: missing H1 heading
-  - templates/bugfix_template.md: missing H1 heading
-  - templates/decision_template.md: missing H1 heading
-  - templates/feature_template.md: missing H1 heading
-  - templates/queue_template.md: missing H1 heading
-  - templates/refactoring_template.md: missing H1 heading
-  - templates/release_checklist.md: missing H1 heading
-  - templates/release_notes_template.md: missing H1 heading
-  - templates/specification_template.md: missing H1 heading
-  - templates/template_usage.md: missing H1 heading
+  - templates/architecture_template.md: H1 heading がありません。
+  - templates/bugfix_template.md: H1 heading がありません。
+  - templates/decision_template.md: H1 heading がありません。
+  - templates/feature_template.md: H1 heading がありません。
+  - templates/queue_template.md: H1 heading がありません。
+  - templates/refactoring_template.md: H1 heading がありません。
+  - templates/release_checklist.md: H1 heading がありません。
+  - templates/release_notes_template.md: H1 heading がありません。
+  - templates/specification_template.md: H1 heading がありません。
+  - templates/template_usage.md: H1 heading がありません。
 
 ## Errors
 
-None.
+なし。
 
 ## Recommended Improvements
 
-- Review warnings and decide whether they are expected, documentation debt, or follow-up Q candidates.
+- H1 heading がない既存 templates をレビューし、template title standardization Q として
+  対応するか判断します。
 
 ## Notes
 
-This report supports early discovery and continuous improvement. It is not a blame table.
+この report は早期発見と継続改善を支援するためのものです。責任追及の表ではありません。

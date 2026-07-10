@@ -2,21 +2,21 @@
 
 ## Purpose
 
-Repository Quality Audit Workflow defines how to run a repository-wide quality
-check for Ghost Development System Docs.
+Repository Quality Audit Workflow は、Ghost Development System Docs 全体の
+品質を横断的に確認するための workflow です。
 
-The goal is one command and one report that show whether the repository is
-healthy enough for daily operation, review, release readiness, or CI promotion.
+目的は、日常運用、レビュー、リリース準備、将来の CI 昇格に対して、
+リポジトリが十分に健康かを 1 コマンド・1 レポートで確認できるようにすることです。
 
 ## Standard Command
 
-Run from the repository root:
+リポジトリ root から実行します。
 
 ```bash
 python scripts/repository_quality_audit.py
 ```
 
-The default report is written to:
+標準レポート出力先:
 
 ```text
 reports/repository_quality_report.md
@@ -24,15 +24,15 @@ reports/repository_quality_report.md
 
 ## Included Checks
 
-- UTF-8 Audit.
-- Mojibake Audit.
-- AI Repository Index Validation.
-- GDS Health Validation.
-- Broken Link Check.
-- Missing README Check.
-- Missing History Check.
-- Project Profile Validation.
-- Markdown Validation.
+- UTF-8 Audit。
+- Mojibake Audit。
+- AI Repository Index Validation。
+- GDS Health Validation。
+- Broken Link Check。
+- Missing README Check。
+- Missing History Check。
+- Project Profile Validation。
+- Markdown Validation。
 
 ## Standard Flow
 
@@ -52,42 +52,42 @@ Repository Quality Audit
 
 Green:
 
-- No errors or warnings were detected.
+- error と warning がない状態。
 
 Yellow:
 
-- No blocking error was detected.
-- Warnings exist and should be reviewed as documentation debt, expected
-  exceptions, or follow-up Q candidates.
+- blocking error はない。
+- warning があり、documentation debt、想定された例外、または follow-up Q 候補として
+  レビューする必要がある状態。
 
 Red:
 
-- One or more errors were detected.
-- Do not treat the repository as healthy for release or CI promotion until the
-  errors are resolved or explicitly accepted by a human reviewer.
+- error が 1 件以上ある状態。
+- error が解消されるか、人間 reviewer が明示的に受け入れるまで、
+  release readiness や CI promotion に使わない。
 
 ## Completion Report Reflection
 
-Completion reports should record:
+Completion Report には次を記録します。
 
-- whether Repository Quality Audit was run;
-- command used;
-- report path;
-- overall health;
-- warning count;
-- error count;
-- follow-up Q when warnings or errors need action.
+- Repository Quality Audit を実行したか。
+- 使用した command。
+- report path。
+- overall health。
+- warning count。
+- error count。
+- warning または error に follow-up Q が必要か。
 
 ## CI Integration
 
-The script is designed so future GitHub Actions can run:
+将来の GitHub Actions では次を実行できます。
 
 ```bash
 python scripts/repository_quality_audit.py
 ```
 
-The script exits with non-zero status only when errors exist. Warnings produce
-Yellow health but do not fail the command by themselves.
+script は error がある場合のみ non-zero status で終了します。warning は Yellow
+health として扱いますが、それだけでは command failure にはしません。
 
 ## Related Documents
 

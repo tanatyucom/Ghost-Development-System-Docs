@@ -2,17 +2,16 @@
 
 ## Purpose
 
-This folder records the visible health state of Ghost Development System Docs.
+このフォルダは Ghost Development System Docs の運用状態を見える化します。
 
-Health documents are not blame, ranking, or quality judgment documents. They
-support early discovery, continuous improvement, and shared awareness for
-humans and AI.
+Health document は、責任追及、順位付け、最終品質判定のための文書ではありません。
+人間と AI が早期発見、継続改善、共有認識を行うための支援文書です。
 
 ## Contains
 
-- `docs/health/gds_health_dashboard.md`: dashboard for Repository Health, Knowledge
-  Health, Rule Coverage, Workflow Coverage, Template Coverage, Example
-  Coverage, Automation Coverage, CI Status, and Project Profile Coverage.
+- `docs/health/gds_health_dashboard.md`: Repository Health、Knowledge Health、
+  Rule Coverage、Workflow Coverage、Template Coverage、Example Coverage、
+  Automation Coverage、CI Status、Project Profile Coverage の dashboard。
 - Health update workflow:
   `docs/workflow/gds_health_update_workflow.md`.
 - Health validation script:
@@ -22,7 +21,7 @@ humans and AI.
 
 ## Relationship
 
-GDS Health connects:
+GDS Health は次と接続します。
 
 - AI Repository Index.
 - Project Profile.
@@ -35,32 +34,33 @@ GDS Health connects:
 
 ## Update Policy
 
-Update health documents when a task changes major entry points, validation,
-coverage, automation, project profiles, or recurring operation quality.
+major entry points、validation、coverage、automation、project profiles、
+または recurring operation quality が変わった場合、health documents を更新します。
 
-Do not treat a Yellow or Red status as failure by itself. Treat it as a visible
-improvement candidate with context and next action.
+Yellow または Red status を、それだけで失敗として扱いません。context と next
+action を持つ visible improvement candidate として扱います。
 
-Use `docs/workflow/gds_health_update_workflow.md` to decide when to update the
-dashboard and how to record status, notes, and improvement candidates.
+dashboard の更新タイミング、status、notes、improvement candidates の記録方法は
+`docs/workflow/gds_health_update_workflow.md` に従います。
 
 ## Validation
 
-Run the local validation script after changing GDS Health documents, related
-README links, workflow links, or AI Repository Index entries:
+GDS Health document、関連 README link、workflow link、AI Repository Index entry を
+変更した後は、local validation script を実行します。
 
 ```bash
 python scripts/validate_gds_health.py
 ```
 
-The validation checks that the dashboard exists, required health areas are
-present, status values are `Green`, `Yellow`, or `Red`, required table fields
-are filled, and major entry points link back to Health documents.
+この validation は、dashboard の存在、required health areas、`Green` / `Yellow` /
+`Red` status、required table fields、major entry points から Health documents への
+導線を確認します。
 
-Run the repository-wide audit when you need one report for repository health:
+Repository 全体の health を 1 report で確認する場合は、repository-wide audit を
+実行します。
 
 ```bash
 python scripts/repository_quality_audit.py
 ```
 
-The report is written to `reports/repository_quality_report.md`.
+report は `reports/repository_quality_report.md` に出力されます。

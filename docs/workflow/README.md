@@ -28,6 +28,9 @@ gate.
 - `repository_quality_audit_workflow.md`: repository-wide quality audit flow
   that combines UTF-8, mojibake, AI index, GDS Health, link, README, history,
   project profile, and Markdown validation checks.
+- `japanese_documentation_localization_workflow.md`: GDS Docs の説明文を
+  日本語優先で維持しつつ、command、path、URL、identifier、status value を
+  必要に応じて英語維持するための workflow。
 - `repository_root_validation_workflow.md`: startup workflow for checking the
   actual Git repository root against the Q Working Repository.
 - `collaborative_decision_workflow.md`: workflow for AI and user proposals,
@@ -720,6 +723,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/workflow/ai_daily_operation_cycle.md`
 - `docs/workflow/gds_health_update_workflow.md`
 - `docs/workflow/repository_quality_audit_workflow.md`
+- `docs/workflow/japanese_documentation_localization_workflow.md`
 - `templates/daily_operation_checklist_template.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/workflow/startup_checklist_workflow.md`
