@@ -756,6 +756,10 @@ Command Center follows:
 Command Center does not implement automation, UI, server behavior, or
 field-project runtime changes without a separate Q and Human Approval Gate.
 
+Detailed architecture:
+
+- `docs/architecture/command_center_architecture.md`
+
 ## Database Philosophy
 
 DevelopmentSystem owns Database Utility.

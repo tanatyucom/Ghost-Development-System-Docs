@@ -1810,6 +1810,38 @@ state, assembles Information Packages, uses templates to draft artifacts, and
 supports human decisions. Auto Q Generation remains one feature, not the whole
 system.
 
+## Ver1.66
+
+### Added
+
+- Command Center Architecture Specification:
+  `docs/architecture/command_center_architecture.md`.
+- Component definitions for Repository Scanner, Information Package Builder,
+  Decision Engine, Template Engine, Artifact Pipeline, Human Approval Gate,
+  Repository Health Adapter, Registry Adapter, and Handoff / Completion
+  Adapter.
+- Artifact lifecycle candidate:
+  Observed -> Draft -> Reviewed -> Approved -> Executed -> Completed ->
+  Archived.
+- Failure / degraded mode guidance for unavailable AI Repository Index,
+  partial scan, broken links, missing template, registry inconsistency,
+  Repository Quality Red, dirty workspace, conflicting rules, and stale
+  Information Package.
+- Architecture, roadmap, README, docs index, and responsibility boundary links.
+
+### Reason
+
+Roadmap v2.1 defined Command Center as a Repository Orchestrator. The platform
+needed an architecture specification before future implementation Q files so
+responsibility boundaries, Human Approval Gate, and draft artifact safety do
+not drift into over-automation.
+
+### Evolution
+
+Command Center now has an architecture-level contract. Future implementation
+can be split by component and reviewed against clear non-responsibilities,
+trust boundaries, and degraded-mode behavior.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

@@ -202,6 +202,10 @@ Guard:
 - Command Center 実装、automation、UI、server は別 Q と Human Approval Gate を
   必要とする。
 
+Architecture specification:
+
+- `docs/architecture/command_center_architecture.md`
+
 ## Phase 3: Automation Server Era
 
 Status: future candidate.

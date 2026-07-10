@@ -898,6 +898,8 @@ Reference points:
 
 - Roadmap: `roadmap/ghost_development_system_roadmap.md`
 - Architecture: `docs/architecture/responsibility_boundary.md`
+- Command Center Architecture:
+  `docs/architecture/command_center_architecture.md`
 - Platform Era Classification:
   `docs/architecture/platform_era_core_principles.md`
 - Workflow: `docs/workflow/README.md`

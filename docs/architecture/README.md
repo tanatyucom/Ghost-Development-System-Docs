@@ -11,6 +11,10 @@ runtime behavior.
 
 ## Contains
 
+- `command_center_architecture.md`: Command Center architecture specification
+  for Repository Scanner, Information Package Builder, Decision Engine,
+  Template Engine, Artifact Pipeline, Human Approval Gate, Repository Health
+  Adapter, Registry Adapter, and Handoff / Completion Adapter.
 - `responsibility_boundary.md`: ownership boundaries for DevelopmentSystem,
   Startup Checklist, Repository Root Validation, AI Proactive Proposal,
   Collaborative Decision, Completion Checklist, Output Layer, Migration First
@@ -134,6 +138,10 @@ Decision Engine
 Command Center follows Repository First, Platform First, Template First, and
 Artifact First. Implementation, automation, UI, and server behavior remain
 future work that requires a separate Q and Human Approval Gate.
+
+Detailed specification:
+
+- `docs/architecture/command_center_architecture.md`
 
 AI Proactive Proposal supports human-led collaboration by making concerns and
 better options visible without taking control away from the user.
