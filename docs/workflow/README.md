@@ -64,6 +64,9 @@ gate.
 - `template_lifecycle.md`: how useful knowledge becomes a template, rule, or
   Knowledge Base document.
 
+Innovation Pipeline records should use
+`templates/innovation_pipeline_template.md`.
+
 ## Does NOT Contain
 
 - Runtime implementation.
@@ -763,5 +766,6 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/rules/ai_proactive_proposal_rules.md`
 - `docs/rules/completion_checklist_rules.md`
 - `docs/templates/q_file_template.md`
+- `templates/innovation_pipeline_template.md`
 - `docs/templates/review_checklist.md`
 - `docs/history/knowledge_base_history.md`

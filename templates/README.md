@@ -68,6 +68,7 @@ restore guidance.
 - `roadmap_template.md`
 - `queue_template.md`
 - `decision_template.md`
+- `innovation_pipeline_template.md`
 
 ### Development
 

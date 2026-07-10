@@ -1302,6 +1302,35 @@ Innovation Pipeline evolved from a roadmap candidate into a standard workflow.
 GDS can now move reusable ideas from field project experiments to Platform
 Promotion and propagation while preserving evidence, review, and scope control.
 
+## Ver1.47
+
+### Added
+
+- Innovation Pipeline Template:
+  `templates/innovation_pipeline_template.md`.
+- Template fields for Idea Name, Source, Origin Project, Problem /
+  Opportunity, Experiment Plan, Prototype Scope, Validation Result,
+  Reusability, Maintainability, Platform Promotion Candidate, Promotion
+  Criteria Check, Stop / Archive Criteria, Recommended Next Q, Human Review,
+  and Completion Notes.
+- Template README, Workflow, README, and docs index links for Innovation
+  Pipeline operation.
+
+### Reason
+
+Innovation Pipeline Workflow defined the standard flow, but GDS still needed a
+repeatable artifact for recording chats, improvement ideas, experiments,
+prototype scope, validation, promotion decisions, and archive reasons.
+
+Without a template, each Innovation Pipeline record would be shaped differently
+and harder to review or promote.
+
+### Evolution
+
+Innovation Pipeline moved from workflow definition into practical operation.
+Ideas can now be recorded, reviewed, validated, promoted, archived, and followed
+up through one reusable template.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。
