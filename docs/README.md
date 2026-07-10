@@ -378,6 +378,8 @@ Reference points:
 - Multi-AI Handoff Template: `templates/multi_ai_handoff_template.md`
 - Multi-AI Handoff Checklist:
   `templates/multi_ai_handoff_checklist_template.md`
+- Multi-AI Handoff Reference Examples:
+  `examples/multi_ai_handoff_reference_examples.md`
 - Examples: `examples/persistent_collaboration_examples.md`
 
 Core priority:

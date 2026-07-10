@@ -1729,6 +1729,33 @@ Multi-AI handoff now has two layers: a handoff template for factual transfer
 and a checklist template for receiver readiness review. This reduces context
 loss while keeping repository-first handoff concise and reproducible.
 
+## Ver1.63
+
+### Added
+
+- Multi-AI Handoff Reference Examples:
+  `examples/multi_ai_handoff_reference_examples.md`.
+- Good examples for new feature implementation, review after documentation
+  change, bug fix, investigation-only work, and dirty / uncommitted workspace
+  handoff.
+- Bad examples for missing scope, missing verification, missing repository,
+  missing next Q, and chat-dependent handoff.
+- README, docs index, Templates README, Examples README, and Handoff Template
+  links to the reference examples.
+
+### Reason
+
+The Multi-AI Handoff Template defined the structure, but future AI tools and
+human reviewers needed concrete reference examples to create consistent
+handoff artifacts without relying on chat history.
+
+### Evolution
+
+Multi-AI handoff is now supported by a rule, a factual transfer template, a
+receiver readiness checklist, and reference examples. This makes cross-AI
+continuity more reproducible across ChatGPT, Codex, Claude, Gemini, and human
+review.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

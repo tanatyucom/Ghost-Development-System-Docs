@@ -126,4 +126,5 @@ Use when the handoff includes a commit-ready change set.
 - `templates/multi_ai_handoff_checklist_template.md`
 - `templates/completion_report_template.md`
 - `docs/ai_repository_index.md`
+- `examples/multi_ai_handoff_reference_examples.md`
 - `examples/persistent_collaboration_examples.md`

@@ -66,6 +66,8 @@ reports, and documentation requests can start from a clear reference.
 - `persistent_collaboration_examples.md`: good and bad examples for command
   presentation, review conclusion, Download First, Repository First, Platform
   First, AI collaboration, and completion report priority.
+- `multi_ai_handoff_reference_examples.md`: good and bad examples for
+  ChatGPT, Codex, Claude, Gemini, and human review handoff artifacts.
 - `repository_information.md`: example of repository boundaries, source of
   truth, scope guard, and completion criteria.
 - `authority_matrix.md`: example edit and reference authority matrix.
@@ -166,6 +168,9 @@ what a complete, well-scoped document should feel like.
 - Use `persistent_collaboration_examples.md` when applying persistent
   collaboration behavior across ChatGPT, Codex, Claude, Gemini, human review,
   Q files, completion reports, command presentation, and review conclusions.
+- Use `multi_ai_handoff_reference_examples.md` when filling out
+  `templates/multi_ai_handoff_template.md` for feature implementation, review,
+  bug fix, investigation-only, or uncommitted dirty workspace handoff.
 - Use `repository_information.md` when a task may involve multiple
   repositories, documentation roots, runtime roots, or reference-only sources.
 - Use `authority_matrix.md` when a task needs explicit Editable, Reference
@@ -192,6 +197,7 @@ When examples conflict with rules or templates, follow:
 - Knowledge Base Index example.
 - Metrics / Evidence completion report example.
 - Platform Standard Registry example.
+- Multi-AI Handoff example for generated Information Packages.
 
 ## Update Policy
 
@@ -227,6 +233,8 @@ Do not use examples to introduce new rules. Promote reusable standards to
 - `docs/rules/debug_artifact_review_rules.md`
 - `docs/rules/git_rules.md`
 - `docs/rules/ai_collaboration_rules.md`
+- `templates/multi_ai_handoff_template.md`
+- `templates/multi_ai_handoff_checklist_template.md`
 - `docs/workflow/commit_safety_checklist.md`
 - `docs/workflow/audit_before_repair_workflow.md`
 - `docs/workflow/debug_artifact_review_workflow.md`

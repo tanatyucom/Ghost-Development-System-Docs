@@ -34,7 +34,8 @@ and other AI contexts transfer Current Status, Current Focus, Scope, Source of
 Truth, Changed Files, Verification Results, Remaining Issues, Recommended Next
 Q, and Suggested Commit Message without relying on temporary chat memory. The
 handoff checklist template reviews whether that artifact is complete enough for
-the receiver.
+the receiver. Reference examples live in
+`examples/multi_ai_handoff_reference_examples.md`.
 
 Health documents such as `docs/health/gds_health_dashboard.md` may be used
 beside templates when a task should record GDS operating health rather than
