@@ -15,6 +15,9 @@ gate.
 - `startup_checklist_workflow.md`: startup confirmation flow for repository,
   Q artifacts, applicable rules, methodologies, scope, dirty workspace, and
   commit policy before implementation or review begins.
+- `ai_startup_procedure.md`: AI reading order and startup procedure before
+  Startup Checklist, Q execution, implementation, review, or documentation
+  update.
 - `repository_root_validation_workflow.md`: startup workflow for checking the
   actual Git repository root against the Q Working Repository.
 - `collaborative_decision_workflow.md`: workflow for AI and user proposals,
@@ -57,6 +60,7 @@ gate.
 
 ```text
 Idea
+  -> AI Startup Procedure
   -> Startup Checklist
   -> Repository Root Validation
   -> AI Repository Index Check, when public repository knowledge is needed
@@ -103,6 +107,20 @@ When an artifact is the authoritative output, chat should contain only a short
 summary, artifact paths or links, verification notes, and remaining issues.
 
 ## Startup Checklist Workflow
+
+Before Startup Checklist is completed, AI should follow the AI Startup
+Procedure reading order:
+
+```text
+AI Repository Index
+  -> Repository Root Validation
+  -> GDS Core Rules / Workflow
+  -> Target Project Profile
+  -> Current Q File
+  -> Startup Checklist
+```
+
+Details follow `ai_startup_procedure.md`.
 
 Before implementation, review, Q execution, or documentation update begins, use
 Startup Checklist to confirm repository boundaries, Q artifact status,
@@ -652,6 +670,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 ## Related Documents
 
 - `docs/workflow/template_lifecycle.md`
+- `docs/workflow/ai_startup_procedure.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/workflow/repository_root_validation_workflow.md`
 - `docs/ai_repository_index.md`

@@ -10,12 +10,15 @@ Use it after reading GDS shared rules and before executing a GameGhost Q.
 
 ```text
 docs/ai_repository_index.md
+  -> Repository Root Validation
   -> docs/rules/rules.md
   -> docs/workflow/README.md
   -> project_profiles/gameghost/README.md
   -> GameGhost Q file
   -> Startup Checklist
 ```
+
+Follow `docs/workflow/ai_startup_procedure.md` before implementation or review.
 
 ## Contains
 
@@ -33,4 +36,3 @@ files and does not approve GameGhost implementation by itself.
 
 GameGhost implementation still requires a scoped Q, Startup Checklist,
 Repository Root Validation, and the relevant GDS rules.
-

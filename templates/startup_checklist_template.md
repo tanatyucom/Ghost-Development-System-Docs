@@ -23,6 +23,16 @@
 
 ## Startup Confirmation
 
+- AI Repository Index read:
+- Target Project identified:
+- Project Profile applies:
+- Project Profile path:
+- Project Profile read:
+- Project Profile conflicts with Q:
+- Core Rules / Workflow read:
+- Current Q File read:
+- Scope / Out of Scope confirmed:
+- Session Health checked:
 - Current Working Directory:
 - Git repository root:
 - Root matches Working Repository:
@@ -115,6 +125,8 @@
 
 ## References
 
+- `docs/rules/ai_startup_procedure_rules.md`
+- `docs/workflow/ai_startup_procedure.md`
 - `docs/rules/startup_checklist_rules.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/README.md`

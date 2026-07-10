@@ -91,6 +91,14 @@
 
 ## Startup Checklist Review
 
+- AI Startup Procedure followed:
+- AI Repository Index read:
+- Target Project identified:
+- Project Profile read before Q execution:
+- Core Rules / Workflow read:
+- Current Q File read:
+- Scope / Out of Scope confirmed before implementation:
+- Session Health checked:
 - Startup Checklist applies:
 - Working Repository confirmed:
 - Repository Root Validation performed:

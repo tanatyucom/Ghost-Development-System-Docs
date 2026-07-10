@@ -909,6 +909,39 @@ GDS evolved from Project First declarations into reusable project-specific
 profiles. AI can now read shared GDS rules first, then the target project's
 profile, then the current Q, reducing repository confusion and scope drift.
 
+## Ver1.33
+
+### Added
+
+- AI Startup Procedure Rules:
+  `docs/rules/ai_startup_procedure_rules.md`.
+- AI Startup Procedure Workflow:
+  `docs/workflow/ai_startup_procedure.md`.
+- Standard AI reading order:
+  AI Repository Index, Repository Root Validation, GDS Core Rules / Workflow,
+  Target Project Profile, Current Q File, Startup Checklist, Scope / Out of
+  Scope, Implementation / Review Start.
+- Startup Checklist template fields for AI Repository Index, Project Profile,
+  Core Rules / Workflow, Current Q File, Scope / Out of Scope, and Session
+  Health.
+- Q file and completion report template fields for AI Startup Procedure.
+- README, Knowledge Base Index, rules index, workflow index, Project Profiles,
+  and architecture links for AI Startup Procedure.
+
+### Reason
+
+Project Profiles separated GDS shared rules from project-specific context, and
+AI Repository Index made public knowledge easier to read. The next risk was
+that AI might read the right documents in the wrong order, skip Project
+Profile, or begin work before validating the actual repository root.
+
+### Evolution
+
+GDS evolved from having separate startup safeguards into a single ordered
+startup procedure. AI now has a standard beginning path that reduces repository
+confusion, scope drift, Q artifact omissions, and Project Profile reading
+misses before implementation or review begins.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

@@ -20,6 +20,7 @@ Responsibilities:
 - Documentation.
 - Templates.
 - Project Profiles.
+- AI Startup Procedure.
 - Startup Checklist.
 - Repository Root Validation.
 - AI Proactive Proposal.
@@ -78,6 +79,42 @@ GDS Shared Rules
   -> Project Profile
   -> Q File
   -> Startup Checklist
+  -> Implementation / Review
+```
+
+## AI Startup Procedure
+
+AI Startup Procedure owns the pre-checklist reading order before AI starts
+implementation, review, documentation update, or Q execution.
+
+Responsibilities:
+
+- start from AI Repository Index when public GDS knowledge is needed;
+- validate the actual repository root before editing;
+- confirm GDS Core Rules / Workflow before project-specific work;
+- read the Target Project Profile before the Current Q File when one exists;
+- confirm the Current Q File and authoritative artifact path;
+- pass the confirmed context into Startup Checklist;
+- stop when repository, project, profile, Q, scope, or commit policy is unclear.
+
+AI Startup Procedure does not own:
+
+- final human approval authority;
+- official rule definitions;
+- project runtime behavior;
+- commit, tag, or release approval;
+- replacing the Q File or Startup Checklist.
+
+Architecture flow:
+
+```text
+AI Repository Index
+  -> Repository Root Validation
+  -> GDS Core Rules / Workflow
+  -> Target Project Profile
+  -> Current Q File
+  -> Startup Checklist
+  -> Scope / Out of Scope
   -> Implementation / Review
 ```
 

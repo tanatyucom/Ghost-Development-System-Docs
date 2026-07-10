@@ -16,11 +16,17 @@ When AI works on an individual project, read sources in this order:
 
 ```text
 AI Repository Knowledge Access Index
+  -> Repository Root Validation
   -> GDS Core Rules / Workflow / Methodology
   -> Target Project Profile
   -> Q File
   -> Startup Checklist
 ```
+
+This order is formalized by:
+
+- `docs/rules/ai_startup_procedure_rules.md`
+- `docs/workflow/ai_startup_procedure.md`
 
 The Project Profile does not replace the Q file. It provides stable project
 context so the Q file can focus on the current task.
@@ -70,4 +76,3 @@ When a Project Profile changes, regenerate and validate:
 python scripts/generate_ai_repository_index.py --write
 python scripts/generate_ai_repository_index.py --validate
 ```
-

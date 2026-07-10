@@ -1,6 +1,6 @@
 # Ghost Development System Rules
 
-**Version:** 2.9
+**Version:** 3.0
 
 **Last Updated:** 2026-07-10
 
@@ -35,6 +35,7 @@ Rules follow these principles:
 - Knowledge Before Automation.
 - Knowledge Poka-Yoke / Design For Forgetfulness.
 - External Source Access / AI Repository Knowledge Access.
+- AI Startup Procedure.
 - Startup Checklist.
 - Repository Root Validation.
 - AI Proactive Proposal.
@@ -58,6 +59,7 @@ own files.
 
 - `core_principles.md`
 - `external_source_access_rules.md`
+- `ai_startup_procedure_rules.md`
 - `project_rules.md`
 - `language_rules.md`
 - `documentation_rules.md`
@@ -177,6 +179,29 @@ When important public knowledge entry points are added, moved, renamed, or
 materially changed, update `docs/ai_repository_index.md`.
 
 Details follow `external_source_access_rules.md`.
+
+## AI Startup Procedure
+
+Before implementation, review, documentation update, or Q execution begins,
+AI should read and confirm the required startup sources in a stable order.
+
+Standard AI startup order:
+
+```text
+AI Repository Index
+  -> Repository Root Validation
+  -> GDS Core Rules / Workflow
+  -> Target Project Profile
+  -> Current Q File
+  -> Startup Checklist
+  -> Scope / Out of Scope
+  -> Implementation / Review Start
+```
+
+If the repository, Target Project, Project Profile, Q File, scope, or commit
+policy is unclear, AI should stop and ask before editing.
+
+Details follow `ai_startup_procedure_rules.md`.
 
 ## Completion Checklist
 

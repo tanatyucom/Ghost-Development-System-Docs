@@ -14,9 +14,15 @@ GDS の運用ルール、Methodology、Repository Information、Scope Guard を
 実装、レビュー、文書更新、Q 実行を開始する前に、AI と人間は
 Startup Checklist を確認します。
 
+AI は Startup Checklist の前に AI Startup Procedure を使い、AI Repository
+Index、Repository Root Validation、GDS Core Rules / Workflow、Target Project
+Profile、Current Q File を順に確認します。
+
 最低限確認する項目:
 
 - Working Repository.
+- AI Repository Index.
+- Target Project Profile.
 - Repository Root Validation.
 - Production repository / backup / reference-only repository.
 - Current Phase.
@@ -148,13 +154,19 @@ Startup Checklist の結果は、必要に応じて短く記録します。
 
 ```text
 Startup Checklist:
+- AI Repository Index read:
+- Target Project identified:
+- Project Profile read:
 - Repository confirmed:
+- Core rules read:
+- Current Q read:
 - Scope confirmed:
 - Applicable rules:
 - Applicable methodologies:
 - Q artifact status:
 - Commit policy:
 - Repository root validation:
+- Session health:
 - Proactive proposal:
 - Ready to start:
 ```
@@ -175,6 +187,8 @@ Startup Checklist は、既存 Knowledge を増やすためではなく、既存
 ## Related Documents
 
 - `docs/workflow/startup_checklist_workflow.md`
+- `docs/workflow/ai_startup_procedure.md`
+- `docs/rules/ai_startup_procedure_rules.md`
 - `templates/startup_checklist_template.md`
 - `examples/startup_checklist_examples.md`
 - `docs/rules/project_rules.md`

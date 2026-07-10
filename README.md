@@ -39,6 +39,29 @@ Start from:
 AI が個別プロジェクトを扱う場合は、GDS 共通ルールを読んだ後、対象 Project
 Profile を読み、最後に Q File と Startup Checklist を確認します。
 
+## AI Startup Procedure
+
+AI が GDS 作業を開始する前に、毎回同じ順番で前提を確認します。
+
+Start from:
+
+- [`docs/rules/ai_startup_procedure_rules.md`](docs/rules/ai_startup_procedure_rules.md)
+- [`docs/workflow/ai_startup_procedure.md`](docs/workflow/ai_startup_procedure.md)
+- [`templates/startup_checklist_template.md`](templates/startup_checklist_template.md)
+
+標準順序:
+
+```text
+AI Repository Index
+  -> Repository Root Validation
+  -> GDS Core Rules / Workflow
+  -> Target Project Profile
+  -> Current Q File
+  -> Startup Checklist
+  -> Scope / Out of Scope
+  -> Implementation / Review Start
+```
+
 ## Artifact First
 
 Reusable, reviewable, AI-handoff, human-approval, or Git-managed outputs should

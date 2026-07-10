@@ -37,6 +37,9 @@ only describe boundaries and principles that are accepted enough to guide work.
 ## Responsibility Boundary Summary
 
 - DevelopmentSystem owns development infrastructure.
+- AI Startup Procedure owns the pre-checklist reading order for AI Repository
+  Index, Repository Root Validation, GDS Core Rules / Workflow, Target Project
+  Profile, Current Q File, and Startup Checklist.
 - Startup Checklist owns the session-start confirmation boundary for
   repository, Q artifact, applicable rules, methodologies, scope, and commit
   policy.

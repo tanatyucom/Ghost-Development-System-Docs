@@ -62,6 +62,32 @@ AI Repository Knowledge Access Index
   -> Startup Checklist
 ```
 
+## AI Startup Procedure Index
+
+AI Startup Procedure defines the standard reading order before AI starts
+implementation, review, documentation update, or Q execution.
+
+Reference points:
+
+- Rules: `docs/rules/ai_startup_procedure_rules.md`
+- Workflow: `docs/workflow/ai_startup_procedure.md`
+- Startup Checklist Rules: `docs/rules/startup_checklist_rules.md`
+- Startup Checklist Template: `templates/startup_checklist_template.md`
+- Project Profiles: `project_profiles/README.md`
+
+Core flow:
+
+```text
+AI Repository Index
+  -> Repository Root Validation
+  -> GDS Core Rules / Workflow
+  -> Target Project Profile
+  -> Current Q File
+  -> Startup Checklist
+  -> Scope / Out of Scope
+  -> Implementation / Review Start
+```
+
 ## Startup Checklist Index
 
 Startup Checklist は、新しい ChatGPT / Codex / AI セッション、レビュー、

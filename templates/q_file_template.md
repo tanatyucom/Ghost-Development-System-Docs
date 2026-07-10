@@ -437,6 +437,12 @@ hard edit boundary を記載します。
 Use this section before Codex / AI implementation, review, documentation update,
 or Q execution begins.
 
+- AI Startup Procedure applies: Yes / No
+- AI Repository Index read:
+- Repository Root Validation completed before implementation:
+- GDS Core Rules / Workflow read:
+- Target Project Profile read:
+- Current Q File confirmed as authoritative:
 - Startup Checklist applies: Yes / No
 - Working Repository confirmed:
 - Repository Root Validation required:
@@ -459,6 +465,8 @@ or Q execution begins.
 
 Reference:
 
+- `docs/rules/ai_startup_procedure_rules.md`
+- `docs/workflow/ai_startup_procedure.md`
 - `docs/rules/startup_checklist_rules.md`
 - `docs/rules/repository_root_validation_rules.md`
 - `docs/rules/ai_proactive_proposal_rules.md`
