@@ -10,6 +10,7 @@ Ghost Development System knowledge base.
 
 Core rules include Evidence First, Purpose-Oriented Naming, Human Approval Gate,
 Knowledge Before Automation, Knowledge Poka-Yoke / Design For Forgetfulness,
+UTF-8 Read Rule,
 External Source Access / AI Repository Knowledge Access, AI Startup Procedure, Startup Checklist,
 Repository Root Validation, AI Proactive Proposal,
 Completion Checklist, Artifact First, Audit Before Repair, Debug Artifact Review, Debug Escalation Ladder,
@@ -21,6 +22,8 @@ for assigning stable Concept IDs and keeping the Concept Index traceable.
 
 - `rules.md`: rules index and priority.
 - `core_principles.md`: core development philosophy.
+- `utf8_read_rules.md`: UTF-8 reading rule for Japanese Markdown, Q files,
+  request artifacts, completion reports, and mojibake reporting.
 - `external_source_access_rules.md`: Raw URL Index and external public
   repository access rule for ChatGPT, Codex, and other AI systems.
 - `ai_startup_procedure_rules.md`: AI startup reading order and stop
@@ -87,29 +90,30 @@ for assigning stable Concept IDs and keeping the Concept Index traceable.
 
 1. `rules.md`
 2. `core_principles.md`
-3. `external_source_access_rules.md`
-4. `ai_startup_procedure_rules.md`
-5. `project_rules.md`
-6. `language_rules.md`
-7. `documentation_rules.md`
-8. `startup_checklist_rules.md`
-9. `repository_root_validation_rules.md`
-10. `ai_proactive_proposal_rules.md`
-11. `completion_checklist_rules.md`
-12. `artifact_first_rules.md`
-13. `q_file_artifact_standard.md`
-14. `audit_before_repair_rules.md`
-15. `debug_artifact_review_rules.md`
-16. `debug_escalation_ladder_rules.md`
-17. `migration_first_rules.md`
-18. `pip_case_knowledge_base_rules.md`
-19. `concept_id_naming_rules.md`
-20. `roadmap2_knowledge_salvage_rules.md`
-21. `workflow_rules.md`
-22. `quality_rules.md`
-23. `ai_collaboration_rules.md`
-24. `git_rules.md`
-25. `script_architecture_rules.md`
+3. `utf8_read_rules.md`
+4. `external_source_access_rules.md`
+5. `ai_startup_procedure_rules.md`
+6. `project_rules.md`
+7. `language_rules.md`
+8. `documentation_rules.md`
+9. `startup_checklist_rules.md`
+10. `repository_root_validation_rules.md`
+11. `ai_proactive_proposal_rules.md`
+12. `completion_checklist_rules.md`
+13. `artifact_first_rules.md`
+14. `q_file_artifact_standard.md`
+15. `audit_before_repair_rules.md`
+16. `debug_artifact_review_rules.md`
+17. `debug_escalation_ladder_rules.md`
+18. `migration_first_rules.md`
+19. `pip_case_knowledge_base_rules.md`
+20. `concept_id_naming_rules.md`
+21. `roadmap2_knowledge_salvage_rules.md`
+22. `workflow_rules.md`
+23. `quality_rules.md`
+24. `ai_collaboration_rules.md`
+25. `git_rules.md`
+26. `script_architecture_rules.md`
 
 ## Update Policy
 

@@ -1084,6 +1084,34 @@ GDS Health evolved from maintained documentation into checkable operational
 health. Health state can now be reviewed by humans and validated by scripts,
 preparing the path for CI-backed Health checks.
 
+## Ver1.39
+
+### Added
+
+- UTF-8 Read Rule:
+  `docs/rules/utf8_read_rules.md`.
+- Mojibake Audit Report:
+  `docs/history/mojibake_audit_report_2026-07-10.md`.
+- AI Startup Procedure guidance for reading Japanese Q files with
+  `Get-Content -Encoding UTF8` on Windows PowerShell 5.1.
+- Q File Template, Startup Checklist Template, and Completion Report Template
+  fields for UTF-8 read verification and mojibake reporting.
+
+### Reason
+
+Recent Q files were valid UTF-8, but plain Windows PowerShell 5.1
+`Get-Content` displayed Japanese text as mojibake. That created false reports
+that the Q file body was partially corrupted.
+
+GDS needed a rule that separates file corruption from terminal display or
+encoding-read problems.
+
+### Evolution
+
+Knowledge Poka-Yoke now covers text encoding reads. AI and humans can verify
+Japanese Q files with explicit UTF-8 before reporting mojibake, and repository
+Markdown mojibake audits can be recorded without unsafe bulk conversion.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

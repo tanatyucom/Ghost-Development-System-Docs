@@ -49,6 +49,17 @@ Start from:
 - [`docs/workflow/ai_startup_procedure.md`](docs/workflow/ai_startup_procedure.md)
 - [`templates/startup_checklist_template.md`](templates/startup_checklist_template.md)
 
+Windows PowerShell 5.1 で Q file や日本語 Markdown を読む場合は UTF-8 を
+明示します。
+
+```powershell
+Get-Content -LiteralPath <path> -Encoding UTF8
+```
+
+Rule:
+
+- [`docs/rules/utf8_read_rules.md`](docs/rules/utf8_read_rules.md)
+
 標準順序:
 
 ```text

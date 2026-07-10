@@ -104,6 +104,14 @@ Q File から今回の作業範囲を確認します。
 - Commit policy
 - Required artifacts
 
+Windows PowerShell 5.1 で Q File を読む場合は、次の形式を使います。
+
+```powershell
+Get-Content -LiteralPath <Q file> -Encoding UTF8
+```
+
+Plain `Get-Content` の表示だけで文字化けやファイル破損を判断しません。
+
 Q が Artifact First 対象の場合、保存済み Q artifact を authoritative source として
 扱います。
 
@@ -171,6 +179,7 @@ Startup Checklist:
 - `docs/rules/repository_root_validation_rules.md`
 - `docs/workflow/repository_root_validation_workflow.md`
 - `docs/rules/external_source_access_rules.md`
+- `docs/rules/utf8_read_rules.md`
 - `docs/ai_repository_index.md`
 - `project_profiles/README.md`
 - `templates/startup_checklist_template.md`

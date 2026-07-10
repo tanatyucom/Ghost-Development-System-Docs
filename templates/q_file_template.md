@@ -444,6 +444,8 @@ or Q execution begins.
 - Expected Next Q Planning:
 - AI Startup Procedure applies: Yes / No
 - AI Repository Index read:
+- Q File read with explicit UTF-8 when using Windows PowerShell 5.1:
+- Q File mojibake check result:
 - Repository Root Validation completed before implementation:
 - GDS Core Rules / Workflow read:
 - Target Project Profile read:
@@ -830,9 +832,22 @@ out-of-scope items を明示します。
   verification target, expected normal state, review viewpoints, AI review
   target artifacts when applicable, and debug artifact Git policy.
 - Missing Q artifact path is treated as a review issue.
+- Q File is read with `Get-Content -Encoding UTF8` when using Windows
+  PowerShell 5.1.
+- Mojibake is reported only with file name, line number, mojibake string,
+  expected string, command used, and inferred cause.
 - Markdown `.md` is generated for reusable, AI-handoff, or Git-managed output.
 - `.docx` is generated when human review is expected.
 - Chat body contains summary only when artifacts are authoritative.
+
+### UTF-8 Read Criteria
+
+- Q file read command recorded when Windows PowerShell 5.1 is used.
+- `Get-Content -LiteralPath <Q file> -Encoding UTF8` used for Japanese text.
+- Plain `Get-Content` mojibake is not treated as file corruption without UTF-8
+  verification.
+- Mojibake report includes file name, line number, mojibake string, expected
+  string, command used, and inferred cause.
 
 ## Deliverables
 

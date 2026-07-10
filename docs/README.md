@@ -74,6 +74,7 @@ Reference points:
 - Startup Checklist Rules: `docs/rules/startup_checklist_rules.md`
 - Startup Checklist Template: `templates/startup_checklist_template.md`
 - Project Profiles: `project_profiles/README.md`
+- UTF-8 Read Rule: `docs/rules/utf8_read_rules.md`
 
 Core flow:
 
@@ -87,6 +88,15 @@ AI Repository Index
   -> Scope / Out of Scope
   -> Implementation / Review Start
 ```
+
+When Windows PowerShell 5.1 reads a Q file or Japanese Markdown, use:
+
+```powershell
+Get-Content -LiteralPath <path> -Encoding UTF8
+```
+
+Mojibake reports must include file name, line number, mojibake string,
+expected string, command used, and inferred cause.
 
 ## AI Daily Operation Cycle Index
 

@@ -31,6 +31,8 @@
 - Project Profile conflicts with Q:
 - Core Rules / Workflow read:
 - Current Q File read:
+- Current Q File read with explicit UTF-8:
+- Q File mojibake check:
 - Scope / Out of Scope confirmed:
 - Session Health checked:
 - Current Working Directory:
@@ -58,6 +60,7 @@
 
 - Project First:
 - Japanese First:
+- UTF-8 Read Rule:
 - Artifact First:
 - Q File Artifact Standard:
 - Audit Before Repair:
@@ -101,6 +104,9 @@
 - `request.md` present:
 - Chat-only source avoided:
 - Required artifacts:
+- Q read command:
+- Mojibake found:
+- Mojibake report has file name / line number / string / expected string / command:
 - Markdown required:
 - `.docx` required for human review:
 - Debug artifacts expected:

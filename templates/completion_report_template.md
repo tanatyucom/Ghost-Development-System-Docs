@@ -104,6 +104,9 @@
 - Project Profile read before Q execution:
 - Core Rules / Workflow read:
 - Current Q File read:
+- Current Q File read with explicit UTF-8:
+- Q File read command:
+- Q File mojibake check result:
 - Scope / Out of Scope confirmed before implementation:
 - Session Health checked:
 - Startup Checklist applies:
@@ -229,6 +232,18 @@
 ## Changed Files
 
 ## Verification
+
+## UTF-8 / Mojibake Review
+
+- UTF-8 Read Rule followed:
+- Q file read command:
+- PowerShell `Get-Content -Encoding UTF8` verified:
+- Python UTF-8 strict decode verified:
+- Mojibake pattern scan performed:
+- Mojibake found:
+- Mojibake findings with file / line / string / expected string / command:
+- Files repaired:
+- Unrepaired / need confirmation:
 
 ## Commit Safety Verification
 

@@ -34,6 +34,7 @@ Rules follow these principles:
 - Evidence First.
 - Knowledge Before Automation.
 - Knowledge Poka-Yoke / Design For Forgetfulness.
+- UTF-8 Read Rule.
 - External Source Access / AI Repository Knowledge Access.
 - AI Startup Procedure.
 - AI Daily Operation Cycle.
@@ -59,6 +60,7 @@ own files.
 ## Official Rule Documents
 
 - `core_principles.md`
+- `utf8_read_rules.md`
 - `external_source_access_rules.md`
 - `ai_startup_procedure_rules.md`
 - `project_rules.md`
@@ -180,6 +182,23 @@ When important public knowledge entry points are added, moved, renamed, or
 materially changed, update `docs/ai_repository_index.md`.
 
 Details follow `external_source_access_rules.md`.
+
+## UTF-8 Read Rule
+
+When reading Japanese Markdown, Q files, request artifacts, completion reports,
+or other text artifacts with Windows PowerShell 5.1, use explicit UTF-8.
+
+Correct:
+
+```powershell
+Get-Content -LiteralPath <path> -Encoding UTF8
+```
+
+Plain `Get-Content -LiteralPath <path>` can display valid UTF-8 as mojibake.
+Do not report file corruption unless a concrete file name, line number,
+mojibake string, expected string, and reading command are shown.
+
+Details follow `utf8_read_rules.md`.
 
 ## AI Startup Procedure
 
