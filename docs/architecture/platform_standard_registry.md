@@ -191,6 +191,14 @@ Use `examples/platform_registry_update_completed_examples.md` when you need a
 filled example for New Standard, Standard Update, Deprecation, Replacement, or
 Archive.
 
+Save Registry Update Artifacts under `registry_updates/` using the naming rule
+defined in `docs/workflow/platform_registry_update_artifact_storage.md`.
+
+Platform Promotion Decision Reports can be used to generate draft Registry
+Update Artifacts through
+`docs/workflow/auto_registry_update_from_promotion_report.md`. Drafts require
+Human Review before the Registry row is changed.
+
 Repository Quality Audit checks registry consistency automatically. It reports
 Missing Standard, Broken Registry Link, Deprecated Review Needed, Replaced
 Review Needed, Status Transition Review Needed, Required Artifact Review
@@ -224,6 +232,9 @@ template authority.
 - `examples/platform_promotion_decision_report_examples.md`
 - `examples/platform_standard_registry_examples.md`
 - `examples/platform_registry_update_completed_examples.md`
+- `registry_updates/README.md`
+- `docs/workflow/platform_registry_update_artifact_storage.md`
+- `docs/workflow/auto_registry_update_from_promotion_report.md`
 - `docs/workflow/repository_quality_audit_workflow.md`
 - `docs/architecture/platform_era_core_principles.md`
 - `roadmap/ghost_development_system_roadmap.md`

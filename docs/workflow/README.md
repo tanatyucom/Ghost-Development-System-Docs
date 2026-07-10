@@ -55,6 +55,11 @@ gate.
 - `innovation_pipeline_workflow.md`: workflow for growing ideas from Idea,
   Experiment, Prototype, Validation, Platform Promotion, Standardization, and
   Propagation.
+- `platform_registry_update_artifact_storage.md`: storage location, naming
+  rule, and management workflow for Platform Registry Update Artifacts.
+- `auto_registry_update_from_promotion_report.md`: workflow design for
+  generating Platform Registry Update Artifact drafts from Platform Promotion
+  Decision Reports.
 - `concept_promotion_workflow.md`: how concepts move from Candidate to
   Under Review, Experiment, Validated, Promoted, or Archived.
 - `pip_case_knowledge_base_workflow.md`: how reusable lessons become tagged
@@ -101,6 +106,7 @@ Idea
   -> PIP Case Candidate, when reusable knowledge was found
   -> Concept Promotion, when knowledge is still an early concept
   -> Innovation Pipeline, when a reusable experiment may become Platform Standard
+  -> Platform Registry Update Artifact, when Platform Standard Registry changes
   -> Roadmap2 Knowledge Salvage, when Roadmap2-only knowledge remains
   -> Human Review
   -> Completion Checklist

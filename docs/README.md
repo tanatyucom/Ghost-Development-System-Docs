@@ -215,6 +215,12 @@ Reference points:
   `templates/platform_promotion_decision_report_template.md`
 - Platform Registry Update Template:
   `templates/platform_registry_update_template.md`
+- Platform Registry Update Artifacts:
+  `registry_updates/README.md`
+- Platform Registry Update Artifact Storage:
+  `docs/workflow/platform_registry_update_artifact_storage.md`
+- Auto Registry Update From Promotion Report:
+  `docs/workflow/auto_registry_update_from_promotion_report.md`
 - Platform Promotion Decision Report Examples:
   `examples/platform_promotion_decision_report_examples.md`
 - Platform Standard Registry Examples:

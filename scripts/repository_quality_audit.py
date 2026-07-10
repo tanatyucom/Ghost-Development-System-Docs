@@ -49,6 +49,11 @@ REQUIRED_PROJECT_PROFILE_FILES = [
     Path("project_profiles/gameghost/completion_policy.md"),
 ]
 PLATFORM_REGISTRY_PATH = Path("docs/architecture/platform_standard_registry.md")
+PLATFORM_REGISTRY_UPDATE_DIR = Path("registry_updates")
+PLATFORM_REGISTRY_UPDATE_README = PLATFORM_REGISTRY_UPDATE_DIR / "README.md"
+PLATFORM_REGISTRY_UPDATE_NAME_PATTERN = re.compile(
+    r"^\d{8}_[a-z0-9_]+_(new|update|deprecate|replace|archive)\.md$"
+)
 PLATFORM_REGISTRY_README_ENTRY_POINTS = [
     Path("README.md"),
     Path("docs/README.md"),
@@ -392,6 +397,7 @@ def check_platform_registry_consistency(root: Path) -> CheckResult:
     status_transition_needed: list[str] = []
     required_artifact_needed: list[str] = []
     archived_review_needed: list[str] = []
+    artifact_storage_needed: list[str] = []
     structure_mismatch: list[str] = []
 
     missing_standard.extend(setup_findings)
@@ -465,6 +471,24 @@ def check_platform_registry_consistency(root: Path) -> CheckResult:
             "RegistryとRoadmapの整合性確認: roadmap に Platform Standard Registry 導線がありません。"
         )
 
+    update_dir = root / PLATFORM_REGISTRY_UPDATE_DIR
+    if not update_dir.exists():
+        artifact_storage_needed.append(
+            f"Registry Update Artifact Storage: {PLATFORM_REGISTRY_UPDATE_DIR.as_posix()} が存在しません。"
+        )
+    elif not (root / PLATFORM_REGISTRY_UPDATE_README).exists():
+        artifact_storage_needed.append(
+            f"Registry Update Artifact Storage: {PLATFORM_REGISTRY_UPDATE_README.as_posix()} が存在しません。"
+        )
+    else:
+        for artifact in sorted(update_dir.glob("*.md")):
+            if artifact.name == "README.md":
+                continue
+            if not PLATFORM_REGISTRY_UPDATE_NAME_PATTERN.fullmatch(artifact.name):
+                artifact_storage_needed.append(
+                    f"Registry Update Artifact Storage: {artifact.relative_to(root).as_posix()} の命名規則が不正です。"
+                )
+
     details = [
         f"Registry Health: {len(rows)} registry items checked.",
         "Missing Standard: none." if not missing_standard else "Missing Standard:",
@@ -485,6 +509,10 @@ def check_platform_registry_consistency(root: Path) -> CheckResult:
         *required_artifact_needed,
         "Archived Review Needed: none." if not archived_review_needed else "Archived Review Needed:",
         *archived_review_needed,
+        "Registry Update Artifact Storage: pass."
+        if not artifact_storage_needed
+        else "Registry Update Artifact Storage:",
+        *artifact_storage_needed,
         "Registry Structure / Roadmap Consistency: pass."
         if not structure_mismatch
         else "Registry Structure / Roadmap Consistency:",
@@ -499,6 +527,7 @@ def check_platform_registry_consistency(root: Path) -> CheckResult:
         or status_transition_needed
         or required_artifact_needed
         or archived_review_needed
+        or artifact_storage_needed
         or structure_mismatch
     ):
         return CheckResult("Platform Registry Consistency Check", "WARN", details)

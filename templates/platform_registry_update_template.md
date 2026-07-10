@@ -134,3 +134,11 @@ Select one:
 ## Completed Examples
 
 - `examples/platform_registry_update_completed_examples.md`
+
+## Artifact Storage
+
+- Directory: `registry_updates/`
+- Naming rule: `YYYYMMDD_<standard_name>_<update_type>.md`
+- Workflow: `docs/workflow/platform_registry_update_artifact_storage.md`
+- Draft generation workflow:
+  `docs/workflow/auto_registry_update_from_promotion_report.md`

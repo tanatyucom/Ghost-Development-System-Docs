@@ -1568,6 +1568,59 @@ Platform Registry Update moved from a blank template into practical operation.
 Future registry updates can now compare their artifact against completed
 examples before updating status or changing registry fields.
 
+## Ver1.57
+
+### Added
+
+- Platform Registry Update Artifact storage standard:
+  `docs/workflow/platform_registry_update_artifact_storage.md`.
+- Registry update artifact directory:
+  `registry_updates/README.md`.
+- Naming rule:
+  `YYYYMMDD_<standard_name>_<update_type>.md`.
+- Repository Quality Audit tracking for registry update artifact storage and
+  artifact filename format.
+- README, docs index, workflow index, Registry, and template links for registry
+  update artifact storage.
+
+### Reason
+
+Platform Registry Update Template and completed examples existed, but update
+artifacts still needed a standard storage location and naming rule so they
+could be tracked consistently.
+
+### Evolution
+
+Registry update artifacts can now be stored and audited consistently under
+`registry_updates/`. This prepares the repository for future validation that a
+registry status change has a matching update artifact.
+
+## Ver1.58
+
+### Added
+
+- Auto Registry Update From Promotion Report workflow:
+  `docs/workflow/auto_registry_update_from_promotion_report.md`.
+- Promotion Report to Registry Update mapping.
+- Recommendation to draft update type mapping.
+- Platform Promotion Decision Report Template fields for Registry Update Draft.
+- README, docs index, workflow index, Registry, and template links for the
+  auto registry update design.
+
+### Reason
+
+Platform Promotion Decision Reports can approve promotion, revision, rejection,
+or archive decisions, but Registry Update Artifacts still had to be drafted
+manually. GDS needed a documented mapping from Promotion Report fields to
+Registry Update fields before automation could safely exist.
+
+### Evolution
+
+Registry updates can now be semi-generated from approved Promotion Reports.
+The draft remains non-authoritative until Human Review confirms the update
+type, status transition, related files, README / AI Repository Index impact,
+and Repository Quality Audit result.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

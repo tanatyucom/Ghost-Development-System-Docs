@@ -173,6 +173,28 @@ Required conditions before promotion:
 
 -
 
+## Registry Update Draft
+
+Registry update required:
+
+-
+
+Suggested update type:
+
+-
+
+Suggested artifact path:
+
+-
+
+Draft generated from this report:
+
+-
+
+Human review required before registry update:
+
+-
+
 ## Human Review
 
 Reviewer:

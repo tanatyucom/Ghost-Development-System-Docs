@@ -56,6 +56,8 @@ Platform Registry Consistency Check verifies:
 - Deprecated entries have review timing.
 - Archived entries have archive reason.
 - Replaced entries do not remain in major README / Roadmap entry points.
+- Registry Update Artifact storage exists and artifact filenames follow the
+  storage naming rule.
 - Registry structure is parseable.
 - Roadmap links to Platform Standard Registry.
 
@@ -134,4 +136,7 @@ health として扱いますが、それだけでは command failure にはし�
 - `templates/completion_report_template.md`
 - `templates/completion_checklist_template.md`
 - `templates/platform_registry_update_template.md`
+- `registry_updates/README.md`
+- `docs/workflow/platform_registry_update_artifact_storage.md`
+- `docs/workflow/auto_registry_update_from_promotion_report.md`
 - `docs/architecture/platform_standard_registry.md`
