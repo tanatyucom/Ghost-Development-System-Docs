@@ -135,6 +135,22 @@ Report:
 - [`reports/repository_quality_report.md`](reports/repository_quality_report.md)
 - [`docs/workflow/repository_quality_audit_workflow.md`](docs/workflow/repository_quality_audit_workflow.md)
 
+## Platform Standard Registry
+
+GDS Platform に昇格した標準機能、標準 Rule、標準 Workflow、標準 Template、
+標準 Report、標準 Validation、標準 Architecture は Platform Standard Registry
+で一覧確認します。
+
+Start from:
+
+- [`docs/architecture/platform_standard_registry.md`](docs/architecture/platform_standard_registry.md)
+- [`docs/workflow/innovation_pipeline_workflow.md`](docs/workflow/innovation_pipeline_workflow.md)
+- [`templates/platform_promotion_decision_report_template.md`](templates/platform_promotion_decision_report_template.md)
+- [`examples/platform_promotion_decision_report_examples.md`](examples/platform_promotion_decision_report_examples.md)
+
+Innovation Pipeline と Platform Promotion Decision Report で昇格判断した標準は、
+Registry に `Standard` または `Candidate` として登録します。
+
 ## Artifact First
 
 Reusable, reviewable, AI-handoff, human-approval, or Git-managed outputs should

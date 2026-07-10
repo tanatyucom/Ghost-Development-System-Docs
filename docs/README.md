@@ -195,6 +195,44 @@ python scripts/repository_quality_audit.py
 Repository Quality Report は生成直後から日本語本文で出力します。
 command、path、status value は互換性維持のため英語表記を残します。
 
+## Platform Standard Registry Index
+
+Platform Standard Registry は、GDS Platform に昇格した標準機能、標準 Rule、
+標準 Workflow、標準 Template、標準 Report、標準 Validation、標準 Architecture
+を一覧管理する index です。
+
+Reference points:
+
+- Registry: `docs/architecture/platform_standard_registry.md`
+- Platform Era Core Principles:
+  `docs/architecture/platform_era_core_principles.md`
+- Innovation Pipeline Workflow:
+  `docs/workflow/innovation_pipeline_workflow.md`
+- Innovation Pipeline Template:
+  `templates/innovation_pipeline_template.md`
+- Platform Promotion Decision Report Template:
+  `templates/platform_promotion_decision_report_template.md`
+- Platform Promotion Decision Report Examples:
+  `examples/platform_promotion_decision_report_examples.md`
+
+Core flow:
+
+```text
+Idea / Experiment
+  -> Validation
+  -> Platform Promotion Decision Report
+  -> Human Approval
+  -> Platform Standard Registry
+  -> Propagation
+```
+
+Registry status values:
+
+- `Standard`
+- `Candidate`
+- `Deprecated`
+- `Replaced`
+
 ## Startup Checklist Index
 
 Startup Checklist は、新しい ChatGPT / Codex / AI セッション、レビュー、

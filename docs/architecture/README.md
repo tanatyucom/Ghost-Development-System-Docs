@@ -19,6 +19,9 @@ runtime behavior.
 - `design_philosophy.md`: principles that guide architecture and documentation.
 - `platform_era_core_principles.md`: classification of Platform Era ideas into
   Core Rule, Design Principle, Platform Architecture, and Long-Term Vision.
+- `platform_standard_registry.md`: registry of GDS Platform standards and
+  standard candidates for shared Rule, Workflow, Template, Component, Report,
+  Validation, and Architecture items.
 
 ## Does NOT Contain
 
@@ -186,6 +189,13 @@ Silent Operation Principle, Platform First, Reuse Before Rebuild, Innovation
 Pipeline, Ghost Ecosystem, Automation Server, and AI Continuous Improvement
 usable for design without turning them into implementation approval.
 
+Platform Standard Registry lists accepted GDS Platform standards and standard
+candidates after Innovation Pipeline and Platform Promotion review. It is the
+lookup point for AI Repository Index, Project Profile System, AI Startup
+Procedure, Daily Operation Cycle, GDS Health, Repository Quality Audit, UTF-8
+Read Rule, Japanese Documentation Localization, Innovation Pipeline, Platform
+Promotion Decision Report, Knowledge Poka-Yoke, and Repository Root Validation.
+
 ## Update Policy
 
 Update architecture documents when responsibility boundaries, design philosophy,
@@ -198,6 +208,7 @@ Do not use this folder to approve Future Candidates by implication.
 - `docs/architecture/responsibility_boundary.md`
 - `docs/architecture/design_philosophy.md`
 - `docs/architecture/platform_era_core_principles.md`
+- `docs/architecture/platform_standard_registry.md`
 - `docs/ai_repository_index.md`
 - `docs/rules/core_principles.md`
 - `docs/rules/external_source_access_rules.md`

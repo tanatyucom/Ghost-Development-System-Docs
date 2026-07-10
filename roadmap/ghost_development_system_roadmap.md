@@ -234,6 +234,14 @@ Standard workflow:
 
 - `docs/workflow/innovation_pipeline_workflow.md`
 
+Platform standard registry:
+
+- `docs/architecture/platform_standard_registry.md`
+
+The registry records accepted Platform standards and standard candidates after
+Platform Promotion review. It is the lookup point for shared Rule, Workflow,
+Template, Component, Report, Validation, and Architecture items.
+
 ## Platform Era Core Principle Classification
 
 Status: classified.

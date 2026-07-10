@@ -1406,6 +1406,37 @@ practice. Future promotion decisions can now compare validation evidence,
 criteria checks, impact review, Human Review, final decision, lessons learned,
 and Recommended Next Q against concrete examples.
 
+## Ver1.51
+
+### Added
+
+- Platform Standard Registry:
+  `docs/architecture/platform_standard_registry.md`.
+- Initial registry entries for AI Repository Index, Project Profile System,
+  AI Startup Procedure, Daily Operation Cycle, Daily Operation Checklist, GDS
+  Health Dashboard, GDS Health Validation, Repository Quality Audit, UTF-8 Read
+  Rule, Japanese Documentation Localization, Innovation Pipeline Workflow,
+  Platform Promotion Decision Report, Knowledge Poka-Yoke, and Repository Root
+  Validation.
+- README, docs index, architecture index, and roadmap links for Platform
+  Standard Registry.
+
+### Reason
+
+Innovation Pipeline and Platform Promotion Decision Report made it possible to
+promote new ideas into Platform standards, but GDS still needed a single lookup
+point showing which standards currently exist and which candidates are being
+tracked.
+
+Without a registry, Platform standards would be scattered across rules,
+workflow, templates, health, reports, and architecture documents.
+
+### Evolution
+
+Platform Promotion now has a post-approval destination. GDS can register
+accepted standards with type, status, origin, related documents, used-by scope,
+notes, and next review timing before propagating them to Ghost Projects.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。
