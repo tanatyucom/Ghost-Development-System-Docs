@@ -48,9 +48,23 @@ AI should not:
 - silently continue when a required source file could not be accessed;
 - use stale copied text when the Raw URL Index indicates a newer source.
 
-## Index Update Rule
+## Index Generation Rule
 
-Update `docs/ai_repository_index.md` when:
+`docs/ai_repository_index.md` is a generated artifact.
+
+Generate or refresh it with:
+
+```bash
+python scripts/generate_ai_repository_index.py --write
+```
+
+Validate the Markdown inventory and Raw URL structure with:
+
+```bash
+python scripts/generate_ai_repository_index.py --validate
+```
+
+Regenerate `docs/ai_repository_index.md` when:
 
 - a new important Markdown knowledge file is added;
 - an important file is moved or renamed;
@@ -60,12 +74,25 @@ Update `docs/ai_repository_index.md` when:
 - Completion Checklist identifies that the index is missing an important
   access path.
 
+## Validation Rule
+
+Validation should confirm:
+
+- Local Path entries exist;
+- Raw URLs match the repository Raw URL pattern;
+- duplicate Local Path entries do not exist;
+- Markdown inventory coverage is complete;
+- newly added Markdown files are registered.
+
+Network access is not required for validation. The validator checks local
+inventory and URL format.
+
 ## Completion Checklist Integration
 
 At task completion, check whether the change affected public AI access.
 
-If yes, update `docs/ai_repository_index.md` and record the result in the
-completion report.
+If yes, regenerate `docs/ai_repository_index.md`, run validation, and record
+the result in the completion report.
 
 If no, record that no AI Repository Index update was required.
 
@@ -89,4 +116,3 @@ Source for AI review and future AI-assisted development.
 Raw URLs are easier for AI tools to fetch reliably than normal GitHub page
 URLs. A maintained Raw URL Index gives AI a stable first file to read and helps
 future tasks reach the correct source without copy-paste loss.
-

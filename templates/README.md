@@ -22,7 +22,7 @@ Completion checklist templates help humans and AI confirm verification, review,
 completion report, Improvement Review, commit / tag / release decisions,
 Recommended Next Q, and workspace clean state before a task is treated as
 complete. They also check whether the AI Repository Knowledge Access Index
-needs an update when public knowledge entry points changed.
+needs regeneration and validation when public knowledge entry points changed.
 
 Q-related templates use the Task Artifact Workspace standard for request,
 completion report, notes, attachments, status movement, and related commit

@@ -63,6 +63,9 @@
 - Public AI knowledge entry points changed:
 - `docs/ai_repository_index.md` update required:
 - `docs/ai_repository_index.md` updated:
+- `docs/ai_repository_index.md` regenerated:
+- AI Repository Index validation passed:
+- New Markdown registered:
 - Raw URL entries added / updated:
 - External source access rule followed:
 - Not required reason:

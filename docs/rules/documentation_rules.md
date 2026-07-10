@@ -54,7 +54,7 @@ should be treated as a documentation review issue.
 
 ### AI Repository Knowledge Access
 
-When public AI knowledge entry points change, update or review:
+When public AI knowledge entry points change, regenerate and validate:
 
 ```text
 docs/ai_repository_index.md
@@ -65,6 +65,13 @@ glossary, history, PIP, CASE, Concept, methodology, or other important public
 Markdown entry points are added, moved, renamed, or materially changed.
 
 The index should provide Raw URLs that AI systems can fetch reliably.
+
+Standard commands:
+
+```bash
+python scripts/generate_ai_repository_index.py --write
+python scripts/generate_ai_repository_index.py --validate
+```
 
 ### Current Scope Must Be Explicit
 

@@ -30,6 +30,9 @@ Release 判断を置き換えません。完了時にそれらを一貫して確
 - Recommended Next Q.
 - Workspace Clean Confirmation.
 - AI Repository Knowledge Access Index update required?
+- AI Repository Knowledge Access Index regenerated?
+- AI Repository Knowledge Access Index validation passed?
+- New Markdown registered?
 
 ## Required Checks
 
@@ -67,12 +70,14 @@ Release 判断を置き換えません。完了時にそれらを一貫して確
 
 Confirm whether the task changed public AI knowledge entry points.
 
-Update `docs/ai_repository_index.md` when README, roadmap, rules, workflow,
-templates, examples, glossary, history, PIP, CASE, Concept, methodology, or
-other important public Markdown entry points are added, moved, renamed, or
-materially changed.
+Regenerate `docs/ai_repository_index.md` when README, roadmap, rules,
+workflow, templates, examples, glossary, history, PIP, CASE, Concept,
+methodology, or other important public Markdown entry points are added, moved,
+renamed, or materially changed.
 
-Record whether the index was updated or not required.
+Run `python scripts/generate_ai_repository_index.py --validate` and record
+whether validation passed, whether new Markdown files were registered, or why
+regeneration was not required.
 
 ### Commit / Tag / Release Check
 
@@ -117,6 +122,9 @@ Completion Checklist:
 - Workspace Clean Confirmation:
 - AI Repository Index Update Required:
 - AI Repository Index Updated:
+- AI Repository Index Regenerated:
+- AI Repository Index Validation Passed:
+- New Markdown Registered:
 ```
 
 ## Decision Background

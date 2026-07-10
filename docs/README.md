@@ -26,8 +26,8 @@ AI needs public GDS knowledge
   -> Report missing access honestly
 ```
 
-Update the index when public AI knowledge entry points are added, moved,
-renamed, or materially changed.
+Regenerate and validate the index when public AI knowledge entry points are
+added, moved, renamed, or materially changed.
 
 ## Startup Checklist Index
 

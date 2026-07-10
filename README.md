@@ -22,7 +22,7 @@ Start from:
 
 README、Roadmap、Architecture、Rules、Workflow、Templates、Examples、
 Glossary、History、PIP、CASE、Concept、Methodology の重要入口を更新した場合は、
-AI Repository Knowledge Access Index の更新要否も確認します。
+AI Repository Knowledge Access Index の再生成・検証要否も確認します。
 
 ## Artifact First
 

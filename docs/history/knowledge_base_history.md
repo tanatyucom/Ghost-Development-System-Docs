@@ -817,6 +817,39 @@ AI-readable public source map. Public repository knowledge can now be reached
 through a stable first file, and completion checks can catch missing Raw URL
 entries when important public knowledge entry points change.
 
+## Ver1.30
+
+### Added
+
+- AI Repository Index auto-generation script:
+  `scripts/generate_ai_repository_index.py`.
+- Markdown inventory generation for all repository Markdown files.
+- Generated `docs/ai_repository_index.md` with Local Path, GitHub URL, Raw
+  URL, Category, Priority, and Generated Timestamp.
+- Validation for local path existence, duplicate entries, Markdown inventory
+  coverage, and Raw URL formatting.
+- Completion Checklist and Completion Report fields for:
+  - AI Repository Index regenerated;
+  - Validation passed;
+  - New Markdown registered.
+- External Source Access Rule updates for generation and validation commands.
+
+### Reason
+
+The first AI Repository Knowledge Access Index made public Raw URLs visible,
+but a manual index can drift as Markdown files are added, moved, renamed, or
+deleted.
+
+Knowledge Poka-Yoke requires the system to make forgetting safe. The index
+therefore needs generation and validation, not only human memory.
+
+### Evolution
+
+GDS evolved from a manually maintained AI access index into an auto-generated
+repository knowledge map. AI readers can reach current Markdown knowledge more
+reliably, and completion checks can verify that new Markdown files are
+registered before work is treated as complete.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。
