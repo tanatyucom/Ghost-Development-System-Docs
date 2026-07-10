@@ -17,11 +17,15 @@ Completion Checklist, Artifact First, Audit Before Repair, Debug Artifact Review
 Migration First, PIP Case Knowledge Base, and Roadmap2 Knowledge Salvage. Concept Promotion is
 handled as part of PIP Case Knowledge Base. Concept ID Naming is the standard
 for assigning stable Concept IDs and keeping the Concept Index traceable.
+Platform Era principle candidates are classified in
+`docs/architecture/platform_era_core_principles.md` before any new rule is
+promoted.
 
 ## Contains
 
 - `rules.md`: rules index and priority.
-- `core_principles.md`: core development philosophy.
+- `core_principles.md`: core development philosophy and Platform Era
+  classification entry point.
 - `utf8_read_rules.md`: UTF-8 reading rule for Japanese Markdown, Q files,
   request artifacts, completion reports, and mojibake reporting.
 - `external_source_access_rules.md`: Raw URL Index and external public

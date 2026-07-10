@@ -230,16 +230,35 @@ Purpose:
 検証を通過したものだけを Ghost Ecosystem 全体へ昇格する。
 ```
 
-## New Core Principle Candidates
+## Platform Era Core Principle Classification
 
-Status: candidates only.
+Status: classified.
 
-- Silent Operation Principle.
-- Platform First.
-- Reuse Before Rebuild.
-- Innovation Pipeline.
+Classification:
 
-Core Rule 化は別 Q で行います。この Roadmap では候補として保持します。
+- Core Rule:
+  - Knowledge Before Automation.
+  - Human Approval Required.
+- Design Principle:
+  - Silent Operation Principle.
+  - Platform First.
+  - Reuse Before Rebuild.
+- Platform Architecture:
+  - Innovation Pipeline.
+  - Shared Components.
+  - Ghost SDK.
+- Long-Term Vision:
+  - Ghost Ecosystem.
+  - Automation Server.
+  - AI Continuous Improvement.
+
+Detailed classification:
+
+- `docs/architecture/platform_era_core_principles.md`
+
+この分類は、今後の設計判断の基盤です。新しい rule、workflow、architecture、
+Command Center、Automation Server、Ghost SDK 実装に昇格する場合は、別 Q と
+Human Approval Gate を必要とします。
 
 ## Ver1.1 Roadmap
 

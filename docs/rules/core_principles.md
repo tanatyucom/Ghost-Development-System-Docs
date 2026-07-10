@@ -152,6 +152,31 @@ standardization, releases, and scope expansion.
 Retrospectives should produce concrete improvements to rules, templates,
 workflow, or roadmap when the learning is reusable.
 
+## Platform Era Classification
+
+Platform Era の新しい思想は、Core Rule、Design Principle、Platform
+Architecture、Long-Term Vision に分類して扱います。
+
+Classification:
+
+- Core Rule:
+  - Knowledge Before Automation.
+  - Human Approval Required.
+- Design Principle:
+  - Silent Operation Principle.
+  - Platform First.
+  - Reuse Before Rebuild.
+- Platform Architecture:
+  - Innovation Pipeline.
+  - Shared Components.
+  - Ghost SDK.
+- Long-Term Vision:
+  - Ghost Ecosystem.
+  - Automation Server.
+  - AI Continuous Improvement.
+
+詳細は `docs/architecture/platform_era_core_principles.md` を参照します。
+
 ## Development Philosophy
 
 The goal is not merely to write code or documents. The goal is to build a

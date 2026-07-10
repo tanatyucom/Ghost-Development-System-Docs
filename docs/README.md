@@ -757,6 +757,8 @@ Therefore, design systems that make forgetting safe.
 Reference points:
 
 - Core Principles: `docs/rules/core_principles.md`
+- Platform Era Core Principle Classification:
+  `docs/architecture/platform_era_core_principles.md`
 - Design Philosophy: `docs/architecture/design_philosophy.md`
 - Startup Checklist: `docs/rules/startup_checklist_rules.md`
 - Completion Checklist: `docs/rules/completion_checklist_rules.md`
@@ -771,8 +773,10 @@ Ghost Development System は、Documentation Platform から Knowledge Platform 
 
 Reference points:
 
-- Roadmap: `docs/roadmap/ghost_development_system_roadmap.md`
+- Roadmap: `roadmap/ghost_development_system_roadmap.md`
 - Architecture: `docs/architecture/responsibility_boundary.md`
+- Platform Era Classification:
+  `docs/architecture/platform_era_core_principles.md`
 - Workflow: `docs/workflow/README.md`
 - Rules: `docs/rules/core_principles.md`
 - Glossary: `docs/glossary/README.md`

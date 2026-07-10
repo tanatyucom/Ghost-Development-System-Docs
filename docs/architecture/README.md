@@ -17,6 +17,8 @@ runtime behavior.
   Boundary, Knowledge Asset Layer, Metrics Layer, PIP, Gray Ghost Core, Archive
   Modules, Command Center, and Launcher.
 - `design_philosophy.md`: principles that guide architecture and documentation.
+- `platform_era_core_principles.md`: classification of Platform Era ideas into
+  Core Rule, Design Principle, Platform Architecture, and Long-Term Vision.
 
 ## Does NOT Contain
 
@@ -178,6 +180,12 @@ Concept Promotion is the lifecycle boundary for `pip/concepts/`. It decides
 whether an early idea becomes a stronger knowledge unit or is archived, but it
 does not itself approve runtime implementation.
 
+Platform Era Core Principle Classification separates roadmap ideas into Core
+Rule, Design Principle, Platform Architecture, and Long-Term Vision. This keeps
+Silent Operation Principle, Platform First, Reuse Before Rebuild, Innovation
+Pipeline, Ghost Ecosystem, Automation Server, and AI Continuous Improvement
+usable for design without turning them into implementation approval.
+
 ## Update Policy
 
 Update architecture documents when responsibility boundaries, design philosophy,
@@ -189,6 +197,7 @@ Do not use this folder to approve Future Candidates by implication.
 
 - `docs/architecture/responsibility_boundary.md`
 - `docs/architecture/design_philosophy.md`
+- `docs/architecture/platform_era_core_principles.md`
 - `docs/ai_repository_index.md`
 - `docs/rules/core_principles.md`
 - `docs/rules/external_source_access_rules.md`

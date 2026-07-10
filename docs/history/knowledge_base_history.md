@@ -1241,6 +1241,39 @@ GDS evolved from a documentation foundation into a platform roadmap. Future work
 now has a clearer path from Platform Integration to Automation Server, Ghost
 Ecosystem, Continuous Improvement, and Innovation Pipeline promotion.
 
+## Ver1.45
+
+### Added
+
+- Platform Era Core Principle Classification:
+  `docs/architecture/platform_era_core_principles.md`.
+- Core Rule classification for Knowledge Before Automation and Human Approval
+  Required.
+- Design Principle classification for Silent Operation Principle, Platform
+  First, and Reuse Before Rebuild.
+- Platform Architecture classification for Innovation Pipeline, Shared
+  Components, and Ghost SDK.
+- Long-Term Vision classification for Ghost Ecosystem, Automation Server, and
+  AI Continuous Improvement.
+- Roadmap update from candidate list to classified Platform Era principles.
+
+### Reason
+
+Roadmap Ver2 added Platform Era principle candidates, but candidate status alone
+did not define whether each item was a rule, design principle, architecture
+candidate, or long-term vision.
+
+GDS needed classification before using these ideas as a basis for Platform
+Integration, Automation Server design, Ghost Ecosystem planning, or future rule
+promotion.
+
+### Evolution
+
+Platform Era thinking moved from a flat candidate list into a responsibility
+classification model. Future Q files can now promote specific items into rules,
+workflow, architecture, templates, or implementation without confusing vision
+with approved scope.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。
