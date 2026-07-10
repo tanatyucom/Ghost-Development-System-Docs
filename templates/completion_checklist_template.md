@@ -31,9 +31,18 @@
 - Summary recorded:
 - Verification recorded:
 - Improvement Review recorded:
+- AI Repository Index update requirement recorded:
 - Remaining Issues recorded:
 - Recommended Next Q recorded:
 - Suggested Commit Message recorded:
+
+## AI Repository Knowledge Access
+
+- Public AI knowledge entry points changed:
+- `docs/ai_repository_index.md` update required:
+- `docs/ai_repository_index.md` updated:
+- Raw URL entries added / updated:
+- Not required reason:
 
 ## Commit / Tag / Release
 
@@ -69,4 +78,6 @@
 - `docs/rules/completion_checklist_rules.md`
 - `docs/workflow/completion_checklist_workflow.md`
 - `templates/completion_report_template.md`
+- `docs/ai_repository_index.md`
+- `docs/rules/external_source_access_rules.md`
 - `docs/workflow/commit_safety_checklist.md`

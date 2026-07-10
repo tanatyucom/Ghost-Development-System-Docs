@@ -51,6 +51,8 @@ only describe boundaries and principles that are accepted enough to guide work.
   next Q, and workspace clean confirmation.
 - Output Layer owns the durable boundary between chat summaries and managed
   artifacts.
+- AI Repository Knowledge Access Index owns the public Raw URL entry boundary
+  for AI-readable GDS repository knowledge.
 - Debug Artifact Review owns the development-time evidence boundary for
   Debug Mode, intermediate artifacts, expected normal state, and review
   handoff.
@@ -140,9 +142,13 @@ complexity.
 Knowledge Poka-Yoke / Design For Forgetfulness means that GDS assumes humans
 forget, AI forgets, and processes drift. Startup Checklist, Completion
 Checklist, Repository Root Validation, Repository Information, Scope Guard, Q
-Artifact, Completion Report, Human Review, AI Proactive Proposal, and
-Collaborative Decision are treated as checkable controls that make forgetting
-safe before it becomes an incident.
+Artifact, AI Repository Knowledge Access Index, Completion Report, Human
+Review, AI Proactive Proposal, and Collaborative Decision are treated as
+checkable controls that make forgetting safe before it becomes an incident.
+
+AI Repository Knowledge Access Index supports external AI review by making the
+public repository readable through stable Raw URLs. It is a documentation
+access boundary, not a replacement for official rule authority.
 
 Knowledge Platform direction extends this principle by treating reusable
 knowledge as assets that can be edited through Knowledge Editor, observed
@@ -180,7 +186,9 @@ Do not use this folder to approve Future Candidates by implication.
 
 - `docs/architecture/responsibility_boundary.md`
 - `docs/architecture/design_philosophy.md`
+- `docs/ai_repository_index.md`
 - `docs/rules/core_principles.md`
+- `docs/rules/external_source_access_rules.md`
 - `docs/rules/startup_checklist_rules.md`
 - `docs/rules/repository_root_validation_rules.md`
 - `docs/rules/ai_proactive_proposal_rules.md`

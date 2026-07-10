@@ -21,7 +21,8 @@ tag, or release work begins.
 Completion checklist templates help humans and AI confirm verification, review,
 completion report, Improvement Review, commit / tag / release decisions,
 Recommended Next Q, and workspace clean state before a task is treated as
-complete.
+complete. They also check whether the AI Repository Knowledge Access Index
+needs an update when public knowledge entry points changed.
 
 Q-related templates use the Task Artifact Workspace standard for request,
 completion report, notes, attachments, status movement, and related commit
@@ -109,6 +110,8 @@ Promote improvements into templates when they help future Q files become:
   accumulating permanent legacy fallback.
 - better at reviewing intermediate debug artifacts before code edits or final
   judgment.
+- better at keeping public Raw URL entry points available for AI repository
+  knowledge access.
 
 ## Improvement Review
 
@@ -235,6 +238,8 @@ Do not add one-off request details to templates. Add only reusable structure.
 - `templates/review_checklist.md`
 - `templates/completion_report_template.md`
 - `templates/codex_review_template.md`
+- `docs/ai_repository_index.md`
+- `docs/rules/external_source_access_rules.md`
 - `docs/requests/README.md`
 - `docs/rules/q_file_artifact_standard.md`
 - `docs/rules/audit_before_repair_rules.md`

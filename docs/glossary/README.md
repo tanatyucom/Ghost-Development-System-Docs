@@ -129,6 +129,13 @@ drift.
 It turns memory-dependent work into visible checks, templates, validation,
 artifacts, review points, and safe automation.
 
+### AI Repository Knowledge Access Index
+
+The Raw URL index that ChatGPT, Codex, and other AI systems should read first
+when using the public GDS Docs GitHub repository as a Knowledge Source.
+
+The standard file is `docs/ai_repository_index.md`.
+
 ### Human Approval Gate
 
 The rule that humans approve architecture changes, destructive changes, scope
@@ -395,8 +402,10 @@ rules, templates, or examples.
 ## Related Documents
 
 - `docs/README.md`
+- `docs/ai_repository_index.md`
 - `docs/rules/project_rules.md`
 - `docs/rules/core_principles.md`
+- `docs/rules/external_source_access_rules.md`
 - `docs/rules/language_rules.md`
 - `docs/rules/startup_checklist_rules.md`
 - `docs/rules/repository_root_validation_rules.md`

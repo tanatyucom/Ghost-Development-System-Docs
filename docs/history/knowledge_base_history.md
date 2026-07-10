@@ -785,6 +785,38 @@ forgetfulness-safe design philosophy. Repeated omissions, repository mistakes,
 copy loss, missing artifacts, skipped verification, and drift-prone handoffs
 can now be promoted into explicit controls instead of relying on memory.
 
+## Ver1.29
+
+### Added
+
+- AI Repository Knowledge Access Index:
+  `docs/ai_repository_index.md`.
+- External Source Access Rules:
+  `docs/rules/external_source_access_rules.md`.
+- Raw URL entries for README, roadmap, architecture, rules, workflow,
+  templates, examples, glossary, history, PIP, CASE, Concept, and methodology.
+- README and Knowledge Base Index entry points for AI repository access.
+- Completion Checklist and Completion Report template fields for AI Repository
+  Index update review.
+- Architecture, glossary, workflow, and rules links for the new access index.
+
+### Reason
+
+GDS Docs is used not only by humans, but also by ChatGPT, Codex, and other AI
+systems as a public Knowledge Source. Normal GitHub page URLs may not be
+reliably readable by AI tools, while Raw URLs are easier to fetch as source
+files.
+
+Without a maintained Raw URL index, AI may rely on stale chat context,
+incomplete copy-paste, or missing files.
+
+### Evolution
+
+Knowledge Base evolved from a human-readable documentation set into an
+AI-readable public source map. Public repository knowledge can now be reached
+through a stable first file, and completion checks can catch missing Raw URL
+entries when important public knowledge entry points change.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

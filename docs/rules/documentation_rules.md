@@ -1,8 +1,8 @@
 # Documentation Rules
 
-**Version:** 2.4
+**Version:** 2.5
 
-**Last Updated:** 2026-07-04
+**Last Updated:** 2026-07-10
 
 ## Purpose
 
@@ -51,6 +51,20 @@ The path should show Target Project, workflow status, and task purpose.
 Artifact location is part of documentation quality. A missing Q artifact path,
 wrong project folder, wrong status folder, or missing completion report pairing
 should be treated as a documentation review issue.
+
+### AI Repository Knowledge Access
+
+When public AI knowledge entry points change, update or review:
+
+```text
+docs/ai_repository_index.md
+```
+
+This applies when README, roadmap, rules, workflow, templates, examples,
+glossary, history, PIP, CASE, Concept, methodology, or other important public
+Markdown entry points are added, moved, renamed, or materially changed.
+
+The index should provide Raw URLs that AI systems can fetch reliably.
 
 ### Current Scope Must Be Explicit
 
@@ -105,6 +119,7 @@ Update documentation when:
 - workflow changes;
 - rules change;
 - templates are improved;
+- public AI knowledge entry points change;
 - a review discovers missing or misleading knowledge;
 - a future candidate is promoted or clarified.
 

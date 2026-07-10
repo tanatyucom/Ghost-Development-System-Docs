@@ -1,6 +1,6 @@
 # Ghost Development System Rules
 
-**Version:** 2.8
+**Version:** 2.9
 
 **Last Updated:** 2026-07-10
 
@@ -34,6 +34,7 @@ Rules follow these principles:
 - Evidence First.
 - Knowledge Before Automation.
 - Knowledge Poka-Yoke / Design For Forgetfulness.
+- External Source Access / AI Repository Knowledge Access.
 - Startup Checklist.
 - Repository Root Validation.
 - AI Proactive Proposal.
@@ -56,6 +57,7 @@ own files.
 ## Official Rule Documents
 
 - `core_principles.md`
+- `external_source_access_rules.md`
 - `project_rules.md`
 - `language_rules.md`
 - `documentation_rules.md`
@@ -161,6 +163,20 @@ before it becomes a repository, scope, commit, release, or knowledge loss
 incident.
 
 Details follow `core_principles.md`.
+
+## External Source Access / AI Repository Knowledge Access
+
+When ChatGPT, Codex, or another AI needs to read the public GDS Docs repository
+as an external Knowledge Source, it should start from
+`docs/ai_repository_index.md` and use Raw URLs for the required files.
+
+If a required public source cannot be fetched or read, AI should report the
+access gap instead of pretending repository knowledge is complete.
+
+When important public knowledge entry points are added, moved, renamed, or
+materially changed, update `docs/ai_repository_index.md`.
+
+Details follow `external_source_access_rules.md`.
 
 ## Completion Checklist
 

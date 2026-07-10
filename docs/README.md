@@ -1,5 +1,34 @@
 # Knowledge Base Index
 
+## AI Repository Knowledge Access Index
+
+AI Repository Knowledge Access Index is the first file ChatGPT, Codex, and
+other AI systems should read when using the public GDS Docs GitHub repository
+as a Knowledge Source.
+
+Reference points:
+
+- Index: `docs/ai_repository_index.md`
+- Raw URL:
+  `https://raw.githubusercontent.com/tanatyucom/Ghost-Development-System-Docs/main/docs/ai_repository_index.md`
+- Rule: `docs/rules/external_source_access_rules.md`
+- Completion Checklist: `templates/completion_checklist_template.md`
+- Completion Report Template: `templates/completion_report_template.md`
+
+Core flow:
+
+```text
+AI needs public GDS knowledge
+  -> Read AI Repository Knowledge Access Index
+  -> Select Raw URL
+  -> Read target file
+  -> Follow related files only when needed
+  -> Report missing access honestly
+```
+
+Update the index when public AI knowledge entry points are added, moved,
+renamed, or materially changed.
+
 ## Startup Checklist Index
 
 Startup Checklist は、新しい ChatGPT / Codex / AI セッション、レビュー、

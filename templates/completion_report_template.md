@@ -58,6 +58,15 @@
 - Files updated:
 - Files intentionally not generated:
 
+## AI Repository Knowledge Access
+
+- Public AI knowledge entry points changed:
+- `docs/ai_repository_index.md` update required:
+- `docs/ai_repository_index.md` updated:
+- Raw URL entries added / updated:
+- External source access rule followed:
+- Not required reason:
+
 ## Commit Tracking
 
 - Related Commit:

@@ -8,6 +8,22 @@ Ghost Development System の公式 Knowledge Base です。
 このページの次に、公式 Knowledge Base Index として
 [`docs/README.md`](docs/README.md) を読んでください。
 
+## AI Repository Knowledge Access
+
+ChatGPT / Codex / AI が公開 GitHub リポジトリから GDS Docs を読む場合は、
+通常の GitHub ページではなく Raw URL Index から開始します。
+
+Start from:
+
+- [`docs/ai_repository_index.md`](docs/ai_repository_index.md)
+- Raw URL:
+  `https://raw.githubusercontent.com/tanatyucom/Ghost-Development-System-Docs/main/docs/ai_repository_index.md`
+- Rule: [`docs/rules/external_source_access_rules.md`](docs/rules/external_source_access_rules.md)
+
+README、Roadmap、Architecture、Rules、Workflow、Templates、Examples、
+Glossary、History、PIP、CASE、Concept、Methodology の重要入口を更新した場合は、
+AI Repository Knowledge Access Index の更新要否も確認します。
+
 ## Artifact First
 
 Reusable, reviewable, AI-handoff, human-approval, or Git-managed outputs should

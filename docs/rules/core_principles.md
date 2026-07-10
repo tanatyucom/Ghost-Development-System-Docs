@@ -102,8 +102,8 @@ Knowledge Poka-Yoke means:
 
 Examples include Startup Checklist, Completion Checklist, Repository Root
 Validation, Repository Information, Scope / Out of Scope, Q Artifact format,
-Download File Rule, Completion Report, Human Review, AI Proactive Proposal, and
-Collaborative Decision Workflow.
+Download File Rule, AI Repository Knowledge Access Index, Completion Report,
+Human Review, AI Proactive Proposal, and Collaborative Decision Workflow.
 
 ### One File One Theme
 

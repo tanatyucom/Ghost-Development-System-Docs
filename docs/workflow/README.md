@@ -59,6 +59,7 @@ gate.
 Idea
   -> Startup Checklist
   -> Repository Root Validation
+  -> AI Repository Index Check, when public repository knowledge is needed
   -> Knowledge Check
   -> Knowledge Poka-Yoke Check
   -> Collaborative Decision, when classification or design is uncertain
@@ -138,6 +139,25 @@ Start
 ```
 
 Details follow `repository_root_validation_workflow.md`.
+
+## AI Repository Knowledge Access Workflow
+
+When ChatGPT, Codex, or another AI reads the public GDS Docs GitHub repository
+as a Knowledge Source, use the Raw URL Index first.
+
+```text
+Need public GDS knowledge
+  -> Read docs/ai_repository_index.md
+  -> Select required Raw URL
+  -> Read target file
+  -> Follow related files only when needed
+  -> Report missing access honestly
+```
+
+When a task changes public entry points, the completion flow should check
+whether `docs/ai_repository_index.md` needs an update.
+
+Details follow `docs/rules/external_source_access_rules.md`.
 
 ## Collaborative Decision Workflow
 
@@ -634,6 +654,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/workflow/template_lifecycle.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/workflow/repository_root_validation_workflow.md`
+- `docs/ai_repository_index.md`
 - `docs/workflow/collaborative_decision_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`
 - `docs/workflow/output_policy.md`
@@ -657,6 +678,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/requests/README.md`
 - `docs/rules/project_rules.md`
 - `docs/rules/core_principles.md`
+- `docs/rules/external_source_access_rules.md`
 - `docs/rules/startup_checklist_rules.md`
 - `docs/rules/repository_root_validation_rules.md`
 - `docs/rules/ai_proactive_proposal_rules.md`
