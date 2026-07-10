@@ -87,6 +87,26 @@ Validation should confirm:
 Network access is not required for validation. The validator checks local
 inventory and URL format.
 
+## CI Validation Rule
+
+GitHub Actions should run AI Repository Index validation on:
+
+- push;
+- pull request;
+- manual workflow dispatch.
+
+The CI workflow should fail when:
+
+- `python scripts/generate_ai_repository_index.py --validate` fails;
+- regenerating the index changes `docs/ai_repository_index.md`;
+- the index is not up to date with the current Markdown inventory.
+
+Standard workflow:
+
+```text
+.github/workflows/ai-repository-index-validation.yml
+```
+
 ## Completion Checklist Integration
 
 At task completion, check whether the change affected public AI access.
@@ -95,6 +115,9 @@ If yes, regenerate `docs/ai_repository_index.md`, run validation, and record
 the result in the completion report.
 
 If no, record that no AI Repository Index update was required.
+
+When CI is available, completion reports should also record whether CI passed,
+whether AI Repository validation passed, and whether the index was up to date.
 
 ## Knowledge Poka-Yoke Relationship
 

@@ -29,6 +29,13 @@ AI needs public GDS knowledge
 Regenerate and validate the index when public AI knowledge entry points are
 added, moved, renamed, or materially changed.
 
+CI validation:
+
+- Workflow: `.github/workflows/ai-repository-index-validation.yml`
+- Validation command: `python scripts/generate_ai_repository_index.py --validate`
+- Up-to-date check: regenerate the index and fail if `docs/ai_repository_index.md`
+  changes.
+
 ## Startup Checklist Index
 
 Startup Checklist は、新しい ChatGPT / Codex / AI セッション、レビュー、

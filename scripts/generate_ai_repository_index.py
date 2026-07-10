@@ -21,6 +21,7 @@ GITHUB_BASE = "https://github.com/tanatyucom/Ghost-Development-System-Docs"
 RAW_BASE = "https://raw.githubusercontent.com/tanatyucom/Ghost-Development-System-Docs/main"
 DEFAULT_BRANCH = "main"
 OUTPUT_PATH = Path("docs/ai_repository_index.md")
+GENERATED_TIMESTAMP_PATTERN = re.compile(r"^- Generated timestamp: `([^`]+)`$")
 
 EXCLUDED_DIRS = {".git", ".agents", ".codex", "__pycache__"}
 
@@ -359,6 +360,17 @@ def render_index(entries: list[Entry], generated_timestamp: str) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+def existing_generated_timestamp(root: Path) -> str | None:
+    path = root / OUTPUT_PATH
+    if not path.exists():
+        return None
+    for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
+        match = GENERATED_TIMESTAMP_PATTERN.match(line.strip())
+        if match:
+            return match.group(1)
+    return None
+
+
 def validate(root: Path, entries: list[Entry]) -> list[str]:
     errors: list[str] = []
     local_paths = [entry.local_path for entry in entries]
@@ -400,7 +412,8 @@ def main() -> int:
         print("error: run from repository root", file=sys.stderr)
         return 2
 
-    generated_timestamp = dt.datetime.now(dt.timezone.utc).strftime(
+    existing_timestamp = existing_generated_timestamp(root)
+    generated_timestamp = existing_timestamp or dt.datetime.now(dt.timezone.utc).strftime(
         "%Y-%m-%dT%H:%M:%SZ"
     )
     entries = build_entries(root, generated_timestamp)

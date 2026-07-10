@@ -23,6 +23,8 @@ Start from:
 README、Roadmap、Architecture、Rules、Workflow、Templates、Examples、
 Glossary、History、PIP、CASE、Concept、Methodology の重要入口を更新した場合は、
 AI Repository Knowledge Access Index の再生成・検証要否も確認します。
+GitHub Actions では `.github/workflows/ai-repository-index-validation.yml`
+により、Index の検証と最新性チェックを行います。
 
 ## Artifact First
 

@@ -850,6 +850,36 @@ repository knowledge map. AI readers can reach current Markdown knowledge more
 reliably, and completion checks can verify that new Markdown files are
 registered before work is treated as complete.
 
+## Ver1.31
+
+### Added
+
+- GitHub Actions workflow:
+  `.github/workflows/ai-repository-index-validation.yml`.
+- CI triggers for push, pull request, and manual workflow dispatch.
+- CI validation command:
+  `python scripts/generate_ai_repository_index.py --validate`.
+- CI up-to-date check that regenerates `docs/ai_repository_index.md` and fails
+  if the generated file differs from the committed file.
+- Completion Checklist and Completion Report fields for:
+  - CI passed;
+  - AI Repository validation passed;
+  - Index up to date.
+
+### Reason
+
+Auto-generation and local validation reduce manual mistakes, but humans can
+still forget to run the generator before push or pull request.
+
+The AI Repository Index is an AI knowledge entry point, so drift should be
+caught automatically before the repository is treated as healthy.
+
+### Evolution
+
+Knowledge Poka-Yoke evolved from local generation into CI-backed repository
+health validation. Missing Markdown registration, stale Raw URL inventory, and
+index drift can now fail the workflow instead of relying only on memory.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

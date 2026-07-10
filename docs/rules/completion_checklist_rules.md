@@ -33,6 +33,9 @@ Release 判断を置き換えません。完了時にそれらを一貫して確
 - AI Repository Knowledge Access Index regenerated?
 - AI Repository Knowledge Access Index validation passed?
 - New Markdown registered?
+- CI Passed?
+- AI Repository Validation Passed?
+- Index Up To Date?
 
 ## Required Checks
 
@@ -78,6 +81,10 @@ renamed, or materially changed.
 Run `python scripts/generate_ai_repository_index.py --validate` and record
 whether validation passed, whether new Markdown files were registered, or why
 regeneration was not required.
+
+When GitHub Actions is available, confirm whether AI Repository Index CI passed.
+The standard workflow is
+`.github/workflows/ai-repository-index-validation.yml`.
 
 ### Commit / Tag / Release Check
 
@@ -125,6 +132,9 @@ Completion Checklist:
 - AI Repository Index Regenerated:
 - AI Repository Index Validation Passed:
 - New Markdown Registered:
+- CI Passed:
+- AI Repository Validation Passed:
+- Index Up To Date:
 ```
 
 ## Decision Background

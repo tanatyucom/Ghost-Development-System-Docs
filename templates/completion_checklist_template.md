@@ -44,6 +44,9 @@
 - `docs/ai_repository_index.md` regenerated:
 - AI Repository Index validation passed:
 - New Markdown registered:
+- CI passed:
+- AI Repository validation passed:
+- Index up to date:
 - Raw URL entries added / updated:
 - Not required reason:
 
