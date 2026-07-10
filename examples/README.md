@@ -60,6 +60,9 @@ reports, and documentation requests can start from a clear reference.
   Revise, Reject, and Archive decisions after Innovation Pipeline validation.
 - `platform_standard_registry_examples.md`: examples for Candidate to
   Standard, Standard update, Deprecated, and Replaced registry operations.
+- `platform_registry_update_completed_examples.md`: completed examples for
+  New Standard, Standard Update, Deprecation, Replacement, and Archive registry
+  update artifacts.
 - `repository_information.md`: example of repository boundaries, source of
   truth, scope guard, and completion criteria.
 - `authority_matrix.md`: example edit and reference authority matrix.
@@ -155,6 +158,8 @@ what a complete, well-scoped document should feel like.
   archived.
 - Use `platform_standard_registry_examples.md` when adding, promoting,
   updating, deprecating, or replacing a Platform Standard Registry entry.
+- Use `platform_registry_update_completed_examples.md` when filling out
+  `templates/platform_registry_update_template.md` for a real registry update.
 - Use `repository_information.md` when a task may involve multiple
   repositories, documentation roots, runtime roots, or reference-only sources.
 - Use `authority_matrix.md` when a task needs explicit Editable, Reference

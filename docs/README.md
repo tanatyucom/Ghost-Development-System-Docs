@@ -219,6 +219,8 @@ Reference points:
   `examples/platform_promotion_decision_report_examples.md`
 - Platform Standard Registry Examples:
   `examples/platform_standard_registry_examples.md`
+- Platform Registry Update Completed Examples:
+  `examples/platform_registry_update_completed_examples.md`
 
 Core flow:
 

@@ -130,3 +130,7 @@ Select one:
 ## Notes
 
 -
+
+## Completed Examples
+
+- `examples/platform_registry_update_completed_examples.md`

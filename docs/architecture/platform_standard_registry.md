@@ -187,6 +187,10 @@ registry entry. The template records previous status, new status, updated
 fields, required artifacts, Repository Quality result, Human Review, and
 approval.
 
+Use `examples/platform_registry_update_completed_examples.md` when you need a
+filled example for New Standard, Standard Update, Deprecation, Replacement, or
+Archive.
+
 Repository Quality Audit checks registry consistency automatically. It reports
 Missing Standard, Broken Registry Link, Deprecated Review Needed, Replaced
 Review Needed, Status Transition Review Needed, Required Artifact Review
@@ -219,6 +223,7 @@ template authority.
 - `templates/platform_registry_update_template.md`
 - `examples/platform_promotion_decision_report_examples.md`
 - `examples/platform_standard_registry_examples.md`
+- `examples/platform_registry_update_completed_examples.md`
 - `docs/workflow/repository_quality_audit_workflow.md`
 - `docs/architecture/platform_era_core_principles.md`
 - `roadmap/ghost_development_system_roadmap.md`
