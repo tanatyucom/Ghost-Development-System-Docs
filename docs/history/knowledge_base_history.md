@@ -974,6 +974,32 @@ task can now begin from AI Startup Procedure, complete through Completion
 Checklist, update reusable knowledge, refresh repository entry points, and feed
 the next Q back into the next startup.
 
+## Ver1.35
+
+### Added
+
+- Daily Operation Checklist Template:
+  `templates/daily_operation_checklist_template.md`.
+- Checklist sections for AI Startup Procedure, Current Q Review,
+  Implementation, Verification, Human Review, Completion Checklist, Commit /
+  Push, Knowledge Update, Repository Update, Next Q Planning, and Next Startup.
+- Completion Report Template fields for Daily Operation Checklist usage and
+  artifact path.
+- README, Knowledge Base Index, Workflow, and Template Index links for the
+  checklist template.
+
+### Reason
+
+AI Daily Operation Cycle defined the operating loop, but daily work still
+needed a concrete checklist artifact so humans and AI can confirm every phase
+without relying on memory.
+
+### Evolution
+
+GDS evolved from a documented operation cycle into a checkable daily operation
+artifact. The full cycle can now be recorded, reviewed, attached to completion
+evidence, and reused by the next startup.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

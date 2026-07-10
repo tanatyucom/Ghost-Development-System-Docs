@@ -97,6 +97,7 @@ Q planning practices into one repeatable operating cycle.
 Reference points:
 
 - Workflow: `docs/workflow/ai_daily_operation_cycle.md`
+- Checklist Template: `templates/daily_operation_checklist_template.md`
 - AI Startup Procedure: `docs/workflow/ai_startup_procedure.md`
 - Completion Checklist: `docs/workflow/completion_checklist_workflow.md`
 - Knowledge Poka-Yoke: `docs/rules/core_principles.md`

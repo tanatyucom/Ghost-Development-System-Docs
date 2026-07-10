@@ -27,6 +27,9 @@ AI Startup Procedure
   -> Next Startup
 ```
 
+Use `templates/daily_operation_checklist_template.md` when this cycle should be
+recorded as a reusable task artifact or completion evidence.
+
 ## Step Details
 
 ### 1. AI Startup Procedure
@@ -201,6 +204,7 @@ It does not replace:
 
 ## Related Documents
 
+- `templates/daily_operation_checklist_template.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`

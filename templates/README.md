@@ -24,6 +24,11 @@ Recommended Next Q, and workspace clean state before a task is treated as
 complete. They also check whether the AI Repository Knowledge Access Index
 needs regeneration and validation when public knowledge entry points changed.
 
+Daily operation checklist templates help humans and AI record the whole AI
+Daily Operation Cycle from startup through Current Q Review, implementation,
+verification, Human Review, Completion Checklist, commit / push, Knowledge
+Update, Repository Update, Next Q Planning, and Next Startup.
+
 Q-related templates use the Task Artifact Workspace standard for request,
 completion report, notes, attachments, status movement, and related commit
 tracking.
@@ -71,6 +76,7 @@ restore guidance.
 ### AI Collaboration
 
 - `startup_checklist_template.md`
+- `daily_operation_checklist_template.md`
 - `repository_root_validation_template.md`
 - `collaborative_decision_template.md`
 - `completion_checklist_template.md`
@@ -232,6 +238,7 @@ Do not add one-off request details to templates. Add only reusable structure.
 
 - `templates/q_file_template.md`
 - `templates/startup_checklist_template.md`
+- `templates/daily_operation_checklist_template.md`
 - `templates/repository_root_validation_template.md`
 - `templates/collaborative_decision_template.md`
 - `templates/completion_checklist_template.md`

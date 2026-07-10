@@ -132,6 +132,9 @@ AI Startup Procedure
 
 Details follow `ai_daily_operation_cycle.md`.
 
+Use `templates/daily_operation_checklist_template.md` when the cycle itself
+should be recorded as a reusable checklist artifact.
+
 ## Startup Checklist Workflow
 
 Before Startup Checklist is completed, AI should follow the AI Startup
@@ -697,6 +700,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 
 - `docs/workflow/template_lifecycle.md`
 - `docs/workflow/ai_daily_operation_cycle.md`
+- `templates/daily_operation_checklist_template.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/workflow/repository_root_validation_workflow.md`

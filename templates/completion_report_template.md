@@ -92,6 +92,8 @@
 ## Startup Checklist Review
 
 - AI Daily Operation Cycle followed:
+- Daily Operation Checklist used:
+- Daily Operation Checklist artifact:
 - Current Q Review completed:
 - Knowledge Update performed:
 - Repository Update performed:
