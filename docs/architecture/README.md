@@ -89,6 +89,8 @@ only describe boundaries and principles that are accepted enough to guide work.
 - Artifact Schema Standard owns the common documentation schema for artifacts
   generated or managed by Command Center, Template Engine, Decision Engine, and
   future Ghost SDK candidates.
+  Structured Artifact Metadata Template maps that schema into optional YAML
+  front matter for new managed artifacts.
 - Launcher owns the user entry point.
 
 ## Database Philosophy Summary
@@ -149,6 +151,7 @@ Detailed specification:
 
 - `docs/architecture/command_center_architecture.md`
 - `docs/architecture/artifact_schema_standard.md`
+- `templates/structured_artifact_metadata_template.md`
 
 AI Proactive Proposal supports human-led collaboration by making concerns and
 better options visible without taking control away from the user.

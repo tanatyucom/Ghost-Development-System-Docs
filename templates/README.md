@@ -48,6 +48,10 @@ Q, Completion Report, Information Package, Multi-AI Handoff, Review Report,
 Decision Record, Registry Update, and Health Report templates should be able
 to express.
 
+Structured Artifact Metadata Template defines the optional YAML front matter
+format for new managed artifacts. It maps Artifact Schema Standard fields into
+machine-readable metadata while keeping Markdown body content human-readable.
+
 Health documents such as `docs/health/gds_health_dashboard.md` may be used
 beside templates when a task should record GDS operating health rather than
 only task completion.
@@ -106,6 +110,7 @@ restore guidance.
 - `repository_root_validation_template.md`
 - `collaborative_decision_template.md`
 - `information_package_template.md`
+- `structured_artifact_metadata_template.md`
 - `multi_ai_handoff_template.md`
 - `multi_ai_handoff_checklist_template.md`
 - `completion_checklist_template.md`

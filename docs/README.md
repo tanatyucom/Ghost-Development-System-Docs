@@ -902,6 +902,8 @@ Reference points:
   `docs/architecture/command_center_architecture.md`
 - Artifact Schema Standard:
   `docs/architecture/artifact_schema_standard.md`
+- Structured Artifact Metadata Template:
+  `templates/structured_artifact_metadata_template.md`
 - Platform Era Classification:
   `docs/architecture/platform_era_core_principles.md`
 - Workflow: `docs/workflow/README.md`

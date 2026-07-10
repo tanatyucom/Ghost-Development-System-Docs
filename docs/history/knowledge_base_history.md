@@ -1871,6 +1871,35 @@ Managed artifacts can now be described through a common schema. This keeps
 Template First and Artifact First aligned before automation or runtime
 contracts are introduced.
 
+## Ver1.68
+
+### Added
+
+- Structured Artifact Metadata Template:
+  `templates/structured_artifact_metadata_template.md`.
+- YAML front matter recommendation for new managed artifacts.
+- Comparison of YAML front matter, JSON code block, and Markdown key-value
+  block.
+- Field definitions for artifact identity, lifecycle, repository context,
+  approval, verification, related artifacts, inputs, outputs, and next action.
+- Unknown / not applicable / empty value handling.
+- Migration and compatibility notes for optional adoption without mass
+  converting existing artifacts.
+- README, docs index, architecture index, templates index, and Artifact Schema
+  Standard links.
+
+### Reason
+
+Artifact Schema Standard defined common artifact fields, but Command Center,
+Template Engine, future validators, and future Ghost SDK candidates also needed
+a concrete metadata representation that remains readable in Markdown.
+
+### Evolution
+
+Structured metadata now has a recommended expression format: YAML front matter.
+It is optional for new artifacts and does not create runtime parser, validator,
+API, database, or SDK contracts.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

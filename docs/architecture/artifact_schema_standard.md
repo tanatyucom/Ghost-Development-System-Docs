@@ -56,6 +56,15 @@ consistent.
 Use this metadata model when creating new templates or Command Center-readable
 artifacts.
 
+Structured metadata template:
+
+- `templates/structured_artifact_metadata_template.md`
+
+Recommended expression format:
+
+- YAML front matter for new managed artifacts, adopted gradually.
+- Existing artifacts are not mass-migrated by this recommendation.
+
 ```text
 Artifact Type:
 Artifact ID:
@@ -405,7 +414,6 @@ This standard does not:
 ## Future Candidates
 
 - Artifact Schema Registry.
-- Structured Artifact Metadata Template.
 - JSON / YAML artifact metadata front matter.
 - Artifact validation engine.
 - Template-to-schema coverage audit.
