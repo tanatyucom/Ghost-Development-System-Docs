@@ -211,7 +211,7 @@ Platform 自体が継続的に強くなる loop を標準化する。
 
 ## Innovation Pipeline
 
-Status: roadmap candidate.
+Status: workflow defined.
 
 Flow:
 
@@ -229,6 +229,10 @@ Purpose:
 実験的な改善を、すぐに rule / workflow / platform standard として固定せず、
 検証を通過したものだけを Ghost Ecosystem 全体へ昇格する。
 ```
+
+Standard workflow:
+
+- `docs/workflow/innovation_pipeline_workflow.md`
 
 ## Platform Era Core Principle Classification
 

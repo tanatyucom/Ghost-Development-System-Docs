@@ -52,6 +52,9 @@ gate.
 - `migration_first_workflow.md`: internal architecture change workflow for
   new standard, migration plan, reference update, verification, legacy removal,
   completion report, and commit.
+- `innovation_pipeline_workflow.md`: workflow for growing ideas from Idea,
+  Experiment, Prototype, Validation, Platform Promotion, Standardization, and
+  Propagation.
 - `concept_promotion_workflow.md`: how concepts move from Candidate to
   Under Review, Experiment, Validated, Promoted, or Archived.
 - `pip_case_knowledge_base_workflow.md`: how reusable lessons become tagged
@@ -94,6 +97,7 @@ Idea
   -> PIP Update, when project state or decisions changed
   -> PIP Case Candidate, when reusable knowledge was found
   -> Concept Promotion, when knowledge is still an early concept
+  -> Innovation Pipeline, when a reusable experiment may become Platform Standard
   -> Roadmap2 Knowledge Salvage, when Roadmap2-only knowledge remains
   -> Human Review
   -> Completion Checklist
@@ -737,6 +741,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/workflow/debug_escalation_ladder.md`
 - `docs/workflow/first_broken_step_methodology.md`
 - `docs/workflow/migration_first_workflow.md`
+- `docs/workflow/innovation_pipeline_workflow.md`
 - `docs/workflow/concept_promotion_workflow.md`
 - `docs/workflow/pip_case_knowledge_base_workflow.md`
 - `docs/workflow/roadmap2_knowledge_salvage_loop.md`

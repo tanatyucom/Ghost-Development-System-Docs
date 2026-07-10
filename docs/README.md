@@ -778,6 +778,8 @@ Reference points:
 - Platform Era Classification:
   `docs/architecture/platform_era_core_principles.md`
 - Workflow: `docs/workflow/README.md`
+- Innovation Pipeline Workflow:
+  `docs/workflow/innovation_pipeline_workflow.md`
 - Rules: `docs/rules/core_principles.md`
 - Glossary: `docs/glossary/README.md`
 

@@ -252,6 +252,7 @@ All Ghost Projects の順で昇格します。
 
 - `docs/workflow/collaborative_decision_workflow.md`
 - `docs/workflow/concept_promotion_workflow.md`
+- `docs/workflow/innovation_pipeline_workflow.md`
 
 関連Roadmap:
 
@@ -259,7 +260,6 @@ All Ghost Projects の順で昇格します。
 
 将来実装候補:
 
-- Innovation Pipeline Workflow.
 - Platform Standard Registry.
 - Experiment Review Template.
 

@@ -1274,6 +1274,34 @@ classification model. Future Q files can now promote specific items into rules,
 workflow, architecture, templates, or implementation without confusing vision
 with approved scope.
 
+## Ver1.46
+
+### Added
+
+- Innovation Pipeline Workflow:
+  `docs/workflow/innovation_pipeline_workflow.md`.
+- Standard flow from Idea to Experiment, Prototype, Validation, Platform
+  Promotion, Standardization, and Propagation.
+- Promotion Criteria for reusable Platform candidates.
+- Stop / Archive Criteria for ideas that should not be standardized.
+- README, docs index, workflow index, roadmap, and architecture classification
+  links for Innovation Pipeline.
+
+### Reason
+
+Roadmap Ver2 and Platform Era classification identified Innovation Pipeline as
+a Platform Architecture concept, but GDS still needed an operational workflow
+for growing field-project experiments into Platform Standards.
+
+Without a workflow, experiments could jump directly into rules, architecture,
+or implementation without validation or Human Approval.
+
+### Evolution
+
+Innovation Pipeline evolved from a roadmap candidate into a standard workflow.
+GDS can now move reusable ideas from field project experiments to Platform
+Promotion and propagation while preserving evidence, review, and scope control.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。
