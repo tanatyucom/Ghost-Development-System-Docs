@@ -81,6 +81,30 @@ Start from:
 
 Completion Checklist は Startup Checklist の対になる終了時ゲートです。
 
+## Repository Root Validation
+
+作業開始前に `pwd`、`git rev-parse --show-toplevel`、`git status` で実際の
+Git repository root を確認し、Working Repository と一致しているかを検証します。
+
+Start from:
+
+- [`docs/rules/repository_root_validation_rules.md`](docs/rules/repository_root_validation_rules.md)
+- [`docs/workflow/repository_root_validation_workflow.md`](docs/workflow/repository_root_validation_workflow.md)
+- [`templates/repository_root_validation_template.md`](templates/repository_root_validation_template.md)
+- [`examples/repository_root_validation_examples.md`](examples/repository_root_validation_examples.md)
+
+## AI Proactive Proposal
+
+AI は、時間短縮、より安全な方法、repository / scope conflict、rule conflict、
+methodology conflict、maintenance risk、knowledge opportunity を検知した場合、
+勝手に実装変更せず、根拠つきで提案します。
+
+Start from:
+
+- [`docs/rules/ai_proactive_proposal_rules.md`](docs/rules/ai_proactive_proposal_rules.md)
+- [`examples/ai_proactive_proposal_examples.md`](examples/ai_proactive_proposal_examples.md)
+- [`docs/rules/ai_collaboration_rules.md`](docs/rules/ai_collaboration_rules.md)
+
 ## PIP v1.1 Stable
 
 PIP (Project Information Package) は、Ghost Development System の正式な

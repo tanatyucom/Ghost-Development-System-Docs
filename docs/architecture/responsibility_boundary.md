@@ -20,6 +20,8 @@ Responsibilities:
 - Documentation.
 - Templates.
 - Startup Checklist.
+- Repository Root Validation.
+- AI Proactive Proposal.
 - Completion Checklist.
 - Output Layer.
 - Debug Artifact Review.
@@ -77,6 +79,51 @@ Start
   -> Repository / Rule / Methodology / Scope Confirmation
   -> Implementation / Review
 ```
+
+## Repository Root Validation
+
+Repository Root Validation owns the boundary between declared Working Repository
+and the actual Git repository root used by shell commands.
+
+Responsibilities:
+
+- confirm current working directory;
+- confirm `git rev-parse --show-toplevel`;
+- compare actual Git root with the Q Working Repository;
+- distinguish production repository from backup or reference-only repository;
+- prevent implementation, review, commit, tag, or release work from starting in
+  the wrong repository.
+
+Repository Root Validation does not own:
+
+- repository migration;
+- Git history rewrite;
+- final commit approval;
+- project-specific runtime behavior.
+
+## AI Proactive Proposal
+
+AI Proactive Proposal owns the collaboration boundary where AI may raise
+evidence-based improvements, time savings, conflicts, risks, and knowledge
+opportunities without silently changing implementation.
+
+Responsibilities:
+
+- identify better technical approaches;
+- identify significant time saving opportunities;
+- identify repository, scope, rule, or methodology conflicts;
+- identify maintenance risks;
+- identify Concept / CASE / Rule / Workflow candidates;
+- separate proposal from implementation;
+- leave final decision to the user.
+
+AI Proactive Proposal does not own:
+
+- final human approval authority;
+- scope expansion;
+- commit, tag, or release approval;
+- automatic implementation changes;
+- promotion of Future Candidates into approved scope.
 
 ## Completion Checklist
 

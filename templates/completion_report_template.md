@@ -78,6 +78,10 @@
 
 - Startup Checklist applies:
 - Working Repository confirmed:
+- Repository Root Validation performed:
+- Current Working Directory:
+- Git repository root:
+- Root matched Working Repository:
 - Production / Backup / Reference Only boundaries confirmed:
 - Current Phase confirmed:
 - Current Goal confirmed:
@@ -86,6 +90,8 @@
 - Q Artifact / Download File status confirmed:
 - Scope / Out of Scope confirmed:
 - Commit policy confirmed:
+- Proactive Proposal check performed:
+- Proactive proposals made:
 - Startup blockers:
 
 ## Completion Checklist

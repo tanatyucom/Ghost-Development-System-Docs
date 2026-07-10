@@ -12,11 +12,13 @@ Examples は参考資料です。正式なルールは `docs/rules/startup_check
 ```text
 Startup Checklist:
 - Repository: C:\GitHub\Ghost-Development-System-Docs
+- Root: C:/GitHub/Ghost-Development-System-Docs matches Working Repository
 - Scope: docs/rules, docs/workflow, templates, examples, README only
 - Related Repository: GameGhost is reference only
 - Rules: Project First, Japanese First, Artifact First, Q File Artifact Standard
 - Methodology: Knowledge Promotion
 - Q artifact: request.md saved in docs/requests/gds/approved/...
+- Proposal: no scope conflict; no better approach requiring user decision
 - Commit: Do not commit
 - Ready: Yes
 ```
@@ -27,18 +29,22 @@ Startup Checklist:
 - GameGhost を参照のみにしている。
 - Q artifact の保存状態を確認している。
 - Commit 禁止を開始前に確認している。
+- Git root が Working Repository と一致している。
+- Proactive Proposal の有無を確認している。
 
 ## Good Example: Debug / OCR Review Q
 
 ```text
 Startup Checklist:
 - Repository: C:\SteamAI
+- Root: C:/SteamAI matches Working Repository
 - Scope: review artifact generation only
 - Related Repository: Ghost-Development-System-Docs is reference only
 - Rules: Debug Artifact Review, Debug Escalation Ladder, Audit Before Repair
 - Methodology: First Broken Step, Trace Before Tune
 - Q artifact: request.md saved
 - Review Entry Point: contact sheet first, then overlay, then CSV
+- Proposal: algorithm change should wait until first broken step is confirmed
 - Commit: Do not commit
 - Ready: Yes
 ```

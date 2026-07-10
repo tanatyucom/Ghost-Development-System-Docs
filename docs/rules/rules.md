@@ -1,6 +1,6 @@
 # Ghost Development System Rules
 
-**Version:** 2.6
+**Version:** 2.7
 
 **Last Updated:** 2026-07-10
 
@@ -34,6 +34,8 @@ Rules follow these principles:
 - Evidence First.
 - Knowledge Before Automation.
 - Startup Checklist.
+- Repository Root Validation.
+- AI Proactive Proposal.
 - Completion Checklist.
 - Artifact First.
 - Audit Before Repair.
@@ -57,6 +59,8 @@ own files.
 - `language_rules.md`
 - `documentation_rules.md`
 - `startup_checklist_rules.md`
+- `repository_root_validation_rules.md`
+- `ai_proactive_proposal_rules.md`
 - `completion_checklist_rules.md`
 - `artifact_first_rules.md`
 - `q_file_artifact_standard.md`
@@ -115,6 +119,35 @@ Artifact Review, Debug Escalation Ladder, Migration First, PIP Case Knowledge
 Base, Concept Promotion, Roadmap2 Knowledge Salvage, or Commit Safety.
 
 Details follow `startup_checklist_rules.md`.
+
+## Repository Root Validation
+
+Before implementation, review, commit, tag, or release work begins, confirm the
+actual Git repository root and compare it with the Q Working Repository.
+
+Standard commands:
+
+```bash
+pwd
+git rev-parse --show-toplevel
+git status
+```
+
+If the actual Git root does not match the expected Working Repository, stop and
+resolve the repository mismatch before editing or committing.
+
+Details follow `repository_root_validation_rules.md`.
+
+## AI Proactive Proposal
+
+AI may proactively propose evidence-based improvements, time savings,
+repository / scope conflict warnings, rule conflict warnings, methodology
+conflict warnings, maintenance risks, and knowledge opportunities.
+
+AI must not silently change implementation based on the proposal. The proposal
+should include evidence and leave the final decision to the user.
+
+Details follow `ai_proactive_proposal_rules.md`.
 
 ## Completion Checklist
 

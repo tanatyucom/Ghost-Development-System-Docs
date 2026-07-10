@@ -134,6 +134,24 @@ review, Q execution, or documentation update begins.
 It confirms repository boundaries, applicable rules, methodologies, Q artifact
 status, scope, out-of-scope items, dirty workspace state, and commit policy.
 
+### Repository Root Validation
+
+The startup check that confirms the actual Git repository root with
+`git rev-parse --show-toplevel` and compares it with the expected Working
+Repository.
+
+It prevents work, review, commit, tag, or release operations from starting in a
+wrong folder, home directory, backup directory, or reference-only repository.
+
+### AI Proactive Proposal
+
+The collaboration rule that allows AI to share evidence-based improvements,
+time saving opportunities, repository or scope concerns, rule conflicts,
+methodology conflicts, maintenance risks, and knowledge opportunities before
+changing implementation.
+
+AI Proactive Proposal keeps final judgment with the user.
+
 ### Completion Checklist
 
 The completion confirmation system used before work is treated as complete,
@@ -364,6 +382,8 @@ rules, templates, or examples.
 - `docs/rules/project_rules.md`
 - `docs/rules/language_rules.md`
 - `docs/rules/startup_checklist_rules.md`
+- `docs/rules/repository_root_validation_rules.md`
+- `docs/rules/ai_proactive_proposal_rules.md`
 - `docs/rules/completion_checklist_rules.md`
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/q_file_artifact_standard.md`
@@ -375,6 +395,7 @@ rules, templates, or examples.
 - `docs/rules/git_rules.md`
 - `docs/workflow/commit_safety_checklist.md`
 - `docs/workflow/startup_checklist_workflow.md`
+- `docs/workflow/repository_root_validation_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`
 - `docs/requests/README.md`
 - `docs/workflow/output_policy.md`

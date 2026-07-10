@@ -423,6 +423,10 @@ or Q execution begins.
 
 - Startup Checklist applies: Yes / No
 - Working Repository confirmed:
+- Repository Root Validation required:
+- Current Working Directory:
+- Git repository root:
+- Root matches Working Repository:
 - Production / Backup / Reference Only boundaries confirmed:
 - Current Phase:
 - Current Goal:
@@ -432,11 +436,15 @@ or Q execution begins.
 - Scope / Out of Scope confirmed:
 - Dirty Workspace checked:
 - Commit policy confirmed:
+- Proactive Proposal check required:
+- Better approach / time saving / concern to report:
 - Ready to start:
 
 Reference:
 
 - `docs/rules/startup_checklist_rules.md`
+- `docs/rules/repository_root_validation_rules.md`
+- `docs/rules/ai_proactive_proposal_rules.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `templates/startup_checklist_template.md`
 

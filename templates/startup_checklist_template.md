@@ -23,12 +23,26 @@
 
 ## Startup Confirmation
 
+- Current Working Directory:
+- Git repository root:
+- Root matches Working Repository:
 - Production repository confirmed:
 - Backup / reference-only repository confirmed:
 - Editable paths:
 - Forbidden paths:
 - Commit policy:
 - Dirty workspace checked:
+
+## Repository Root Validation
+
+- `pwd` / `Get-Location` checked:
+- `git rev-parse --show-toplevel` checked:
+- `git status` checked:
+- Expected Working Repository:
+- Actual Git root:
+- Production Repository:
+- Backup / Reference Repository:
+- Safe to start:
 
 ## Applicable Rules
 
@@ -44,6 +58,8 @@
 - PIP Case Knowledge Base:
 - Concept Promotion:
 - Roadmap2 Knowledge Salvage:
+- Repository Root Validation:
+- AI Proactive Proposal:
 - Other:
 
 ## Applicable Methodologies
@@ -55,6 +71,19 @@
 - Evidence Feedback Loop:
 - Knowledge Promotion:
 - Other:
+
+## Proactive Proposal Check
+
+- Better approach available:
+- Significant time saving possible:
+- Repository / Scope concern:
+- Rule conflict:
+- Methodology conflict:
+- Future maintenance risk:
+- Knowledge opportunity detected:
+- Concept / CASE / Rule / Workflow candidate:
+- Human Review concern:
+- User decision needed:
 
 ## Q / Artifact Check
 

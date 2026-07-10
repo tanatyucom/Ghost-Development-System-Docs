@@ -21,6 +21,9 @@
 
 - Startup Checklist が作業開始前に確認されている。
 - Working Repository が確認されている。
+- Repository Root Validation が実行されている。
+- Git repository root が Working Repository と一致している。
+- backup / reference-only repository で作業していない。
 - Production / Backup / Reference Only boundaries が確認されている。
 - Current Phase と Current Goal が確認されている。
 - Applicable Rules が作業内容に合っている。
@@ -28,6 +31,8 @@
 - Q Artifact / Download File の扱いが確認されている。
 - Scope / Out of Scope が確認されている。
 - Commit policy が確認されている。
+- Better approach / time saving / concern / knowledge opportunity がある場合、
+  AI が勝手に実装せず提案として分離している。
 
 ## Completion Checklist
 

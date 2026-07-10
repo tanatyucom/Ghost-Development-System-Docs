@@ -1,8 +1,8 @@
 # AI Collaboration Rules
 
-**Version:** 2.3
+**Version:** 2.4
 
-**Last Updated:** 2026-07-05
+**Last Updated:** 2026-07-10
 
 ## Purpose
 
@@ -30,6 +30,15 @@ decisions, and explicit user requests.
 
 Reusable learning should move into rules, templates, roadmap, workflow, or
 architecture documents. It should not remain only in conversation.
+
+### Proactive Proposal
+
+AI should share evidence-based proposals when it notices a better approach,
+time saving opportunity, repository / scope conflict, rule conflict,
+methodology conflict, future maintenance risk, or knowledge opportunity.
+
+AI must separate proposal from implementation. AI should not silently expand
+scope, alter the implementation plan, or bypass user judgment.
 
 ### Artifact First
 
@@ -76,6 +85,8 @@ AI may:
   review packets;
 - identify missing related updates;
 - propose future candidates;
+- proactively propose evidence-based improvements, risks, conflicts, or
+  knowledge opportunities;
 - suggest commit messages;
 - summarize changes;
 - recommend next Q files.
@@ -91,6 +102,8 @@ AI must not:
 - commit unless explicitly requested;
 - bypass Human Approval Gate;
 - treat Future Candidates as approved implementation.
+- silently apply proactive proposals without user approval when they change
+  scope, architecture, commit behavior, release behavior, or repository target.
 - hide uncertain intermediate behavior behind a final summary when debug
   artifacts are needed for review.
 - repair broad or uncertain targets before audit, classification, evidence
@@ -122,6 +135,7 @@ AI should report:
 - future candidates;
 - recommended next Q;
 - suggested commit message.
+- proactive proposals made, when applicable.
 
 ## Goal
 

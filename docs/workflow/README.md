@@ -15,6 +15,8 @@ gate.
 - `startup_checklist_workflow.md`: startup confirmation flow for repository,
   Q artifacts, applicable rules, methodologies, scope, dirty workspace, and
   commit policy before implementation or review begins.
+- `repository_root_validation_workflow.md`: startup workflow for checking the
+  actual Git repository root against the Q Working Repository.
 - `completion_checklist_workflow.md`: completion confirmation flow for
   verification, review, completion report, Improvement Review, commit, tag,
   release, next Q, and workspace clean confirmation.
@@ -53,6 +55,7 @@ gate.
 ```text
 Idea
   -> Startup Checklist
+  -> Repository Root Validation
   -> Knowledge Check
   -> Output Decision
   -> Review
@@ -113,6 +116,23 @@ Start
 ```
 
 Details follow `startup_checklist_workflow.md`.
+
+## Repository Root Validation Workflow
+
+Before implementation, review, commit, tag, or release work begins, confirm the
+actual Git root and compare it with the expected Working Repository.
+
+```text
+Start
+  -> Current Working Directory Check
+  -> Git Root Check
+  -> Working Repository Match Check
+  -> Production / Backup / Reference Check
+  -> git status Check
+  -> Safe To Start Decision
+```
+
+Details follow `repository_root_validation_workflow.md`.
 
 ## Completion Checklist Workflow
 
@@ -569,6 +589,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 
 - `docs/workflow/template_lifecycle.md`
 - `docs/workflow/startup_checklist_workflow.md`
+- `docs/workflow/repository_root_validation_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`
 - `docs/workflow/output_policy.md`
 - `docs/workflow/commit_safety_checklist.md`
@@ -591,6 +612,8 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/requests/README.md`
 - `docs/rules/project_rules.md`
 - `docs/rules/startup_checklist_rules.md`
+- `docs/rules/repository_root_validation_rules.md`
+- `docs/rules/ai_proactive_proposal_rules.md`
 - `docs/rules/completion_checklist_rules.md`
 - `docs/templates/q_file_template.md`
 - `docs/templates/review_checklist.md`

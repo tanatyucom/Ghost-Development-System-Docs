@@ -17,6 +17,7 @@ Startup Checklist を確認します。
 最低限確認する項目:
 
 - Working Repository.
+- Repository Root Validation.
 - Production repository / backup / reference-only repository.
 - Current Phase.
 - Current Goal.
@@ -27,6 +28,7 @@ Startup Checklist を確認します。
 - Artifact / Download File Rule.
 - Scope / Out of Scope.
 - Commit policy.
+- Proactive Proposal check.
 
 ## Required Checks
 
@@ -41,6 +43,29 @@ Startup Checklist を確認します。
 - Single Source Of Truth は何か。
 - Related Repository は editable / reference only / forbidden のどれか。
 - GameGhost など関連 repository を誤って編集しないか。
+
+### Repository Root Validation
+
+作業開始前に実際の Git repository root を確認します。
+
+標準コマンド:
+
+```bash
+pwd
+git rev-parse --show-toplevel
+git status
+```
+
+確認すること:
+
+- Current Working Directory.
+- Git repository root.
+- Working Repository と Git root が一致しているか。
+- Production Repository か。
+- Backup / Reference Repository ではないか。
+- `git status` が意図した repository の状態を示しているか。
+
+Root が一致しない場合は implementation / review / commit を開始しません。
 
 ### Rule Check
 
@@ -60,6 +85,8 @@ Startup Checklist を確認します。
 - PIP Case Knowledge Base.
 - Concept Promotion.
 - Roadmap2 Knowledge Salvage.
+- AI Proactive Proposal.
+- Repository Root Validation.
 
 ### Methodology Check
 
@@ -73,6 +100,22 @@ Startup Checklist を確認します。
 - Knowledge Before Automation.
 - Evidence Feedback Loop.
 - Knowledge Promotion.
+
+### Proactive Proposal Check
+
+AI は、作業前または作業中に改善案、時間短縮、repository / scope conflict、
+rule conflict、methodology conflict、maintenance risk、knowledge opportunity を検知した場合、
+勝手に実装変更せず、根拠つきで提案します。
+
+確認すること:
+
+- Better approach available?
+- Significant time saving possible?
+- Repository / Scope concern?
+- Rule conflict?
+- Methodology conflict?
+- Knowledge opportunity detected?
+- Any constructive concern?
 
 ### Q Artifact Check
 
@@ -111,6 +154,8 @@ Startup Checklist:
 - Applicable methodologies:
 - Q artifact status:
 - Commit policy:
+- Repository root validation:
+- Proactive proposal:
 - Ready to start:
 ```
 
@@ -133,6 +178,8 @@ Startup Checklist は、既存 Knowledge を増やすためではなく、既存
 - `templates/startup_checklist_template.md`
 - `examples/startup_checklist_examples.md`
 - `docs/rules/project_rules.md`
+- `docs/rules/repository_root_validation_rules.md`
+- `docs/rules/ai_proactive_proposal_rules.md`
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/q_file_artifact_standard.md`
 - `docs/rules/git_rules.md`

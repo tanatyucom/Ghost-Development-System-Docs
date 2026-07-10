@@ -672,6 +672,60 @@ Knowledge Base evolved from startup confirmation into a paired start/end
 control system. Work now has a defined entry check and a defined completion
 check before it is treated as finished.
 
+## Ver1.25
+
+### Added
+
+- Repository Root Validation Rules:
+  `docs/rules/repository_root_validation_rules.md`.
+- Repository Root Validation Workflow:
+  `docs/workflow/repository_root_validation_workflow.md`.
+- Repository Root Validation Template:
+  `templates/repository_root_validation_template.md`.
+- Repository Root Validation Examples:
+  `examples/repository_root_validation_examples.md`.
+- Repository root fields in Startup Checklist, Q template, Review Checklist,
+  and Completion Report Template.
+
+### Reason
+
+Repository Information defines where work should happen, but it does not prove
+that the current shell is actually inside that repository. Wrong Git roots,
+home directories, backup folders, and reference-only repositories can cause
+search, review, commit, and repair work to happen in the wrong place.
+
+### Evolution
+
+Startup Checklist evolved from declared repository confirmation into measured
+repository confirmation. GDS now checks both the expected Working Repository and
+the actual Git root before work begins.
+
+## Ver1.26
+
+### Added
+
+- AI Proactive Proposal Rules:
+  `docs/rules/ai_proactive_proposal_rules.md`.
+- AI Proactive Proposal Examples:
+  `examples/ai_proactive_proposal_examples.md`.
+- AI Collaboration Rule updates for proactive proposals.
+- Startup Checklist and review template fields for better approach, time
+  saving, repository / scope concern, rule conflict, methodology conflict,
+  maintenance risk, and knowledge opportunity.
+
+### Reason
+
+Long-running GDS work benefits when AI can raise evidence-based concerns and
+better options before costly implementation. Without a rule, helpful AI
+observations may remain unstated, or worse, may be silently applied as scope
+changes.
+
+### Evolution
+
+AI collaboration evolved from instruction execution into human-led proposal
+collaboration: AI may surface evidence-based options and concerns, while the
+user keeps final judgment and implementation authority.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

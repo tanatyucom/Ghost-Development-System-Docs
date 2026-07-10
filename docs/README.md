@@ -67,6 +67,40 @@ Implementation
 Completion Checklist does not automatically approve commit, tag, or release.
 It records whether each one is required and whether it was executed.
 
+## Repository Root Validation Index
+
+Repository Root Validation は、作業開始前に現在の Git repository root を実測し、
+Q の Working Repository と一致しているか確認する標準です。
+
+Reference points:
+
+- Rules: `docs/rules/repository_root_validation_rules.md`
+- Workflow: `docs/workflow/repository_root_validation_workflow.md`
+- Template: `templates/repository_root_validation_template.md`
+- Examples: `examples/repository_root_validation_examples.md`
+- Startup Checklist: `docs/rules/startup_checklist_rules.md`
+
+Standard commands:
+
+```bash
+pwd
+git rev-parse --show-toplevel
+git status
+```
+
+## AI Proactive Proposal Index
+
+AI Proactive Proposal は、AI が改善案、時間短縮、repository / scope conflict、
+rule conflict、methodology conflict、maintenance risk、knowledge opportunity を
+検知したとき、勝手に実装変更せず根拠つきで提案する協働標準です。
+
+Reference points:
+
+- Rules: `docs/rules/ai_proactive_proposal_rules.md`
+- Examples: `examples/ai_proactive_proposal_examples.md`
+- AI Collaboration: `docs/rules/ai_collaboration_rules.md`
+- Startup Checklist: `docs/rules/startup_checklist_rules.md`
+
 ## Artifact First Index
 
 Reusable, reviewable, AI-handoff, human-approval, or Git-managed outputs should

@@ -27,6 +27,11 @@ reports, and documentation requests can start from a clear reference.
 - `startup_checklist_examples.md`: good and bad examples for startup
   repository confirmation, rule confirmation, methodology confirmation, Q
   artifact confirmation, scope guard, and commit policy checks.
+- `repository_root_validation_examples.md`: good and bad examples for checking
+  actual Git root against the expected Working Repository.
+- `ai_proactive_proposal_examples.md`: good and bad examples for AI proposals
+  that share evidence-based improvements, risks, conflicts, and knowledge
+  opportunities without silently changing implementation.
 - `completion_checklist_examples.md`: good and bad examples for completion
   verification, review, completion report, Improvement Review, commit / tag /
   release decisions, next Q, and workspace clean confirmation.
@@ -104,6 +109,12 @@ what a complete, well-scoped document should feel like.
   run, review, Q execution, or documentation update that could confuse
   repository boundaries, applicable rules, methodology, Q artifact state, or
   commit policy.
+- Use `repository_root_validation_examples.md` when the current shell location,
+  Git root, production repository, backup repository, or reference-only
+  repository could be confused.
+- Use `ai_proactive_proposal_examples.md` when AI should raise a better
+  approach, time saving opportunity, conflict, risk, or knowledge opportunity
+  before changing work.
 - Use `completion_checklist_examples.md` before treating work as complete,
   committing, tagging, releasing, or handing off the next Q.
 - Use `q_file_artifact_workflow.md` when saving a Q file in a
@@ -162,10 +173,14 @@ Do not use examples to introduce new rules. Promote reusable standards to
 - `docs/templates/`
 - `docs/rules/`
 - `docs/rules/startup_checklist_rules.md`
+- `docs/rules/repository_root_validation_rules.md`
+- `docs/rules/ai_proactive_proposal_rules.md`
 - `docs/rules/completion_checklist_rules.md`
 - `docs/workflow/startup_checklist_workflow.md`
+- `docs/workflow/repository_root_validation_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`
 - `templates/startup_checklist_template.md`
+- `templates/repository_root_validation_template.md`
 - `templates/completion_checklist_template.md`
 - `docs/templates/review_checklist.md`
 - `docs/templates/q_file_template.md`

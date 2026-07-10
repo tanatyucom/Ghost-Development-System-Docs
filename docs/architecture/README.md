@@ -12,9 +12,10 @@ runtime behavior.
 ## Contains
 
 - `responsibility_boundary.md`: ownership boundaries for DevelopmentSystem,
-  Startup Checklist, Completion Checklist, Output Layer, Migration First
-  Boundary, Knowledge Asset Layer, Metrics Layer, PIP, Gray Ghost Core, Archive
-  Modules, Command Center, and Launcher.
+  Startup Checklist, Repository Root Validation, AI Proactive Proposal,
+  Completion Checklist, Output Layer, Migration First Boundary, Knowledge Asset
+  Layer, Metrics Layer, PIP, Gray Ghost Core, Archive Modules, Command Center,
+  and Launcher.
 - `design_philosophy.md`: principles that guide architecture and documentation.
 
 ## Does NOT Contain
@@ -39,6 +40,10 @@ only describe boundaries and principles that are accepted enough to guide work.
 - Startup Checklist owns the session-start confirmation boundary for
   repository, Q artifact, applicable rules, methodologies, scope, and commit
   policy.
+- Repository Root Validation owns the boundary between declared Working
+  Repository and actual Git root.
+- AI Proactive Proposal owns the proposal boundary where AI can raise
+  evidence-based improvements or concerns without silently changing scope.
 - Completion Checklist owns the task-end confirmation boundary for
   verification, review, completion report, commit / tag / release decisions,
   next Q, and workspace clean confirmation.
@@ -80,12 +85,19 @@ not replace project-owned schema or runtime behavior.
 ## Design Philosophy Summary
 
 Accepted design principles include Evidence First, Purpose-Oriented Naming,
-Human Approval Gate, Knowledge Before Automation, Startup Checklist, Completion
-Checklist, Artifact First, Debug Artifact Review, and Migration First.
+Human Approval Gate, Knowledge Before Automation, Startup Checklist, Repository
+Root Validation, AI Proactive Proposal, Completion Checklist, Artifact First,
+Debug Artifact Review, and Migration First.
 
 Startup Checklist supports these principles by confirming the active repository,
 scope, applicable rules, methodologies, Q artifact status, and commit policy
 before implementation or review begins.
+
+Repository Root Validation supports Startup Checklist by checking the actual
+Git root before work begins.
+
+AI Proactive Proposal supports human-led collaboration by making concerns and
+better options visible without taking control away from the user.
 
 Completion Checklist supports these principles by confirming verification,
 review, completion report, Improvement Review, commit / tag / release decisions,
@@ -156,8 +168,11 @@ Do not use this folder to approve Future Candidates by implication.
 - `docs/architecture/responsibility_boundary.md`
 - `docs/architecture/design_philosophy.md`
 - `docs/rules/startup_checklist_rules.md`
+- `docs/rules/repository_root_validation_rules.md`
+- `docs/rules/ai_proactive_proposal_rules.md`
 - `docs/rules/completion_checklist_rules.md`
 - `docs/workflow/startup_checklist_workflow.md`
+- `docs/workflow/repository_root_validation_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/q_file_artifact_standard.md`
