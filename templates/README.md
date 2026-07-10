@@ -29,6 +29,10 @@ Daily Operation Cycle from startup through Current Q Review, implementation,
 verification, Human Review, Completion Checklist, commit / push, Knowledge
 Update, Repository Update, Next Q Planning, and Next Startup.
 
+Health documents such as `docs/health/gds_health_dashboard.md` may be used
+beside templates when a task should record GDS operating health rather than
+only task completion.
+
 Q-related templates use the Task Artifact Workspace standard for request,
 completion report, notes, attachments, status movement, and related commit
 tracking.
@@ -246,6 +250,7 @@ Do not add one-off request details to templates. Add only reusable structure.
 - `templates/completion_report_template.md`
 - `templates/codex_review_template.md`
 - `docs/ai_repository_index.md`
+- `docs/health/gds_health_dashboard.md`
 - `docs/rules/external_source_access_rules.md`
 - `docs/requests/README.md`
 - `docs/rules/q_file_artifact_standard.md`

@@ -112,6 +112,8 @@ knowledge-producing, or part of repeated GDS operation.
 ## 9. Repository Update
 
 - Repository update required:
+- GDS Health reviewed:
+- GDS Health dashboard updated:
 - README updated:
 - docs/README updated:
 - Workflow index updated:

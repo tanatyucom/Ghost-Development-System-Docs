@@ -120,6 +120,32 @@ AI Startup Procedure
   -> Next Startup
 ```
 
+## GDS Health Index
+
+GDS Health makes the operating state of GDS visible without treating health as
+blame or final quality judgment.
+
+Reference points:
+
+- Health Dashboard: `docs/health/gds_health_dashboard.md`
+- Health Folder: `docs/health/README.md`
+- AI Repository Index: `docs/ai_repository_index.md`
+- Daily Operation Cycle: `docs/workflow/ai_daily_operation_cycle.md`
+- Daily Operation Checklist:
+  `templates/daily_operation_checklist_template.md`
+
+Health areas:
+
+- Repository Health
+- Knowledge Health
+- Rule Coverage
+- Workflow Coverage
+- Template Coverage
+- Example Coverage
+- Automation Coverage
+- CI Status
+- Project Profile Coverage
+
 ## Startup Checklist Index
 
 Startup Checklist は、新しい ChatGPT / Codex / AI セッション、レビュー、

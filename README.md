@@ -87,6 +87,15 @@ AI Startup Procedure
   -> Next Startup
 ```
 
+## GDS Health
+
+GDS Health makes repository, knowledge, workflow, template, example,
+automation, CI, and project profile health visible for continuous improvement.
+
+Start from:
+
+- [`docs/health/gds_health_dashboard.md`](docs/health/gds_health_dashboard.md)
+
 ## Artifact First
 
 Reusable, reviewable, AI-handoff, human-approval, or Git-managed outputs should

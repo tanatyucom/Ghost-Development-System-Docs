@@ -135,6 +135,10 @@ Details follow `ai_daily_operation_cycle.md`.
 Use `templates/daily_operation_checklist_template.md` when the cycle itself
 should be recorded as a reusable checklist artifact.
 
+Use `docs/health/gds_health_dashboard.md` when the cycle reveals repository,
+knowledge, workflow, template, example, automation, CI, or project profile
+health issues that should be visible across tasks.
+
 ## Startup Checklist Workflow
 
 Before Startup Checklist is completed, AI should follow the AI Startup

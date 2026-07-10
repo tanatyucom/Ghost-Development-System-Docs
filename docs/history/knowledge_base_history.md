@@ -1000,6 +1000,33 @@ GDS evolved from a documented operation cycle into a checkable daily operation
 artifact. The full cycle can now be recorded, reviewed, attached to completion
 evidence, and reused by the next startup.
 
+## Ver1.36
+
+### Added
+
+- GDS Health folder:
+  `docs/health/`.
+- GDS Health Dashboard:
+  `docs/health/gds_health_dashboard.md`.
+- Health areas for Repository Health, Knowledge Health, Rule Coverage,
+  Workflow Coverage, Template Coverage, Example Coverage, Automation Coverage,
+  CI Status, and Project Profile Coverage.
+- README, Knowledge Base Index, Workflow Index, Template Index, Daily
+  Operation Checklist, and Completion Report links for GDS Health.
+
+### Reason
+
+GDS had moved from creating individual rules and workflows into daily
+operation. The next need was visibility: humans and AI need to see which parts
+of the system are healthy, which are usable but need follow-up, and which
+should block or trigger review.
+
+### Evolution
+
+GDS evolved from checklists and cycles into observable operations. Health is
+now treated as early discovery and continuous improvement support, not as
+blame or final quality scoring.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

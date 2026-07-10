@@ -236,6 +236,13 @@ Each entry includes:
 | Knowledge Base History | この文書は、Ghost Development System Knowledge Base 自身の進化を記録します。 | `docs/history/knowledge_base_history.md` | `https://github.com/tanatyucom/Ghost-Development-System-Docs/blob/main/docs/history/knowledge_base_history.md` | `https://raw.githubusercontent.com/tanatyucom/Ghost-Development-System-Docs/main/docs/history/knowledge_base_history.md` | History | High | `2026-07-10T02:13:54Z` |
 | History | このフォルダは、Ghost Development System Knowledge Base 自身の進化を記録します。 | `docs/history/README.md` | `https://github.com/tanatyucom/Ghost-Development-System-Docs/blob/main/docs/history/README.md` | `https://raw.githubusercontent.com/tanatyucom/Ghost-Development-System-Docs/main/docs/history/README.md` | History | High | `2026-07-10T02:13:54Z` |
 
+## Health
+
+| Title | Purpose | Local Path | GitHub URL | Raw URL | Category | Priority | Generated Timestamp |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| GDS Health Dashboard | GDS Health Dashboard makes the operating state of Ghost Development System Docs | `docs/health/gds_health_dashboard.md` | `https://github.com/tanatyucom/Ghost-Development-System-Docs/blob/main/docs/health/gds_health_dashboard.md` | `https://raw.githubusercontent.com/tanatyucom/Ghost-Development-System-Docs/main/docs/health/gds_health_dashboard.md` | Health | High | `2026-07-10T02:13:54Z` |
+| GDS Health | This folder records the visible health state of Ghost Development System Docs. | `docs/health/README.md` | `https://github.com/tanatyucom/Ghost-Development-System-Docs/blob/main/docs/health/README.md` | `https://raw.githubusercontent.com/tanatyucom/Ghost-Development-System-Docs/main/docs/health/README.md` | Health | High | `2026-07-10T02:13:54Z` |
+
 ## Project Profiles
 
 | Title | Purpose | Local Path | GitHub URL | Raw URL | Category | Priority | Generated Timestamp |

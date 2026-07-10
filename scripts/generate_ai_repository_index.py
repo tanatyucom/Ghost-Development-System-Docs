@@ -36,6 +36,7 @@ CATEGORY_ORDER = [
     "Examples",
     "Glossary",
     "History",
+    "Health",
     "Project Profiles",
     "PIP",
     "CASE",
@@ -64,6 +65,7 @@ HIGH_CATEGORY = {
     "Workflow",
     "Glossary",
     "History",
+    "Health",
     "Project Profiles",
     "PIP",
     "CASE",
@@ -162,6 +164,8 @@ def category_for(path: str) -> str:
             return "Glossary"
         if path.startswith("docs/history/"):
             return "History"
+        if path.startswith("docs/health/"):
+            return "Health"
         if path.startswith("pip/"):
             return "PIP"
         if path.startswith("requests/") or path.startswith("docs/requests/"):
@@ -187,6 +191,8 @@ def category_for(path: str) -> str:
         return "Glossary"
     if path.startswith("docs/history/"):
         return "History"
+    if path.startswith("docs/health/"):
+        return "Health"
     if path.startswith("pip/cases/") or path == "pip/case_index.md":
         return "CASE"
     if path.startswith("pip/concepts/"):
