@@ -43,6 +43,11 @@ Repository, Related Rules, Related Templates, Recent Decisions, Open Issues,
 Recent Artifacts, Recommended Next Q, and Notes without treating chat as the
 source of truth.
 
+Artifact Schema Standard defines the common architecture-level structure that
+Q, Completion Report, Information Package, Multi-AI Handoff, Review Report,
+Decision Record, Registry Update, and Health Report templates should be able
+to express.
+
 Health documents such as `docs/health/gds_health_dashboard.md` may be used
 beside templates when a task should record GDS operating health rather than
 only task completion.

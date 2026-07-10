@@ -11,6 +11,9 @@ runtime behavior.
 
 ## Contains
 
+- `artifact_schema_standard.md`: common schema standard for managed artifacts
+  such as Q, Completion Report, Information Package, Multi-AI Handoff, Review
+  Report, Decision Record, Registry Update, and Health Report.
 - `command_center_architecture.md`: Command Center architecture specification
   for Repository Scanner, Information Package Builder, Decision Engine,
   Template Engine, Artifact Pipeline, Human Approval Gate, Repository Health
@@ -83,6 +86,9 @@ only describe boundaries and principles that are accepted enough to guide work.
   boundary. It may scan repository documents, assemble Information Packages,
   route to Knowledge Dashboard or Editor, surface Repository Health, and draft
   Q / review / completion / registry update artifacts through templates.
+- Artifact Schema Standard owns the common documentation schema for artifacts
+  generated or managed by Command Center, Template Engine, Decision Engine, and
+  future Ghost SDK candidates.
 - Launcher owns the user entry point.
 
 ## Database Philosophy Summary
@@ -142,6 +148,7 @@ future work that requires a separate Q and Human Approval Gate.
 Detailed specification:
 
 - `docs/architecture/command_center_architecture.md`
+- `docs/architecture/artifact_schema_standard.md`
 
 AI Proactive Proposal supports human-led collaboration by making concerns and
 better options visible without taking control away from the user.

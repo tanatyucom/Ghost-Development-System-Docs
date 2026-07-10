@@ -289,6 +289,7 @@ Outputs:
 Dependencies:
 
 - Artifact First rules.
+- Artifact Schema Standard.
 - Task Artifact Workspace rules.
 - Completion Report Template.
 - Platform Registry Update Template.

@@ -1842,6 +1842,35 @@ Command Center now has an architecture-level contract. Future implementation
 can be split by component and reviewed against clear non-responsibilities,
 trust boundaries, and degraded-mode behavior.
 
+## Ver1.67
+
+### Added
+
+- Artifact Schema Standard:
+  `docs/architecture/artifact_schema_standard.md`.
+- Common artifact schema for Q, Completion Report, Information Package,
+  Multi-AI Handoff, Review Report, Decision Record, Registry Update, and
+  Health Report.
+- Shared fields for Metadata, Lifecycle, Status, Repository Information,
+  Related Rules, Related Templates, Related Artifacts, Inputs, Outputs, Human
+  Approval, Verification, and Recommended Next Action.
+- Lifecycle alignment for Draft, Reviewed, Approved, Executed, Completed, and
+  Archived.
+- README, docs index, architecture index, templates README, and Command Center
+  architecture links.
+
+### Reason
+
+Command Center Architecture defined Artifact Pipeline, but future Component
+Interface, Template Engine, Decision Engine, Automation candidates, and Ghost
+SDK work needed one shared artifact structure before interface design.
+
+### Evolution
+
+Managed artifacts can now be described through a common schema. This keeps
+Template First and Artifact First aligned before automation or runtime
+contracts are introduced.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。
