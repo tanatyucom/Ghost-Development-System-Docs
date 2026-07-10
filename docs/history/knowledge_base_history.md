@@ -1027,6 +1027,37 @@ GDS evolved from checklists and cycles into observable operations. Health is
 now treated as early discovery and continuous improvement support, not as
 blame or final quality scoring.
 
+## Ver1.37
+
+### Added
+
+- GDS Health Update Workflow:
+  `docs/workflow/gds_health_update_workflow.md`.
+- Health update timing for rule, workflow, template, example, project profile,
+  CI, automation, major release, and monthly review changes.
+- Standard Health update procedure:
+  identify affected area, review dashboard state, update Green / Yellow / Red
+  status, update Current State, Target State, Notes, record improvement
+  candidate, and reflect in Completion Report.
+- Completion Report Template fields for GDS Health review, affected areas,
+  status changes, improvement candidates, and Recommended Next Q.
+- Daily Operation Checklist fields for affected health areas and update
+  workflow confirmation.
+
+### Reason
+
+The GDS Health Dashboard made state visible, but its maintenance timing and
+update method were not yet standardized.
+
+Without an update workflow, Health could become a one-time dashboard instead of
+a continuous improvement practice.
+
+### Evolution
+
+GDS Health evolved from a visible dashboard into a maintained operating loop.
+Health can now be reviewed and updated when the Knowledge Base changes, then
+reported through completion evidence.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

@@ -22,6 +22,8 @@ gate.
   Startup Procedure, Q review, implementation, verification, human review,
   Completion Checklist, commit / push, Knowledge Update, Repository Update,
   Next Q Planning, and the next startup.
+- `gds_health_update_workflow.md`: update workflow for GDS Health Dashboard
+  status, notes, improvement candidates, and completion report reflection.
 - `repository_root_validation_workflow.md`: startup workflow for checking the
   actual Git repository root against the Q Working Repository.
 - `collaborative_decision_workflow.md`: workflow for AI and user proposals,
@@ -138,6 +140,8 @@ should be recorded as a reusable checklist artifact.
 Use `docs/health/gds_health_dashboard.md` when the cycle reveals repository,
 knowledge, workflow, template, example, automation, CI, or project profile
 health issues that should be visible across tasks.
+
+Details follow `gds_health_update_workflow.md`.
 
 ## Startup Checklist Workflow
 
@@ -704,6 +708,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 
 - `docs/workflow/template_lifecycle.md`
 - `docs/workflow/ai_daily_operation_cycle.md`
+- `docs/workflow/gds_health_update_workflow.md`
 - `templates/daily_operation_checklist_template.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/workflow/startup_checklist_workflow.md`

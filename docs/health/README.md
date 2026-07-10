@@ -13,6 +13,8 @@ humans and AI.
 - `gds_health_dashboard.md`: dashboard for Repository Health, Knowledge
   Health, Rule Coverage, Workflow Coverage, Template Coverage, Example
   Coverage, Automation Coverage, CI Status, and Project Profile Coverage.
+- Health update workflow:
+  `docs/workflow/gds_health_update_workflow.md`.
 
 ## Relationship
 
@@ -35,3 +37,5 @@ coverage, automation, project profiles, or recurring operation quality.
 Do not treat a Yellow or Red status as failure by itself. Treat it as a visible
 improvement candidate with context and next action.
 
+Use `docs/workflow/gds_health_update_workflow.md` to decide when to update the
+dashboard and how to record status, notes, and improvement candidates.

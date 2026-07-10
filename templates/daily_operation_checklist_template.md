@@ -114,6 +114,8 @@ knowledge-producing, or part of repeated GDS operation.
 - Repository update required:
 - GDS Health reviewed:
 - GDS Health dashboard updated:
+- GDS Health affected areas:
+- GDS Health update workflow followed:
 - README updated:
 - docs/README updated:
 - Workflow index updated:

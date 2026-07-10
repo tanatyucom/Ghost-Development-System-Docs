@@ -95,6 +95,7 @@ automation, CI, and project profile health visible for continuous improvement.
 Start from:
 
 - [`docs/health/gds_health_dashboard.md`](docs/health/gds_health_dashboard.md)
+- [`docs/workflow/gds_health_update_workflow.md`](docs/workflow/gds_health_update_workflow.md)
 
 ## Artifact First
 

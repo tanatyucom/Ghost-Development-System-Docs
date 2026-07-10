@@ -44,6 +44,24 @@ safe daily operation.
 - CI / automation status is known or explicitly marked as unknown.
 - Recommended Next Q is recorded when health is Yellow or Red.
 
+## Update Workflow
+
+Use `docs/workflow/gds_health_update_workflow.md` when updating this dashboard.
+
+Standard update steps:
+
+```text
+Change Detected
+  -> Identify affected health area
+  -> Review current dashboard state
+  -> Update Status: Green / Yellow / Red
+  -> Update Current State
+  -> Update Target State
+  -> Update Notes
+  -> Record improvement candidate
+  -> Reflect in Completion Report
+```
+
 ## Future Extension
 
 - Command Center.
@@ -60,6 +78,7 @@ itself.
 
 - `docs/ai_repository_index.md`
 - `docs/workflow/ai_daily_operation_cycle.md`
+- `docs/workflow/gds_health_update_workflow.md`
 - `templates/daily_operation_checklist_template.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/workflow/completion_checklist_workflow.md`

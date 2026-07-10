@@ -129,6 +129,7 @@ Reference points:
 
 - Health Dashboard: `docs/health/gds_health_dashboard.md`
 - Health Folder: `docs/health/README.md`
+- Health Update Workflow: `docs/workflow/gds_health_update_workflow.md`
 - AI Repository Index: `docs/ai_repository_index.md`
 - Daily Operation Cycle: `docs/workflow/ai_daily_operation_cycle.md`
 - Daily Operation Checklist:
@@ -145,6 +146,17 @@ Health areas:
 - Automation Coverage
 - CI Status
 - Project Profile Coverage
+
+Update timing:
+
+- Rule added or changed.
+- Workflow added or changed.
+- Template added or changed.
+- Example added or identified as missing.
+- Project Profile added or changed.
+- CI or automation added or changed.
+- Major release.
+- Monthly review.
 
 ## Startup Checklist Index
 
