@@ -1,3 +1,5 @@
+# Architecture Template
+
 Purpose
 
 Background

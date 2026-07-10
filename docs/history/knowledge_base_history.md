@@ -1190,6 +1190,26 @@ quality. Repository Quality Audit can now produce a Japanese-first report
 directly, while preserving commands, paths, status values, and identifiers for
 compatibility.
 
+## Ver1.43
+
+### Added
+
+- H1 headings for existing template files that previously started without a
+  top-level Markdown heading.
+- Repository Quality Audit warning resolution for template Markdown structure.
+
+### Reason
+
+Repository Quality Audit reported one remaining warning: ten legacy templates
+did not have H1 headings. The templates were usable, but they did not satisfy
+the repository-wide Markdown structure check.
+
+### Evolution
+
+Template structure moved closer to the repository quality standard without
+rewriting template content. Repository Quality Audit can now evaluate template
+Markdown structure without known legacy H1 exceptions.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

@@ -1,3 +1,5 @@
+# Specification Template
+
 Purpose
 
 Background

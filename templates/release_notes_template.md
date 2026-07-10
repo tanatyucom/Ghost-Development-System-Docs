@@ -1,3 +1,5 @@
+# Release Notes Template
+
 New Features
 
 Changes

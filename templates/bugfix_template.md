@@ -1,3 +1,5 @@
+# Bugfix Template
+
 Problem
 
 Cause
