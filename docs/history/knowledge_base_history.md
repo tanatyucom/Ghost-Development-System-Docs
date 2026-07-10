@@ -1437,6 +1437,30 @@ Platform Promotion now has a post-approval destination. GDS can register
 accepted standards with type, status, origin, related documents, used-by scope,
 notes, and next review timing before propagating them to Ghost Projects.
 
+## Ver1.52
+
+### Added
+
+- Platform Standard Registry Examples:
+  `examples/platform_standard_registry_examples.md`.
+- Example operations for Candidate to Standard, Standard update, Deprecated,
+  and Replaced status changes.
+- README, docs index, examples index, and registry links for Platform Standard
+  Registry examples.
+
+### Reason
+
+Platform Standard Registry existed, but registry users still needed concrete
+examples showing how to add, promote, update, deprecate, and replace registry
+entries without changing status values inconsistently.
+
+### Evolution
+
+Platform Standard Registry moved from a static list into an operational
+practice. Future standard changes can now compare their trigger, before state,
+promotion decision, after state, related report, lessons learned, and next Q
+against concrete examples.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

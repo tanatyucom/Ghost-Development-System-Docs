@@ -147,6 +147,7 @@ Start from:
 - [`docs/workflow/innovation_pipeline_workflow.md`](docs/workflow/innovation_pipeline_workflow.md)
 - [`templates/platform_promotion_decision_report_template.md`](templates/platform_promotion_decision_report_template.md)
 - [`examples/platform_promotion_decision_report_examples.md`](examples/platform_promotion_decision_report_examples.md)
+- [`examples/platform_standard_registry_examples.md`](examples/platform_standard_registry_examples.md)
 
 Innovation Pipeline と Platform Promotion Decision Report で昇格判断した標準は、
 Registry に `Standard` または `Candidate` として登録します。

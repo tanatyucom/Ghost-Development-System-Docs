@@ -111,6 +111,10 @@ Do not add runtime features as Platform standards only because they exist in a
 field project. Runtime features must pass Innovation Pipeline review,
 Platform Promotion, Human Approval, and responsibility-boundary confirmation.
 
+Use `examples/platform_standard_registry_examples.md` before changing registry
+status so Candidate, Standard update, Deprecated, and Replaced operations stay
+consistent.
+
 ## Relationship To Innovation Pipeline
 
 ```text
@@ -134,6 +138,7 @@ template authority.
 - `templates/innovation_pipeline_template.md`
 - `templates/platform_promotion_decision_report_template.md`
 - `examples/platform_promotion_decision_report_examples.md`
+- `examples/platform_standard_registry_examples.md`
 - `docs/architecture/platform_era_core_principles.md`
 - `roadmap/ghost_development_system_roadmap.md`
 - `docs/ai_repository_index.md`

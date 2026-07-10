@@ -58,6 +58,8 @@ reports, and documentation requests can start from a clear reference.
   Propagation.
 - `platform_promotion_decision_report_examples.md`: examples for Promote,
   Revise, Reject, and Archive decisions after Innovation Pipeline validation.
+- `platform_standard_registry_examples.md`: examples for Candidate to
+  Standard, Standard update, Deprecated, and Replaced registry operations.
 - `repository_information.md`: example of repository boundaries, source of
   truth, scope guard, and completion criteria.
 - `authority_matrix.md`: example edit and reference authority matrix.
@@ -151,6 +153,8 @@ what a complete, well-scoped document should feel like.
 - Use `platform_promotion_decision_report_examples.md` when deciding whether a
   validated Innovation Pipeline item should be promoted, revised, rejected, or
   archived.
+- Use `platform_standard_registry_examples.md` when adding, promoting,
+  updating, deprecating, or replacing a Platform Standard Registry entry.
 - Use `repository_information.md` when a task may involve multiple
   repositories, documentation roots, runtime roots, or reference-only sources.
 - Use `authority_matrix.md` when a task needs explicit Editable, Reference

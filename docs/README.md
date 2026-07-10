@@ -214,6 +214,8 @@ Reference points:
   `templates/platform_promotion_decision_report_template.md`
 - Platform Promotion Decision Report Examples:
   `examples/platform_promotion_decision_report_examples.md`
+- Platform Standard Registry Examples:
+  `examples/platform_standard_registry_examples.md`
 
 Core flow:
 
