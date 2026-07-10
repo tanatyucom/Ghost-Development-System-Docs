@@ -66,6 +66,8 @@ for assigning stable Concept IDs and keeping the Concept Index traceable.
   loop, missing knowledge classification, destination rules, and completion
   criteria.
 - `workflow_rules.md`: development workflow and gates.
+  Includes AI Daily Operation Cycle as the outer loop for recurring
+  AI-assisted GDS work.
 - `git_rules.md`: Git history, dirty workspace policy, file classification,
   and commit safety rules.
 - `quality_rules.md`: quality and review standards.

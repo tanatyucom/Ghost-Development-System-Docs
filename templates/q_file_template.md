@@ -437,6 +437,11 @@ hard edit boundary を記載します。
 Use this section before Codex / AI implementation, review, documentation update,
 or Q execution begins.
 
+- AI Daily Operation Cycle applies: Yes / No
+- Current Q Review completed:
+- Expected Knowledge Update:
+- Expected Repository Update:
+- Expected Next Q Planning:
 - AI Startup Procedure applies: Yes / No
 - AI Repository Index read:
 - Repository Root Validation completed before implementation:
@@ -465,6 +470,7 @@ or Q execution begins.
 
 Reference:
 
+- `docs/workflow/ai_daily_operation_cycle.md`
 - `docs/rules/ai_startup_procedure_rules.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/rules/startup_checklist_rules.md`

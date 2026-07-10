@@ -1,6 +1,6 @@
 # Ghost Development System Rules
 
-**Version:** 3.0
+**Version:** 3.1
 
 **Last Updated:** 2026-07-10
 
@@ -36,6 +36,7 @@ Rules follow these principles:
 - Knowledge Poka-Yoke / Design For Forgetfulness.
 - External Source Access / AI Repository Knowledge Access.
 - AI Startup Procedure.
+- AI Daily Operation Cycle.
 - Startup Checklist.
 - Repository Root Validation.
 - AI Proactive Proposal.
@@ -202,6 +203,32 @@ If the repository, Target Project, Project Profile, Q File, scope, or commit
 policy is unclear, AI should stop and ask before editing.
 
 Details follow `ai_startup_procedure_rules.md`.
+
+## AI Daily Operation Cycle
+
+AI Daily Operation Cycle is the standard outer loop for recurring human / AI
+GDS work.
+
+```text
+AI Startup Procedure
+  -> Current Q Review
+  -> Implementation
+  -> Verification
+  -> Human Review
+  -> Completion Checklist
+  -> Commit / Push
+  -> Knowledge Update
+  -> Repository Update
+  -> Next Q Planning
+  -> Next Startup
+```
+
+This cycle connects existing rules and workflows. It does not replace Startup
+Checklist, Completion Checklist, Project Profile, Q File, Human Approval Gate,
+commit approval, or release approval.
+
+Details follow `docs/workflow/ai_daily_operation_cycle.md` and
+`workflow_rules.md`.
 
 ## Completion Checklist
 

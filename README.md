@@ -62,6 +62,30 @@ AI Repository Index
   -> Implementation / Review Start
 ```
 
+## AI Daily Operation Cycle
+
+AI と人間の作業を、開始から次の Q まで同じ運用サイクルで回します。
+
+Start from:
+
+- [`docs/workflow/ai_daily_operation_cycle.md`](docs/workflow/ai_daily_operation_cycle.md)
+
+標準サイクル:
+
+```text
+AI Startup Procedure
+  -> Current Q Review
+  -> Implementation
+  -> Verification
+  -> Human Review
+  -> Completion Checklist
+  -> Commit / Push
+  -> Knowledge Update
+  -> Repository Update
+  -> Next Q Planning
+  -> Next Startup
+```
+
 ## Artifact First
 
 Reusable, reviewable, AI-handoff, human-approval, or Git-managed outputs should

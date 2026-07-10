@@ -91,6 +91,11 @@
 
 ## Startup Checklist Review
 
+- AI Daily Operation Cycle followed:
+- Current Q Review completed:
+- Knowledge Update performed:
+- Repository Update performed:
+- Next Q Planning completed:
 - AI Startup Procedure followed:
 - AI Repository Index read:
 - Target Project identified:
@@ -192,6 +197,7 @@
 - Follow-up Q required:
 - Follow-up Q artifact path:
 - Recommended Next Q:
+- Next Startup input:
 
 ## Knowledge Promotion Target
 

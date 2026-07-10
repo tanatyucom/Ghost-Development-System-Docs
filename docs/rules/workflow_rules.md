@@ -1,8 +1,8 @@
 # Workflow Rules
 
-**Version:** 2.5
+**Version:** 2.6
 
-**Last Updated:** 2026-07-05
+**Last Updated:** 2026-07-10
 
 ## Purpose
 
@@ -31,6 +31,31 @@ During the trial:
 - record proposed rule, template, workflow, or roadmap improvements.
 
 ## Core Workflow Rules
+
+### AI Daily Operation Cycle
+
+Use AI Daily Operation Cycle as the outer workflow for recurring AI-assisted
+GDS work.
+
+Standard cycle:
+
+```text
+AI Startup Procedure
+  -> Current Q Review
+  -> Implementation
+  -> Verification
+  -> Human Review
+  -> Completion Checklist
+  -> Commit / Push
+  -> Knowledge Update
+  -> Repository Update
+  -> Next Q Planning
+  -> Next Startup
+```
+
+This cycle connects existing rules and workflows. It does not replace
+Startup Checklist, Completion Checklist, Q File, Project Profile, Human
+Approval Gate, commit approval, or release approval.
 
 ### Scope Freeze Rule
 

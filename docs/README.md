@@ -88,6 +88,37 @@ AI Repository Index
   -> Implementation / Review Start
 ```
 
+## AI Daily Operation Cycle Index
+
+AI Daily Operation Cycle connects the existing startup, implementation,
+verification, review, completion, knowledge update, repository update, and next
+Q planning practices into one repeatable operating cycle.
+
+Reference points:
+
+- Workflow: `docs/workflow/ai_daily_operation_cycle.md`
+- AI Startup Procedure: `docs/workflow/ai_startup_procedure.md`
+- Completion Checklist: `docs/workflow/completion_checklist_workflow.md`
+- Knowledge Poka-Yoke: `docs/rules/core_principles.md`
+- Collaborative Decision: `docs/workflow/collaborative_decision_workflow.md`
+- Project Profiles: `project_profiles/README.md`
+
+Core flow:
+
+```text
+AI Startup Procedure
+  -> Current Q Review
+  -> Implementation
+  -> Verification
+  -> Human Review
+  -> Completion Checklist
+  -> Commit / Push
+  -> Knowledge Update
+  -> Repository Update
+  -> Next Q Planning
+  -> Next Startup
+```
+
 ## Startup Checklist Index
 
 Startup Checklist は、新しい ChatGPT / Codex / AI セッション、レビュー、

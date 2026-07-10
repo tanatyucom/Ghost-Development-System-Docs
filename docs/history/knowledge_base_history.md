@@ -942,6 +942,38 @@ startup procedure. AI now has a standard beginning path that reduces repository
 confusion, scope drift, Q artifact omissions, and Project Profile reading
 misses before implementation or review begins.
 
+## Ver1.34
+
+### Added
+
+- AI Daily Operation Cycle workflow:
+  `docs/workflow/ai_daily_operation_cycle.md`.
+- Standard operating cycle:
+  AI Startup Procedure, Current Q Review, Implementation, Verification, Human
+  Review, Completion Checklist, Commit / Push, Knowledge Update, Repository
+  Update, Next Q Planning, and Next Startup.
+- README, Knowledge Base Index, Workflow Index, Rules Index, Q Template, and
+  Completion Report Template links for the daily cycle.
+- Workflow Rules integration describing AI Daily Operation Cycle as the outer
+  loop for recurring AI-assisted GDS work.
+
+### Reason
+
+GDS had startup checks, completion checks, Project Profiles, AI Repository
+Index, Knowledge Poka-Yoke, AI Proactive Proposal, and Collaborative Decision,
+but they still needed to be connected as one repeatable operating model.
+
+Without a shared daily cycle, AI and humans may start correctly and finish
+correctly, but fail to connect verification, review, knowledge update,
+repository update, and next Q planning.
+
+### Evolution
+
+GDS evolved from individual safeguards into a continuous operation cycle. Each
+task can now begin from AI Startup Procedure, complete through Completion
+Checklist, update reusable knowledge, refresh repository entry points, and feed
+the next Q back into the next startup.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

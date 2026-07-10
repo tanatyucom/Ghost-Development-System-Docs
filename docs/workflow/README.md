@@ -18,6 +18,10 @@ gate.
 - `ai_startup_procedure.md`: AI reading order and startup procedure before
   Startup Checklist, Q execution, implementation, review, or documentation
   update.
+- `ai_daily_operation_cycle.md`: daily operating cycle that connects AI
+  Startup Procedure, Q review, implementation, verification, human review,
+  Completion Checklist, commit / push, Knowledge Update, Repository Update,
+  Next Q Planning, and the next startup.
 - `repository_root_validation_workflow.md`: startup workflow for checking the
   actual Git repository root against the Q Working Repository.
 - `collaborative_decision_workflow.md`: workflow for AI and user proposals,
@@ -60,6 +64,7 @@ gate.
 
 ```text
 Idea
+  -> AI Daily Operation Cycle
   -> AI Startup Procedure
   -> Startup Checklist
   -> Repository Root Validation
@@ -105,6 +110,27 @@ redline, approval review, or offline reading is expected.
 
 When an artifact is the authoritative output, chat should contain only a short
 summary, artifact paths or links, verification notes, and remaining issues.
+
+## AI Daily Operation Cycle
+
+Use AI Daily Operation Cycle as the standard outer loop for long-running human
+and AI work.
+
+```text
+AI Startup Procedure
+  -> Current Q Review
+  -> Implementation
+  -> Verification
+  -> Human Review
+  -> Completion Checklist
+  -> Commit / Push
+  -> Knowledge Update
+  -> Repository Update
+  -> Next Q Planning
+  -> Next Startup
+```
+
+Details follow `ai_daily_operation_cycle.md`.
 
 ## Startup Checklist Workflow
 
@@ -670,6 +696,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 ## Related Documents
 
 - `docs/workflow/template_lifecycle.md`
+- `docs/workflow/ai_daily_operation_cycle.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/workflow/repository_root_validation_workflow.md`
