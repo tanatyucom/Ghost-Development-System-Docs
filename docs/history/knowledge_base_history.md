@@ -1355,6 +1355,32 @@ Innovation Pipeline moved from template availability into practical guidance.
 New improvement ideas can now be compared against examples before deciding
 whether to experiment, prototype, validate, promote, or archive.
 
+## Ver1.49
+
+### Added
+
+- Platform Promotion Decision Report Template:
+  `templates/platform_promotion_decision_report_template.md`.
+- Standard report fields for Innovation Name, Origin Project, Summary,
+  Validation Results, Benefits, Risks, Reusability, Maintainability,
+  Cross-Ghost Applicability, Promotion Criteria Checklist, Architecture Impact,
+  Repository Impact, Health Impact, Documentation Impact, Recommendation,
+  Human Review, Approved By, Recommended Next Q, and Completion Notes.
+- README, docs index, template index, workflow, and Innovation Pipeline template
+  links for Platform Promotion decisions.
+
+### Reason
+
+Innovation Pipeline Workflow, Template, and Examples showed how to grow ideas
+through validation, but Platform Promotion still needed a shared decision report
+so humans and AI could review promotion with the same criteria.
+
+### Evolution
+
+Platform Promotion moved from an informal workflow stage into a reviewable
+decision artifact. GDS can now record promote, revise, reject, and archive
+decisions with architecture, repository, health, and documentation impact.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。
