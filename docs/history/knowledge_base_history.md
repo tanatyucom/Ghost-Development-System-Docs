@@ -1487,6 +1487,35 @@ continue adding standards while checking registry health through the same
 repository-wide quality command used for UTF-8, mojibake, links, health,
 history, project profiles, and Markdown structure.
 
+## Ver1.54
+
+### Added
+
+- Platform Standard Registry status lifecycle for Idea, Candidate, Prototype,
+  Validation, Standard, Deprecated, Replaced, and Archived.
+- Transition Matrix and Status Rules in
+  `docs/architecture/platform_standard_registry.md`.
+- Core Principles note that platform status changes require reviewed lifecycle
+  artifacts and Human Approval for Standard / Deprecated / Replaced / Archived.
+- Innovation Pipeline mapping to Platform Standard Registry lifecycle.
+- Repository Quality Audit checks for allowed status values, `Previous Status`
+  transition validity, required artifacts, Deprecated review timing, Replaced
+  reference review, and Archived reason.
+
+### Reason
+
+Platform Standard Registry could list standards and audit basic consistency,
+but status changes still lacked a shared lifecycle. Without transition rules,
+AI or humans could skip validation, promote prototypes directly, deprecate
+without review timing, or replace standards without clear successor evidence.
+
+### Evolution
+
+Platform standard management now has a lifecycle and auditable transition
+rules. GDS can move ideas through Candidate, Prototype, Validation, Standard,
+Deprecated, Replaced, and Archived states with explicit artifacts, review, and
+reports.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

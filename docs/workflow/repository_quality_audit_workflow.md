@@ -49,6 +49,13 @@ Platform Registry Consistency Check verifies:
 - Standard entries are registered in AI Repository Index.
 - Deprecated entries include a reason in Notes.
 - Replaced entries include `Replaced By` information in Notes.
+- Registry status is one of Idea, Candidate, Prototype, Validation, Standard,
+  Deprecated, Replaced, or Archived.
+- `Previous Status` transitions in Notes follow the allowed transition matrix.
+- Candidate, Prototype, and Validation entries have Related Report artifacts.
+- Deprecated entries have review timing.
+- Archived entries have archive reason.
+- Replaced entries do not remain in major README / Roadmap entry points.
 - Registry structure is parseable.
 - Roadmap links to Platform Standard Registry.
 
@@ -100,6 +107,9 @@ Completion Report には次を記録します。
 - Broken Registry Link。
 - Deprecated Review Needed。
 - Replaced Review Needed。
+- Status Transition Review Needed。
+- Required Artifact Review Needed。
+- Archived Review Needed。
 - warning または error に follow-up Q が必要か。
 
 ## CI Integration

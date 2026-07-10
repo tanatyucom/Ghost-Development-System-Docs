@@ -153,7 +153,14 @@ Start from:
 Innovation Pipeline と Platform Promotion Decision Report で昇格判断した標準は、
 Registry に `Standard` または `Candidate` として登録します。
 Repository Quality Audit は、Registry登録済み標準の related file、README導線、
-AI Repository Index登録、Deprecated理由、Replaced By、Roadmap導線を確認します。
+AI Repository Index登録、Status transition、必須Artifact、Deprecated理由、
+Replaced By、Archived理由、Roadmap導線を確認します。
+
+Registry lifecycle:
+
+```text
+Idea -> Candidate -> Prototype -> Validation -> Standard -> Deprecated -> Replaced -> Archived
+```
 
 ## Artifact First
 

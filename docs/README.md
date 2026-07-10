@@ -231,10 +231,14 @@ Idea / Experiment
 
 Registry status values:
 
-- `Standard`
+- `Idea`
 - `Candidate`
+- `Prototype`
+- `Validation`
+- `Standard`
 - `Deprecated`
 - `Replaced`
+- `Archived`
 
 Repository Quality Audit checks:
 
@@ -242,6 +246,9 @@ Repository Quality Audit checks:
 - Broken Registry Link
 - Deprecated Review Needed
 - Replaced Review Needed
+- Status Transition Review Needed
+- Required Artifact Review Needed
+- Archived Review Needed
 - Registry Structure / Roadmap Consistency
 
 ## Startup Checklist Index

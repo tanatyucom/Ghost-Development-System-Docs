@@ -56,7 +56,26 @@ PLATFORM_REGISTRY_README_ENTRY_POINTS = [
 ]
 PLATFORM_REGISTRY_ROADMAP = Path("roadmap/ghost_development_system_roadmap.md")
 PLATFORM_REGISTRY_AI_INDEX = Path("docs/ai_repository_index.md")
-PLATFORM_REGISTRY_ALLOWED_STATUSES = {"Standard", "Candidate", "Deprecated", "Replaced"}
+PLATFORM_REGISTRY_ALLOWED_STATUSES = {
+    "Idea",
+    "Candidate",
+    "Prototype",
+    "Validation",
+    "Standard",
+    "Deprecated",
+    "Replaced",
+    "Archived",
+}
+PLATFORM_REGISTRY_ALLOWED_TRANSITIONS = {
+    "Idea": {"Candidate", "Archived"},
+    "Candidate": {"Prototype", "Validation", "Standard", "Archived"},
+    "Prototype": {"Validation", "Candidate", "Archived"},
+    "Validation": {"Standard", "Candidate", "Archived"},
+    "Standard": {"Deprecated", "Replaced"},
+    "Deprecated": {"Replaced", "Archived"},
+    "Replaced": {"Archived"},
+    "Archived": set(),
+}
 
 
 @dataclass
@@ -322,6 +341,17 @@ def registry_row_paths(row: dict[str, str]) -> list[Path]:
     return paths
 
 
+def registry_related_reports(row: dict[str, str]) -> list[Path]:
+    return extract_paths_from_cell(row.get("Related Report", ""))
+
+
+def extract_previous_status(notes: str) -> str | None:
+    match = re.search(r"(?:Previous Status|From):\s*([A-Za-z]+)", notes)
+    if not match:
+        return None
+    return match.group(1)
+
+
 def has_readme_entry(root: Path, standard_name: str, related_paths: list[Path]) -> bool:
     needles = {standard_name}
     needles.update(path.as_posix() for path in related_paths)
@@ -359,6 +389,9 @@ def check_platform_registry_consistency(root: Path) -> CheckResult:
     broken_registry_link: list[str] = []
     deprecated_review_needed: list[str] = []
     replaced_review_needed: list[str] = []
+    status_transition_needed: list[str] = []
+    required_artifact_needed: list[str] = []
+    archived_review_needed: list[str] = []
     structure_mismatch: list[str] = []
 
     missing_standard.extend(setup_findings)
@@ -370,12 +403,21 @@ def check_platform_registry_consistency(root: Path) -> CheckResult:
         standard_name = row.get("Standard Name", "").strip()
         status = row.get("Status", "").strip()
         notes = row.get("Notes", "").strip()
+        next_review = row.get("Recommended Next Review", "").strip()
         related_paths = registry_row_paths(row)
+        related_reports = registry_related_reports(row)
 
         if not standard_name:
             structure_mismatch.append("Registry項目に Standard Name がありません。")
         if status not in PLATFORM_REGISTRY_ALLOWED_STATUSES:
             structure_mismatch.append(f"{standard_name}: unknown status `{status}`.")
+        previous_status = extract_previous_status(notes)
+        if previous_status:
+            allowed_next = PLATFORM_REGISTRY_ALLOWED_TRANSITIONS.get(previous_status, set())
+            if status not in allowed_next:
+                status_transition_needed.append(
+                    f"{standard_name}: invalid transition {previous_status} -> {status}."
+                )
 
         for rel_path in related_paths:
             if not (root / rel_path).exists():
@@ -389,11 +431,34 @@ def check_platform_registry_consistency(root: Path) -> CheckResult:
             if not is_ai_index_registered(root, standard_name, related_paths):
                 missing_standard.append(f"{standard_name}: AI Repository Index に登録されていません。")
 
+        if status in {"Candidate", "Prototype", "Validation"} and not related_reports:
+            required_artifact_needed.append(
+                f"{standard_name}: {status} status には Related Report が必要です。"
+            )
+
+        if status == "Idea" and not notes:
+            required_artifact_needed.append(f"{standard_name}: Idea status には source / rationale が Notes に必要です。")
+
         if status == "Deprecated" and not notes:
             deprecated_review_needed.append(f"{standard_name}: Deprecated reason が Notes にありません。")
+        if status == "Deprecated" and not next_review:
+            deprecated_review_needed.append(f"{standard_name}: Deprecated review timing がありません。")
 
         if status == "Replaced" and "Replaced by" not in notes and "Replaced By" not in notes:
             replaced_review_needed.append(f"{standard_name}: Replaced By が Notes にありません。")
+        if status == "Replaced":
+            for readme_path in PLATFORM_REGISTRY_README_ENTRY_POINTS + [PLATFORM_REGISTRY_ROADMAP]:
+                full_path = root / readme_path
+                if not full_path.exists():
+                    continue
+                text = full_path.read_text(encoding="utf-8", errors="replace")
+                if standard_name in text:
+                    replaced_review_needed.append(
+                        f"{standard_name}: Replaced後も {readme_path.as_posix()} に参照が残っています。"
+                    )
+
+        if status == "Archived" and not notes:
+            archived_review_needed.append(f"{standard_name}: Archived reason が Notes にありません。")
 
     if rows and not is_roadmap_consistent(root):
         structure_mismatch.append(
@@ -410,13 +475,32 @@ def check_platform_registry_consistency(root: Path) -> CheckResult:
         *deprecated_review_needed,
         "Replaced Review Needed: none." if not replaced_review_needed else "Replaced Review Needed:",
         *replaced_review_needed,
+        "Status Transition Review Needed: none."
+        if not status_transition_needed
+        else "Status Transition Review Needed:",
+        *status_transition_needed,
+        "Required Artifact Review Needed: none."
+        if not required_artifact_needed
+        else "Required Artifact Review Needed:",
+        *required_artifact_needed,
+        "Archived Review Needed: none." if not archived_review_needed else "Archived Review Needed:",
+        *archived_review_needed,
         "Registry Structure / Roadmap Consistency: pass."
         if not structure_mismatch
         else "Registry Structure / Roadmap Consistency:",
         *structure_mismatch,
     ]
 
-    if missing_standard or broken_registry_link or deprecated_review_needed or replaced_review_needed or structure_mismatch:
+    if (
+        missing_standard
+        or broken_registry_link
+        or deprecated_review_needed
+        or replaced_review_needed
+        or status_transition_needed
+        or required_artifact_needed
+        or archived_review_needed
+        or structure_mismatch
+    ):
         return CheckResult("Platform Registry Consistency Check", "WARN", details)
     return CheckResult("Platform Registry Consistency Check", "PASS", details)
 

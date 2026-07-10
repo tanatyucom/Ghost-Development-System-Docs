@@ -142,10 +142,19 @@ Prefer small reviewed changes over large unreviewed rewrites.
 Do not turn an idea into a rule or platform feature until practice proves it is
 useful.
 
+Platform standard status must move through a reviewed lifecycle. Idea,
+Candidate, Prototype, Validation, Standard, Deprecated, Replaced, and Archived
+are not labels to change casually; each transition needs the required artifact,
+review, and report defined in Platform Standard Registry.
+
 ### Human Approval Gate
 
 Humans retain final authority over architecture, destructive changes,
 standardization, releases, and scope expansion.
+
+Platform Standard Registry status changes to Standard, Deprecated, Replaced, or
+Archived require Human Approval or an explicit human-reviewed completion
+report.
 
 ### Continuous Improvement
 
@@ -176,6 +185,9 @@ Classification:
   - AI Continuous Improvement.
 
 詳細は `docs/architecture/platform_era_core_principles.md` を参照します。
+
+Platform Standard Registry status lifecycle is defined in
+`docs/architecture/platform_standard_registry.md`.
 
 ## Development Philosophy
 
