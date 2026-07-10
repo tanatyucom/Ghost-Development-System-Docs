@@ -114,6 +114,7 @@ Start from:
 - [`docs/rules/ai_collaboration_rules.md`](docs/rules/ai_collaboration_rules.md)
 - [`docs/rules/core_principles.md`](docs/rules/core_principles.md)
 - [`docs/rules/rules.md`](docs/rules/rules.md)
+- [`examples/persistent_collaboration_examples.md`](examples/persistent_collaboration_examples.md)
 
 判断順序:
 

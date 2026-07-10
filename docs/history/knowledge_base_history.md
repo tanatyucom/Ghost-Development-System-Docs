@@ -1652,6 +1652,31 @@ Collaboration behavior is now repository-persistent. Once a collaboration rule
 is adopted into GDS Docs, future chats and AI tools should follow it through
 the repository, not temporary memory.
 
+## Ver1.60
+
+### Added
+
+- Persistent Collaboration Examples:
+  `examples/persistent_collaboration_examples.md`.
+- Examples README route for command presentation, review conclusion, Download
+  First, Repository First, Platform First, AI collaboration, and completion
+  report priority examples.
+- README and docs index route from Persistent Collaboration to the examples.
+- AI Collaboration Rules related document link to the examples.
+
+### Reason
+
+Persistent Collaboration rules defined the standard behavior, but users and AI
+still needed concrete good / bad examples for daily operation, review
+conclusions, command blocks, artifact-first handoff, and platform-first
+classification.
+
+### Evolution
+
+Persistent Collaboration moved from rule-only guidance into an example-backed
+operational reference. Future AI sessions can now see both the rule and the
+expected behavior pattern.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

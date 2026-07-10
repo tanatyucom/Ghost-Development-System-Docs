@@ -63,6 +63,9 @@ reports, and documentation requests can start from a clear reference.
 - `platform_registry_update_completed_examples.md`: completed examples for
   New Standard, Standard Update, Deprecation, Replacement, and Archive registry
   update artifacts.
+- `persistent_collaboration_examples.md`: good and bad examples for command
+  presentation, review conclusion, Download First, Repository First, Platform
+  First, AI collaboration, and completion report priority.
 - `repository_information.md`: example of repository boundaries, source of
   truth, scope guard, and completion criteria.
 - `authority_matrix.md`: example edit and reference authority matrix.
@@ -160,6 +163,9 @@ what a complete, well-scoped document should feel like.
   updating, deprecating, or replacing a Platform Standard Registry entry.
 - Use `platform_registry_update_completed_examples.md` when filling out
   `templates/platform_registry_update_template.md` for a real registry update.
+- Use `persistent_collaboration_examples.md` when applying persistent
+  collaboration behavior across ChatGPT, Codex, Claude, Gemini, human review,
+  Q files, completion reports, command presentation, and review conclusions.
 - Use `repository_information.md` when a task may involve multiple
   repositories, documentation roots, runtime roots, or reference-only sources.
 - Use `authority_matrix.md` when a task needs explicit Editable, Reference
@@ -220,6 +226,7 @@ Do not use examples to introduce new rules. Promote reusable standards to
 - `docs/rules/migration_first_rules.md`
 - `docs/rules/debug_artifact_review_rules.md`
 - `docs/rules/git_rules.md`
+- `docs/rules/ai_collaboration_rules.md`
 - `docs/workflow/commit_safety_checklist.md`
 - `docs/workflow/audit_before_repair_workflow.md`
 - `docs/workflow/debug_artifact_review_workflow.md`

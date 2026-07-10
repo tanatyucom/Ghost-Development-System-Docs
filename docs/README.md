@@ -375,6 +375,7 @@ Reference points:
 - Artifact First: `docs/rules/artifact_first_rules.md`
 - Quality Rules: `docs/rules/quality_rules.md`
 - Completion Report Template: `templates/completion_report_template.md`
+- Examples: `examples/persistent_collaboration_examples.md`
 
 Core priority:
 

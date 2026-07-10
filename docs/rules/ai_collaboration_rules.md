@@ -251,3 +251,12 @@ Platform Philosophy:
 
 GDS is a platform that standardizes what humans and AI should not need to
 rethink, so they can focus on what truly requires judgment.
+
+## Related Documents
+
+- `examples/persistent_collaboration_examples.md`
+- `docs/rules/core_principles.md`
+- `docs/rules/artifact_first_rules.md`
+- `docs/rules/quality_rules.md`
+- `templates/completion_report_template.md`
+- `docs/workflow/ai_daily_operation_cycle.md`
