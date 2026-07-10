@@ -25,6 +25,9 @@ gate.
 - `gds_health_update_workflow.md`: update workflow for GDS Health Dashboard
   status, notes, improvement candidates, and completion report reflection.
   Validate related structure and links with `scripts/validate_gds_health.py`.
+- `repository_quality_audit_workflow.md`: repository-wide quality audit flow
+  that combines UTF-8, mojibake, AI index, GDS Health, link, README, history,
+  project profile, and Markdown validation checks.
 - `repository_root_validation_workflow.md`: startup workflow for checking the
   actual Git repository root against the Q Working Repository.
 - `collaborative_decision_workflow.md`: workflow for AI and user proposals,
@@ -146,6 +149,9 @@ Details follow `gds_health_update_workflow.md`.
 
 Run `python scripts/validate_gds_health.py` after changing Health Dashboard
 structure, Health links, README entry points, or AI Repository Index entries.
+
+Run `python scripts/repository_quality_audit.py` when a task needs a single
+repository-wide quality report.
 
 ## Startup Checklist Workflow
 
@@ -713,6 +719,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/workflow/template_lifecycle.md`
 - `docs/workflow/ai_daily_operation_cycle.md`
 - `docs/workflow/gds_health_update_workflow.md`
+- `docs/workflow/repository_quality_audit_workflow.md`
 - `templates/daily_operation_checklist_template.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/workflow/startup_checklist_workflow.md`

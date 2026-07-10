@@ -114,6 +114,17 @@ Validate health structure and links with:
 python scripts/validate_gds_health.py
 ```
 
+Run the repository-wide quality audit with:
+
+```bash
+python scripts/repository_quality_audit.py
+```
+
+Report:
+
+- [`reports/repository_quality_report.md`](reports/repository_quality_report.md)
+- [`docs/workflow/repository_quality_audit_workflow.md`](docs/workflow/repository_quality_audit_workflow.md)
+
 ## Artifact First
 
 Reusable, reviewable, AI-handoff, human-approval, or Git-managed outputs should
@@ -129,9 +140,9 @@ Start from:
 
 - [`docs/rules/artifact_first_rules.md`](docs/rules/artifact_first_rules.md)
 - [`docs/rules/q_file_artifact_standard.md`](docs/rules/q_file_artifact_standard.md)
-- [`docs/requests/README.md`](docs/requests/README.md)
+- [`requests/README.md`](requests/README.md)
 - [`docs/workflow/output_policy.md`](docs/workflow/output_policy.md)
-- [`docs/examples/artifact_first_examples.md`](docs/examples/artifact_first_examples.md)
+- [`examples/artifact_first_examples.md`](examples/artifact_first_examples.md)
 
 Chat should contain a short summary and artifact paths or links when the
 artifact is authoritative.
@@ -383,9 +394,9 @@ Start from:
 
 - [`docs/rules/audit_before_repair_rules.md`](docs/rules/audit_before_repair_rules.md)
 - [`docs/workflow/audit_before_repair_workflow.md`](docs/workflow/audit_before_repair_workflow.md)
-- [`docs/examples/audit_before_repair_examples.md`](docs/examples/audit_before_repair_examples.md)
-- [`docs/templates/q_file_template.md`](docs/templates/q_file_template.md)
-- [`docs/templates/completion_report_template.md`](docs/templates/completion_report_template.md)
+- [`examples/audit_before_repair_examples.md`](examples/audit_before_repair_examples.md)
+- [`templates/q_file_template.md`](templates/q_file_template.md)
+- [`templates/completion_report_template.md`](templates/completion_report_template.md)
 
 Repair Q files should identify the source audit artifact, target scope,
 excluded items, classification used, verification method, safe commit set, and
@@ -400,7 +411,7 @@ Start from:
 
 - [`docs/rules/git_rules.md`](docs/rules/git_rules.md)
 - [`docs/workflow/commit_safety_checklist.md`](docs/workflow/commit_safety_checklist.md)
-- [`docs/examples/dirty_workspace_examples.md`](docs/examples/dirty_workspace_examples.md)
+- [`examples/dirty_workspace_examples.md`](examples/dirty_workspace_examples.md)
 
 ## Migration First
 
@@ -421,7 +432,7 @@ Start from:
 
 - [`docs/rules/migration_first_rules.md`](docs/rules/migration_first_rules.md)
 - [`docs/workflow/migration_first_workflow.md`](docs/workflow/migration_first_workflow.md)
-- [`docs/examples/migration_first_examples.md`](docs/examples/migration_first_examples.md)
+- [`examples/migration_first_examples.md`](examples/migration_first_examples.md)
 
 Public Compatibility は public release、API / CLI、documented external
 workflow、exported artifact schema、DB schema、user-facing data format を守る

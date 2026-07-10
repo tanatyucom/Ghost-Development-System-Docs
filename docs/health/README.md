@@ -17,6 +17,8 @@ humans and AI.
   `docs/workflow/gds_health_update_workflow.md`.
 - Health validation script:
   `scripts/validate_gds_health.py`.
+- Repository quality audit:
+  `scripts/repository_quality_audit.py`.
 
 ## Relationship
 
@@ -54,3 +56,11 @@ python scripts/validate_gds_health.py
 The validation checks that the dashboard exists, required health areas are
 present, status values are `Green`, `Yellow`, or `Red`, required table fields
 are filled, and major entry points link back to Health documents.
+
+Run the repository-wide audit when you need one report for repository health:
+
+```bash
+python scripts/repository_quality_audit.py
+```
+
+The report is written to `reports/repository_quality_report.md`.

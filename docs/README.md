@@ -141,6 +141,10 @@ Reference points:
 - Health Folder: `docs/health/README.md`
 - Health Update Workflow: `docs/workflow/gds_health_update_workflow.md`
 - Health Validation Script: `scripts/validate_gds_health.py`
+- Repository Quality Audit:
+  `docs/workflow/repository_quality_audit_workflow.md`
+- Repository Quality Report:
+  `reports/repository_quality_report.md`
 - AI Repository Index: `docs/ai_repository_index.md`
 - Daily Operation Cycle: `docs/workflow/ai_daily_operation_cycle.md`
 - Daily Operation Checklist:
@@ -173,6 +177,12 @@ Validation command:
 
 ```bash
 python scripts/validate_gds_health.py
+```
+
+Repository-wide quality audit:
+
+```bash
+python scripts/repository_quality_audit.py
 ```
 
 ## Startup Checklist Index

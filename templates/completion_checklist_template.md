@@ -59,6 +59,17 @@
 - GDS Health validation command:
 - Affected health areas:
 
+## Repository Quality Audit
+
+- Repository Quality Audit required:
+- Repository Quality Audit executed:
+- Repository Quality Audit passed:
+- Repository Quality Audit command:
+- Repository Quality Report:
+- Overall Repository Health:
+- Warning count:
+- Error count:
+
 ## Commit / Tag / Release
 
 - Commit Required:

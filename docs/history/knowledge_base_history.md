@@ -1112,6 +1112,35 @@ Knowledge Poka-Yoke now covers text encoding reads. AI and humans can verify
 Japanese Q files with explicit UTF-8 before reporting mojibake, and repository
 Markdown mojibake audits can be recorded without unsafe bulk conversion.
 
+## Ver1.40
+
+### Added
+
+- Repository Quality Audit script:
+  `scripts/repository_quality_audit.py`.
+- Repository Quality Audit Workflow:
+  `docs/workflow/repository_quality_audit_workflow.md`.
+- Repository Quality Report:
+  `reports/repository_quality_report.md`.
+- Completion Checklist and Completion Report fields for Repository Quality
+  Audit result, report path, overall health, warning count, and error count.
+
+### Reason
+
+GDS had multiple separate validation points: AI Repository Index validation,
+GDS Health validation, UTF-8 reading rules, and mojibake audit practice.
+
+As validation grows, humans and AI need one entry point that answers whether
+the repository is healthy enough for daily operation, review, release
+readiness, or future CI promotion.
+
+### Evolution
+
+Repository quality evolved from individual checks into a single audit command
+and report. The system can now surface UTF-8, mojibake, index, health, link,
+README, history, project profile, and Markdown structure findings in one place
+without treating warnings as blame.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。
