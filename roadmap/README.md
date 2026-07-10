@@ -13,7 +13,8 @@ roadmap を混同しないために使います。
 
 - `ghost_development_system_roadmap.md`: Ghost Development System 自身の
   Knowledge Base、Workflow、Rules、Templates、Architecture、AI Collaboration、
-  Knowledge Platform、Development Platform、Command Center の Roadmap。
+  Knowledge Platform、Development Platform、Command Center、Ghost Ecosystem の
+  Roadmap。Ver2 では Foundation Complete 後の Platform Era を管理します。
 - `roadmap.md`: Gray Ghost Archive との関係、Ghost Development Toolkit Trial から
   Ghost Development System へ至る大きな流れ、責任境界、Future Candidates。
 
@@ -21,7 +22,7 @@ roadmap を混同しないために使います。
 
 | Roadmap | Status | Owner | Purpose |
 |---|---|---|---|
-| Ghost Development System Roadmap | Active | Ghost Development System Docs | Knowledge Base、Knowledge Platform、Workflow、Architecture、AI Collaboration、Development Platform を管理する |
+| Ghost Development System Roadmap | Active / Ver2 Platform Era | Ghost Development System Docs | Foundation Complete 後の Platform Integration、Automation Server、Ghost Ecosystem、Continuous Improvement を管理する |
 | Gray Ghost Archive / GDS Relationship Roadmap | Active | Ghost Development System Docs | Gray Ghost Archive と Ghost Development System の関係、移行方向、責任境界を管理する |
 | GameGhost Roadmap | Separate project | GameGhost | GameGhost 固有の features、runtime、schema、import rules を管理する |
 | AnimeGhost Roadmap | Future | Future project | AnimeGhost 固有の project roadmap として将来作成する |
@@ -47,6 +48,23 @@ It keeps future GDS v2 / AI Development Management System work simple by
 preferring New Standard, Migration Plan, Reference Update, Verification, and
 Legacy Removal over permanent internal compatibility fallback. This matters for
 future Command Center, Queue Manager, Artifact Manager, and Automation work.
+
+## Platform Era Direction
+
+Ghost Development System Roadmap は、Foundation 構築中心の phase から
+Platform / Ghost Ecosystem 中心の Ver2 へ移行しました。
+
+現在の大きな phase:
+
+- Foundation Era: completed.
+- Platform Integration Era: active direction.
+- Automation Server Era: future candidate.
+- Ghost Ecosystem Era: future candidate.
+- Continuous Improvement Era: future candidate.
+
+Ver2 は実装承認ではありません。Command Center、Q Workspace、Review Queue、
+Platform Dashboard、Automation Server などは、別 Q と Human Approval Gate によって
+設計・実装へ昇格します。
 
 ## Does NOT Contain
 
@@ -84,12 +102,13 @@ review promotes them.
 
 ## Related Documents
 
-- `docs/roadmap/ghost_development_system_roadmap.md`
-- `docs/roadmap/roadmap.md`
+- `roadmap/ghost_development_system_roadmap.md`
+- `roadmap/roadmap.md`
+- `reports/roadmap_v2_platform_era_completion_report.md`
 - `docs/rules/project_rules.md`
 - `docs/rules/migration_first_rules.md`
 - `docs/rules/`
-- `docs/templates/roadmap_template.md`
+- `templates/roadmap_template.md`
 - `docs/workflow/`
 
 ## Roadmap Separation

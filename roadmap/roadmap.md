@@ -32,10 +32,10 @@ Ver1.5
   Archive Foundation
 
 Ver2.x
-  Ghost Development System
+  Ghost Development System Platform Era
 
 Future
-  Reusable Development Platform
+  Ghost Ecosystem / Reusable Platform
 ```
 
 The system evolves from practical archive work. Architecture is validated by
@@ -50,10 +50,12 @@ The current direction is:
 
 - Ver1.4 proves the Ghost Development Toolkit Trial through real development.
 - Ver1.5 establishes Archive Foundation.
-- Ver2.x formalizes Ghost Development System as an archive-wide development
-  platform.
-- Future work may extract reusable platform ideas after they are proven inside
-  Gray Ghost Archive.
+- Ver2.x uses Ghost Development System Foundation as an archive-wide platform.
+- Platform Era focuses on Command Center, Q Workspace, Review Queue,
+  repository integration, dashboard, automation server candidates, and Ghost
+  Ecosystem expansion.
+- Future work may extract reusable platform ideas after they are proven across
+  multiple Ghost projects.
 
 ## Design Philosophy
 

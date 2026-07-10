@@ -1210,6 +1210,37 @@ Template structure moved closer to the repository quality standard without
 rewriting template content. Repository Quality Audit can now evaluate template
 Markdown structure without known legacy H1 exceptions.
 
+## Ver1.44
+
+### Added
+
+- Ghost Development System Roadmap Ver2 Platform Era.
+- Foundation Era completed status.
+- Platform Integration Era.
+- Automation Server Era.
+- Ghost Ecosystem Era.
+- Continuous Improvement Era.
+- Innovation Pipeline roadmap candidate.
+- New Core Principle candidates:
+  Silent Operation Principle, Platform First, Reuse Before Rebuild, and
+  Innovation Pipeline.
+
+### Reason
+
+GDS Foundation v1 completed with Rules, Workflow, Knowledge Base, AI Repository
+Index, Project Profile, AI Startup Procedure, Daily Operation, Health,
+Repository Quality Audit, UTF-8 Read Rule, Localization, Validation, and
+Template Standardization.
+
+The roadmap needed to move from foundation construction to platform usage,
+integration, automation candidates, and multi-project Ghost Ecosystem direction.
+
+### Evolution
+
+GDS evolved from a documentation foundation into a platform roadmap. Future work
+now has a clearer path from Platform Integration to Automation Server, Ghost
+Ecosystem, Continuous Improvement, and Innovation Pipeline promotion.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

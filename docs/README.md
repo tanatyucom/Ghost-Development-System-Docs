@@ -976,10 +976,18 @@ Launcher の責任境界と設計思想を説明します。
 `docs/roadmap/` を使います。
 
 Ghost Development System 自身の進化は
-`docs/roadmap/ghost_development_system_roadmap.md` を確認します。
+`roadmap/ghost_development_system_roadmap.md` を確認します。
+
+現在の GDS Roadmap は Ver2 Platform Era です。Foundation Era は completed として
+扱い、Platform Integration、Automation Server、Ghost Ecosystem、Continuous
+Improvement を今後の大きな phase として管理します。
+
+Roadmap Ver2 の completion report:
+
+- `reports/roadmap_v2_platform_era_completion_report.md`
 
 Gray Ghost Archive との関係や既存の大きな方向性は
-`docs/roadmap/roadmap.md` を確認します。
+`roadmap/roadmap.md` を確認します。
 
 GameGhost など各 project 固有の feature roadmap は、各 project 側で管理します。
 
@@ -1047,9 +1055,9 @@ Reviewers は通常、次の順に確認します:
 
 Roadmap work は通常、次の順に確認します:
 
-- `docs/roadmap/ghost_development_system_roadmap.md`
-- `docs/roadmap/roadmap.md`
-- `docs/templates/roadmap_template.md`
+- `roadmap/ghost_development_system_roadmap.md`
+- `roadmap/roadmap.md`
+- `templates/roadmap_template.md`
 - `docs/architecture/README.md`
 - `docs/rules/project_rules.md`
 - `docs/history/knowledge_base_history.md`

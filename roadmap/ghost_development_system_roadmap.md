@@ -1,8 +1,8 @@
 # Ghost Development System Roadmap
 
-**Version:** 1.2
+**Version:** 2.0
 
-**Last Updated:** 2026-07-03
+**Last Updated:** 2026-07-10
 
 ## Purpose
 
@@ -45,9 +45,205 @@ GameGhost など各プロジェクトの Roadmap が扱うもの:
 Ghost Development System は各プロジェクトを支援しますが、各プロジェクト固有の
 runtime 責務を所有しません。
 
-## Ver1.1 Roadmap
+## Roadmap Ver2: Platform Era
 
 Status: active.
+
+Theme:
+
+```text
+Foundation Complete
+  -> Platform Integration
+  -> Automation Server
+  -> Ghost Ecosystem
+  -> Continuous Improvement
+```
+
+Purpose:
+
+```text
+GDS Foundation v1 で整備した Rules、Workflow、Knowledge Base、AI Repository
+Index、Project Profile、Startup、Daily Operation、Health、Repository Quality、
+UTF-8、Localization、Validation、Template Standardization を利用し、複数 Ghost
+Project を支える Platform / Ghost Ecosystem へ進む。
+```
+
+Ver2 は、Foundation を作る phase ではなく、Foundation を使って運用・統合・自動化・
+横展開する phase です。
+
+## Phase 1: Foundation Era
+
+Status: completed.
+
+Period:
+
+```text
+2026-06-26 -> 2026-07-10
+```
+
+Completed outcomes:
+
+- Rule Foundation.
+- Workflow.
+- Knowledge Base.
+- AI Repository Index.
+- Project Profile.
+- AI Startup Procedure.
+- Daily Operation.
+- Health Dashboard.
+- Repository Quality Audit.
+- UTF-8 Read Rule.
+- Localization.
+- Validation.
+- Template Standardization.
+- Foundation Complete.
+
+## Phase 2: Platform Integration Era
+
+Status: active direction.
+
+Purpose:
+
+```text
+GDS Foundation を、日常運用で使える platform entry point と review / request
+management に統合する。
+```
+
+Candidate scope:
+
+- Command Center.
+- Q Workspace.
+- Review Queue.
+- Approved Q.
+- Draft Q.
+- Repository Integration.
+- Platform Dashboard.
+
+Exit direction:
+
+- Q、review、repository health、quality、project profile を 1 つの運用体験として
+  見られる。
+- Human Approval を維持したまま、AI が次に読むべき artifact と状態を迷わない。
+- Command Center / Dashboard は設計候補として扱い、実装は別 Q で承認する。
+
+## Phase 3: Automation Server Era
+
+Status: future candidate.
+
+Purpose:
+
+```text
+GDS の既存 validation と workflow を監視・通知・draft generation に接続し、
+人間が承認しやすい automation server へ進める。
+```
+
+Candidate scope:
+
+- Repository Watch.
+- Health Watch.
+- Quality Watch.
+- Draft Q Generator.
+- Notification.
+- ChatGPT Review.
+- Human Approval.
+- Codex Execution.
+
+Guard:
+
+- automation は Human Approval を置き換えない。
+- Draft Q は実行命令ではなく review candidate として扱う。
+- Codex Execution は approved Q と scope guard を前提にする。
+
+## Phase 4: Ghost Ecosystem Era
+
+Status: future candidate.
+
+Target projects:
+
+- GameGhost.
+- AnimeGhost.
+- ComicGhost.
+- Future Ghost Projects.
+
+Shared platform:
+
+- Rules.
+- Workflow.
+- Templates.
+- Health.
+- Quality.
+- Startup.
+- Repository.
+- Project Profile.
+
+Long-term vision:
+
+```text
+One Platform
+  -> Multiple Ghost Projects
+  -> Shared Knowledge
+  -> Shared Automation
+  -> Shared Command Center
+```
+
+## Phase 5: Continuous Improvement Era
+
+Status: future candidate.
+
+Improvement loop:
+
+```text
+Issue
+  -> Health
+  -> Draft Q
+  -> Review
+  -> Implementation
+  -> Knowledge Update
+  -> Platform Improvement
+```
+
+Purpose:
+
+```text
+単発の改善ではなく、Health、Quality、Q、Review、Knowledge Promotion を通じて
+Platform 自体が継続的に強くなる loop を標準化する。
+```
+
+## Innovation Pipeline
+
+Status: roadmap candidate.
+
+Flow:
+
+```text
+Experiment
+  -> Prototype
+  -> Validation
+  -> Platform Standard
+  -> All Ghost Projects
+```
+
+Purpose:
+
+```text
+実験的な改善を、すぐに rule / workflow / platform standard として固定せず、
+検証を通過したものだけを Ghost Ecosystem 全体へ昇格する。
+```
+
+## New Core Principle Candidates
+
+Status: candidates only.
+
+- Silent Operation Principle.
+- Platform First.
+- Reuse Before Rebuild.
+- Innovation Pipeline.
+
+Core Rule 化は別 Q で行います。この Roadmap では候補として保持します。
+
+## Ver1.1 Roadmap
+
+Status: completed as part of Foundation Era.
 
 Theme:
 
@@ -74,7 +270,7 @@ Work Items:
 
 ## Ver1.2 Roadmap
 
-Status: active.
+Status: completed as part of Foundation Era.
 
 Theme:
 
@@ -133,7 +329,7 @@ Candidate scope:
 
 ## Knowledge Platform Roadmap
 
-Status: active roadmap direction.
+Status: active roadmap direction under Platform Integration Era.
 
 Theme:
 
@@ -300,7 +496,7 @@ Future Candidates:
 
 ## Development Metrics / Evidence Framework Roadmap
 
-Status: active roadmap direction.
+Status: active roadmap direction under Continuous Improvement Era.
 
 Theme:
 
@@ -429,6 +625,8 @@ Theme:
 ```text
 Development Platform
 ```
+
+Status: integrated into Roadmap Ver2 Platform Era.
 
 Candidate scope:
 
