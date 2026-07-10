@@ -1381,6 +1381,31 @@ Platform Promotion moved from an informal workflow stage into a reviewable
 decision artifact. GDS can now record promote, revise, reject, and archive
 decisions with architecture, repository, health, and documentation impact.
 
+## Ver1.50
+
+### Added
+
+- Platform Promotion Decision Report Examples:
+  `examples/platform_promotion_decision_report_examples.md`.
+- Promote examples for Repository Quality Audit and Health Dashboard.
+- Revise example for Ghost OCR Prototype.
+- Archive example for an unsafe Experimental Tool.
+- README, docs index, examples index, workflow, and template links for Platform
+  Promotion decision examples.
+
+### Reason
+
+Platform Promotion Decision Report Template existed, but users still needed
+concrete examples showing how to apply Promote, Revise, Reject, and Archive
+judgment consistently.
+
+### Evolution
+
+Platform Promotion moved from a blank decision template into reviewable example
+practice. Future promotion decisions can now compare validation evidence,
+criteria checks, impact review, Human Review, final decision, lessons learned,
+and Recommended Next Q against concrete examples.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

@@ -786,6 +786,8 @@ Reference points:
   `templates/platform_promotion_decision_report_template.md`
 - Innovation Pipeline Examples:
   `examples/innovation_pipeline_examples.md`
+- Platform Promotion Decision Report Examples:
+  `examples/platform_promotion_decision_report_examples.md`
 - Rules: `docs/rules/core_principles.md`
 - Glossary: `docs/glossary/README.md`
 
@@ -1018,6 +1020,7 @@ Validation 後に Platform へ昇格するか判断する場合は
 `templates/platform_promotion_decision_report_template.md` を使います。
 
 実運用例は `examples/innovation_pipeline_examples.md` を参照します。
+昇格判断例は `examples/platform_promotion_decision_report_examples.md` を参照します。
 
 ### Example を見たい
 

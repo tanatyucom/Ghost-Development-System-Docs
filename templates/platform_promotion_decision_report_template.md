@@ -226,6 +226,7 @@ Future candidates:
 
 - `docs/workflow/innovation_pipeline_workflow.md`
 - `templates/innovation_pipeline_template.md`
+- `examples/platform_promotion_decision_report_examples.md`
 - `examples/innovation_pipeline_examples.md`
 - `docs/architecture/platform_era_core_principles.md`
 - `roadmap/ghost_development_system_roadmap.md`

@@ -56,6 +56,8 @@ reports, and documentation requests can start from a clear reference.
 - `innovation_pipeline_examples.md`: examples for moving ideas through Idea,
   Experiment, Prototype, Validation, Platform Promotion, Standardization, and
   Propagation.
+- `platform_promotion_decision_report_examples.md`: examples for Promote,
+  Revise, Reject, and Archive decisions after Innovation Pipeline validation.
 - `repository_information.md`: example of repository boundaries, source of
   truth, scope guard, and completion criteria.
 - `authority_matrix.md`: example edit and reference authority matrix.
@@ -146,6 +148,9 @@ what a complete, well-scoped document should feel like.
 - Use `innovation_pipeline_examples.md` when a field project experiment,
   improvement idea, or future automation candidate may become a Platform
   Standard through Innovation Pipeline.
+- Use `platform_promotion_decision_report_examples.md` when deciding whether a
+  validated Innovation Pipeline item should be promoted, revised, rejected, or
+  archived.
 - Use `repository_information.md` when a task may involve multiple
   repositories, documentation roots, runtime roots, or reference-only sources.
 - Use `authority_matrix.md` when a task needs explicit Editable, Reference
@@ -171,7 +176,7 @@ When examples conflict with rules or templates, follow:
 - Documentation Coverage Report example.
 - Knowledge Base Index example.
 - Metrics / Evidence completion report example.
-- Platform Promotion decision report example.
+- Platform Standard Registry example.
 
 ## Update Policy
 
