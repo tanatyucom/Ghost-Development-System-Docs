@@ -375,6 +375,9 @@ Reference points:
 - Artifact First: `docs/rules/artifact_first_rules.md`
 - Quality Rules: `docs/rules/quality_rules.md`
 - Completion Report Template: `templates/completion_report_template.md`
+- Multi-AI Handoff Template: `templates/multi_ai_handoff_template.md`
+- Multi-AI Handoff Checklist:
+  `templates/multi_ai_handoff_checklist_template.md`
 - Examples: `examples/persistent_collaboration_examples.md`
 
 Core priority:
@@ -392,6 +395,7 @@ Decision order:
 ```text
 Knowledge Access Index
   -> Repository
+  -> Completion Report
   -> Chat
 ```
 

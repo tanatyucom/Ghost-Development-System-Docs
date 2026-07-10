@@ -34,6 +34,23 @@
 - Notes artifact:
 - Attachments folder:
 
+## Multi-AI Handoff
+
+- Handoff needed:
+- Handoff artifact:
+- Handoff checklist used:
+- Handoff checklist artifact:
+- Target AI / reviewer:
+- Current Status:
+- Current Focus:
+- Scope:
+- Source of Truth:
+- Changed Files:
+- Verification Results:
+- Remaining Issues:
+- Recommended Next Q:
+- Next AI entry point:
+
 ## Review Entry Point
 
 最初に見る場所:

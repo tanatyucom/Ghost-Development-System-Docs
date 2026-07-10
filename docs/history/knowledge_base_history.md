@@ -1677,6 +1677,58 @@ Persistent Collaboration moved from rule-only guidance into an example-backed
 operational reference. Future AI sessions can now see both the rule and the
 expected behavior pattern.
 
+## Ver1.61
+
+### Added
+
+- Multi-AI Handoff Checklist Template:
+  `templates/multi_ai_handoff_checklist_template.md`.
+- AI Collaboration Rules handoff requirements for Current Status, Current
+  Focus, Scope, Source of Truth, Changed Files, Verification Results,
+  Remaining Issues, and Recommended Next Q.
+- Repository First handoff order:
+  Knowledge Access Index -> Repository -> Completion Report -> Chat.
+- Scope Protection fields for editable targets, forbidden edit targets, target
+  repository, and out-of-scope repositories.
+- Completion Report Template Multi-AI Handoff section.
+- README, docs index, and Templates README routes to the handoff checklist.
+
+### Reason
+
+Persistent Collaboration made collaboration rules repository-persistent, but AI
+handoff between ChatGPT, Codex, Claude, Gemini, and human review still needed a
+standard checklist to prevent context loss and scope drift.
+
+### Evolution
+
+Multi-AI handoff can now be recorded as a reusable artifact. The next AI can
+start from repository evidence, current status, verification results, remaining
+issues, and the recommended next Q instead of relying on temporary chat memory.
+
+## Ver1.62
+
+### Added
+
+- Multi-AI Handoff Template:
+  `templates/multi_ai_handoff_template.md`.
+- Separation between handoff artifact and handoff checklist:
+  the template records the handoff, while the checklist reviews completeness.
+- Suggested Commit Message field for commit-ready handoff.
+- README, docs index, Templates README, AI Collaboration Rules, and Completion
+  Report Template links for the handoff artifact.
+
+### Reason
+
+The handoff checklist defined what to confirm, but cross-AI continuation also
+needed a concise, reusable artifact format that can be passed directly between
+ChatGPT, Codex, Claude, Gemini, and human reviewers.
+
+### Evolution
+
+Multi-AI handoff now has two layers: a handoff template for factual transfer
+and a checklist template for receiver readiness review. This reduces context
+loss while keeping repository-first handoff concise and reproducible.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

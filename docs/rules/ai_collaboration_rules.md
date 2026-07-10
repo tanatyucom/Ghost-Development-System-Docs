@@ -192,6 +192,39 @@ Cross-review is recommended for:
 - major rule changes;
 - reusable templates.
 
+When work is handed off between ChatGPT, Codex, Claude, Gemini, human review,
+or another AI context, the handoff should include:
+
+- Current Status.
+- Current Focus.
+- Scope.
+- Source of Truth.
+- Changed Files.
+- Verification Results.
+- Remaining Issues.
+- Recommended Next Q.
+
+Before using chat memory during handoff, confirm sources in this order:
+
+1. Knowledge Access Index.
+2. Repository.
+3. Completion Report.
+4. Chat.
+
+Scope protection must name:
+
+- editable targets;
+- forbidden edit targets;
+- target repository;
+- out-of-scope repositories.
+
+Use `templates/multi_ai_handoff_template.md` for the handoff artifact when the
+handoff is reusable, reviewable, long-running, or likely to cross tool
+boundaries.
+
+Use `templates/multi_ai_handoff_checklist_template.md` to review whether the
+handoff artifact is complete enough for the receiving AI or human reviewer.
+
 ## Communication Rules
 
 AI should report:
@@ -259,4 +292,6 @@ rethink, so they can focus on what truly requires judgment.
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/quality_rules.md`
 - `templates/completion_report_template.md`
+- `templates/multi_ai_handoff_template.md`
+- `templates/multi_ai_handoff_checklist_template.md`
 - `docs/workflow/ai_daily_operation_cycle.md`

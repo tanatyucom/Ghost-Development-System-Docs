@@ -115,12 +115,15 @@ Start from:
 - [`docs/rules/core_principles.md`](docs/rules/core_principles.md)
 - [`docs/rules/rules.md`](docs/rules/rules.md)
 - [`examples/persistent_collaboration_examples.md`](examples/persistent_collaboration_examples.md)
+- [`templates/multi_ai_handoff_template.md`](templates/multi_ai_handoff_template.md)
+- [`templates/multi_ai_handoff_checklist_template.md`](templates/multi_ai_handoff_checklist_template.md)
 
 判断順序:
 
 ```text
 Knowledge Access Index
   -> Repository
+  -> Completion Report
   -> Chat
 ```
 

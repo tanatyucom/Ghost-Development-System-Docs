@@ -29,6 +29,13 @@ Daily Operation Cycle from startup through Current Q Review, implementation,
 verification, Human Review, Completion Checklist, commit / push, Knowledge
 Update, Repository Update, Next Q Planning, and Next Startup.
 
+Multi-AI handoff templates help ChatGPT, Codex, Claude, Gemini, human review,
+and other AI contexts transfer Current Status, Current Focus, Scope, Source of
+Truth, Changed Files, Verification Results, Remaining Issues, Recommended Next
+Q, and Suggested Commit Message without relying on temporary chat memory. The
+handoff checklist template reviews whether that artifact is complete enough for
+the receiver.
+
 Health documents such as `docs/health/gds_health_dashboard.md` may be used
 beside templates when a task should record GDS operating health rather than
 only task completion.
@@ -86,6 +93,8 @@ restore guidance.
 - `daily_operation_checklist_template.md`
 - `repository_root_validation_template.md`
 - `collaborative_decision_template.md`
+- `multi_ai_handoff_template.md`
+- `multi_ai_handoff_checklist_template.md`
 - `completion_checklist_template.md`
 - `q_file_template.md`
 - `ai_implementation_request.md`
@@ -125,6 +134,8 @@ Promote improvements into templates when they help future Q files become:
   judgment.
 - better at keeping public Raw URL entry points available for AI repository
   knowledge access.
+- better at handing work off between AI tools without losing repository
+  context, scope boundaries, verification results, or next action.
 
 ## Improvement Review
 
