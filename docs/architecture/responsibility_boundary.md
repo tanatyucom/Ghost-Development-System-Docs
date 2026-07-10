@@ -693,13 +693,50 @@ workflow, module business logic, or database utility frameworks.
 
 ## Command Center
 
-Command Center owns the operational entry point for development work.
+Command Center owns the operational entry point and repository orchestration
+boundary for development work.
+
+Command Center is not only an Auto Q Generator. It may scan repository
+documents, assemble an Information Package, run or display repository health
+signals, route users to review tools, and draft Q / review / completion /
+registry update artifacts through approved templates.
 
 Command Center may show Knowledge Assets Dashboard, open Knowledge Editor, and
 route users to review tools. It should not own Knowledge Asset definitions,
-approval policy, module-specific content, or runtime schema.
+approval policy, module-specific content, runtime schema, or final human
+approval decisions.
 
 Responsibility relationship:
+
+```text
+Repository Scan
+        |
+        v
+Information Package
+        |
+        v
+Decision Engine
+        |-- Q Draft
+        |-- Review Draft
+        |-- Completion Draft
+        |-- Registry Update
+        |-- Repository Health
+        `-- Recommended Next Q
+```
+
+Operational relationship:
+
+```text
+Command Center
+  -> Repository Scan
+  -> Information Package
+  -> Decision Engine
+  -> Template Engine
+  -> Human Approval
+  -> Approved Artifact / Next Q
+```
+
+Knowledge relationship:
 
 ```text
 Command Center
@@ -708,6 +745,16 @@ Command Center
   -> Knowledge Asset Layer
   -> Archive Project DB / Files
 ```
+
+Command Center follows:
+
+- Repository First.
+- Platform First.
+- Template First.
+- Artifact First.
+
+Command Center does not implement automation, UI, server behavior, or
+field-project runtime changes without a separate Q and Human Approval Gate.
 
 ## Database Philosophy
 

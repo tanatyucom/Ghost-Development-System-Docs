@@ -1,8 +1,8 @@
 # Ghost Development System Roadmap
 
-**Version:** 2.0
+**Version:** 2.1
 
-**Last Updated:** 2026-07-10
+**Last Updated:** 2026-07-11
 
 ## Purpose
 
@@ -118,6 +118,11 @@ Candidate scope:
 - Draft Q.
 - Repository Integration.
 - Platform Dashboard.
+- Repository Scan.
+- Information Package.
+- Decision Engine.
+- Template Engine.
+- Repository Health.
 
 Exit direction:
 
@@ -125,6 +130,77 @@ Exit direction:
   見られる。
 - Human Approval を維持したまま、AI が次に読むべき artifact と状態を迷わない。
 - Command Center / Dashboard は設計候補として扱い、実装は別 Q で承認する。
+- Command Center は Auto Q Generator ではなく、Repository 全体を読み取り、
+  状態をまとめ、判断候補と Artifact draft を生成する Repository Orchestrator
+  として扱う。
+
+## Command Center Roadmap Direction
+
+Status: active architecture direction under Platform Integration Era.
+
+Vision:
+
+```text
+Repository First
+  -> Platform First
+  -> Template First
+  -> Artifact First
+```
+
+Command Center は、単独の Auto Q Generator ではありません。Command Center は
+Repository Orchestrator として、GDS repository 全体を読み取り、状態を整理し、
+人間が判断しやすい draft artifact を生成する Platform 中核です。
+
+Architecture direction:
+
+```text
+Repository Scan
+        |
+        v
+Information Package
+        |
+        v
+Decision Engine
+        |-- Q Draft
+        |-- Review Draft
+        |-- Completion Draft
+        |-- Registry Update
+        |-- Repository Health
+        `-- Recommended Next Q
+```
+
+Core responsibilities:
+
+- Repository Scan:
+  README、docs index、rules、workflow、templates、examples、architecture、
+  roadmap、reports、registry、PIP、project profiles を読み取り、現在状態を整理する。
+- Information Package:
+  project summary、current status、current focus、active repository、recent
+  decisions、open issues、recent artifacts、recommended next Q をまとめる。
+- Template Engine:
+  Q、review、completion report、registry update、handoff、information package
+  などの標準 template を使って draft artifact を生成する。
+- Decision Engine:
+  Repository First / Platform First / Template First / Artifact First に基づき、
+  次に必要な artifact、review、registry update、health check、next Q を提案する。
+- Repository Health:
+  repository quality、AI Repository Index、registry consistency、README routes、
+  UTF-8、diff check などの状態を判断材料として扱う。
+
+Auto Q Generation:
+
+- Auto Q Generation は Command Center の一機能です。
+- Q Draft は Human Approval Gate を通るまでは実行命令ではありません。
+- Draft Q は Information Package、Repository Scan、Decision Engine、Template
+  Engine の出力として生成されます。
+
+Guard:
+
+- Command Center は Human Approval を置き換えない。
+- Command Center は repository source of truth を置き換えない。
+- Command Center は GameGhost など field project の runtime 責務を所有しない。
+- Command Center 実装、automation、UI、server は別 Q と Human Approval Gate を
+  必要とする。
 
 ## Phase 3: Automation Server Era
 

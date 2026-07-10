@@ -1782,6 +1782,34 @@ Project state can now be packaged as a reusable Markdown artifact. This gives
 future automation a stable structure while keeping automation out of scope for
 the current standardization step.
 
+## Ver1.65
+
+### Added
+
+- Command Center Roadmap Direction update in
+  `roadmap/ghost_development_system_roadmap.md`.
+- Command Center architecture update in
+  `docs/architecture/responsibility_boundary.md`.
+- Architecture README update for Command Center as Repository Orchestrator.
+- README, docs index, and Roadmap README wording for Command Center direction.
+- Repository Scan -> Information Package -> Decision Engine flow with Q Draft,
+  Review Draft, Completion Draft, Registry Update, Repository Health, and
+  Recommended Next Q outputs.
+
+### Reason
+
+Persistent Collaboration, Template First, Artifact First, and Information
+Package standards expanded Command Center beyond the original Auto Q Generator
+idea. The roadmap needed to describe Command Center as a Platform Era
+Repository Orchestrator before implementation or automation work begins.
+
+### Evolution
+
+Command Center is now a roadmap-level platform core that reads repository
+state, assembles Information Packages, uses templates to draft artifacts, and
+supports human decisions. Auto Q Generation remains one feature, not the whole
+system.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

@@ -75,8 +75,10 @@ only describe boundaries and principles that are accepted enough to guide work.
   History, Decision History, Case Knowledge Base, and AI handoff.
 - Gray Ghost Core owns analysis, recommendation, and cross-module intelligence.
 - Archive Modules own business logic, schema, metadata, and import rules.
-- Command Center owns the operational entry point and may route to Knowledge
-  Dashboard or Editor.
+- Command Center owns the operational entry point and repository orchestration
+  boundary. It may scan repository documents, assemble Information Packages,
+  route to Knowledge Dashboard or Editor, surface Repository Health, and draft
+  Q / review / completion / registry update artifacts through templates.
 - Launcher owns the user entry point.
 
 ## Database Philosophy Summary
@@ -108,6 +110,30 @@ before implementation or review begins.
 
 Repository Root Validation supports Startup Checklist by checking the actual
 Git root before work begins.
+
+## Command Center Direction
+
+Command Center is a Repository Orchestrator, not only an Auto Q Generator.
+
+```text
+Repository Scan
+        |
+        v
+Information Package
+        |
+        v
+Decision Engine
+        |-- Q Draft
+        |-- Review Draft
+        |-- Completion Draft
+        |-- Registry Update
+        |-- Repository Health
+        `-- Recommended Next Q
+```
+
+Command Center follows Repository First, Platform First, Template First, and
+Artifact First. Implementation, automation, UI, and server behavior remain
+future work that requires a separate Q and Human Approval Gate.
 
 AI Proactive Proposal supports human-led collaboration by making concerns and
 better options visible without taking control away from the user.

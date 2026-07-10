@@ -14,7 +14,8 @@ roadmap を混同しないために使います。
 - `ghost_development_system_roadmap.md`: Ghost Development System 自身の
   Knowledge Base、Workflow、Rules、Templates、Architecture、AI Collaboration、
   Knowledge Platform、Development Platform、Command Center、Ghost Ecosystem の
-  Roadmap。Ver2 では Foundation Complete 後の Platform Era を管理します。
+  Roadmap。Ver2 では Foundation Complete 後の Platform Era と Command Center as
+  Repository Orchestrator direction を管理します。
 - `roadmap.md`: Gray Ghost Archive との関係、Ghost Development Toolkit Trial から
   Ghost Development System へ至る大きな流れ、責任境界、Future Candidates。
 
@@ -65,6 +66,10 @@ Platform / Ghost Ecosystem 中心の Ver2 へ移行しました。
 Ver2 は実装承認ではありません。Command Center、Q Workspace、Review Queue、
 Platform Dashboard、Automation Server などは、別 Q と Human Approval Gate によって
 設計・実装へ昇格します。
+
+Command Center は Auto Q Generator 単体ではなく、Repository Scan、Information
+Package、Decision Engine、Template Engine、Repository Health、Recommended Next Q
+を接続する Repository Orchestrator として扱います。
 
 ## Does NOT Contain
 

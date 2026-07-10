@@ -917,23 +917,39 @@ Reference points:
 Core relationship:
 
 ```text
-Command Center
-  -> Knowledge Assets Dashboard
-  -> Knowledge Editor
-  -> Knowledge Asset Layer
-  -> Archive Project DB / Files
+Repository Scan
+        |
+        v
+Information Package
+        |
+        v
+Decision Engine
+        |-- Q Draft
+        |-- Review Draft
+        |-- Completion Draft
+        |-- Registry Update
+        |-- Repository Health
+        `-- Recommended Next Q
 ```
 
 責務分担:
 
+- Command Center は Auto Q Generator 単体ではなく Repository Orchestrator。
+- Repository Scan は README、docs index、rules、workflow、templates、examples、
+  architecture、roadmap、reports、registry、PIP、project profiles を読み取る。
+- Information Package は現在地、成果物、論点、次アクションをまとめる状態共有
+  Artifact。
+- Decision Engine は Q Draft、Review Draft、Completion Draft、Registry Update、
+  Repository Health、Recommended Next Q の候補を作る。
+- Template Engine は承認済み template に基づいて draft artifact を生成する。
 - Knowledge Asset Layer は、Approved Alias、Metadata、Unicode Rules、Golden
   Samples、OCR Confusion Rules、Review Decisions、Series Rules、Platform Rules、
   User Overrides などの shared knowledge boundary を扱う。
 - Knowledge Editor は、CSV ではなく Knowledge を編集する入口。
 - Knowledge Assets Dashboard は、Knowledge の状態、成長、未承認項目、品質を
   観測する入口。
-- Command Center は navigation と operational entry point であり、KAL の所有者
-  ではない。
+- Command Center は navigation と operational entry point であり、KAL、field
+  project runtime、Human Approval の所有者ではない。
 
 ## Field Driven Development Cycle Index
 
