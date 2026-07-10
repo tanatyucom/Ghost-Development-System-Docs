@@ -19,6 +19,8 @@ Responsibilities:
 - Review.
 - Documentation.
 - Templates.
+- Startup Checklist.
+- Completion Checklist.
 - Output Layer.
 - Debug Artifact Review.
 - Debug Escalation Ladder.
@@ -41,6 +43,78 @@ DevelopmentSystem is the parent development foundation for multiple projects.
 It may define shared workflow, documentation, rules, templates, AI
 collaboration, and cross-project coordination. It must not silently take over a
 child project's runtime responsibilities.
+
+## Startup Checklist
+
+Startup Checklist owns the session-start confirmation boundary before
+implementation, review, Q execution, or documentation update begins.
+
+Responsibilities:
+
+- confirm Working Repository, Single Source Of Truth, and Related Repository
+  edit authority;
+- confirm Production / Backup / Reference Only boundaries;
+- confirm Current Phase and Current Goal;
+- confirm applicable rules and methodologies;
+- confirm Q Artifact / Download File status before execution;
+- confirm Scope / Out of Scope before edits;
+- confirm dirty workspace state and commit policy before staging or commit.
+
+Startup Checklist does not own:
+
+- final human approval authority;
+- official rule definitions;
+- workflow definitions after startup;
+- project-specific runtime behavior;
+- Git commit approval;
+- Knowledge Asset approval.
+
+Architecture flow:
+
+```text
+Start
+  -> Startup Checklist
+  -> Repository / Rule / Methodology / Scope Confirmation
+  -> Implementation / Review
+```
+
+## Completion Checklist
+
+Completion Checklist owns the task-end confirmation boundary before work is
+treated as complete, committed, tagged, released, or handed off to the next Q.
+
+Responsibilities:
+
+- confirm verification result and unverified items;
+- confirm review result and Human Approval Gate needs;
+- confirm completion report status;
+- confirm Improvement Review status;
+- confirm commit requirement and commit execution separately;
+- confirm tag requirement and tag execution separately;
+- confirm release requirement and release publication separately;
+- confirm Recommended Next Q;
+- confirm workspace clean state or remaining dirty workspace state.
+
+Completion Checklist does not own:
+
+- final human approval authority;
+- commit approval;
+- tag approval;
+- release approval;
+- project-specific release policy;
+- verification implementation;
+- cleanup of unrelated workspace changes.
+
+Architecture flow:
+
+```text
+Implementation
+  -> Verification / Review / Completion Report
+  -> Completion Checklist
+  -> Commit / Tag / Release Decision
+  -> Recommended Next Q
+  -> End
+```
 
 ## Output Layer
 

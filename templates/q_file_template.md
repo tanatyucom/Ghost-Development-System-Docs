@@ -416,6 +416,51 @@ hard edit boundary を記載します。
 - Do not update files outside the listed target repository.
 - Do not sync changes to related repositories.
 
+## Startup Checklist
+
+Use this section before Codex / AI implementation, review, documentation update,
+or Q execution begins.
+
+- Startup Checklist applies: Yes / No
+- Working Repository confirmed:
+- Production / Backup / Reference Only boundaries confirmed:
+- Current Phase:
+- Current Goal:
+- Applicable Rules:
+- Applicable Methodologies:
+- Q Artifact / Download File status:
+- Scope / Out of Scope confirmed:
+- Dirty Workspace checked:
+- Commit policy confirmed:
+- Ready to start:
+
+Reference:
+
+- `docs/rules/startup_checklist_rules.md`
+- `docs/workflow/startup_checklist_workflow.md`
+- `templates/startup_checklist_template.md`
+
+## Completion Checklist
+
+Use this section to define completion requirements before work begins.
+
+- Completion Checklist applies: Yes / No
+- Verification required:
+- Review required:
+- Completion Report required:
+- Improvement Review required:
+- Commit decision required:
+- Tag decision required:
+- Release decision required:
+- Recommended Next Q required:
+- Workspace Clean Confirmation required:
+
+Reference:
+
+- `docs/rules/completion_checklist_rules.md`
+- `docs/workflow/completion_checklist_workflow.md`
+- `templates/completion_checklist_template.md`
+
 ## Purpose
 
 この Q が達成する目的を記載します。

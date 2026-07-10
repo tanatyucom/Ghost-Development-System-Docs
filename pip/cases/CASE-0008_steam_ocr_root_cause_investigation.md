@@ -99,6 +99,7 @@ when metrics are only proxy evidence.
 ## Related Workflow
 
 - `docs/workflow/debug_escalation_ladder.md`
+- `docs/workflow/first_broken_step_methodology.md`
 - `docs/workflow/debug_artifact_review_workflow.md`
 - `docs/workflow/pip_case_knowledge_base_workflow.md`
 

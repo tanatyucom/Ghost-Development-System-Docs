@@ -1,5 +1,72 @@
 # Knowledge Base Index
 
+## Startup Checklist Index
+
+Startup Checklist は、新しい ChatGPT / Codex / AI セッション、レビュー、
+Q 実行、文書更新を始める前に、repository、scope、applicable rules、
+methodologies、Q artifact、commit policy を確認するための起動入口です。
+
+Reference points:
+
+- Rules: `docs/rules/startup_checklist_rules.md`
+- Workflow: `docs/workflow/startup_checklist_workflow.md`
+- Template: `templates/startup_checklist_template.md`
+- Examples: `examples/startup_checklist_examples.md`
+- Rules Index: `docs/rules/rules.md`
+- Workflow Index: `docs/workflow/README.md`
+- Commit Safety: `docs/workflow/commit_safety_checklist.md`
+
+Core flow:
+
+```text
+Start
+  -> Repository Confirmation
+  -> Q / Artifact Confirmation
+  -> Applicable Rules Confirmation
+  -> Applicable Methodologies Confirmation
+  -> Scope / Out of Scope Confirmation
+  -> Dirty Workspace / Commit Policy Confirmation
+  -> Checklist Complete
+  -> Implementation / Review Start
+```
+
+Startup Checklist is an entry point. It does not replace Project First,
+Artifact First, Audit Before Repair, Debug Artifact Review, Debug Escalation
+Ladder, Migration First, PIP Case Knowledge Base, Concept Promotion, or Commit
+Safety.
+
+## Completion Checklist Index
+
+Completion Checklist は、作業完了時に verification、review、completion report、
+Improvement Review、commit / tag / release 判断、Recommended Next Q、
+workspace clean confirmation を確認するための終了入口です。
+
+Reference points:
+
+- Rules: `docs/rules/completion_checklist_rules.md`
+- Workflow: `docs/workflow/completion_checklist_workflow.md`
+- Template: `templates/completion_checklist_template.md`
+- Examples: `examples/completion_checklist_examples.md`
+- Completion Report Template: `templates/completion_report_template.md`
+- Review Checklist: `templates/review_checklist.md`
+- Commit Safety: `docs/workflow/commit_safety_checklist.md`
+
+Core flow:
+
+```text
+Implementation
+  -> Verification
+  -> Review
+  -> Completion Report
+  -> Completion Checklist
+  -> Commit / Tag / Release Decision
+  -> Recommended Next Q
+  -> End
+```
+
+Completion Checklist does not automatically approve commit, tag, or release.
+It records whether each one is required and whether it was executed.
+
 ## Artifact First Index
 
 Reusable, reviewable, AI-handoff, human-approval, or Git-managed outputs should
@@ -278,6 +345,12 @@ Phenomenon Check
 
 Use this ladder when a task may otherwise jump from a symptom or metric
 directly to parameter tuning or algorithm change.
+
+First Broken Step Methodology:
+
+- Workflow: `docs/workflow/first_broken_step_methodology.md`
+- Related Concept: `pip/concepts/CONCEPT-2026-002_first_broken_step.md`
+- Related CASE: `pip/cases/CASE-0008_steam_ocr_root_cause_investigation.md`
 
 ## Roadmap2 Knowledge Salvage Index
 

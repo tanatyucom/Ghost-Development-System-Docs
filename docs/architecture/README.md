@@ -12,8 +12,9 @@ runtime behavior.
 ## Contains
 
 - `responsibility_boundary.md`: ownership boundaries for DevelopmentSystem,
-  Output Layer, Migration First Boundary, Knowledge Asset Layer, Metrics Layer,
-  PIP, Gray Ghost Core, Archive Modules, Command Center, and Launcher.
+  Startup Checklist, Completion Checklist, Output Layer, Migration First
+  Boundary, Knowledge Asset Layer, Metrics Layer, PIP, Gray Ghost Core, Archive
+  Modules, Command Center, and Launcher.
 - `design_philosophy.md`: principles that guide architecture and documentation.
 
 ## Does NOT Contain
@@ -35,6 +36,12 @@ only describe boundaries and principles that are accepted enough to guide work.
 ## Responsibility Boundary Summary
 
 - DevelopmentSystem owns development infrastructure.
+- Startup Checklist owns the session-start confirmation boundary for
+  repository, Q artifact, applicable rules, methodologies, scope, and commit
+  policy.
+- Completion Checklist owns the task-end confirmation boundary for
+  verification, review, completion report, commit / tag / release decisions,
+  next Q, and workspace clean confirmation.
 - Output Layer owns the durable boundary between chat summaries and managed
   artifacts.
 - Debug Artifact Review owns the development-time evidence boundary for
@@ -73,8 +80,16 @@ not replace project-owned schema or runtime behavior.
 ## Design Philosophy Summary
 
 Accepted design principles include Evidence First, Purpose-Oriented Naming,
-Human Approval Gate, Knowledge Before Automation, Artifact First, Debug
-Artifact Review, and Migration First.
+Human Approval Gate, Knowledge Before Automation, Startup Checklist, Completion
+Checklist, Artifact First, Debug Artifact Review, and Migration First.
+
+Startup Checklist supports these principles by confirming the active repository,
+scope, applicable rules, methodologies, Q artifact status, and commit policy
+before implementation or review begins.
+
+Completion Checklist supports these principles by confirming verification,
+review, completion report, Improvement Review, commit / tag / release decisions,
+next Q, and workspace clean state before work is treated as complete.
 
 Output Layer supports Artifact First by making reusable Q files, design
 documents, specifications, review requests, AI requests, roadmap proposals, and
@@ -140,6 +155,10 @@ Do not use this folder to approve Future Candidates by implication.
 
 - `docs/architecture/responsibility_boundary.md`
 - `docs/architecture/design_philosophy.md`
+- `docs/rules/startup_checklist_rules.md`
+- `docs/rules/completion_checklist_rules.md`
+- `docs/workflow/startup_checklist_workflow.md`
+- `docs/workflow/completion_checklist_workflow.md`
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/q_file_artifact_standard.md`
 - `docs/rules/debug_artifact_review_rules.md`

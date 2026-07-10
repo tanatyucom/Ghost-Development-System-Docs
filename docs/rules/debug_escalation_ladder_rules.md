@@ -106,6 +106,28 @@ Debug Artifact Review は次を扱います。
 
 Debug Escalation Ladder は、Debug Artifact Review をいつ使い、いつ Pipeline Trace や First Broken Step に進むかを定義します。
 
+## Relationship To First Broken Step Methodology
+
+Debug Escalation Ladder decides when to escalate into First Broken Step
+identification.
+
+First Broken Step Methodology defines how to perform that identification:
+
+```text
+Confirm the Symptom
+  -> Reproduce the Issue
+  -> Collect Evidence
+  -> Trace the Entire Pipeline
+  -> Identify the First Broken Step
+  -> Confirm the Root Cause
+  -> Apply the Fix
+  -> Validate the Result
+  -> Perform Regression Check
+  -> Document the Lessons Learned
+```
+
+Details follow `docs/workflow/first_broken_step_methodology.md`.
+
 ## Decision Background
 
 Roadmap2 の Steam OCR v2 調査では、metrics が成功に見えても human review では失敗している例、crop score が良くても title text が欠ける例、target row identity が先にずれる例が確認されました。

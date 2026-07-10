@@ -1,8 +1,8 @@
 # Ghost Development System Rules
 
-**Version:** 2.4
+**Version:** 2.6
 
-**Last Updated:** 2026-07-05
+**Last Updated:** 2026-07-10
 
 ## Purpose
 
@@ -33,6 +33,8 @@ Rules follow these principles:
 - Japanese First.
 - Evidence First.
 - Knowledge Before Automation.
+- Startup Checklist.
+- Completion Checklist.
 - Artifact First.
 - Audit Before Repair.
 - Debug Artifact Review.
@@ -54,6 +56,8 @@ own files.
 - `project_rules.md`
 - `language_rules.md`
 - `documentation_rules.md`
+- `startup_checklist_rules.md`
+- `completion_checklist_rules.md`
 - `artifact_first_rules.md`
 - `q_file_artifact_standard.md`
 - `audit_before_repair_rules.md`
@@ -83,6 +87,59 @@ Humans approve:
 
 AI may propose, draft, compare, and review. AI must not silently promote future
 candidates, expand scope, or perform destructive work.
+
+## Startup Checklist
+
+Before implementation, review, Q execution, or documentation update begins,
+confirm the working repository, production / backup / reference-only boundaries,
+current phase, current goal, applicable rules, applicable methodologies, Q
+artifact status, scope, out-of-scope items, and commit policy.
+
+Standard startup flow:
+
+```text
+Start
+  -> Repository Confirmation
+  -> Q / Artifact Confirmation
+  -> Applicable Rules Confirmation
+  -> Applicable Methodologies Confirmation
+  -> Scope / Out of Scope Confirmation
+  -> Dirty Workspace / Commit Policy Confirmation
+  -> Checklist Complete
+  -> Implementation / Review Start
+```
+
+Startup Checklist is an entry point for existing rules. It does not replace
+Project First, Japanese First, Artifact First, Audit Before Repair, Debug
+Artifact Review, Debug Escalation Ladder, Migration First, PIP Case Knowledge
+Base, Concept Promotion, Roadmap2 Knowledge Salvage, or Commit Safety.
+
+Details follow `startup_checklist_rules.md`.
+
+## Completion Checklist
+
+Before a task is treated as complete, confirm verification, review, completion
+report, Improvement Review, commit requirement, commit execution, tag
+requirement, tag execution, release requirement, release publication,
+Recommended Next Q, and workspace clean confirmation.
+
+Standard completion flow:
+
+```text
+Implementation
+  -> Verification
+  -> Review
+  -> Completion Report
+  -> Completion Checklist
+  -> Commit / Tag / Release Decision
+  -> Recommended Next Q
+  -> End
+```
+
+Completion Checklist records decisions. It does not automatically approve
+commit, tag, release, or Human Approval Gate items.
+
+Details follow `completion_checklist_rules.md`.
 
 ## Debug Artifact Review
 

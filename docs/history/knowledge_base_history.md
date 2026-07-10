@@ -589,6 +589,89 @@ GDS Knowledge Base evolved from Roadmap2 salvage into normal reusable knowledge
 operation. Final review knowledge is now classified into Concepts, CASE, and
 Investigation templates with negative knowledge preserved where useful.
 
+## Ver1.22
+
+### Added
+
+- First Broken Step Methodology:
+  `docs/workflow/first_broken_step_methodology.md`.
+- Workflow integration from Debug Escalation Ladder to First Broken Step
+  Methodology.
+- Rule integration in Debug Escalation Ladder Rules.
+- Related Concept linkage for `CONCEPT-2026-002`.
+- Related CASE linkage for `CASE-0008`.
+- README, docs index, PIP README, Concept Index, and Case Index links.
+
+### Reason
+
+Roadmap2 proved that repeated tuning is weaker than tracing the pipeline to the
+first broken step before confirming root cause and applying a fix.
+
+### Evolution
+
+GDS debugging methodology evolved from escalation order into a reusable method
+for finding the exact first failing stage across OCR, import, API, parser,
+database, UI, and AI pipelines.
+
+## Ver1.23
+
+### Added
+
+- Startup Checklist Rules:
+  `docs/rules/startup_checklist_rules.md`.
+- Startup Checklist Workflow:
+  `docs/workflow/startup_checklist_workflow.md`.
+- Startup Checklist Template:
+  `templates/startup_checklist_template.md`.
+- Startup Checklist Examples:
+  `examples/startup_checklist_examples.md`.
+- README, Knowledge Base Index, rules index, workflow index, architecture, and
+  glossary links for Startup Checklist.
+
+### Reason
+
+GDS has accumulated rules, workflows, methodologies, Q artifact standards, PIP
+knowledge, and commit safety practices. In long-running development, the risk is
+not only missing knowledge, but failing to recall the right knowledge at the
+moment a new AI session, review, or Q execution starts.
+
+### Evolution
+
+Knowledge Base evolved from storing reusable rules into providing a startup
+entry point that reminds humans and AI which existing rules, methodologies,
+repository boundaries, Q artifacts, and commit policies apply before work
+begins.
+
+## Ver1.24
+
+### Added
+
+- Completion Checklist Rules:
+  `docs/rules/completion_checklist_rules.md`.
+- Completion Checklist Workflow:
+  `docs/workflow/completion_checklist_workflow.md`.
+- Completion Checklist Template:
+  `templates/completion_checklist_template.md`.
+- Completion Checklist Examples:
+  `examples/completion_checklist_examples.md`.
+- Completion Checklist fields in Q, completion report, and review checklist
+  templates.
+- README, Knowledge Base Index, rules index, workflow index, architecture, and
+  glossary links for Completion Checklist.
+
+### Reason
+
+Startup Checklist standardized the beginning of work. GDS also needs a standard
+ending check so verification, review, completion report, Improvement Review,
+commit, tag, release, next Q, and workspace clean state are not left as vague
+chat assumptions.
+
+### Evolution
+
+Knowledge Base evolved from startup confirmation into a paired start/end
+control system. Work now has a defined entry check and a defined completion
+check before it is treated as finished.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

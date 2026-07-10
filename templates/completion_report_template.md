@@ -74,6 +74,39 @@
 - `git status` checked:
 - `git diff --check` result:
 
+## Startup Checklist Review
+
+- Startup Checklist applies:
+- Working Repository confirmed:
+- Production / Backup / Reference Only boundaries confirmed:
+- Current Phase confirmed:
+- Current Goal confirmed:
+- Applicable Rules confirmed:
+- Applicable Methodologies confirmed:
+- Q Artifact / Download File status confirmed:
+- Scope / Out of Scope confirmed:
+- Commit policy confirmed:
+- Startup blockers:
+
+## Completion Checklist
+
+- Verification Completed:
+- Review Completed:
+- Completion Report Completed:
+- Improvement Review Completed:
+- Commit Required:
+- Commit Executed:
+- Commit Hash:
+- Tag Required:
+- Tag Executed:
+- Tag Name:
+- Release Required:
+- Release Published:
+- Release Name / Version / URL:
+- Recommended Next Q:
+- Workspace Clean Confirmation:
+- Completion blockers:
+
 ## Migration First Review
 
 - Migration First applies:

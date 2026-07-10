@@ -49,6 +49,38 @@ Simple single-file Q artifacts may use
 `docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md`
 when a full workspace is not needed yet.
 
+## Startup Checklist
+
+新しい ChatGPT / Codex / AI セッション、レビュー、Q 実行、文書更新を始める前に、
+Startup Checklist で repository、scope、applicable rules、methodologies、
+Q artifact、commit policy を確認します。
+
+Start from:
+
+- [`docs/rules/startup_checklist_rules.md`](docs/rules/startup_checklist_rules.md)
+- [`docs/workflow/startup_checklist_workflow.md`](docs/workflow/startup_checklist_workflow.md)
+- [`templates/startup_checklist_template.md`](templates/startup_checklist_template.md)
+- [`examples/startup_checklist_examples.md`](examples/startup_checklist_examples.md)
+
+Startup Checklist は既存ルールを置き換えません。Project First、Artifact First、
+Audit Before Repair、Debug Escalation Ladder、Migration First、Commit Safety などを
+作業開始時に思い出すための入口です。
+
+## Completion Checklist
+
+作業完了時には Completion Checklist で verification、review、completion report、
+Improvement Review、commit / tag / release 判断、Recommended Next Q、
+workspace clean confirmation を確認します。
+
+Start from:
+
+- [`docs/rules/completion_checklist_rules.md`](docs/rules/completion_checklist_rules.md)
+- [`docs/workflow/completion_checklist_workflow.md`](docs/workflow/completion_checklist_workflow.md)
+- [`templates/completion_checklist_template.md`](templates/completion_checklist_template.md)
+- [`examples/completion_checklist_examples.md`](examples/completion_checklist_examples.md)
+
+Completion Checklist は Startup Checklist の対になる終了時ゲートです。
+
 ## PIP v1.1 Stable
 
 PIP (Project Information Package) は、Ghost Development System の正式な
@@ -163,6 +195,12 @@ Start from:
 
 Root cause and algorithm change come after evidence, metrics, human review,
 debug artifacts when needed, pipeline trace, and first broken step.
+
+First Broken Step Methodology defines how to find the first pipeline stage that
+breaks before fixing or optimizing:
+
+- [`docs/workflow/first_broken_step_methodology.md`](docs/workflow/first_broken_step_methodology.md)
+- [`pip/cases/CASE-0008_steam_ocr_root_cause_investigation.md`](pip/cases/CASE-0008_steam_ocr_root_cause_investigation.md)
 
 ## Roadmap2 Knowledge Salvage
 

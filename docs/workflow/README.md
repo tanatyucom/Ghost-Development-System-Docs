@@ -12,6 +12,12 @@ gate.
 ## Contains
 
 - `README.md`: workflow folder guide.
+- `startup_checklist_workflow.md`: startup confirmation flow for repository,
+  Q artifacts, applicable rules, methodologies, scope, dirty workspace, and
+  commit policy before implementation or review begins.
+- `completion_checklist_workflow.md`: completion confirmation flow for
+  verification, review, completion report, Improvement Review, commit, tag,
+  release, next Q, and workspace clean confirmation.
 - `output_policy.md`: chat versus file artifact output decision policy.
 - `audit_before_repair_workflow.md`: audit, classification, evidence, human
   review, scoped repair Q, verification, and commit flow before repair work.
@@ -20,6 +26,8 @@ gate.
   review, expected state check, AI review handoff, and Fix Q draft workflow.
 - `debug_escalation_ladder.md`: standard escalation order from phenomenon
   check to algorithm change.
+- `first_broken_step_methodology.md`: reusable debugging methodology for
+  tracing a pipeline to the first broken step before root cause and fix.
 - `migration_first_workflow.md`: internal architecture change workflow for
   new standard, migration plan, reference update, verification, legacy removal,
   completion report, and commit.
@@ -44,6 +52,7 @@ gate.
 
 ```text
 Idea
+  -> Startup Checklist
   -> Knowledge Check
   -> Output Decision
   -> Review
@@ -60,6 +69,7 @@ Idea
   -> Concept Promotion, when knowledge is still an early concept
   -> Roadmap2 Knowledge Salvage, when Roadmap2-only knowledge remains
   -> Human Review
+  -> Completion Checklist
   -> Commit
   -> Knowledge Promotion
   -> Archive
@@ -82,6 +92,46 @@ redline, approval review, or offline reading is expected.
 
 When an artifact is the authoritative output, chat should contain only a short
 summary, artifact paths or links, verification notes, and remaining issues.
+
+## Startup Checklist Workflow
+
+Before implementation, review, Q execution, or documentation update begins, use
+Startup Checklist to confirm repository boundaries, Q artifact status,
+applicable rules, applicable methodologies, scope, dirty workspace, and commit
+policy.
+
+```text
+Start
+  -> Repository Confirmation
+  -> Q / Artifact Confirmation
+  -> Applicable Rules Confirmation
+  -> Applicable Methodologies Confirmation
+  -> Scope / Out of Scope Confirmation
+  -> Dirty Workspace / Commit Policy Confirmation
+  -> Checklist Complete
+  -> Implementation / Review Start
+```
+
+Details follow `startup_checklist_workflow.md`.
+
+## Completion Checklist Workflow
+
+Before work is treated as complete, use Completion Checklist to confirm
+verification, review, completion report, Improvement Review, commit / tag /
+release decisions, Recommended Next Q, and workspace clean confirmation.
+
+```text
+Implementation
+  -> Verification
+  -> Review
+  -> Completion Report
+  -> Completion Checklist
+  -> Commit / Tag / Release Decision
+  -> Recommended Next Q
+  -> End
+```
+
+Details follow `completion_checklist_workflow.md`.
 
 ## Audit Before Repair Workflow
 
@@ -167,6 +217,26 @@ Phenomenon Check
 ```
 
 Details follow `debug_escalation_ladder.md`.
+
+## First Broken Step Methodology
+
+Use this methodology when a pipeline, import, API, parser, database, UI, or AI
+workflow fails and the root cause is not yet proven.
+
+```text
+Confirm the Symptom
+  -> Reproduce the Issue
+  -> Collect Evidence
+  -> Trace the Entire Pipeline
+  -> Identify the First Broken Step
+  -> Confirm the Root Cause
+  -> Apply the Fix
+  -> Validate the Result
+  -> Perform Regression Check
+  -> Document the Lessons Learned
+```
+
+Details follow `first_broken_step_methodology.md`.
 
 ## Q Artifact Workflow
 
@@ -498,10 +568,13 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 ## Related Documents
 
 - `docs/workflow/template_lifecycle.md`
+- `docs/workflow/startup_checklist_workflow.md`
+- `docs/workflow/completion_checklist_workflow.md`
 - `docs/workflow/output_policy.md`
 - `docs/workflow/commit_safety_checklist.md`
 - `docs/workflow/debug_artifact_review_workflow.md`
 - `docs/workflow/debug_escalation_ladder.md`
+- `docs/workflow/first_broken_step_methodology.md`
 - `docs/workflow/migration_first_workflow.md`
 - `docs/workflow/concept_promotion_workflow.md`
 - `docs/workflow/pip_case_knowledge_base_workflow.md`
@@ -517,6 +590,8 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `pip/PIP_README_v1.1.md`
 - `docs/requests/README.md`
 - `docs/rules/project_rules.md`
+- `docs/rules/startup_checklist_rules.md`
+- `docs/rules/completion_checklist_rules.md`
 - `docs/templates/q_file_template.md`
 - `docs/templates/review_checklist.md`
 - `docs/history/knowledge_base_history.md`

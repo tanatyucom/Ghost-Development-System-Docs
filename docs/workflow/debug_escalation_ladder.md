@@ -169,3 +169,7 @@ Reusable findings should be promoted to:
 - `pip/rule_stories/`
 - `pip/best_practices/`
 - `pip/evolutions/`
+
+## Related Methodology
+
+- `docs/workflow/first_broken_step_methodology.md`

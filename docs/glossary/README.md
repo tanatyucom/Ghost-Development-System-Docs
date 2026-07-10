@@ -126,6 +126,23 @@ rules, examples, workflow, architecture, glossary, or other documentation.
 The rule that humans approve architecture changes, destructive changes, scope
 expansion, releases, standardization, and migration work.
 
+### Startup Checklist
+
+The startup confirmation system used before a new AI session, Codex run,
+review, Q execution, or documentation update begins.
+
+It confirms repository boundaries, applicable rules, methodologies, Q artifact
+status, scope, out-of-scope items, dirty workspace state, and commit policy.
+
+### Completion Checklist
+
+The completion confirmation system used before work is treated as complete,
+committed, tagged, released, or handed off to the next Q.
+
+It confirms verification, review, completion report, Improvement Review, commit
+requirement and execution, tag requirement and execution, release requirement
+and publication, Recommended Next Q, and workspace clean state.
+
 ### Artifact First
 
 The rule that reusable, reviewable, AI-handoff, human-approval, or Git-managed
@@ -346,6 +363,8 @@ rules, templates, or examples.
 - `docs/README.md`
 - `docs/rules/project_rules.md`
 - `docs/rules/language_rules.md`
+- `docs/rules/startup_checklist_rules.md`
+- `docs/rules/completion_checklist_rules.md`
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/q_file_artifact_standard.md`
 - `docs/rules/audit_before_repair_rules.md`
@@ -355,6 +374,8 @@ rules, templates, or examples.
 - `docs/rules/roadmap2_knowledge_salvage_rules.md`
 - `docs/rules/git_rules.md`
 - `docs/workflow/commit_safety_checklist.md`
+- `docs/workflow/startup_checklist_workflow.md`
+- `docs/workflow/completion_checklist_workflow.md`
 - `docs/requests/README.md`
 - `docs/workflow/output_policy.md`
 - `docs/workflow/audit_before_repair_workflow.md`

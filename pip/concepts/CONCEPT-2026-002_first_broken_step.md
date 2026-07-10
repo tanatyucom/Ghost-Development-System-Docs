@@ -12,7 +12,7 @@
 - Related PIP: pip/MASTER_DOCUMENT_JP.md
 - Related CASE: CASE-0004, CASE-0005, CASE-0006, CASE-0008
 - Related Rule: docs/rules/debug_escalation_ladder_rules.md
-- Related Workflow: docs/workflow/debug_escalation_ladder.md
+- Related Workflow: docs/workflow/debug_escalation_ladder.md, docs/workflow/first_broken_step_methodology.md
 - Tags: GDS, Debug, Pipeline, First Broken Step, Validated
 - Keywords: root cause, first broken step, pipeline
 
@@ -65,4 +65,6 @@ Keep as Validated Concept.
 
 ## Next Action
 
-Use as a default field in future debug CASE entries.
+Use as a default field in future debug CASE entries and apply
+`docs/workflow/first_broken_step_methodology.md` when the first broken step must
+be identified.

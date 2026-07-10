@@ -10,6 +10,15 @@ reports, roadmap items, and release documents.
 Templates also define when reusable outputs should be generated as file
 artifacts instead of being delivered only in chat.
 
+Startup checklist templates help humans and AI confirm repository boundaries,
+applicable rules, methodologies, Q artifact status, scope, and commit policy
+before implementation or review begins.
+
+Completion checklist templates help humans and AI confirm verification, review,
+completion report, Improvement Review, commit / tag / release decisions,
+Recommended Next Q, and workspace clean state before a task is treated as
+complete.
+
 Q-related templates use the Task Artifact Workspace standard for request,
 completion report, notes, attachments, status movement, and related commit
 tracking.
@@ -56,6 +65,8 @@ restore guidance.
 
 ### AI Collaboration
 
+- `startup_checklist_template.md`
+- `completion_checklist_template.md`
 - `q_file_template.md`
 - `ai_implementation_request.md`
 - `codex_review_template.md`
@@ -211,6 +222,8 @@ Do not add one-off request details to templates. Add only reusable structure.
 ## Related Documents
 
 - `templates/q_file_template.md`
+- `templates/startup_checklist_template.md`
+- `templates/completion_checklist_template.md`
 - `templates/review_checklist.md`
 - `templates/completion_report_template.md`
 - `templates/codex_review_template.md`

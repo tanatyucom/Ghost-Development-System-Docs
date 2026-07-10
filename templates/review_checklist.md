@@ -17,6 +17,31 @@
 - Cross Project Impact が `None` 以外の場合、別 Q または Human Approval Gate が
   必要か確認されている。
 
+## Startup Checklist
+
+- Startup Checklist が作業開始前に確認されている。
+- Working Repository が確認されている。
+- Production / Backup / Reference Only boundaries が確認されている。
+- Current Phase と Current Goal が確認されている。
+- Applicable Rules が作業内容に合っている。
+- Applicable Methodologies が作業内容に合っている。
+- Q Artifact / Download File の扱いが確認されている。
+- Scope / Out of Scope が確認されている。
+- Commit policy が確認されている。
+
+## Completion Checklist
+
+- Completion Checklist が作業完了前に確認されている。
+- Verification Completed が記録されている。
+- Review Completed が記録されている。
+- Completion Report Completed が記録されている。
+- Improvement Review Completed が記録されている。
+- Commit Required と Commit Executed が分離されている。
+- Tag Required と Tag Executed が分離されている。
+- Release Required と Release Published が分離されている。
+- Recommended Next Q が記録されている。
+- Workspace Clean Confirmation または dirty state が記録されている。
+
 ## Scope Guard
 
 - Scope Guard が具体的である。

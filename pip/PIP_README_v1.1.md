@@ -356,6 +356,7 @@ Roadmap2 final review follow-up adds:
 
 - `cases/CASE-0008_steam_ocr_root_cause_investigation.md`
 - `templates/investigation_pattern_template.md`
+- `docs/workflow/first_broken_step_methodology.md`
 
 ## Command Center And GIP Relationship
 

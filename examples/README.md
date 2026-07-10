@@ -24,6 +24,12 @@ reports, and documentation requests can start from a clear reference.
   metrics, knowledge promotion, and next improvement.
 - `artifact_first_examples.md`: good and bad examples for file-first Q files,
   design documents, AI requests, review requests, and roadmap proposals.
+- `startup_checklist_examples.md`: good and bad examples for startup
+  repository confirmation, rule confirmation, methodology confirmation, Q
+  artifact confirmation, scope guard, and commit policy checks.
+- `completion_checklist_examples.md`: good and bad examples for completion
+  verification, review, completion report, Improvement Review, commit / tag /
+  release decisions, next Q, and workspace clean confirmation.
 - `q_file_artifact_workflow.md`: good and bad examples for Task Artifact
   Workspaces, Q files, completion reports, notes, attachments, and related
   commit information.
@@ -94,6 +100,12 @@ what a complete, well-scoped document should feel like.
   document, review request, Codex / Gemini / Claude request, or roadmap update
   proposal should be generated as `.md` / `.docx` artifacts instead of pasted
   into chat.
+- Use `startup_checklist_examples.md` before starting a new AI session, Codex
+  run, review, Q execution, or documentation update that could confuse
+  repository boundaries, applicable rules, methodology, Q artifact state, or
+  commit policy.
+- Use `completion_checklist_examples.md` before treating work as complete,
+  committing, tagging, releasing, or handing off the next Q.
 - Use `q_file_artifact_workflow.md` when saving a Q file in a
   `docs/requests/<target_project>/<status>/` workspace, naming it, linking it
   to a completion report, storing notes or attachments, moving status, or
@@ -149,6 +161,12 @@ Do not use examples to introduce new rules. Promote reusable standards to
 
 - `docs/templates/`
 - `docs/rules/`
+- `docs/rules/startup_checklist_rules.md`
+- `docs/rules/completion_checklist_rules.md`
+- `docs/workflow/startup_checklist_workflow.md`
+- `docs/workflow/completion_checklist_workflow.md`
+- `templates/startup_checklist_template.md`
+- `templates/completion_checklist_template.md`
 - `docs/templates/review_checklist.md`
 - `docs/templates/q_file_template.md`
 - `docs/templates/completion_report_template.md`
