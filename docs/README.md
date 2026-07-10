@@ -213,6 +213,8 @@ Reference points:
   `templates/innovation_pipeline_template.md`
 - Platform Promotion Decision Report Template:
   `templates/platform_promotion_decision_report_template.md`
+- Platform Registry Update Template:
+  `templates/platform_registry_update_template.md`
 - Platform Promotion Decision Report Examples:
   `examples/platform_promotion_decision_report_examples.md`
 - Platform Standard Registry Examples:

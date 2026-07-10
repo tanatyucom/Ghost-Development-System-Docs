@@ -1516,6 +1516,34 @@ rules. GDS can move ideas through Candidate, Prototype, Validation, Standard,
 Deprecated, Replaced, and Archived states with explicit artifacts, review, and
 reports.
 
+## Ver1.55
+
+### Added
+
+- Platform Registry Update Template:
+  `templates/platform_registry_update_template.md`.
+- Template fields for update type, target standard, previous status, new
+  status, change summary, reason, related workflow, decision report,
+  completion report, registry fields updated, README update, AI Repository
+  Index update, Repository Quality result, Human Review, approval, Recommended
+  Next Q, and notes.
+- README, docs index, Templates README, Platform Standard Registry, and
+  Repository Quality Audit Workflow links for registry update operations.
+
+### Reason
+
+Platform Standard Registry had status lifecycle, transition rules, examples,
+and automated consistency audit, but the act of updating a registry row still
+needed a reusable artifact so humans and AI could record the same evidence each
+time.
+
+### Evolution
+
+Registry updates now have a standard artifact. New Standard, Standard Update,
+Deprecation, Replacement, and Archive operations can record the status change,
+field changes, required artifacts, audit result, Human Review, approval, and
+next Q in a consistent form.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

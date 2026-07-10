@@ -70,6 +70,7 @@ restore guidance.
 - `decision_template.md`
 - `innovation_pipeline_template.md`
 - `platform_promotion_decision_report_template.md`
+- `platform_registry_update_template.md`
 
 ### Development
 

@@ -181,6 +181,12 @@ Use `examples/platform_standard_registry_examples.md` before changing registry
 status so Candidate, Standard update, Deprecated, and Replaced operations stay
 consistent.
 
+Use `templates/platform_registry_update_template.md` when adding a new
+standard, updating an existing standard, deprecating, replacing, or archiving a
+registry entry. The template records previous status, new status, updated
+fields, required artifacts, Repository Quality result, Human Review, and
+approval.
+
 Repository Quality Audit checks registry consistency automatically. It reports
 Missing Standard, Broken Registry Link, Deprecated Review Needed, Replaced
 Review Needed, Status Transition Review Needed, Required Artifact Review
@@ -210,6 +216,7 @@ template authority.
 - `docs/workflow/innovation_pipeline_workflow.md`
 - `templates/innovation_pipeline_template.md`
 - `templates/platform_promotion_decision_report_template.md`
+- `templates/platform_registry_update_template.md`
 - `examples/platform_promotion_decision_report_examples.md`
 - `examples/platform_standard_registry_examples.md`
 - `docs/workflow/repository_quality_audit_workflow.md`

@@ -147,6 +147,7 @@ Start from:
 - [`docs/architecture/platform_standard_registry.md`](docs/architecture/platform_standard_registry.md)
 - [`docs/workflow/innovation_pipeline_workflow.md`](docs/workflow/innovation_pipeline_workflow.md)
 - [`templates/platform_promotion_decision_report_template.md`](templates/platform_promotion_decision_report_template.md)
+- [`templates/platform_registry_update_template.md`](templates/platform_registry_update_template.md)
 - [`examples/platform_promotion_decision_report_examples.md`](examples/platform_promotion_decision_report_examples.md)
 - [`examples/platform_standard_registry_examples.md`](examples/platform_standard_registry_examples.md)
 
