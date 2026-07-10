@@ -544,6 +544,31 @@ GameGhost OCR Alias Review, Safe Alias, Human Approval, Unicode Normalizer,
 Alias Candidate Report, and Review GUI are reference examples for this
 principle.
 
+## Knowledge Poka-Yoke Index
+
+Knowledge Poka-Yoke / Design For Forgetfulness is the principle that GDS should
+assume people forget, AI forgets, and processes drift.
+
+Core statement:
+
+```text
+People Forget.
+AI Forgets.
+Processes Drift.
+
+Therefore, design systems that make forgetting safe.
+```
+
+Reference points:
+
+- Core Principles: `docs/rules/core_principles.md`
+- Design Philosophy: `docs/architecture/design_philosophy.md`
+- Startup Checklist: `docs/rules/startup_checklist_rules.md`
+- Completion Checklist: `docs/rules/completion_checklist_rules.md`
+- Repository Root Validation: `docs/rules/repository_root_validation_rules.md`
+- AI Proactive Proposal: `docs/rules/ai_proactive_proposal_rules.md`
+- Collaborative Decision: `docs/workflow/collaborative_decision_workflow.md`
+
 ## Knowledge Platform Index
 
 Ghost Development System は、Documentation Platform から Knowledge Platform へ

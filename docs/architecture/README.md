@@ -87,9 +87,10 @@ not replace project-owned schema or runtime behavior.
 ## Design Philosophy Summary
 
 Accepted design principles include Evidence First, Purpose-Oriented Naming,
-Human Approval Gate, Knowledge Before Automation, Startup Checklist, Repository
-Root Validation, AI Proactive Proposal, Collaborative Decision, Completion
-Checklist, Artifact First, Debug Artifact Review, and Migration First.
+Human Approval Gate, Knowledge Before Automation, Knowledge Poka-Yoke / Design
+For Forgetfulness, Startup Checklist, Repository Root Validation, AI Proactive
+Proposal, Collaborative Decision, Completion Checklist, Artifact First, Debug
+Artifact Review, and Migration First.
 
 Startup Checklist supports these principles by confirming the active repository,
 scope, applicable rules, methodologies, Q artifact status, and commit policy
@@ -136,6 +137,13 @@ Knowledge Before Automation means that when automation fails, the system should
 first capture reusable reviewed knowledge before adding more automation
 complexity.
 
+Knowledge Poka-Yoke / Design For Forgetfulness means that GDS assumes humans
+forget, AI forgets, and processes drift. Startup Checklist, Completion
+Checklist, Repository Root Validation, Repository Information, Scope Guard, Q
+Artifact, Completion Report, Human Review, AI Proactive Proposal, and
+Collaborative Decision are treated as checkable controls that make forgetting
+safe before it becomes an incident.
+
 Knowledge Platform direction extends this principle by treating reusable
 knowledge as assets that can be edited through Knowledge Editor, observed
 through Knowledge Assets Dashboard, and consumed through Knowledge Asset Layer.
@@ -172,6 +180,7 @@ Do not use this folder to approve Future Candidates by implication.
 
 - `docs/architecture/responsibility_boundary.md`
 - `docs/architecture/design_philosophy.md`
+- `docs/rules/core_principles.md`
 - `docs/rules/startup_checklist_rules.md`
 - `docs/rules/repository_root_validation_rules.md`
 - `docs/rules/ai_proactive_proposal_rules.md`

@@ -60,6 +60,7 @@ Idea
   -> Startup Checklist
   -> Repository Root Validation
   -> Knowledge Check
+  -> Knowledge Poka-Yoke Check
   -> Collaborative Decision, when classification or design is uncertain
   -> Output Decision
   -> Review
@@ -380,6 +381,25 @@ updates.
 Automation should consume explicit knowledge. It should not hide repeated human
 judgment inside increasingly complex code or AI prompts.
 
+## Knowledge Poka-Yoke Flow
+
+When a repeated omission, memory-dependent step, repository confusion,
+copy-paste risk, missing artifact, scope drift, or review handoff gap appears,
+convert it into a checkable control instead of relying on memory.
+
+```text
+Forgotten / Drift-Prone Step
+  -> Make It Visible
+  -> Checklist / Template / Validation / Artifact
+  -> Human Review
+  -> Automation, only when safe
+```
+
+This flow connects Startup Checklist, Completion Checklist, Repository Root
+Validation, Repository Information, Scope Guard, Q Artifact, Completion Report,
+AI Proactive Proposal, and Collaborative Decision. Its purpose is not to blame
+forgetting, but to make forgetting safe.
+
 ## Evidence Feedback Loop
 
 When a completed task produces measurable results, feed those results back into
@@ -636,6 +656,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `pip/PIP_README_v1.1.md`
 - `docs/requests/README.md`
 - `docs/rules/project_rules.md`
+- `docs/rules/core_principles.md`
 - `docs/rules/startup_checklist_rules.md`
 - `docs/rules/repository_root_validation_rules.md`
 - `docs/rules/ai_proactive_proposal_rules.md`

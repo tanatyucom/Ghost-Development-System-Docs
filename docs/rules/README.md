@@ -9,8 +9,9 @@ Rules define how humans and AI should plan, document, review, and maintain the
 Ghost Development System knowledge base.
 
 Core rules include Evidence First, Purpose-Oriented Naming, Human Approval Gate,
-Knowledge Before Automation, Startup Checklist, Repository Root Validation,
-AI Proactive Proposal, Completion Checklist, Artifact First, Audit Before Repair, Debug Artifact Review, Debug Escalation Ladder,
+Knowledge Before Automation, Knowledge Poka-Yoke / Design For Forgetfulness,
+Startup Checklist, Repository Root Validation, AI Proactive Proposal,
+Completion Checklist, Artifact First, Audit Before Repair, Debug Artifact Review, Debug Escalation Ladder,
 Migration First, PIP Case Knowledge Base, and Roadmap2 Knowledge Salvage. Concept Promotion is
 handled as part of PIP Case Knowledge Base. Concept ID Naming is the standard
 for assigning stable Concept IDs and keeping the Concept Index traceable.

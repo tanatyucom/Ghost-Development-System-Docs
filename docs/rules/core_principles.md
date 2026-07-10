@@ -1,8 +1,8 @@
 # Core Principles
 
-**Version:** 2.2
+**Version:** 2.3
 
-**Last Updated:** 2026-07-01
+**Last Updated:** 2026-07-10
 
 ## Purpose
 
@@ -71,6 +71,39 @@ Knowledge Asset. Knowledge Assets should be reviewed, have clear ownership, and
 be promoted through Knowledge Asset Layer before automation depends on them.
 Raw CSV edits, unreviewed guesses, or hidden prompt exceptions are not approved
 Knowledge Assets.
+
+### Knowledge Poka-Yoke / Design For Forgetfulness
+
+People forget.
+
+AI forgets.
+
+Processes drift.
+
+Therefore, design systems that make forgetting safe.
+
+GDS should not rely on memory, personal discipline, or perfect AI context as
+the main safety mechanism. Repeated mistakes should become visible checks,
+templates, workflow steps, review prompts, or automation support before they
+become incidents.
+
+Knowledge Poka-Yoke means:
+
+- do not blame people for forgetting predictable steps;
+- do not rely on memory when a checklist, template, or validation can carry the
+  step;
+- make important checks reviewable;
+- automate checks that can be automated safely;
+- detect mistakes before they become commits, releases, data changes, or scope
+  drift;
+- turn small concerns into improvement opportunities;
+- create an environment where humans and AI can safely resume long-running
+  development.
+
+Examples include Startup Checklist, Completion Checklist, Repository Root
+Validation, Repository Information, Scope / Out of Scope, Q Artifact format,
+Download File Rule, Completion Report, Human Review, AI Proactive Proposal, and
+Collaborative Decision Workflow.
 
 ### One File One Theme
 

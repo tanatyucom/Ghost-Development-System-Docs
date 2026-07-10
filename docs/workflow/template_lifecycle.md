@@ -69,6 +69,8 @@ Recommended improvements may be promoted when they are:
 - clear enough to teach;
 - safe to standardize;
 - useful to both humans and AI;
+- able to make forgetting, drift, or copy loss safer through a checkable
+  control;
 - aligned with existing rules and roadmap direction.
 
 If the learning is operational knowledge that tools should consume, promote it
@@ -104,11 +106,32 @@ Observed failure
 This keeps future automation understandable and portable across GameGhost,
 AnimeGhost, ComicGhost, and new archive projects.
 
+## Knowledge Poka-Yoke
+
+If a lesson exists because someone may forget a step, miss a file, work in the
+wrong repository, lose a chat-only request, skip verification, or let a process
+drift, treat that as a design signal.
+
+Preferred path:
+
+```text
+Memory-Dependent Step
+  -> Visible Check
+  -> Template / Checklist / Validation / Artifact
+  -> Review
+  -> Automation, when safe
+```
+
+The goal is to design systems that make forgetting safe, not to depend on
+perfect memory from humans or AI.
+
 ## Promotion Checklist
 
 - Is this reusable beyond the current Q?
 - Does it reduce future ambiguity?
 - Does it prevent a repeated mistake?
+- Does it make forgetting, process drift, repository confusion, or copy loss
+  safer?
 - Does it belong in a template, rule, example, architecture note, workflow
   guide, glossary, or roadmap?
 - Does it belong in Knowledge Asset Layer so tools can consume it?

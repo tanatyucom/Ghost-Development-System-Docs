@@ -151,6 +151,38 @@ Unicode Normalizer, Alias Candidate Report, and Review GUI. Those mechanisms
 made future OCR results better by accumulating reusable knowledge rather than
 only making the OCR engine more complex.
 
+## Knowledge Poka-Yoke / Design For Forgetfulness
+
+People forget. AI forgets. Processes drift.
+
+Therefore, GDS designs systems that make forgetting safe.
+
+Knowledge Poka-Yoke treats forgetting as a predictable design condition, not a
+personal failure. If a step is important enough to cause repository confusion,
+scope drift, missing Q artifacts, incomplete completion reports, unsafe commits,
+or missed human review, the system should make that step visible, checkable, and
+repeatable.
+
+Examples:
+
+- Startup Checklist recalls the right rules before work begins.
+- Completion Checklist recalls verification, report, commit, tag, release, and
+  next-Q decisions before work is treated as complete.
+- Repository Root Validation verifies the actual Git root instead of trusting
+  memory or shell context.
+- Repository Information and Scope / Out of Scope prevent project and
+  responsibility confusion.
+- Q Artifact format and Download File Rule prevent chat-only or clipboard-only
+  loss.
+- Completion Report preserves what changed, what was verified, and what remains.
+- Human Review keeps high-impact judgment with humans.
+- AI Proactive Proposal lets AI surface concerns before they become mistakes.
+- Collaborative Decision turns disagreement and classification uncertainty into
+  reviewed knowledge.
+
+The cultural rule is simple: do not blame forgetting; design the workflow so
+forgetting is caught early.
+
 ## Knowledge As Assets
 
 Reusable knowledge should be treated as an asset when it can improve future

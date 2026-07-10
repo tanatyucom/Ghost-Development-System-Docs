@@ -755,6 +755,36 @@ making. Disagreement and alternative classification can now become durable
 knowledge through discussion, evidence review, knowledge classification, and
 documentation.
 
+## Ver1.28
+
+### Added
+
+- Knowledge Poka-Yoke / Design For Forgetfulness as a core principle.
+- Design philosophy guidance for making forgetting safe.
+- README and Knowledge Base Index entries for Knowledge Poka-Yoke.
+- Rule index and rule summary links from `rules.md` and `rules/README.md`.
+- Workflow guidance for turning memory-dependent steps into checklist,
+  template, validation, artifact, review, or automation controls.
+- Glossary entry for Knowledge Poka-Yoke.
+
+### Reason
+
+GDS has added Startup Checklist, Completion Checklist, Repository Root
+Validation, Q Artifact, Completion Report, AI Proactive Proposal, and
+Collaborative Decision. These are not separate conveniences; they share one
+principle: people forget, AI forgets, and processes drift.
+
+The Knowledge Base needed to state that forgetting is a design condition, not a
+personal failure. Long-running human / AI development should make important
+steps visible, checkable, reviewable, and eventually automatable when safe.
+
+### Evolution
+
+Knowledge Base evolved from individual safeguards into a unified
+forgetfulness-safe design philosophy. Repeated omissions, repository mistakes,
+copy loss, missing artifacts, skipped verification, and drift-prone handoffs
+can now be promoted into explicit controls instead of relying on memory.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

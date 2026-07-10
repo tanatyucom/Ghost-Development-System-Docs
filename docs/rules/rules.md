@@ -1,6 +1,6 @@
 # Ghost Development System Rules
 
-**Version:** 2.7
+**Version:** 2.8
 
 **Last Updated:** 2026-07-10
 
@@ -33,6 +33,7 @@ Rules follow these principles:
 - Japanese First.
 - Evidence First.
 - Knowledge Before Automation.
+- Knowledge Poka-Yoke / Design For Forgetfulness.
 - Startup Checklist.
 - Repository Root Validation.
 - AI Proactive Proposal.
@@ -148,6 +149,18 @@ AI must not silently change implementation based on the proposal. The proposal
 should include evidence and leave the final decision to the user.
 
 Details follow `ai_proactive_proposal_rules.md`.
+
+## Knowledge Poka-Yoke / Design For Forgetfulness
+
+People forget. AI forgets. Processes drift.
+
+GDS treats forgetting as a design condition. Important work should be supported
+by checklists, templates, validation, artifact rules, completion reports, human
+review, proactive proposals, and collaborative decisions so forgetting is caught
+before it becomes a repository, scope, commit, release, or knowledge loss
+incident.
+
+Details follow `core_principles.md`.
 
 ## Completion Checklist
 

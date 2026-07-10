@@ -454,6 +454,23 @@ Unicode Normalizer、Alias Candidate Report、Review GUI、Human Approval によ
 知識を蓄積したことが品質改善につながりました。この考え方は AnimeGhost、
 ComicGhost、将来プロジェクトにも適用できます。
 
+## Knowledge Poka-Yoke
+
+GDS は、人間も AI も忘れることを前提に、忘れても事故にならない仕組みを設計します。
+
+```text
+People Forget.
+AI Forgets.
+Processes Drift.
+
+Therefore, design systems that make forgetting safe.
+```
+
+Startup Checklist、Completion Checklist、Repository Root Validation、
+Repository Information、Scope / Out of Scope、Q Artifact format、Download File
+Rule、Completion Report、Human Review、AI Proactive Proposal、Collaborative
+Decision Workflow は、この Knowledge Poka-Yoke の具体例です。
+
 ## Knowledge Platform
 
 Ghost Development System は、Documentation Platform から Knowledge Platform へ

@@ -121,6 +121,14 @@ An idea preserved for later review. It is not approved implementation scope.
 The process of moving reusable knowledge from a completed task into templates,
 rules, examples, workflow, architecture, glossary, or other documentation.
 
+### Knowledge Poka-Yoke
+
+The GDS design principle that assumes humans forget, AI forgets, and processes
+drift.
+
+It turns memory-dependent work into visible checks, templates, validation,
+artifacts, review points, and safe automation.
+
 ### Human Approval Gate
 
 The rule that humans approve architecture changes, destructive changes, scope
@@ -388,6 +396,7 @@ rules, templates, or examples.
 
 - `docs/README.md`
 - `docs/rules/project_rules.md`
+- `docs/rules/core_principles.md`
 - `docs/rules/language_rules.md`
 - `docs/rules/startup_checklist_rules.md`
 - `docs/rules/repository_root_validation_rules.md`
