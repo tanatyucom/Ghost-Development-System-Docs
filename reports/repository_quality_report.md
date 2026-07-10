@@ -1,26 +1,26 @@
 # Repository Quality Report
 
-## Purpose
+## 目的
 
 この report は、Ghost Development System Docs の repository-wide quality audit
 結果を要約します。
 
-## Summary
+## 要約
 
-- Generated timestamp: `2026-07-10T03:47:01Z`
+- 生成日時: `2026-07-10T04:04:50Z`
 - Repository: `Ghost-Development-System-Docs`
 - Overall Repository Health: `Yellow`
-- Passed checks: `8`
+- 通過したチェック: `8`
 - Warnings: `1`
 - Errors: `0`
 
-## Passed Checks
+## 通過したチェック (Passed Checks)
 
 ### UTF-8 Audit
 
 - Status: `PASS`
 - Details:
-  - 173 Markdown files decoded as UTF-8.
+  - 173 Markdown files を UTF-8 として読み取れました。
 
 ### Mojibake Audit
 
@@ -32,13 +32,13 @@
 
 - Status: `PASS`
 - Details:
-  - OK: 173 Markdown files indexed.
+  - OK: 173 Markdown files が index に登録されています。
 
 ### GDS Health Validation
 
 - Status: `PASS`
 - Details:
-  - OK: GDS Health validation passed.
+  - OK: GDS Health validation は通過しました。
 
 ### Broken Link Check
 
@@ -64,7 +64,7 @@
 - Details:
   - required project profile files は存在します。
 
-## Warnings
+## 警告 (Warnings)
 
 ### Markdown Validation
 
@@ -81,14 +81,13 @@
   - templates/specification_template.md: H1 heading がありません。
   - templates/template_usage.md: H1 heading がありません。
 
-## Errors
+## エラー (Errors)
 
 なし。
 
-## Recommended Improvements
+## 推奨改善 (Recommended Improvements)
 
-- H1 heading がない既存 templates をレビューし、template title standardization Q として
-  対応するか判断します。
+- warnings を確認し、想定内の例外、documentation debt、または follow-up Q 候補のどれに該当するか判断します。
 
 ## Notes
 

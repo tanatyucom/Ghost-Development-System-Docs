@@ -139,8 +139,8 @@ AI Startup Procedure
 
 ## GDS Health Index
 
-GDS Health makes the operating state of GDS visible without treating health as
-blame or final quality judgment.
+GDS Health は、GDS の運用状態を見える化するための index です。
+health は責任追及や最終品質判定ではなく、早期発見と継続改善のために扱います。
 
 Reference points:
 
@@ -191,6 +191,9 @@ Repository-wide quality audit:
 ```bash
 python scripts/repository_quality_audit.py
 ```
+
+Repository Quality Report は生成直後から日本語本文で出力します。
+command、path、status value は互換性維持のため英語表記を残します。
 
 ## Startup Checklist Index
 

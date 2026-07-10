@@ -106,25 +106,29 @@ AI Startup Procedure
 
 ## GDS Health
 
-GDS Health makes repository, knowledge, workflow, template, example,
-automation, CI, and project profile health visible for continuous improvement.
+GDS Health は、repository、knowledge、workflow、template、example、
+automation、CI、project profile の状態を見える化し、継続改善に使うための
+運用領域です。
 
 Start from:
 
 - [`docs/health/gds_health_dashboard.md`](docs/health/gds_health_dashboard.md)
 - [`docs/workflow/gds_health_update_workflow.md`](docs/workflow/gds_health_update_workflow.md)
 
-Validate health structure and links with:
+health structure と links は次の command で検証します。
 
 ```bash
 python scripts/validate_gds_health.py
 ```
 
-Run the repository-wide quality audit with:
+repository-wide quality audit は次の command で実行します。
 
 ```bash
 python scripts/repository_quality_audit.py
 ```
+
+Repository Quality Report は生成直後から日本語本文で出力します。
+command、path、status value は互換性維持のため英語表記を残します。
 
 Report:
 

@@ -1165,6 +1165,31 @@ workflow. GDS can now distinguish explanation text that should be Japanese
 from commands, paths, URLs, identifiers, status values, and external technical
 terms that should remain English.
 
+## Ver1.42
+
+### Added
+
+- Repository Quality Report generator localization.
+- Japanese output messages in `scripts/repository_quality_audit.py`.
+- Language Rules update for generated documentation output.
+- Repository Quality Audit Workflow note that generated reports are Japanese-first.
+
+### Reason
+
+`reports/repository_quality_report.md` had been localized manually, but the
+generator still contained English fixed strings. Re-running the audit could
+return the report to mixed-language output and require manual translation.
+
+Manual translation after generation is fragile and does not satisfy Knowledge
+Poka-Yoke. Generated documentation should be usable as-is.
+
+### Evolution
+
+Japanese First evolved from document editing guidance into generator output
+quality. Repository Quality Audit can now produce a Japanese-first report
+directly, while preserving commands, paths, status values, and identifiers for
+compatibility.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

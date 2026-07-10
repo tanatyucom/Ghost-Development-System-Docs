@@ -97,6 +97,15 @@ def run_command(root: Path, args: list[str]) -> tuple[int, str, str]:
     return completed.returncode, completed.stdout.strip(), completed.stderr.strip()
 
 
+def localize_known_output(line: str) -> str:
+    if re.fullmatch(r"OK: \d+ Markdown files indexed\.", line):
+        count = line.split()[1]
+        return f"OK: {count} Markdown files が index に登録されています。"
+    if line == "OK: GDS Health validation passed.":
+        return "OK: GDS Health validation は通過しました。"
+    return line
+
+
 def check_utf8_decode(root: Path) -> CheckResult:
     failures: list[str] = []
     files = markdown_files(root)
@@ -108,7 +117,7 @@ def check_utf8_decode(root: Path) -> CheckResult:
 
     if failures:
         return CheckResult("UTF-8 Audit", "ERROR", failures)
-    return CheckResult("UTF-8 Audit", "PASS", [f"{len(files)} Markdown files decoded as UTF-8."])
+    return CheckResult("UTF-8 Audit", "PASS", [f"{len(files)} Markdown files を UTF-8 として読み取れました。"])
 
 
 def check_mojibake(root: Path) -> CheckResult:
@@ -126,7 +135,7 @@ def check_mojibake(root: Path) -> CheckResult:
     return CheckResult(
         "Mojibake Audit",
         "PASS",
-        ["No mojibake candidates found outside intentional rule/report examples."],
+        ["意図的な rule / report examples を除き、mojibake candidate は検出されませんでした。"],
     )
 
 
@@ -135,7 +144,7 @@ def check_ai_repository_index(root: Path) -> CheckResult:
         root,
         [sys.executable, "scripts/generate_ai_repository_index.py", "--validate"],
     )
-    details = [line for line in [stdout, stderr] if line]
+    details = [localize_known_output(line) for line in [stdout, stderr] if line]
     if code:
         return CheckResult("AI Repository Index Validation", "ERROR", details)
     return CheckResult("AI Repository Index Validation", "PASS", details)
@@ -146,7 +155,7 @@ def check_gds_health(root: Path) -> CheckResult:
         root,
         [sys.executable, "scripts/validate_gds_health.py"],
     )
-    details = [line for line in [stdout, stderr] if line]
+    details = [localize_known_output(line) for line in [stdout, stderr] if line]
     if code:
         return CheckResult("GDS Health Validation", "ERROR", details)
     return CheckResult("GDS Health Validation", "PASS", details)
@@ -191,7 +200,7 @@ def check_broken_links(root: Path) -> CheckResult:
 
     if broken:
         return CheckResult("Broken Link Check", "WARN", broken)
-    return CheckResult("Broken Link Check", "PASS", ["No broken local Markdown links found."])
+    return CheckResult("Broken Link Check", "PASS", ["broken local Markdown links は検出されませんでした。"])
 
 
 def check_missing_readmes(root: Path) -> CheckResult:
@@ -202,7 +211,7 @@ def check_missing_readmes(root: Path) -> CheckResult:
     ]
     if missing:
         return CheckResult("Missing README Check", "WARN", missing)
-    return CheckResult("Missing README Check", "PASS", ["Required README entry points exist."])
+    return CheckResult("Missing README Check", "PASS", ["required README entry points は存在します。"])
 
 
 def check_missing_history(root: Path) -> CheckResult:
@@ -216,9 +225,9 @@ def check_missing_history(root: Path) -> CheckResult:
         return CheckResult(
             "Missing History Check",
             "WARN",
-            ["docs/history/knowledge_base_history.md has no version headings."],
+            ["docs/history/knowledge_base_history.md に version heading がありません。"],
         )
-    return CheckResult("Missing History Check", "PASS", ["Knowledge Base history exists."])
+    return CheckResult("Missing History Check", "PASS", ["Knowledge Base history は存在します。"])
 
 
 def check_project_profiles(root: Path) -> CheckResult:
@@ -229,7 +238,7 @@ def check_project_profiles(root: Path) -> CheckResult:
     ]
     if missing:
         return CheckResult("Project Profile Validation", "WARN", missing)
-    return CheckResult("Project Profile Validation", "PASS", ["Required project profile files exist."])
+    return CheckResult("Project Profile Validation", "PASS", ["required project profile files は存在します。"])
 
 
 def check_markdown_structure(root: Path) -> CheckResult:
@@ -239,20 +248,20 @@ def check_markdown_structure(root: Path) -> CheckResult:
         if rel_path == Path("LICENSE"):
             continue
         if not text.strip():
-            findings.append(f"{rel_path.as_posix()}: empty file")
+            findings.append(f"{rel_path.as_posix()}: empty file です。")
             continue
         if not re.search(r"^#\s+", text, flags=re.MULTILINE):
-            findings.append(f"{rel_path.as_posix()}: missing H1 heading")
+            findings.append(f"{rel_path.as_posix()}: H1 heading がありません。")
 
     if findings:
         return CheckResult("Markdown Validation", "WARN", findings)
-    return CheckResult("Markdown Validation", "PASS", ["Markdown files include H1 headings."])
+    return CheckResult("Markdown Validation", "PASS", ["Markdown files には H1 heading があります。"])
 
 
 def render_result_list(title: str, results: list[CheckResult]) -> list[str]:
     lines = [f"## {title}", ""]
     if not results:
-        lines.extend(["None.", ""])
+        lines.extend(["なし。", ""])
         return lines
     for result in results:
         lines.append(f"### {result.name}")
@@ -263,7 +272,7 @@ def render_result_list(title: str, results: list[CheckResult]) -> list[str]:
             for detail in result.details[:50]:
                 lines.append(f"  - {detail}")
             if len(result.details) > 50:
-                lines.append(f"  - ... {len(result.details) - 50} more")
+                lines.append(f"  - ... 他 {len(result.details) - 50} 件")
         lines.append("")
     return lines
 
@@ -282,36 +291,36 @@ def render_report(root: Path, state: AuditState) -> str:
     lines = [
         "# Repository Quality Report",
         "",
-        "## Purpose",
+        "## 目的",
         "",
-        "This report summarizes repository-wide quality audit results for Ghost",
-        "Development System Docs.",
+        "この report は、Ghost Development System Docs の repository-wide quality audit",
+        "結果を要約します。",
         "",
-        "## Summary",
+        "## 要約",
         "",
-        f"- Generated timestamp: `{timestamp}`",
+        f"- 生成日時: `{timestamp}`",
         f"- Repository: `{root.name}`",
         f"- Overall Repository Health: `{health}`",
-        f"- Passed checks: `{len(state.passed)}`",
+        f"- 通過したチェック: `{len(state.passed)}`",
         f"- Warnings: `{len(state.warnings)}`",
         f"- Errors: `{len(state.errors)}`",
         "",
     ]
-    lines.extend(render_result_list("Passed Checks", state.passed))
-    lines.extend(render_result_list("Warnings", state.warnings))
-    lines.extend(render_result_list("Errors", state.errors))
-    lines.extend(["## Recommended Improvements", ""])
+    lines.extend(render_result_list("通過したチェック (Passed Checks)", state.passed))
+    lines.extend(render_result_list("警告 (Warnings)", state.warnings))
+    lines.extend(render_result_list("エラー (Errors)", state.errors))
+    lines.extend(["## 推奨改善 (Recommended Improvements)", ""])
     if state.recommendations:
         for recommendation in state.recommendations:
             lines.append(f"- {recommendation}")
     else:
-        lines.append("- Continue running this audit after major documentation or validation changes.")
+        lines.append("- 大きな documentation 変更または validation 変更後は、この audit を継続して実行します。")
     lines.extend(
         [
             "",
             "## Notes",
             "",
-            "This report supports early discovery and continuous improvement. It is not a blame table.",
+            "この report は早期発見と継続改善を支援するためのものです。責任追及の表ではありません。",
             "",
         ]
     )
@@ -336,11 +345,11 @@ def run_audit(root: Path) -> AuditState:
 
     if state.warnings:
         state.recommendations.append(
-            "Review warnings and decide whether they are expected, documentation debt, or follow-up Q candidates."
+            "warnings を確認し、想定内の例外、documentation debt、または follow-up Q 候補のどれに該当するか判断します。"
         )
     if state.errors:
         state.recommendations.append(
-            "Resolve errors before treating the repository as healthy for release or CI promotion."
+            "repository を release readiness または CI promotion に使う前に errors を解消します。"
         )
     return state
 
@@ -361,7 +370,7 @@ def main() -> int:
 
     root = Path.cwd()
     if not (root / ".git").exists():
-        print("ERROR: run from repository root", file=sys.stderr)
+        print("ERROR: repository root から実行してください", file=sys.stderr)
         return 2
 
     state = run_audit(root)
@@ -370,7 +379,7 @@ def main() -> int:
         report_path = root / args.report
         report_path.parent.mkdir(parents=True, exist_ok=True)
         report_path.write_text(report, encoding="utf-8")
-        print(f"Wrote {report_path.relative_to(root).as_posix()}")
+        print(f"生成しました: {report_path.relative_to(root).as_posix()}")
 
     print(
         "Repository Quality Audit: "

@@ -22,6 +22,13 @@ python scripts/repository_quality_audit.py
 reports/repository_quality_report.md
 ```
 
+Repository Quality Report は生成直後から日本語本文で出力します。
+手動翻訳を前提にせず、生成結果をそのまま review / completion report /
+Knowledge Base に利用できる状態にします。
+
+互換性維持のため、command、path、status value、check name は英語表記を
+残してよいです。
+
 ## Included Checks
 
 - UTF-8 Audit。
