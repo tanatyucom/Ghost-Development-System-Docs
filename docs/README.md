@@ -36,6 +36,32 @@ CI validation:
 - Up-to-date check: regenerate the index and fail if `docs/ai_repository_index.md`
   changes.
 
+## Project Profile Index
+
+Project Profiles separate GDS shared rules from project-specific operating
+context.
+
+Reference points:
+
+- Project Profiles: `project_profiles/README.md`
+- GameGhost Profile: `project_profiles/gameghost/README.md`
+- GameGhost Repository: `project_profiles/gameghost/repository.md`
+- GameGhost Rules: `project_profiles/gameghost/rules.md`
+- GameGhost Workflow: `project_profiles/gameghost/workflow.md`
+- GameGhost AI Context: `project_profiles/gameghost/ai_context.md`
+- GameGhost Completion Policy:
+  `project_profiles/gameghost/completion_policy.md`
+
+AI reading order:
+
+```text
+AI Repository Knowledge Access Index
+  -> GDS Core Rules / Workflow / Methodology
+  -> Target Project Profile
+  -> Q File
+  -> Startup Checklist
+```
+
 ## Startup Checklist Index
 
 Startup Checklist は、新しい ChatGPT / Codex / AI セッション、レビュー、

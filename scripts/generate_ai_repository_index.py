@@ -36,6 +36,7 @@ CATEGORY_ORDER = [
     "Examples",
     "Glossary",
     "History",
+    "Project Profiles",
     "PIP",
     "CASE",
     "Concept",
@@ -63,6 +64,7 @@ HIGH_CATEGORY = {
     "Workflow",
     "Glossary",
     "History",
+    "Project Profiles",
     "PIP",
     "CASE",
     "Concept",
@@ -139,6 +141,8 @@ def first_heading_and_purpose(path: Path) -> tuple[str, str]:
 
 
 def category_for(path: str) -> str:
+    if path.startswith("project_profiles/"):
+        return "Project Profiles"
     if path in {"README.md", "docs/README.md"}:
         return "README"
     if path.endswith("/README.md"):

@@ -1,8 +1,8 @@
 # Project Rules
 
-**Version:** 1.0
+**Version:** 1.1
 
-**Last Updated:** 2026-07-01
+**Last Updated:** 2026-07-10
 
 ## Purpose
 
@@ -51,6 +51,34 @@ Target Project は作業対象のプロジェクト責務を示します。
 この 2 つは同じとは限りません。たとえば、Ghost Development System Docs
 リポジトリで GameGhost に関する参照情報を扱う場合でも、編集権限と責務範囲を
 分けて書く必要があります。
+
+## Project Profile System
+
+Project Profiles record project-specific context separately from GDS shared
+rules.
+
+Standard location:
+
+```text
+project_profiles/<project>/
+```
+
+When a Q targets an individual project, AI should read:
+
+```text
+GDS shared rules
+  -> Target Project Profile
+  -> Q File
+  -> Startup Checklist
+```
+
+Project Profiles may include repository location, backup / reference policy,
+project-specific rules, workflow, AI context, and completion policy.
+
+Project Profiles do not replace the Q file and do not transfer runtime
+ownership to GDS.
+
+If the profile conflicts with the Q, AI should stop and ask for clarification.
 
 ## Cross Project Impact
 

@@ -880,6 +880,35 @@ Knowledge Poka-Yoke evolved from local generation into CI-backed repository
 health validation. Missing Markdown registration, stale Raw URL inventory, and
 index drift can now fail the workflow instead of relying only on memory.
 
+## Ver1.32
+
+### Added
+
+- Project Profile System:
+  `project_profiles/`.
+- GameGhost Project Profile:
+  `project_profiles/gameghost/`.
+- Future placeholders for AnimeGhost and ComicGhost profiles.
+- Project Profile reading order for AI:
+  GDS shared rules, Target Project Profile, Q File, Startup Checklist.
+- Project Profile fields in Q file and completion report templates.
+- Project Rules and Responsibility Boundary integration for Project Profiles.
+
+### Reason
+
+GDS shared rules apply across projects, but GameGhost, AnimeGhost, ComicGhost,
+and future projects need project-specific repository, scope, workflow,
+completion, and AI context.
+
+Without a separate Project Profile, AI may mix GDS shared rules with a child
+project's production repository, runtime ownership, or completion policy.
+
+### Evolution
+
+GDS evolved from Project First declarations into reusable project-specific
+profiles. AI can now read shared GDS rules first, then the target project's
+profile, then the current Q, reducing repository confusion and scope drift.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

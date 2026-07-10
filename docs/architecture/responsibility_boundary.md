@@ -19,6 +19,7 @@ Responsibilities:
 - Review.
 - Documentation.
 - Templates.
+- Project Profiles.
 - Startup Checklist.
 - Repository Root Validation.
 - AI Proactive Proposal.
@@ -46,6 +47,39 @@ DevelopmentSystem is the parent development foundation for multiple projects.
 It may define shared workflow, documentation, rules, templates, AI
 collaboration, and cross-project coordination. It must not silently take over a
 child project's runtime responsibilities.
+
+## Project Profiles
+
+Project Profiles own the documentation boundary between GDS shared operating
+rules and project-specific operating context.
+
+Responsibilities:
+
+- record project-specific repository location and edit boundary;
+- record backup / reference-only policy;
+- record project-specific Q expectations;
+- record project-specific rules, workflow, AI context, and completion policy;
+- help AI read the right context before a project-specific Q;
+- keep child project runtime ownership separate from GDS shared rules.
+
+Project Profiles do not own:
+
+- project runtime implementation;
+- project schema;
+- project data;
+- project release approval;
+- project-specific business logic;
+- final human approval authority.
+
+Architecture flow:
+
+```text
+GDS Shared Rules
+  -> Project Profile
+  -> Q File
+  -> Startup Checklist
+  -> Implementation / Review
+```
 
 ## Startup Checklist
 

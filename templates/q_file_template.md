@@ -320,6 +320,22 @@ Ghost Development System
 
 Target Project が曖昧な場合、実装前に確認します。
 
+### Project Profile
+
+If the Target Project has a Project Profile, record it here.
+
+Examples:
+
+```text
+project_profiles/gameghost/README.md
+```
+
+- Project Profile applies: Yes / No
+- Project Profile path:
+- Project Profile reviewed before implementation:
+- Project Profile conflicts with Q:
+- Conflict resolution:
+
 ### Repository
 
 編集対象の repository name を記載します。

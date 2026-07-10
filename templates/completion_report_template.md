@@ -222,6 +222,9 @@
 ## Repository Information Followed
 
 - Target Project:
+- Project Profile path:
+- Project Profile reviewed:
+- Project Profile conflicts:
 - Repository:
 - Single Source Of Truth:
 - Cross Project Impact:
