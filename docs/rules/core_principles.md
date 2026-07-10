@@ -1,8 +1,8 @@
 # Core Principles
 
-**Version:** 2.3
+**Version:** 2.4
 
-**Last Updated:** 2026-07-10
+**Last Updated:** 2026-07-11
 
 ## Purpose
 
@@ -71,6 +71,30 @@ Knowledge Asset. Knowledge Assets should be reviewed, have clear ownership, and
 be promoted through Knowledge Asset Layer before automation depends on them.
 Raw CSV edits, unreviewed guesses, or hidden prompt exceptions are not approved
 Knowledge Assets.
+
+### Platform First
+
+When a new function, rule, workflow, template, checklist, prompt, or validation
+could be useful across multiple Ghost projects, evaluate Platform suitability
+before treating it as project-specific.
+
+Common capability belongs in GDS. Domain-specific behavior belongs in the
+target Ghost project until evidence supports migration.
+
+### Repository First
+
+Adopted repository knowledge has priority over chat memory.
+
+Decision order:
+
+```text
+Knowledge Access Index
+  -> Repository
+  -> Chat
+```
+
+If chat guidance conflicts with adopted repository rules, follow the repository
+and propose a repository update when needed.
 
 ### Knowledge Poka-Yoke / Design For Forgetfulness
 
@@ -160,6 +184,11 @@ report.
 
 Retrospectives should produce concrete improvements to rules, templates,
 workflow, or roadmap when the learning is reusable.
+
+### AI Cognitive Load Reduction
+
+GDS should standardize repeated mechanical decisions so humans and AI can
+focus on high-value judgment, design, review, and improvement.
 
 ## Platform Era Classification
 

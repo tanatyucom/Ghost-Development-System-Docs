@@ -1,8 +1,8 @@
 # Quality Rules
 
-**Version:** 2.3
+**Version:** 2.4
 
-**Last Updated:** 2026-07-05
+**Last Updated:** 2026-07-11
 
 ## Purpose
 
@@ -44,6 +44,15 @@ Review documentation for:
 - debug artifact location, when Debug Mode applies;
 - expected normal state for intermediate artifacts;
 - whether normal execution avoids debug artifact generation.
+
+When evidence allows, reviews should end with:
+
+- `Commit OK`; or
+- `Revision Recommended`.
+
+If neither is possible, state the blocker and the minimum next evidence needed.
+Platform Era reviews should include a Recommended Next Q when a useful next
+step is visible.
 
 ## Error Prevention
 

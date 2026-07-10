@@ -1,8 +1,8 @@
 # Artifact First Rules
 
-**Version:** 1.1
+**Version:** 1.2
 
-**Last Updated:** 2026-07-03
+**Last Updated:** 2026-07-11
 
 ## Purpose
 
@@ -56,6 +56,11 @@ Additional formats may be used when the content requires them:
 Generate files by default for:
 
 - Q files;
+- templates;
+- checklists;
+- prompts;
+- Markdown documents;
+- reports;
 - design documents;
 - specifications;
 - Codex requests;

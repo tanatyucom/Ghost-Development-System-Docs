@@ -1621,6 +1621,37 @@ The draft remains non-authoritative until Human Review confirms the update
 type, status transition, related files, README / AI Repository Index impact,
 and Repository Quality Audit result.
 
+## Ver1.59
+
+### Added
+
+- Persistent Collaboration Rules in `docs/rules/ai_collaboration_rules.md`.
+- Platform First, Repository First, Download First, Rule Priority, Command
+  Rule, Review Rule, Completion Report First, AI Cognitive Load Reduction, and
+  Platform Philosophy.
+- Core Principles updates for Platform First, Repository First, and AI
+  Cognitive Load Reduction.
+- Artifact First required file-first outputs for templates, checklists,
+  prompts, Markdown, and reports.
+- Quality Rules review conclusion guidance for `Commit OK` and
+  `Revision Recommended`.
+- Completion Report Template priority summary fields.
+- Platform Standard Registry entry for Persistent Collaboration Rules.
+- Registry Update Artifact:
+  `registry_updates/20260711_persistent_collaboration_rules_new.md`.
+
+### Reason
+
+Platform Era collaboration spans humans, ChatGPT, Codex, Claude, Gemini, review
+flows, Q artifacts, and repository standards. Repeating collaboration behavior
+in chat creates drift and increases cognitive load.
+
+### Evolution
+
+Collaboration behavior is now repository-persistent. Once a collaboration rule
+is adopted into GDS Docs, future chats and AI tools should follow it through
+the repository, not temporary memory.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

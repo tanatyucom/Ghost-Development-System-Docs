@@ -1,8 +1,8 @@
 # Ghost Development System Rules
 
-**Version:** 3.1
+**Version:** 3.2
 
-**Last Updated:** 2026-07-10
+**Last Updated:** 2026-07-11
 
 ## Purpose
 
@@ -17,11 +17,12 @@ priority document.
 
 1. Rules
 2. Workflow
-3. Architecture
-4. Roadmap
-5. Status
-6. Queue
-7. Research
+3. Templates
+4. Examples
+5. Implementation
+
+Detailed architecture, roadmap, status, queue, and research documents remain
+important context, but they do not override adopted rules.
 
 ## Rule Organization
 
@@ -53,6 +54,11 @@ Rules follow these principles:
 - Roadmap2 Knowledge Salvage.
 - Human Approval Gate.
 - Future Scope Guard.
+- Persistent Collaboration.
+- Platform First.
+- Repository First.
+- Download First.
+- AI Cognitive Load Reduction.
 
 `rules.md` is the index and priority document. Detailed rules belong in their
 own files.

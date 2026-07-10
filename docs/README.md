@@ -362,6 +362,38 @@ Reference points:
 - AI Collaboration: `docs/rules/ai_collaboration_rules.md`
 - Startup Checklist: `docs/rules/startup_checklist_rules.md`
 
+## Persistent Collaboration Index
+
+Persistent Collaboration は、Repositoryへ採用された協業ルールを今後の
+ChatGPT / Codex / Claude / Gemini / human review で継続適用するための標準です。
+
+Reference points:
+
+- AI Collaboration Rules: `docs/rules/ai_collaboration_rules.md`
+- Core Principles: `docs/rules/core_principles.md`
+- Rules Index: `docs/rules/rules.md`
+- Artifact First: `docs/rules/artifact_first_rules.md`
+- Quality Rules: `docs/rules/quality_rules.md`
+- Completion Report Template: `templates/completion_report_template.md`
+
+Core priority:
+
+```text
+Rule
+  -> Workflow
+  -> Template
+  -> Example
+  -> Implementation
+```
+
+Decision order:
+
+```text
+Knowledge Access Index
+  -> Repository
+  -> Chat
+```
+
 ## Collaborative Decision Index
 
 Collaborative Decision は、AI Proposal と User Proposal を起点に、Discussion、

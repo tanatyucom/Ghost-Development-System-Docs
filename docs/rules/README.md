@@ -17,6 +17,10 @@ Completion Checklist, Artifact First, Audit Before Repair, Debug Artifact Review
 Migration First, PIP Case Knowledge Base, and Roadmap2 Knowledge Salvage. Concept Promotion is
 handled as part of PIP Case Knowledge Base. Concept ID Naming is the standard
 for assigning stable Concept IDs and keeping the Concept Index traceable.
+Persistent Collaboration, Platform First, Repository First, Download First,
+Rule Priority, Command Rule, Review Rule, Completion Report First, AI
+Cognitive Load Reduction, and Platform Philosophy are defined in
+`ai_collaboration_rules.md` and `core_principles.md`.
 Platform Era principle candidates are classified in
 `docs/architecture/platform_era_core_principles.md` before any new rule is
 promoted.
@@ -78,7 +82,10 @@ promoted.
 - `git_rules.md`: Git history, dirty workspace policy, file classification,
   and commit safety rules.
 - `quality_rules.md`: quality and review standards.
-- `ai_collaboration_rules.md`: human and AI collaboration rules.
+- `ai_collaboration_rules.md`: human and AI collaboration rules, including
+  Persistent Collaboration, Platform First, Repository First, Download First,
+  command presentation, review conclusion, completion report priority, and AI
+  cognitive load reduction.
 - `script_architecture_rules.md`: script architecture principles for related
   implementation repositories.
 

@@ -1,5 +1,12 @@
 # Completion Report Template
 
+## Priority Summary
+
+- Summary:
+- Verification:
+- Remaining Issues:
+- Recommended Next Q:
+
 ## Source Q File
 
 - Q artifact path:

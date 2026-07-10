@@ -104,6 +104,35 @@ AI Startup Procedure
   -> Next Startup
 ```
 
+## Persistent Collaboration
+
+Repositoryへ採用された協業ルールは、以後のChatGPT / Codex / Claude / Gemini /
+human reviewでも継続適用します。
+
+Start from:
+
+- [`docs/rules/ai_collaboration_rules.md`](docs/rules/ai_collaboration_rules.md)
+- [`docs/rules/core_principles.md`](docs/rules/core_principles.md)
+- [`docs/rules/rules.md`](docs/rules/rules.md)
+
+判断順序:
+
+```text
+Knowledge Access Index
+  -> Repository
+  -> Chat
+```
+
+協業ルールの優先度:
+
+```text
+Rule
+  -> Workflow
+  -> Template
+  -> Example
+  -> Implementation
+```
+
 ## GDS Health
 
 GDS Health は、repository、knowledge、workflow、template、example、
