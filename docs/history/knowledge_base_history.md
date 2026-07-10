@@ -1331,6 +1331,30 @@ Innovation Pipeline moved from workflow definition into practical operation.
 Ideas can now be recorded, reviewed, validated, promoted, archived, and followed
 up through one reusable template.
 
+## Ver1.48
+
+### Added
+
+- Innovation Pipeline Examples:
+  `examples/innovation_pipeline_examples.md`.
+- Example cases for Ghost OCR Platform, Repository Quality Audit, Health
+  Dashboard, and Auto Q Generation Future.
+- README, docs index, examples index, workflow, and template links for
+  Innovation Pipeline examples.
+
+### Reason
+
+Innovation Pipeline Workflow and Template existed, but users still needed
+realistic examples showing how to apply the pipeline to field project
+experiments, repository quality work, health dashboard evolution, and future
+automation candidates.
+
+### Evolution
+
+Innovation Pipeline moved from template availability into practical guidance.
+New improvement ideas can now be compared against examples before deciding
+whether to experiment, prototype, validate, promote, or archive.
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

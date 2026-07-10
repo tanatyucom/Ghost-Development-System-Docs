@@ -53,6 +53,9 @@ reports, and documentation requests can start from a clear reference.
 - `debug_artifact_review_examples.md`: good and bad examples for Debug Mode,
   intermediate artifact review, expected normal state, design review before
   fixes, and debug artifact Git policy.
+- `innovation_pipeline_examples.md`: examples for moving ideas through Idea,
+  Experiment, Prototype, Validation, Platform Promotion, Standardization, and
+  Propagation.
 - `repository_information.md`: example of repository boundaries, source of
   truth, scope guard, and completion criteria.
 - `authority_matrix.md`: example edit and reference authority matrix.
@@ -140,6 +143,9 @@ what a complete, well-scoped document should feel like.
 - Use `debug_artifact_review_examples.md` when AI, OCR, recommendation,
   auto-detection, candidate extraction, fuzzy matching, visual overlays, or
   intermediate artifacts need review before fixes or final judgment.
+- Use `innovation_pipeline_examples.md` when a field project experiment,
+  improvement idea, or future automation candidate may become a Platform
+  Standard through Innovation Pipeline.
 - Use `repository_information.md` when a task may involve multiple
   repositories, documentation roots, runtime roots, or reference-only sources.
 - Use `authority_matrix.md` when a task needs explicit Editable, Reference
@@ -165,6 +171,7 @@ When examples conflict with rules or templates, follow:
 - Documentation Coverage Report example.
 - Knowledge Base Index example.
 - Metrics / Evidence completion report example.
+- Platform Promotion decision report example.
 
 ## Update Policy
 

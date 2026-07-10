@@ -234,6 +234,7 @@ Future candidates:
 ## Related Documents
 
 - `docs/workflow/innovation_pipeline_workflow.md`
+- `examples/innovation_pipeline_examples.md`
 - `docs/architecture/platform_era_core_principles.md`
 - `roadmap/ghost_development_system_roadmap.md`
 - `templates/completion_report_template.md`

@@ -782,6 +782,8 @@ Reference points:
   `docs/workflow/innovation_pipeline_workflow.md`
 - Innovation Pipeline Template:
   `templates/innovation_pipeline_template.md`
+- Innovation Pipeline Examples:
+  `examples/innovation_pipeline_examples.md`
 - Rules: `docs/rules/core_principles.md`
 - Glossary: `docs/glossary/README.md`
 
@@ -1009,6 +1011,8 @@ Q file、AI implementation request、review、completion report、roadmap item �
 Innovation Pipeline の Idea、Experiment、Prototype、Validation、Platform
 Promotion、Standardization、Propagation を記録する場合は
 `templates/innovation_pipeline_template.md` を使います。
+
+実運用例は `examples/innovation_pipeline_examples.md` を参照します。
 
 ### Example を見たい
 
