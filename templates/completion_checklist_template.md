@@ -31,6 +31,7 @@
 - Summary recorded:
 - Verification recorded:
 - Improvement Review recorded:
+- AI Repository Index update decision recorded:
 - AI Repository Index update requirement recorded:
 - Remaining Issues recorded:
 - Recommended Next Q recorded:
@@ -38,6 +39,7 @@
 
 ## AI Repository Knowledge Access
 
+- AI Repository Index update decision: Yes / No / Review Required
 - Public AI knowledge entry points changed:
 - `docs/ai_repository_index.md` update required:
 - `docs/ai_repository_index.md` updated:

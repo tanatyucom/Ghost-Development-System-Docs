@@ -29,6 +29,7 @@ Release 判断を置き換えません。完了時にそれらを一貫して確
 - Release Published?
 - Recommended Next Q.
 - Workspace Clean Confirmation.
+- AI Repository Index update decision required?
 - AI Repository Knowledge Access Index update required?
 - AI Repository Knowledge Access Index regenerated?
 - AI Repository Knowledge Access Index validation passed?
@@ -72,6 +73,13 @@ Release 判断を置き換えません。完了時にそれらを一貫して確
 ### AI Repository Index Check
 
 Confirm whether the task changed public AI knowledge entry points.
+
+Every task must record an AI Repository Index update decision. The decision can
+be:
+
+- `Yes`: public AI knowledge entry points changed and index regeneration is required.
+- `No`: no public AI knowledge entry point changed.
+- `Review Required`: classification is unclear and human or reviewer judgment is needed.
 
 Regenerate `docs/ai_repository_index.md` when README, roadmap, rules,
 workflow, templates, examples, glossary, history, PIP, CASE, Concept,
@@ -127,6 +135,7 @@ Completion Checklist:
 - Release Published:
 - Recommended Next Q:
 - Workspace Clean Confirmation:
+- AI Repository Index Update Decision:
 - AI Repository Index Update Required:
 - AI Repository Index Updated:
 - AI Repository Index Regenerated:

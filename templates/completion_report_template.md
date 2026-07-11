@@ -98,6 +98,7 @@
 
 ## AI Repository Knowledge Access
 
+- AI Repository Index update decision: Yes / No / Review Required
 - Public AI knowledge entry points changed:
 - `docs/ai_repository_index.md` update required:
 - `docs/ai_repository_index.md` updated:
@@ -185,6 +186,9 @@
 - Recommended Next Q:
 - Workspace Clean Confirmation:
 - Completion blockers:
+- AI Repository Index Update Decision:
+- AI Repository Index Regenerated:
+- AI Repository Index Validation Passed:
 
 ## Migration First Review
 

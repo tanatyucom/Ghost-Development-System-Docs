@@ -44,6 +44,15 @@ Message を記録します。
 完了前に `templates/completion_checklist_template.md` または Completion Report 内の
 Completion Checklist 欄を確認します。
 
+AI Repository Index update decision は必ず確認します。
+
+```text
+Public AI knowledge entry point changed?
+  -> Yes: regenerate docs/ai_repository_index.md and validate
+  -> No: record not required reason
+  -> Review Required: stop and request review before completion
+```
+
 ### Commit / Tag / Release Decision
 
 Commit、Tag、Release は自動的に実行しません。Q、Human Approval、release policy、
@@ -72,6 +81,9 @@ Completion Checklist:
 - Release Published:
 - Recommended Next Q:
 - Workspace Clean Confirmation:
+- AI Repository Index Update Decision:
+- AI Repository Index Regenerated:
+- AI Repository Index Validation Passed:
 ```
 
 ## Completion Criteria
@@ -83,6 +95,8 @@ Completion Checklist:
 - Commit / Tag / Release の必要性と実行有無が分かれている。
 - Recommended Next Q がある場合、明示されている。
 - Workspace clean confirmation または dirty state が記録されている。
+- AI Repository Index update decision が Yes / No / Review Required のいずれかで記録されている。
+- public AI knowledge entry point が変わった場合、`docs/ai_repository_index.md` が再生成・検証されている。
 
 ## Related Documents
 

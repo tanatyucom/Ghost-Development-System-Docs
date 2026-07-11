@@ -265,6 +265,53 @@ notes.md
 attachments/
 ```
 
+## AI Repository Index Update
+
+この Q が public AI knowledge entry point に影響するかを、完了時に必ず判定します。
+
+AI Repository Index Update applies:
+
+```text
+Yes / No / Review Required
+```
+
+Trigger:
+
+```text
+New public Markdown / README entry point changed / Rule changed / Workflow changed / Template changed / CASE changed / History changed / PIP changed / Other / None
+```
+
+Expected indexed files:
+
+```text
+None / <paths expected to appear in docs/ai_repository_index.md>
+```
+
+Validation:
+
+```text
+Not required / python scripts/generate_ai_repository_index.py --write / python scripts/generate_ai_repository_index.py --validate
+```
+
+Representative Raw URL verification:
+
+```text
+Not required / Required for important public entry points / <target Raw URLs>
+```
+
+Completion Report requirements:
+
+```text
+Record update decision, generated index status, validation result, new indexed files, Raw URL verification result, and not-required reason when update is not needed.
+```
+
+Rule:
+
+```text
+Every Q must decide whether docs/ai_repository_index.md needs regeneration.
+Do not silently skip the decision.
+```
+
 ## Related Commit
 
 Commit policy:
@@ -496,6 +543,7 @@ Use this section to define completion requirements before work begins.
 - Release decision required:
 - Recommended Next Q required:
 - Workspace Clean Confirmation required:
+- AI Repository Index update decision required:
 
 Reference:
 
@@ -828,6 +876,11 @@ out-of-scope items を明示します。
   review.
 - Normal execution does not generate debug artifacts unless Debug Mode is
   explicitly requested.
+- AI Repository Index Update decision is recorded for public Markdown,
+  README, roadmap, rules, workflow, templates, examples, glossary, history,
+  PIP, CASE, Concept, methodology, or important entry point changes.
+- AI Repository Index regeneration and validation are required when public AI
+  knowledge entry points are added, moved, renamed, or materially changed.
 - Completion report is expected to include debug artifact save location,
   verification target, expected normal state, review viewpoints, AI review
   target artifacts when applicable, and debug artifact Git policy.
