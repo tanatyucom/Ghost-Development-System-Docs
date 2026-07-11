@@ -1961,6 +1961,32 @@ Knowledge Baseは、Rule、Workflow、Template、CASEを保存する体系から
 Steam OCRは、経験がKnowledge Inventoryへ入り、Promotion Reviewを通り、RuleとCASEへ昇格し、
 最後にMilestoneとして保存される最初の完全な実例になった。
 
+## Ver1.71
+
+### Added
+
+- Research Mission Template:
+  `templates/research_mission_template.md`.
+- Research Mission Workflow:
+  `docs/workflow/research_mission_workflow.md`.
+- Research Mission Rules:
+  `docs/rules/research_mission_rules.md`.
+- Research Mission fields in Q File Template, Startup Checklist Template, and
+  Completion Report Template.
+- README, docs index, rules index, workflow index, and templates index links.
+
+### Reason
+
+Steam OCR Root Cause Investigationで実証された「Goal、Scope、Out of Scope、
+Evidence、Validation、Completion Reportを明示して調査する」運用を、Steam OCR
+固有の成功ではなくGDS全体で再利用できるResearch Frameworkへ昇格するため。
+
+### Evolution
+
+GDSは、曖昧な調査依頼をそのままAIへ渡す運用から、Research Missionとして
+調査の目的、証拠、検証、負の結果、Knowledge Promotion候補を保存する運用へ
+進化した。
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

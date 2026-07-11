@@ -67,6 +67,7 @@ git status
 - Audit Before Repair
 - Debug Artifact Review
 - Debug Escalation Ladder
+- Research Mission
 - Migration First
 - Completion Checklist
 - Commit Safety
@@ -103,6 +104,8 @@ Q File から今回の作業範囲を確認します。
 - Completion Criteria
 - Commit policy
 - Required artifacts
+- Research Mission requirements, when the Q is investigation or hypothesis
+  validation work
 
 Windows PowerShell 5.1 で Q File を読む場合は、次の形式を使います。
 
@@ -180,6 +183,9 @@ Startup Checklist:
 - `docs/workflow/repository_root_validation_workflow.md`
 - `docs/rules/external_source_access_rules.md`
 - `docs/rules/utf8_read_rules.md`
+- `docs/rules/research_mission_rules.md`
+- `docs/workflow/research_mission_workflow.md`
+- `templates/research_mission_template.md`
 - `docs/ai_repository_index.md`
 - `project_profiles/README.md`
 - `templates/startup_checklist_template.md`

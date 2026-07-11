@@ -24,6 +24,11 @@ Recommended Next Q, and workspace clean state before a task is treated as
 complete. They also check whether the AI Repository Knowledge Access Index
 needs regeneration and validation when public knowledge entry points changed.
 
+Research Mission templates help humans and AI turn vague investigation
+requests into scoped missions with Goal, Research Questions, Scope, Out of
+Scope, Evidence, Validation, Negative Result handling, Deliverables, and
+Completion Report requirements.
+
 Daily operation checklist templates help humans and AI record the whole AI
 Daily Operation Cycle from startup through Current Q Review, implementation,
 verification, Human Review, Completion Checklist, commit / push, Knowledge
@@ -114,6 +119,7 @@ restore guidance.
 - `structured_artifact_metadata_template.md`
 - `multi_ai_handoff_template.md`
 - `multi_ai_handoff_checklist_template.md`
+- `research_mission_template.md`
 - `completion_checklist_template.md`
 - `q_file_template.md`
 - `ai_implementation_request.md`
@@ -283,10 +289,13 @@ Do not add one-off request details to templates. Add only reusable structure.
 - `templates/completion_checklist_template.md`
 - `templates/review_checklist.md`
 - `templates/completion_report_template.md`
+- `templates/research_mission_template.md`
 - `templates/codex_review_template.md`
 - `docs/ai_repository_index.md`
 - `docs/health/gds_health_dashboard.md`
 - `docs/rules/external_source_access_rules.md`
+- `docs/rules/research_mission_rules.md`
+- `docs/workflow/research_mission_workflow.md`
 - `docs/requests/README.md`
 - `docs/rules/q_file_artifact_standard.md`
 - `docs/rules/audit_before_repair_rules.md`

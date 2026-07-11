@@ -43,6 +43,7 @@ Rules follow these principles:
 - Repository Root Validation.
 - AI Proactive Proposal.
 - Completion Checklist.
+- Research Mission.
 - Artifact First.
 - Audit Before Repair.
 - Debug Artifact Review.
@@ -76,6 +77,7 @@ own files.
 - `repository_root_validation_rules.md`
 - `ai_proactive_proposal_rules.md`
 - `completion_checklist_rules.md`
+- `research_mission_rules.md`
 - `artifact_first_rules.md`
 - `q_file_artifact_standard.md`
 - `audit_before_repair_rules.md`
@@ -129,8 +131,9 @@ Start
 
 Startup Checklist is an entry point for existing rules. It does not replace
 Project First, Japanese First, Artifact First, Audit Before Repair, Debug
-Artifact Review, Debug Escalation Ladder, Migration First, PIP Case Knowledge
-Base, Concept Promotion, Roadmap2 Knowledge Salvage, or Commit Safety.
+Artifact Review, Debug Escalation Ladder, Research Mission, Migration First,
+PIP Case Knowledge Base, Concept Promotion, Roadmap2 Knowledge Salvage, or
+Commit Safety.
 
 Details follow `startup_checklist_rules.md`.
 
@@ -279,6 +282,32 @@ Completion Checklist records decisions. It does not automatically approve
 commit, tag, release, or Human Approval Gate items.
 
 Details follow `completion_checklist_rules.md`.
+
+## Research Mission
+
+When a task asks AI or a human to investigate an uncertain cause, compare
+hypotheses, trace a failure, classify a knowledge gap, or prepare reusable
+research, use a Research Mission artifact.
+
+Minimum required elements:
+
+- Goal.
+- Research Questions.
+- Expected Hypothesis.
+- Scope.
+- Out of Scope.
+- Required Evidence.
+- Validation Method.
+- Deliverables.
+- Success Criteria.
+- Negative Result Policy.
+- Completion Report requirement.
+
+Research Mission does not replace Debug Escalation Ladder, First Broken Step,
+PIP Case Knowledge Base, or Completion Checklist. It is the front door that
+makes investigation work scoped, evidence-based, reviewable, and promotable.
+
+Details follow `research_mission_rules.md`.
 
 ## Debug Artifact Review
 

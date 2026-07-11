@@ -86,6 +86,7 @@ Root が一致しない場合は implementation / review / commit を開始し�
 - Audit Before Repair.
 - Debug Artifact Review.
 - Debug Escalation Ladder.
+- Research Mission.
 - Migration First.
 - Dirty Workspace / Commit Safety.
 - PIP Case Knowledge Base.
@@ -101,6 +102,7 @@ Root が一致しない場合は implementation / review / commit を開始し�
 代表例:
 
 - First Broken Step Methodology.
+- Research Mission.
 - Trace Before Tune.
 - Human Review Before Automation.
 - Knowledge Before Automation.

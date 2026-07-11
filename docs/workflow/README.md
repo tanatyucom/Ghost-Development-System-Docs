@@ -39,6 +39,10 @@ gate.
 - `completion_checklist_workflow.md`: completion confirmation flow for
   verification, review, completion report, Improvement Review, commit, tag,
   release, next Q, and workspace clean confirmation.
+- `research_mission_workflow.md`: scoped investigation workflow from
+  Observation to Research Mission, Evidence Collection, Validation,
+  Completion Report, Knowledge Promotion Review, Human Approval, and
+  Repository update.
 - `output_policy.md`: chat versus file artifact output decision policy.
 - `audit_before_repair_workflow.md`: audit, classification, evidence, human
   review, scoped repair Q, verification, and commit flow before repair work.
@@ -102,6 +106,7 @@ Idea
   -> Approval
   -> Codex / AI Implementation
   -> Debug Escalation Ladder, when cause is uncertain
+  -> Research Mission, when investigation scope and evidence must be explicit
   -> Debug Artifact Review, when applicable
   -> Completion Report Artifact
   -> Knowledge Inventory, when reusable knowledge is found but not yet promoted
@@ -281,6 +286,30 @@ Implementation
 ```
 
 Details follow `completion_checklist_workflow.md`.
+
+## Research Mission Workflow
+
+Use Research Mission Workflow when the task is not yet a fix or specification,
+but an evidence-based investigation.
+
+```text
+Observation
+  -> Research Mission
+  -> Evidence Collection
+  -> Validation
+  -> Completion Report
+  -> Knowledge Promotion Review
+  -> Human Approval
+  -> Rule / Workflow / Template / CASE / Inventory
+  -> Repository
+```
+
+The mission artifact should define Goal, Research Questions, Expected
+Hypothesis, Scope, Out of Scope, Required Evidence, Validation Method,
+Deliverables, Success Criteria, Negative Result Policy, and Completion Report
+requirements.
+
+Details follow `research_mission_workflow.md`.
 
 ## Audit Before Repair Workflow
 
@@ -747,6 +776,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/ai_repository_index.md`
 - `docs/workflow/collaborative_decision_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`
+- `docs/workflow/research_mission_workflow.md`
 - `docs/workflow/output_policy.md`
 - `docs/workflow/commit_safety_checklist.md`
 - `docs/workflow/debug_artifact_review_workflow.md`
@@ -774,6 +804,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/rules/repository_root_validation_rules.md`
 - `docs/rules/ai_proactive_proposal_rules.md`
 - `docs/rules/completion_checklist_rules.md`
+- `docs/rules/research_mission_rules.md`
 - `docs/templates/q_file_template.md`
 - `templates/innovation_pipeline_template.md`
 - `docs/templates/review_checklist.md`
