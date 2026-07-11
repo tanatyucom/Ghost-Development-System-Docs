@@ -66,6 +66,7 @@
 - Audit Before Repair:
 - Debug Artifact Review:
 - Debug Escalation Ladder:
+- Research Mission:
 - Migration First:
 - Dirty Workspace / Commit Safety:
 - PIP Case Knowledge Base:
@@ -78,6 +79,7 @@
 ## Applicable Methodologies
 
 - First Broken Step Methodology:
+- Research Mission:
 - Trace Before Tune:
 - Human Review Before Automation:
 - Knowledge Before Automation:

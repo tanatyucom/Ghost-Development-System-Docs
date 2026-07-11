@@ -137,6 +137,36 @@ AI Startup Procedure
   -> Next Startup
 ```
 
+## Research Mission Index
+
+Research Mission は、不確実な原因調査、仮説比較、Root Cause確認、
+Knowledge gap確認を、Goal / Scope / Out of Scope / Evidence / Validation /
+Completion Report 付きで実行するための標準入口です。
+
+Reference points:
+
+- Template: `templates/research_mission_template.md`
+- Workflow: `docs/workflow/research_mission_workflow.md`
+- Rules: `docs/rules/research_mission_rules.md`
+- Completion Report Template: `templates/completion_report_template.md`
+- Knowledge Inventory: `docs/knowledge/README.md`
+- PIP Case Knowledge Base Workflow:
+  `docs/workflow/pip_case_knowledge_base_workflow.md`
+
+Core flow:
+
+```text
+Observation
+  -> Research Mission
+  -> Evidence Collection
+  -> Validation
+  -> Completion Report
+  -> Knowledge Promotion Review
+  -> Human Approval
+  -> Rule / Workflow / Template / CASE / Inventory
+  -> Repository
+```
+
 ## Knowledge Inventory Index
 
 Knowledge Inventory は、Research、Debug Artifact、Completion Report、

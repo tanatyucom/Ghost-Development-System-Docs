@@ -97,6 +97,33 @@ Do not start broad repair until audit, classification, evidence review, and
 required human approval are complete.
 ```
 
+## Research Mission
+
+Use this section when the Q requests investigation, hypothesis validation, root
+cause research, evidence collection, or knowledge gap classification.
+
+- Research Mission applies: Yes / No
+- Mission Name:
+- Goal:
+- Research Questions:
+- Expected Hypothesis:
+- Scope:
+- Out of Scope:
+- Required Evidence:
+- Validation Method:
+- Deliverables:
+- Success Criteria:
+- Negative Result Policy:
+- Knowledge Promotion Candidate:
+- Completion Report required: Yes / No
+
+Rule:
+
+```text
+Do not start vague investigation work until Goal, Scope, Out of Scope,
+Evidence, Validation, and Completion Report requirements are explicit.
+```
+
 ## Request ID / Task ID
 
 Request ID or Task ID:

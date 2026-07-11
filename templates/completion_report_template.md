@@ -190,6 +190,23 @@
 - AI Repository Index Regenerated:
 - AI Repository Index Validation Passed:
 
+## Research Mission Review
+
+- Research Mission applies:
+- Source Research Mission:
+- Mission Goal:
+- Research Questions reviewed:
+- Expected Hypothesis:
+- Hypotheses accepted:
+- Hypotheses rejected:
+- Evidence reviewed:
+- Validation method:
+- Validation result:
+- Negative Result recorded:
+- Remaining uncertainty:
+- Knowledge Promotion recommendation:
+- Follow-up Q:
+
 ## Migration First Review
 
 - Migration First applies:

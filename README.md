@@ -104,6 +104,31 @@ AI Startup Procedure
   -> Next Startup
 ```
 
+## Research Mission
+
+不確実な原因調査、仮説比較、Root Cause確認、Knowledge gap確認を行う場合は、
+曖昧な「調査してください」ではなく Research Mission として扱います。
+
+Start from:
+
+- [`templates/research_mission_template.md`](templates/research_mission_template.md)
+- [`docs/workflow/research_mission_workflow.md`](docs/workflow/research_mission_workflow.md)
+- [`docs/rules/research_mission_rules.md`](docs/rules/research_mission_rules.md)
+
+標準フロー:
+
+```text
+Observation
+  -> Research Mission
+  -> Evidence Collection
+  -> Validation
+  -> Completion Report
+  -> Knowledge Promotion Review
+  -> Human Approval
+  -> Rule / Workflow / Template / CASE / Inventory
+  -> Repository
+```
+
 ## Persistent Collaboration
 
 Repositoryへ採用された協業ルールは、以後のChatGPT / Codex / Claude / Gemini /
