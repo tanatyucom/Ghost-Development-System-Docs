@@ -110,6 +110,9 @@ Checklist:
 
 - Confirm Target Project and repository.
 - Confirm Scope Guard.
+- Confirm repository root with `git rev-parse --show-toplevel`.
+- Confirm branch with `git branch --show-current`.
+- Confirm remote with `git remote -v` when the Q declares an expected remote.
 - Run `git status`.
 - Classify every changed file.
 - Review unrelated files.

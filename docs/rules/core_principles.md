@@ -55,6 +55,11 @@ When repeated operation produces comparable results, preserve the relevant
 metrics as evidence. Metrics should have clear source, meaning, owner, and
 review boundary. They support judgment; they do not replace Human Approval Gate.
 
+When metrics and reviewed human-visible evidence disagree, pause adoption and
+investigate the conflict. Do not treat either side as automatically correct.
+Use pipeline trace, intermediate artifacts, and first broken step analysis to
+find why the evidence disagrees.
+
 ### Knowledge Before Automation
 
 When automation fails, first ask whether the system lacks reusable knowledge
@@ -184,6 +189,11 @@ report.
 
 Retrospectives should produce concrete improvements to rules, templates,
 workflow, or roadmap when the learning is reusable.
+
+Useful negative results are also improvement input. When a rejected approach,
+failed hypothesis, or contradicted metric is likely to prevent future repeated
+work, preserve it in the appropriate completion report, CASE, PIP, Knowledge
+Inventory, or rule story.
 
 ### AI Cognitive Load Reduction
 

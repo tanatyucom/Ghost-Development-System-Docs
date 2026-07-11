@@ -58,6 +58,26 @@ Evidence には最低限次を含める。
 Evidence は Markdown、CSV、JSON、screenshot、debug artifact などでよい。ただし
 authoritative な repair input は、Q artifact または review artifact として保存する。
 
+## Trace Before Repair
+
+OCR結果修正、DB修復、Import補正、metadata修正、alias修正、candidate修正など、
+pipeline を持つ repair では、調整や修復の前に工程を追跡します。
+
+最低限、次を分離します。
+
+- detection / extraction failure;
+- candidate generation failure;
+- normalization / mapping failure;
+- recognition / scoring failure;
+- selection failure;
+- write / import / apply failure.
+
+正しい候補や正しい中間状態が存在しない場合、後段の scoring、recognition、
+mapping、DB更新を修正しても根本解決になりません。
+
+否定された仮説や採用しなかった repair candidate が将来の判断に役立つ場合は、
+Negative Result として evidence に残します。
+
 ## Repair Scope Rule
 
 一度に全体修正しない。repair scope は段階的に切る。
@@ -131,4 +151,3 @@ Repair completion report には次を含める。
 - Safe Commit Set;
 - Suggested Restore Commands;
 - Follow-up Q.
-

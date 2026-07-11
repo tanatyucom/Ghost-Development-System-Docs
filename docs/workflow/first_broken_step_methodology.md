@@ -32,7 +32,8 @@ Confirm the Symptom
 - Do not optimize parameters before proving the pipeline is correct.
 - Evidence precedes optimization.
 - Metrics are evidence, not truth.
-- Human review has priority over metrics when evidence conflicts.
+- When metrics and human-visible evidence conflict, stop adoption and
+  investigate why the evidence disagrees.
 - A final bad output is a symptom, not automatically the root cause.
 
 ## Step 1: Confirm The Symptom
@@ -77,6 +78,10 @@ Examples:
 
 The trace should show where state changes, not just where the final output is
 wrong.
+
+Separate detection, candidate generation, recognition, scoring, selection, and
+rendering failures. If the correct candidate was never generated, tuning a
+later recognition or scoring stage cannot prove root cause.
 
 ## Step 5: Identify The First Broken Step
 

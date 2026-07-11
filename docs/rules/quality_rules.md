@@ -2,7 +2,7 @@
 
 **Version:** 2.4
 
-**Last Updated:** 2026-07-11
+**Last Updated:** 2026-07-12
 
 ## Purpose
 
@@ -71,11 +71,32 @@ Prevent common errors by:
   work when Debug Mode applies;
 - reviewing process unit, data flow, and responsibility boundary before code
   edits when debug artifacts feel wrong or ambiguous.
+- avoiding optimization from a single sample when the behavior is expected to
+  generalize across multiple records, screens, documents, users, projects, or
+  runtime states;
+- using representative samples, golden samples, or known-good examples before
+  accepting tuning, scoring, extraction, or recognition changes;
+- preserving useful negative results when they explain why an attractive fix,
+  metric, or candidate was not accepted.
 
 ## Evidence First
 
 Do not rely on memory when reviewing. Check the actual document, folder, or
 request whenever possible.
+
+## Representative Sample Rule
+
+単一サンプルだけで最適化してはいけません。
+
+例外は、Qが単一対象修正であり、横展開しないこと、検証対象、回帰リスク、
+適用範囲を明記している場合に限ります。
+
+共通ルール、workflow、template、OCR、import、DB repair、recommendation、
+classification、UI review、AI output tuning など、複数対象へ影響する作業では、
+代表サンプル、golden sample、既知の正常例、失敗例、境界例を確認します。
+
+Completion Report には、代表サンプルの範囲、除外したサンプル、単一サンプルで
+止めた場合の理由を記録します。
 
 ## Goal
 
