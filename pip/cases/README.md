@@ -36,8 +36,7 @@ pip/case_index.md
 
 ## Current Cases
 
-- `CASE-0008_steam_ocr_root_cause_investigation.md`: reusable root cause
-  investigation case from Roadmap2 final review follow-up.
+- `CASE-0008_steam_ocr_root_cause_investigation.md`: finalized Steam OCR root cause investigation CASE showing how Candidate Generation, Human Review, Pipeline Trace, and Knowledge Promotion produced reusable GDS problem-solving knowledge.
 
 ## Candidate Lists
 
