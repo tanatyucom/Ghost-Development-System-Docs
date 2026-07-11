@@ -138,6 +138,18 @@ Rule
   -> Implementation
 ```
 
+
+## Historical Milestones
+
+GDSの転換点になった出来事は、通常のversion historyとは分けてMilestoneとして保存します。
+
+Start from:
+
+- [`docs/history/milestones/README.md`](docs/history/milestones/README.md)
+- [`docs/history/milestones/steam_ocr_knowledge_promotion_project.md`](docs/history/milestones/steam_ocr_knowledge_promotion_project.md)
+
+Steam OCRは、GDS Knowledge Promotion Pipelineが初めて実運用された歴史的マイルストーンです。
+
 ## Knowledge Inventory
 
 Knowledge Inventory は、Research、Debug Artifact、Completion Report、Human

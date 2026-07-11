@@ -1223,6 +1223,21 @@ Knowledge Base 自身が Ver1.0、Ver1.1、Ver1.2 で何を追加し、なぜ進
 確認します。GameGhost の development history や release changelog とは責務を
 分けます。
 
+
+## Historical Milestones Index
+
+GDSの転換点になった出来事は `docs/history/milestones/` に保存します。
+
+Reference points:
+
+- Milestones Folder: `docs/history/milestones/README.md`
+- Steam OCR Knowledge Promotion Project:
+  `docs/history/milestones/steam_ocr_knowledge_promotion_project.md`
+- Steam OCR Final Archive Package:
+  `docs/history/milestones/steam_ocr_final_archive_package/README.md`
+
+Steam OCRは、Research Mission、Knowledge Inventory、Promotion Review、Existing Rule Update、CASE、GitHub Integrationを初めて実運用したGDSの歴史的マイルストーンです。
+
 ## AI Entry Points
 
 ChatGPT は通常、次の順に確認します:

@@ -1928,6 +1928,39 @@ Metadata design can now be reviewed through concrete good and bad examples.
 This gives future validation work evidence without mass-migrating existing
 artifacts or creating runtime contracts.
 
+
+## Ver1.70
+
+### Added
+
+- GDS Historical Milestones folder:
+  `docs/history/milestones/`.
+- Steam OCR Knowledge Promotion Project milestone:
+  `docs/history/milestones/steam_ocr_knowledge_promotion_project.md`.
+- Steam OCR Final Archive Package source:
+  `docs/history/milestones/steam_ocr_final_archive_package/`.
+- ZIP archive artifact:
+  `reports/steam_ocr_final_archive_package.zip`.
+- Completion Report:
+  `reports/steam_ocr_final_archive_package_completion_report.md`.
+
+### Reason
+
+Steam OCR研究は、単なるOCR改善ではなく、Research Mission、Knowledge
+Inventory、Promotion Review、Existing Rule Update、CASE、GitHub Integrationを
+初めて実運用したGDSの歴史的マイルストーンになったため。
+
+通常のCompletion Reportでは、技術、人間の判断、ChatGPTとの設計、Codexとの研究協働、
+GitHubへの知識昇格、GDSの進化を一つの物語として十分に残せないため。
+
+### Evolution
+
+Knowledge Baseは、Rule、Workflow、Template、CASEを保存する体系から、GDS自身の転換点を
+物語として保存する歴史アーカイブを持つ体系へ進化した。
+
+Steam OCRは、経験がKnowledge Inventoryへ入り、Promotion Reviewを通り、RuleとCASEへ昇格し、
+最後にMilestoneとして保存される最初の完全な実例になった。
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

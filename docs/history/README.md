@@ -10,6 +10,7 @@ Base がどのように成長したかを簡潔に残します。
 ## Contains
 
 - `knowledge_base_history.md`: Knowledge Base 自身の version history。
+- `milestones/README.md`: GDSの転換点になった歴史的マイルストーン。
 
 ## Does NOT Contain
 
@@ -17,6 +18,12 @@ Base がどのように成長したかを簡潔に残します。
 - runtime implementation history。
 - release changelog。
 - detailed Decision Log。
+
+## Milestones
+
+大きな転換点は `milestones/` に保存します。
+
+- `milestones/steam_ocr_knowledge_promotion_project.md`: Steam OCRを題材に、GDS Knowledge Promotion Pipelineが初めて実運用された記録。
 - Queue execution state。
 
 ## Responsibility Separation
