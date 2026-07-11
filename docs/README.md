@@ -137,6 +137,38 @@ AI Startup Procedure
   -> Next Startup
 ```
 
+## Knowledge Inventory Index
+
+Knowledge Inventory は、Research、Debug Artifact、Completion Report、
+Human Review から抽出された再利用候補を、正式昇格前に分類して保存する
+pre-promotion layer です。
+
+Reference points:
+
+- Knowledge Folder: `docs/knowledge/README.md`
+- Inventory Folder: `docs/knowledge/inventory/README.md`
+- Steam OCR Inventory:
+  `docs/knowledge/inventory/steam_ocr_knowledge_inventory_v1.md`
+- PIP Case Knowledge Base Workflow:
+  `docs/workflow/pip_case_knowledge_base_workflow.md`
+- Concept Promotion Workflow:
+  `docs/workflow/concept_promotion_workflow.md`
+- Innovation Pipeline Workflow:
+  `docs/workflow/innovation_pipeline_workflow.md`
+
+Core flow:
+
+```text
+Research
+  -> Knowledge Inventory
+  -> Knowledge Promotion
+  -> Rule / Template / Workflow / CASE / Registry / PIP
+  -> Platform Standard
+```
+
+Inventory entries are not formal promotion. Promotion requires a separate Q,
+review, completion report, and the appropriate promotion workflow.
+
 ## GDS Health Index
 
 GDS Health は、GDS の運用状態を見える化するための index です。

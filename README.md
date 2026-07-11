@@ -138,6 +138,28 @@ Rule
   -> Implementation
 ```
 
+## Knowledge Inventory
+
+Knowledge Inventory は、Research、Debug Artifact、Completion Report、Human
+Review から抽出された再利用候補を、Rule / Template / Workflow / CASE などへ
+正式昇格する前に分類して保存する棚です。
+
+Start from:
+
+- [`docs/knowledge/README.md`](docs/knowledge/README.md)
+- [`docs/knowledge/inventory/README.md`](docs/knowledge/inventory/README.md)
+- [`docs/knowledge/inventory/steam_ocr_knowledge_inventory_v1.md`](docs/knowledge/inventory/steam_ocr_knowledge_inventory_v1.md)
+
+標準フロー:
+
+```text
+Research
+  -> Knowledge Inventory
+  -> Knowledge Promotion
+  -> Rule / Template / Workflow / CASE
+  -> Platform Standard
+```
+
 ## GDS Health
 
 GDS Health は、repository、knowledge、workflow、template、example、

@@ -64,6 +64,8 @@ gate.
   Under Review, Experiment, Validated, Promoted, or Archived.
 - `pip_case_knowledge_base_workflow.md`: how reusable lessons become tagged
   PIP cases, rule stories, best practices, evolutions, and Knowledge Promotion.
+- `../knowledge/README.md`: Knowledge Inventory entry point for classifying
+  reusable knowledge before formal promotion.
 - `roadmap2_knowledge_salvage_loop.md`: final Roadmap2 knowledge migration
   loop from review request to no remaining missing knowledge.
 - `template_lifecycle.md`: how useful knowledge becomes a template, rule, or
@@ -102,6 +104,7 @@ Idea
   -> Debug Escalation Ladder, when cause is uncertain
   -> Debug Artifact Review, when applicable
   -> Completion Report Artifact
+  -> Knowledge Inventory, when reusable knowledge is found but not yet promoted
   -> PIP Update, when project state or decisions changed
   -> PIP Case Candidate, when reusable knowledge was found
   -> Concept Promotion, when knowledge is still an early concept
