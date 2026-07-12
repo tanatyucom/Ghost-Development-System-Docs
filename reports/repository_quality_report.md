@@ -7,7 +7,7 @@
 
 ## 要約
 
-- 生成日時: `2026-07-12T16:59:56Z`
+- 生成日時: `2026-07-12T17:12:26Z`
 - Repository: `Ghost-Development-System-Docs`
 - Overall Repository Health: `Yellow`
 - 通過したチェック: `9`
@@ -36,13 +36,13 @@
 
 - Status: `PASS`
 - Details:
-  - 332 Markdown files を UTF-8 として読み取れました。
+  - 335 Markdown files を UTF-8 として読み取れました。
 
 ### AI Repository Index Validation
 
 - Status: `PASS`
 - Details:
-  - OK: 332 Markdown files が index に登録されています。
+  - OK: 335 Markdown files が index に登録されています。
 
 ### GDS Health Validation
 
@@ -101,57 +101,57 @@
 
 - Status: `WARN`
 - Details:
-  - docs/ai_repository_index.md:89: | Ghost Development System Docs | Ghost Development System Docs 縺ｯ縲・幕逋ｺ遏･隴倥ｒ閠蝉ｹ・ｧ縺ｮ縺ゅｋ蠖｢縺ｧ谿九☆縺溘ａ縺ｮ | `README.md` | `https://github.com/tanatyucom/Ghost-Develop
   - docs/ai_repository_index.md:193: | Startup Checklist Workflow | Startup Checklist Workflow 縺ｯ縲∵眠縺励＞ AI 繧ｻ繝・す繝ｧ繝ｳ縲，odex 螳溯｡後・繝ｬ繝薙Η繝ｼ縲∵枚譖ｸ譖ｴ譁ｰ縲＿ 螳溯｣・ｒ髢句ｧ九☆繧句燕縺ｫ縲；DS 縺ｮ蜑肴署繧堤｢ｺ隱阪☆繧区ｨ呎ｺ悶ヵ繝ｭ繝ｼ縺ｧ縺吶・
   - docs/ai_repository_index.md:263: | Migration First Examples | 縺薙・譁・嶌縺ｯ縲∝・驛ｨ architecture 繧貞､画峩縺吶ｋ縺ｨ縺阪↓ Migration First 繧偵←縺・ｽｿ縺・°繧・遉ｺ縺吩ｾ九〒縺吶・ | `examples/migration_first_examples.md` | `https:
-  - docs/ai_repository_index.md:287: | Knowledge Base History | 縺薙・譁・嶌縺ｯ縲；host Development System Knowledge Base 閾ｪ霄ｫ縺ｮ騾ｲ蛹悶ｒ險倬鹸縺励∪縺吶・ | `docs/history/knowledge_base_history.md` | `https://github.c
-  - docs/history/knowledge_base_history.md:5: 縺薙・譁・嶌縺ｯ縲；host Development System Knowledge Base 閾ｪ霄ｫ縺ｮ騾ｲ蛹悶ｒ險倬鹸縺励∪縺吶・
-  - docs/history/knowledge_base_history.md:7: GameGhost 縺ｮ CHANGELOG縲．evelopment History縲．ecision Log 縺ｧ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲・
-  - docs/history/knowledge_base_history.md:8: Knowledge Base 縺ｮ讒矩縲・°逕ｨ縲〉eview quality縲｝roject management縲、I
-  - docs/history/knowledge_base_history.md:9: collaboration 縺後←縺ｮ繧医≧縺ｫ謾ｹ蝟・＆繧後◆縺九ｒ邁｡貎斐↓谿九＠縺ｾ縺吶・
-  - docs/history/knowledge_base_history.md:24: Architecture縲仝orkflow縲ヽoadmap縲ヽules縲ゝemplates縲・xamples縲；lossary 縺悟｢励∴縲・
-  - docs/history/knowledge_base_history.md:25: 莠ｺ髢薙→ AI 縺後←縺薙°繧芽ｪｭ繧√・繧医＞縺句・縺九ｊ縺ｫ縺上￥縺ｪ縺｣縺溘◆繧√・
-  - docs/history/knowledge_base_history.md:29: Knowledge Base 縺悟腰縺ｪ繧・folder collection 縺九ｉ縲∫岼逧・挨縺ｫ隱ｭ繧√ｋ蜈ｬ蠑丞・蜿｣繧呈戟縺､
-  - docs/history/knowledge_base_history.md:30: documentation system 縺ｸ騾ｲ蛹悶＠縺溘・
-  - docs/history/knowledge_base_history.md:42: - Target Project 繧貞性繧 Q file template縲・
-  - docs/history/knowledge_base_history.md:46: Ghost Development System 繧・GameGhost 縺九ｉ迢ｬ遶九＠縺溯ｦｪ縺ｮ髢狗匱蝓ｺ逶､縺ｨ縺励※謇ｱ縺・ｿ・ｦ√′
-  - docs/history/knowledge_base_history.md:47: 譏守｢ｺ縺ｫ縺ｪ縺｣縺溘◆繧√・
-  - docs/history/knowledge_base_history.md:49: 莠ｺ髢薙′逅・ｧ｣縺ｧ縺阪↑縺・ｾ晞ｼ譁・・ Human Approval 繧呈ｺ縺溘○縺壹ゝarget Project 縺梧尠譏ｧ縺ｪ
-  - docs/history/knowledge_base_history.md:50: Q 縺ｯ隱､邱ｨ髮・ｄ scope drift 繧定ｵｷ縺薙☆蜿ｯ閭ｽ諤ｧ縺後≠繧九◆繧√・
-  - docs/history/knowledge_base_history.md:54: Knowledge Base 縺後；ameGhost 陬懷勧譁・嶌縺ｧ縺ｯ縺ｪ縺上∬､・焚 project 繧呈髪縺医ｋ髢狗匱蝓ｺ逶､縺ｮ
-  - docs/history/knowledge_base_history.md:55: 繝ｫ繝ｼ繝ｫ繧ｻ繝・ヨ縺ｸ騾ｲ蛹悶＠縺溘・
-  - docs/history/knowledge_base_history.md:61: - Roadmap README 縺ｮ roadmap 荳隕ｧ縲・
-  - docs/history/knowledge_base_history.md:63: - 蠑ｷ蛹悶＆繧後◆ Review Checklist縲・
-  - docs/history/knowledge_base_history.md:64: - Decision Background 縺ｮ霆ｽ驥上↑險倬鹸譁ｹ驥昴・
-  - docs/history/knowledge_base_history.md:69: Ver1.1 縺ｧ霑ｽ蜉縺励◆ Project First縲゛apanese First縲，ross Project Impact 繧偵〉eview
-  - docs/history/knowledge_base_history.md:70: 蜩∬ｳｪ縺ｨ navigation 縺ｮ荳ｭ縺ｧ螳牙ｮ壹＠縺ｦ菴ｿ縺医ｋ繧医≧縺ｫ縺吶ｋ蠢・ｦ√′縺ゅ▲縺溘◆繧√・
-  - docs/history/knowledge_base_history.md:72: Knowledge Base 閾ｪ霄ｫ縺ｮ騾ｲ蛹悶ｒ謖ｯ繧願ｿ斐ｌ繧句ｴ謇縺後↑縺・→縲√↑縺懃樟蝨ｨ縺ｮ讒矩縺ｫ縺ｪ縺｣縺溘・縺・
-  - docs/history/knowledge_base_history.md:73: 縺悟ｰ・擂蛻・°繧翫↓縺上￥縺ｪ繧九◆繧√・
-  - docs/history/knowledge_base_history.md:77: Knowledge Base 縺後∝・蜿｣縺ｨ繝ｫ繝ｼ繝ｫ繧呈戟縺､迥ｶ諷九°繧峨〉eview quality 縺ｨ閾ｪ蟾ｱ螻･豁ｴ繧呈戟縺､
-  - docs/history/knowledge_base_history.md:78: 菫晏ｮ亥庄閭ｽ縺ｪ documentation platform 縺ｸ騾ｲ蛹悶＠縺溘・
-  - docs/history/knowledge_base_history.md:283: Roadmap2 縺ｨ OCR review work 縺ｫ繧医ｊ縲￣IP 縺ｯ蜊倥↑繧・handoff document 縺ｧ縺ｯ縺ｪ縺上・
-  - docs/history/knowledge_base_history.md:284: 迴ｾ蝨ｨ縺ｮ project state 縺ｨ縲√↑縺懊◎縺ｮ迥ｶ諷九↓縺ｪ縺｣縺溘°繧定ｪｬ譏弱☆繧・reusable briefing layer
-  - docs/history/knowledge_base_history.md:285: 縺ｧ縺ゅｋ縺薙→縺悟・縺九ｊ縺ｾ縺励◆縲・
-  - docs/history/knowledge_base_history.md:287: PIP 縺・GitHub Docs縲！nformation Package縲〉oadmap archive縲…ompletion reports縲・
-  - docs/history/knowledge_base_history.md:288: chat summaries 縺ｨ驥崎､・＠縺ｪ縺・ｈ縺・↓縲；DS 蜀・〒縺ｮ stable position 縺悟ｿ・ｦ√〒縺励◆縲・
-  - docs/history/knowledge_base_history.md:292: Knowledge Base 縺ｯ縲〉eviewable debug artifacts 縺九ｉ縲｜riefing 縺ｨ history 繧貞性繧
-  - docs/history/knowledge_base_history.md:293: 繧医ｊ螳悟・縺ｪ system 縺ｸ騾ｲ蛹悶＠縺ｾ縺励◆縲１IP 縺ｯ current state縲！mprovement History縲・
-  - docs/history/knowledge_base_history.md:294: Decision History縲、I handoff 繧呈桶縺・；itHub Docs 縺ｯ Single Source of Truth 縺ｮ縺ｾ縺ｾ
-  - docs/history/knowledge_base_history.md:295: 邯ｭ謖√＆繧後∪縺吶・
-  - docs/history/knowledge_base_history.md:312: Roadmap2 縺ｮ OCR review 縺ｧ縺ｯ縲∵怙邨らｵ先棡縺縺代〒縺ｯ縺ｪ縺上∽ｸｭ髢・trace縲∵怙蛻昴↓螢翫ｌ縺・step縲・
-  - docs/history/knowledge_base_history.md:313: review artifact 縺ｮ蜈･蜿｣縲∽ｺｺ髢薙↓繧医ｋ visual review 縺悟刀雉ｪ菫晁ｨｼ縺ｫ蠢・ｦ√〒縺ゅｋ縺薙→縺・
-  - docs/history/knowledge_base_history.md:314: 遒ｺ隱阪＆繧後∪縺励◆縲・
-  - docs/history/knowledge_base_history.md:318: PIP 縺ｯ current state 縺ｨ decision history 縺縺代〒縺ｪ縺上√◎縺ｮ state 縺ｫ蛻ｰ驕斐☆繧九◆繧√・
-  - docs/history/knowledge_base_history.md:319: review methodology 繧ゆｿ晏ｭ倥☆繧・briefing layer 縺ｸ諡｡蠑ｵ縺輔ｌ縺ｾ縺励◆縲・
-  - docs/history/knowledge_base_history.md:337: 螳櫂elta Package繧堤｢ｺ隱阪＠縺溽ｵ先棡縲∝燕蝗槭・Q譛ｬ譁・・繝ｼ繧ｹ邨ｱ蜷医〒縺ｯ荳ｻ隕√ユ繝ｼ繝槭・蜿肴丐貂医∩縺ｧ縺励◆縺後・
-  - docs/history/knowledge_base_history.md:338: PIP v1.0 stable 縺ｮ improvement knowledge database 縺ｨ縺・≧菴咲ｽｮ莉倥￠縺ｨ縲［etric proxy /
-  - docs/history/knowledge_base_history.md:339: visual containment / trace artifact option / case index 縺ｮ譏守､ｺ縺御ｸ崎ｶｳ縺励※縺・∪縺励◆縲・
-  - docs/history/knowledge_base_history.md:343: PIP 縺ｯ briefing layer 縺ｨ improvement knowledge database 縺ｮ荳｡譁ｹ縺ｨ縺励※謨ｴ逅・＆繧後・
-  - docs/history/knowledge_base_history.md:344: evidence package 縺ｨ螳溯｣・枚譖ｸ縺ｮ謨ｴ蜷域ｧ繧堤｢ｺ隱阪☆繧・reconciliation process 繧りｨ倬鹸蟇ｾ雎｡縺ｫ縺ｪ繧翫∪縺励◆縲・
-  - docs/history/knowledge_base_history.md:1949: Steam OCR遐皮ｩｶ縺ｯ縲∝腰縺ｪ繧軌CR謾ｹ蝟・〒縺ｯ縺ｪ縺上ヽesearch Mission縲゜nowledge
-  - docs/history/knowledge_base_history.md:1950: Inventory縲￣romotion Review縲・xisting Rule Update縲，ASE縲；itHub Integration繧・
-  - docs/history/knowledge_base_history.md:1951: 蛻昴ａ縺ｦ螳滄°逕ｨ縺励◆GDS縺ｮ豁ｴ蜿ｲ逧・・繧､繝ｫ繧ｹ繝医・繝ｳ縺ｫ縺ｪ縺｣縺溘◆繧√・
-  - ... 他 565 件
+  - docs/requests/gds/draft/GDS-MOJIBAKE-AUDIT-001_legacy_document_mojibake_audit_and_repair/request.md:127: - Unicode replacement character: `�`
+  - docs/rules/rules.md:328: logs. Draft generation requires explicit Human Approval such as `譖ｸ縺・→縺・※`,
+  - docs/rules/rules.md:329: `菫晏ｭ倥＠縺ｦ`, `Repository縺ｸ霑ｽ蜉`, `Q蛹悶＠縺ｦ`, or `Conversation Insight縺ｨ縺励※谿九＠縺ｦ`.
+  - docs/rules/rules.md:488: 縺吶∋縺ｦ縺ｮ Q 縺ｯ縲∝ｮ溯｣・燕縺ｫ Target Project 繧貞ｮ｣險縺励↑縺代ｌ縺ｰ縺ｪ繧翫∪縺帙ｓ縲・
+  - docs/rules/rules.md:489: AI 縺ｯ Target Project縲ヽepository縲ヾingle Source Of Truth縲ヽelated Repository縲・Cross Project Impact縲ヾcope Guard 繧堤｢ｺ隱阪＠縺ｦ縺九ｉ邱ｨ髮・＠縺ｾ縺吶・
+  - docs/rules/rules.md:490: 隧ｳ邏ｰ縺ｯ `project_rules.md` 縺ｫ蠕薙＞縺ｾ縺吶・
+  - docs/rules/rules.md:493: Ghost Development System Docs 縺ｯ譌･譛ｬ隱樣°逕ｨ繧貞渕譛ｬ縺ｨ縺励∪縺吶・
+  - docs/rules/rules.md:494: 莠ｺ髢薙′蛻､譁ｭ縲∵価隱阪√Ξ繝薙Η繝ｼ縺吶ｋ譁・ｫ縺ｯ譌･譛ｬ隱槭〒譖ｸ縺上％縺ｨ繧貞渕譛ｬ縺ｨ縺励∪縺吶・繧ｽ繝ｼ繧ｹ繧ｳ繝ｼ繝峨、PI縲√け繝ｩ繧ｹ蜷阪・未謨ｰ蜷阪√ヵ繧｡繧､繝ｫ蜷阪√ヱ繧ｹ縲，ommit Message縲・Git 繧ｳ繝槭Φ繝峨↑縺ｩ縲∬恭隱槭〒縺ゅｋ蠢・ｦ√′縺ゅｋ繧ゅ・縺ｯ
+  - docs/rules/rules.md:495: 隧ｳ邏ｰ縺ｯ `language_rules.md` 縺ｫ蠕薙＞縺ｾ縺吶・
+  - docs/workflow/README.md:31: - `japanese_documentation_localization_workflow.md`: GDS Docs 縺ｮ隱ｬ譏取枚繧・
+  - docs/workflow/README.md:32:   譌･譛ｬ隱槫━蜈医〒邯ｭ謖√＠縺､縺､縲…ommand縲｝ath縲ゞRL縲（dentifier縲《tatus value 繧・
+  - docs/workflow/README.md:33:   蠢・ｦ√↓蠢懊§縺ｦ闍ｱ隱樒ｶｭ謖√☆繧九◆繧√・ workflow縲・
+  - docs/workflow/README.md:379: fuzzy matching縲（mage overlay縲√◎縺ｮ莉悶・荳ｭ髢灘・逅・ｒ謇ｱ縺・ｴ蜷医・ Debug Artifact
+  - docs/workflow/README.md:380: Review 繧剃ｽｿ縺・∪縺吶・
+  - docs/workflow/README.md:396: 騾壼ｸｸ螳溯｡後〒縺ｯ縲．ebug Mode 縺梧・遉ｺ縺輔ｌ縺ｦ縺・↑縺・剞繧・Debug Artifact 繧堤函謌舌＠縺ｾ縺帙ｓ縲・
+  - docs/workflow/README.md:398: Debug Mode 縺碁←逕ｨ縺輔ｌ繧句ｴ蜷医，ompletion Report 縺ｫ縺ｯ Debug Artifact 縺ｮ菫晏ｭ伜ｴ謇縲・
+  - docs/workflow/README.md:399: verification target縲‘xpected normal state縲〉eview viewpoints縲∝ｿ・ｦ√↓蠢懊§縺・
+  - docs/workflow/README.md:400: AI review target artifacts縲；it policy 繧定ｨ倩ｼ峨＠縺ｾ縺吶・
+  - docs/workflow/README.md:602: task縲〉eusable improvement history縲∥ccepted decisions 縺悟､峨ｏ縺｣縺溷ｴ蜷医・ PIP 繧・
+  - docs/workflow/README.md:603: 譖ｴ譁ｰ縺励∪縺吶・
+  - docs/workflow/README.md:617: PIP 縺ｯ briefing artifact 縺ｧ縺吶０fficial documents 繧定ｦ∫ｴ・＠縲√Μ繝ｳ繧ｯ縺励∪縺吶′縲・
+  - docs/workflow/README.md:619: 繧堤ｽｮ縺肴鋤縺医∪縺帙ｓ縲・
+  - docs/workflow/README.md:621: Command Center 縺ｯ PIP 繧・current briefing source 縺ｨ縺励※隱ｭ繧√∪縺吶・IP 縺ｯ reviewed
+  - docs/workflow/README.md:622: specification 縺御ｽ懊ｉ繧後ｋ縺ｾ縺ｧ future candidate 縺ｨ縺励※謇ｱ縺・∪縺吶・
+  - docs/workflow/startup_checklist_workflow.md:5: Startup Checklist Workflow 縺ｯ縲∵眠縺励＞ AI 繧ｻ繝・す繝ｧ繝ｳ縲，odex 螳溯｡後・繝ｬ繝薙Η繝ｼ縲∵枚譖ｸ譖ｴ譁ｰ縲＿ 螳溯｣・ｒ髢句ｧ九☆繧句燕縺ｫ縲；DS 縺ｮ蜑肴署繧堤｢ｺ隱阪☆繧区ｨ呎ｺ悶ヵ繝ｭ繝ｼ縺ｧ縺吶・
+  - docs/workflow/startup_checklist_workflow.md:6: 逶ｮ逧・・縲∵眠縺励＞繝ｫ繝ｼ繝ｫ繧貞｢励ｄ縺吶％縺ｨ縺ｧ縺ｯ縺ｪ縺上∵里蟄倥・ Rules縲仝orkflow縲・Methodology縲ヽepository Information 繧帝幕蟋区凾縺ｫ遒ｺ螳溘↓諤昴＞蜃ｺ縺吶％縺ｨ縺ｧ縺吶・
+  - docs/workflow/startup_checklist_workflow.md:39: Startup Checklist 縺ｮ蜑阪↓縲、I 縺ｯ AI Startup Procedure 縺ｫ蠕薙＞縲・AI Repository Index縲！nformation Package when provided縲，urrent Q File縲・Repository Root Validation縲；DS C
+  - docs/workflow/startup_checklist_workflow.md:40: Profile 繧帝・↓遒ｺ隱阪＠縺ｾ縺吶・
+  - docs/workflow/startup_checklist_workflow.md:45: Information Package 縺梧署萓帙＆繧後※縺・ｋ蝣ｴ蜷医・縲＿縺ｨ蜷医ｏ縺帙※迴ｾ蝨ｨ迥ｶ諷九ｒ遒ｺ隱阪＠縺ｾ縺吶・
+  - docs/workflow/startup_checklist_workflow.md:46: 遒ｺ隱阪☆繧九％縺ｨ:
+  - docs/workflow/startup_checklist_workflow.md:55: - Research Task縺九←縺・°縲・
+  - docs/workflow/startup_checklist_workflow.md:58: 蜈ｬ髢・GDS knowledge 繧剃ｽｿ縺・ｴ蜷医・ `docs/ai_repository_index.md` 繧帝幕蟋狗せ縺ｫ縺励∪縺吶・
+  - docs/workflow/startup_checklist_workflow.md:59: 遒ｺ隱阪☆繧九％縺ｨ:
+  - docs/workflow/startup_checklist_workflow.md:68: 蟆代↑縺上→繧・譌･1蝗槭∽ｸｻ隕√↑Project菴懈･ｭ縺ｾ縺溘・驥崎ｦ√↑謠先｡医ｒ陦後≧蜑阪↓縲・Canonical Knowledge Source繧堤｢ｺ隱阪＠縺ｾ縺吶・
+  - docs/workflow/startup_checklist_workflow.md:78: 縺薙ｌ縺ｯ閾ｪ蜍慕ｷｨ髮・∬・蜍姫romotion縲∬・蜍媛逕滓・縲∬・蜍募ｮ溯｣・∬・蜍匹ommit縺ｮ讓ｩ髯舌ｒ
+  - docs/workflow/startup_checklist_workflow.md:79: 荳弱∴縺ｾ縺帙ｓ縲・
+  - docs/workflow/startup_checklist_workflow.md:82: 菴懈･ｭ髢句ｧ句燕縺ｫ縲∫樟蝨ｨ縺ｮ shell 縺梧ｭ｣縺励＞ Git repository root 縺ｫ縺・ｋ縺狗｢ｺ隱阪＠縺ｾ縺吶・
+  - docs/workflow/startup_checklist_workflow.md:89: 遒ｺ隱阪☆繧矩・岼:
+  - docs/workflow/startup_checklist_workflow.md:101: 遒ｺ隱阪☆繧矩・岼:
+  - docs/workflow/startup_checklist_workflow.md:114: Target Project 縺ｫ Project Profile 縺後≠繧句ｴ蜷医・縲＿ 螳溯｡悟燕縺ｫ隱ｭ縺ｿ縺ｾ縺吶・
+  - docs/workflow/startup_checklist_workflow.md:115: 遒ｺ隱阪☆繧九％縺ｨ:
+  - docs/workflow/startup_checklist_workflow.md:127: 遒ｺ隱阪☆繧矩・岼:
+  - docs/workflow/startup_checklist_workflow.md:129: - Q 縺・Artifact First 蟇ｾ雎｡縺九・- Q 縺・`docs/requests/` 驟堺ｸ九↓菫晏ｭ俶ｸ医∩縺九・- `request.md` 縺悟ｭ伜惠縺吶ｋ縺九・- completion report 縺ｮ菫晏ｭ伜・縺梧ｱｺ縺ｾ縺｣縺ｦ縺・ｋ縺九・- 豺ｻ莉倥ヵ繧｡繧､繝ｫ縲‥ownloa
+  - docs/workflow/startup_checklist_workflow.md:154: 菴懈･ｭ蜀・ｮｹ縺ｫ蠢懊§縺ｦ遒ｺ隱阪☆繧・rules:
+  - docs/workflow/startup_checklist_workflow.md:171: 菴懈･ｭ蜀・ｮｹ縺ｫ蠢懊§縺ｦ遒ｺ隱阪☆繧・methodology:
+  - docs/workflow/startup_checklist_workflow.md:185: 遒ｺ隱阪☆繧矩・岼:
+  - docs/workflow/startup_checklist_workflow.md:187: - 邱ｨ髮・ｯｾ雎｡縲・- 蜿ら・縺ｮ縺ｿ縺ｮ repository縲・- runtime code 縺ｮ謇ｱ縺・・- generated artifact 縺ｮ謇ｱ縺・・- Debug Artifact 縺ｮ Git policy縲・- Commit policy縲・
+  - docs/workflow/startup_checklist_workflow.md:190: Scope / Out of Scope遒ｺ隱榊ｾ後，onversation Insight Candidate縺後≠繧九°繧貞愛螳壹＠縺ｾ縺吶・
+  - ... 他 93 件
 
 ## エラー (Errors)
 

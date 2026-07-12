@@ -49,3 +49,30 @@
 - Large paragraphs with lossy reverse-conversion artifacts remain unresolved.
 - Lines that produced `、E`, `めE`, or other missing-character traces were not repaired.
 - `docs/history/knowledge_base_history.md` was not repaired in Batch 1 because candidate lines require stronger source confirmation.
+
+## Batch 2 Manual Repair Result
+
+- Date: 2026-07-13
+- Source Q: `Q_GDS_Legacy_Document_Mojibake_Manual_Repair_Batch2_JP.md`
+- Policy: Audit Before Repair / no guessed repair / restore only from trusted repository history.
+- Trusted source: commit `8e6f700` (`docs: add daily knowledge review and context-aware suggestions`) because target files had 0 mojibake candidates there.
+- Repaired files:
+  - `README.md`
+  - `docs/README.md`
+  - `docs/history/knowledge_base_history.md`
+- Batch2 target candidate counts:
+  - `README.md`: 169 -> 0
+  - `docs/README.md`: 242 -> 0
+  - `docs/history/knowledge_base_history.md`: 63 -> 0
+- Total Batch2 target candidates repaired or removed by trusted restore: 474
+
+### Batch 2 Repair Scope
+
+- Restored `README.md` from the trusted clean history version and preserved the current `Completion Report Standard v2` and `Q File Template And Naming Standard` sections.
+- Restored `docs/README.md` from the trusted clean history version and preserved the current `Completion Report Standard v2 Index` and `Q File Template And Naming Standard Index` sections.
+- Restored `docs/history/knowledge_base_history.md` from the trusted clean history version because the current file's mojibake was introduced in the later completion-report update commit.
+
+### Batch 2 Remaining Issues
+
+- Other files outside the Batch2 priority scope may still contain mojibake candidates.
+- Completion Report v2 historical narrative from the broken history update was not reconstructed in `docs/history/knowledge_base_history.md`; the safe record for this repair is kept in this repair result and the Batch2 completion report.
