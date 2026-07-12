@@ -138,6 +138,7 @@ Repository Quality Audit can detect invalid transitions.
 | Knowledge Poka-Yoke | Rule | Standard | Core Principles / Design For Forgetfulness | 2026-07-10 | 2026-07-10 | `docs/rules/core_principles.md` | `docs/workflow/ai_daily_operation_cycle.md` | `templates/startup_checklist_template.md` | `reports/repository_quality_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Treats forgetting as predictable and makes checks visible before failure. | Review when new poka-yoke controls are added. |
 | Repository Root Validation | Rule | Standard | Startup safety / repository boundary | 2026-07-10 | 2026-07-10 | `docs/rules/repository_root_validation_rules.md` | `docs/workflow/repository_root_validation_workflow.md` | `templates/repository_root_validation_template.md` | `reports/repository_quality_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Confirms actual Git root before work begins. | Review when workspace or multi-repository workflow changes. |
 | Persistent Collaboration Rules | Rule | Standard | Platform Era Core Collaboration Rule | 2026-07-11 | 2026-07-11 | `docs/rules/ai_collaboration_rules.md` | `docs/workflow/ai_daily_operation_cycle.md` | `templates/completion_report_template.md` | `reports/persistent_collaboration_rules_completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Keeps adopted collaboration rules persistent across ChatGPT, Codex, Claude, Gemini, and human review. | Review when collaboration behavior, command presentation, review conclusion, or artifact output policy changes. |
+| Plugin Architecture Standard | Architecture | Standard | Plugin Architecture Standard and Roadmap Q | 2026-07-12 | 2026-07-12 | `docs/rules/project_rules.md` | `docs/workflow/innovation_pipeline_workflow.md` | `templates/platform_registry_update_template.md` | `docs/requests/gds/draft/GDS-PLUGIN-ARCH-001_plugin_architecture_standard_and_roadmap/completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Defines Plugin as an explicit-registry, `PLUGIN_INFO`, `PluginContext`, `PluginResult`, ownership, lifecycle, and promotion boundary. Automatic discovery, launcher modification, and runtime implementation remain future Q scope. | Review after Repository Context Validation Plugin proof. |
 
 ## Standard / Candidate Classification
 
@@ -159,6 +160,7 @@ Current initial registry classification:
   - Knowledge Poka-Yoke.
   - Repository Root Validation.
   - Persistent Collaboration Rules.
+  - Plugin Architecture Standard.
 - Candidate:
   - None in the initial registry. Future Platform Promotion decisions may add
     Candidate rows before final Standard adoption.

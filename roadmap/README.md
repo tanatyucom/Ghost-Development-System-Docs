@@ -16,6 +16,10 @@ roadmap を混同しないために使います。
   Knowledge Platform、Development Platform、Command Center、Ghost Ecosystem の
   Roadmap。Ver2 では Foundation Complete 後の Platform Era と Command Center as
   Repository Orchestrator direction を管理します。
+- `plugin_architecture_roadmap.md`: Plugin Architecture Standard をもとに、
+  Explicit Registry、Repository Context Validation proof、Registry Validation、
+  Field Project Adapter、GhostPlatform runtime ownership、Launcher integration
+  review へ進む順序を管理します。
 - `roadmap.md`: Gray Ghost Archive との関係、Ghost Development Toolkit Trial から
   Ghost Development System へ至る大きな流れ、責任境界、Future Candidates。
 - `gameghost_platform_migration_plan.md`: GameGhostを最初の実利用Projectとして
@@ -26,6 +30,7 @@ roadmap を混同しないために使います。
 | Roadmap | Status | Owner | Purpose |
 |---|---|---|---|
 | Ghost Development System Roadmap | Active / Ver2 Platform Era | Ghost Development System Docs | Foundation Complete 後の Platform Integration、Automation Server、Ghost Ecosystem、Continuous Improvement を管理する |
+| Plugin Architecture Roadmap | Active / Architecture Standard Added | Ghost Development System Docs | Plugin standard、explicit registry、Repository Context Validation proof、future adapter / launcher integration review を管理する |
 | Gray Ghost Archive / GDS Relationship Roadmap | Active | Ghost Development System Docs | Gray Ghost Archive と Ghost Development System の関係、移行方向、責任境界を管理する |
 | GameGhost Platform Migration Plan | Draft / Human Review Required | Ghost Development System Docs | GameGhostからGDS / GhostPlatform共通責務を抽出するための移行phaseを管理する |
 | GameGhost Roadmap | Separate project | GameGhost | GameGhost 固有の features、runtime、schema、import rules を管理する |
@@ -111,6 +116,7 @@ review promotes them.
 ## Related Documents
 
 - `roadmap/ghost_development_system_roadmap.md`
+- `roadmap/plugin_architecture_roadmap.md`
 - `roadmap/roadmap.md`
 - `reports/roadmap_v2_platform_era_completion_report.md`
 - `docs/rules/project_rules.md`

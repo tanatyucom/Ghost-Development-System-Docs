@@ -18,6 +18,9 @@ runtime behavior.
   for Repository Scanner, Information Package Builder, Decision Engine,
   Template Engine, Artifact Pipeline, Human Approval Gate, Repository Health
   Adapter, Registry Adapter, and Handoff / Completion Adapter.
+- `plugin_architecture_standard.md`: Plugin Architecture Standard for explicit
+  registry, `PLUGIN_INFO`, `PluginContext`, `PluginResult`, ownership boundary,
+  lifecycle, and promotion from Internal Module to Platform Plugin.
 - `responsibility_boundary.md`: ownership boundaries for DevelopmentSystem,
   Startup Checklist, Repository Root Validation, AI Proactive Proposal,
   Collaborative Decision, Completion Checklist, Output Layer, Migration First
@@ -96,6 +99,11 @@ only describe boundaries and principles that are accepted enough to guide work.
   future Ghost SDK candidates.
   Structured Artifact Metadata Template maps that schema into optional YAML
   front matter for new managed artifacts.
+- Plugin Architecture Standard owns the explicit plugin boundary for future GDS
+  Platform extensions. It defines Plugin versus Internal Module, registry,
+  metadata, interface, ownership, lifecycle, and promotion rules. It does not
+  approve automatic discovery, launcher modification, `tool.py` split, or
+  runtime implementation by itself.
 - Launcher owns the user entry point.
 
 ## Database Philosophy Summary
@@ -156,6 +164,7 @@ Detailed specification:
 
 - `docs/architecture/command_center_architecture.md`
 - `docs/architecture/artifact_schema_standard.md`
+- `docs/architecture/plugin_architecture_standard.md`
 - `templates/structured_artifact_metadata_template.md`
 
 AI Proactive Proposal supports human-led collaboration by making concerns and

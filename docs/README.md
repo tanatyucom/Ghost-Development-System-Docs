@@ -195,6 +195,50 @@ Recommended first implementation Q:
 Q_GameGhost_Repository_Context_Validation_Module_JP
 ```
 
+## Plugin Architecture Index
+
+Plugin Architecture Standard は、GDS Platform と将来の Ghost Project が共有機能を
+安全に拡張するための architecture entry point です。
+
+Plugin は任意の module ではありません。明示 Registry、`PLUGIN_INFO`、
+`PluginContext`、`PluginResult`、Ownership、Lifecycle を持つ review 可能な
+extension unit として扱います。
+
+Reference points:
+
+- Architecture Standard:
+  `docs/architecture/plugin_architecture_standard.md`
+- Roadmap:
+  `roadmap/plugin_architecture_roadmap.md`
+- Platform Standard Registry:
+  `docs/architecture/platform_standard_registry.md`
+- GameGhost Platform Migration Architecture:
+  `docs/architecture/gameghost_platform_migration_architecture.md`
+
+Core flow:
+
+```text
+Internal Module
+  -> Plugin Candidate
+  -> Local Plugin
+  -> Platform Plugin
+  -> GDS Standard Plugin
+```
+
+Default guard:
+
+- Explicit Registry First。
+- Folder Scan / Reflection Discovery / importlib auto discovery / Entry Point
+  Discovery / automatic plugin loading は future candidate。
+- Launcher modification、`tool.py` split、runtime implementation は別 Q と Human
+  Approval Gate が必要。
+
+Recommended first proof Q:
+
+```text
+Q_GDS_Repository_Context_Validation_Plugin_JP
+```
+
 ## Knowledge Inventory Index
 
 Knowledge Inventory は、Research、Debug Artifact、Completion Report、
@@ -992,6 +1036,8 @@ Reference points:
   `docs/architecture/command_center_architecture.md`
 - Artifact Schema Standard:
   `docs/architecture/artifact_schema_standard.md`
+- Plugin Architecture Standard:
+  `docs/architecture/plugin_architecture_standard.md`
 - Structured Artifact Metadata Template:
   `templates/structured_artifact_metadata_template.md`
 - Artifact Metadata Reference Examples:

@@ -123,6 +123,9 @@ Candidate scope:
 - Decision Engine.
 - Template Engine.
 - Repository Health.
+- Plugin Architecture.
+- Explicit Plugin Registry.
+- Repository Context Validation Plugin proof.
 
 Exit direction:
 
@@ -133,6 +136,48 @@ Exit direction:
 - Command Center は Auto Q Generator ではなく、Repository 全体を読み取り、
   状態をまとめ、判断候補と Artifact draft を生成する Repository Orchestrator
   として扱う。
+- Plugin Architecture は標準化済みの設計境界として扱う。ただし runtime
+  implementation、自動 discovery、launcher integration は別 Q と Human Approval Gate
+  が必要。
+
+## Plugin Architecture Roadmap Direction
+
+Status: active architecture standard under Platform Integration Era.
+
+Vision:
+
+```text
+Internal Module
+  -> Plugin Candidate
+  -> Local Plugin
+  -> Platform Plugin
+  -> GDS Standard Plugin
+```
+
+Plugin Architecture は、GDS Platform と将来の Ghost Project が共有機能を安全に
+拡張するための標準です。Plugin は任意の module ではなく、明示 registry、
+`PLUGIN_INFO`、`PluginContext`、`PluginResult`、owner、lifecycle を持つ
+reviewable extension unit として扱います。
+
+Default direction:
+
+- Explicit Registry First.
+- Interface Before Automation.
+- Small Proof Before Platform Extraction.
+- Human Approval Before Standard Promotion.
+- Repository Context Validation を最初の proof target にする。
+
+Guard:
+
+- Folder Scan、Reflection Discovery、importlib auto discovery、Entry Point
+  Discovery、自動 plugin loading は future candidate であり、現時点の標準では使わない。
+- Launcher modification、`tool.py` split、Plugin GUI、runtime package extraction は
+  別 Q と Human Approval Gate が必要。
+
+Architecture and roadmap:
+
+- `docs/architecture/plugin_architecture_standard.md`
+- `roadmap/plugin_architecture_roadmap.md`
 
 ## Command Center Roadmap Direction
 
