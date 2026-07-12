@@ -43,9 +43,13 @@ Rules follow these principles:
 - Repository Root Validation.
 - AI Proactive Proposal.
 - Completion Checklist.
+- Completion Report Standard.
 - Research Mission.
 - Conversation Insight Capture.
 - Artifact First.
+- Q File Artifact Standard.
+- Q File Naming.
+- Q File Template Standard.
 - Audit Before Repair.
 - Debug Artifact Review.
 - Debug Escalation Ladder.
@@ -78,10 +82,13 @@ own files.
 - `repository_root_validation_rules.md`
 - `ai_proactive_proposal_rules.md`
 - `completion_checklist_rules.md`
+- `completion_report_rules.md`
 - `research_mission_rules.md`
 - `conversation_insight_capture_rules.md`
 - `artifact_first_rules.md`
 - `q_file_artifact_standard.md`
+- `q_file_naming_rules.md`
+- `q_file_template_rules.md`
 - `audit_before_repair_rules.md`
 - `debug_artifact_review_rules.md`
 - `debug_escalation_ladder_rules.md`
@@ -318,8 +325,8 @@ high-value design philosophy, operation policy, maintenance policy, migration
 strategy, Command Center concepts, long-term operation policy, or future vision.
 
 AI must not auto-save conversation insights and must not preserve full chat
-logs. Draft generation requires explicit Human Approval such as `書いといて`,
-`保存して`, `Repositoryへ追加`, `Q化して`, or `Conversation Insightとして残して`.
+logs. Draft generation requires explicit Human Approval such as `譖ｸ縺・→縺・※`,
+`菫晏ｭ倥＠縺ｦ`, `Repository縺ｸ霑ｽ蜉`, `Q蛹悶＠縺ｦ`, or `Conversation Insight縺ｨ縺励※谿九＠縺ｦ`.
 
 Draft Conversation Insights are pre-promotion knowledge, not approved rules or
 standards. Promotion requires review and the appropriate destination workflow.
@@ -478,23 +485,14 @@ Details follow `roadmap2_knowledge_salvage_rules.md`.
 
 ## Project First Principle
 
-すべての Q は、実装前に Target Project を宣言しなければなりません。
-
-AI は Target Project、Repository、Single Source Of Truth、Related Repository、
-Cross Project Impact、Scope Guard を確認してから編集します。
-
-詳細は `project_rules.md` に従います。
-
+縺吶∋縺ｦ縺ｮ Q 縺ｯ縲∝ｮ溯｣・燕縺ｫ Target Project 繧貞ｮ｣險縺励↑縺代ｌ縺ｰ縺ｪ繧翫∪縺帙ｓ縲・
+AI 縺ｯ Target Project縲ヽepository縲ヾingle Source Of Truth縲ヽelated Repository縲・Cross Project Impact縲ヾcope Guard 繧堤｢ｺ隱阪＠縺ｦ縺九ｉ邱ｨ髮・＠縺ｾ縺吶・
+隧ｳ邏ｰ縺ｯ `project_rules.md` 縺ｫ蠕薙＞縺ｾ縺吶・
 ## Japanese First
 
-Ghost Development System Docs は日本語運用を基本とします。
-
-人間が判断、承認、レビューする文章は日本語で書くことを基本とします。
-ソースコード、API、クラス名、関数名、ファイル名、パス、Commit Message、
-Git コマンドなど、英語である必要があるものは英語のまま扱ってよいです。
-
-詳細は `language_rules.md` に従います。
-
+Ghost Development System Docs 縺ｯ譌･譛ｬ隱樣°逕ｨ繧貞渕譛ｬ縺ｨ縺励∪縺吶・
+莠ｺ髢薙′蛻､譁ｭ縲∵価隱阪√Ξ繝薙Η繝ｼ縺吶ｋ譁・ｫ縺ｯ譌･譛ｬ隱槭〒譖ｸ縺上％縺ｨ繧貞渕譛ｬ縺ｨ縺励∪縺吶・繧ｽ繝ｼ繧ｹ繧ｳ繝ｼ繝峨、PI縲√け繝ｩ繧ｹ蜷阪・未謨ｰ蜷阪√ヵ繧｡繧､繝ｫ蜷阪√ヱ繧ｹ縲，ommit Message縲・Git 繧ｳ繝槭Φ繝峨↑縺ｩ縲∬恭隱槭〒縺ゅｋ蠢・ｦ√′縺ゅｋ繧ゅ・縺ｯ闍ｱ隱槭・縺ｾ縺ｾ謇ｱ縺｣縺ｦ繧医＞縺ｧ縺吶・
+隧ｳ邏ｰ縺ｯ `language_rules.md` 縺ｫ蠕薙＞縺ｾ縺吶・
 ## Future Scope Guard
 
 Ideas that are useful but not yet validated must be recorded as Future

@@ -17,8 +17,12 @@
 - Current Phase:
 - Current Goal:
 - Source Q File:
+- Q ID:
+- Q filename follows naming standard:
+- Q date filename exception, if any:
 - Information Package:
 - Q Artifact Workspace:
+- Q workspace saved before implementation:
 - Download File / Attachment:
 - Completion Report Target:
 
@@ -39,6 +43,8 @@
 - Current Q File read:
 - Current Q File read with explicit UTF-8:
 - Q File mojibake check:
+- Q template required fields checked:
+- Q naming rules checked:
 - Scope / Out of Scope confirmed:
 - Outstanding Review Notification checked:
 - Related Knowledge Suggestions checked:
@@ -83,6 +89,8 @@
 - UTF-8 Read Rule:
 - Artifact First:
 - Q File Artifact Standard:
+- Q File Naming Rules:
+- Q File Template Rules:
 - Audit Before Repair:
 - Debug Artifact Review:
 - Debug Escalation Ladder:

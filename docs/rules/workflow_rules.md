@@ -92,16 +92,16 @@ update proposals, and any output expected to be stored in Git.
 Use chat only for short consultation, clarification, or status that is not the
 authoritative copy of reusable work.
 
-Q artifacts should be saved in the correct Task Artifact Workspace under:
+Q artifacts should have a Q ID and be saved in the correct Task Artifact Workspace under:
 
 ```text
-docs/requests/<target_project>/<status>/
+docs/requests/<project>/<status>/
 ```
 
 Use full workspace form when the task has related artifacts:
 
 ```text
-docs/requests/<target_project>/<status>/<request_id>_<short_title>/
+docs/requests/<project>/<status>/<Q_ID>_<short_topic>/
   request.md
   completion_report.md
   notes.md
@@ -140,13 +140,15 @@ explicitly requested.
 Move Q artifacts through this status path:
 
 ```text
-draft -> approved -> completed -> archived
+draft -> approved -> in_progress -> review -> completed -> archived
 ```
 
 Movement rules:
 
 - `draft`: Q is being prepared and is not approved for execution.
 - `approved`: Q is approved and ready for Codex / AI implementation.
+- `in_progress`: execution has started and status tracking is useful.
+- `review`: implementation or documentation is ready for human review.
 - `completed`: implementation and completion report artifacts are returned and
   reviewed.
 - `archived`: old, superseded, cancelled after review, or retained only for

@@ -66,7 +66,7 @@ C:/Users/example/Downloads/Q_GameGhost_Steam_Repair.md
 Codex starts implementation from that file, but the file is never saved under:
 
 ```text
-docs/requests/<target_project>/<status>/
+docs/requests/<project>/<status>/
 ```
 
 Problem:
@@ -108,7 +108,7 @@ context.
 Full task workspace form:
 
 ```text
-docs/requests/gameghost/completed/GG-0001_steam_ocr/
+docs/requests/gameghost/completed/GG-STEAM-OCR-001_steam_ocr/
   request.md
   completion_report.md
   notes.md
@@ -118,13 +118,13 @@ docs/requests/gameghost/completed/GG-0001_steam_ocr/
 The Q is saved before implementation as:
 
 ```text
-docs/requests/gameghost/approved/GG-0001_steam_ocr/request.md
+docs/requests/gameghost/approved/GG-STEAM-OCR-001_steam_ocr/request.md
 ```
 
 The minimum workspace files are:
 
 ```text
-docs/requests/gameghost/approved/GG-0001_steam_ocr/
+docs/requests/gameghost/approved/GG-STEAM-OCR-001_steam_ocr/
   request.md
   completion_report.md
   notes.md
@@ -134,14 +134,14 @@ docs/requests/gameghost/approved/GG-0001_steam_ocr/
 If human review is expected, also generate:
 
 ```text
-docs/requests/gameghost/approved/GG-0001_steam_ocr/request.docx
+docs/requests/gameghost/approved/GG-STEAM-OCR-001_steam_ocr/request.docx
 ```
 
 The chat body says:
 
 ```text
 Q artifact saved:
-docs/requests/gameghost/approved/GG-0001_steam_ocr/request.md
+docs/requests/gameghost/approved/GG-STEAM-OCR-001_steam_ocr/request.md
 
 Use that file as the authoritative request for Codex.
 ```
@@ -156,7 +156,7 @@ Q can be committed or reused later.
 After implementation, the completion report is saved beside the Q:
 
 ```text
-docs/requests/gameghost/completed/GG-0001_steam_ocr/completion_report.md
+docs/requests/gameghost/completed/GG-STEAM-OCR-001_steam_ocr/completion_report.md
 ```
 
 The completion report records:
@@ -188,13 +188,13 @@ Use `notes.md` for review notes, migration uncertainty, or context that should
 not clutter the Q itself:
 
 ```text
-docs/requests/gameghost/completed/GG-0001_steam_ocr/notes.md
+docs/requests/gameghost/completed/GG-STEAM-OCR-001_steam_ocr/notes.md
 ```
 
 Use `attachments/` for task-specific supporting files:
 
 ```text
-docs/requests/gameghost/completed/GG-0001_steam_ocr/attachments/
+docs/requests/gameghost/completed/GG-STEAM-OCR-001_steam_ocr/attachments/
 ```
 
 Result:
@@ -232,38 +232,38 @@ When the project is not ready for full task folders or the task has no related
 attachments yet, this simpler form is allowed:
 
 ```text
-docs/requests/gameghost/completed/2026-07-04_gameghost_steam_ocr.md
-docs/requests/gameghost/completed/2026-07-04_gameghost_steam_ocr_completion_report.md
+docs/requests/gameghost/completed/Q_GG-STEAM-OCR-001_steam_ocr_JP.md
+docs/requests/gameghost/completed/Q_GG-STEAM-OCR-001_steam_ocr_JP_completion_report.md
 ```
 
 This is acceptable when:
 
 - the Q is small;
 - there are no attachments;
-- no request ID is available;
+- a Q ID is available and the task does not yet need a full workspace;
 - `notes.md` is not needed.
 
-If the task later gains notes, attachments, review copies, or a stable request
-ID, promote it to full task workspace form.
+If the task later gains notes, attachments, review copies, or multiple addenda,
+promote it to full task workspace form.
 
 ## Good Example: Movement
 
 Start in draft:
 
 ```text
-docs/requests/gameghost/draft/GG-0001_steam_ocr/request.md
+docs/requests/gameghost/draft/GG-STEAM-OCR-001_steam_ocr/request.md
 ```
 
 After approval:
 
 ```text
-docs/requests/gameghost/approved/GG-0001_steam_ocr/request.md
+docs/requests/gameghost/approved/GG-STEAM-OCR-001_steam_ocr/request.md
 ```
 
 After completion and review:
 
 ```text
-docs/requests/gameghost/completed/GG-0001_steam_ocr/
+docs/requests/gameghost/completed/GG-STEAM-OCR-001_steam_ocr/
   request.md
   completion_report.md
   notes.md
@@ -273,7 +273,7 @@ docs/requests/gameghost/completed/GG-0001_steam_ocr/
 When old or superseded:
 
 ```text
-docs/requests/gameghost/archived/GG-0001_steam_ocr/
+docs/requests/gameghost/archived/GG-STEAM-OCR-001_steam_ocr/
 ```
 
 Move the whole workspace folder so request, report, notes, and attachments stay
@@ -282,6 +282,9 @@ together.
 ## Related Documents
 
 - `docs/rules/q_file_artifact_standard.md`
+- `docs/rules/q_file_naming_rules.md`
+- `docs/rules/q_file_template_rules.md`
 - `docs/requests/README.md`
+- `examples/q_file_examples.md`
 - `docs/templates/q_file_template.md`
 - `docs/templates/completion_report_template.md`

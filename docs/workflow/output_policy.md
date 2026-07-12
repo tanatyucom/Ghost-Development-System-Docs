@@ -98,6 +98,7 @@ Recommended flow:
 
 ```text
 Idea
+  -> Q ID Decision
   -> Q Artifact Workspace
   -> Save request.md in docs/requests/
   -> Workspace Save Verification
@@ -114,8 +115,9 @@ If a chat discussion becomes long, reusable, decision-bearing, or Git-managed,
 promote it to a file artifact before continuing.
 
 Q artifacts and completion report artifacts should be saved under
-`docs/requests/<target_project>/<status>/` using the Task Artifact Workspace
-standard from `docs/rules/q_file_artifact_standard.md`.
+`docs/requests/<project>/<status>/` using the Task Artifact Workspace
+standard from `docs/rules/q_file_artifact_standard.md` and Q ID / filename
+standard from `docs/rules/q_file_naming_rules.md`.
 
 Implementation should begin only after the source Q has a workspace path and
 the chat response or completion report can name that path. The matching
@@ -140,6 +142,8 @@ Artifact First prevents:
 
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/q_file_artifact_standard.md`
+- `docs/rules/q_file_naming_rules.md`
+- `docs/rules/q_file_template_rules.md`
 - `docs/rules/debug_artifact_review_rules.md`
 - `docs/requests/README.md`
 - `docs/templates/q_file_template.md`

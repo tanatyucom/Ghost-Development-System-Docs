@@ -43,10 +43,10 @@ Q artifacts, completion reports, notes, and attachments should be stored in a
 human-readable and AI-readable workspace:
 
 ```text
-docs/requests/<target_project>/<status>/<request_id>_<short_title>/
+docs/requests/<project>/<status>/<Q_ID>_<short_topic>/
 ```
 
-The path should show Target Project, workflow status, and task purpose.
+The path should show project, workflow status, Q ID, and task purpose.
 
 Artifact location is part of documentation quality. A missing Q artifact path,
 wrong project folder, wrong status folder, or missing completion report pairing
