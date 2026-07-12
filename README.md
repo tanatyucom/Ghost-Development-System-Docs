@@ -333,6 +333,7 @@ Platform Standard Registry の整合性も Registry Health として確認しま
 Report:
 
 - [`reports/repository_quality_report.md`](reports/repository_quality_report.md)
+- [`reports/documentation_system_v2_final_review.md`](reports/documentation_system_v2_final_review.md)
 - [`docs/workflow/repository_quality_audit_workflow.md`](docs/workflow/repository_quality_audit_workflow.md)
 
 ## Platform Standard Registry
