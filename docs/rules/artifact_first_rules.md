@@ -84,19 +84,19 @@ Q files should be generated as files by default.
 Preferred form:
 
 ```text
-docs/requests/<target_project>/<status>/<request_id>_<short_title>/request.md
+docs/requests/<project>/<status>/<Q_ID>_<short_topic>/request.md
 ```
 
 When human review is expected before execution, also generate:
 
 ```text
-docs/requests/<target_project>/<status>/<request_id>_<short_title>/request.docx
+docs/requests/<project>/<status>/<Q_ID>_<short_topic>/request.docx
 ```
 
 Simple file form is allowed when a full workspace is not needed yet:
 
 ```text
-docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md
+docs/requests/<project>/<status>/Q_<Q_ID>_<short_topic>_JP.md
 ```
 
 The chat response should not contain the full Q unless explicitly requested. It
@@ -104,12 +104,12 @@ should summarize the purpose, list the artifact paths, and state how to use
 the file.
 
 Q file artifacts and their related completion reports should follow
-`docs/rules/q_file_artifact_standard.md`.
+`docs/rules/q_file_artifact_standard.md`, `docs/rules/q_file_naming_rules.md`, and `docs/rules/q_file_template_rules.md`.
 
 The completion report should be saved into the same workspace as the source Q:
 
 ```text
-docs/requests/<target_project>/<status>/<request_id>_<short_title>/completion_report.md
+docs/requests/<project>/<status>/<Q_ID>_<short_topic>/completion_report.md
 ```
 
 ## Design And Specification Rule
@@ -172,6 +172,8 @@ for humans and AI to verify.
 
 - `docs/workflow/output_policy.md`
 - `docs/rules/q_file_artifact_standard.md`
+- `docs/rules/q_file_naming_rules.md`
+- `docs/rules/q_file_template_rules.md`
 - `docs/requests/README.md`
 - `docs/templates/q_file_template.md`
 - `docs/templates/ai_implementation_request.md`
