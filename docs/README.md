@@ -399,6 +399,10 @@ Reference points:
   `docs/knowledge/conversation_insights/CI-00001_knowledge_mining_from_casual_conversation.md`
   and
   `docs/knowledge/conversation_insights/CI-00002_design_conversation_mode.md`
+- Additional Approved Insights:
+  `docs/knowledge/conversation_insights/CI-00003_gameghost_domain_purification_and_animeghost_bootstrap_strategy.md`
+  and
+  `docs/knowledge/conversation_insights/CI-00004_encoding_regression_prevention_as_poka_yoke.md`
 - Template:
   `templates/conversation_insight_template.md`
 - Examples:

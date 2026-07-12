@@ -265,6 +265,8 @@ Start from:
 - [`docs/knowledge/conversation_insights/README.md`](docs/knowledge/conversation_insights/README.md)
 - [`docs/knowledge/conversation_insights/CI-00001_knowledge_mining_from_casual_conversation.md`](docs/knowledge/conversation_insights/CI-00001_knowledge_mining_from_casual_conversation.md)
 - [`docs/knowledge/conversation_insights/CI-00002_design_conversation_mode.md`](docs/knowledge/conversation_insights/CI-00002_design_conversation_mode.md)
+- [`docs/knowledge/conversation_insights/CI-00003_gameghost_domain_purification_and_animeghost_bootstrap_strategy.md`](docs/knowledge/conversation_insights/CI-00003_gameghost_domain_purification_and_animeghost_bootstrap_strategy.md)
+- [`docs/knowledge/conversation_insights/CI-00004_encoding_regression_prevention_as_poka_yoke.md`](docs/knowledge/conversation_insights/CI-00004_encoding_regression_prevention_as_poka_yoke.md)
 - [`templates/conversation_insight_template.md`](templates/conversation_insight_template.md)
 - [`examples/conversation_insight_examples.md`](examples/conversation_insight_examples.md)
 

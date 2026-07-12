@@ -33,11 +33,15 @@ Conversation
 | --- | --- | --- | --- |
 | CI-00001 | Knowledge Mining from Casual Conversation | Approved Insight | Good Template reference for conversation as Knowledge Source |
 | CI-00002 | Design Conversation Mode | Approved Insight | Good Template reference for preserving design philosophy from conversation |
+| CI-00003 | GameGhost Domain Purification and AnimeGhost Bootstrap Strategy | Approved Insight | Platform extraction and cross-Ghost bootstrap strategy |
+| CI-00004 | Encoding Regression Prevention as Poka-Yoke | Approved Insight | Encoding regression prevention and commit gate strategy |
 
 Initial approved artifacts:
 
 - [`CI-00001_knowledge_mining_from_casual_conversation.md`](CI-00001_knowledge_mining_from_casual_conversation.md)
 - [`CI-00002_design_conversation_mode.md`](CI-00002_design_conversation_mode.md)
+- [`CI-00003_gameghost_domain_purification_and_animeghost_bootstrap_strategy.md`](CI-00003_gameghost_domain_purification_and_animeghost_bootstrap_strategy.md)
+- [`CI-00004_encoding_regression_prevention_as_poka_yoke.md`](CI-00004_encoding_regression_prevention_as_poka_yoke.md)
 
 These artifacts are Approved Insights. They are not automatically promoted
 Rules, Architecture, Workflow, Roadmap, Concepts, or CASE entries. Promotion
@@ -63,6 +67,7 @@ ID format:
 CI-00001
 CI-00002
 CI-00003
+CI-00004
 ```
 
 Conversation Insight IDs use `CI-` plus a five-digit zero-padded sequence.
@@ -76,6 +81,10 @@ Conversation Insight artifact:
   saving casual chat.
 - CI-00002 shows how to capture design philosophy that appears naturally in
   conversation, while deferring adoption to review.
+- CI-00003 shows how a domain cleanup strategy can become a platform bootstrap
+  insight without immediately becoming implementation scope.
+- CI-00004 shows how a regression incident can become a Poka-Yoke candidate
+  for future Rule, Workflow, Validator, and CI promotion.
 
 ## Guard
 
