@@ -171,6 +171,30 @@ Observation
   -> Repository
 ```
 
+## GameGhost Platform Migration Architecture Index
+
+GameGhostをGDS Platformの最初の実利用Projectとして扱うためのArchitecture Review
+entry pointです。
+
+Reference points:
+
+- Architecture Review:
+  `docs/architecture/gameghost_platform_migration_architecture.md`
+- Workspace / Repository Layout:
+  `docs/architecture/gameghost_workspace_repository_layout.md`
+- Platform Candidate Inventory:
+  `docs/knowledge/inventory/gameghost_platform_candidate_inventory.md`
+- tool.py Responsibility Inventory:
+  `docs/knowledge/inventory/gameghost_tool_py_responsibility_inventory.md`
+- Migration Plan:
+  `roadmap/gameghost_platform_migration_plan.md`
+
+Recommended first implementation Q:
+
+```text
+Q_GameGhost_Repository_Context_Validation_Module_JP
+```
+
 ## Knowledge Inventory Index
 
 Knowledge Inventory は、Research、Debug Artifact、Completion Report、

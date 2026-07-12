@@ -18,6 +18,8 @@ roadmap を混同しないために使います。
   Repository Orchestrator direction を管理します。
 - `roadmap.md`: Gray Ghost Archive との関係、Ghost Development Toolkit Trial から
   Ghost Development System へ至る大きな流れ、責任境界、Future Candidates。
+- `gameghost_platform_migration_plan.md`: GameGhostを最初の実利用Projectとして
+  GDS / GhostPlatform共通責務へ移行するためのphase plan。
 
 ## Roadmap List
 
@@ -25,6 +27,7 @@ roadmap を混同しないために使います。
 |---|---|---|---|
 | Ghost Development System Roadmap | Active / Ver2 Platform Era | Ghost Development System Docs | Foundation Complete 後の Platform Integration、Automation Server、Ghost Ecosystem、Continuous Improvement を管理する |
 | Gray Ghost Archive / GDS Relationship Roadmap | Active | Ghost Development System Docs | Gray Ghost Archive と Ghost Development System の関係、移行方向、責任境界を管理する |
+| GameGhost Platform Migration Plan | Draft / Human Review Required | Ghost Development System Docs | GameGhostからGDS / GhostPlatform共通責務を抽出するための移行phaseを管理する |
 | GameGhost Roadmap | Separate project | GameGhost | GameGhost 固有の features、runtime、schema、import rules を管理する |
 | AnimeGhost Roadmap | Future | Future project | AnimeGhost 固有の project roadmap として将来作成する |
 | ComicGhost Roadmap | Future | Future project | ComicGhost 固有の project roadmap として将来作成する |

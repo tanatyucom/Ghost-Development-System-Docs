@@ -29,6 +29,11 @@ runtime behavior.
 - `platform_standard_registry.md`: registry of GDS Platform standards and
   standard candidates for shared Rule, Workflow, Template, Component, Report,
   Validation, and Architecture items.
+- `gameghost_platform_migration_architecture.md`: GameGhostをGDS Platformの
+  最初の実利用Projectとして扱うためのPlatform migration architecture review。
+- `gameghost_workspace_repository_layout.md`: `C:\GrayGhostArchive` workspace
+  root、GameGhost Git root、sibling repository model、shortcut strategyの
+  layout review。
 
 ## Does NOT Contain
 
@@ -253,6 +258,8 @@ Do not use this folder to approve Future Candidates by implication.
 - `docs/architecture/design_philosophy.md`
 - `docs/architecture/platform_era_core_principles.md`
 - `docs/architecture/platform_standard_registry.md`
+- `docs/architecture/gameghost_platform_migration_architecture.md`
+- `docs/architecture/gameghost_workspace_repository_layout.md`
 - `docs/ai_repository_index.md`
 - `docs/rules/core_principles.md`
 - `docs/rules/external_source_access_rules.md`

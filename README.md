@@ -134,6 +134,18 @@ Observation
   -> Repository
 ```
 
+## GameGhost Platform Migration Architecture
+
+GameGhostをGDS Platformの最初の実利用Projectとして整理するArchitecture Reviewです。
+
+Start from:
+
+- [`docs/architecture/gameghost_platform_migration_architecture.md`](docs/architecture/gameghost_platform_migration_architecture.md)
+- [`docs/architecture/gameghost_workspace_repository_layout.md`](docs/architecture/gameghost_workspace_repository_layout.md)
+- [`docs/knowledge/inventory/gameghost_platform_candidate_inventory.md`](docs/knowledge/inventory/gameghost_platform_candidate_inventory.md)
+- [`docs/knowledge/inventory/gameghost_tool_py_responsibility_inventory.md`](docs/knowledge/inventory/gameghost_tool_py_responsibility_inventory.md)
+- [`roadmap/gameghost_platform_migration_plan.md`](roadmap/gameghost_platform_migration_plan.md)
+
 ## Persistent Collaboration
 
 Repositoryへ採用された協業ルールは、以後のChatGPT / Codex / Claude / Gemini /
