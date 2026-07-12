@@ -19,8 +19,11 @@ MOJIBAKE_PATTERNS = ("縺", "繧", "譁", "荳", "螟", "蜿", "�")
 INTENTIONAL_MOJIBAKE_DOCS = {
     Path("docs/rules/utf8_read_rules.md"),
     Path("docs/knowledge/conversation_insights/CI-00004_encoding_regression_prevention_as_poka_yoke.md"),
+    Path("docs/requests/gds/draft/GDS-MOJIBAKE-AUDIT-001_legacy_document_mojibake_audit_and_repair/request.md"),
+    Path("docs/requests/gds/draft/GDS-MOJIBAKE-RECOVERY-BATCH4-001_request_artifact_intentional_evidence/request.md"),
     Path("docs/history/mojibake_audit_report_2026-07-10.md"),
     Path("reports/legacy_document_mojibake_audit.md"),
+    REPORT_PATH,
 }
 REQUIRED_README_DIRS = [
     Path("docs"),

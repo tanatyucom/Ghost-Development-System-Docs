@@ -109,3 +109,40 @@ Candidate count:
 | `docs/workflow/README.md` | 80 | 0 |
 | `docs/rules/rules.md` | 89 | 0 |
 | `examples/migration_first_examples.md` | 205 | 0 |
+
+## Batch 4 Recovery Result - Request Artifact Intentional Evidence
+
+Date: 2026-07-13
+
+Scope:
+
+- `docs/requests/gds/draft/GDS-MOJIBAKE-AUDIT-001_legacy_document_mojibake_audit_and_repair/request.md:127`
+- `scripts/repository_quality_audit.py`
+- `reports/repository_quality_report.md`
+
+Method:
+
+- Current file line 127 was inspected.
+- Source Q from Downloads was compared.
+- Related notes and completion report were reviewed.
+- Git history identified creation commit `2cd5d25`.
+- Existing intentional evidence exclusion mechanism was used instead of guessing or deleting the evidence.
+
+| File | Section / Line Range | Regression Commit | Trusted Source Commit | Restored Text Source | Later Changes Preserved | Human Review Result |
+| --- | --- | --- | --- | --- | --- | --- |
+| `docs/requests/gds/draft/GDS-MOJIBAKE-AUDIT-001_legacy_document_mojibake_audit_and_repair/request.md` | Required Detection Targets, line 127 | Not a regression; creation commit `2cd5d25` intentionally included sample | Source Q in Downloads and current request artifact | No text restored; line is intentional detection sample | Historical request artifact preserved unchanged | Classified as intentional evidence; excluded narrowly from Mojibake scan |
+| `reports/repository_quality_report.md` | Generated report body | Self-reference noise from generated warning content | Generated report policy | No text restored; report regenerated | Generated report remains current audit output | Excluded from Mojibake scan to prevent generated self-reference noise |
+
+Decision:
+
+- The `U+FFFD` in the target request artifact is intentional evidence, not unknown corruption.
+- The target request artifact was not rewritten.
+- `scripts/repository_quality_audit.py` was updated with narrow file-level exclusions.
+- Repository Quality Audit became Green after rerun.
+
+Candidate count:
+
+| Scope | Before | After |
+| --- | ---: | ---: |
+| Repository Quality warnings | 1 | 0 |
+| Target request replacement character count | 1 | 1 |

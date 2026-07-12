@@ -7,11 +7,11 @@
 
 ## 要約
 
-- 生成日時: `2026-07-12T22:28:28Z`
+- 生成日時: `2026-07-12T22:40:59Z`
 - Repository: `Ghost-Development-System-Docs`
-- Overall Repository Health: `Yellow`
-- 通過したチェック: `9`
-- Warnings: `1`
+- Overall Repository Health: `Green`
+- 通過したチェック: `10`
+- Warnings: `0`
 - Errors: `0`
 
 ## Registry Health
@@ -36,13 +36,19 @@
 
 - Status: `PASS`
 - Details:
-  - 343 Markdown files を UTF-8 として読み取れました。
+  - 346 Markdown files を UTF-8 として読み取れました。
+
+### Mojibake Audit
+
+- Status: `PASS`
+- Details:
+  - 意図的な rule / report examples を除き、mojibake candidate は検出されませんでした。
 
 ### AI Repository Index Validation
 
 - Status: `PASS`
 - Details:
-  - OK: 343 Markdown files が index に登録されています。
+  - OK: 346 Markdown files が index に登録されています。
 
 ### GDS Health Validation
 
@@ -97,11 +103,7 @@
 
 ## 警告 (Warnings)
 
-### Mojibake Audit
-
-- Status: `WARN`
-- Details:
-  - docs/requests/gds/draft/GDS-MOJIBAKE-AUDIT-001_legacy_document_mojibake_audit_and_repair/request.md:127: - Unicode replacement character: `�`
+なし。
 
 ## エラー (Errors)
 
@@ -109,7 +111,7 @@
 
 ## 推奨改善 (Recommended Improvements)
 
-- warnings を確認し、想定内の例外、documentation debt、または follow-up Q 候補のどれに該当するか判断します。
+- 大きな documentation 変更または validation 変更後は、この audit を継続して実行します。
 
 ## Notes
 
