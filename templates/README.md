@@ -98,6 +98,7 @@ restore guidance.
 - `queue_template.md`
 - `decision_template.md`
 - `innovation_pipeline_template.md`
+- `conversation_insight_template.md`
 - `platform_promotion_decision_report_template.md`
 - `platform_registry_update_template.md`
 
@@ -296,6 +297,7 @@ Do not add one-off request details to templates. Add only reusable structure.
 - `docs/rules/external_source_access_rules.md`
 - `docs/rules/research_mission_rules.md`
 - `docs/workflow/research_mission_workflow.md`
+- `docs/workflow/conversation_insight_capture_workflow.md`
 - `docs/requests/README.md`
 - `docs/rules/q_file_artifact_standard.md`
 - `docs/rules/audit_before_repair_rules.md`

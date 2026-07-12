@@ -30,6 +30,7 @@ Validation、GDS Core Rules / Templates、Target Project Profile を順に確認
 - Current Goal.
 - Applicable Rules.
 - Applicable Methodologies.
+- Conversation Insight Detection.
 - Research Task Detection.
 - Repository Information.
 - Q Format.
@@ -152,6 +153,30 @@ Artifact First と Q File Artifact Standard に従います。
 
 ### Research Task Detection
 
+### Conversation Insight Detection
+
+Scope / Out of Scope確認後、通常実装やResearch Task Detectionへ進む前に、
+Conversation Insight Candidateがあるかを確認します。
+
+検出するもの:
+
+- 重要な設計思想。
+- 運用方針。
+- 保守方針。
+- Migration戦略。
+- Command Center構想。
+- 長期運用方針。
+- 将来構想。
+
+AI は、Repositoryへ残す価値が高い場合のみ Candidate として提案し、
+保存価値の理由を短く説明します。
+
+AI は自動保存してはいけません。チャット全文を保存してはいけません。
+`書いといて`、`保存して`、`Repositoryへ追加`、`Q化して` などの
+明示承認後のみ Draft 生成に進みます。
+
+### Research Task Detection
+
 Scope / Out of Scope確認後、通常実装へ進む前にResearch Taskかどうかを判定します。
 
 Research Task の代表例:
@@ -188,6 +213,9 @@ Startup Checklist:
 - Scope confirmed:
 - Applicable rules:
 - Applicable methodologies:
+- Conversation Insight Detection:
+- Conversation Insight Candidate:
+- Conversation Insight Draft approved:
 - Research Task Detection:
 - Research Mission required:
 - Q artifact status:
@@ -217,8 +245,10 @@ Startup Checklist は、既存 Knowledge を増やすためではなく、既存
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/rules/ai_startup_procedure_rules.md`
 - `docs/rules/research_mission_rules.md`
+- `docs/rules/conversation_insight_capture_rules.md`
 - `templates/startup_checklist_template.md`
 - `templates/research_mission_template.md`
+- `templates/conversation_insight_template.md`
 - `templates/information_package_template.md`
 - `examples/startup_checklist_examples.md`
 - `docs/rules/project_rules.md`
@@ -230,4 +260,5 @@ Startup Checklist は、既存 Knowledge を増やすためではなく、既存
 - `docs/workflow/commit_safety_checklist.md`
 - `docs/workflow/first_broken_step_methodology.md`
 - `docs/workflow/research_mission_workflow.md`
+- `docs/workflow/conversation_insight_capture_workflow.md`
 - `docs/README.md`

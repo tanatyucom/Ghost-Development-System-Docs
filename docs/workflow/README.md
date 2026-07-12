@@ -59,6 +59,10 @@ gate.
 - `innovation_pipeline_workflow.md`: workflow for growing ideas from Idea,
   Experiment, Prototype, Validation, Platform Promotion, Standardization, and
   Propagation.
+- `conversation_insight_capture_workflow.md`: workflow for preserving
+  conversation-origin design philosophy, operation policy, migration strategy,
+  Command Center concepts, and long-term vision as Human Approval-gated
+  pre-promotion knowledge.
 - `platform_registry_update_artifact_storage.md`: storage location, naming
   rule, and management workflow for Platform Registry Update Artifacts.
 - `auto_registry_update_from_promotion_report.md`: workflow design for
@@ -104,6 +108,9 @@ Idea
   -> Review
   -> Q Artifact Workspace
   -> Workspace Save Verification
+  -> Conversation Insight Detection, when conversation-origin philosophy,
+     operation policy, maintenance policy, migration strategy, Command Center
+     concept, or long-term vision may need preservation
   -> Research Task Detection
   -> Research Mission, when investigation scope and evidence must be explicit
   -> Audit Before Repair, when repairing or cleaning up
@@ -116,6 +123,8 @@ Idea
   -> PIP Update, when project state or decisions changed
   -> PIP Case Candidate, when reusable knowledge was found
   -> Concept Promotion, when knowledge is still an early concept
+  -> Conversation Insight, when conversation-origin philosophy or long-term
+     operation knowledge should be preserved
   -> Innovation Pipeline, when a reusable experiment may become Platform Standard
   -> Platform Registry Update Artifact, when Platform Standard Registry changes
   -> Roadmap2 Knowledge Salvage, when Roadmap2-only knowledge remains
@@ -775,6 +784,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `templates/daily_operation_checklist_template.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/workflow/startup_checklist_workflow.md`
+- `docs/rules/conversation_insight_capture_rules.md`
 - `docs/workflow/repository_root_validation_workflow.md`
 - `docs/ai_repository_index.md`
 - `docs/workflow/collaborative_decision_workflow.md`
@@ -787,6 +797,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/workflow/first_broken_step_methodology.md`
 - `docs/workflow/migration_first_workflow.md`
 - `docs/workflow/innovation_pipeline_workflow.md`
+- `docs/workflow/conversation_insight_capture_workflow.md`
 - `docs/workflow/concept_promotion_workflow.md`
 - `docs/workflow/pip_case_knowledge_base_workflow.md`
 - `docs/workflow/roadmap2_knowledge_salvage_loop.md`

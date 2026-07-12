@@ -37,6 +37,12 @@
 - Current Q File read with explicit UTF-8:
 - Q File mojibake check:
 - Scope / Out of Scope confirmed:
+- Conversation Insight Detection completed:
+- Conversation Insight Candidate:
+- Conversation Insight candidate reason:
+- Conversation Insight duplicate check:
+- Conversation Insight auto-save avoided:
+- Conversation Insight draft approval:
 - Research Task Detection completed:
 - Research Task:
 - Research Mission required:
@@ -81,6 +87,7 @@
 - Roadmap2 Knowledge Salvage:
 - Repository Root Validation:
 - AI Proactive Proposal:
+- Conversation Insight Capture:
 - Other:
 
 ## Applicable Methodologies
@@ -92,6 +99,7 @@
 - Knowledge Before Automation:
 - Evidence Feedback Loop:
 - Knowledge Promotion:
+- Conversation Insight Detection:
 - Other:
 
 ## Proactive Proposal Check
@@ -120,6 +128,30 @@
 - `.docx` required for human review:
 - Debug artifacts expected:
 - Review Entry Point expected:
+
+## Research Task Detection
+
+## Conversation Insight Detection
+
+- Conversation Insight Candidate detected: Yes / No
+- Detection reason:
+- Important design philosophy:
+- Operation policy:
+- Maintenance policy:
+- Migration strategy:
+- Command Center concept:
+- Long-term operation policy:
+- Future vision:
+- Repository value:
+- Duplicate Knowledge checked:
+- Candidate proposed:
+- Auto-save avoided:
+- Full chat capture avoided:
+- Human Approval To Draft:
+- Draft artifact required:
+- Draft artifact path:
+- Promotion candidate type:
+- Next action:
 
 ## Research Task Detection
 
@@ -164,8 +196,11 @@
 - `docs/rules/startup_checklist_rules.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/rules/research_mission_rules.md`
+- `docs/rules/conversation_insight_capture_rules.md`
 - `docs/workflow/research_mission_workflow.md`
+- `docs/workflow/conversation_insight_capture_workflow.md`
 - `templates/research_mission_template.md`
+- `templates/conversation_insight_template.md`
 - `templates/information_package_template.md`
 - `docs/README.md`
 - `docs/rules/rules.md`

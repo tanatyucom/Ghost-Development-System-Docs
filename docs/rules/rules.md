@@ -44,6 +44,7 @@ Rules follow these principles:
 - AI Proactive Proposal.
 - Completion Checklist.
 - Research Mission.
+- Conversation Insight Capture.
 - Artifact First.
 - Audit Before Repair.
 - Debug Artifact Review.
@@ -78,6 +79,7 @@ own files.
 - `ai_proactive_proposal_rules.md`
 - `completion_checklist_rules.md`
 - `research_mission_rules.md`
+- `conversation_insight_capture_rules.md`
 - `artifact_first_rules.md`
 - `q_file_artifact_standard.md`
 - `audit_before_repair_rules.md`
@@ -308,6 +310,21 @@ PIP Case Knowledge Base, or Completion Checklist. It is the front door that
 makes investigation work scoped, evidence-based, reviewable, and promotable.
 
 Details follow `research_mission_rules.md`.
+
+## Conversation Insight Capture
+
+AI may propose Conversation Insight Candidates when a conversation contains
+high-value design philosophy, operation policy, maintenance policy, migration
+strategy, Command Center concepts, long-term operation policy, or future vision.
+
+AI must not auto-save conversation insights and must not preserve full chat
+logs. Draft generation requires explicit Human Approval such as `書いといて`,
+`保存して`, `Repositoryへ追加`, `Q化して`, or `Conversation Insightとして残して`.
+
+Draft Conversation Insights are pre-promotion knowledge, not approved rules or
+standards. Promotion requires review and the appropriate destination workflow.
+
+Details follow `conversation_insight_capture_rules.md`.
 
 ## Debug Artifact Review
 

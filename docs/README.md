@@ -271,6 +271,50 @@ Research
 Inventory entries are not formal promotion. Promotion requires a separate Q,
 review, completion report, and the appropriate promotion workflow.
 
+## Conversation Insight Index
+
+Conversation Insight は、通常の Q、Research Mission、CASE になりにくい
+会話由来の設計思想、Platform思想、開発理念、保守方針、Migration戦略、
+Command Center構想、長期運用方針、将来構想を保存するための
+pre-promotion Knowledge Source です。
+
+Reference points:
+
+- Rule:
+  `docs/rules/conversation_insight_capture_rules.md`
+- Workflow:
+  `docs/workflow/conversation_insight_capture_workflow.md`
+- Storage:
+  `docs/knowledge/conversation_insights/README.md`
+- Template:
+  `templates/conversation_insight_template.md`
+- Examples:
+  `examples/conversation_insight_examples.md`
+- Knowledge Folder:
+  `docs/knowledge/README.md`
+
+Core flow:
+
+```text
+Conversation
+  -> Conversation Insight Candidate
+  -> Human Approval To Draft
+  -> Conversation Insight Artifact
+  -> Review
+  -> Future Candidate
+  -> Rule / Architecture / Workflow / Roadmap / Concept / CASE
+```
+
+AI may propose a candidate when repository value is high, but must not
+auto-save. Drafting requires explicit Human Approval such as `書いといて`,
+`保存して`, `Repositoryへ追加`, `Q化して`, or `Conversation Insightとして残して`.
+
+Startup integration:
+
+- AI Startup Procedure includes Conversation Insight Detection.
+- Startup Checklist confirms candidate detection, duplicate check, no
+  auto-save, no full chat capture, and Human Approval To Draft.
+
 ## GDS Health Index
 
 GDS Health は、GDS の運用状態を見える化するための index です。

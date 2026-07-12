@@ -56,6 +56,9 @@ reports, and documentation requests can start from a clear reference.
 - `innovation_pipeline_examples.md`: examples for moving ideas through Idea,
   Experiment, Prototype, Validation, Platform Promotion, Standardization, and
   Propagation.
+- `conversation_insight_examples.md`: good and bad examples for proposing,
+  approving, drafting, reviewing, and promoting conversation-origin insights
+  without auto-saving chat or treating Future Candidates as approved scope.
 - `platform_promotion_decision_report_examples.md`: examples for Promote,
   Revise, Reject, and Archive decisions after Innovation Pipeline validation.
 - `platform_standard_registry_examples.md`: examples for Candidate to
@@ -161,6 +164,10 @@ what a complete, well-scoped document should feel like.
 - Use `innovation_pipeline_examples.md` when a field project experiment,
   improvement idea, or future automation candidate may become a Platform
   Standard through Innovation Pipeline.
+- Use `conversation_insight_examples.md` when a conversation reveals reusable
+  design philosophy, operation policy, maintenance policy, migration strategy,
+  Command Center concept, or long-term vision that may need Human
+  Approval-gated preservation before promotion.
 - Use `platform_promotion_decision_report_examples.md` when deciding whether a
   validated Innovation Pipeline item should be promoted, revised, rejected, or
   archived.
@@ -225,6 +232,7 @@ Do not use examples to introduce new rules. Promote reusable standards to
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/workflow/repository_root_validation_workflow.md`
 - `docs/workflow/collaborative_decision_workflow.md`
+- `docs/workflow/conversation_insight_capture_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`
 - `templates/startup_checklist_template.md`
 - `templates/repository_root_validation_template.md`

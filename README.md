@@ -233,6 +233,40 @@ Research
   -> Platform Standard
 ```
 
+## Conversation Insight
+
+Conversation Insight は、長時間の設計議論、運用理念、保守方針、Migration戦略、
+Command Center構想、長期ビジョンなど、通常のQやResearch Missionになりにくい
+会話由来の知見を、Human Approval付きで保存するpre-promotion Knowledge Sourceです。
+
+Start from:
+
+- [`docs/rules/conversation_insight_capture_rules.md`](docs/rules/conversation_insight_capture_rules.md)
+- [`docs/workflow/conversation_insight_capture_workflow.md`](docs/workflow/conversation_insight_capture_workflow.md)
+- [`docs/knowledge/conversation_insights/README.md`](docs/knowledge/conversation_insights/README.md)
+- [`templates/conversation_insight_template.md`](templates/conversation_insight_template.md)
+- [`examples/conversation_insight_examples.md`](examples/conversation_insight_examples.md)
+
+標準フロー:
+
+```text
+Conversation
+  -> Conversation Insight Candidate
+  -> Human Approval To Draft
+  -> Conversation Insight Artifact
+  -> Review
+  -> Future Candidate
+  -> Rule / Architecture / Workflow / Roadmap / Concept / CASE
+```
+
+AI は候補提案できますが、自動保存はしません。`書いといて`、`保存して`、
+`Repositoryへ追加`、`Q化して` のような人間の明示承認がある場合のみ、
+Conversation Insight artifact を作成します。
+
+AI Startup Procedure と Startup Checklist では、Conversation Insight Detection
+として、重要な設計思想、運用方針、保守方針、Migration戦略、Command Center構想、
+長期ビジョンが含まれるかを確認します。
+
 ## GDS Health
 
 GDS Health は、repository、knowledge、workflow、template、example、

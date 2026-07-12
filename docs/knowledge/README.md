@@ -12,6 +12,9 @@ Knowledge は、Research、Completion Report、Debug Artifact、Human Review か
 - [`inventory/README.md`](inventory/README.md): Knowledge Inventory の入口。
 - [`inventory/steam_ocr_knowledge_inventory_v1.md`](inventory/steam_ocr_knowledge_inventory_v1.md):
   Steam OCR研究から抽出したKnowledge Classification。
+- [`conversation_insights/README.md`](conversation_insights/README.md):
+  会話由来の設計思想、運用方針、保守方針、Migration戦略、Command Center構想、
+  長期構想を、Human Approval付きのpre-promotion knowledgeとして保存する入口。
 
 ## Role
 
@@ -23,6 +26,18 @@ Research
   -> Platform Standard
 ```
 
+Conversation-origin insight:
+
+```text
+Conversation
+  -> Conversation Insight Candidate
+  -> Human Approval To Draft
+  -> Conversation Insight Artifact
+  -> Review
+  -> Future Candidate
+  -> Rule / Architecture / Workflow / Roadmap / Concept / CASE
+```
+
 ## Boundaries
 
 Knowledge Inventory は以下をしません。
@@ -32,6 +47,10 @@ Knowledge Inventory は以下をしません。
 - CASE を正式登録する。
 - Platform Standard Registry を直接更新する。
 - Human Reviewなしで標準化する。
+- Human Approvalなしで会話内容を自動保存する。
 
 正式昇格が必要な場合は、関連する Promotion Workflow、Innovation Pipeline、
 Concept Promotion、Platform Registry Update Artifact を経由します。
+
+Conversation Insight は、会話全文や一時的な感想を保存する場所ではありません。
+Repositoryに残す価値が高い会話由来の知見だけを、人間の明示承認後にArtifact化します。

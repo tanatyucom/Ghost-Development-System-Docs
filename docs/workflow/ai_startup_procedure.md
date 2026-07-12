@@ -20,6 +20,7 @@ Start
   -> Target Project Profile Check
   -> Startup Checklist
   -> Scope / Out of Scope Confirmation
+  -> Conversation Insight Detection
   -> Research Task Detection
   -> Normal Implementation / Review Start, when not research
   -> Research Mission, when research
@@ -171,7 +172,41 @@ Startup Checklist:
 - generated artifacts を Git 管理対象にするか。
 - commit してよい Q か。
 
-### 9. Research Task Detection
+### 9. Conversation Insight Detection
+
+Scope確認後、今回の会話やQに Conversation Insight Candidate が含まれるか判定します。
+
+検出対象:
+
+- 重要な設計思想。
+- 運用方針。
+- 保守方針。
+- Migration戦略。
+- Command Center構想。
+- 長期運用方針。
+- 将来構想。
+
+判定:
+
+```text
+Conversation Insight Candidate: No
+  -> Continue startup flow
+
+Conversation Insight Candidate: Yes
+  -> Propose candidate
+  -> Explain repository value briefly
+  -> Check duplicate knowledge
+  -> Wait for Human Approval To Draft
+```
+
+AI は自動保存せず、チャット全文も保存しません。`書いといて`、`保存して`、
+`Repositoryへ追加`、`Q化して` などの明示承認がある場合のみ、
+`templates/conversation_insight_template.md` を使って Draft artifact を作成します。
+
+Details follow `docs/rules/conversation_insight_capture_rules.md` and
+`docs/workflow/conversation_insight_capture_workflow.md`.
+
+### 10. Research Task Detection
 
 Scope確認後、今回のタスクがResearch Missionへ分岐すべきか判定します。
 
@@ -210,6 +245,8 @@ Research Task が Yes の場合、曖昧なまま実装へ進まず、
 - Project Profile が必要なのに読めていない。
 - Q と Project Profile が矛盾している。
 - Scope Guard が曖昧。
+- Conversation Insight Candidate を自動保存しようとしている。
+- Conversation Insight Draft を Human Approvalなしで作ろうとしている。
 - Research Task なのに Goal、Scope、Out of Scope、Evidence、Validation が不明。
 - Commit policy が曖昧。
 - authoritative Q artifact が必要なのに保存されていない。
@@ -238,8 +275,11 @@ Startup Checklist:
 - `docs/rules/external_source_access_rules.md`
 - `docs/rules/utf8_read_rules.md`
 - `docs/rules/research_mission_rules.md`
+- `docs/rules/conversation_insight_capture_rules.md`
 - `docs/workflow/research_mission_workflow.md`
+- `docs/workflow/conversation_insight_capture_workflow.md`
 - `templates/research_mission_template.md`
+- `templates/conversation_insight_template.md`
 - `docs/ai_repository_index.md`
 - `project_profiles/README.md`
 - `templates/startup_checklist_template.md`
