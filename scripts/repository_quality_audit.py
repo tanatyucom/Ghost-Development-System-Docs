@@ -19,6 +19,7 @@ MOJIBAKE_PATTERNS = ("縺", "繧", "譁", "荳", "螟", "蜿", "�")
 INTENTIONAL_MOJIBAKE_DOCS = {
     Path("docs/rules/utf8_read_rules.md"),
     Path("docs/history/mojibake_audit_report_2026-07-10.md"),
+    Path("reports/legacy_document_mojibake_audit.md"),
 }
 REQUIRED_README_DIRS = [
     Path("docs"),
