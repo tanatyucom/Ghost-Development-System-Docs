@@ -18,6 +18,11 @@ runtime behavior.
   for Repository Scanner, Information Package Builder, Decision Engine,
   Template Engine, Artifact Pipeline, Human Approval Gate, Repository Health
   Adapter, Registry Adapter, and Handoff / Completion Adapter.
+- `context_aware_knowledge_suggestion_assistant.md`: draft architecture
+  proposal for suggesting related Conversation Insight, Future Candidate,
+  Research Mission, Improvement Record, CASE, Architecture, Rule, and Workflow
+  knowledge during Startup and daily use without automatic promotion,
+  implementation, Q generation, or commit.
 - `plugin_architecture_standard.md`: Plugin Architecture Standard for explicit
   registry, `PLUGIN_INFO`, `PluginContext`, `PluginResult`, ownership boundary,
   lifecycle, and promotion from Internal Module to Platform Plugin.
@@ -163,6 +168,7 @@ future work that requires a separate Q and Human Approval Gate.
 Detailed specification:
 
 - `docs/architecture/command_center_architecture.md`
+- `docs/architecture/context_aware_knowledge_suggestion_assistant.md`
 - `docs/architecture/artifact_schema_standard.md`
 - `docs/architecture/plugin_architecture_standard.md`
 - `templates/structured_artifact_metadata_template.md`

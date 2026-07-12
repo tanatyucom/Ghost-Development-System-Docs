@@ -165,6 +165,25 @@ Recommended first proof Q:
 Q_GDS_Repository_Context_Validation_Plugin_JP
 ```
 
+## Context-Aware Knowledge Suggestion Assistant
+
+Context-Aware Knowledge Suggestion Assistant は、Startupや日常作業中に、
+現在の作業と関連する Conversation Insight、Future Candidate、Research Mission、
+Improvement Record、CASE、Architecture、Rule、Workflow を AI が提案する
+Command Center / Knowledge 設計候補です。
+
+Start from:
+
+- [`docs/architecture/context_aware_knowledge_suggestion_assistant.md`](docs/architecture/context_aware_knowledge_suggestion_assistant.md)
+- [`docs/architecture/command_center_architecture.md`](docs/architecture/command_center_architecture.md)
+
+AI は提案のみ行います。Roadmap追加、Q化、Codex実装依頼、Rule化、
+Architecture化、Archive、Reject は人間が判断します。
+
+少なくとも1日1回、主要なProject作業または重要な提案の前に
+`docs/ai_repository_index.md` から Canonical Knowledge Source を確認し、
+未レビューKnowledge通知と、文脈に応じたレビュー済みKnowledgeの再提案を区別します。
+
 ## Persistent Collaboration
 
 Repositoryへ採用された協業ルールは、以後のChatGPT / Codex / Claude / Gemini /

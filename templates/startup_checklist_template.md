@@ -25,6 +25,9 @@
 ## Startup Confirmation
 
 - AI Repository Index read:
+- Daily Knowledge Source Review completed:
+- Daily Knowledge Source Review date:
+- Canonical daily entry point:
 - Information Package provided:
 - Information Package read:
 - Target Project identified:
@@ -37,6 +40,10 @@
 - Current Q File read with explicit UTF-8:
 - Q File mojibake check:
 - Scope / Out of Scope confirmed:
+- Outstanding Review Notification checked:
+- Related Knowledge Suggestions checked:
+- Promotion Candidates checked:
+- Future Candidates checked:
 - Conversation Insight Detection completed:
 - Conversation Insight Candidate:
 - Conversation Insight candidate reason:
@@ -88,6 +95,7 @@
 - Repository Root Validation:
 - AI Proactive Proposal:
 - Conversation Insight Capture:
+- Knowledge Suggestion Assistant:
 - Other:
 
 ## Applicable Methodologies
@@ -100,6 +108,8 @@
 - Evidence Feedback Loop:
 - Knowledge Promotion:
 - Conversation Insight Detection:
+- Daily Knowledge Source Review:
+- Context-Aware Knowledge Suggestion:
 - Other:
 
 ## Proactive Proposal Check
@@ -115,6 +125,51 @@
 - Human Review concern:
 - User decision needed:
 
+## Daily Knowledge Source Review
+
+- Review required today: Yes / No
+- Review completed:
+- Canonical daily entry point: `docs/ai_repository_index.md`
+- Current Information Package checked:
+- Current Project Profile checked:
+- Current Roadmap checked:
+- Conversation Insights checked:
+- Future Candidates checked:
+- Research Missions checked:
+- Improvement Records checked:
+- Relevant CASE / Rule / Architecture / Workflow checked:
+- Stale assumptions found:
+- Repository updates found:
+- Context restored after chat movement:
+- Related Knowledge rediscovered:
+- Notes:
+
+## Knowledge Suggestion Assistant
+
+- Outstanding Review Notification needed: Yes / No
+- Outstanding Review items:
+- Related Knowledge Suggestions needed: Yes / No
+- Related Knowledge Suggestions:
+- Reviewed / Approved Knowledge re-suggested:
+- Promotion Candidates:
+- Future Candidates:
+- Suggestion reason:
+- Human decision:
+- Action selected:
+  - Roadmap
+  - Q
+  - Codex implementation request
+  - Rule
+  - Architecture
+  - Workflow
+  - Archive
+  - Reject
+  - No Action
+- Auto-promotion avoided:
+- Auto-Q generation avoided:
+- Auto-implementation avoided:
+- Auto-commit avoided:
+
 ## Q / Artifact Check
 
 - Q saved before implementation:
@@ -128,8 +183,6 @@
 - `.docx` required for human review:
 - Debug artifacts expected:
 - Review Entry Point expected:
-
-## Research Task Detection
 
 ## Conversation Insight Detection
 
@@ -199,6 +252,7 @@
 - `docs/rules/conversation_insight_capture_rules.md`
 - `docs/workflow/research_mission_workflow.md`
 - `docs/workflow/conversation_insight_capture_workflow.md`
+- `docs/architecture/context_aware_knowledge_suggestion_assistant.md`
 - `templates/research_mission_template.md`
 - `templates/conversation_insight_template.md`
 - `templates/information_package_template.md`

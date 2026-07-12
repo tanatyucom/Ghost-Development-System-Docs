@@ -188,6 +188,8 @@ Responsibility:
 - Classify whether the next step is Q Draft, Review Draft, Completion Draft,
   Registry Update, Repository Health action, Recommended Next Q, or Human
   Review.
+- In future, surface context-aware related Knowledge suggestions as advisory
+  input without treating them as approved actions.
 
 Inputs:
 
@@ -205,6 +207,7 @@ Outputs:
 - Evidence paths.
 - Required approval gate.
 - Future Candidate separation when applicable.
+- Related Knowledge suggestion, when useful.
 
 Dependencies:
 
@@ -549,6 +552,61 @@ Command Center may build Information Packages from repository evidence.
 Information Package does not replace PIP, repository documents, or completion
 reports.
 
+### Context-Aware Knowledge Suggestion Assistant
+
+Command Center may later suggest related Knowledge based on current Q,
+conversation summary, repository state, recent artifacts, and startup context.
+
+It may surface:
+
+- Daily Knowledge Source Review status.
+- Outstanding Review.
+- Related Knowledge Suggestions.
+- Promotion Candidates.
+- Future Candidates.
+
+It must not automatically promote, commit, generate Q files, implement changes,
+archive, reject, or replace Human Approval.
+
+Daily Knowledge Source Review:
+
+- At least once per day, before major project work or significant proposals,
+  Command Center may help AI review canonical Knowledge Sources.
+- The canonical daily entry point is `docs/ai_repository_index.md`.
+- Minimum targets include Current Information Package, Current Project Profile,
+  Current Roadmap, Conversation Insights, Future Candidates, Research Missions,
+  Improvement Records, and relevant CASE / Rule / Architecture / Workflow.
+- This review is a startup or first-suitable-project-interaction obligation, not
+  background monitoring or autonomous execution.
+
+Outstanding Review Notification:
+
+- If unreviewed Knowledge exists, Command Center may surface Type, ID / Title,
+  why reviewing now may be valuable, and recommended action.
+- It should avoid repeatedly notifying the same item without a useful context
+  change.
+
+Context-Aware Re-Suggestion:
+
+- Reviewed or Approved Knowledge may be suggested again when current context
+  relevance is high.
+- Outstanding Review Notification and reviewed Knowledge re-suggestion must be
+  labeled separately.
+- Current Context Relevance takes priority over review status.
+- Suggestions explain the reason briefly and do not force review or
+  implementation.
+
+Suggestion priority:
+
+1. Current Context Relevance.
+2. Immediate Risk / Blocker.
+3. Promotion Opportunity.
+4. Outstanding Review.
+5. Important Knowledge not recently referenced.
+6. Future Candidate readiness.
+
+Details follow `docs/architecture/context_aware_knowledge_suggestion_assistant.md`.
+
 ### Project Profile
 
 Command Center may read Project Profiles to understand project-specific
@@ -623,6 +681,7 @@ Review this specification for:
 - Decision Engine rule model.
 - Template selection engine.
 - Artifact validation engine.
+- Context-Aware Knowledge Suggestion Assistant.
 - Command Center UI.
 - Automation Server integration.
 - Event-driven repository watch.
@@ -638,4 +697,5 @@ Review this specification for:
 - `templates/multi_ai_handoff_template.md`
 - `templates/completion_report_template.md`
 - `docs/architecture/platform_standard_registry.md`
+- `docs/architecture/context_aware_knowledge_suggestion_assistant.md`
 - `docs/workflow/innovation_pipeline_workflow.md`

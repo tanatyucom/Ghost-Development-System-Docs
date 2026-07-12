@@ -239,6 +239,41 @@ Recommended first proof Q:
 Q_GDS_Repository_Context_Validation_Plugin_JP
 ```
 
+## Context-Aware Knowledge Suggestion Assistant Index
+
+Context-Aware Knowledge Suggestion Assistant は、Startupおよび日常利用時に、
+現在の会話、作業内容、Repository状況と関連するKnowledgeをAIが提案する
+Command Center / Knowledge architecture proposalです。
+
+Reference points:
+
+- Architecture proposal:
+  `docs/architecture/context_aware_knowledge_suggestion_assistant.md`
+- Command Center Architecture:
+  `docs/architecture/command_center_architecture.md`
+- Conversation Insights:
+  `docs/knowledge/conversation_insights/README.md`
+- AI Proactive Proposal:
+  `docs/rules/ai_proactive_proposal_rules.md`
+
+Core boundary:
+
+```text
+Current Context
+  -> Daily Canonical Knowledge Source Review
+  -> Related Knowledge Suggestions
+  -> Human Decision
+  -> Q / Review / Promotion / Archive / Reject, when approved
+```
+
+AI only proposes. It does not automatically promote, commit, generate Q files,
+or implement changes.
+
+Startup behavior includes Daily Knowledge Source Review, Outstanding Review
+Notification, and Context-Aware Re-Suggestion of reviewed or approved Knowledge
+when relevance to current work is high. The canonical daily entry point is
+`docs/ai_repository_index.md`.
+
 ## Knowledge Inventory Index
 
 Knowledge Inventory は、Research、Debug Artifact、Completion Report、

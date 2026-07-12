@@ -212,12 +212,35 @@ AI Startup Procedure と Startup Checklist では、Conversation Insight Detecti
 - 自動保存していないか。
 - 明示承認後のみ Draft 生成に進むか。
 
+## Context-Aware Re-Suggestion
+
+Approved Insight、Reviewed Insight、Archived Insight であっても、現在の会話、
+作業、Repository状況と高い関連性がある場合は再提案できます。
+
+再提案時のルール:
+
+- Outstanding Review Notification と区別する。
+- Review status より Current Context Relevance を優先する。
+- 提案理由を短く説明する。
+- Review、Promotion、Q化、実装を強制しない。
+- 最終判断は Human Approval に委ねる。
+
+Example:
+
+```text
+以前承認済みのCI-00002ですが、
+現在のCommand Center設計と強く関連するため再提案します。
+```
+
+この再提案は自動Promotion、自動Q生成、自動実装、自動Commitを許可しません。
+
 ## Related Documents
 
 - `docs/workflow/conversation_insight_capture_workflow.md`
 - `docs/knowledge/conversation_insights/README.md`
 - `templates/conversation_insight_template.md`
 - `examples/conversation_insight_examples.md`
+- `docs/architecture/context_aware_knowledge_suggestion_assistant.md`
 - `docs/rules/ai_startup_procedure_rules.md`
 - `docs/rules/startup_checklist_rules.md`
 - `docs/workflow/ai_startup_procedure.md`
