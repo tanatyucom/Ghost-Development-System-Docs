@@ -244,6 +244,8 @@ Start from:
 - [`docs/rules/conversation_insight_capture_rules.md`](docs/rules/conversation_insight_capture_rules.md)
 - [`docs/workflow/conversation_insight_capture_workflow.md`](docs/workflow/conversation_insight_capture_workflow.md)
 - [`docs/knowledge/conversation_insights/README.md`](docs/knowledge/conversation_insights/README.md)
+- [`docs/knowledge/conversation_insights/CI-00001_knowledge_mining_from_casual_conversation.md`](docs/knowledge/conversation_insights/CI-00001_knowledge_mining_from_casual_conversation.md)
+- [`docs/knowledge/conversation_insights/CI-00002_design_conversation_mode.md`](docs/knowledge/conversation_insights/CI-00002_design_conversation_mode.md)
 - [`templates/conversation_insight_template.md`](templates/conversation_insight_template.md)
 - [`examples/conversation_insight_examples.md`](examples/conversation_insight_examples.md)
 

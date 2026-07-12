@@ -22,9 +22,26 @@ Conversation
 
 ## Entry Points
 
+- Rule: `docs/rules/conversation_insight_capture_rules.md`
 - Workflow: `docs/workflow/conversation_insight_capture_workflow.md`
 - Template: `templates/conversation_insight_template.md`
 - Examples: `examples/conversation_insight_examples.md`
+
+## Approved Insights
+
+| ID | Title | Status | Role |
+| --- | --- | --- | --- |
+| CI-00001 | Knowledge Mining from Casual Conversation | Approved Insight | Good Template reference for conversation as Knowledge Source |
+| CI-00002 | Design Conversation Mode | Approved Insight | Good Template reference for preserving design philosophy from conversation |
+
+Initial approved artifacts:
+
+- [`CI-00001_knowledge_mining_from_casual_conversation.md`](CI-00001_knowledge_mining_from_casual_conversation.md)
+- [`CI-00002_design_conversation_mode.md`](CI-00002_design_conversation_mode.md)
+
+These artifacts are Approved Insights. They are not automatically promoted
+Rules, Architecture, Workflow, Roadmap, Concepts, or CASE entries. Promotion
+requires a separate review.
 
 ## Storage Rule
 
@@ -37,8 +54,28 @@ docs/knowledge/conversation_insights/
 Recommended naming:
 
 ```text
-YYYY-MM-DD_<short_title>.md
+CI-00000_<short_title>.md
 ```
+
+ID format:
+
+```text
+CI-00001
+CI-00002
+CI-00003
+```
+
+Conversation Insight IDs use `CI-` plus a five-digit zero-padded sequence.
+
+## Good Template Reference
+
+Use the initial Approved Insights as practical references when creating a new
+Conversation Insight artifact:
+
+- CI-00001 shows how to preserve conversation as a Knowledge Source without
+  saving casual chat.
+- CI-00002 shows how to capture design philosophy that appears naturally in
+  conversation, while deferring adoption to review.
 
 ## Guard
 
@@ -47,3 +84,4 @@ YYYY-MM-DD_<short_title>.md
 - Human Approval is required before draft generation.
 - Conversation Insight does not replace Q, Research Mission, CASE, or Completion Report.
 - Future Candidate is not approved scope.
+- Approved Insight does not equal promoted Rule, Architecture, Workflow, or CASE.

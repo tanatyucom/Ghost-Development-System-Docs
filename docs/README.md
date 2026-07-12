@@ -286,6 +286,10 @@ Reference points:
   `docs/workflow/conversation_insight_capture_workflow.md`
 - Storage:
   `docs/knowledge/conversation_insights/README.md`
+- Initial Approved Insights:
+  `docs/knowledge/conversation_insights/CI-00001_knowledge_mining_from_casual_conversation.md`
+  and
+  `docs/knowledge/conversation_insights/CI-00002_design_conversation_mode.md`
 - Template:
   `templates/conversation_insight_template.md`
 - Examples:

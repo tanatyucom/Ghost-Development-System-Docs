@@ -125,6 +125,34 @@ Draft の扱い:
 Approved Knowledge になるには、対象の promotion workflow、review、必要な
 Human Approval、completion report を経由します。
 
+Approved Insight は、Human Approval済みの Conversation Insight artifact です。
+Approved Insight は保存対象として承認されていますが、Rule、Architecture、
+Workflow、Roadmap、Concept、CASEへの昇格を自動承認するものではありません。
+
+## ID Standard
+
+Conversation Insight ID は `CI-` と5桁ゼロパディングの連番を使います。
+
+Examples:
+
+```text
+CI-00001
+CI-00002
+CI-00003
+```
+
+Recommended filename:
+
+```text
+CI-00000_<short_title>.md
+```
+
+Canonical save location:
+
+```text
+docs/knowledge/conversation_insights/
+```
+
 ## Promotion Destinations
 
 Conversation Insight の昇格先候補:

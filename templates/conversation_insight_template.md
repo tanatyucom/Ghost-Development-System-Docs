@@ -8,6 +8,7 @@
 - Status:
   - Candidate
   - Draft
+  - Approved Insight
   - Under Review
   - Future Candidate
   - Promoted
@@ -22,6 +23,24 @@
   - Yes / No
 - Created by:
 - Reviewer:
+
+ID format:
+
+```text
+CI-00000
+```
+
+Example:
+
+```text
+CI-00003
+```
+
+Filename:
+
+```text
+CI-00000_<short_title>.md
+```
 
 ## Source Conversation Summary
 
