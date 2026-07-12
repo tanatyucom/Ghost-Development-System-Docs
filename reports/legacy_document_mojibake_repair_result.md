@@ -22,3 +22,30 @@
 
 - P1 Critical の入口文書、Rules、Workflow、Templates から人間レビューしてください。
 - 信頼できる原文または人間承認済み置換案を使い、行単位で再構築するFollow-up Qを作成してください。
+
+## Batch 1 Manual Repair Result
+
+- Date: 2026-07-13
+- Source Q: `Q_GDS_Legacy_Document_Mojibake_Manual_Repair_Batch1_JP.md`
+- Policy: Audit Before Repair / no guessed broad repair / repair only human-verifiable lines.
+- Repaired files:
+  - `README.md`
+  - `docs/README.md`
+- Repaired candidate lines: 20
+- `README.md` mojibake candidate count: 185 -> 169
+- `docs/README.md` mojibake candidate count: 246 -> 242
+- `docs/history/knowledge_base_history.md` mojibake candidate count: 63 -> 63
+
+### Batch 1 Repair Scope
+
+- Repaired stable entry-point wording in `README.md`.
+- Repaired UTF-8 reading guidance in `README.md`.
+- Repaired short standard-flow labels in `README.md`.
+- Repaired Japanese documentation policy wording in `docs/README.md`.
+- Repaired explicit Conversation Insight approval examples in `README.md` and `docs/README.md`.
+
+### Batch 1 Remaining Issues
+
+- Large paragraphs with lossy reverse-conversion artifacts remain unresolved.
+- Lines that produced `、E`, `めE`, or other missing-character traces were not repaired.
+- `docs/history/knowledge_base_history.md` was not repaired in Batch 1 because candidate lines require stronger source confirmation.

@@ -102,8 +102,8 @@ Get-Content -LiteralPath <path> -Encoding UTF8
 Mojibake reports must include file name, line number, mojibake string,
 expected string, command used, and inferred cause.
 
-莠ｺ髢薙′隱ｭ繧隱ｬ譏取枚譖ｸ縺ｯ譌･譛ｬ隱槫━蜈医〒邯ｭ謖√＠縺ｾ縺吶Ｄommand縲｝ath縲ゞRL縲（dentifier縲・
-status value 縺ｯ莠呈鋤諤ｧ縺ｮ縺溘ａ蠢・ｦ√↓蠢懊§縺ｦ闍ｱ隱槭・縺ｾ縺ｾ邯ｭ謖√〒縺阪∪縺吶・
+人間が読む説明文書は日本語優先で維持します。command、path、URL、identifier、
+status value は互換性のため必要に応じて英語のまま維持できます。
 
 
 
@@ -399,8 +399,8 @@ Conversation
 ```
 
 AI may propose a candidate when repository value is high, but must not
-auto-save. Drafting requires explicit Human Approval such as `譖ｸ縺・→縺・※`,
-`菫晏ｭ倥＠縺ｦ`, `Repository縺ｸ霑ｽ蜉`, `Q蛹悶＠縺ｦ`, or `Conversation Insight縺ｨ縺励※谿九＠縺ｦ`.
+auto-save. Drafting requires explicit Human Approval such as `書いて`,
+`保存して`, `Repositoryへ追加`, `Q化して`, or `Conversation Insightとして残して`.
 
 Startup integration:
 

@@ -7,7 +7,7 @@
 
 ## 要約
 
-- 生成日時: `2026-07-12T16:43:41Z`
+- 生成日時: `2026-07-12T16:59:56Z`
 - Repository: `Ghost-Development-System-Docs`
 - Overall Repository Health: `Yellow`
 - 通過したチェック: `9`
@@ -36,13 +36,13 @@
 
 - Status: `PASS`
 - Details:
-  - 329 Markdown files を UTF-8 として読み取れました。
+  - 332 Markdown files を UTF-8 として読み取れました。
 
 ### AI Repository Index Validation
 
 - Status: `PASS`
 - Details:
-  - OK: 329 Markdown files が index に登録されています。
+  - OK: 332 Markdown files が index に登録されています。
 
 ### GDS Health Validation
 
@@ -151,7 +151,7 @@
   - docs/history/knowledge_base_history.md:1949: Steam OCR遐皮ｩｶ縺ｯ縲∝腰縺ｪ繧軌CR謾ｹ蝟・〒縺ｯ縺ｪ縺上ヽesearch Mission縲゜nowledge
   - docs/history/knowledge_base_history.md:1950: Inventory縲￣romotion Review縲・xisting Rule Update縲，ASE縲；itHub Integration繧・
   - docs/history/knowledge_base_history.md:1951: 蛻昴ａ縺ｦ螳滄°逕ｨ縺励◆GDS縺ｮ豁ｴ蜿ｲ逧・・繧､繝ｫ繧ｹ繝医・繝ｳ縺ｫ縺ｪ縺｣縺溘◆繧√・
-  - ... 他 581 件
+  - ... 他 565 件
 
 ## エラー (Errors)
 

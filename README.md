@@ -1,12 +1,12 @@
 # Ghost Development System Docs
 
-Ghost Development System 縺ｮ蜈ｬ蠑・Knowledge Base 縺ｧ縺吶・
+Ghost Development System の公式 Knowledge Base です。
 
 縺薙・繝ｪ繝昴ず繝医Μ縺ｯ縲；host Development System 繧剃ｺｺ髢謎ｸｻ蟆弱・AI 謾ｯ謠ｴ縺ｧ髢狗匱縺吶ｋ
 縺溘ａ縺ｮ蜈ｬ髢九Ν繝ｼ繝ｫ縲√Ο繝ｼ繝峨・繝・・縲√ユ繝ｳ繝励Ξ繝ｼ繝医・°逕ｨ蜴溷援繧堤ｮ｡逅・＠縺ｾ縺吶・
 
 縺薙・繝壹・繧ｸ縺ｮ谺｡縺ｫ縲∝・蠑・Knowledge Base Index 縺ｨ縺励※
-[`docs/README.md`](docs/README.md) 繧定ｪｭ繧薙〒縺上□縺輔＞縲・
+[`docs/README.md`](docs/README.md) を読んでください。
 
 ## AI Repository Knowledge Access
 
@@ -23,8 +23,8 @@ Start from:
 README縲ヽoadmap縲、rchitecture縲ヽules縲仝orkflow縲ゝemplates縲・xamples縲・
 Glossary縲？istory縲￣IP縲，ASE縲，oncept縲｀ethodology 縺ｮ驥崎ｦ∝・蜿｣繧呈峩譁ｰ縺励◆蝣ｴ蜷医・縲・
 AI Repository Knowledge Access Index 縺ｮ蜀咲函謌舌・讀懆ｨｼ隕∝凄繧ら｢ｺ隱阪＠縺ｾ縺吶・
-GitHub Actions 縺ｧ縺ｯ `.github/workflows/ai-repository-index-validation.yml`
-縺ｫ繧医ｊ縲！ndex 縺ｮ讀懆ｨｼ縺ｨ譛譁ｰ諤ｧ繝√ぉ繝・け繧定｡後＞縺ｾ縺吶・
+GitHub Actions では `.github/workflows/ai-repository-index-validation.yml`
+により、Index の検証と最新性チェックを行います。
 
 ## Project Profiles
 
@@ -36,8 +36,8 @@ Start from:
 - [`project_profiles/README.md`](project_profiles/README.md)
 - [`project_profiles/gameghost/README.md`](project_profiles/gameghost/README.md)
 
-AI 縺悟句挨繝励Ο繧ｸ繧ｧ繧ｯ繝医ｒ謇ｱ縺・ｴ蜷医・縲；DS 蜈ｱ騾壹Ν繝ｼ繝ｫ繧定ｪｭ繧薙□蠕後∝ｯｾ雎｡ Project
-Profile 繧定ｪｭ縺ｿ縲∵怙蠕後↓ Q File 縺ｨ Startup Checklist 繧堤｢ｺ隱阪＠縺ｾ縺吶・
+AI が個別プロジェクトを扱う場合は、GDS 共通ルールを読んだ後、対象 Project
+Profile を読み、最後に Q File と Startup Checklist を確認します。
 
 ## AI Startup Procedure
 
@@ -49,8 +49,8 @@ Start from:
 - [`docs/workflow/ai_startup_procedure.md`](docs/workflow/ai_startup_procedure.md)
 - [`templates/startup_checklist_template.md`](templates/startup_checklist_template.md)
 
-Windows PowerShell 5.1 縺ｧ Q file 繧・律譛ｬ隱・Markdown 繧定ｪｭ繧蝣ｴ蜷医・ UTF-8 繧・
-譏守､ｺ縺励∪縺吶・
+Windows PowerShell 5.1 で Q file や日本語 Markdown を読む場合は UTF-8 を
+明示します。
 
 ```powershell
 Get-Content -LiteralPath <path> -Encoding UTF8
@@ -60,13 +60,13 @@ Rule:
 
 - [`docs/rules/utf8_read_rules.md`](docs/rules/utf8_read_rules.md)
 
-隱ｬ譏取枚譖ｸ縺ｮ譌･譛ｬ隱槫喧譁ｹ驥・
+説明文書の日本語化方針
 
 - [`docs/rules/language_rules.md`](docs/rules/language_rules.md)
 - [`docs/workflow/japanese_documentation_localization_workflow.md`](docs/workflow/japanese_documentation_localization_workflow.md)
 - [`reports/japanese_documentation_localization_report.md`](reports/japanese_documentation_localization_report.md)
 
-讓呎ｺ夜・ｺ・
+標準順序:
 
 ```text
 AI Repository Index
@@ -87,7 +87,7 @@ Start from:
 - [`docs/workflow/ai_daily_operation_cycle.md`](docs/workflow/ai_daily_operation_cycle.md)
 - [`templates/daily_operation_checklist_template.md`](templates/daily_operation_checklist_template.md)
 
-讓呎ｺ悶し繧､繧ｯ繝ｫ:
+標準サイクル:
 
 ```text
 AI Startup Procedure
@@ -113,7 +113,7 @@ Start from:
 - [`docs/workflow/research_mission_workflow.md`](docs/workflow/research_mission_workflow.md)
 - [`docs/rules/research_mission_rules.md`](docs/rules/research_mission_rules.md)
 
-讓呎ｺ悶ヵ繝ｭ繝ｼ:
+標準フロー:
 
 ```text
 Observation
@@ -188,7 +188,7 @@ Knowledge Access Index
   -> Chat
 ```
 
-蜊疲･ｭ繝ｫ繝ｼ繝ｫ縺ｮ蜆ｪ蜈亥ｺｦ:
+協業ルールの優先度:
 
 ```text
 Rule
@@ -221,7 +221,7 @@ Start from:
 - [`docs/knowledge/inventory/README.md`](docs/knowledge/inventory/README.md)
 - [`docs/knowledge/inventory/steam_ocr_knowledge_inventory_v1.md`](docs/knowledge/inventory/steam_ocr_knowledge_inventory_v1.md)
 
-讓呎ｺ悶ヵ繝ｭ繝ｼ:
+標準フロー:
 
 ```text
 Research
@@ -245,7 +245,7 @@ Start from:
 - [`templates/conversation_insight_template.md`](templates/conversation_insight_template.md)
 - [`examples/conversation_insight_examples.md`](examples/conversation_insight_examples.md)
 
-讓呎ｺ悶ヵ繝ｭ繝ｼ:
+標準フロー:
 
 ```text
 Conversation
@@ -257,7 +257,7 @@ Conversation
   -> Rule / Architecture / Workflow / Roadmap / Concept / CASE
 ```
 
-AI 縺ｯ蛟呵｣懈署譯医〒縺阪∪縺吶′縲∬・蜍穂ｿ晏ｭ倥・縺励∪縺帙ｓ縲Ａ譖ｸ縺・→縺・※`縲～菫晏ｭ倥＠縺ｦ`縲・`Repository縺ｸ霑ｽ蜉`縲～Q蛹悶＠縺ｦ` 縺ｮ繧医≧縺ｪ莠ｺ髢薙・譏守､ｺ謇ｿ隱阪′縺ゅｋ蝣ｴ蜷医・縺ｿ縲・Conversation Insight artifact 繧剃ｽ懈・縺励∪縺吶・
+AI は候補を提案できますが、自動保存はしません。`書いて`、`保存して`、`Repositoryへ追加`、`Q化して` のような人間の明示承認がある場合のみ、Conversation Insight artifact を作成します。
 AI Startup Procedure 縺ｨ Startup Checklist 縺ｧ縺ｯ縲，onversation Insight Detection
 縺ｨ縺励※縲・㍾隕√↑險ｭ險域晄Φ縲・°逕ｨ譁ｹ驥昴∽ｿ晏ｮ域婿驥昴｀igration謌ｦ逡･縲，ommand Center讒区Φ縲・髟ｷ譛溘ン繧ｸ繝ｧ繝ｳ縺悟性縺ｾ繧後ｋ縺九ｒ遒ｺ隱阪＠縺ｾ縺吶・
 ## GDS Health
@@ -688,7 +688,7 @@ Start from:
 蜀・Κ architecture 縺ｮ螟画峩縺ｧ縺ｯ縲∵￡荵・噪縺ｪ compatibility fallback 繧貞｢励ｄ縺吝燕縺ｫ縲・
 讓呎ｺ匁ｧ矩縺ｸ遘ｻ陦後☆繧区婿驥昴ｒ蜆ｪ蜈医＠縺ｾ縺吶・
 
-讓呎ｺ悶ヵ繝ｭ繝ｼ:
+標準フロー:
 
 ```text
 New Standard
