@@ -94,6 +94,8 @@ Idea
   -> AI Startup Procedure
   -> Startup Checklist
   -> Repository Root Validation
+  -> Information Package Check, when provided
+  -> Current Q Check
   -> AI Repository Index Check, when public repository knowledge is needed
   -> Knowledge Check
   -> Knowledge Poka-Yoke Check
@@ -102,11 +104,12 @@ Idea
   -> Review
   -> Q Artifact Workspace
   -> Workspace Save Verification
+  -> Research Task Detection
+  -> Research Mission, when investigation scope and evidence must be explicit
   -> Audit Before Repair, when repairing or cleaning up
   -> Approval
   -> Codex / AI Implementation
   -> Debug Escalation Ladder, when cause is uncertain
-  -> Research Mission, when investigation scope and evidence must be explicit
   -> Debug Artifact Review, when applicable
   -> Completion Report Artifact
   -> Knowledge Inventory, when reusable knowledge is found but not yet promoted

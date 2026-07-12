@@ -45,6 +45,8 @@ repository as the source of truth.
 - Secondary focus:
 - Active Q:
 - Active review:
+- Research Mission needed:
+- Research Mission artifact:
 - Next expected action:
 
 ## Active Repository
@@ -70,6 +72,7 @@ repository as the source of truth.
 
 - Q template:
 - Completion report template:
+- Research Mission template:
 - Multi-AI handoff template:
 - Review template:
 - Other templates:

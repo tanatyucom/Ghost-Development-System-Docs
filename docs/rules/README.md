@@ -36,7 +36,8 @@ promoted.
   repository access rule for ChatGPT, Codex, and other AI systems.
 - `ai_startup_procedure_rules.md`: AI startup reading order and stop
   conditions before implementation, review, documentation update, or Q
-  execution begins.
+  execution begins. Includes Information Package check and Research Task
+  Detection before normal implementation starts.
 - `project_rules.md`: Project First Principle and Cross Project rules.
 - `language_rules.md`: Japanese-first documentation operation rules.
 - `documentation_rules.md`: documentation structure and update rules.
@@ -54,7 +55,8 @@ promoted.
   release, next Q, and workspace clean confirmation.
 - `research_mission_rules.md`: rule for scoped investigation missions that
   define Goal, Scope, Out of Scope, Evidence, Validation, Negative Result
-  handling, and Completion Report before research begins.
+  handling, and Completion Report before research begins. Startup Procedure
+  branches here when Research Task Detection is Yes.
 - `artifact_first_rules.md`: file generation rules for reusable Q files,
   design documents, AI requests, roadmap proposals, and long reviews.
 - `q_file_artifact_standard.md`: Task Artifact Workspace, save location,

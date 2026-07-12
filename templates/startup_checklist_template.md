@@ -17,6 +17,7 @@
 - Current Phase:
 - Current Goal:
 - Source Q File:
+- Information Package:
 - Q Artifact Workspace:
 - Download File / Attachment:
 - Completion Report Target:
@@ -24,6 +25,8 @@
 ## Startup Confirmation
 
 - AI Repository Index read:
+- Information Package provided:
+- Information Package read:
 - Target Project identified:
 - Project Profile applies:
 - Project Profile path:
@@ -34,6 +37,10 @@
 - Current Q File read with explicit UTF-8:
 - Q File mojibake check:
 - Scope / Out of Scope confirmed:
+- Research Task Detection completed:
+- Research Task:
+- Research Mission required:
+- Research Mission artifact:
 - Session Health checked:
 - Current Working Directory:
 - Git repository root:
@@ -114,6 +121,25 @@
 - Debug artifacts expected:
 - Review Entry Point expected:
 
+## Research Task Detection
+
+- Research Task detected: Yes / No
+- Detection reason:
+- Investigation / hypothesis validation:
+- Root Cause unknown:
+- Evidence collection required:
+- Knowledge gap classification:
+- First Broken Step identification needed:
+- Normal implementation path selected:
+- Research Mission path selected:
+- Research Mission template read:
+- Goal confirmed:
+- Scope confirmed:
+- Out of Scope confirmed:
+- Required Evidence confirmed:
+- Validation Method confirmed:
+- Blockers before research:
+
 ## Scope / Out Of Scope
 
 ### In Scope
@@ -137,6 +163,10 @@
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/rules/startup_checklist_rules.md`
 - `docs/workflow/startup_checklist_workflow.md`
+- `docs/rules/research_mission_rules.md`
+- `docs/workflow/research_mission_workflow.md`
+- `templates/research_mission_template.md`
+- `templates/information_package_template.md`
 - `docs/README.md`
 - `docs/rules/rules.md`
 - `docs/workflow/README.md`

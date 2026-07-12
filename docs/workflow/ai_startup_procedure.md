@@ -13,13 +13,16 @@ Startup Checklist が「開始直前のチェックリスト」なら、AI Start
 ```text
 Start
   -> AI Repository Index Check
-  -> Repository Root Validation
-  -> GDS Core Rules / Workflow Check
-  -> Target Project Profile Check
+  -> Information Package Check, when provided
   -> Current Q File Check
+  -> Repository Root Validation
+  -> GDS Core Rules / Templates Check
+  -> Target Project Profile Check
   -> Startup Checklist
   -> Scope / Out of Scope Confirmation
-  -> Implementation / Review Start
+  -> Research Task Detection
+  -> Normal Implementation / Review Start, when not research
+  -> Research Mission, when research
 ```
 
 ## Step Details
@@ -34,64 +37,25 @@ Start
 - Raw URL または local path が使える。
 - 新規 Markdown を追加する作業では、最後に Index 再生成が必要か確認する。
 
-### 2. Repository Root Validation
+### 2. Information Package Check
 
-作業対象 repository を実測します。
-
-```bash
-pwd
-git rev-parse --show-toplevel
-git status
-```
+Information Package が提供されている場合、Current Q と一緒に確認します。
 
 確認すること:
 
-- Current Working Directory
-- Actual Git root
-- Expected Working Repository
-- Production / backup / reference-only boundary
-- Dirty workspace state
+- Current Status.
+- Current Focus.
+- Active Repository.
+- Recent Decisions.
+- Open Issues.
+- Recent Artifacts.
+- Recommended Next Q.
+- Research Mission が必要な調査タスクか。
 
-### 3. GDS Core Rules / Workflow Check
+Information Package は repository source of truth を置き換えません。現在状態の
+briefing として扱い、Q、Project Profile、rules と矛盾する場合は確認します。
 
-最低限、次の入口を確認します。
-
-- `docs/rules/rules.md`
-- `docs/rules/project_rules.md`
-- `docs/rules/startup_checklist_rules.md`
-- `docs/workflow/README.md`
-
-作業内容に応じて、次の文書を追加確認します。
-
-- Artifact First / Q File Artifact Standard
-- Audit Before Repair
-- Debug Artifact Review
-- Debug Escalation Ladder
-- Research Mission
-- Migration First
-- Completion Checklist
-- Commit Safety
-
-### 4. Target Project Profile Check
-
-Target Project に profile がある場合、対象 profile を読みます。
-
-例:
-
-```text
-project_profiles/gameghost/README.md
-```
-
-確認すること:
-
-- repository location
-- edit boundary
-- project-specific rules
-- project-specific workflow
-- AI context
-- completion policy
-
-### 5. Current Q File Check
+### 3. Current Q File Check
 
 Q File から今回の作業範囲を確認します。
 
@@ -118,7 +82,65 @@ Plain `Get-Content` の表示だけで文字化けやファイル破損を判断
 Q が Artifact First 対象の場合、保存済み Q artifact を authoritative source として
 扱います。
 
-### 6. Startup Checklist
+### 4. Repository Root Validation
+
+作業対象 repository を実測します。
+
+```bash
+pwd
+git rev-parse --show-toplevel
+git status
+```
+
+確認すること:
+
+- Current Working Directory
+- Actual Git root
+- Expected Working Repository
+- Production / backup / reference-only boundary
+- Dirty workspace state
+
+### 5. GDS Core Rules / Templates Check
+
+最低限、次の入口を確認します。
+
+- `docs/rules/rules.md`
+- `docs/rules/project_rules.md`
+- `docs/rules/startup_checklist_rules.md`
+- `docs/workflow/README.md`
+- `templates/README.md`
+
+作業内容に応じて、次の文書を追加確認します。
+
+- Artifact First / Q File Artifact Standard
+- Audit Before Repair
+- Debug Artifact Review
+- Debug Escalation Ladder
+- Research Mission
+- Migration First
+- Completion Checklist
+- Commit Safety
+
+### 6. Target Project Profile Check
+
+Target Project に profile がある場合、対象 profile を読みます。
+
+例:
+
+```text
+project_profiles/gameghost/README.md
+```
+
+確認すること:
+
+- repository location
+- edit boundary
+- project-specific rules
+- project-specific workflow
+- AI context
+- completion policy
+
+### 7. Startup Checklist
 
 読み込み結果を Startup Checklist に反映します。
 
@@ -137,7 +159,7 @@ Startup Checklist:
 - Ready:
 ```
 
-### 7. Scope / Out of Scope Confirmation
+### 8. Scope / Out of Scope Confirmation
 
 実装・レビュー・文書更新を始める直前に、今回触ってよい対象と触ってはいけない対象を
 確認します。
@@ -149,6 +171,37 @@ Startup Checklist:
 - generated artifacts を Git 管理対象にするか。
 - commit してよい Q か。
 
+### 9. Research Task Detection
+
+Scope確認後、今回のタスクがResearch Missionへ分岐すべきか判定します。
+
+Research Task として扱う代表例:
+
+- 原因が未確定の調査。
+- Root Cause確認。
+- 仮説比較。
+- Evidence collection。
+- Knowledge gap分類。
+- Debug / review結果から次の判断材料を集める作業。
+- 実装前にFirst Broken Stepを特定する必要がある作業。
+
+判定:
+
+```text
+Research Task: No
+  -> Normal Implementation / Review Start
+
+Research Task: Yes
+  -> Read or create Research Mission
+  -> Confirm Goal / Scope / Out of Scope
+  -> Confirm Required Evidence / Validation
+  -> Research Mission Workflow
+```
+
+Research Task が Yes の場合、曖昧なまま実装へ進まず、
+`templates/research_mission_template.md` と
+`docs/workflow/research_mission_workflow.md` に従います。
+
 ## Stop Conditions
 
 次の状態では Implementation / Review Start に進みません。
@@ -157,6 +210,7 @@ Startup Checklist:
 - Project Profile が必要なのに読めていない。
 - Q と Project Profile が矛盾している。
 - Scope Guard が曖昧。
+- Research Task なのに Goal、Scope、Out of Scope、Evidence、Validation が不明。
 - Commit policy が曖昧。
 - authoritative Q artifact が必要なのに保存されていない。
 

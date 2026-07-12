@@ -16,11 +16,15 @@ When AI works on an individual project, read sources in this order:
 
 ```text
 AI Repository Knowledge Access Index
+  -> Information Package, when provided
+  -> Current Q File
   -> Repository Root Validation
-  -> GDS Core Rules / Workflow / Methodology
+  -> GDS Core Rules / Templates / Methodology
   -> Target Project Profile
-  -> Q File
   -> Startup Checklist
+  -> Research Task Detection
+  -> Normal Implementation / Review, when not research
+  -> Research Mission, when research
 ```
 
 This order is formalized by:
@@ -30,6 +34,17 @@ This order is formalized by:
 
 The Project Profile does not replace the Q file. It provides stable project
 context so the Q file can focus on the current task.
+
+When the Current Q or Information Package indicates investigation, root cause
+research, hypothesis validation, evidence collection, or knowledge gap
+classification, AI should branch from Startup Checklist into Research Mission
+instead of normal implementation.
+
+Research Mission entry points:
+
+- `templates/research_mission_template.md`
+- `docs/workflow/research_mission_workflow.md`
+- `docs/rules/research_mission_rules.md`
 
 ## Standard Profile Shape
 

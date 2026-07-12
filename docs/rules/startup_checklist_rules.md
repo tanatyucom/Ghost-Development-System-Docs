@@ -15,13 +15,14 @@ GDS の運用ルール、Methodology、Repository Information、Scope Guard を
 Startup Checklist を確認します。
 
 AI は Startup Checklist の前に AI Startup Procedure を使い、AI Repository
-Index、Repository Root Validation、GDS Core Rules / Workflow、Target Project
-Profile、Current Q File を順に確認します。
+Index、Information Package when provided、Current Q File、Repository Root
+Validation、GDS Core Rules / Templates、Target Project Profile を順に確認します。
 
 最低限確認する項目:
 
 - Working Repository.
 - AI Repository Index.
+- Information Package, when provided.
 - Target Project Profile.
 - Repository Root Validation.
 - Production repository / backup / reference-only repository.
@@ -29,6 +30,7 @@ Profile、Current Q File を順に確認します。
 - Current Goal.
 - Applicable Rules.
 - Applicable Methodologies.
+- Research Task Detection.
 - Repository Information.
 - Q Format.
 - Artifact / Download File Rule.
@@ -148,6 +150,26 @@ Artifact First と Q File Artifact Standard に従います。
 - backup / generated / debug artifact を誤って正規成果物にしないか。
 - commit 禁止の Q で commit しないか。
 
+### Research Task Detection
+
+Scope / Out of Scope確認後、通常実装へ進む前にResearch Taskかどうかを判定します。
+
+Research Task の代表例:
+
+- 原因が未確定の調査。
+- Root Cause確認。
+- 仮説比較。
+- Evidence collection。
+- Knowledge gap分類。
+- Debug / review結果から次の判断材料を集める作業。
+- First Broken Step特定が必要な作業。
+
+Research Taskではない場合、通常のimplementation / reviewへ進みます。
+
+Research Taskの場合、`templates/research_mission_template.md` を読み、
+Goal、Scope、Out of Scope、Required Evidence、Validation Methodを確認してから
+Research Mission Workflowへ進みます。
+
 ## Startup Checklist Output
 
 Startup Checklist の結果は、必要に応じて短く記録します。
@@ -157,6 +179,7 @@ Startup Checklist の結果は、必要に応じて短く記録します。
 ```text
 Startup Checklist:
 - AI Repository Index read:
+- Information Package read:
 - Target Project identified:
 - Project Profile read:
 - Repository confirmed:
@@ -165,6 +188,8 @@ Startup Checklist:
 - Scope confirmed:
 - Applicable rules:
 - Applicable methodologies:
+- Research Task Detection:
+- Research Mission required:
 - Q artifact status:
 - Commit policy:
 - Repository root validation:
@@ -191,7 +216,10 @@ Startup Checklist は、既存 Knowledge を増やすためではなく、既存
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/rules/ai_startup_procedure_rules.md`
+- `docs/rules/research_mission_rules.md`
 - `templates/startup_checklist_template.md`
+- `templates/research_mission_template.md`
+- `templates/information_package_template.md`
 - `examples/startup_checklist_examples.md`
 - `docs/rules/project_rules.md`
 - `docs/rules/repository_root_validation_rules.md`
@@ -201,4 +229,5 @@ Startup Checklist は、既存 Knowledge を増やすためではなく、既存
 - `docs/rules/git_rules.md`
 - `docs/workflow/commit_safety_checklist.md`
 - `docs/workflow/first_broken_step_methodology.md`
+- `docs/workflow/research_mission_workflow.md`
 - `docs/README.md`

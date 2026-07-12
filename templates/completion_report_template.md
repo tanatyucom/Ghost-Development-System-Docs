@@ -146,7 +146,13 @@
 - Current Q File read with explicit UTF-8:
 - Q File read command:
 - Q File mojibake check result:
+- Information Package provided:
+- Information Package read:
 - Scope / Out of Scope confirmed before implementation:
+- Research Task Detection performed:
+- Research Task:
+- Research Mission required:
+- Research Mission path:
 - Session Health checked:
 - Startup Checklist applies:
 - Working Repository confirmed:

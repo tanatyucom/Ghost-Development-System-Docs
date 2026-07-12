@@ -1987,6 +1987,29 @@ GDSは、曖昧な調査依頼をそのままAIへ渡す運用から、Research 
 調査の目的、証拠、検証、負の結果、Knowledge Promotion候補を保存する運用へ
 進化した。
 
+## Ver1.72
+
+### Added
+
+- Research Task Detection in AI Startup Procedure.
+- Information Package check before Research Task Detection.
+- Startup branching from normal implementation to Research Mission when
+  investigation scope and evidence must be explicit.
+- Research Task Detection fields in Startup Checklist and Completion Report
+  templates.
+- Project Profile reading order update for Research Mission startup branch.
+
+### Reason
+
+Research Mission Template / Workflow / Rulesが標準化された後、Startup Procedure
+からResearch Taskを検出してResearch Missionへ入る入口が必要になったため。
+
+### Evolution
+
+GDS Startupは、単にrepositoryとscopeを確認するだけでなく、Current Qと
+Information Packageから「これは通常実装か、Research Missionか」を判定する
+起動ゲートへ進化した。
+
 ## Update Notes
 
 この文書は詳細な Decision Log ではありません。

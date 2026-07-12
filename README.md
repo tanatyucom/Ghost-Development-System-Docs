@@ -109,6 +109,11 @@ AI Startup Procedure
 不確実な原因調査、仮説比較、Root Cause確認、Knowledge gap確認を行う場合は、
 曖昧な「調査してください」ではなく Research Mission として扱います。
 
+Startup Procedure は Current Q と Information Package を確認した後、
+Research Task Detection を行います。Research Task の場合は通常実装へ進まず、
+Research Missionを読んでGoal、Scope、Out of Scope、Evidence、Validationを
+明示してから調査します。
+
 Start from:
 
 - [`templates/research_mission_template.md`](templates/research_mission_template.md)
