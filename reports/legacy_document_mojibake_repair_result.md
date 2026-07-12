@@ -76,3 +76,36 @@
 
 - Other files outside the Batch2 priority scope may still contain mojibake candidates.
 - Completion Report v2 historical narrative from the broken history update was not reconstructed in `docs/history/knowledge_base_history.md`; the safe record for this repair is kept in this repair result and the Batch2 completion report.
+
+## Batch 3 Recovery Result - Rules / Workflow
+
+Date: 2026-07-13
+
+Scope:
+
+- `docs/workflow/startup_checklist_workflow.md`
+- `docs/workflow/README.md`
+- `docs/rules/rules.md`
+- `examples/migration_first_examples.md`
+
+Method:
+
+- Trusted Git history versions were used as source of truth.
+- No inference-based Japanese reconstruction was used.
+- Valid additions from regression commits were manually preserved when they were clear from the diff.
+
+| File | Section / Line Range | Regression Commit | Trusted Source Commit | Restored Text Source | Later Changes Preserved | Human Review Result |
+| --- | --- | --- | --- | --- | --- | --- |
+| `docs/workflow/startup_checklist_workflow.md` | Whole file, especially Purpose, checklist steps, Q/Artifact, Conversation Insight, Knowledge Suggestion, Research Task, Completion Criteria | `9bb3344` | `9bb3344^` | Clean parent text merged with valid `9bb3344` Q naming additions | Q ID / Naming Confirmation, Q Template Required Fields, q_file_naming_rules, q_file_template_rules, Q workflow links | Restored from trusted history; no mojibake candidates remain |
+| `docs/workflow/README.md` | Contains list, Standard Development Flow, Debug Artifact Review, Q Artifact Workflow, PIP Update, Related Documents | `eb80ac1` | `eb80ac1^` | Clean parent text merged with valid `eb80ac1` and `9bb3344` workflow references | Completion Report v2, Q File Creation Workflow, Q Revision / Addendum Workflow, updated request workspace naming | Restored from trusted history; no mojibake candidates remain |
+| `docs/rules/rules.md` | Rule Organization, Official Rule Documents, Conversation Insight Capture, Project First, Japanese First | `9bb3344` | `9bb3344^` | Clean parent text merged with valid `9bb3344` rule index additions | Completion Report Standard, Q File Artifact Standard, Q File Naming, Q File Template Standard | Restored from trusted history; no mojibake candidates remain |
+| `examples/migration_first_examples.md` | Whole file and Completion Report Example | `9bb3344` | `9bb3344^` | Clean parent text merged with valid request workspace naming update | `docs/requests/<project>/<status>/<Q_ID>_<short_topic>/` example | Restored from trusted history; no mojibake candidates remain |
+
+Candidate count:
+
+| File | Before | After |
+| --- | ---: | ---: |
+| `docs/workflow/startup_checklist_workflow.md` | 366 | 0 |
+| `docs/workflow/README.md` | 80 | 0 |
+| `docs/rules/rules.md` | 89 | 0 |
+| `examples/migration_first_examples.md` | 205 | 0 |
