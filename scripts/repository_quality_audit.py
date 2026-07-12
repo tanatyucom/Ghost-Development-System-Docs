@@ -21,6 +21,7 @@ INTENTIONAL_MOJIBAKE_DOCS = {
     Path("docs/knowledge/conversation_insights/CI-00004_encoding_regression_prevention_as_poka_yoke.md"),
     Path("docs/requests/gds/draft/GDS-MOJIBAKE-AUDIT-001_legacy_document_mojibake_audit_and_repair/request.md"),
     Path("docs/requests/gds/draft/GDS-MOJIBAKE-RECOVERY-BATCH4-001_request_artifact_intentional_evidence/request.md"),
+    Path("docs/requests/gds/draft/GDS-ENCODING-PREVENTION-001_encoding_regression_prevention_rule_and_validator/request.md"),
     Path("docs/history/mojibake_audit_report_2026-07-10.md"),
     Path("reports/legacy_document_mojibake_audit.md"),
     REPORT_PATH,
@@ -186,6 +187,17 @@ def check_ai_repository_index(root: Path) -> CheckResult:
     if code:
         return CheckResult("AI Repository Index Validation", "ERROR", details)
     return CheckResult("AI Repository Index Validation", "PASS", details)
+
+
+def check_encoding_regression(root: Path) -> CheckResult:
+    code, stdout, stderr = run_command(
+        root,
+        [sys.executable, "scripts/validate_encoding_regression.py", "--all"],
+    )
+    details = [line for line in [stdout, stderr] if line]
+    if code:
+        return CheckResult("Encoding Regression Validation", "ERROR", details)
+    return CheckResult("Encoding Regression Validation", "PASS", details)
 
 
 def check_gds_health(root: Path) -> CheckResult:
@@ -638,6 +650,7 @@ def run_audit(root: Path) -> AuditState:
     checks = [
         check_utf8_decode,
         check_mojibake,
+        check_encoding_regression,
         check_ai_repository_index,
         check_gds_health,
         check_broken_links,

@@ -10,7 +10,7 @@ Ghost Development System knowledge base.
 
 Core rules include Evidence First, Purpose-Oriented Naming, Human Approval Gate,
 Knowledge Before Automation, Knowledge Poka-Yoke / Design For Forgetfulness,
-UTF-8 Read Rule,
+UTF-8 Read Rule, Encoding Regression Prevention,
 External Source Access / AI Repository Knowledge Access, AI Startup Procedure, Startup Checklist,
 Repository Root Validation, AI Proactive Proposal,
 Completion Checklist, Research Mission, Conversation Insight Capture, Artifact First, Audit Before Repair, Debug Artifact Review, Debug Escalation Ladder,
@@ -32,6 +32,9 @@ promoted.
   classification entry point.
 - `utf8_read_rules.md`: UTF-8 reading rule for Japanese Markdown, Q files,
   request artifacts, completion reports, and mojibake reporting.
+- `encoding_regression_prevention_rules.md`: commit-gate rule for preventing
+  new mojibake, replacement characters, invalid UTF-8, and broad Markdown
+  rewrite regressions.
 - `external_source_access_rules.md`: Raw URL Index and external public
   repository access rule for ChatGPT, Codex, and other AI systems.
 - `ai_startup_procedure_rules.md`: AI startup reading order and stop
@@ -117,6 +120,7 @@ promoted.
 1. `rules.md`
 2. `core_principles.md`
 3. `utf8_read_rules.md`
+4. `encoding_regression_prevention_rules.md`
 4. `external_source_access_rules.md`
 5. `ai_startup_procedure_rules.md`
 6. `project_rules.md`

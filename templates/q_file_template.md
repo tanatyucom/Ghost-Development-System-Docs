@@ -216,6 +216,21 @@ Push: Do not execute
 
 -
 
+## Encoding Regression Prevention
+
+- Markdown changes expected: Yes / No
+- Explicit UTF-8 read / write required: Yes / No
+- Full-file rewrite expected: Yes / No
+- Full-file rewrite justification:
+- Intentional encoding evidence expected: Yes / No
+- Exclusion config update required: Yes / No
+- Validator command:
+
+```bash
+python scripts/validate_encoding_regression.py --all
+python scripts/validate_encoding_regression.py --staged
+```
+
 ## Target Files
 
 -

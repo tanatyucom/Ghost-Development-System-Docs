@@ -1,0 +1,29 @@
+name: Encoding Regression Validation
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-encoding-regression:
+    name: Validate Encoding Regression
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run encoding regression validator
+        run: python scripts/validate_encoding_regression.py --all
+
+      - name: Run validator tests
+        run: python -m unittest tests/test_validate_encoding_regression.py

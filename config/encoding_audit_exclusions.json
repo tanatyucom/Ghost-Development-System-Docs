@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "purpose": "Narrow exclusions for intentional encoding evidence used by GDS encoding validation.",
+  "exclusions": [
+    {
+      "file": "docs/rules/utf8_read_rules.md",
+      "patterns": ["mojibake", "U+FFFD", "private_use"],
+      "reason": "UTF-8 Read Rule intentionally documents mojibake display examples and replacement-character scan commands.",
+      "owner": "GDS",
+      "added_date": "2026-07-13",
+      "review_status": "approved"
+    },
+    {
+      "file": "docs/knowledge/conversation_insights/CI-00004_encoding_regression_prevention_as_poka_yoke.md",
+      "patterns": ["mojibake", "U+FFFD", "private_use"],
+      "reason": "Conversation Insight intentionally records encoding-regression examples as knowledge evidence.",
+      "owner": "GDS",
+      "added_date": "2026-07-13",
+      "review_status": "approved"
+    },
+    {
+      "file": "docs/history/mojibake_audit_report_2026-07-10.md",
+      "patterns": ["mojibake", "U+FFFD", "private_use"],
+      "reason": "Historical audit report intentionally preserves mojibake samples.",
+      "owner": "GDS",
+      "added_date": "2026-07-13",
+      "review_status": "approved"
+    },
+    {
+      "file": "reports/legacy_document_mojibake_audit.md",
+      "patterns": ["mojibake", "U+FFFD", "private_use"],
+      "reason": "Audit evidence report intentionally preserves matched mojibake samples.",
+      "owner": "GDS",
+      "added_date": "2026-07-13",
+      "review_status": "approved"
+    },
+    {
+      "file": "reports/repository_quality_report.md",
+      "patterns": ["mojibake", "U+FFFD", "private_use"],
+      "reason": "Generated quality report may echo prior warnings; source documents are checked separately.",
+      "owner": "GDS",
+      "added_date": "2026-07-13",
+      "review_status": "approved"
+    },
+    {
+      "file": "docs/requests/gds/draft/GDS-MOJIBAKE-AUDIT-001_legacy_document_mojibake_audit_and_repair/request.md",
+      "patterns": ["U+FFFD"],
+      "reason": "Historical request artifact intentionally lists Unicode replacement character as a detection target.",
+      "owner": "GDS",
+      "added_date": "2026-07-13",
+      "review_status": "approved"
+    },
+    {
+      "file": "docs/requests/gds/draft/GDS-MOJIBAKE-RECOVERY-BATCH4-001_request_artifact_intentional_evidence/request.md",
+      "patterns": ["U+FFFD"],
+      "reason": "Batch4 source Q intentionally discusses the final replacement-character evidence sample.",
+      "owner": "GDS",
+      "added_date": "2026-07-13",
+      "review_status": "approved"
+    },
+    {
+      "file": "docs/requests/gds/draft/GDS-ENCODING-PREVENTION-001_encoding_regression_prevention_rule_and_validator/request.md",
+      "patterns": ["mojibake", "U+FFFD"],
+      "reason": "Source Q intentionally lists encoding-regression detection patterns and prevention rules.",
+      "owner": "GDS",
+      "added_date": "2026-07-13",
+      "review_status": "approved"
+    }
+  ]
+}

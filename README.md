@@ -59,6 +59,19 @@ Get-Content -LiteralPath <path> -Encoding UTF8
 Rule:
 
 - [`docs/rules/utf8_read_rules.md`](docs/rules/utf8_read_rules.md)
+- [`docs/rules/encoding_regression_prevention_rules.md`](docs/rules/encoding_regression_prevention_rules.md)
+
+Before commit approval for Markdown changes, run:
+
+```bash
+python scripts/validate_encoding_regression.py --staged
+```
+
+Repository-wide check:
+
+```bash
+python scripts/validate_encoding_regression.py --all
+```
 
 説明文書の日本語化方針:
 

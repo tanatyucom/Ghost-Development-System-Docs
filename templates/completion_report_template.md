@@ -47,6 +47,8 @@ Completion Reportは、作業結果の要約だけではなく、Source Q、変�
 
 ```powershell
 python scripts/generate_ai_repository_index.py --validate
+python scripts/validate_encoding_regression.py --all
+python scripts/validate_encoding_regression.py --staged
 python scripts/repository_quality_audit.py
 git diff --check
 git status --short --untracked-files=all
@@ -180,6 +182,13 @@ Ideas that should remain future work until separately reviewed:
 ## UTF-8 / Mojibake Review
 
 - UTF-8 Read Rule followed:
+- Encoding Regression Validator executed:
+- Encoding Regression Validator result:
+- New Mojibake candidates introduced:
+- New replacement character introduced:
+- Intentional evidence exclusions used:
+- Full-file rewrite performed:
+- Full-file rewrite justification:
 - Q file read command:
 - PowerShell `Get-Content -Encoding UTF8` verified:
 - Mojibake found:
@@ -213,4 +222,6 @@ Ideas that should remain future work until separately reviewed:
 - `docs/rules/q_file_artifact_standard.md`
 - `docs/rules/q_file_template_rules.md`
 - `docs/rules/git_rules.md`
+- `docs/rules/encoding_regression_prevention_rules.md`
+- `docs/workflow/encoding_regression_prevention_workflow.md`
 - `docs/workflow/commit_safety_checklist.md`

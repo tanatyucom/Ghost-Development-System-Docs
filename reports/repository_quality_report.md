@@ -7,10 +7,10 @@
 
 ## 要約
 
-- 生成日時: `2026-07-12T22:40:59Z`
+- 生成日時: `2026-07-12T23:04:12Z`
 - Repository: `Ghost-Development-System-Docs`
 - Overall Repository Health: `Green`
-- 通過したチェック: `10`
+- 通過したチェック: `11`
 - Warnings: `0`
 - Errors: `0`
 
@@ -36,7 +36,7 @@
 
 - Status: `PASS`
 - Details:
-  - 346 Markdown files を UTF-8 として読み取れました。
+  - 352 Markdown files を UTF-8 として読み取れました。
 
 ### Mojibake Audit
 
@@ -44,11 +44,17 @@
 - Details:
   - 意図的な rule / report examples を除き、mojibake candidate は検出されませんでした。
 
+### Encoding Regression Validation
+
+- Status: `PASS`
+- Details:
+  - Result: PASS
+
 ### AI Repository Index Validation
 
 - Status: `PASS`
 - Details:
-  - OK: 346 Markdown files が index に登録されています。
+  - OK: 352 Markdown files が index に登録されています。
 
 ### GDS Health Validation
 

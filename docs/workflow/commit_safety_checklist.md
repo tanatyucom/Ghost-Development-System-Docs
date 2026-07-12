@@ -15,6 +15,7 @@ git status
   -> Classify changes
   -> Review unrelated files
   -> Restore accidental files
+  -> Encoding Regression Validation
   -> git diff --check
   -> Commit
   -> Push
@@ -67,7 +68,20 @@ git restore -- <path>
 Do not restore runtime data, user work, or unrelated changes unless the owner
 or Q explicitly approves it.
 
-### 5. git diff --check
+### 5. Encoding Regression Validation
+
+Run:
+
+```bash
+python scripts/validate_encoding_regression.py --staged
+```
+
+If the validator reports new mojibake candidates, Unicode replacement
+characters, invalid UTF-8, suspicious control characters, private-use
+characters, or broad Markdown rewrite risk, commit approval is blocked until
+the issue is resolved or a narrow intentional evidence exclusion is reviewed.
+
+### 6. git diff --check
 
 Run:
 
@@ -78,13 +92,13 @@ git diff --check
 Fix whitespace errors before committing. Line ending warnings should be
 reported when relevant.
 
-### 6. Commit
+### 7. Commit
 
 Stage only the safe commit set.
 
 Commit only when the Q or user explicitly requests it.
 
-### 7. Push
+### 8. Push
 
 Push only when requested or approved.
 
@@ -96,10 +110,13 @@ AI completion reports should include:
 - Unrelated files?
 - Suggested restore commands.
 - Safe commit set.
+- Encoding regression validator result.
 - Files intentionally not staged or committed.
 
 ## Related Documents
 
 - `docs/rules/git_rules.md`
+- `docs/rules/encoding_regression_prevention_rules.md`
+- `docs/workflow/encoding_regression_prevention_workflow.md`
 - `docs/templates/completion_report_template.md`
 - `docs/examples/dirty_workspace_examples.md`

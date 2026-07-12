@@ -75,6 +75,10 @@ Reference points:
 - Startup Checklist Template: `templates/startup_checklist_template.md`
 - Project Profiles: `project_profiles/README.md`
 - UTF-8 Read Rule: `docs/rules/utf8_read_rules.md`
+- Encoding Regression Prevention:
+  `docs/rules/encoding_regression_prevention_rules.md`
+- Encoding Regression Workflow:
+  `docs/workflow/encoding_regression_prevention_workflow.md`
 - Japanese Documentation Localization:
   `docs/workflow/japanese_documentation_localization_workflow.md`
 - Localization Report:
@@ -97,6 +101,12 @@ When Windows PowerShell 5.1 reads a Q file or Japanese Markdown, use:
 
 ```powershell
 Get-Content -LiteralPath <path> -Encoding UTF8
+```
+
+Before commit approval for Markdown changes, run:
+
+```bash
+python scripts/validate_encoding_regression.py --staged
 ```
 
 Mojibake reports must include file name, line number, mojibake string,

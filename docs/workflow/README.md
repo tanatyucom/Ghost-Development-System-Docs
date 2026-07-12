@@ -28,6 +28,9 @@ gate.
 - `repository_quality_audit_workflow.md`: repository-wide quality audit flow
   that combines UTF-8, mojibake, AI index, GDS Health, link, README, history,
   project profile, and Markdown validation checks.
+- `encoding_regression_prevention_workflow.md`: commit-gate workflow for
+  UTF-8, mojibake regression, intentional evidence exclusions, and staged
+  Markdown validation.
 - `japanese_documentation_localization_workflow.md`: GDS Docs の説明文を
   日本語優先で維持しつつ、command、path、URL、identifier、status value を
   必要に応じて英語維持するための workflow。
@@ -129,6 +132,7 @@ Idea
   -> Codex / AI Implementation
   -> Debug Escalation Ladder, when cause is uncertain
   -> Debug Artifact Review, when applicable
+  -> Encoding Regression Validation, before commit approval
   -> Completion Report Artifact
   -> Completion Report v2 Section Check
   -> Knowledge Inventory, when reusable knowledge is found but not yet promoted
@@ -792,6 +796,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/workflow/ai_daily_operation_cycle.md`
 - `docs/workflow/gds_health_update_workflow.md`
 - `docs/workflow/repository_quality_audit_workflow.md`
+- `docs/workflow/encoding_regression_prevention_workflow.md`
 - `docs/workflow/japanese_documentation_localization_workflow.md`
 - `templates/daily_operation_checklist_template.md`
 - `docs/workflow/ai_startup_procedure.md`

@@ -36,6 +36,7 @@ Rules follow these principles:
 - Knowledge Before Automation.
 - Knowledge Poka-Yoke / Design For Forgetfulness.
 - UTF-8 Read Rule.
+- Encoding Regression Prevention.
 - External Source Access / AI Repository Knowledge Access.
 - AI Startup Procedure.
 - AI Daily Operation Cycle.
@@ -73,6 +74,7 @@ own files.
 
 - `core_principles.md`
 - `utf8_read_rules.md`
+- `encoding_regression_prevention_rules.md`
 - `external_source_access_rules.md`
 - `ai_startup_procedure_rules.md`
 - `project_rules.md`
@@ -217,6 +219,29 @@ Do not report file corruption unless a concrete file name, line number,
 mojibake string, expected string, and reading command are shown.
 
 Details follow `utf8_read_rules.md`.
+
+## Encoding Regression Prevention
+
+Canonical Markdown must remain valid UTF-8 and must not gain new mojibake
+candidates, Unicode replacement characters, suspicious control characters, or
+private-use characters.
+
+Before commit approval, run:
+
+```bash
+python scripts/validate_encoding_regression.py --staged
+```
+
+Failure means:
+
+```text
+Commit Not Allowed
+```
+
+Intentional evidence must be narrowly documented in
+`config/encoding_audit_exclusions.json`.
+
+Details follow `encoding_regression_prevention_rules.md`.
 
 ## AI Startup Procedure
 

@@ -16,6 +16,11 @@
 - Verification Completed:
 - Verification command / method:
 - Verification result:
+- Encoding Regression Validation required:
+- Encoding Regression Validation command:
+- Encoding Regression Validation passed:
+- New Mojibake candidates introduced:
+- Intentional evidence exclusions used:
 - Not verified:
 - Remaining Issues:
 
@@ -82,6 +87,16 @@ Required sections checked:
 - Warning count:
 - Error count:
 
+## Encoding Regression Prevention
+
+- `python scripts/validate_encoding_regression.py --all` passed:
+- `python scripts/validate_encoding_regression.py --staged` passed:
+- Full-file rewrite review required:
+- Full-file rewrite review result:
+- `.editorconfig` / `.gitattributes` impact:
+- Pre-commit gate used or documented:
+- CI encoding gate impact:
+
 ## Commit / Tag / Release
 
 - Commit Required:
@@ -137,3 +152,5 @@ Required sections checked:
 - `docs/workflow/q_file_creation_workflow.md`
 - `docs/workflow/q_revision_addendum_workflow.md`
 - `docs/workflow/commit_safety_checklist.md`
+- `docs/rules/encoding_regression_prevention_rules.md`
+- `docs/workflow/encoding_regression_prevention_workflow.md`
