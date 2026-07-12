@@ -102,8 +102,83 @@ Get-Content -LiteralPath <path> -Encoding UTF8
 Mojibake reports must include file name, line number, mojibake string,
 expected string, command used, and inferred cause.
 
-人間が読む説明文書は日本語優先で維持します。command、path、URL、identifier、
-status value は互換性のため必要に応じて英語のまま維持できます。
+莠ｺ髢薙′隱ｭ繧隱ｬ譏取枚譖ｸ縺ｯ譌･譛ｬ隱槫━蜈医〒邯ｭ謖√＠縺ｾ縺吶Ｄommand縲｝ath縲ゞRL縲（dentifier縲・
+status value 縺ｯ莠呈鋤諤ｧ縺ｮ縺溘ａ蠢・ｦ√↓蠢懊§縺ｦ闍ｱ隱槭・縺ｾ縺ｾ邯ｭ謖√〒縺阪∪縺吶・
+
+
+
+## Completion Report Standard v2 Index
+
+Completion Report v2 is the standard completion artifact for Q execution,
+documentation updates, review work, and handoff work.
+
+Reference points:
+
+- Template: `templates/completion_report_template.md`
+- Rule: `docs/rules/completion_report_rules.md`
+- Workflow: `docs/workflow/completion_report_workflow.md`
+- Checklist Template: `templates/completion_checklist_template.md`
+- Checklist Rules: `docs/rules/completion_checklist_rules.md`
+- Checklist Workflow: `docs/workflow/completion_checklist_workflow.md`
+- Examples: `examples/completion_report_examples.md`
+
+Required sections:
+
+```text
+Identity
+Changed Files
+Summary
+Verification
+Safe Commit Set
+Commit / Push Status
+Project Edit Status
+Improvement Review
+Lessons Learned
+Reusable Assets Created
+Remaining Issues
+Recommended Improvements
+Future Candidates
+Recommended Next Q
+Suggested Commit Message
+```
+
+Commit and push are never implied by report creation.
+## Q File Template And Naming Standard Index
+
+Q files are durable request artifacts. They should define Q ID, repository
+context, scope, out of scope, commit / push policy, validation, AI Repository
+Index Update Gate, completion report requirements, and Safe Commit Set before
+AI execution.
+
+Reference points:
+
+- Template: `templates/q_file_template.md`
+- Artifact Standard: `docs/rules/q_file_artifact_standard.md`
+- Naming Rules: `docs/rules/q_file_naming_rules.md`
+- Template Rules: `docs/rules/q_file_template_rules.md`
+- Creation Workflow: `docs/workflow/q_file_creation_workflow.md`
+- Revision / Addendum Workflow: `docs/workflow/q_revision_addendum_workflow.md`
+- Request Storage: `requests/README.md`
+- Examples: `examples/q_file_examples.md`
+
+Core form:
+
+```text
+Q_<Q_ID>_<short_topic>_JP.md
+```
+
+Core workspace:
+
+```text
+docs/requests/<project>/<status>/<Q_ID>_<short_topic>/
+  request.md
+  notes.md
+  completion_report.md
+  attachments/
+```
+
+Date is not the default Q filename identity. Record `Created Date` and
+`Last Updated Date` in the Q body.
 
 ## AI Daily Operation Cycle Index
 
@@ -139,14 +214,9 @@ AI Startup Procedure
 
 ## Research Mission Index
 
-Research Mission は、不確実な原因調査、仮説比較、Root Cause確認、
-Knowledge gap確認を、Goal / Scope / Out of Scope / Evidence / Validation /
-Completion Report 付きで実行するための標準入口です。
-
-AI Startup Procedure は Current Q と Information Package を確認した後、
-Research Task Detection を行います。Research Task の場合は、通常実装ではなく
-Research Mission Workflowへ分岐します。
-
+Research Mission 縺ｯ縲∽ｸ咲｢ｺ螳溘↑蜴溷屏隱ｿ譟ｻ縲∽ｻｮ隱ｬ豈碑ｼ・ヽoot Cause遒ｺ隱阪・Knowledge gap遒ｺ隱阪ｒ縲；oal / Scope / Out of Scope / Evidence / Validation /
+Completion Report 莉倥″縺ｧ螳溯｡後☆繧九◆繧√・讓呎ｺ門・蜿｣縺ｧ縺吶・
+AI Startup Procedure 縺ｯ Current Q 縺ｨ Information Package 繧堤｢ｺ隱阪＠縺溷ｾ後・Research Task Detection 繧定｡後＞縺ｾ縺吶３esearch Task 縺ｮ蝣ｴ蜷医・縲・壼ｸｸ螳溯｣・〒縺ｯ縺ｪ縺・Research Mission Workflow縺ｸ蛻・ｲ舌＠縺ｾ縺吶・
 Reference points:
 
 - Template: `templates/research_mission_template.md`
@@ -173,9 +243,8 @@ Observation
 
 ## GameGhost Platform Migration Architecture Index
 
-GameGhostをGDS Platformの最初の実利用Projectとして扱うためのArchitecture Review
-entry pointです。
-
+GameGhost繧竪DS Platform縺ｮ譛蛻昴・螳溷茜逕ｨProject縺ｨ縺励※謇ｱ縺・◆繧√・Architecture Review
+entry point縺ｧ縺吶・
 Reference points:
 
 - Architecture Review:
@@ -197,13 +266,9 @@ Q_GameGhost_Repository_Context_Validation_Module_JP
 
 ## Plugin Architecture Index
 
-Plugin Architecture Standard は、GDS Platform と将来の Ghost Project が共有機能を
-安全に拡張するための architecture entry point です。
-
-Plugin は任意の module ではありません。明示 Registry、`PLUGIN_INFO`、
-`PluginContext`、`PluginResult`、Ownership、Lifecycle を持つ review 可能な
-extension unit として扱います。
-
+Plugin Architecture Standard 縺ｯ縲；DS Platform 縺ｨ蟆・擂縺ｮ Ghost Project 縺悟・譛画ｩ溯・繧・螳牙・縺ｫ諡｡蠑ｵ縺吶ｋ縺溘ａ縺ｮ architecture entry point 縺ｧ縺吶・
+Plugin 縺ｯ莉ｻ諢上・ module 縺ｧ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲よ・遉ｺ Registry縲～PLUGIN_INFO`縲・`PluginContext`縲～PluginResult`縲＾wnership縲´ifecycle 繧呈戟縺､ review 蜿ｯ閭ｽ縺ｪ
+extension unit 縺ｨ縺励※謇ｱ縺・∪縺吶・
 Reference points:
 
 - Architecture Standard:
@@ -227,12 +292,9 @@ Internal Module
 
 Default guard:
 
-- Explicit Registry First。
-- Folder Scan / Reflection Discovery / importlib auto discovery / Entry Point
-  Discovery / automatic plugin loading は future candidate。
-- Launcher modification、`tool.py` split、runtime implementation は別 Q と Human
-  Approval Gate が必要。
-
+- Explicit Registry First縲・- Folder Scan / Reflection Discovery / importlib auto discovery / Entry Point
+  Discovery / automatic plugin loading 縺ｯ future candidate縲・- Launcher modification縲～tool.py` split縲〉untime implementation 縺ｯ蛻･ Q 縺ｨ Human
+  Approval Gate 縺悟ｿ・ｦ√・
 Recommended first proof Q:
 
 ```text
@@ -241,10 +303,7 @@ Q_GDS_Repository_Context_Validation_Plugin_JP
 
 ## Context-Aware Knowledge Suggestion Assistant Index
 
-Context-Aware Knowledge Suggestion Assistant は、Startupおよび日常利用時に、
-現在の会話、作業内容、Repository状況と関連するKnowledgeをAIが提案する
-Command Center / Knowledge architecture proposalです。
-
+Context-Aware Knowledge Suggestion Assistant 縺ｯ縲ヾtartup縺翫ｈ縺ｳ譌･蟶ｸ蛻ｩ逕ｨ譎ゅ↓縲・迴ｾ蝨ｨ縺ｮ莨夊ｩｱ縲∽ｽ懈･ｭ蜀・ｮｹ縲ヽepository迥ｶ豕√→髢｢騾｣縺吶ｋKnowledge繧但I縺梧署譯医☆繧・Command Center / Knowledge architecture proposal縺ｧ縺吶・
 Reference points:
 
 - Architecture proposal:
@@ -276,10 +335,7 @@ when relevance to current work is high. The canonical daily entry point is
 
 ## Knowledge Inventory Index
 
-Knowledge Inventory は、Research、Debug Artifact、Completion Report、
-Human Review から抽出された再利用候補を、正式昇格前に分類して保存する
-pre-promotion layer です。
-
+Knowledge Inventory 縺ｯ縲ヽesearch縲．ebug Artifact縲，ompletion Report縲・Human Review 縺九ｉ謚ｽ蜃ｺ縺輔ｌ縺溷・蛻ｩ逕ｨ蛟呵｣懊ｒ縲∵ｭ｣蠑乗・譬ｼ蜑阪↓蛻・｡槭＠縺ｦ菫晏ｭ倥☆繧・pre-promotion layer 縺ｧ縺吶・
 Reference points:
 
 - Knowledge Folder: `docs/knowledge/README.md`
@@ -308,11 +364,9 @@ review, completion report, and the appropriate promotion workflow.
 
 ## Conversation Insight Index
 
-Conversation Insight は、通常の Q、Research Mission、CASE になりにくい
-会話由来の設計思想、Platform思想、開発理念、保守方針、Migration戦略、
-Command Center構想、長期運用方針、将来構想を保存するための
-pre-promotion Knowledge Source です。
-
+Conversation Insight 縺ｯ縲・壼ｸｸ縺ｮ Q縲ヽesearch Mission縲，ASE 縺ｫ縺ｪ繧翫↓縺上＞
+莨夊ｩｱ逕ｱ譚･縺ｮ險ｭ險域晄Φ縲￣latform諤晄Φ縲・幕逋ｺ逅・ｿｵ縲∽ｿ晏ｮ域婿驥昴｀igration謌ｦ逡･縲・Command Center讒区Φ縲・聞譛滄°逕ｨ譁ｹ驥昴∝ｰ・擂讒区Φ繧剃ｿ晏ｭ倥☆繧九◆繧√・
+pre-promotion Knowledge Source 縺ｧ縺吶・
 Reference points:
 
 - Rule:
@@ -345,8 +399,8 @@ Conversation
 ```
 
 AI may propose a candidate when repository value is high, but must not
-auto-save. Drafting requires explicit Human Approval such as `書いといて`,
-`保存して`, `Repositoryへ追加`, `Q化して`, or `Conversation Insightとして残して`.
+auto-save. Drafting requires explicit Human Approval such as `譖ｸ縺・→縺・※`,
+`菫晏ｭ倥＠縺ｦ`, `Repository縺ｸ霑ｽ蜉`, `Q蛹悶＠縺ｦ`, or `Conversation Insight縺ｨ縺励※谿九＠縺ｦ`.
 
 Startup integration:
 
@@ -356,8 +410,7 @@ Startup integration:
 
 ## GDS Health Index
 
-GDS Health は、GDS の運用状態を見える化するための index です。
-health は責任追及や最終品質判定ではなく、早期発見と継続改善のために扱います。
+GDS Health 縺ｯ縲；DS 縺ｮ驕狗畑迥ｶ諷九ｒ隕九∴繧句喧縺吶ｋ縺溘ａ縺ｮ index 縺ｧ縺吶・health 縺ｯ雋ｬ莉ｻ霑ｽ蜿翫ｄ譛邨ょ刀雉ｪ蛻､螳壹〒縺ｯ縺ｪ縺上∵掠譛溽匱隕九→邯咏ｶ壽隼蝟・・縺溘ａ縺ｫ謇ｱ縺・∪縺吶・
 
 Reference points:
 
@@ -409,15 +462,15 @@ Repository-wide quality audit:
 python scripts/repository_quality_audit.py
 ```
 
-Repository Quality Report は生成直後から日本語本文で出力します。
-command、path、status value は互換性維持のため英語表記を残します。
-Platform Standard Registry の整合性は Registry Health として出力されます。
+Repository Quality Report 縺ｯ逕滓・逶ｴ蠕後°繧画律譛ｬ隱樊悽譁・〒蜃ｺ蜉帙＠縺ｾ縺吶・
+command縲｝ath縲《tatus value 縺ｯ莠呈鋤諤ｧ邯ｭ謖√・縺溘ａ闍ｱ隱櫁｡ｨ險倥ｒ谿九＠縺ｾ縺吶・
+Platform Standard Registry 縺ｮ謨ｴ蜷域ｧ縺ｯ Registry Health 縺ｨ縺励※蜃ｺ蜉帙＆繧後∪縺吶・
 
 ## Platform Standard Registry Index
 
-Platform Standard Registry は、GDS Platform に昇格した標準機能、標準 Rule、
-標準 Workflow、標準 Template、標準 Report、標準 Validation、標準 Architecture
-を一覧管理する index です。
+Platform Standard Registry 縺ｯ縲；DS Platform 縺ｫ譏・ｼ縺励◆讓呎ｺ匁ｩ溯・縲∵ｨ呎ｺ・Rule縲・
+讓呎ｺ・Workflow縲∵ｨ呎ｺ・Template縲∵ｨ呎ｺ・Report縲∵ｨ呎ｺ・Validation縲∵ｨ呎ｺ・Architecture
+繧剃ｸ隕ｧ邂｡逅・☆繧・index 縺ｧ縺吶・
 
 Reference points:
 
@@ -480,9 +533,9 @@ Repository Quality Audit checks:
 
 ## Startup Checklist Index
 
-Startup Checklist は、新しい ChatGPT / Codex / AI セッション、レビュー、
-Q 実行、文書更新を始める前に、repository、scope、applicable rules、
-methodologies、Q artifact、commit policy を確認するための起動入口です。
+Startup Checklist 縺ｯ縲∵眠縺励＞ ChatGPT / Codex / AI 繧ｻ繝・す繝ｧ繝ｳ縲√Ξ繝薙Η繝ｼ縲・
+Q 螳溯｡後∵枚譖ｸ譖ｴ譁ｰ繧貞ｧ九ａ繧句燕縺ｫ縲〉epository縲《cope縲∥pplicable rules縲・
+methodologies縲＿ artifact縲…ommit policy 繧堤｢ｺ隱阪☆繧九◆繧√・襍ｷ蜍募・蜿｣縺ｧ縺吶・
 
 Reference points:
 
@@ -515,9 +568,9 @@ Safety.
 
 ## Completion Checklist Index
 
-Completion Checklist は、作業完了時に verification、review、completion report、
-Improvement Review、commit / tag / release 判断、Recommended Next Q、
-workspace clean confirmation を確認するための終了入口です。
+Completion Checklist 縺ｯ縲∽ｽ懈･ｭ螳御ｺ・凾縺ｫ verification縲〉eview縲…ompletion report縲・
+Improvement Review縲…ommit / tag / release 蛻､譁ｭ縲ヽecommended Next Q縲・
+workspace clean confirmation 繧堤｢ｺ隱阪☆繧九◆繧√・邨ゆｺ・・蜿｣縺ｧ縺吶・
 
 Reference points:
 
@@ -547,8 +600,8 @@ It records whether each one is required and whether it was executed.
 
 ## Repository Root Validation Index
 
-Repository Root Validation は、作業開始前に現在の Git repository root を実測し、
-Q の Working Repository と一致しているか確認する標準です。
+Repository Root Validation 縺ｯ縲∽ｽ懈･ｭ髢句ｧ句燕縺ｫ迴ｾ蝨ｨ縺ｮ Git repository root 繧貞ｮ滓ｸｬ縺励・
+Q 縺ｮ Working Repository 縺ｨ荳閾ｴ縺励※縺・ｋ縺狗｢ｺ隱阪☆繧区ｨ呎ｺ悶〒縺吶・
 
 Reference points:
 
@@ -568,9 +621,9 @@ git status
 
 ## AI Proactive Proposal Index
 
-AI Proactive Proposal は、AI が改善案、時間短縮、repository / scope conflict、
-rule conflict、methodology conflict、maintenance risk、knowledge opportunity を
-検知したとき、勝手に実装変更せず根拠つきで提案する協働標準です。
+AI Proactive Proposal 縺ｯ縲、I 縺梧隼蝟・｡医∵凾髢鍋洒邵ｮ縲〉epository / scope conflict縲・
+rule conflict縲［ethodology conflict縲［aintenance risk縲〔nowledge opportunity 繧・
+讀懃衍縺励◆縺ｨ縺阪∝享謇九↓螳溯｣・､画峩縺帙★譬ｹ諡縺､縺阪〒謠先｡医☆繧句鵠蜒肴ｨ呎ｺ悶〒縺吶・
 
 Reference points:
 
@@ -581,8 +634,8 @@ Reference points:
 
 ## Persistent Collaboration Index
 
-Persistent Collaboration は、Repositoryへ採用された協業ルールを今後の
-ChatGPT / Codex / Claude / Gemini / human review で継続適用するための標準です。
+Persistent Collaboration 縺ｯ縲ヽepository縺ｸ謗｡逕ｨ縺輔ｌ縺溷鵠讌ｭ繝ｫ繝ｼ繝ｫ繧剃ｻ雁ｾ後・
+ChatGPT / Codex / Claude / Gemini / human review 縺ｧ邯咏ｶ夐←逕ｨ縺吶ｋ縺溘ａ縺ｮ讓呎ｺ悶〒縺吶・
 
 Reference points:
 
@@ -620,9 +673,9 @@ Knowledge Access Index
 
 ## Collaborative Decision Index
 
-Collaborative Decision は、AI Proposal と User Proposal を起点に、Discussion、
-Evidence Review、Knowledge Classification Review、Decision、Documentation へ進む
-共同判断 workflow です。
+Collaborative Decision 縺ｯ縲、I Proposal 縺ｨ User Proposal 繧定ｵｷ轤ｹ縺ｫ縲．iscussion縲・
+Evidence Review縲゜nowledge Classification Review縲．ecision縲．ocumentation 縺ｸ騾ｲ繧
+蜈ｱ蜷悟愛譁ｭ workflow 縺ｧ縺吶・
 
 Reference points:
 
@@ -696,12 +749,12 @@ under `docs/requests/`.
 Save the Q into the workspace before implementation begins. A Q that exists
 only in chat, a download folder, clipboard, or temporary sandbox path is not an
 official executable task until it is saved as `request.md` or an approved
-simple-form `.md` file under `docs/requests/<target_project>/<status>/`.
+simple-form `.md` file under `docs/requests/<project>/<status>/`.
 
 Full workspace form:
 
 ```text
-docs/requests/<target_project>/<status>/<request_id>_<short_title>/
+docs/requests/<project>/<status>/<Q_ID>_<short_topic>/
   request.md
   completion_report.md
   notes.md
@@ -711,13 +764,13 @@ docs/requests/<target_project>/<status>/<request_id>_<short_title>/
 Simple allowed form:
 
 ```text
-docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md
+docs/requests/<project>/<status>/Q_<Q_ID>_<short_topic>_JP.md
 ```
 
 ## PIP v1.1 Index
 
-PIP (Project Information Package) は、Ghost Development System の正式な
-project briefing subsystem です。
+PIP (Project Information Package) 縺ｯ縲；host Development System 縺ｮ豁｣蠑上↑
+project briefing subsystem 縺ｧ縺吶・
 
 Reference points:
 
@@ -756,24 +809,24 @@ Chat
   -> short operational summary and links
 ```
 
-PIP v1.1 では Improvement History と Decision History を必須概念として扱います。
-Command Center は PIP を briefing source として利用できます。GIP は future
-definition として予約し、現時点では stable package として扱いません。
+PIP v1.1 縺ｧ縺ｯ Improvement History 縺ｨ Decision History 繧貞ｿ・域ｦょｿｵ縺ｨ縺励※謇ｱ縺・∪縺吶・
+Command Center 縺ｯ PIP 繧・briefing source 縺ｨ縺励※蛻ｩ逕ｨ縺ｧ縺阪∪縺吶・IP 縺ｯ future
+definition 縺ｨ縺励※莠育ｴ・＠縲∫樟譎らせ縺ｧ縺ｯ stable package 縺ｨ縺励※謇ｱ縺・∪縺帙ｓ縲・
 
-Roadmap2 Delta により、PIP v1.1 は Trace Before Tune、First Broken Step、
-Review Entry Point、Human Visual Review、Evolution Chain を review methodology
-として扱います。
+Roadmap2 Delta 縺ｫ繧医ｊ縲￣IP v1.1 縺ｯ Trace Before Tune縲：irst Broken Step縲・
+Review Entry Point縲？uman Visual Review縲・volution Chain 繧・review methodology
+縺ｨ縺励※謇ｱ縺・∪縺吶・
 
-Package reconciliation により、PIP v1.1 は improvement knowledge database としての
-v1.0 stable philosophy、Evaluate What Actually Matters、Target Row Trace /
-Pipeline Trace、Steam OCR v2 Case Index も保持します。
+Package reconciliation 縺ｫ繧医ｊ縲￣IP v1.1 縺ｯ improvement knowledge database 縺ｨ縺励※縺ｮ
+v1.0 stable philosophy縲・valuate What Actually Matters縲ゝarget Row Trace /
+Pipeline Trace縲ヾteam OCR v2 Case Index 繧ゆｿ晄戟縺励∪縺吶・
 
 ## Information Package Index
 
-Information Package は、AI・人間・将来の Command Center が Project Summary、
-Current Status、Current Focus、Active Repository、Related Rules、Related
-Templates、Recent Decisions、Open Issues、Recent Artifacts、Recommended Next Q、
-Notes を同じ形式で共有するための状態共有 Artifact です。
+Information Package 縺ｯ縲、I繝ｻ莠ｺ髢薙・蟆・擂縺ｮ Command Center 縺・Project Summary縲・
+Current Status縲，urrent Focus縲、ctive Repository縲ヽelated Rules縲ヽelated
+Templates縲ヽecent Decisions縲＾pen Issues縲ヽecent Artifacts縲ヽecommended Next Q縲・
+Notes 繧貞酔縺伜ｽ｢蠑上〒蜈ｱ譛峨☆繧九◆繧√・迥ｶ諷句・譛・Artifact 縺ｧ縺吶・
 
 Reference points:
 
@@ -861,9 +914,9 @@ Standard classification:
 
 ## Debug Artifact Review Index
 
-Debug Artifact Review は、AI、OCR、recommendation、auto-detection、
-candidate extraction、fuzzy matching、visual overlay など、不確実な処理の
-中間 evidence を人間と AI が確認するための標準です。
+Debug Artifact Review 縺ｯ縲、I縲＾CR縲〉ecommendation縲∥uto-detection縲・
+candidate extraction縲’uzzy matching縲」isual overlay 縺ｪ縺ｩ縲∽ｸ咲｢ｺ螳溘↑蜃ｦ逅・・
+荳ｭ髢・evidence 繧剃ｺｺ髢薙→ AI 縺檎｢ｺ隱阪☆繧九◆繧√・讓呎ｺ悶〒縺吶・
 
 Reference points:
 
@@ -896,20 +949,20 @@ Issue / Idea
   -> Completion Report
 ```
 
-Completion Report には、Debug Artifact の保存場所、verification target、
-expected normal state、review viewpoints、必要に応じた AI review target
-artifacts、Git policy を記載します。
+Completion Report 縺ｫ縺ｯ縲．ebug Artifact 縺ｮ菫晏ｭ伜ｴ謇縲」erification target縲・
+expected normal state縲〉eview viewpoints縲∝ｿ・ｦ√↓蠢懊§縺・AI review target
+artifacts縲；it policy 繧定ｨ倩ｼ峨＠縺ｾ縺吶・
 
-通常実行では、Debug Mode が明示されていない限り Debug Artifact を生成しません。
-Debug Artifact は標準では Git 管理対象外です。
+騾壼ｸｸ螳溯｡後〒縺ｯ縲．ebug Mode 縺梧・遉ｺ縺輔ｌ縺ｦ縺・↑縺・剞繧・Debug Artifact 繧堤函謌舌＠縺ｾ縺帙ｓ縲・
+Debug Artifact 縺ｯ讓呎ｺ悶〒縺ｯ Git 邂｡逅・ｯｾ雎｡螟悶〒縺吶・
 
 Review Entry Point:
 
-- Debug Artifact や review artifact が複数生成される場合、Completion Report
-  は最初に見る場所を順番付きで示します。
-- 視覚確認は contact sheet または overlay から始めます。
-- 集計確認は CSV、判断理由確認は Markdown Report を使います。
-- Review Entry Point には、最初に見る場所、理由、重要度を含めます。
+- Debug Artifact 繧・review artifact 縺瑚､・焚逕滓・縺輔ｌ繧句ｴ蜷医，ompletion Report
+  縺ｯ譛蛻昴↓隕九ｋ蝣ｴ謇繧帝・分莉倥″縺ｧ遉ｺ縺励∪縺吶・
+- 隕冶ｦ夂｢ｺ隱阪・ contact sheet 縺ｾ縺溘・ overlay 縺九ｉ蟋九ａ縺ｾ縺吶・
+- 髮・ｨ育｢ｺ隱阪・ CSV縲∝愛譁ｭ逅・罰遒ｺ隱阪・ Markdown Report 繧剃ｽｿ縺・∪縺吶・
+- Review Entry Point 縺ｫ縺ｯ縲∵怙蛻昴↓隕九ｋ蝣ｴ謇縲∫炊逕ｱ縲・㍾隕∝ｺｦ繧貞性繧√∪縺吶・
 
 ## Debug Escalation Ladder Index
 
@@ -1108,8 +1161,8 @@ Reference points:
 
 ## Knowledge Platform Index
 
-Ghost Development System は、Documentation Platform から Knowledge Platform へ
-進化します。
+Ghost Development System 縺ｯ縲．ocumentation Platform 縺九ｉ Knowledge Platform 縺ｸ
+騾ｲ蛹悶＠縺ｾ縺吶・
 
 Reference points:
 
@@ -1159,28 +1212,28 @@ Decision Engine
         `-- Recommended Next Q
 ```
 
-責務分担:
+雋ｬ蜍吝・諡・
 
-- Command Center は Auto Q Generator 単体ではなく Repository Orchestrator。
-- Repository Scan は README、docs index、rules、workflow、templates、examples、
-  architecture、roadmap、reports、registry、PIP、project profiles を読み取る。
-- Information Package は現在地、成果物、論点、次アクションをまとめる状態共有
-  Artifact。
-- Decision Engine は Q Draft、Review Draft、Completion Draft、Registry Update、
-  Repository Health、Recommended Next Q の候補を作る。
-- Template Engine は承認済み template に基づいて draft artifact を生成する。
-- Knowledge Asset Layer は、Approved Alias、Metadata、Unicode Rules、Golden
-  Samples、OCR Confusion Rules、Review Decisions、Series Rules、Platform Rules、
-  User Overrides などの shared knowledge boundary を扱う。
-- Knowledge Editor は、CSV ではなく Knowledge を編集する入口。
-- Knowledge Assets Dashboard は、Knowledge の状態、成長、未承認項目、品質を
-  観測する入口。
-- Command Center は navigation と operational entry point であり、KAL、field
-  project runtime、Human Approval の所有者ではない。
+- Command Center 縺ｯ Auto Q Generator 蜊倅ｽ薙〒縺ｯ縺ｪ縺・Repository Orchestrator縲・
+- Repository Scan 縺ｯ README縲‥ocs index縲〉ules縲『orkflow縲》emplates縲‘xamples縲・
+  architecture縲〉oadmap縲〉eports縲〉egistry縲￣IP縲｝roject profiles 繧定ｪｭ縺ｿ蜿悶ｋ縲・
+- Information Package 縺ｯ迴ｾ蝨ｨ蝨ｰ縲∵・譫懃黄縲∬ｫ也せ縲∵ｬ｡繧｢繧ｯ繧ｷ繝ｧ繝ｳ繧偵∪縺ｨ繧√ｋ迥ｶ諷句・譛・
+  Artifact縲・
+- Decision Engine 縺ｯ Q Draft縲ヽeview Draft縲，ompletion Draft縲ヽegistry Update縲・
+  Repository Health縲ヽecommended Next Q 縺ｮ蛟呵｣懊ｒ菴懊ｋ縲・
+- Template Engine 縺ｯ謇ｿ隱肴ｸ医∩ template 縺ｫ蝓ｺ縺･縺・※ draft artifact 繧堤函謌舌☆繧九・
+- Knowledge Asset Layer 縺ｯ縲、pproved Alias縲｀etadata縲ゞnicode Rules縲；olden
+  Samples縲＾CR Confusion Rules縲ヽeview Decisions縲ヾeries Rules縲￣latform Rules縲・
+  User Overrides 縺ｪ縺ｩ縺ｮ shared knowledge boundary 繧呈桶縺・・
+- Knowledge Editor 縺ｯ縲，SV 縺ｧ縺ｯ縺ｪ縺・Knowledge 繧堤ｷｨ髮・☆繧句・蜿｣縲・
+- Knowledge Assets Dashboard 縺ｯ縲゜nowledge 縺ｮ迥ｶ諷九∵・髟ｷ縲∵悴謇ｿ隱埼・岼縲∝刀雉ｪ繧・
+  隕ｳ貂ｬ縺吶ｋ蜈･蜿｣縲・
+- Command Center 縺ｯ navigation 縺ｨ operational entry point 縺ｧ縺ゅｊ縲゜AL縲’ield
+  project runtime縲？uman Approval 縺ｮ謇譛芽・〒縺ｯ縺ｪ縺・・
 
 ## Field Driven Development Cycle Index
 
-Ghost Development System は、現場プロジェクトから得た知見によって成長します。
+Ghost Development System 縺ｯ縲∫樟蝣ｴ繝励Ο繧ｸ繧ｧ繧ｯ繝医°繧牙ｾ励◆遏･隕九↓繧医▲縺ｦ謌宣聞縺励∪縺吶・
 
 Reference points:
 
@@ -1203,14 +1256,14 @@ Field Project
   -> Cross Project reuse
 ```
 
-GameGhost は重要な Field Project ですが、GameGhost 固有の runtime 責務は
-GameGhost に残ります。共通化された Rule、Workflow、Architecture、Knowledge
-Platform の Single Source Of Truth は Ghost Development System Docs です。
+GameGhost 縺ｯ驥崎ｦ√↑ Field Project 縺ｧ縺吶′縲；ameGhost 蝗ｺ譛峨・ runtime 雋ｬ蜍吶・
+GameGhost 縺ｫ谿九ｊ縺ｾ縺吶ょ・騾壼喧縺輔ｌ縺・Rule縲仝orkflow縲、rchitecture縲゜nowledge
+Platform 縺ｮ Single Source Of Truth 縺ｯ Ghost Development System Docs 縺ｧ縺吶・
 
 ## Development Metrics / Evidence Framework Index
 
-Ghost Development System は、Evidence First を測定可能な improvement framework
-へ拡張します。
+Ghost Development System 縺ｯ縲・vidence First 繧呈ｸｬ螳壼庄閭ｽ縺ｪ improvement framework
+縺ｸ諡｡蠑ｵ縺励∪縺吶・
 
 Reference points:
 
@@ -1252,168 +1305,168 @@ Metric categories:
 - Workflow: Reused Knowledge Assets, New Knowledge Assets, Human Review Time,
   Automation Rate.
 
-Metrics は evidence input であり、Human Approval Gate や rule standardization を
-自動的に置き換えません。
+Metrics 縺ｯ evidence input 縺ｧ縺ゅｊ縲？uman Approval Gate 繧・rule standardization 繧・
+閾ｪ蜍慕噪縺ｫ鄂ｮ縺肴鋤縺医∪縺帙ｓ縲・
 
-このページは、Ghost Development System Knowledge Base の公式入口です。
+縺薙・繝壹・繧ｸ縺ｯ縲；host Development System Knowledge Base 縺ｮ蜈ｬ蠑丞・蜿｣縺ｧ縺吶・
 
-Ghost Development System は、GameGhost だけの補助文書ではありません。
-GameGhost、AnimeGhost、ComicGhost、Other など、将来の複数プロジェクトを
-支える親となる開発基盤です。
+Ghost Development System 縺ｯ縲；ameGhost 縺縺代・陬懷勧譁・嶌縺ｧ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲・
+GameGhost縲、nimeGhost縲，omicGhost縲＾ther 縺ｪ縺ｩ縲∝ｰ・擂縺ｮ隍・焚繝励Ο繧ｸ繧ｧ繧ｯ繝医ｒ
+謾ｯ縺医ｋ隕ｪ縺ｨ縺ｪ繧矩幕逋ｺ蝓ｺ逶､縺ｧ縺吶・
 
-この Index は、どこを読めばよいか、何に権威があるか、どのプロジェクトの責務
-として扱うべきか、レビュー後の知識をどこへ昇格させるべきかを判断するために
-使います。
+縺薙・ Index 縺ｯ縲√←縺薙ｒ隱ｭ繧√・繧医＞縺九∽ｽ輔↓讓ｩ螽√′縺ゅｋ縺九√←縺ｮ繝励Ο繧ｸ繧ｧ繧ｯ繝医・雋ｬ蜍・
+縺ｨ縺励※謇ｱ縺・∋縺阪°縲√Ξ繝薙Η繝ｼ蠕後・遏･隴倥ｒ縺ｩ縺薙∈譏・ｼ縺輔○繧九∋縺阪°繧貞愛譁ｭ縺吶ｋ縺溘ａ縺ｫ
+菴ｿ縺・∪縺吶・
 
 ## Documentation Philosophy
 
-Ghost Development System の documentation は、開発基盤そのものです。
+Ghost Development System 縺ｮ documentation 縺ｯ縲・幕逋ｺ蝓ｺ逶､縺昴・繧ゅ・縺ｧ縺吶・
 
-基本方針:
+蝓ｺ譛ｬ譁ｹ驥・
 
-- 人間が理解できることを優先する。
-- AI が推測せずに使える構造を持つ。
-- Project First Principle に従い、Target Project を先に明示する。
-- 日本語運用を基本とし、人間が承認する文章は日本語で書く。
-- Rules、Workflow、Architecture、Roadmap、Templates、Examples の責務を分ける。
-- Future Candidates を approved scope と混同しない。
-- GameGhost など各プロジェクト固有の責務を Ghost Development System に混ぜない。
+- 莠ｺ髢薙′逅・ｧ｣縺ｧ縺阪ｋ縺薙→繧貞━蜈医☆繧九・
+- AI 縺梧耳貂ｬ縺帙★縺ｫ菴ｿ縺医ｋ讒矩繧呈戟縺､縲・
+- Project First Principle 縺ｫ蠕薙＞縲ゝarget Project 繧貞・縺ｫ譏守､ｺ縺吶ｋ縲・
+- 譌･譛ｬ隱樣°逕ｨ繧貞渕譛ｬ縺ｨ縺励∽ｺｺ髢薙′謇ｿ隱阪☆繧区枚遶縺ｯ譌･譛ｬ隱槭〒譖ｸ縺上・
+- Rules縲仝orkflow縲、rchitecture縲ヽoadmap縲ゝemplates縲・xamples 縺ｮ雋ｬ蜍吶ｒ蛻・￠繧九・
+- Future Candidates 繧・approved scope 縺ｨ豺ｷ蜷後＠縺ｪ縺・・
+- GameGhost 縺ｪ縺ｩ蜷・・繝ｭ繧ｸ繧ｧ繧ｯ繝亥崋譛峨・雋ｬ蜍吶ｒ Ghost Development System 縺ｫ豺ｷ縺懊↑縺・・
 
-## まず読む場所
+## 縺ｾ縺夊ｪｭ繧蝣ｴ謇
 
-初めて読む場合:
+蛻昴ａ縺ｦ隱ｭ繧蝣ｴ蜷・
 
-- `README.md` でリポジトリの目的と scope を確認する。
-- この Index で Knowledge Base 全体の構造を確認する。
-- `docs/rules/rules.md` で rule priority を確認する。
-- `docs/rules/project_rules.md` で Project First Principle を確認する。
-- `docs/rules/language_rules.md` で日本語運用を確認する。
-- `docs/glossary/README.md` で共通用語を確認する。
-- `docs/history/knowledge_base_history.md` で Knowledge Base 自身の進化を確認する。
+- `README.md` 縺ｧ繝ｪ繝昴ず繝医Μ縺ｮ逶ｮ逧・→ scope 繧堤｢ｺ隱阪☆繧九・
+- 縺薙・ Index 縺ｧ Knowledge Base 蜈ｨ菴薙・讒矩繧堤｢ｺ隱阪☆繧九・
+- `docs/rules/rules.md` 縺ｧ rule priority 繧堤｢ｺ隱阪☆繧九・
+- `docs/rules/project_rules.md` 縺ｧ Project First Principle 繧堤｢ｺ隱阪☆繧九・
+- `docs/rules/language_rules.md` 縺ｧ譌･譛ｬ隱樣°逕ｨ繧堤｢ｺ隱阪☆繧九・
+- `docs/glossary/README.md` 縺ｧ蜈ｱ騾夂畑隱槭ｒ遒ｺ隱阪☆繧九・
+- `docs/history/knowledge_base_history.md` 縺ｧ Knowledge Base 閾ｪ霄ｫ縺ｮ騾ｲ蛹悶ｒ遒ｺ隱阪☆繧九・
 
-Q ファイルや Codex 依頼を準備する場合:
+Q 繝輔ぃ繧､繝ｫ繧・Codex 萓晞ｼ繧呈ｺ門ｙ縺吶ｋ蝣ｴ蜷・
 
-- `docs/templates/q_file_template.md` から始める。
-- Target Project、Repository、Single Source Of Truth、Cross Project Impact、
-  Scope Guard を先に埋める。
-- `docs/examples/repository_information.md` を参照する。
-- 編集権限が複雑な場合は `docs/examples/authority_matrix.md` を使う。
+- `docs/templates/q_file_template.md` 縺九ｉ蟋九ａ繧九・
+- Target Project縲ヽepository縲ヾingle Source Of Truth縲，ross Project Impact縲・
+  Scope Guard 繧貞・縺ｫ蝓九ａ繧九・
+- `docs/examples/repository_information.md` 繧貞盾辣ｧ縺吶ｋ縲・
+- 邱ｨ髮・ｨｩ髯舌′隍・尅縺ｪ蝣ｴ蜷医・ `docs/examples/authority_matrix.md` 繧剃ｽｿ縺・・
 
-完了した作業をレビューする場合:
+螳御ｺ・＠縺滉ｽ懈･ｭ繧偵Ξ繝薙Η繝ｼ縺吶ｋ蝣ｴ蜷・
 
-- `docs/templates/review_checklist.md` を確認する。
-- `docs/templates/completion_report_template.md` で報告形式をそろえる。
-- `docs/examples/good_review.md` と `docs/examples/improvement_review.md` を参照する。
-- 再利用できる学びを Recommended Improvements と Future Candidates に分ける。
+- `docs/templates/review_checklist.md` 繧堤｢ｺ隱阪☆繧九・
+- `docs/templates/completion_report_template.md` 縺ｧ蝣ｱ蜻雁ｽ｢蠑上ｒ縺昴ｍ縺医ｋ縲・
+- `docs/examples/good_review.md` 縺ｨ `docs/examples/improvement_review.md` 繧貞盾辣ｧ縺吶ｋ縲・
+- 蜀榊茜逕ｨ縺ｧ縺阪ｋ蟄ｦ縺ｳ繧・Recommended Improvements 縺ｨ Future Candidates 縺ｫ蛻・￠繧九・
 
-## 目的別ナビゲーション
+## 逶ｮ逧・挨繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ
 
-### Project と責務を確認したい
+### Project 縺ｨ雋ｬ蜍吶ｒ遒ｺ隱阪＠縺溘＞
 
-`docs/rules/project_rules.md` と `docs/architecture/responsibility_boundary.md`
-を使います。
+`docs/rules/project_rules.md` 縺ｨ `docs/architecture/responsibility_boundary.md`
+繧剃ｽｿ縺・∪縺吶・
 
-確認すること:
+遒ｺ隱阪☆繧九％縺ｨ:
 
-- Target Project は何か。
-- Repository と Target Project が混同されていないか。
-- Related Repository は editable か reference only か。
-- Cross Project Impact はあるか。
-- Ghost Development System が持つ責務か、各 project が持つ責務か。
+- Target Project 縺ｯ菴輔°縲・
+- Repository 縺ｨ Target Project 縺梧ｷｷ蜷後＆繧後※縺・↑縺・°縲・
+- Related Repository 縺ｯ editable 縺・reference only 縺九・
+- Cross Project Impact 縺ｯ縺ゅｋ縺九・
+- Ghost Development System 縺梧戟縺､雋ｬ蜍吶°縲∝推 project 縺梧戟縺､雋ｬ蜍吶°縲・
 
-### 日本語運用を確認したい
+### 譌･譛ｬ隱樣°逕ｨ繧堤｢ｺ隱阪＠縺溘＞
 
-`docs/rules/language_rules.md` を使います。
+`docs/rules/language_rules.md` 繧剃ｽｿ縺・∪縺吶・
 
-人間が判断、承認、レビューする文章は日本語を基本とします。ファイル名、パス、
-API、クラス名、関数名、Commit Message、Git コマンドなどは英語のままで構いません。
+莠ｺ髢薙′蛻､譁ｭ縲∵価隱阪√Ξ繝薙Η繝ｼ縺吶ｋ譁・ｫ縺ｯ譌･譛ｬ隱槭ｒ蝓ｺ譛ｬ縺ｨ縺励∪縺吶ゅヵ繧｡繧､繝ｫ蜷阪√ヱ繧ｹ縲・
+API縲√け繝ｩ繧ｹ蜷阪・未謨ｰ蜷阪，ommit Message縲；it 繧ｳ繝槭Φ繝峨↑縺ｩ縺ｯ闍ｱ隱槭・縺ｾ縺ｾ縺ｧ讒九＞縺ｾ縺帙ｓ縲・
 
-### 公式ルールを確認したい
+### 蜈ｬ蠑上Ν繝ｼ繝ｫ繧堤｢ｺ隱阪＠縺溘＞
 
-`docs/rules/` を使います。
+`docs/rules/` 繧剃ｽｿ縺・∪縺吶・
 
-Rules は必須の振る舞いを定義し、公開 Knowledge Base の中で最も高い権威を
-持ちます。まず `docs/rules/rules.md` を読み、その後で作業内容に対応する
-テーマ別ルールを確認します。
+Rules 縺ｯ蠢・医・謖ｯ繧玖・縺・ｒ螳夂ｾｩ縺励∝・髢・Knowledge Base 縺ｮ荳ｭ縺ｧ譛繧るｫ倥＞讓ｩ螽√ｒ
+謖√■縺ｾ縺吶ゅ∪縺・`docs/rules/rules.md` 繧定ｪｭ縺ｿ縲√◎縺ｮ蠕後〒菴懈･ｭ蜀・ｮｹ縺ｫ蟇ｾ蠢懊☆繧・
+繝・・繝槫挨繝ｫ繝ｼ繝ｫ繧堤｢ｺ隱阪＠縺ｾ縺吶・
 
-### Workflow を確認したい
+### Workflow 繧堤｢ｺ隱阪＠縺溘＞
 
-`docs/workflow/` を使います。
+`docs/workflow/` 繧剃ｽｿ縺・∪縺吶・
 
-Workflow は、idea、review、Q file、implementation、verification、
-Improvement Review、knowledge promotion、Field Driven Development Cycle、
-Evidence Feedback Loop の流れを説明します。
+Workflow 縺ｯ縲（dea縲〉eview縲＿ file縲（mplementation縲」erification縲・
+Improvement Review縲〔nowledge promotion縲：ield Driven Development Cycle縲・
+Evidence Feedback Loop 縺ｮ豬√ｌ繧定ｪｬ譏弱＠縺ｾ縺吶・
 
-### Architecture を確認したい
+### Architecture 繧堤｢ｺ隱阪＠縺溘＞
 
-`docs/architecture/` を使います。
+`docs/architecture/` 繧剃ｽｿ縺・∪縺吶・
 
-Architecture は、DevelopmentSystem、Gray Ghost Core、Archive Modules、
-Launcher の責任境界と設計思想を説明します。
+Architecture 縺ｯ縲．evelopmentSystem縲；ray Ghost Core縲、rchive Modules縲・
+Launcher 縺ｮ雋ｬ莉ｻ蠅・阜縺ｨ險ｭ險域晄Φ繧定ｪｬ譏弱＠縺ｾ縺吶・
 
-### Roadmap を確認したい
+### Roadmap 繧堤｢ｺ隱阪＠縺溘＞
 
-`docs/roadmap/` を使います。
+`docs/roadmap/` 繧剃ｽｿ縺・∪縺吶・
 
-Ghost Development System 自身の進化は
-`roadmap/ghost_development_system_roadmap.md` を確認します。
+Ghost Development System 閾ｪ霄ｫ縺ｮ騾ｲ蛹悶・
+`roadmap/ghost_development_system_roadmap.md` 繧堤｢ｺ隱阪＠縺ｾ縺吶・
 
-現在の GDS Roadmap は Ver2 Platform Era です。Foundation Era は completed として
-扱い、Platform Integration、Automation Server、Ghost Ecosystem、Continuous
-Improvement を今後の大きな phase として管理します。
+迴ｾ蝨ｨ縺ｮ GDS Roadmap 縺ｯ Ver2 Platform Era 縺ｧ縺吶・oundation Era 縺ｯ completed 縺ｨ縺励※
+謇ｱ縺・￣latform Integration縲、utomation Server縲；host Ecosystem縲，ontinuous
+Improvement 繧剃ｻ雁ｾ後・螟ｧ縺阪↑ phase 縺ｨ縺励※邂｡逅・＠縺ｾ縺吶・
 
-Roadmap Ver2 の completion report:
+Roadmap Ver2 縺ｮ completion report:
 
 - `reports/roadmap_v2_platform_era_completion_report.md`
 
-Gray Ghost Archive との関係や既存の大きな方向性は
-`roadmap/roadmap.md` を確認します。
+Gray Ghost Archive 縺ｨ縺ｮ髢｢菫ゅｄ譌｢蟄倥・螟ｧ縺阪↑譁ｹ蜷第ｧ縺ｯ
+`roadmap/roadmap.md` 繧堤｢ｺ隱阪＠縺ｾ縺吶・
 
-GameGhost など各 project 固有の feature roadmap は、各 project 側で管理します。
+GameGhost 縺ｪ縺ｩ蜷・project 蝗ｺ譛峨・ feature roadmap 縺ｯ縲∝推 project 蛛ｴ縺ｧ邂｡逅・＠縺ｾ縺吶・
 
-### Template を使いたい
+### Template 繧剃ｽｿ縺・◆縺・
 
-`docs/templates/` を使います。
+`docs/templates/` 繧剃ｽｿ縺・∪縺吶・
 
-Q file、AI implementation request、review、completion report、roadmap item など
-繰り返し使う文書構造を提供します。
+Q file縲、I implementation request縲〉eview縲…ompletion report縲〉oadmap item 縺ｪ縺ｩ
+郢ｰ繧願ｿ斐＠菴ｿ縺・枚譖ｸ讒矩繧呈署萓帙＠縺ｾ縺吶・
 
-Innovation Pipeline の Idea、Experiment、Prototype、Validation、Platform
-Promotion、Standardization、Propagation を記録する場合は
-`templates/innovation_pipeline_template.md` を使います。
+Innovation Pipeline 縺ｮ Idea縲・xperiment縲￣rototype縲〃alidation縲￣latform
+Promotion縲ヾtandardization縲￣ropagation 繧定ｨ倬鹸縺吶ｋ蝣ｴ蜷医・
+`templates/innovation_pipeline_template.md` 繧剃ｽｿ縺・∪縺吶・
 
-Validation 後に Platform へ昇格するか判断する場合は
-`templates/platform_promotion_decision_report_template.md` を使います。
+Validation 蠕後↓ Platform 縺ｸ譏・ｼ縺吶ｋ縺句愛譁ｭ縺吶ｋ蝣ｴ蜷医・
+`templates/platform_promotion_decision_report_template.md` 繧剃ｽｿ縺・∪縺吶・
 
-実運用例は `examples/innovation_pipeline_examples.md` を参照します。
-昇格判断例は `examples/platform_promotion_decision_report_examples.md` を参照します。
+螳滄°逕ｨ萓九・ `examples/innovation_pipeline_examples.md` 繧貞盾辣ｧ縺励∪縺吶・
+譏・ｼ蛻､譁ｭ萓九・ `examples/platform_promotion_decision_report_examples.md` 繧貞盾辣ｧ縺励∪縺吶・
 
-### Example を見たい
+### Example 繧定ｦ九◆縺・
 
-`docs/examples/` を使います。
+`docs/examples/` 繧剃ｽｿ縺・∪縺吶・
 
-Examples は完成形の参考です。Rules や Templates を上書きする active instructions
-ではありません。
+Examples 縺ｯ螳梧・蠖｢縺ｮ蜿り・〒縺吶３ules 繧・Templates 繧剃ｸ頑嶌縺阪☆繧・active instructions
+縺ｧ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲・
 
-### 用語を確認したい
+### 逕ｨ隱槭ｒ遒ｺ隱阪＠縺溘＞
 
-`docs/glossary/` を使います。
+`docs/glossary/` 繧剃ｽｿ縺・∪縺吶・
 
-共通概念が複数文書にまたがる場合、または AI collaboration に重要な場合は
-Glossary へ追加します。
+蜈ｱ騾壽ｦょｿｵ縺瑚､・焚譁・嶌縺ｫ縺ｾ縺溘′繧句ｴ蜷医√∪縺溘・ AI collaboration 縺ｫ驥崎ｦ√↑蝣ｴ蜷医・
+Glossary 縺ｸ霑ｽ蜉縺励∪縺吶・
 
-### Knowledge Base の履歴を確認したい
+### Knowledge Base 縺ｮ螻･豁ｴ繧堤｢ｺ隱阪＠縺溘＞
 
-`docs/history/` を使います。
+`docs/history/` 繧剃ｽｿ縺・∪縺吶・
 
-Knowledge Base 自身が Ver1.0、Ver1.1、Ver1.2 で何を追加し、なぜ進化したかを
-確認します。GameGhost の development history や release changelog とは責務を
-分けます。
+Knowledge Base 閾ｪ霄ｫ縺・Ver1.0縲〃er1.1縲〃er1.2 縺ｧ菴輔ｒ霑ｽ蜉縺励√↑縺憺ｲ蛹悶＠縺溘°繧・
+遒ｺ隱阪＠縺ｾ縺吶・ameGhost 縺ｮ development history 繧・release changelog 縺ｨ縺ｯ雋ｬ蜍吶ｒ
+蛻・￠縺ｾ縺吶・
 
 
 ## Historical Milestones Index
 
-GDSの転換点になった出来事は `docs/history/milestones/` に保存します。
+GDS縺ｮ霆｢謠帷せ縺ｫ縺ｪ縺｣縺溷・譚･莠九・ `docs/history/milestones/` 縺ｫ菫晏ｭ倥＠縺ｾ縺吶・
 
 Reference points:
 
@@ -1423,11 +1476,11 @@ Reference points:
 - Steam OCR Final Archive Package:
   `docs/history/milestones/steam_ocr_final_archive_package/README.md`
 
-Steam OCRは、Research Mission、Knowledge Inventory、Promotion Review、Existing Rule Update、CASE、GitHub Integrationを初めて実運用したGDSの歴史的マイルストーンです。
+Steam OCR縺ｯ縲ヽesearch Mission縲゜nowledge Inventory縲￣romotion Review縲・xisting Rule Update縲，ASE縲；itHub Integration繧貞・繧√※螳滄°逕ｨ縺励◆GDS縺ｮ豁ｴ蜿ｲ逧・・繧､繝ｫ繧ｹ繝医・繝ｳ縺ｧ縺吶・
 
 ## AI Entry Points
 
-ChatGPT は通常、次の順に確認します:
+ChatGPT 縺ｯ騾壼ｸｸ縲∵ｬ｡縺ｮ鬆・↓遒ｺ隱阪＠縺ｾ縺・
 
 - `README.md`
 - `docs/README.md`
@@ -1435,30 +1488,30 @@ ChatGPT は通常、次の順に確認します:
 - `docs/rules/project_rules.md`
 - `docs/history/knowledge_base_history.md`
 - `docs/rules/language_rules.md`
-- 目的に対応する folder README
-- 関連する templates と examples
+- 逶ｮ逧・↓蟇ｾ蠢懊☆繧・folder README
+- 髢｢騾｣縺吶ｋ templates 縺ｨ examples
 
-Codex は通常、次の順に確認します:
+Codex 縺ｯ騾壼ｸｸ縲∵ｬ｡縺ｮ鬆・↓遒ｺ隱阪＠縺ｾ縺・
 
-- Q file または user request
+- Q file 縺ｾ縺溘・ user request
 - Target Project
 - Repository Information
 - Cross Project Impact
 - Scope Guard
 - `docs/README.md`
 - `docs/rules/rules.md`
-- 関連する rules と templates
+- 髢｢騾｣縺吶ｋ rules 縺ｨ templates
 
-Reviewers は通常、次の順に確認します:
+Reviewers 縺ｯ騾壼ｸｸ縲∵ｬ｡縺ｮ鬆・↓遒ｺ隱阪＠縺ｾ縺・
 
 - changed files
 - Scope Guard
 - Cross Project Impact
 - `docs/rules/rules.md`
-- 関連する folder README
+- 髢｢騾｣縺吶ｋ folder README
 - `docs/templates/review_checklist.md`
 
-Roadmap work は通常、次の順に確認します:
+Roadmap work 縺ｯ騾壼ｸｸ縲∵ｬ｡縺ｮ鬆・↓遒ｺ隱阪＠縺ｾ縺・
 
 - `roadmap/ghost_development_system_roadmap.md`
 - `roadmap/roadmap.md`
@@ -1469,7 +1522,7 @@ Roadmap work は通常、次の順に確認します:
 
 ## Authority Order
 
-文書同士が矛盾する場合は、次の順に従います。
+譁・嶌蜷悟｣ｫ縺檎泝逶ｾ縺吶ｋ蝣ｴ蜷医・縲∵ｬ｡縺ｮ鬆・↓蠕薙＞縺ｾ縺吶・
 
 1. `docs/rules/`
 2. `docs/workflow/`
@@ -1479,75 +1532,75 @@ Roadmap work は通常、次の順に確認します:
 6. `docs/examples/`
 7. `docs/glossary/`
 
-Examples は有用な参照資料ですが、rules、workflow、architecture、roadmap、
-templates を上書きしません。
+Examples 縺ｯ譛臥畑縺ｪ蜿ら・雉・侭縺ｧ縺吶′縲〉ules縲『orkflow縲∥rchitecture縲〉oadmap縲・
+templates 繧剃ｸ頑嶌縺阪＠縺ｾ縺帙ｓ縲・
 
 ## Knowledge Promotion
 
-再利用できる知識は、会話や一度きりの Q の中だけに残しません。
+蜀榊茜逕ｨ縺ｧ縺阪ｋ遏･隴倥・縲∽ｼ夊ｩｱ繧・ｸ蠎ｦ縺阪ｊ縺ｮ Q 縺ｮ荳ｭ縺縺代↓谿九＠縺ｾ縺帙ｓ縲・
 
-昇格先:
+譏・ｼ蜈・
 
-- 必須の振る舞いは `docs/rules/`。
-- 繰り返し使う process は `docs/workflow/`。
-- 責任境界と設計思想は `docs/architecture/`。
-- 長期方針と Future Candidates は `docs/roadmap/`。
-- 繰り返し使う文書構造は `docs/templates/`。
-- 良い完成サンプルは `docs/examples/`。
-- 共通語彙は `docs/glossary/`。
-- ツールや automation が消費する operational knowledge は Knowledge Asset Layer。
-- navigation guidance はこの Index。
-- Knowledge Base 自身の version history は `docs/history/`。
+- 蠢・医・謖ｯ繧玖・縺・・ `docs/rules/`縲・
+- 郢ｰ繧願ｿ斐＠菴ｿ縺・process 縺ｯ `docs/workflow/`縲・
+- 雋ｬ莉ｻ蠅・阜縺ｨ險ｭ險域晄Φ縺ｯ `docs/architecture/`縲・
+- 髟ｷ譛滓婿驥昴→ Future Candidates 縺ｯ `docs/roadmap/`縲・
+- 郢ｰ繧願ｿ斐＠菴ｿ縺・枚譖ｸ讒矩縺ｯ `docs/templates/`縲・
+- 濶ｯ縺・ｮ梧・繧ｵ繝ｳ繝励Ν縺ｯ `docs/examples/`縲・
+- 蜈ｱ騾夊ｪ槫ｽ吶・ `docs/glossary/`縲・
+- 繝・・繝ｫ繧・automation 縺梧ｶ郁ｲｻ縺吶ｋ operational knowledge 縺ｯ Knowledge Asset Layer縲・
+- navigation guidance 縺ｯ縺薙・ Index縲・
+- Knowledge Base 閾ｪ霄ｫ縺ｮ version history 縺ｯ `docs/history/`縲・
 
-Future Candidates は、review され promotion されるまで future work として明確に
-残します。
+Future Candidates 縺ｯ縲〉eview 縺輔ｌ promotion 縺輔ｌ繧九∪縺ｧ future work 縺ｨ縺励※譏守｢ｺ縺ｫ
+谿九＠縺ｾ縺吶・
 
-Knowledge Asset は、raw observation や未承認 CSV 編集ではありません。Review と
-必要な Human Approval を通じて、所有者、意味、利用境界が明確になった knowledge
-を指します。
+Knowledge Asset 縺ｯ縲〉aw observation 繧・悴謇ｿ隱・CSV 邱ｨ髮・〒縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲３eview 縺ｨ
+蠢・ｦ√↑ Human Approval 繧帝壹§縺ｦ縲∵園譛芽・∵э蜻ｳ縲∝茜逕ｨ蠅・阜縺梧・遒ｺ縺ｫ縺ｪ縺｣縺・knowledge
+繧呈欠縺励∪縺吶・
 
 ## Decision Background
 
-重要ルールには、必要に応じて短い Decision Background を残します。
+驥崎ｦ√Ν繝ｼ繝ｫ縺ｫ縺ｯ縲∝ｿ・ｦ√↓蠢懊§縺ｦ遏ｭ縺・Decision Background 繧呈ｮ九＠縺ｾ縺吶・
 
-Decision Background は「なぜこのルールになったのか」を数行で説明するための
-軽量な背景です。
+Decision Background 縺ｯ縲後↑縺懊％縺ｮ繝ｫ繝ｼ繝ｫ縺ｫ縺ｪ縺｣縺溘・縺九阪ｒ謨ｰ陦後〒隱ｬ譏弱☆繧九◆繧√・
+霆ｽ驥上↑閭梧勹縺ｧ縺吶・
 
-使い分け:
+菴ｿ縺・・縺・
 
-- Rule document: ルール本文と一緒に、短い理由を残す。
-- Decision Log or ADR: 重要 decision の選択肢、却下理由、承認経緯を詳しく残す。
-- Knowledge Base History: Knowledge Base の version ごとの進化を簡潔に残す。
+- Rule document: 繝ｫ繝ｼ繝ｫ譛ｬ譁・→荳邱偵↓縲∫洒縺・炊逕ｱ繧呈ｮ九☆縲・
+- Decision Log or ADR: 驥崎ｦ・decision 縺ｮ驕ｸ謚櫁い縲∝唆荳狗炊逕ｱ縲∵価隱咲ｵ檎ｷｯ繧定ｩｳ縺励￥谿九☆縲・
+- Knowledge Base History: Knowledge Base 縺ｮ version 縺斐→縺ｮ騾ｲ蛹悶ｒ邁｡貎斐↓谿九☆縲・
 
-Decision Background は Decision Log を置き換えません。ルールを読む人間と AI が、
-最低限の理由をその場で理解するための補助です。
+Decision Background 縺ｯ Decision Log 繧堤ｽｮ縺肴鋤縺医∪縺帙ｓ縲ゅΝ繝ｼ繝ｫ繧定ｪｭ繧莠ｺ髢薙→ AI 縺後・
+譛菴朱剞縺ｮ逅・罰繧偵◎縺ｮ蝣ｴ縺ｧ逅・ｧ｣縺吶ｋ縺溘ａ縺ｮ陬懷勧縺ｧ縺吶・
 
 ## Scaling Policy
 
-Knowledge Base が成長しても、この Index は完全な file inventory ではなく、
-目的別の入口として維持します。
+Knowledge Base 縺梧・髟ｷ縺励※繧ゅ√％縺ｮ Index 縺ｯ螳悟・縺ｪ file inventory 縺ｧ縺ｯ縺ｪ縺上・
+逶ｮ逧・挨縺ｮ蜈･蜿｣縺ｨ縺励※邯ｭ謖√＠縺ｾ縺吶・
 
-推奨:
+謗ｨ螂ｨ:
 
-- `docs/README.md` を human と AI の入口として維持する。
-- 主要フォルダごとに README を維持する。
-- 50+ documents で folder README を強い topic map にする。
-- 100+ documents で大きい folder に topic-level index を追加する。
-- 200+ documents で generated documentation inventory、metadata、search support
-  を検討する。
-- Examples と Templates を分離し、完成例が accidental instructions にならない
-  ようにする。
+- `docs/README.md` 繧・human 縺ｨ AI 縺ｮ蜈･蜿｣縺ｨ縺励※邯ｭ謖√☆繧九・
+- 荳ｻ隕√ヵ繧ｩ繝ｫ繝縺斐→縺ｫ README 繧堤ｶｭ謖√☆繧九・
+- 50+ documents 縺ｧ folder README 繧貞ｼｷ縺・topic map 縺ｫ縺吶ｋ縲・
+- 100+ documents 縺ｧ螟ｧ縺阪＞ folder 縺ｫ topic-level index 繧定ｿｽ蜉縺吶ｋ縲・
+- 200+ documents 縺ｧ generated documentation inventory縲［etadata縲《earch support
+  繧呈､懆ｨ弱☆繧九・
+- Examples 縺ｨ Templates 繧貞・髮｢縺励∝ｮ梧・萓九′ accidental instructions 縺ｫ縺ｪ繧峨↑縺・
+  繧医≧縺ｫ縺吶ｋ縲・
 
 ## Folder Map
 
 ```text
 docs/
-  architecture/  責任境界と設計思想。
-  examples/      Q file、review、report、decision の examples。
-  glossary/      人間と AI のための public terms。
-  history/       Knowledge Base 自身の version history。
-  roadmap/       Ghost Development System と関連方針の roadmap。
-  rules/         official operating rules と authority order。
-  templates/     recurring documentation work の reusable structure。
-  workflow/      development flow と knowledge promotion process。
+  architecture/  雋ｬ莉ｻ蠅・阜縺ｨ險ｭ險域晄Φ縲・
+  examples/      Q file縲〉eview縲〉eport縲‥ecision 縺ｮ examples縲・
+  glossary/      莠ｺ髢薙→ AI 縺ｮ縺溘ａ縺ｮ public terms縲・
+  history/       Knowledge Base 閾ｪ霄ｫ縺ｮ version history縲・
+  roadmap/       Ghost Development System 縺ｨ髢｢騾｣譁ｹ驥昴・ roadmap縲・
+  rules/         official operating rules 縺ｨ authority order縲・
+  templates/     recurring documentation work 縺ｮ reusable structure縲・
+  workflow/      development flow 縺ｨ knowledge promotion process縲・
 ```

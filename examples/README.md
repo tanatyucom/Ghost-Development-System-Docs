@@ -12,7 +12,12 @@ reports, and documentation requests can start from a clear reference.
 
 - `good_q.md`: example of a well-written Q file.
 - `good_review.md`: example of a complete review report.
-- `good_completion_report.md`: example completion report.
+- `good_completion_report.md`: legacy simple example completion report.
+- `completion_report_examples.md`: good and bad examples for Completion Report
+  v2, including Identity, Changed Files, Verification, Safe Commit Set,
+  Commit / Push Status, Project Edit Status, Improvement Review, Lessons
+  Learned, Reusable Assets Created, Remaining Issues, Recommended Next Q, and
+  Suggested Commit Message.
 - `improvement_review.md`: example Improvement Review section.
 - `purpose_oriented_naming.md`: before and after examples for
   purpose-oriented naming.
@@ -41,6 +46,9 @@ reports, and documentation requests can start from a clear reference.
 - `q_file_artifact_workflow.md`: good and bad examples for Task Artifact
   Workspaces, Q files, completion reports, notes, attachments, and related
   commit information.
+- `q_file_examples.md`: good and bad examples for Q ID, Q filename,
+  date exception, request workspace, addendum, repository context, and
+  completion report linkage.
 - `audit_before_repair_examples.md`: good and bad examples for auditing,
   classifying, reviewing evidence, scoping repair Q files, and avoiding broad
   one-shot repair.
@@ -114,6 +122,8 @@ what a complete, well-scoped document should feel like.
 - Use `good_review.md` when reviewing documentation, roadmap, rules, templates,
   or architecture changes.
 - Use `good_completion_report.md` when reporting finished documentation work.
+- Use `completion_report_examples.md` when checking whether a Completion
+  Report v2 is complete, reviewable, and safe to hand off.
 - Use `improvement_review.md` when you need to separate near-term recommended
   improvements from future candidates.
 - Use `purpose_oriented_naming.md` when renaming roadmap items or public
@@ -145,9 +155,11 @@ what a complete, well-scoped document should feel like.
 - Use `completion_checklist_examples.md` before treating work as complete,
   committing, tagging, releasing, or handing off the next Q.
 - Use `q_file_artifact_workflow.md` when saving a Q file in a
-  `docs/requests/<target_project>/<status>/` workspace, naming it, linking it
+  `docs/requests/<project>/<status>/` workspace, naming it, linking it
   to a completion report, storing notes or attachments, moving status, or
   recording related commit status.
+- Use `q_file_examples.md` when deciding Q ID, filename, date exception,
+  addendum versus new Q, repository context, or Safe Commit Set linkage.
 - Use `audit_before_repair_examples.md` before repair, cleanup, OCR result
   correction, DB correction, mojibake correction, duplicate resolution, or
   metadata correction when the target should be audited and classified first.
@@ -243,6 +255,10 @@ Do not use examples to introduce new rules. Promote reusable standards to
 - `docs/templates/completion_report_template.md`
 - `docs/requests/README.md`
 - `docs/rules/q_file_artifact_standard.md`
+- `docs/rules/q_file_naming_rules.md`
+- `docs/rules/q_file_template_rules.md`
+- `docs/workflow/q_file_creation_workflow.md`
+- `docs/workflow/q_revision_addendum_workflow.md`
 - `docs/rules/audit_before_repair_rules.md`
 - `docs/rules/migration_first_rules.md`
 - `docs/rules/debug_artifact_review_rules.md`

@@ -1,411 +1,216 @@
 # Completion Report Template
 
-## Priority Summary
+**Template Version:** 2.0
 
-- Summary:
-- Verification:
-- Remaining Issues:
-- Recommended Next Q:
+**Last Updated:** 2026-07-13
 
-## Source Q File
+このテンプレートは、Q完了後の結果を再利用・レビュー・Git管理できるCompletion Report Artifactとして残すための標準形式です。
 
-- Q artifact path:
-- Q artifact format:
-- Q artifact version:
-- Q artifact status:
-- Q saved in Task Artifact Workspace before implementation:
+Completion Reportは、作業結果の要約だけではなく、Source Q、変更ファイル、検証、Safe Commit Set、Commit / Push状態、Project Edit Status、改善知見、次Qまでを一つの監査可能な記録として残します。
 
-## Artifact Workspace
+## Identity
 
-- Artifact Workspace path:
-- Status folder:
-- Request ID / Task ID:
-- Task workspace form:
-- `request.md` present:
-- `completion_report.md` saved beside `request.md`:
-- `notes.md` present or intentionally omitted:
-- `attachments/` present or intentionally omitted:
+- Report ID:
+- Source Q ID:
+- Source Q File:
+- Title:
+- Target Project:
+- Working Repository:
+- Working Directory:
+- Report Status:
+- Created Date:
+- Last Updated Date:
+- Author / Executor:
 
-## Output Artifacts
-
-- Completion report artifact:
-- Human review artifact, when generated:
-- Information Package artifact, when generated:
-- Other output artifacts:
-- Notes artifact:
-- Attachments folder:
-
-## Information Package
-
-- Information Package needed:
-- Information Package artifact:
-- Project Summary updated:
-- Current Status updated:
-- Current Focus updated:
-- Recent Decisions updated:
-- Open Issues updated:
-- Recent Artifacts updated:
-- Recommended Next Q updated:
-- Command Center readiness noted:
-
-## Multi-AI Handoff
-
-- Handoff needed:
-- Handoff artifact:
-- Handoff checklist used:
-- Handoff checklist artifact:
-- Target AI / reviewer:
-- Current Status:
-- Current Focus:
-- Scope:
-- Source of Truth:
-- Changed Files:
-- Verification Results:
-- Remaining Issues:
-- Recommended Next Q:
-- Next AI entry point:
-
-## Review Entry Point
-
-最初に見る場所:
-
-1.
-2.
-3.
-
-理由:
-
-重要度:
-
-```text
-高 / 中 / 低
-```
-
-対象:
-
-- Contact Sheet:
-- Overlay:
-- Crop:
-- CSV:
-- Markdown Report:
-- Other:
-
-## Generated Files
+## Changed Files
 
 - Files created:
 - Files updated:
-- Files intentionally not generated:
+- Files deleted:
+- Files intentionally not changed:
 
-## AI Repository Knowledge Access
+## Summary
 
-- AI Repository Index update decision: Yes / No / Review Required
-- Public AI knowledge entry points changed:
-- `docs/ai_repository_index.md` update required:
-- `docs/ai_repository_index.md` updated:
-- `docs/ai_repository_index.md` regenerated:
-- AI Repository Index validation passed:
-- New Markdown registered:
-- CI passed:
-- AI Repository validation passed:
-- Index up to date:
-- Raw URL entries added / updated:
-- External source access rule followed:
-- Not required reason:
+- What changed:
+- Why it changed:
+- Result:
 
-## Commit Tracking
+## Verification
 
-- Related Commit:
-- Commit Hash:
-- Commit Status:
+- Verification completed: Yes / No / Partially
+- Commands / methods:
+- Result:
+- Not verified:
+- Verification limitations:
 
-## Dirty Workspace Review
+標準候補:
 
-- Dirty workspace detected:
-- Unrelated files:
-- Suggested restore commands:
-- Safe commit set:
-- Files intentionally not staged or committed:
-- `git status` checked:
-- `git diff --check` result:
+```powershell
+python scripts/generate_ai_repository_index.py --validate
+python scripts/repository_quality_audit.py
+git diff --check
+git status --short --untracked-files=all
+```
 
-## Startup Checklist Review
+## Safe Commit Set
 
-- AI Daily Operation Cycle followed:
-- Daily Operation Checklist used:
-- Daily Operation Checklist artifact:
-- Current Q Review completed:
-- Knowledge Update performed:
-- Repository Update performed:
-- Next Q Planning completed:
-- AI Startup Procedure followed:
-- AI Repository Index read:
-- Target Project identified:
-- Project Profile read before Q execution:
-- Core Rules / Workflow read:
-- Current Q File read:
-- Current Q File read with explicit UTF-8:
-- Q File read command:
-- Q File mojibake check result:
-- Information Package provided:
-- Information Package read:
-- Scope / Out of Scope confirmed before implementation:
-- Research Task Detection performed:
-- Research Task:
-- Research Mission required:
-- Research Mission path:
-- Session Health checked:
-- Startup Checklist applies:
-- Working Repository confirmed:
-- Repository Root Validation performed:
-- Current Working Directory:
-- Git repository root:
-- Root matched Working Repository:
-- Production / Backup / Reference Only boundaries confirmed:
-- Current Phase confirmed:
-- Current Goal confirmed:
-- Applicable Rules confirmed:
-- Applicable Methodologies confirmed:
-- Q Artifact / Download File status confirmed:
-- Scope / Out of Scope confirmed:
-- Commit policy confirmed:
-- Proactive Proposal check performed:
-- Proactive proposals made:
-- Collaborative Decision used:
-- Collaborative Decision result:
-- Startup blockers:
+- Safe to commit together:
+- Excluded files:
+- Reason for exclusions:
+- Unrelated dirty files:
+- Generated / temporary files excluded:
 
-## Completion Checklist
+ルール:
 
-- Verification Completed:
-- Review Completed:
-- Completion Report Completed:
-- Improvement Review Completed:
-- Commit Required:
-- Commit Executed:
-- Commit Hash:
-- Tag Required:
-- Tag Executed:
-- Tag Name:
-- Release Required:
-- Release Published:
-- Release Name / Version / URL:
-- Recommended Next Q:
-- Workspace Clean Confirmation:
-- Completion blockers:
-- AI Repository Index Update Decision:
-- AI Repository Index Regenerated:
-- AI Repository Index Validation Passed:
+```text
+Safe Commit Set must match Changed Files, or explain every exclusion.
+```
 
-## Research Mission Review
+## Commit / Push Status
 
-- Research Mission applies:
-- Source Research Mission:
-- Mission Goal:
-- Research Questions reviewed:
-- Expected Hypothesis:
-- Hypotheses accepted:
-- Hypotheses rejected:
-- Evidence reviewed:
-- Validation method:
-- Validation result:
-- Negative Result recorded:
-- Remaining uncertainty:
-- Knowledge Promotion recommendation:
-- Follow-up Q:
+- Commit policy from Q:
+- Commit required:
+- Commit executed:
+- Commit hash:
+- Commit message:
+- Push required:
+- Push executed:
+- Push target:
 
-## Migration First Review
+## Project Edit Status
 
-- Migration First applies:
-- New Standard:
-- Migration Plan result:
-- Reference Update result:
-- Verification result:
-- Legacy Removal result:
-- Public Compatibility Impact:
-- Remaining Legacy:
-- Restore / Rollback Guidance:
+- Target Project edit status:
+- Non-Target Project edit status:
+- GameGhost edit status, when non-target:
+- Runtime code edit status:
+- Production data edit status:
+- Reference-only repository touched:
 
-## Debug Artifact Review
+例:
 
-- Debug Artifact Review applies:
-- Debug Mode used:
-- Debug artifact save location:
-- Review Entry Point:
-- Verification target:
-- Expected normal state:
-- Review viewpoints:
-- Visual / intermediate review performed:
-- AI review target artifacts:
-- Normal execution debug artifact generation:
-- Git policy for debug artifacts:
-- Follow-up Fix Q required:
+```text
+GameGhost edit status: Not edited.
+Commit status: Not committed.
+Push status: Not pushed.
+```
 
-## Audit Before Repair Review
-
-- Audit Before Repair applies:
-- Source Audit Artifact:
-- Audit command or method:
-- Classification Summary:
-  - `fix_candidate`:
-  - `needs_human_review`:
-  - `generated_artifact`:
-  - `raw_data`:
-  - `false_positive`:
-- Evidence reviewed:
-- Human Review result:
-- Repair Scope:
-- Excluded Items:
-- Fixed Files:
-- Remaining Candidates:
-- Verification method:
-- Safe Commit Set:
-- Suggested Restore Commands:
-- Follow-up Repair Q:
-
-## Follow-up Q
-
-- Follow-up Q required:
-- Follow-up Q artifact path:
-- Recommended Next Q:
-- Next Startup input:
-
-## Knowledge Promotion Target
+## Improvement Review
 
 - Documentation:
 - Templates:
 - Workflow:
-- Roadmap:
 - Rules:
 - Architecture:
 - Knowledge Base:
+- Automation / Validation:
 - Metrics / Evidence:
-- GDS Health:
 
-## GDS Health Review
+## Lessons Learned
 
-- GDS Health review required:
-- GDS Health dashboard updated:
-- GDS Health validation passed:
-- GDS Health validation command:
-- Affected health areas:
-- Status changes:
-- Improvement candidates:
-- Recommended Next Q for health:
+- What became clearer:
+- What mistake or risk was prevented:
+- What should future Qs remember:
 
-## Repository Quality Audit
+## Reusable Assets Created
+
+- Rules:
+- Workflow:
+- Templates:
+- Examples:
+- Reports:
+- Scripts / validators:
+- Knowledge entries:
+- Other reusable artifacts:
+
+## Remaining Issues
+
+- Issue:
+- Impact:
+- Owner / next action:
+- Blocking status:
+
+## Recommended Improvements
+
+Near-term improvements suitable for follow-up:
+
+- Recommendation:
+- Reason:
+- Benefit:
+- Risk / downside:
+
+## Future Candidates
+
+Ideas that should remain future work until separately reviewed:
+
+- Candidate:
+- Why future:
+- Promotion condition:
+
+## Recommended Next Q
+
+- Recommended Next Q title:
+- Purpose:
+- Suggested Q ID:
+- Priority:
+
+## Suggested Commit Message
+
+```text
+<type>: <summary>
+```
+
+## AI Repository Index Review
+
+- AI Repository Index update decision: Yes / No / Review Required
+- Public AI knowledge entry points changed:
+- `docs/ai_repository_index.md` regenerated:
+- AI Repository Index validation passed:
+- New Markdown registered:
+- Not required reason:
+
+## Repository Quality Review
 
 - Repository Quality Audit required:
 - Repository Quality Audit executed:
-- Repository Quality Audit passed:
-- Repository Quality Audit command:
-- Repository Quality Report:
-- Overall Repository Health:
+- Repository Quality Audit result:
 - Warning count:
 - Error count:
-- Follow-up Q for repository quality:
-
-## Implementation Complete
-
-## Changed Files
-
-## Verification
+- Repository Quality Report:
 
 ## UTF-8 / Mojibake Review
 
 - UTF-8 Read Rule followed:
 - Q file read command:
 - PowerShell `Get-Content -Encoding UTF8` verified:
-- Python UTF-8 strict decode verified:
-- Mojibake pattern scan performed:
 - Mojibake found:
 - Mojibake findings with file / line / string / expected string / command:
 - Files repaired:
 - Unrepaired / need confirmation:
 
-## Commit Safety Verification
-
-- `git status` reviewed:
-- Changed files classified:
-- Unrelated files reviewed:
-- Accidental files restored:
-- Safe commit set identified:
-- Commit performed:
-- Push performed:
-
-## Metrics / Evidence
-
-- Metrics checked:
-- Evidence source:
-- Interpretation:
-- Not measured:
-
-## Repository Information Followed
-
-- Target Project:
-- Project Profile path:
-- Project Profile reviewed:
-- Project Profile conflicts:
-- Repository:
-- Single Source Of Truth:
-- Cross Project Impact:
-- Scope Guard:
-
 ## Artifact Location Review
 
-- Source Q is stored in the correct project/status workspace:
-- Completion report is stored alongside the source Q:
-- Workspace save was completed before implementation:
-- Missing Q artifact path:
-- Movement performed:
-- Archive needed:
+- Completion report artifact path:
+- Saved beside Source Q File:
+- Request workspace:
+- Notes artifact:
+- Attachments folder:
+- Review Entry Point:
 
-## Remaining Issues
+## Completion Decision
 
-## Current Focus Update
+- Work can be treated as complete: Yes / No / Revision Recommended
+- Human review required:
+- Review decision:
+- Blockers:
 
-## Retrospective
+## Related Documents
 
-## Recommended Improvements
-
-For each improvement, include:
-
-- reason;
-- benefit;
-- downside;
-- whether to apply now;
-- whether to move to Future.
-
-## Improvement Review
-
-Review whether the completed work revealed reusable improvements for:
-
-- Documentation.
-- Templates.
-- Workflow.
-- Roadmap.
-- Rules.
-- Architecture.
-- Knowledge Base.
-
-### Recommended
-
-High-value improvements suitable for near-term adoption.
-
-### Future Candidates
-
-Useful ideas that should remain future work.
-
-Knowledge evolves through implementation. Reusable knowledge should be promoted
-to templates, rules, examples, or documentation whenever practical.
-
-## Recommended Commit
-
-## Related Commit
-
-- Commit policy:
-- Commit hash:
-- Commit message:
-
-## Known Limitations
-
-## Next Phase
+- `docs/rules/completion_report_rules.md`
+- `docs/workflow/completion_report_workflow.md`
+- `templates/completion_checklist_template.md`
+- `docs/rules/completion_checklist_rules.md`
+- `docs/workflow/completion_checklist_workflow.md`
+- `docs/rules/q_file_artifact_standard.md`
+- `docs/rules/q_file_template_rules.md`
+- `docs/rules/git_rules.md`
+- `docs/workflow/commit_safety_checklist.md`

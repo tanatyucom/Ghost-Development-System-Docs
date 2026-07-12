@@ -4,9 +4,12 @@
 
 - Target Project:
 - Working Repository:
+- Working Directory:
+- Source Q ID:
 - Source Q File:
 - Completion Report:
 - Commit policy:
+- Push policy:
 
 ## Verification
 
@@ -24,18 +27,25 @@
 - Review Entry Point:
 - Future Candidates separated from approved scope:
 
-## Completion Report
+## Completion Report v2
 
-- Completion Report Completed:
-- Changed Files recorded:
-- Summary recorded:
-- Verification recorded:
-- Improvement Review recorded:
-- AI Repository Index update decision recorded:
-- AI Repository Index update requirement recorded:
-- Remaining Issues recorded:
-- Recommended Next Q recorded:
-- Suggested Commit Message recorded:
+Required sections checked:
+
+- Identity:
+- Changed Files:
+- Summary:
+- Verification:
+- Safe Commit Set:
+- Commit / Push Status:
+- Project Edit Status:
+- Improvement Review:
+- Lessons Learned:
+- Reusable Assets Created:
+- Remaining Issues:
+- Recommended Improvements:
+- Future Candidates:
+- Recommended Next Q:
+- Suggested Commit Message:
 
 ## AI Repository Knowledge Access
 
@@ -78,6 +88,9 @@
 - Commit Executed:
 - Commit Hash:
 - Commit Message:
+- Push Required:
+- Push Executed:
+- Push Target:
 - Tag Required:
 - Tag Executed:
 - Tag Name:
@@ -91,8 +104,17 @@
 - Workspace clean:
 - Dirty workspace state:
 - Safe commit set:
+- Safe commit set matches Changed Files:
 - Unrelated files:
 - Generated / debug / temporary files excluded:
+
+## Project Edit Status
+
+- Target Project edited as expected:
+- Non-Target Project edited:
+- GameGhost edit status when non-target:
+- Runtime code edit status:
+- Production data edit status:
 
 ## End Decision
 
@@ -103,9 +125,15 @@
 
 ## References
 
+- `docs/rules/completion_report_rules.md`
+- `docs/workflow/completion_report_workflow.md`
+- `templates/completion_report_template.md`
 - `docs/rules/completion_checklist_rules.md`
 - `docs/workflow/completion_checklist_workflow.md`
-- `templates/completion_report_template.md`
 - `docs/ai_repository_index.md`
 - `docs/rules/external_source_access_rules.md`
+- `docs/rules/q_file_naming_rules.md`
+- `docs/rules/q_file_template_rules.md`
+- `docs/workflow/q_file_creation_workflow.md`
+- `docs/workflow/q_revision_addendum_workflow.md`
 - `docs/workflow/commit_safety_checklist.md`

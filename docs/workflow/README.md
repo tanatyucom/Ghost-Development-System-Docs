@@ -28,9 +28,9 @@ gate.
 - `repository_quality_audit_workflow.md`: repository-wide quality audit flow
   that combines UTF-8, mojibake, AI index, GDS Health, link, README, history,
   project profile, and Markdown validation checks.
-- `japanese_documentation_localization_workflow.md`: GDS Docs の説明文を
-  日本語優先で維持しつつ、command、path、URL、identifier、status value を
-  必要に応じて英語維持するための workflow。
+- `japanese_documentation_localization_workflow.md`: GDS Docs 縺ｮ隱ｬ譏取枚繧・
+  譌･譛ｬ隱槫━蜈医〒邯ｭ謖√＠縺､縺､縲…ommand縲｝ath縲ゞRL縲（dentifier縲《tatus value 繧・
+  蠢・ｦ√↓蠢懊§縺ｦ闍ｱ隱樒ｶｭ謖√☆繧九◆繧√・ workflow縲・
 - `repository_root_validation_workflow.md`: startup workflow for checking the
   actual Git repository root against the Q Working Repository.
 - `collaborative_decision_workflow.md`: workflow for AI and user proposals,
@@ -39,11 +39,17 @@ gate.
 - `completion_checklist_workflow.md`: completion confirmation flow for
   verification, review, completion report, Improvement Review, commit, tag,
   release, next Q, and workspace clean confirmation.
+- `completion_report_workflow.md`: workflow for creating Completion Report v2 with Identity, Changed Files, Verification, Safe Commit Set, Commit / Push Status, Project Edit Status, Improvement Review, Lessons Learned, Reusable Assets Created, Remaining Issues, Recommended Next Q, and Suggested Commit Message.
 - `research_mission_workflow.md`: scoped investigation workflow from
   Observation to Research Mission, Evidence Collection, Validation,
   Completion Report, Knowledge Promotion Review, Human Approval, and
   Repository update.
 - `output_policy.md`: chat versus file artifact output decision policy.
+- `q_file_creation_workflow.md`: workflow from idea to Q ID, repository
+  context, template completion, Task Artifact Workspace save, and approval
+  before AI execution.
+- `q_revision_addendum_workflow.md`: workflow for deciding whether a
+  requirement change is an addendum, revised request, or new Q.
 - `audit_before_repair_workflow.md`: audit, classification, evidence, human
   review, scoped repair Q, verification, and commit flow before repair work.
 - `commit_safety_checklist.md`: dirty workspace and commit safety workflow.
@@ -106,6 +112,7 @@ Idea
   -> Collaborative Decision, when classification or design is uncertain
   -> Output Decision
   -> Review
+  -> Q ID Decision
   -> Q Artifact Workspace
   -> Workspace Save Verification
   -> Conversation Insight Detection, when conversation-origin philosophy,
@@ -119,6 +126,7 @@ Idea
   -> Debug Escalation Ladder, when cause is uncertain
   -> Debug Artifact Review, when applicable
   -> Completion Report Artifact
+  -> Completion Report v2 Section Check
   -> Knowledge Inventory, when reusable knowledge is found but not yet promoted
   -> PIP Update, when project state or decisions changed
   -> PIP Case Candidate, when reusable knowledge was found
@@ -367,9 +375,9 @@ safe commit set.
 
 ## Debug Artifact Review Workflow
 
-AI output、OCR output、recommendation、auto-detection、candidate extraction、
-fuzzy matching、image overlay、その他の中間処理を扱う場合は Debug Artifact
-Review を使います。
+AI output縲＾CR output縲〉ecommendation縲∥uto-detection縲…andidate extraction縲・
+fuzzy matching縲（mage overlay縲√◎縺ｮ莉悶・荳ｭ髢灘・逅・ｒ謇ｱ縺・ｴ蜷医・ Debug Artifact
+Review 繧剃ｽｿ縺・∪縺吶・
 
 Standard flow:
 
@@ -385,11 +393,11 @@ Issue / Idea
   -> Completion Report
 ```
 
-通常実行では、Debug Mode が明示されていない限り Debug Artifact を生成しません。
+騾壼ｸｸ螳溯｡後〒縺ｯ縲．ebug Mode 縺梧・遉ｺ縺輔ｌ縺ｦ縺・↑縺・剞繧・Debug Artifact 繧堤函謌舌＠縺ｾ縺帙ｓ縲・
 
-Debug Mode が適用される場合、Completion Report には Debug Artifact の保存場所、
-verification target、expected normal state、review viewpoints、必要に応じた
-AI review target artifacts、Git policy を記載します。
+Debug Mode 縺碁←逕ｨ縺輔ｌ繧句ｴ蜷医，ompletion Report 縺ｫ縺ｯ Debug Artifact 縺ｮ菫晏ｭ伜ｴ謇縲・
+verification target縲‘xpected normal state縲〉eview viewpoints縲∝ｿ・ｦ√↓蠢懊§縺・
+AI review target artifacts縲；it policy 繧定ｨ倩ｼ峨＠縺ｾ縺吶・
 
 ## Debug Escalation Ladder Workflow
 
@@ -457,7 +465,7 @@ docs/requests/
 Use this workspace pattern when the task has related artifacts:
 
 ```text
-docs/requests/<target_project>/<status>/<request_id>_<short_title>/
+docs/requests/<project>/<status>/<Q_ID>_<short_topic>/
   request.md
   completion_report.md
   notes.md
@@ -467,14 +475,14 @@ docs/requests/<target_project>/<status>/<request_id>_<short_title>/
 Simple file form is allowed for small tasks:
 
 ```text
-docs/requests/<target_project>/<status>/YYYY-MM-DD_<target_project>_<short_title>.md
+docs/requests/<project>/<status>/Q_<Q_ID>_<short_topic>_JP.md
 ```
 
-Status folders are `draft`, `approved`, `completed`, and `archived`.
+Status folders include `draft`, `approved`, `in_progress`, `review`, `completed`, `archived`, and `rejected`. Existing repositories may keep the smaller current set until a migration Q expands it.
 
 Workspace save verification means confirming that the authoritative Q exists
 as `request.md` or an approved simple-form `.md` file under
-`docs/requests/<target_project>/<status>/`. A Q that exists only in chat, a
+`docs/requests/<project>/<status>/`. A Q that exists only in chat, a
 download folder, clipboard, or temporary sandbox path should not be treated as
 the official task input. Save the Q first, then begin implementation.
 
@@ -590,9 +598,9 @@ CSV edits, and one-off AI guesses should not be treated as approved assets.
 
 ## PIP Update Flow
 
-Current project state、priorities、architecture summary、known issues、next
-task、reusable improvement history、accepted decisions が変わった場合は PIP を
-更新します。
+Current project state縲｝riorities縲∥rchitecture summary縲〔nown issues縲］ext
+task縲〉eusable improvement history縲∥ccepted decisions 縺悟､峨ｏ縺｣縺溷ｴ蜷医・ PIP 繧・
+譖ｴ譁ｰ縺励∪縺吶・
 
 Standard flow:
 
@@ -606,12 +614,12 @@ Completed Q / Reviewed Work
   -> Human Review
 ```
 
-PIP は briefing artifact です。Official documents を要約し、リンクしますが、
-rules、workflow、architecture、roadmap、templates、examples、evidence artifacts
-を置き換えません。
+PIP 縺ｯ briefing artifact 縺ｧ縺吶０fficial documents 繧定ｦ∫ｴ・＠縲√Μ繝ｳ繧ｯ縺励∪縺吶′縲・
+rules縲『orkflow縲∥rchitecture縲〉oadmap縲》emplates縲‘xamples縲‘vidence artifacts
+繧堤ｽｮ縺肴鋤縺医∪縺帙ｓ縲・
 
-Command Center は PIP を current briefing source として読めます。GIP は reviewed
-specification が作られるまで future candidate として扱います。
+Command Center 縺ｯ PIP 繧・current briefing source 縺ｨ縺励※隱ｭ繧√∪縺吶・IP 縺ｯ reviewed
+specification 縺御ｽ懊ｉ繧後ｋ縺ｾ縺ｧ future candidate 縺ｨ縺励※謇ｱ縺・∪縺吶・
 
 ## PIP Case Knowledge Base Flow
 
@@ -713,7 +721,7 @@ Q Artifact Workspace:
 A structured request that defines Repository Information, Scope Guard, Do / Do
 Not, completion criteria, and deliverables, plus the task folder that preserves
 the request, completion report, notes, and attachments. It should be saved in
-`docs/requests/<target_project>/<status>/` before implementation when it is
+`docs/requests/<project>/<status>/` before implementation when it is
 reusable, reviewable, AI-handoff, or Git-managed.
 
 The minimum full workspace is:
@@ -789,8 +797,11 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/ai_repository_index.md`
 - `docs/workflow/collaborative_decision_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`
+- `docs/workflow/completion_report_workflow.md`
 - `docs/workflow/research_mission_workflow.md`
 - `docs/workflow/output_policy.md`
+- `docs/workflow/q_file_creation_workflow.md`
+- `docs/workflow/q_revision_addendum_workflow.md`
 - `docs/workflow/commit_safety_checklist.md`
 - `docs/workflow/debug_artifact_review_workflow.md`
 - `docs/workflow/debug_escalation_ladder.md`

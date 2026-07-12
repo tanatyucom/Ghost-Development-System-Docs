@@ -2,80 +2,80 @@
 
 ## Purpose
 
-この文書は、Ghost Development System Knowledge Base 自身の進化を記録します。
+縺薙・譁・嶌縺ｯ縲；host Development System Knowledge Base 閾ｪ霄ｫ縺ｮ騾ｲ蛹悶ｒ險倬鹸縺励∪縺吶・
 
-GameGhost の CHANGELOG、Development History、Decision Log ではありません。
-Knowledge Base の構造、運用、review quality、project management、AI
-collaboration がどのように改善されたかを簡潔に残します。
+GameGhost 縺ｮ CHANGELOG縲．evelopment History縲．ecision Log 縺ｧ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲・
+Knowledge Base 縺ｮ讒矩縲・°逕ｨ縲〉eview quality縲｝roject management縲、I
+collaboration 縺後←縺ｮ繧医≧縺ｫ謾ｹ蝟・＆繧後◆縺九ｒ邁｡貎斐↓谿九＠縺ｾ縺吶・
 
 ## Ver1.0
 
 ### Added
 
-- Knowledge Base Index。
-- 目的別 navigation。
-- AI Entry Points。
-- Authority Order。
-- Knowledge Promotion guidance。
-- Scaling Policy。
+- Knowledge Base Index縲・
+- 逶ｮ逧・挨 navigation縲・
+- AI Entry Points縲・
+- Authority Order縲・
+- Knowledge Promotion guidance縲・
+- Scaling Policy縲・
 
 ### Reason
 
-Architecture、Workflow、Roadmap、Rules、Templates、Examples、Glossary が増え、
-人間と AI がどこから読めばよいか分かりにくくなったため。
+Architecture縲仝orkflow縲ヽoadmap縲ヽules縲ゝemplates縲・xamples縲；lossary 縺悟｢励∴縲・
+莠ｺ髢薙→ AI 縺後←縺薙°繧芽ｪｭ繧√・繧医＞縺句・縺九ｊ縺ｫ縺上￥縺ｪ縺｣縺溘◆繧√・
 
 ### Evolution
 
-Knowledge Base が単なる folder collection から、目的別に読める公式入口を持つ
-documentation system へ進化した。
+Knowledge Base 縺悟腰縺ｪ繧・folder collection 縺九ｉ縲∫岼逧・挨縺ｫ隱ｭ繧√ｋ蜈ｬ蠑丞・蜿｣繧呈戟縺､
+documentation system 縺ｸ騾ｲ蛹悶＠縺溘・
 
 ## Ver1.1
 
 ### Added
 
-- Project First Principle。
-- Japanese First。
-- Cross Project Impact。
-- Project Rules。
-- Language Rules。
-- Ghost Development System Roadmap。
-- Target Project を含む Q file template。
+- Project First Principle縲・
+- Japanese First縲・
+- Cross Project Impact縲・
+- Project Rules縲・
+- Language Rules縲・
+- Ghost Development System Roadmap縲・
+- Target Project 繧貞性繧 Q file template縲・
 
 ### Reason
 
-Ghost Development System を GameGhost から独立した親の開発基盤として扱う必要が
-明確になったため。
+Ghost Development System 繧・GameGhost 縺九ｉ迢ｬ遶九＠縺溯ｦｪ縺ｮ髢狗匱蝓ｺ逶､縺ｨ縺励※謇ｱ縺・ｿ・ｦ√′
+譏守｢ｺ縺ｫ縺ｪ縺｣縺溘◆繧√・
 
-人間が理解できない依頼文は Human Approval を満たせず、Target Project が曖昧な
-Q は誤編集や scope drift を起こす可能性があるため。
+莠ｺ髢薙′逅・ｧ｣縺ｧ縺阪↑縺・ｾ晞ｼ譁・・ Human Approval 繧呈ｺ縺溘○縺壹ゝarget Project 縺梧尠譏ｧ縺ｪ
+Q 縺ｯ隱､邱ｨ髮・ｄ scope drift 繧定ｵｷ縺薙☆蜿ｯ閭ｽ諤ｧ縺後≠繧九◆繧√・
 
 ### Evolution
 
-Knowledge Base が、GameGhost 補助文書ではなく、複数 project を支える開発基盤の
-ルールセットへ進化した。
+Knowledge Base 縺後；ameGhost 陬懷勧譁・嶌縺ｧ縺ｯ縺ｪ縺上∬､・焚 project 繧呈髪縺医ｋ髢狗匱蝓ｺ逶､縺ｮ
+繝ｫ繝ｼ繝ｫ繧ｻ繝・ヨ縺ｸ騾ｲ蛹悶＠縺溘・
 
 ## Ver1.2
 
 ### Added
 
-- Roadmap README の roadmap 一覧。
-- Project Hierarchy。
-- 強化された Review Checklist。
-- Decision Background の軽量な記録方針。
-- Knowledge Base History。
+- Roadmap README 縺ｮ roadmap 荳隕ｧ縲・
+- Project Hierarchy縲・
+- 蠑ｷ蛹悶＆繧後◆ Review Checklist縲・
+- Decision Background 縺ｮ霆ｽ驥上↑險倬鹸譁ｹ驥昴・
+- Knowledge Base History縲・
 
 ### Reason
 
-Ver1.1 で追加した Project First、Japanese First、Cross Project Impact を、review
-品質と navigation の中で安定して使えるようにする必要があったため。
+Ver1.1 縺ｧ霑ｽ蜉縺励◆ Project First縲゛apanese First縲，ross Project Impact 繧偵〉eview
+蜩∬ｳｪ縺ｨ navigation 縺ｮ荳ｭ縺ｧ螳牙ｮ壹＠縺ｦ菴ｿ縺医ｋ繧医≧縺ｫ縺吶ｋ蠢・ｦ√′縺ゅ▲縺溘◆繧√・
 
-Knowledge Base 自身の進化を振り返れる場所がないと、なぜ現在の構造になったのか
-が将来分かりにくくなるため。
+Knowledge Base 閾ｪ霄ｫ縺ｮ騾ｲ蛹悶ｒ謖ｯ繧願ｿ斐ｌ繧句ｴ謇縺後↑縺・→縲√↑縺懃樟蝨ｨ縺ｮ讒矩縺ｫ縺ｪ縺｣縺溘・縺・
+縺悟ｰ・擂蛻・°繧翫↓縺上￥縺ｪ繧九◆繧√・
 
 ### Evolution
 
-Knowledge Base が、入口とルールを持つ状態から、review quality と自己履歴を持つ
-保守可能な documentation platform へ進化した。
+Knowledge Base 縺後∝・蜿｣縺ｨ繝ｫ繝ｼ繝ｫ繧呈戟縺､迥ｶ諷九°繧峨〉eview quality 縺ｨ閾ｪ蟾ｱ螻･豁ｴ繧呈戟縺､
+菫晏ｮ亥庄閭ｽ縺ｪ documentation platform 縺ｸ騾ｲ蛹悶＠縺溘・
 
 ## Ver1.3
 
@@ -268,80 +268,80 @@ the full artifact set.
 
 ### Added
 
-- PIP v1.1 Stable。
-- PIP directory README。
-- PIP Improvement History。
-- PIP Decision History。
-- Migration guide from PIP v1.0 to v1.1。
-- PIP Changelog。
-- Knowledge Base Index entry for PIP。
-- Architecture boundary entry for PIP。
-- Workflow guidance for PIP update and AI handoff。
+- PIP v1.1 Stable縲・
+- PIP directory README縲・
+- PIP Improvement History縲・
+- PIP Decision History縲・
+- Migration guide from PIP v1.0 to v1.1縲・
+- PIP Changelog縲・
+- Knowledge Base Index entry for PIP縲・
+- Architecture boundary entry for PIP縲・
+- Workflow guidance for PIP update and AI handoff縲・
 
 ### Reason
 
-Roadmap2 と OCR review work により、PIP は単なる handoff document ではなく、
-現在の project state と、なぜその状態になったかを説明する reusable briefing layer
-であることが分かりました。
+Roadmap2 縺ｨ OCR review work 縺ｫ繧医ｊ縲￣IP 縺ｯ蜊倥↑繧・handoff document 縺ｧ縺ｯ縺ｪ縺上・
+迴ｾ蝨ｨ縺ｮ project state 縺ｨ縲√↑縺懊◎縺ｮ迥ｶ諷九↓縺ｪ縺｣縺溘°繧定ｪｬ譏弱☆繧・reusable briefing layer
+縺ｧ縺ゅｋ縺薙→縺悟・縺九ｊ縺ｾ縺励◆縲・
 
-PIP が GitHub Docs、Information Package、roadmap archive、completion reports、
-chat summaries と重複しないように、GDS 内での stable position が必要でした。
+PIP 縺・GitHub Docs縲！nformation Package縲〉oadmap archive縲…ompletion reports縲・
+chat summaries 縺ｨ驥崎､・＠縺ｪ縺・ｈ縺・↓縲；DS 蜀・〒縺ｮ stable position 縺悟ｿ・ｦ√〒縺励◆縲・
 
 ### Evolution
 
-Knowledge Base は、reviewable debug artifacts から、briefing と history を含む
-より完全な system へ進化しました。PIP は current state、Improvement History、
-Decision History、AI handoff を扱い、GitHub Docs は Single Source of Truth のまま
-維持されます。
+Knowledge Base 縺ｯ縲〉eviewable debug artifacts 縺九ｉ縲｜riefing 縺ｨ history 繧貞性繧
+繧医ｊ螳悟・縺ｪ system 縺ｸ騾ｲ蛹悶＠縺ｾ縺励◆縲１IP 縺ｯ current state縲！mprovement History縲・
+Decision History縲、I handoff 繧呈桶縺・；itHub Docs 縺ｯ Single Source of Truth 縺ｮ縺ｾ縺ｾ
+邯ｭ謖√＆繧後∪縺吶・
 
 ## Ver1.11
 
 ### Added
 
-- Roadmap2 Completion Delta integration for PIP v1.1。
-- PIP Review Methodology。
-- Trace Before Tune。
-- First Broken Step。
-- Review Entry Point。
-- Human Visual Review。
-- Evolution Chain。
-- PIP Delta Integration Summary。
+- Roadmap2 Completion Delta integration for PIP v1.1縲・
+- PIP Review Methodology縲・
+- Trace Before Tune縲・
+- First Broken Step縲・
+- Review Entry Point縲・
+- Human Visual Review縲・
+- Evolution Chain縲・
+- PIP Delta Integration Summary縲・
 
 ### Reason
 
-Roadmap2 の OCR review では、最終結果だけではなく、中間 trace、最初に壊れた step、
-review artifact の入口、人間による visual review が品質保証に必要であることが
-確認されました。
+Roadmap2 縺ｮ OCR review 縺ｧ縺ｯ縲∵怙邨らｵ先棡縺縺代〒縺ｯ縺ｪ縺上∽ｸｭ髢・trace縲∵怙蛻昴↓螢翫ｌ縺・step縲・
+review artifact 縺ｮ蜈･蜿｣縲∽ｺｺ髢薙↓繧医ｋ visual review 縺悟刀雉ｪ菫晁ｨｼ縺ｫ蠢・ｦ√〒縺ゅｋ縺薙→縺・
+遒ｺ隱阪＆繧後∪縺励◆縲・
 
 ### Evolution
 
-PIP は current state と decision history だけでなく、その state に到達するための
-review methodology も保存する briefing layer へ拡張されました。
+PIP 縺ｯ current state 縺ｨ decision history 縺縺代〒縺ｪ縺上√◎縺ｮ state 縺ｫ蛻ｰ驕斐☆繧九◆繧√・
+review methodology 繧ゆｿ晏ｭ倥☆繧・briefing layer 縺ｸ諡｡蠑ｵ縺輔ｌ縺ｾ縺励◆縲・
 
 ## Ver1.12
 
 ### Added
 
 - PIP v1.1 package reconciliation with `PIP_v1.0_stable.zip` and
-  `GDS_PIP_v1.1_delta_package_20260708.zip`。
-- PIP Case Index。
-- Reconciliation Report。
-- Evaluate What Actually Matters。
-- Metrics can pass while visual containment fails。
-- Target Row Identity / Title BBox traceability。
-- Target Row Trace / Pipeline Trace as standard artifact option。
-- Steam OCR v2 debugging sequence as reusable cases。
+  `GDS_PIP_v1.1_delta_package_20260708.zip`縲・
+- PIP Case Index縲・
+- Reconciliation Report縲・
+- Evaluate What Actually Matters縲・
+- Metrics can pass while visual containment fails縲・
+- Target Row Identity / Title BBox traceability縲・
+- Target Row Trace / Pipeline Trace as standard artifact option縲・
+- Steam OCR v2 debugging sequence as reusable cases縲・
 
 ### Reason
 
-実Delta Packageを確認した結果、前回のQ本文ベース統合では主要テーマは反映済みでしたが、
-PIP v1.0 stable の improvement knowledge database という位置付けと、metric proxy /
-visual containment / trace artifact option / case index の明示が不足していました。
+螳櫂elta Package繧堤｢ｺ隱阪＠縺溽ｵ先棡縲∝燕蝗槭・Q譛ｬ譁・・繝ｼ繧ｹ邨ｱ蜷医〒縺ｯ荳ｻ隕√ユ繝ｼ繝槭・蜿肴丐貂医∩縺ｧ縺励◆縺後・
+PIP v1.0 stable 縺ｮ improvement knowledge database 縺ｨ縺・≧菴咲ｽｮ莉倥￠縺ｨ縲［etric proxy /
+visual containment / trace artifact option / case index 縺ｮ譏守､ｺ縺御ｸ崎ｶｳ縺励※縺・∪縺励◆縲・
 
 ### Evolution
 
-PIP は briefing layer と improvement knowledge database の両方として整理され、
-evidence package と実装文書の整合性を確認する reconciliation process も記録対象になりました。
+PIP 縺ｯ briefing layer 縺ｨ improvement knowledge database 縺ｮ荳｡譁ｹ縺ｨ縺励※謨ｴ逅・＆繧後・
+evidence package 縺ｨ螳溯｣・枚譖ｸ縺ｮ謨ｴ蜷域ｧ繧堤｢ｺ隱阪☆繧・reconciliation process 繧りｨ倬鹸蟇ｾ雎｡縺ｫ縺ｪ繧翫∪縺励◆縲・
 
 ## Ver1.13
 
@@ -1946,21 +1946,19 @@ artifacts or creating runtime contracts.
 
 ### Reason
 
-Steam OCR研究は、単なるOCR改善ではなく、Research Mission、Knowledge
-Inventory、Promotion Review、Existing Rule Update、CASE、GitHub Integrationを
-初めて実運用したGDSの歴史的マイルストーンになったため。
+Steam OCR遐皮ｩｶ縺ｯ縲∝腰縺ｪ繧軌CR謾ｹ蝟・〒縺ｯ縺ｪ縺上ヽesearch Mission縲゜nowledge
+Inventory縲￣romotion Review縲・xisting Rule Update縲，ASE縲；itHub Integration繧・
+蛻昴ａ縺ｦ螳滄°逕ｨ縺励◆GDS縺ｮ豁ｴ蜿ｲ逧・・繧､繝ｫ繧ｹ繝医・繝ｳ縺ｫ縺ｪ縺｣縺溘◆繧√・
 
-通常のCompletion Reportでは、技術、人間の判断、ChatGPTとの設計、Codexとの研究協働、
-GitHubへの知識昇格、GDSの進化を一つの物語として十分に残せないため。
+騾壼ｸｸ縺ｮCompletion Report縺ｧ縺ｯ縲∵橿陦薙∽ｺｺ髢薙・蛻､譁ｭ縲，hatGPT縺ｨ縺ｮ險ｭ險医，odex縺ｨ縺ｮ遐皮ｩｶ蜊泌ロ縲・
+GitHub縺ｸ縺ｮ遏･隴俶・譬ｼ縲；DS縺ｮ騾ｲ蛹悶ｒ荳縺､縺ｮ迚ｩ隱槭→縺励※蜊∝・縺ｫ谿九○縺ｪ縺・◆繧√・
 
 ### Evolution
 
-Knowledge Baseは、Rule、Workflow、Template、CASEを保存する体系から、GDS自身の転換点を
-物語として保存する歴史アーカイブを持つ体系へ進化した。
+Knowledge Base縺ｯ縲ヽule縲仝orkflow縲ゝemplate縲，ASE繧剃ｿ晏ｭ倥☆繧倶ｽ鍋ｳｻ縺九ｉ縲；DS閾ｪ霄ｫ縺ｮ霆｢謠帷せ繧・
+迚ｩ隱槭→縺励※菫晏ｭ倥☆繧区ｭｴ蜿ｲ繧｢繝ｼ繧ｫ繧､繝悶ｒ謖√▽菴鍋ｳｻ縺ｸ騾ｲ蛹悶＠縺溘・
 
-Steam OCRは、経験がKnowledge Inventoryへ入り、Promotion Reviewを通り、RuleとCASEへ昇格し、
-最後にMilestoneとして保存される最初の完全な実例になった。
-
+Steam OCR縺ｯ縲∫ｵ碁ｨ薙′Knowledge Inventory縺ｸ蜈･繧翫￣romotion Review繧帝壹ｊ縲ヽule縺ｨCASE縺ｸ譏・ｼ縺励・譛蠕後↓Milestone縺ｨ縺励※菫晏ｭ倥＆繧後ｋ譛蛻昴・螳悟・縺ｪ螳滉ｾ九↓縺ｪ縺｣縺溘・
 ## Ver1.71
 
 ### Added
@@ -1977,16 +1975,13 @@ Steam OCRは、経験がKnowledge Inventoryへ入り、Promotion Reviewを通り
 
 ### Reason
 
-Steam OCR Root Cause Investigationで実証された「Goal、Scope、Out of Scope、
-Evidence、Validation、Completion Reportを明示して調査する」運用を、Steam OCR
-固有の成功ではなくGDS全体で再利用できるResearch Frameworkへ昇格するため。
-
+Steam OCR Root Cause Investigation縺ｧ螳溯ｨｼ縺輔ｌ縺溘隈oal縲ヾcope縲＾ut of Scope縲・Evidence縲〃alidation縲，ompletion Report繧呈・遉ｺ縺励※隱ｿ譟ｻ縺吶ｋ縲埼°逕ｨ繧偵ヾteam OCR
+蝗ｺ譛峨・謌仙粥縺ｧ縺ｯ縺ｪ縺秀DS蜈ｨ菴薙〒蜀榊茜逕ｨ縺ｧ縺阪ｋResearch Framework縺ｸ譏・ｼ縺吶ｋ縺溘ａ縲・
 ### Evolution
 
-GDSは、曖昧な調査依頼をそのままAIへ渡す運用から、Research Missionとして
-調査の目的、証拠、検証、負の結果、Knowledge Promotion候補を保存する運用へ
-進化した。
-
+GDS縺ｯ縲∵尠譏ｧ縺ｪ隱ｿ譟ｻ萓晞ｼ繧偵◎縺ｮ縺ｾ縺ｾAI縺ｸ貂｡縺咎°逕ｨ縺九ｉ縲ヽesearch Mission縺ｨ縺励※
+隱ｿ譟ｻ縺ｮ逶ｮ逧・∬ｨｼ諡縲∵､懆ｨｼ縲∬ｲ縺ｮ邨先棡縲゜nowledge Promotion蛟呵｣懊ｒ菫晏ｭ倥☆繧矩°逕ｨ縺ｸ
+騾ｲ蛹悶＠縺溘・
 ## Ver1.72
 
 ### Added
@@ -2001,18 +1996,67 @@ GDSは、曖昧な調査依頼をそのままAIへ渡す運用から、Research 
 
 ### Reason
 
-Research Mission Template / Workflow / Rulesが標準化された後、Startup Procedure
-からResearch Taskを検出してResearch Missionへ入る入口が必要になったため。
+Research Mission Template / Workflow / Rules縺梧ｨ呎ｺ門喧縺輔ｌ縺溷ｾ後ヾtartup Procedure
+縺九ｉResearch Task繧呈､懷・縺励※Research Mission縺ｸ蜈･繧句・蜿｣縺悟ｿ・ｦ√↓縺ｪ縺｣縺溘◆繧√・
+### Evolution
+
+GDS Startup縺ｯ縲∝腰縺ｫrepository縺ｨscope繧堤｢ｺ隱阪☆繧九□縺代〒縺ｪ縺上，urrent Q縺ｨ
+Information Package縺九ｉ縲後％繧後・騾壼ｸｸ螳溯｣・°縲ヽesearch Mission縺九阪ｒ蛻､螳壹☆繧・襍ｷ蜍輔ご繝ｼ繝医∈騾ｲ蛹悶＠縺溘・
+## Ver1.73
+
+### Added
+
+- Q File Naming Rules:
+  `docs/rules/q_file_naming_rules.md`.
+- Q File Template Rules:
+  `docs/rules/q_file_template_rules.md`.
+- Q File Creation Workflow:
+  `docs/workflow/q_file_creation_workflow.md`.
+- Q Revision / Addendum Workflow:
+  `docs/workflow/q_revision_addendum_workflow.md`.
+- Updated Q File Template:
+  `templates/q_file_template.md`.
+- Q File Examples:
+  `examples/q_file_examples.md`.
+- README, Rules, Workflow, Templates, Examples, Requests, Startup Checklist,
+  Completion Checklist, and Completion Report template links.
+
+### Reason
+
+Qファイルがチャット本文、Download folder、日付だけのファイル名、または曖昧なrequest nameに分散すると、AI実行時の入力欠落、レビュー不能、Completion Reportとの切断、Safe Commit Setの曖昧化が起きるため。
+
+日付は作成時刻の情報であり、通常のQのidentityではない。QのidentityはQ ID、folder name、`request.md` metadata、completion reportのSource Q Fileで追跡する。
 
 ### Evolution
 
-GDS Startupは、単にrepositoryとscopeを確認するだけでなく、Current Qと
-Information Packageから「これは通常実装か、Research Missionか」を判定する
-起動ゲートへ進化した。
+GDSのQ運用は、Artifact Firstからさらに進み、Q ID、命名、保存場所、Addendum判断、AI Repository Index Update Gate、Completion Report Requirements、Safe Commit Setまでを一つの標準として扱う段階へ進化した。
+## Ver1.74
 
+### Added
+
+- Completion Report Rules:
+  `docs/rules/completion_report_rules.md`.
+- Completion Report Workflow:
+  `docs/workflow/completion_report_workflow.md`.
+- Completion Report Template v2:
+  `templates/completion_report_template.md`.
+- Completion Report Examples:
+  `examples/completion_report_examples.md`.
+- Completion Checklist Template update for Completion Report v2 required sections.
+- README, docs index, rules index, workflow index, templates index, and examples index links.
+
+### Reason
+
+Q Template、Naming、Workspaceがv2へ進んだことで、Completion ReportもSource Q、Changed Files、Verification、Safe Commit Set、Commit / Push Status、Project Edit Status、改善知見、次Qまでを一貫して残す必要が明確になったため。
+
+Completion Reportが単なる完了要約のままだと、review、commit判断、handoff、Knowledge Promotionで同じ確認を毎回やり直すことになる。
+
+### Evolution
+
+GDSのCompletion Reportは、作業終了の文章から、Documentation System v2の監査可能な終了Artifactへ進化した。今後のQは、完了時にSafe Commit Set、Project Edit Status、Lessons Learned、Reusable Assets Createdを明示し、次の改善やFuture Candidateを混ぜずに扱える。
 ## Update Notes
 
-この文書は詳細な Decision Log ではありません。
+縺薙・譁・嶌縺ｯ隧ｳ邏ｰ縺ｪ Decision Log 縺ｧ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲・
 
-重要 decision の詳細な選択肢、却下理由、承認経緯が必要な場合は、別途 Decision
-Log または ADR を作成します。
+驥崎ｦ・decision 縺ｮ隧ｳ邏ｰ縺ｪ驕ｸ謚櫁い縲∝唆荳狗炊逕ｱ縲∵価隱咲ｵ檎ｷｯ縺悟ｿ・ｦ√↑蝣ｴ蜷医・縲∝挨騾・Decision
+Log 縺ｾ縺溘・ ADR 繧剃ｽ懈・縺励∪縺吶・

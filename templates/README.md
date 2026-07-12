@@ -63,8 +63,8 @@ beside templates when a task should record GDS operating health rather than
 only task completion.
 
 Q-related templates use the Task Artifact Workspace standard for request,
-completion report, notes, attachments, status movement, and related commit
-tracking.
+completion report, notes, attachments, status movement, related commit
+tracking, Q ID, filename, date exception, addendum, and Safe Commit Set.
 
 Completion and review templates also include dirty workspace and commit safety
 fields so unrelated files, restore suggestions, and safe commit sets are
@@ -194,6 +194,32 @@ Separate proposals into:
 Knowledge evolves through implementation. Reusable knowledge should be promoted
 to templates, rules, examples, or documentation whenever practical.
 
+
+## Completion Reports
+
+`completion_report_template.md` is the standard template for Completion Report v2.
+
+Use it after substantial Q execution, documentation update, review, or handoff work.
+
+Required sections:
+
+1. Identity
+2. Changed Files
+3. Summary
+4. Verification
+5. Safe Commit Set
+6. Commit / Push Status
+7. Project Edit Status
+8. Improvement Review
+9. Lessons Learned
+10. Reusable Assets Created
+11. Remaining Issues
+12. Recommended Improvements
+13. Future Candidates
+14. Recommended Next Q
+15. Suggested Commit Message
+
+Completion Reports should link back to the Source Q File, state whether GameGhost or any non-target project was edited, record whether commit / push happened, and separate Remaining Issues, Recommended Improvements, and Future Candidates.
 ## Q Files
 
 `q_file_template.md` is the standard template for reusable Codex request files.
@@ -207,8 +233,9 @@ Use it for:
 - architecture review;
 - future DMS-generated fix proposals.
 
-Q files should make scope, non-scope, target files, deliverables, and commit
-policy explicit.
+Q files should make Q ID, repository context, scope, non-scope, target files,
+deliverables, validation, AI Repository Index Update Gate, Safe Commit Set,
+and commit / push policy explicit.
 
 Q files should also make Output Format and Required Artifacts explicit.
 
@@ -220,12 +247,14 @@ Default artifact policy:
 - Chat should contain the summary and artifact paths or links only when the
   file artifact is authoritative.
 - Q artifacts should be saved in Task Artifact Workspaces under
-  `docs/requests/<target_project>/<status>/`.
+  `docs/requests/<project>/<status>/`.
 - Full workspaces should use `request.md`, `completion_report.md`, `notes.md`,
   and `attachments/`.
-- Simple Q artifacts may use
-  `YYYY-MM-DD_<target_project>_<short_title>.md` when a full workspace is not
-  needed yet.
+- Simple Q artifacts should use
+  `Q_<Q_ID>_<short_topic>_JP.md` when a full workspace is not needed yet.
+  Date in filename is reserved for snapshot, incident, release, migration,
+  external event, or temporary handoff artifacts where date is the primary
+  identity.
 - Completion report artifacts should be saved beside the source Q.
 
 Q files should state naming policy when a request renames roadmap items,
@@ -300,6 +329,10 @@ Do not add one-off request details to templates. Add only reusable structure.
 - `docs/workflow/conversation_insight_capture_workflow.md`
 - `docs/requests/README.md`
 - `docs/rules/q_file_artifact_standard.md`
+- `docs/rules/q_file_naming_rules.md`
+- `docs/rules/q_file_template_rules.md`
+- `docs/workflow/q_file_creation_workflow.md`
+- `docs/workflow/q_revision_addendum_workflow.md`
 - `docs/rules/audit_before_repair_rules.md`
 - `docs/rules/migration_first_rules.md`
 - `docs/rules/debug_artifact_review_rules.md`

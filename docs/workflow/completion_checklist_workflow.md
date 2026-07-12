@@ -16,6 +16,7 @@ Implementation
   -> Verification
   -> Review
   -> Completion Report
+  -> Completion Report v2 Section Check
   -> Completion Checklist
   -> Commit / Tag / Release Decision
   -> Recommended Next Q
@@ -35,9 +36,11 @@ Implementation
 
 ### Completion Report
 
-Completion Report が必要な作業では、Source Q File、Changed Files、Verification、
-Improvement Review、Remaining Issues、Recommended Next Q、Suggested Commit
-Message を記録します。
+Completion Report が必要な作業では、`templates/completion_report_template.md` と
+`docs/rules/completion_report_rules.md` に従い、Identity、Changed Files、Summary、
+Verification、Safe Commit Set、Commit / Push Status、Project Edit Status、Improvement
+Review、Lessons Learned、Reusable Assets Created、Remaining Issues、Recommended
+Improvements、Future Candidates、Recommended Next Q、Suggested Commit Message を記録します。
 
 ### Completion Checklist
 
@@ -72,6 +75,7 @@ Completion Checklist:
 - Verification Completed:
 - Review Completed:
 - Completion Report Completed:
+- Completion Report v2 Required Sections Checked:
 - Improvement Review Completed:
 - Commit Required:
 - Commit Executed:
@@ -104,6 +108,9 @@ Completion Checklist:
 - `templates/completion_checklist_template.md`
 - `examples/completion_checklist_examples.md`
 - `templates/completion_report_template.md`
+- `docs/rules/completion_report_rules.md`
+- `docs/workflow/completion_report_workflow.md`
+- `examples/completion_report_examples.md`
 - `templates/review_checklist.md`
 - `docs/workflow/commit_safety_checklist.md`
 - `docs/rules/git_rules.md`

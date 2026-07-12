@@ -53,6 +53,7 @@ promoted.
 - `completion_checklist_rules.md`: completion confirmation rule for
   verification, review, completion report, Improvement Review, commit, tag,
   release, next Q, and workspace clean confirmation.
+- `completion_report_rules.md`: Completion Report v2 required sections, Safe Commit Set, Commit / Push Status, Project Edit Status, Improvement Review, Lessons Learned, Reusable Assets Created, Remaining Issues, Recommended Next Q, and Suggested Commit Message rules.
 - `research_mission_rules.md`: rule for scoped investigation missions that
   define Goal, Scope, Out of Scope, Evidence, Validation, Negative Result
   handling, and Completion Report before research begins. Startup Procedure
@@ -66,6 +67,11 @@ promoted.
 - `q_file_artifact_standard.md`: Task Artifact Workspace, save location,
   status movement, naming, completion report pairing, notes, attachments, and
   commit linkage standard for Q file artifacts.
+- `q_file_naming_rules.md`: Q ID, filename, date exception, request folder,
+  status, revision, addendum, and completion report linkage rules.
+- `q_file_template_rules.md`: mandatory Q template fields for repository
+  context, commit / push policy, validation, AI Repository Index gate,
+  completion report requirements, Safe Commit Set, and review decision.
 - `audit_before_repair_rules.md`: audit, classification, evidence, human
   review, scoped repair Q, verification, and commit flow for repair work.
 - `debug_artifact_review_rules.md`: Debug Mode, intermediate artifact review,
@@ -120,22 +126,25 @@ promoted.
 10. `repository_root_validation_rules.md`
 11. `ai_proactive_proposal_rules.md`
 12. `completion_checklist_rules.md`
-13. `research_mission_rules.md`
-14. `conversation_insight_capture_rules.md`
-15. `artifact_first_rules.md`
-16. `q_file_artifact_standard.md`
-17. `audit_before_repair_rules.md`
-18. `debug_artifact_review_rules.md`
-19. `debug_escalation_ladder_rules.md`
-20. `migration_first_rules.md`
-21. `pip_case_knowledge_base_rules.md`
-22. `concept_id_naming_rules.md`
-23. `roadmap2_knowledge_salvage_rules.md`
-24. `workflow_rules.md`
-25. `quality_rules.md`
-26. `ai_collaboration_rules.md`
-27. `git_rules.md`
-28. `script_architecture_rules.md`
+13. `completion_report_rules.md`
+14. `research_mission_rules.md`
+15. `conversation_insight_capture_rules.md`
+16. `artifact_first_rules.md`
+17. `q_file_artifact_standard.md`
+18. `q_file_naming_rules.md`
+19. `q_file_template_rules.md`
+20. `audit_before_repair_rules.md`
+21. `debug_artifact_review_rules.md`
+22. `debug_escalation_ladder_rules.md`
+23. `migration_first_rules.md`
+24. `pip_case_knowledge_base_rules.md`
+25. `concept_id_naming_rules.md`
+26. `roadmap2_knowledge_salvage_rules.md`
+27. `workflow_rules.md`
+28. `quality_rules.md`
+29. `ai_collaboration_rules.md`
+30. `git_rules.md`
+31. `script_architecture_rules.md`
 
 ## Update Policy
 
