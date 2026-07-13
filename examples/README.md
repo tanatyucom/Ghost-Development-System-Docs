@@ -80,6 +80,15 @@ reports, and documentation requests can start from a clear reference.
 - `review_center_examples.md`: good and bad examples for Review Center
   platform / adapter split, explicit approval state, resume behavior, and
   avoiding silent auto approval.
+- Documentation Synchronization:
+  `documentation_synchronization_examples.md` shows good and bad examples for
+  keeping README / folder index, AI Repository Index, completion checklist,
+  completion report, and repository quality audit aligned after documentation
+  changes.
+- `documentation_synchronization_examples.md`: good and bad examples for
+  updating README / folder index entry points, AI Repository Index, completion
+  checklist, completion report, and Repository Quality Audit after
+  documentation changes.
 - `persistent_collaboration_examples.md`: good and bad examples for command
   presentation, review conclusion, Download First, Repository First, Platform
   First, AI collaboration, and completion report priority.
@@ -199,6 +208,9 @@ what a complete, well-scoped document should feel like.
 - Use `review_center_examples.md` when designing a human review session,
   adapter boundary, explicit approval state, resume behavior, correction
   history, or gate-ready review export.
+- Use `documentation_synchronization_examples.md` when a rule, workflow,
+  architecture, template, example, report, README, or AI index update may need
+  synchronized documentation entry points before completion.
 - Use `persistent_collaboration_examples.md` when applying persistent
   collaboration behavior across ChatGPT, Codex, Claude, Gemini, human review,
   Q files, completion reports, command presentation, and review conclusions.

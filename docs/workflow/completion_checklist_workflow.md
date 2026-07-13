@@ -48,12 +48,22 @@ Improvements、Future Candidates、Recommended Next Q、Suggested Commit Message
 Completion Checklist 欄を確認します。
 
 AI Repository Index update decision は必ず確認します。
+Documentation Synchronization Gate も、Markdown文書を追加・移動・改名・大幅更新
+した場合は必ず確認します。
 
 ```text
 Public AI knowledge entry point changed?
   -> Yes: regenerate docs/ai_repository_index.md and validate
   -> No: record not required reason
   -> Review Required: stop and request review before completion
+```
+
+```text
+Documentation entry point changed?
+  -> Yes: update README / folder index, regenerate AI Repository Index,
+          run Repository Quality Audit
+  -> No: record not required reason
+  -> Review Required: stop before commit approval
 ```
 
 ### Commit / Tag / Release Decision
@@ -88,6 +98,8 @@ Completion Checklist:
 - AI Repository Index Update Decision:
 - AI Repository Index Regenerated:
 - AI Repository Index Validation Passed:
+- Documentation Synchronization Required:
+- Documentation Synchronization Gate Passed:
 ```
 
 ## Completion Criteria
@@ -101,6 +113,7 @@ Completion Checklist:
 - Workspace clean confirmation または dirty state が記録されている。
 - AI Repository Index update decision が Yes / No / Review Required のいずれかで記録されている。
 - public AI knowledge entry point が変わった場合、`docs/ai_repository_index.md` が再生成・検証されている。
+- documentation entry point が変わった場合、README / index 更新、AI Repository Index、Repository Quality Audit の同期結果が記録されている。
 
 ## Related Documents
 
@@ -110,6 +123,7 @@ Completion Checklist:
 - `templates/completion_report_template.md`
 - `docs/rules/completion_report_rules.md`
 - `docs/workflow/completion_report_workflow.md`
+- `docs/workflow/documentation_synchronization_workflow.md`
 - `examples/completion_report_examples.md`
 - `templates/review_checklist.md`
 - `docs/workflow/commit_safety_checklist.md`

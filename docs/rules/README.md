@@ -23,6 +23,9 @@ Review Center placement policy.
 Review Center Rules define Human Review Session Manager behavior, explicit
 approval, persistence, plugin registration, gate export, and legacy migration
 guards.
+Documentation Synchronization Rules define the gate for keeping README files,
+folder indexes, AI Repository Index, completion checklist, completion report,
+and repository quality audit aligned after documentation changes.
 Persistent Collaboration, Platform First, Repository First, Download First,
 Rule Priority, Command Rule, Review Rule, Completion Report First, AI
 Cognitive Load Reduction, and Platform Philosophy are defined in
@@ -99,6 +102,10 @@ promoted.
   Center, including platform / domain boundary, GUI name, persistence, missing
   artifacts, correction history, plugin registration, gate export, and legacy
   behavior.
+- `documentation_synchronization_rules.md`: rules for detecting documentation
+  changes that require README, folder index, AI Repository Index, completion
+  checklist, completion report, and repository quality synchronization before
+  completion.
 - `pip_case_knowledge_base_rules.md`: standard locations, metadata, tags,
   case sections, evidence linking, PIP Master Document / Title List handling,
   concept lifecycle, and promotion rules for PIP cases.
@@ -156,14 +163,15 @@ promoted.
 23. `migration_first_rules.md`
 24. `platform_component_rules.md`
 25. `review_center_rules.md`
-26. `pip_case_knowledge_base_rules.md`
-27. `concept_id_naming_rules.md`
-28. `roadmap2_knowledge_salvage_rules.md`
-29. `workflow_rules.md`
-30. `quality_rules.md`
-31. `ai_collaboration_rules.md`
-32. `git_rules.md`
-33. `script_architecture_rules.md`
+26. `documentation_synchronization_rules.md`
+27. `pip_case_knowledge_base_rules.md`
+28. `concept_id_naming_rules.md`
+29. `roadmap2_knowledge_salvage_rules.md`
+30. `workflow_rules.md`
+31. `quality_rules.md`
+32. `ai_collaboration_rules.md`
+33. `git_rules.md`
+34. `script_architecture_rules.md`
 
 ## Update Policy
 

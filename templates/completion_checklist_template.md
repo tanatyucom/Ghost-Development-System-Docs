@@ -67,6 +67,28 @@ Required sections checked:
 - Raw URL entries added / updated:
 - Not required reason:
 
+## Documentation Synchronization
+
+- Documentation Synchronization required:
+- Changed documentation areas:
+- README / index update required:
+- README / index update completed:
+- Root README checked:
+- `docs/README.md` checked:
+- Folder README checked:
+- Rules README checked:
+- Workflow README checked:
+- Architecture README checked:
+- Examples README checked:
+- Templates README checked:
+- Roadmap README checked:
+- AI Repository Index regenerated:
+- AI Repository Index validated:
+- Repository Quality Audit executed after synchronization:
+- Documentation Synchronization Gate passed:
+- Not required reason:
+- Remaining synchronization gaps:
+
 ## GDS Health
 
 - GDS Health review required:

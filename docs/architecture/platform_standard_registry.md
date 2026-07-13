@@ -142,6 +142,7 @@ Repository Quality Audit can detect invalid transitions.
 | Platform Discoverability and Component Standard | Architecture | Standard | Platform Discoverability and Component Standard Q | 2026-07-13 | 2026-07-13 | `docs/rules/platform_component_rules.md` | `docs/workflow/innovation_pipeline_workflow.md` | `templates/platform_registry_update_template.md` | `reports/platform_discoverability_and_component_standard_completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Defines Platform folder standard, component classification, naming suffixes, 3 second discoverability, migration target criteria, legacy placement, future Ghost compatibility, and Review Center placement policy. | Review during Platform First Migration Strategy Q. |
 | Platform First Migration Strategy | Architecture | Standard | Platform First Migration Strategy Q | 2026-07-13 | 2026-07-13 | `docs/rules/migration_first_rules.md` | `docs/workflow/innovation_pipeline_workflow.md` | `templates/platform_registry_update_template.md` | `reports/platform_first_migration_strategy_completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Defines migration priority, Platform / Adapter boundary, legacy cleanup timing, bootstrap order, AnimeGhost compatibility check, and Review Center as the first migration candidate. | Review during Review Center Architecture Q. |
 | Review Center Architecture | Architecture | Standard | Review Center Architecture Q | 2026-07-13 | 2026-07-13 | `docs/rules/review_center_rules.md` | `docs/workflow/review_center_workflow.md` | `templates/completion_report_template.md` | `reports/review_center_architecture_completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Defines Review Center as a Human Review Session Manager for artifact presentation, decision capture, progress, persistence, result export, gate readiness, and plugin / adapter boundary. Runtime implementation remains future Q scope. | Review during GameGhost Review Center Core and Steam OCR Vertical Slice Q. |
+| Documentation Synchronization Gate | Validation | Standard | Documentation Synchronization Gate Q | 2026-07-13 | 2026-07-13 | `docs/rules/documentation_synchronization_rules.md` | `docs/workflow/documentation_synchronization_workflow.md` | `templates/completion_checklist_template.md` | `reports/documentation_synchronization_gate_completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Defines README / folder index / AI Repository Index / Completion Checklist / Completion Report / Repository Quality synchronization gate before commit approval. | Review when README diff detection or auto sync assistance is added. |
 
 ## Standard / Candidate Classification
 
@@ -167,6 +168,7 @@ Current initial registry classification:
   - Platform Discoverability and Component Standard.
   - Platform First Migration Strategy.
   - Review Center Architecture.
+  - Documentation Synchronization Gate.
 - Candidate:
   - None in the initial registry. Future Platform Promotion decisions may add
     Candidate rows before final Standard adoption.

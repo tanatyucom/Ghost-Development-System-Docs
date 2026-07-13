@@ -170,6 +170,22 @@ Ideas that should remain future work until separately reviewed:
 - New Markdown registered:
 - Not required reason:
 
+## Documentation Synchronization Review
+
+- Documentation Synchronization required:
+- Changed documentation areas:
+- README / index entry points updated:
+- README / index entry points intentionally not updated:
+- Root README checked:
+- `docs/README.md` checked:
+- Folder README checked:
+- AI Repository Index regenerated after README updates:
+- AI Repository Index validation passed:
+- Repository Quality Audit executed after synchronization:
+- Documentation Synchronization Gate result:
+- Remaining synchronization gaps:
+- Not required reason:
+
 ## Repository Quality Review
 
 - Repository Quality Audit required:
