@@ -271,7 +271,7 @@ AI execution.
 
 Reference points:
 
-- Template: `templates/q_file_template.md`
+- Template: `templates/Q_TEMPLATE.md`
 - Artifact Standard: `docs/rules/q_file_artifact_standard.md`
 - Naming Rules: `docs/rules/q_file_naming_rules.md`
 - Template Rules: `docs/rules/q_file_template_rules.md`
@@ -996,7 +996,7 @@ Reference points:
   `docs/rules/q_file_artifact_standard.md`
 - Request Artifacts: `docs/requests/README.md`
 - Workflow: `docs/workflow/output_policy.md`
-- Templates: `docs/templates/q_file_template.md`
+- Templates: `templates/Q_TEMPLATE.md`
 - Completion Reports: `docs/templates/completion_report_template.md`
 - AI Request Template: `docs/templates/ai_implementation_request.md`
 - Architecture: `docs/architecture/responsibility_boundary.md`
@@ -1170,7 +1170,7 @@ Reference points:
 
 - Rules: `docs/rules/audit_before_repair_rules.md`
 - Workflow: `docs/workflow/audit_before_repair_workflow.md`
-- Q Template: `docs/templates/q_file_template.md`
+- Q Template: `templates/Q_TEMPLATE.md`
 - Completion Report Template: `docs/templates/completion_report_template.md`
 - AI Collaboration Rules: `docs/rules/ai_collaboration_rules.md`
 - Examples: `docs/examples/audit_before_repair_examples.md`
@@ -1206,14 +1206,14 @@ Reference points:
 
 - Rules: `docs/rules/debug_artifact_review_rules.md`
 - Workflow: `docs/workflow/debug_artifact_review_workflow.md`
-- Q Template: `docs/templates/q_file_template.md`
+- Q Template: `templates/Q_TEMPLATE.md`
 - Completion Report Template: `docs/templates/completion_report_template.md`
 - AI Request Template: `docs/templates/ai_implementation_request.md`
 - Codex Review Template: `docs/templates/codex_review_template.md`
 - Architecture: `docs/architecture/responsibility_boundary.md`
 - Examples: `docs/examples/debug_artifact_review_examples.md`
 - Glossary: `docs/glossary/README.md`
-- Current Templates: `templates/q_file_template.md`,
+- Current Templates: `templates/Q_TEMPLATE.md`,
   `templates/completion_report_template.md`,
   `templates/codex_review_template.md`
 - Current Examples: `examples/debug_artifact_review_examples.md`
@@ -1361,7 +1361,7 @@ Reference points:
 - Script Architecture: `docs/rules/script_architecture_rules.md`
 - Workflow: `docs/workflow/migration_first_workflow.md`
 - Workflow Index: `docs/workflow/README.md`
-- Q Template: `docs/templates/q_file_template.md`
+- Q Template: `templates/Q_TEMPLATE.md`
 - AI Request Template: `docs/templates/ai_implementation_request.md`
 - Completion Report Template: `docs/templates/completion_report_template.md`
 - Codex Review Template: `docs/templates/codex_review_template.md`
@@ -1630,7 +1630,7 @@ Ghost Development System の documentation は、開発基盤そのものです�
 
 Q ファイルや Codex 依頼を準備する場合:
 
-- `docs/templates/q_file_template.md` から始める。
+- `templates/Q_TEMPLATE.md` から始める。
 - Target Project、Repository、Single Source Of Truth、Cross Project Impact、
   Scope Guard を先に埋める。
 - `docs/examples/repository_information.md` を参照する。

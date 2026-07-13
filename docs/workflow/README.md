@@ -861,7 +861,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/rules/ai_proactive_proposal_rules.md`
 - `docs/rules/completion_checklist_rules.md`
 - `docs/rules/research_mission_rules.md`
-- `docs/templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `templates/innovation_pipeline_template.md`
 - `docs/templates/review_checklist.md`
 - `docs/history/knowledge_base_history.md`

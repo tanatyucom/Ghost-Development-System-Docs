@@ -286,5 +286,5 @@ together.
 - `docs/rules/q_file_template_rules.md`
 - `docs/requests/README.md`
 - `examples/q_file_examples.md`
-- `docs/templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `docs/templates/completion_report_template.md`

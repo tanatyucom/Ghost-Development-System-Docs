@@ -38,7 +38,7 @@
 - `scripts/validate_encoding_regression.py`
 - `templates/completion_checklist_template.md`
 - `templates/completion_report_template.md`
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `tests/test_validate_encoding_regression.py`
 
 ## Summary
@@ -134,7 +134,7 @@ mojibake diffs.
 - `scripts/validate_encoding_regression.py`
 - `templates/completion_checklist_template.md`
 - `templates/completion_report_template.md`
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `tests/test_validate_encoding_regression.py`
 
 ## Commit / Push Status

@@ -295,7 +295,7 @@ Do not use examples to introduce new rules. Promote reusable standards to
 - `templates/collaborative_decision_template.md`
 - `templates/completion_checklist_template.md`
 - `docs/templates/review_checklist.md`
-- `docs/templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `docs/templates/completion_report_template.md`
 - `docs/requests/README.md`
 - `docs/rules/q_file_artifact_standard.md`

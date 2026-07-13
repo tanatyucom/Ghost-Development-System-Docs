@@ -12,7 +12,7 @@
 ## Changed Files
 
 ```text
-templates/q_file_template.md
+templates/Q_TEMPLATE.md
 templates/completion_checklist_template.md
 templates/completion_report_template.md
 docs/rules/completion_checklist_rules.md
@@ -42,13 +42,13 @@ git status --short: clean before request artifact save
 
 既存文書確認:
 
-- `templates/q_file_template.md` にはAI Repository Index専用の事前判定セクションがなかった。
+- `templates/Q_TEMPLATE.md` にはAI Repository Index専用の事前判定セクションがなかった。
 - `docs/rules/completion_checklist_rules.md` にはIndex更新確認はあったが、Yes / No / Review Requiredの明示的なdecision gateはなかった。
 - `templates/completion_checklist_template.md` と `templates/completion_report_template.md` には関連項目があったが、decision fieldが不足していた。
 
 ## Implemented Changes
 
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
   - `AI Repository Index Update` セクションを追加。
   - `Yes / No / Review Required` の判定値を追加。
   - Trigger、Expected indexed files、Validation、Representative Raw URL verification、Completion Report requirementsを追加。

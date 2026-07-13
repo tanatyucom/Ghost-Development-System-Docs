@@ -42,7 +42,7 @@
 - `reports/repository_quality_report.md`
 - `templates/README.md`
 - `templates/completion_report_template.md`
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `templates/research_mission_template.md`
 - `templates/startup_checklist_template.md`
 - `docs/requests/gds/draft/GDS-RESEARCH-MISSION-001_workflow_template_standardization/request.md`
@@ -99,7 +99,7 @@ Report, and Negative Result handling before vague investigation work begins.
 
 ### Template / Startup / Completion Integration
 
-- Added Research Mission section to `templates/q_file_template.md`.
+- Added Research Mission section to `templates/Q_TEMPLATE.md`.
 - Added Research Mission fields to `templates/startup_checklist_template.md`.
 - Added Research Mission Review to `templates/completion_report_template.md`.
 - Added Research Mission reading points to `docs/workflow/ai_startup_procedure.md`.

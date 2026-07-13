@@ -69,7 +69,7 @@ AI should validate the actual repository root before implementation.
 Use:
 
 ```text
-templates/q_file_template.md
+templates/Q_TEMPLATE.md
 ```
 
 Required sections follow:

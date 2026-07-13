@@ -156,5 +156,5 @@ Crop で文字領域の欠けを確認する。CSV は全件集計、Markdown Re
 
 - `docs/rules/debug_artifact_review_rules.md`
 - `docs/workflow/debug_artifact_review_workflow.md`
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `templates/completion_report_template.md`

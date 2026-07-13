@@ -76,7 +76,7 @@ safe commit set を確認する。
 
 - `docs/rules/migration_first_rules.md`
 - `docs/rules/script_architecture_rules.md`
-- `docs/templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `docs/templates/completion_report_template.md`
 - `docs/templates/ai_implementation_request.md`
 - `docs/templates/codex_review_template.md`

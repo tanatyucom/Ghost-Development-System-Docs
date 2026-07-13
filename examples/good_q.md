@@ -93,7 +93,7 @@ Documentation update only.
 
 ## Do
 
-- Update `docs/templates/q_file_template.md`.
+- Update `templates/Q_TEMPLATE.md`.
 - Update `docs/templates/README.md` if needed.
 - Add or update examples only if they clarify the standard.
 
@@ -106,7 +106,7 @@ Documentation update only.
 
 ## Target Files
 
-- `docs/templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `docs/templates/README.md`
 - `docs/examples/`
 

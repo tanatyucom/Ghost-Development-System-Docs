@@ -29,7 +29,7 @@ Use it with:
 - Files created:
   - docs/rules/q_file_naming_rules.md
 - Files updated:
-  - templates/q_file_template.md
+  - templates/Q_TEMPLATE.md
   - docs/rules/q_file_artifact_standard.md
 - Files deleted: None
 - Files intentionally not changed:
@@ -49,7 +49,7 @@ Q template and Q naming rules were standardized.
 
 Safe to commit together:
 
-- templates/q_file_template.md
+- templates/Q_TEMPLATE.md
 - docs/rules/q_file_naming_rules.md
 - docs/rules/q_file_artifact_standard.md
 
@@ -80,7 +80,7 @@ Q identity should come from Q ID, not date-only filenames.
 ## Reusable Assets Created
 
 - Rule: docs/rules/q_file_naming_rules.md
-- Template: templates/q_file_template.md
+- Template: templates/Q_TEMPLATE.md
 
 ## Remaining Issues
 

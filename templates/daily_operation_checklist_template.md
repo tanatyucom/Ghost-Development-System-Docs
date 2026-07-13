@@ -163,4 +163,4 @@ knowledge-producing, or part of repeated GDS operation.
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`
 - `templates/completion_report_template.md`
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`

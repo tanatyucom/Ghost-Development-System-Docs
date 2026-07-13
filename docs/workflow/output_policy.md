@@ -146,7 +146,7 @@ Artifact First prevents:
 - `docs/rules/q_file_template_rules.md`
 - `docs/rules/debug_artifact_review_rules.md`
 - `docs/requests/README.md`
-- `docs/templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `docs/templates/ai_implementation_request.md`
 - `docs/examples/artifact_first_examples.md`
 - `docs/examples/debug_artifact_review_examples.md`

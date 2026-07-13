@@ -67,7 +67,7 @@ Approval を満たしません。
 
 例:
 
-- `docs/templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `git status --short`
 - Target Project
 - Scope Guard

@@ -75,7 +75,7 @@ Related Documents:
 
 - `docs/architecture/design_philosophy.md`
 - `docs/examples/purpose_oriented_naming.md`
-- `docs/templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 
 ## Example: Repository Information
 

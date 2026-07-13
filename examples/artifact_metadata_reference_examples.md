@@ -39,7 +39,7 @@ related_registry_update: null
 related_rules:
   - docs/rules/ai_collaboration_rules.md
 related_templates:
-  - templates/q_file_template.md
+  - templates/Q_TEMPLATE.md
 related_artifacts:
   - docs/architecture/command_center_architecture.md
 inputs:

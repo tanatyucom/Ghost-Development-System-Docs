@@ -141,7 +141,7 @@ Required:
 
 Related templates:
 
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 
 ### Completion Report
 
@@ -423,7 +423,7 @@ This standard does not:
 ## Related Documents
 
 - `docs/architecture/command_center_architecture.md`
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `templates/completion_report_template.md`
 - `templates/information_package_template.md`
 - `templates/multi_ai_handoff_template.md`

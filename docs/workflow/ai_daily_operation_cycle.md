@@ -224,5 +224,5 @@ It does not replace:
 - `docs/rules/core_principles.md`
 - `docs/ai_repository_index.md`
 - `project_profiles/README.md`
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `templates/completion_report_template.md`

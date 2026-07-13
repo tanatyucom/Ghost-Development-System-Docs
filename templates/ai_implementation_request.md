@@ -5,7 +5,7 @@ Use this template when asking AI to implement or update project artifacts.
 If the request is prepared as a Q file, prefer:
 
 ```text
-docs/templates/q_file_template.md
+templates/Q_TEMPLATE.md
 ```
 
 ## Read First

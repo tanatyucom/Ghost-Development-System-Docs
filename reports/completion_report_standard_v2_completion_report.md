@@ -101,7 +101,7 @@ Safe to commit together after review, including this Q and the already pending Q
 - `templates/README.md`
 - `templates/completion_checklist_template.md`
 - `templates/completion_report_template.md`
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `templates/startup_checklist_template.md`
 
 Excluded files:

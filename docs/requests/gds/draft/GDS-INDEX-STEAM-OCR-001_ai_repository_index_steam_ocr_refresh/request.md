@@ -571,7 +571,7 @@ Runtime-only, do not commit
 3. Read:
    - `docs/ai_repository_index.md`
    - `scripts/generate_ai_repository_index.py`
-   - `templates/q_file_template.md`
+   - `templates/Q_TEMPLATE.md`
    - applicable Rules and Workflows listed in Startup Checklist.
 
 4. Save this Q as the authoritative `request.md` before implementation.

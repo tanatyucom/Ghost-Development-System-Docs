@@ -41,7 +41,7 @@
 - `templates/beginner_future_self_test_template.md`
 - `templates/completion_checklist_template.md`
 - `templates/completion_report_template.md`
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `templates/review_checklist.md`
 - `templates/startup_checklist_template.md`
 

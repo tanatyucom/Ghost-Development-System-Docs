@@ -447,7 +447,7 @@ This standard prevents:
 - `docs/workflow/q_revision_addendum_workflow.md`
 - `docs/workflow/output_policy.md`
 - `docs/requests/README.md`
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `templates/completion_report_template.md`
 - `examples/q_file_artifact_workflow.md`
 - `examples/q_file_examples.md`

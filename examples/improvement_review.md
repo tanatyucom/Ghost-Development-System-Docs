@@ -32,7 +32,7 @@ High-value improvements suitable for near-term adoption.
 
 Example:
 
-- Add Repository Information to `q_file_template.md`.
+- Add Repository Information to `Q_TEMPLATE.md`.
 
 Reason:
 

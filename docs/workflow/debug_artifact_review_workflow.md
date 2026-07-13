@@ -169,7 +169,7 @@ Debug artifact paths
 ## Related Documents
 
 - `docs/rules/debug_artifact_review_rules.md`
-- `docs/templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `docs/templates/completion_report_template.md`
 - `docs/examples/debug_artifact_review_examples.md`
 - `docs/rules/quality_rules.md`

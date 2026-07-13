@@ -178,4 +178,4 @@ chat is enough.
 - `docs/workflow/output_policy.md`
 - `docs/rules/q_file_artifact_standard.md`
 - `docs/requests/README.md`
-- `docs/templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`

@@ -53,7 +53,7 @@ CRITICAL_PATHS = {
     "docs/rules/rules.md",
     "docs/rules/core_principles.md",
     "docs/rules/external_source_access_rules.md",
-    "templates/q_file_template.md",
+    "templates/Q_TEMPLATE.md",
     "docs/workflow/README.md",
 }
 

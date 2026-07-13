@@ -83,7 +83,7 @@ Repository Root Validation は、作業前に実測した Git root と期待す�
 - `docs/rules/startup_checklist_rules.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `templates/startup_checklist_template.md`
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `templates/review_checklist.md`
 - `docs/rules/project_rules.md`
 - `docs/rules/git_rules.md`

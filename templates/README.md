@@ -136,7 +136,7 @@ restore guidance.
 - `research_mission_template.md`
 - `beginner_future_self_test_template.md`
 - `completion_checklist_template.md`
-- `q_file_template.md`
+- `Q_TEMPLATE.md`
 - `ai_implementation_request.md`
 - `codex_review_template.md`
 - `review_checklist.md`
@@ -240,7 +240,7 @@ Required sections:
 Completion Reports should link back to the Source Q File, state whether GameGhost or any non-target project was edited, record whether commit / push happened, and separate Remaining Issues, Recommended Improvements, and Future Candidates.
 ## Q Files
 
-`q_file_template.md` is the standard template for reusable Codex request files.
+`Q_TEMPLATE.md` is the standard template for reusable Codex request files.
 
 Use it for:
 
@@ -329,7 +329,7 @@ Do not add one-off request details to templates. Add only reusable structure.
 
 ## Related Documents
 
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `templates/startup_checklist_template.md`
 - `templates/daily_operation_checklist_template.md`
 - `templates/repository_root_validation_template.md`

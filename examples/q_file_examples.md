@@ -168,7 +168,7 @@ Safe Commit Set:
 - docs/rules/q_file_template_rules.md
 - docs/workflow/q_file_creation_workflow.md
 - docs/workflow/q_revision_addendum_workflow.md
-- templates/q_file_template.md
+- templates/Q_TEMPLATE.md
 ```
 
 Why this is good:

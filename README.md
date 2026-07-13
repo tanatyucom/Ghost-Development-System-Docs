@@ -560,7 +560,7 @@ Q files are managed as artifacts, not as long chat-only instructions.
 
 Start from:
 
-- [`templates/q_file_template.md`](templates/q_file_template.md)
+- [`templates/Q_TEMPLATE.md`](templates/Q_TEMPLATE.md)
 - [`docs/rules/q_file_artifact_standard.md`](docs/rules/q_file_artifact_standard.md)
 - [`docs/rules/q_file_naming_rules.md`](docs/rules/q_file_naming_rules.md)
 - [`docs/rules/q_file_template_rules.md`](docs/rules/q_file_template_rules.md)
@@ -794,7 +794,7 @@ Start from:
 - [`docs/rules/debug_artifact_review_rules.md`](docs/rules/debug_artifact_review_rules.md)
 - [`docs/workflow/debug_artifact_review_workflow.md`](docs/workflow/debug_artifact_review_workflow.md)
 - [`examples/debug_artifact_review_examples.md`](examples/debug_artifact_review_examples.md)
-- [`templates/q_file_template.md`](templates/q_file_template.md)
+- [`templates/Q_TEMPLATE.md`](templates/Q_TEMPLATE.md)
 - [`templates/completion_report_template.md`](templates/completion_report_template.md)
 - [`templates/codex_review_template.md`](templates/codex_review_template.md)
 - [`pip/PIP_README_v1.0.md`](pip/PIP_README_v1.0.md)
@@ -876,7 +876,7 @@ Start from:
 - [`docs/rules/audit_before_repair_rules.md`](docs/rules/audit_before_repair_rules.md)
 - [`docs/workflow/audit_before_repair_workflow.md`](docs/workflow/audit_before_repair_workflow.md)
 - [`examples/audit_before_repair_examples.md`](examples/audit_before_repair_examples.md)
-- [`templates/q_file_template.md`](templates/q_file_template.md)
+- [`templates/Q_TEMPLATE.md`](templates/Q_TEMPLATE.md)
 - [`templates/completion_report_template.md`](templates/completion_report_template.md)
 
 Repair Q files should identify the source audit artifact, target scope,
