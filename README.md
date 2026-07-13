@@ -193,6 +193,21 @@ Start from:
 Review Center などの共通機能は Platform 側へ、GameGhost 固有の Steam OCR
 bridge は adapter 側へ分離して扱います。
 
+## Platform First Migration Strategy
+
+Platform First Migration Strategy は、GameGhost から Ghost Platform へ共通機能を
+移行する順序、Platform / Adapter 境界、Legacy cleanup timing、AnimeGhost
+bootstrap check を定義します。
+
+Start from:
+
+- [`docs/architecture/platform_first_migration_strategy.md`](docs/architecture/platform_first_migration_strategy.md)
+- [`roadmap/platform_first_migration_roadmap.md`](roadmap/platform_first_migration_roadmap.md)
+- [`docs/architecture/platform_discoverability_and_component_standard.md`](docs/architecture/platform_discoverability_and_component_standard.md)
+
+最初の移行候補は Review Center です。実装移動ではなく、まず
+`Q_GDS_Review_Center_Architecture_JP` で Platform / Adapter 境界を確定します。
+
 ## Context-Aware Knowledge Suggestion Assistant
 
 Context-Aware Knowledge Suggestion Assistant は、Startupや日常作業中に、

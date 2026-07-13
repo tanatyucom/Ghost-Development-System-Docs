@@ -351,6 +351,33 @@ Human review / approval
   -> review artifacts and Completion Report
 ```
 
+## Platform First Migration Strategy Index
+
+Platform First Migration Strategy は、GameGhost から Ghost Platform へ共通機能を
+段階移行するための priority、roadmap、legacy policy、bootstrap strategy を定義します。
+
+Reference points:
+
+- Migration Strategy:
+  `docs/architecture/platform_first_migration_strategy.md`
+- Migration Roadmap:
+  `roadmap/platform_first_migration_roadmap.md`
+- Component Standard:
+  `docs/architecture/platform_discoverability_and_component_standard.md`
+- Completion Report:
+  `reports/platform_first_migration_strategy_completion_report.md`
+
+First migration candidate:
+
+```text
+Review Center
+  -> Review Center Architecture
+  -> Review Artifact Schema
+  -> GameGhost Review Adapter
+  -> AnimeGhost Bootstrap Check
+  -> Cross-Ghost Validation
+```
+
 ## Context-Aware Knowledge Suggestion Assistant Index
 
 Context-Aware Knowledge Suggestion Assistant は、Startupおよび日常利用時に、

@@ -30,6 +30,10 @@ runtime behavior.
   component classification, naming suffix, 3 second discoverability, migration
   criteria, legacy placement, future Ghost compatibility, and Review Center
   placement standard.
+- `platform_first_migration_strategy.md`: staged migration strategy from
+  GameGhost to Ghost Platform, including priority matrix, platform / adapter
+  boundary, legacy policy, bootstrap order, AnimeGhost check, and future Ghost
+  compatibility.
 - `responsibility_boundary.md`: ownership boundaries for DevelopmentSystem,
   Startup Checklist, Repository Root Validation, AI Proactive Proposal,
   Collaborative Decision, Completion Checklist, Output Layer, Migration First
@@ -117,6 +121,10 @@ only describe boundaries and principles that are accepted enough to guide work.
   component classification, and 3 second discoverability boundary for shared
   Ghost Platform components. It separates generic Platform responsibilities
   from project-specific adapters and does not move runtime code by itself.
+- Platform First Migration Strategy owns the sequence for moving reusable
+  GameGhost-derived capabilities toward Platform. It defines migration priority,
+  platform / adapter split, legacy cleanup timing, bootstrap order, and
+  cross-Ghost validation before runtime movement.
 - Launcher owns the user entry point.
 
 ## Database Philosophy Summary
@@ -180,6 +188,7 @@ Detailed specification:
 - `docs/architecture/artifact_schema_standard.md`
 - `docs/architecture/plugin_architecture_standard.md`
 - `docs/architecture/platform_discoverability_and_component_standard.md`
+- `docs/architecture/platform_first_migration_strategy.md`
 - `templates/structured_artifact_metadata_template.md`
 
 AI Proactive Proposal supports human-led collaboration by making concerns and
@@ -271,6 +280,8 @@ Promotion Decision Report, Knowledge Poka-Yoke, and Repository Root Validation.
 Platform Discoverability and Component Standard extends this registry direction
 by making future component folders and names reviewable before runtime
 migration begins.
+Platform First Migration Strategy applies that component model to the first
+migration sequence and makes Review Center the P0 candidate.
 
 ## Update Policy
 
@@ -286,6 +297,7 @@ Do not use this folder to approve Future Candidates by implication.
 - `docs/architecture/platform_era_core_principles.md`
 - `docs/architecture/platform_standard_registry.md`
 - `docs/architecture/platform_discoverability_and_component_standard.md`
+- `docs/architecture/platform_first_migration_strategy.md`
 - `docs/architecture/gameghost_platform_migration_architecture.md`
 - `docs/architecture/gameghost_workspace_repository_layout.md`
 - `docs/ai_repository_index.md`
