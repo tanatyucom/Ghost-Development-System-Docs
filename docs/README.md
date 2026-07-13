@@ -378,6 +378,39 @@ Review Center
   -> Cross-Ghost Validation
 ```
 
+## Review Center Architecture Index
+
+Review Center Architecture は、Ghost Platform 共通の Human Review Session
+Manager です。
+
+Review Center は正解判定をしません。Artifactを表示し、Human Decisionを受け取り、
+進捗を保存・再開し、Review ResultをGateへ渡すところまでを担当します。
+
+Reference points:
+
+- Architecture:
+  `docs/architecture/review_center_architecture.md`
+- Rules:
+  `docs/rules/review_center_rules.md`
+- Workflow:
+  `docs/workflow/review_center_workflow.md`
+- Examples:
+  `examples/review_center_examples.md`
+- Completion Report:
+  `reports/review_center_architecture_completion_report.md`
+
+Core flow:
+
+```text
+Source Artifacts
+  -> Review Plugin / Adapter
+  -> Review Center Session
+  -> Human Decision
+  -> Review Result Export
+  -> Domain Gate Adapter
+  -> Gate Readiness Summary
+```
+
 ## Context-Aware Knowledge Suggestion Assistant Index
 
 Context-Aware Knowledge Suggestion Assistant は、Startupおよび日常利用時に、

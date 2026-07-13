@@ -208,6 +208,23 @@ Start from:
 最初の移行候補は Review Center です。実装移動ではなく、まず
 `Q_GDS_Review_Center_Architecture_JP` で Platform / Adapter 境界を確定します。
 
+## Review Center Architecture
+
+Review Center Architecture は、Ghost Platform 共通の Human Review Session
+Manager を定義します。Review Center は正解判定を行わず、Artifact表示、
+Decision capture、Progress、Save / Resume、Result Export、Gate readiness を
+担当します。
+
+Start from:
+
+- [`docs/architecture/review_center_architecture.md`](docs/architecture/review_center_architecture.md)
+- [`docs/rules/review_center_rules.md`](docs/rules/review_center_rules.md)
+- [`docs/workflow/review_center_workflow.md`](docs/workflow/review_center_workflow.md)
+- [`examples/review_center_examples.md`](examples/review_center_examples.md)
+
+最初のvertical sliceは GameGhost Steam OCR Human Review ですが、GameGhostは
+adapter側に分離し、Platform CoreにはSteam固有の正解判定を入れません。
+
 ## Context-Aware Knowledge Suggestion Assistant
 
 Context-Aware Knowledge Suggestion Assistant は、Startupや日常作業中に、

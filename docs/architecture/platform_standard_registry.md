@@ -141,6 +141,7 @@ Repository Quality Audit can detect invalid transitions.
 | Plugin Architecture Standard | Architecture | Standard | Plugin Architecture Standard and Roadmap Q | 2026-07-12 | 2026-07-12 | `docs/rules/project_rules.md` | `docs/workflow/innovation_pipeline_workflow.md` | `templates/platform_registry_update_template.md` | `docs/requests/gds/draft/GDS-PLUGIN-ARCH-001_plugin_architecture_standard_and_roadmap/completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Defines Plugin as an explicit-registry, `PLUGIN_INFO`, `PluginContext`, `PluginResult`, ownership, lifecycle, and promotion boundary. Automatic discovery, launcher modification, and runtime implementation remain future Q scope. | Review after Repository Context Validation Plugin proof. |
 | Platform Discoverability and Component Standard | Architecture | Standard | Platform Discoverability and Component Standard Q | 2026-07-13 | 2026-07-13 | `docs/rules/platform_component_rules.md` | `docs/workflow/innovation_pipeline_workflow.md` | `templates/platform_registry_update_template.md` | `reports/platform_discoverability_and_component_standard_completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Defines Platform folder standard, component classification, naming suffixes, 3 second discoverability, migration target criteria, legacy placement, future Ghost compatibility, and Review Center placement policy. | Review during Platform First Migration Strategy Q. |
 | Platform First Migration Strategy | Architecture | Standard | Platform First Migration Strategy Q | 2026-07-13 | 2026-07-13 | `docs/rules/migration_first_rules.md` | `docs/workflow/innovation_pipeline_workflow.md` | `templates/platform_registry_update_template.md` | `reports/platform_first_migration_strategy_completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Defines migration priority, Platform / Adapter boundary, legacy cleanup timing, bootstrap order, AnimeGhost compatibility check, and Review Center as the first migration candidate. | Review during Review Center Architecture Q. |
+| Review Center Architecture | Architecture | Standard | Review Center Architecture Q | 2026-07-13 | 2026-07-13 | `docs/rules/review_center_rules.md` | `docs/workflow/review_center_workflow.md` | `templates/completion_report_template.md` | `reports/review_center_architecture_completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Defines Review Center as a Human Review Session Manager for artifact presentation, decision capture, progress, persistence, result export, gate readiness, and plugin / adapter boundary. Runtime implementation remains future Q scope. | Review during GameGhost Review Center Core and Steam OCR Vertical Slice Q. |
 
 ## Standard / Candidate Classification
 
@@ -165,6 +166,7 @@ Current initial registry classification:
   - Plugin Architecture Standard.
   - Platform Discoverability and Component Standard.
   - Platform First Migration Strategy.
+  - Review Center Architecture.
 - Candidate:
   - None in the initial registry. Future Platform Promotion decisions may add
     Candidate rows before final Standard adoption.
