@@ -323,6 +323,34 @@ Recommended first proof Q:
 Q_GDS_Repository_Context_Validation_Plugin_JP
 ```
 
+## Platform Discoverability and Component Standard Index
+
+Platform Discoverability and Component Standard は、GameGhost、AnimeGhost、
+ComicGhost、Future Ghost が共有できる component folder、命名規則、分類、
+Discoverability 3秒ルール、Migration判定基準を定義します。
+
+Reference points:
+
+- Architecture Standard:
+  `docs/architecture/platform_discoverability_and_component_standard.md`
+- Rule:
+  `docs/rules/platform_component_rules.md`
+- Examples:
+  `examples/platform_discoverability_and_component_examples.md`
+- Completion Report:
+  `reports/platform_discoverability_and_component_standard_completion_report.md`
+
+標準方針:
+
+```text
+Platform responsibility
+  -> platform/<component-group>/
+Project-specific bridge
+  -> adapters/
+Human review / approval
+  -> review artifacts and Completion Report
+```
+
 ## Context-Aware Knowledge Suggestion Assistant Index
 
 Context-Aware Knowledge Suggestion Assistant は、Startupおよび日常利用時に、

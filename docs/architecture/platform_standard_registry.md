@@ -139,6 +139,7 @@ Repository Quality Audit can detect invalid transitions.
 | Repository Root Validation | Rule | Standard | Startup safety / repository boundary | 2026-07-10 | 2026-07-10 | `docs/rules/repository_root_validation_rules.md` | `docs/workflow/repository_root_validation_workflow.md` | `templates/repository_root_validation_template.md` | `reports/repository_quality_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Confirms actual Git root before work begins. | Review when workspace or multi-repository workflow changes. |
 | Persistent Collaboration Rules | Rule | Standard | Platform Era Core Collaboration Rule | 2026-07-11 | 2026-07-11 | `docs/rules/ai_collaboration_rules.md` | `docs/workflow/ai_daily_operation_cycle.md` | `templates/completion_report_template.md` | `reports/persistent_collaboration_rules_completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Keeps adopted collaboration rules persistent across ChatGPT, Codex, Claude, Gemini, and human review. | Review when collaboration behavior, command presentation, review conclusion, or artifact output policy changes. |
 | Plugin Architecture Standard | Architecture | Standard | Plugin Architecture Standard and Roadmap Q | 2026-07-12 | 2026-07-12 | `docs/rules/project_rules.md` | `docs/workflow/innovation_pipeline_workflow.md` | `templates/platform_registry_update_template.md` | `docs/requests/gds/draft/GDS-PLUGIN-ARCH-001_plugin_architecture_standard_and_roadmap/completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Defines Plugin as an explicit-registry, `PLUGIN_INFO`, `PluginContext`, `PluginResult`, ownership, lifecycle, and promotion boundary. Automatic discovery, launcher modification, and runtime implementation remain future Q scope. | Review after Repository Context Validation Plugin proof. |
+| Platform Discoverability and Component Standard | Architecture | Standard | Platform Discoverability and Component Standard Q | 2026-07-13 | 2026-07-13 | `docs/rules/platform_component_rules.md` | `docs/workflow/innovation_pipeline_workflow.md` | `templates/platform_registry_update_template.md` | `reports/platform_discoverability_and_component_standard_completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Defines Platform folder standard, component classification, naming suffixes, 3 second discoverability, migration target criteria, legacy placement, future Ghost compatibility, and Review Center placement policy. | Review during Platform First Migration Strategy Q. |
 
 ## Standard / Candidate Classification
 
@@ -161,6 +162,7 @@ Current initial registry classification:
   - Repository Root Validation.
   - Persistent Collaboration Rules.
   - Plugin Architecture Standard.
+  - Platform Discoverability and Component Standard.
 - Candidate:
   - None in the initial registry. Future Platform Promotion decisions may add
     Candidate rows before final Standard adoption.

@@ -178,6 +178,21 @@ Recommended first proof Q:
 Q_GDS_Repository_Context_Validation_Plugin_JP
 ```
 
+## Platform Discoverability and Component Standard
+
+Platform Discoverability and Component Standard は、Ghost Platform の共通
+component を 3 秒で見つけ、責務を判断できるようにするための folder / naming /
+classification 標準です。
+
+Start from:
+
+- [`docs/architecture/platform_discoverability_and_component_standard.md`](docs/architecture/platform_discoverability_and_component_standard.md)
+- [`docs/rules/platform_component_rules.md`](docs/rules/platform_component_rules.md)
+- [`examples/platform_discoverability_and_component_examples.md`](examples/platform_discoverability_and_component_examples.md)
+
+Review Center などの共通機能は Platform 側へ、GameGhost 固有の Steam OCR
+bridge は adapter 側へ分離して扱います。
+
 ## Context-Aware Knowledge Suggestion Assistant
 
 Context-Aware Knowledge Suggestion Assistant は、Startupや日常作業中に、
