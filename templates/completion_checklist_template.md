@@ -31,6 +31,9 @@
 - Human Review result:
 - Review Entry Point:
 - Future Candidates separated from approved scope:
+- Pending Insights reviewed:
+- Pending Insight Codex execution restriction respected:
+- Pending Insight cleanup needed:
 
 ## Completion Report v2
 
@@ -88,6 +91,19 @@ Required sections checked:
 - Documentation Synchronization Gate passed:
 - Not required reason:
 - Remaining synchronization gaps:
+
+## Pending Insight Review
+
+- Pending Insight Review required:
+- Pending folder checked:
+- Pending items changed:
+- Initial pending candidates handled:
+- Pending decisions recorded:
+- Register / Q / Hold / Reject / Already Reflected separated:
+- Codex execution blocked while pending:
+- Cleanup confirmation recorded:
+- Related Pending Insight artifacts:
+- Not required reason:
 
 ## GDS Health
 

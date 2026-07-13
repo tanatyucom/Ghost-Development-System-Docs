@@ -20,6 +20,7 @@ Source Q
   -> Improvement Review
   -> Lessons Learned
   -> Reusable Assets Created
+  -> Pending Insight Review, when applicable
   -> Remaining Issues
   -> Recommended Next Q
   -> Completion Report Artifact
@@ -98,6 +99,15 @@ Review whether the work produced reusable learning for:
 
 ## Step 8: Separate Follow-up Buckets
 
+If Pending Insight was created, updated, reviewed, resolved, or used as Q source,
+record:
+
+- Pending Insight decision.
+- Codex execution restriction.
+- Startup / Daily Review integration.
+- Cleanup status.
+- Remaining pending items.
+
 Use separate sections:
 
 - Remaining Issues.
@@ -137,5 +147,7 @@ After the report is written, complete the Completion Checklist and record:
 - `templates/completion_report_template.md`
 - `docs/rules/completion_checklist_rules.md`
 - `docs/workflow/completion_checklist_workflow.md`
+- `docs/rules/pending_conversation_insight_review_rules.md`
+- `docs/workflow/pending_conversation_insight_review_workflow.md`
 - `templates/completion_checklist_template.md`
 - `docs/workflow/commit_safety_checklist.md`

@@ -15,6 +15,8 @@ Knowledge は、Research、Completion Report、Debug Artifact、Human Review か
 - [`conversation_insights/README.md`](conversation_insights/README.md):
   会話由来の設計思想、運用方針、保守方針、Migration戦略、Command Center構想、
   長期構想を、Human Approval付きのpre-promotion knowledgeとして保存する入口。
+- [`conversation_insights/pending/README.md`](conversation_insights/pending/README.md):
+  即時登録やCodex実行を避け、翌日以降のHuman Reviewへ回すPending Insight Queue。
 
 ## Role
 
@@ -31,6 +33,7 @@ Conversation-origin insight:
 ```text
 Conversation
   -> Conversation Insight Candidate
+  -> Pending Insight, when immediate decision should be deferred
   -> Human Approval To Draft
   -> Conversation Insight Artifact
   -> Review
@@ -54,3 +57,6 @@ Concept Promotion、Platform Registry Update Artifact を経由します。
 
 Conversation Insight は、会話全文や一時的な感想を保存する場所ではありません。
 Repositoryに残す価値が高い会話由来の知見だけを、人間の明示承認後にArtifact化します。
+
+Pending Insight は正式Knowledgeではありません。保留中の候補を見失わないための
+一時Queueであり、Pending状態からCodex実行へ進むことは禁止します。

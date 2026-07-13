@@ -99,11 +99,20 @@ Record related knowledge when applicable:
 - Related Workflow.
 - Related Template.
 - Related Conversation Insight.
+- Related Pending Insight.
 - Related Future Candidate.
 - Related Q.
 - Related Completion Report.
 
 Use `Not Applicable` when no related artifact exists.
+
+If a Q is created from a Pending Insight, record:
+
+- Pending Insight ID.
+- Human Review decision.
+- Why Q creation was selected.
+- Codex execution restriction cleared by Human Approval.
+- Pending cleanup expectation.
 
 ## Deliverables
 

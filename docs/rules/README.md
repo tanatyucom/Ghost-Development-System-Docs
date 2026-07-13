@@ -13,7 +13,7 @@ Knowledge Before Automation, Knowledge Poka-Yoke / Design For Forgetfulness,
 UTF-8 Read Rule, Encoding Regression Prevention,
 External Source Access / AI Repository Knowledge Access, AI Startup Procedure, Startup Checklist,
 Repository Root Validation, AI Proactive Proposal,
-Completion Checklist, Research Mission, Conversation Insight Capture, Artifact First, Audit Before Repair, Debug Artifact Review, Debug Escalation Ladder,
+Completion Checklist, Research Mission, Conversation Insight Capture, Pending Conversation Insight Review, Artifact First, Audit Before Repair, Debug Artifact Review, Debug Escalation Ladder,
 Migration First, PIP Case Knowledge Base, and Roadmap2 Knowledge Salvage. Concept Promotion is
 handled as part of PIP Case Knowledge Base. Concept ID Naming is the standard
 for assigning stable Concept IDs and keeping the Concept Index traceable.
@@ -26,6 +26,9 @@ guards.
 Documentation Synchronization Rules define the gate for keeping README files,
 folder indexes, AI Repository Index, completion checklist, completion report,
 and repository quality audit aligned after documentation changes.
+Pending Conversation Insight Review Rules define the temporary queue between
+Conversation Insight Candidate and formal registration when next-day or
+next-chat Human Review is safer than immediate Q化 or Codex execution.
 Persistent Collaboration, Platform First, Repository First, Download First,
 Rule Priority, Command Rule, Review Rule, Completion Report First, AI
 Cognitive Load Reduction, and Platform Philosophy are defined in
@@ -74,6 +77,10 @@ promoted.
   design philosophy, operation policy, maintenance policy, migration strategy,
   Command Center concepts, and long-term vision as Human Approval-gated
   pre-promotion knowledge without auto-saving or preserving full chat logs.
+- `pending_conversation_insight_review_rules.md`: rule for temporarily holding
+  conversation-origin candidates, reviewing them at Startup / Daily Knowledge
+  Review, blocking Codex execution while pending, and confirming cleanup after
+  reflection.
 - `artifact_first_rules.md`: file generation rules for reusable Q files,
   design documents, AI requests, roadmap proposals, and long reviews.
 - `q_file_artifact_standard.md`: Task Artifact Workspace, save location,
@@ -153,25 +160,26 @@ promoted.
 13. `completion_report_rules.md`
 14. `research_mission_rules.md`
 15. `conversation_insight_capture_rules.md`
-16. `artifact_first_rules.md`
-17. `q_file_artifact_standard.md`
-18. `q_file_naming_rules.md`
-19. `q_file_template_rules.md`
-20. `audit_before_repair_rules.md`
-21. `debug_artifact_review_rules.md`
-22. `debug_escalation_ladder_rules.md`
-23. `migration_first_rules.md`
-24. `platform_component_rules.md`
-25. `review_center_rules.md`
-26. `documentation_synchronization_rules.md`
-27. `pip_case_knowledge_base_rules.md`
-28. `concept_id_naming_rules.md`
-29. `roadmap2_knowledge_salvage_rules.md`
-30. `workflow_rules.md`
-31. `quality_rules.md`
-32. `ai_collaboration_rules.md`
-33. `git_rules.md`
-34. `script_architecture_rules.md`
+16. `pending_conversation_insight_review_rules.md`
+17. `artifact_first_rules.md`
+18. `q_file_artifact_standard.md`
+19. `q_file_naming_rules.md`
+20. `q_file_template_rules.md`
+21. `audit_before_repair_rules.md`
+22. `debug_artifact_review_rules.md`
+23. `debug_escalation_ladder_rules.md`
+24. `migration_first_rules.md`
+25. `platform_component_rules.md`
+26. `review_center_rules.md`
+27. `documentation_synchronization_rules.md`
+28. `pip_case_knowledge_base_rules.md`
+29. `concept_id_naming_rules.md`
+30. `roadmap2_knowledge_salvage_rules.md`
+31. `workflow_rules.md`
+32. `quality_rules.md`
+33. `ai_collaboration_rules.md`
+34. `git_rules.md`
+35. `script_architecture_rules.md`
 
 ## Update Policy
 

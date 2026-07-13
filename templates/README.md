@@ -29,6 +29,10 @@ requests into scoped missions with Goal, Research Questions, Scope, Out of
 Scope, Evidence, Validation, Negative Result handling, Deliverables, and
 Completion Report requirements.
 
+Pending Conversation Insight templates help humans and AI temporarily hold
+conversation-origin ideas that should be reviewed later before Q化, Repository
+registration, Promotion, or Codex execution.
+
 Daily operation checklist templates help humans and AI record the whole AI
 Daily Operation Cycle from startup through Current Q Review, implementation,
 verification, Human Review, Completion Checklist, commit / push, Knowledge
@@ -99,6 +103,7 @@ restore guidance.
 - `decision_template.md`
 - `innovation_pipeline_template.md`
 - `conversation_insight_template.md`
+- `pending_conversation_insight_template.md`
 - `platform_promotion_decision_report_template.md`
 - `platform_registry_update_template.md`
 

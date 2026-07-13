@@ -27,6 +27,7 @@ Start
   -> Applicable Methodologies Confirmation
   -> Scope / Out of Scope Confirmation
   -> Conversation Insight Detection
+  -> Pending Insight Review
   -> Knowledge Suggestion Assistant Check
   -> Research Task Detection
   -> Proactive Proposal Check
@@ -258,6 +259,36 @@ Conversation Insight Candidate: Yes
 AI はチャット全文を保存しません。Draftはapproved knowledgeではなく、
 Promotionには別途reviewと該当workflowが必要です。
 
+判断保留が望ましい候補は Pending Insight として扱い、後日レビューへ回します。
+
+### Pending Insight Review
+
+Startupまたは当日最初の適切なProject interactionで、
+`docs/knowledge/conversation_insights/pending/` を確認します。
+
+確認する項目:
+
+- Pending items。
+- Current Project relevance。
+- Review now。
+- Recommended action。
+- Human decision。
+- Cleanup needed。
+
+分岐:
+
+```text
+Pending Insight: None
+  -> Continue startup checklist
+
+Pending Insight: Exists
+  -> Notify briefly as Outstanding Review
+  -> Human Review Decision
+  -> Register Conversation Insight / Create Q / Keep Pending / Reject / Already Reflected
+```
+
+Pending状態ではCodex実行へ進みません。
+
 ### Knowledge Suggestion Assistant Check
 
 Startupまたは当日最初の適切なProject interactionで、関連Knowledgeを短く提案できます。
@@ -331,6 +362,7 @@ Startup Checklist:
 - Q artifact:
 - Proposal:
 - Conversation Insight:
+- Pending Insight Review:
 - Knowledge Suggestions:
 - Commit:
 - Ready:
@@ -358,6 +390,7 @@ Checklist 自体が再利用、レビュー、Git 管理対象になる場合は
 - Scope / Out of Scope が確認されている。
 - Research Task Detection が確認されている。
 - Conversation Insight Detection が確認されている。
+- Pending Insight Review が確認されている。
 - Daily Knowledge Source Review が確認されている。
 - Outstanding Review Notification と Related Knowledge Suggestions の要否が確認されている。
 - Research Task の場合、Research Mission の入口が確認されている。
@@ -371,11 +404,14 @@ Checklist 自体が再利用、レビュー、Git 管理対象になる場合は
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/rules/research_mission_rules.md`
 - `docs/rules/conversation_insight_capture_rules.md`
+- `docs/rules/pending_conversation_insight_review_rules.md`
 - `docs/workflow/research_mission_workflow.md`
 - `docs/workflow/conversation_insight_capture_workflow.md`
+- `docs/workflow/pending_conversation_insight_review_workflow.md`
 - `docs/architecture/context_aware_knowledge_suggestion_assistant.md`
 - `templates/research_mission_template.md`
 - `templates/conversation_insight_template.md`
+- `templates/pending_conversation_insight_template.md`
 - `templates/information_package_template.md`
 - `templates/startup_checklist_template.md`
 - `examples/startup_checklist_examples.md`

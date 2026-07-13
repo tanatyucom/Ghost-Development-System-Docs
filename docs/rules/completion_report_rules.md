@@ -35,6 +35,7 @@ Completion Report v2 requires these sections:
 13. Future Candidates
 14. Recommended Next Q
 15. Suggested Commit Message
+16. Pending Insight Review, when Pending Insight was created, updated, reviewed, or used as Q source
 
 A section may be marked `Not Applicable`, but it should not be silently omitted.
 
@@ -175,6 +176,18 @@ When follow-up work is useful, the report should propose one Recommended Next Q 
 ## AI Repository Index Rule
 
 If public AI knowledge entry points changed, the report must record whether `docs/ai_repository_index.md` was regenerated and validated.
+
+## Pending Insight Review Rule
+
+When a task creates, updates, reviews, resolves, or converts a Pending Insight,
+the report must record:
+
+- Pending Insight definition and storage.
+- Review decision.
+- Codex execution restriction.
+- Startup / Daily Review integration.
+- Cleanup status.
+- Remaining pending items.
 
 ## Repository Quality Rule
 

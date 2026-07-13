@@ -88,6 +88,10 @@ gate.
   conversation-origin design philosophy, operation policy, migration strategy,
   Command Center concepts, and long-term vision as Human Approval-gated
   pre-promotion knowledge.
+- `pending_conversation_insight_review_workflow.md`: workflow for holding
+  conversation-origin ideas as temporary Pending Insights, reviewing them at
+  Startup / Daily Knowledge Review, blocking Codex execution while pending,
+  and resolving or keeping them after Human Review.
 - `platform_registry_update_artifact_storage.md`: storage location, naming
   rule, and management workflow for Platform Registry Update Artifacts.
 - `auto_registry_update_from_promotion_report.md`: workflow design for

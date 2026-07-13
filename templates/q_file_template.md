@@ -201,6 +201,7 @@ Push: Do not execute
 - Related Templates:
 - Related Examples:
 - Related Conversation Insight:
+- Related Pending Insight:
 - Related Future Candidate:
 - Related Q:
 - Related Completion Report:
@@ -305,6 +306,10 @@ Do not silently skip the decision.
 - Project Profile reviewed when applicable:
 - AI Repository Index read when public knowledge is needed:
 - Conversation Insight Detection performed when applicable:
+- Pending Insight origin:
+- Pending Insight reviewed before Q creation:
+- Pending Insight decision:
+- Pending Insight Codex execution restriction cleared by Human Approval:
 
 ## Audit Before Repair
 

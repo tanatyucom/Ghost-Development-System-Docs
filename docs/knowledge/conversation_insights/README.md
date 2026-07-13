@@ -13,6 +13,7 @@ Rule / Architecture / Workflow / Roadmap / Concept / CASE へ昇格するには�
 ```text
 Conversation
   -> Conversation Insight Candidate
+  -> Pending Insight, when immediate decision should be deferred
   -> Human Approval To Draft
   -> Conversation Insight Artifact
   -> Review
@@ -24,8 +25,13 @@ Conversation
 
 - Rule: `docs/rules/conversation_insight_capture_rules.md`
 - Workflow: `docs/workflow/conversation_insight_capture_workflow.md`
+- Pending Rule: `docs/rules/pending_conversation_insight_review_rules.md`
+- Pending Workflow: `docs/workflow/pending_conversation_insight_review_workflow.md`
 - Template: `templates/conversation_insight_template.md`
+- Pending Template: `templates/pending_conversation_insight_template.md`
 - Examples: `examples/conversation_insight_examples.md`
+- Pending Examples: `examples/pending_conversation_insight_examples.md`
+- Pending Queue: `docs/knowledge/conversation_insights/pending/README.md`
 
 ## Approved Insights
 
@@ -46,6 +52,25 @@ Initial approved artifacts:
 These artifacts are Approved Insights. They are not automatically promoted
 Rules, Architecture, Workflow, Roadmap, Concepts, or CASE entries. Promotion
 requires a separate review.
+
+## Pending Insights
+
+Pending Insights are temporary candidates for ideas that should be remembered
+but not immediately registered, Q化, promoted, or sent to Codex.
+
+Pending queue:
+
+- [`pending/README.md`](pending/README.md)
+- [`pending/PI-00001_process_improvement_over_repeated_reminder.md`](pending/PI-00001_process_improvement_over_repeated_reminder.md)
+- [`pending/PI-00002_pending_insight_review_before_codex_execution.md`](pending/PI-00002_pending_insight_review_before_codex_execution.md)
+
+Pending Insight is not Approved Insight. Review decisions are:
+
+- Register as Conversation Insight.
+- Create Q.
+- Keep Pending.
+- Reject.
+- Already Reflected.
 
 ## Storage Rule
 
@@ -91,6 +116,8 @@ Conversation Insight artifact:
 - AI may propose candidates.
 - AI must not auto-save.
 - Human Approval is required before draft generation.
+- Pending Insight may be used when immediate judgment should be deferred.
+- Codex execution is not allowed from Pending state.
 - Conversation Insight does not replace Q, Research Mission, CASE, or Completion Report.
 - Future Candidate is not approved scope.
 - Approved Insight does not equal promoted Rule, Architecture, Workflow, or CASE.

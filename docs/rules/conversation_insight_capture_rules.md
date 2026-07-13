@@ -23,6 +23,11 @@ AI はチャット全文を保存してはいけません。
 
 Conversation Insight Draft は、人間が明示的に承認した場合のみ生成します。
 
+その場で正式登録、Q化、Codex実行を決めるべきではない場合は、
+`pending_conversation_insight_review_rules.md` に従い、Pending Insight として
+一時保留できます。Pending Insight は正式Knowledgeではなく、後日のHuman Reviewで
+扱いを決定するための候補です。
+
 ## Candidate Criteria
 
 Conversation Insight Candidate として提案できる条件:
@@ -58,6 +63,36 @@ AI は、次のような明示承認がある場合のみ Conversation Insight D
 - `Conversation Insightとして残して`
 
 明示承認がない場合、AI は候補提案と理由説明に留めます。
+
+判断保留が望ましい場合、AI は Draft 作成ではなく Pending Insight 化を提案できます。
+Pending artifact の作成にも明示承認が必要です。
+
+## Pending Insight Option
+
+Pending Insight は Conversation Insight Candidate と正式登録の間に置く
+一時保留状態です。
+
+使う場面:
+
+- 雑談中、飲酒中、疲労時など、即時判断を避けたい。
+- 価値はありそうだが、既存Knowledgeとの重複確認が必要。
+- Q化やCodex実行に進めるには翌日以降の再確認が必要。
+- 次チャットで失われると困るが、Approved Insight にはまだできない。
+
+禁止:
+
+- Pending を Approved Insight として扱う。
+- Pending 状態から Codex 実行へ進む。
+- Pending にチャット全文や個人情報を保存する。
+- Pending を自動削除する。
+
+Storage:
+
+```text
+docs/knowledge/conversation_insights/pending/
+```
+
+Details follow `docs/rules/pending_conversation_insight_review_rules.md`.
 
 ## No Automatic Save
 
@@ -237,9 +272,14 @@ Example:
 ## Related Documents
 
 - `docs/workflow/conversation_insight_capture_workflow.md`
+- `docs/rules/pending_conversation_insight_review_rules.md`
+- `docs/workflow/pending_conversation_insight_review_workflow.md`
 - `docs/knowledge/conversation_insights/README.md`
+- `docs/knowledge/conversation_insights/pending/README.md`
 - `templates/conversation_insight_template.md`
+- `templates/pending_conversation_insight_template.md`
 - `examples/conversation_insight_examples.md`
+- `examples/pending_conversation_insight_examples.md`
 - `docs/architecture/context_aware_knowledge_suggestion_assistant.md`
 - `docs/rules/ai_startup_procedure_rules.md`
 - `docs/rules/startup_checklist_rules.md`

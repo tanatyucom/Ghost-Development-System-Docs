@@ -170,6 +170,23 @@ Ideas that should remain future work until separately reviewed:
 - New Markdown registered:
 - Not required reason:
 
+## Pending Insight Review
+
+- Pending Insight definition:
+- Detection criteria:
+- Storage decision:
+- Review timing:
+- Decision options:
+- Codex execution restriction:
+- Cleanup policy:
+- Memory / Repository boundary:
+- Startup integration:
+- Daily Knowledge Review integration:
+- Initial pending insight handling:
+- Related Pending Insight artifacts:
+- Remaining pending items:
+- Not required reason:
+
 ## Documentation Synchronization Review
 
 - Documentation Synchronization required:

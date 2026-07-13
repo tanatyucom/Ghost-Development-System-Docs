@@ -322,19 +322,25 @@ Start from:
 
 - [`docs/rules/conversation_insight_capture_rules.md`](docs/rules/conversation_insight_capture_rules.md)
 - [`docs/workflow/conversation_insight_capture_workflow.md`](docs/workflow/conversation_insight_capture_workflow.md)
+- [`docs/rules/pending_conversation_insight_review_rules.md`](docs/rules/pending_conversation_insight_review_rules.md)
+- [`docs/workflow/pending_conversation_insight_review_workflow.md`](docs/workflow/pending_conversation_insight_review_workflow.md)
 - [`docs/knowledge/conversation_insights/README.md`](docs/knowledge/conversation_insights/README.md)
+- [`docs/knowledge/conversation_insights/pending/README.md`](docs/knowledge/conversation_insights/pending/README.md)
 - [`docs/knowledge/conversation_insights/CI-00001_knowledge_mining_from_casual_conversation.md`](docs/knowledge/conversation_insights/CI-00001_knowledge_mining_from_casual_conversation.md)
 - [`docs/knowledge/conversation_insights/CI-00002_design_conversation_mode.md`](docs/knowledge/conversation_insights/CI-00002_design_conversation_mode.md)
 - [`docs/knowledge/conversation_insights/CI-00003_gameghost_domain_purification_and_animeghost_bootstrap_strategy.md`](docs/knowledge/conversation_insights/CI-00003_gameghost_domain_purification_and_animeghost_bootstrap_strategy.md)
 - [`docs/knowledge/conversation_insights/CI-00004_encoding_regression_prevention_as_poka_yoke.md`](docs/knowledge/conversation_insights/CI-00004_encoding_regression_prevention_as_poka_yoke.md)
 - [`templates/conversation_insight_template.md`](templates/conversation_insight_template.md)
+- [`templates/pending_conversation_insight_template.md`](templates/pending_conversation_insight_template.md)
 - [`examples/conversation_insight_examples.md`](examples/conversation_insight_examples.md)
+- [`examples/pending_conversation_insight_examples.md`](examples/pending_conversation_insight_examples.md)
 
 標準フロー:
 
 ```text
 Conversation
   -> Conversation Insight Candidate
+  -> Pending Insight, when immediate decision should be deferred
   -> Human Approval To Draft
   -> Conversation Insight Artifact
   -> Review
@@ -349,6 +355,9 @@ Conversation Insight artifact を作成します。
 AI Startup Procedure と Startup Checklist では、Conversation Insight Detection
 として、重要な設計思想、運用方針、保守方針、Migration戦略、Command Center構想、
 長期ビジョンが含まれるかを確認します。
+
+Pending Insight は、雑談中、飲酒中、疲労時など即時判断を避けたい候補を
+翌日以降のHuman Reviewへ回す一時Queueです。Pending状態ではCodex実行しません。
 
 ## GDS Health
 

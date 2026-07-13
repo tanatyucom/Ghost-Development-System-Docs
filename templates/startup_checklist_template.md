@@ -47,6 +47,11 @@
 - Q naming rules checked:
 - Scope / Out of Scope confirmed:
 - Outstanding Review Notification checked:
+- Pending Insight Review checked:
+- Pending Insight items:
+- Pending Insight related to current project:
+- Pending Insight decision:
+- Pending Insight cleanup needed:
 - Related Knowledge Suggestions checked:
 - Promotion Candidates checked:
 - Future Candidates checked:
@@ -56,6 +61,9 @@
 - Conversation Insight duplicate check:
 - Conversation Insight auto-save avoided:
 - Conversation Insight draft approval:
+- Pending Insight candidate:
+- Pending Insight artifact required:
+- Pending Insight Codex execution blocked:
 - Research Task Detection completed:
 - Research Task:
 - Research Mission required:
@@ -156,6 +164,11 @@
 
 - Outstanding Review Notification needed: Yes / No
 - Outstanding Review items:
+- Pending Insight Notification needed: Yes / No
+- Pending Insight items:
+- Pending Insight review value:
+- Pending Insight recommended action:
+- Pending Insight decision:
 - Related Knowledge Suggestions needed: Yes / No
 - Related Knowledge Suggestions:
 - Reviewed / Approved Knowledge re-suggested:
@@ -211,8 +224,30 @@
 - Human Approval To Draft:
 - Draft artifact required:
 - Draft artifact path:
+- Pending Insight instead of Draft:
+- Pending Insight reason:
+- Pending Insight artifact path:
 - Promotion candidate type:
 - Next action:
+
+## Pending Insight Review
+
+- Pending Insight Review required: Yes / No
+- Pending folder checked:
+- Pending items found:
+- Yesterday / previous chat origin:
+- Current Project relevance:
+- Review now:
+- Decision selected:
+  - Register as Conversation Insight
+  - Create Q
+  - Keep Pending
+  - Reject
+  - Already Reflected
+- Codex execution blocked while pending:
+- Cleanup confirmation required:
+- Cleanup decision:
+- Notes:
 
 ## Research Task Detection
 
@@ -263,6 +298,7 @@
 - `docs/architecture/context_aware_knowledge_suggestion_assistant.md`
 - `templates/research_mission_template.md`
 - `templates/conversation_insight_template.md`
+- `templates/pending_conversation_insight_template.md`
 - `templates/information_package_template.md`
 - `docs/README.md`
 - `docs/rules/rules.md`

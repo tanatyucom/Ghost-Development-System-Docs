@@ -29,6 +29,9 @@ knowledge-producing, or part of repeated GDS operation.
 - Current Q reviewed:
 - Startup Checklist completed:
 - Scope / Out of Scope confirmed:
+- Pending Insight Review completed:
+- Pending Insight items:
+- Pending Insight decision:
 - Startup blockers:
 
 ## 2. Current Q Review
@@ -99,6 +102,7 @@ knowledge-producing, or part of repeated GDS operation.
 ## 8. Knowledge Update
 
 - Knowledge updated:
+- Pending Insight reviewed before Knowledge update:
 - Rule update:
 - Workflow update:
 - Template update:
@@ -107,6 +111,7 @@ knowledge-producing, or part of repeated GDS operation.
 - Glossary update:
 - PIP Case / Concept update:
 - Roadmap Future Candidate update:
+- Pending Insight cleanup confirmed:
 - Knowledge update not required reason:
 
 ## 9. Repository Update

@@ -425,6 +425,8 @@ Reference points:
   `docs/architecture/command_center_architecture.md`
 - Conversation Insights:
   `docs/knowledge/conversation_insights/README.md`
+- Pending Conversation Insights:
+  `docs/knowledge/conversation_insights/pending/README.md`
 - AI Proactive Proposal:
   `docs/rules/ai_proactive_proposal_rules.md`
 
@@ -445,6 +447,9 @@ Startup behavior includes Daily Knowledge Source Review, Outstanding Review
 Notification, and Context-Aware Re-Suggestion of reviewed or approved Knowledge
 when relevance to current work is high. The canonical daily entry point is
 `docs/ai_repository_index.md`.
+
+Pending Insight notifications are treated as Outstanding Review items, but
+Pending entries are not approved Knowledge and do not permit Codex execution.
 
 ## Knowledge Inventory Index
 
@@ -491,8 +496,14 @@ Reference points:
   `docs/rules/conversation_insight_capture_rules.md`
 - Workflow:
   `docs/workflow/conversation_insight_capture_workflow.md`
+- Pending Rule:
+  `docs/rules/pending_conversation_insight_review_rules.md`
+- Pending Workflow:
+  `docs/workflow/pending_conversation_insight_review_workflow.md`
 - Storage:
   `docs/knowledge/conversation_insights/README.md`
+- Pending Queue:
+  `docs/knowledge/conversation_insights/pending/README.md`
 - Initial Approved Insights:
   `docs/knowledge/conversation_insights/CI-00001_knowledge_mining_from_casual_conversation.md`
   and
@@ -503,8 +514,12 @@ Reference points:
   `docs/knowledge/conversation_insights/CI-00004_encoding_regression_prevention_as_poka_yoke.md`
 - Template:
   `templates/conversation_insight_template.md`
+- Pending Template:
+  `templates/pending_conversation_insight_template.md`
 - Examples:
   `examples/conversation_insight_examples.md`
+- Pending Examples:
+  `examples/pending_conversation_insight_examples.md`
 - Knowledge Folder:
   `docs/knowledge/README.md`
 
@@ -513,6 +528,7 @@ Core flow:
 ```text
 Conversation
   -> Conversation Insight Candidate
+  -> Pending Insight, when immediate decision should be deferred
   -> Human Approval To Draft
   -> Conversation Insight Artifact
   -> Review
@@ -529,6 +545,8 @@ Startup integration:
 - AI Startup Procedure includes Conversation Insight Detection.
 - Startup Checklist confirms candidate detection, duplicate check, no
   auto-save, no full chat capture, and Human Approval To Draft.
+- Pending Insight Review confirms next-day / next-chat candidates, Human Review
+  decision, Codex execution restriction, and cleanup confirmation.
 
 ## GDS Health Index
 

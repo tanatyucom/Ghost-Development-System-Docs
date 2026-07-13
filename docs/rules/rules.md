@@ -47,6 +47,7 @@ Rules follow these principles:
 - Completion Report Standard.
 - Research Mission.
 - Conversation Insight Capture.
+- Pending Conversation Insight Review.
 - Artifact First.
 - Q File Artifact Standard.
 - Q File Naming.
@@ -87,6 +88,7 @@ own files.
 - `completion_report_rules.md`
 - `research_mission_rules.md`
 - `conversation_insight_capture_rules.md`
+- `pending_conversation_insight_review_rules.md`
 - `artifact_first_rules.md`
 - `q_file_artifact_standard.md`
 - `q_file_naming_rules.md`
@@ -357,6 +359,27 @@ Draft Conversation Insights are pre-promotion knowledge, not approved rules or
 standards. Promotion requires review and the appropriate destination workflow.
 
 Details follow `conversation_insight_capture_rules.md`.
+
+## Pending Conversation Insight Review
+
+When a conversation contains a valuable idea but immediate registration, Q化,
+or Codex execution should be deferred, AI may propose a Pending Insight.
+
+Pending Insight is a temporary review queue, not approved Knowledge.
+
+Pending state does not allow Codex execution.
+
+Standard flow:
+
+```text
+Conversation Insight Candidate
+  -> Pending Insight
+  -> Next Startup / Daily Review
+  -> Human Review
+  -> Register Conversation Insight / Create Q / Keep Pending / Reject / Already Reflected
+```
+
+Details follow `pending_conversation_insight_review_rules.md`.
 
 ## Debug Artifact Review
 

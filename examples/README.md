@@ -67,6 +67,9 @@ reports, and documentation requests can start from a clear reference.
 - `conversation_insight_examples.md`: good and bad examples for proposing,
   approving, drafting, reviewing, and promoting conversation-origin insights
   without auto-saving chat or treating Future Candidates as approved scope.
+- `pending_conversation_insight_examples.md`: good and bad examples for
+  temporarily holding conversation-origin ideas, next-day review, Codex
+  execution restriction, and cleanup confirmation.
 - `platform_promotion_decision_report_examples.md`: examples for Promote,
   Revise, Reject, and Archive decisions after Innovation Pipeline validation.
 - `platform_standard_registry_examples.md`: examples for Candidate to
@@ -195,6 +198,9 @@ what a complete, well-scoped document should feel like.
   design philosophy, operation policy, maintenance policy, migration strategy,
   Command Center concept, or long-term vision that may need Human
   Approval-gated preservation before promotion.
+- Use `pending_conversation_insight_examples.md` when a conversation reveals a
+  promising idea but immediate registration, Q化, or Codex execution should be
+  deferred until next Startup or Human Review.
 - Use `platform_promotion_decision_report_examples.md` when deciding whether a
   validated Innovation Pipeline item should be promoted, revised, rejected, or
   archived.

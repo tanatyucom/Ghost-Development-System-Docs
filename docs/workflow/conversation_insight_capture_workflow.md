@@ -15,6 +15,7 @@ Rule / Architecture / Workflow へ昇格できる状態にすることです。
 ```text
 Conversation
   -> Conversation Insight Candidate
+  -> Pending Insight, when immediate decision should be deferred
   -> Human Approval To Draft
   -> Conversation Insight Artifact
   -> Review
@@ -56,6 +57,7 @@ AI ができること:
 - なぜ保存価値があるか説明する。
 - 既存Knowledgeとの重複可能性を指摘する。
 - 保存先候補を提案する。
+- 判断保留が望ましい場合、Pending Insight 化を提案する。
 - 人間が依頼した場合のみ draft artifact を作る。
 
 AI がしてはいけないこと:
@@ -65,6 +67,7 @@ AI がしてはいけないこと:
 - Human ApprovalなしのRule化。
 - 雑談や一時感情をKnowledgeとして扱う。
 - Future Candidateをapproved scopeとして扱う。
+- Pending状態からCodex実行へ進める。
 
 ## Human Approval
 
@@ -77,6 +80,30 @@ AI がしてはいけないこと:
 - Conversation Insightとして残して。
 
 明示指示がない場合、AI は候補提案に留めます。
+
+## Pending Insight Branch
+
+その場で正式登録、Q化、Codex実行を決めるべきではない場合は、
+Pending Conversation Insight Review Workflow に分岐します。
+
+```text
+Conversation Insight Candidate
+  -> Pending Insight Proposal
+  -> Human Approval To Pending
+  -> Pending Insight Artifact
+  -> Next Startup / Daily Review
+  -> Human Review Decision
+```
+
+Pending Insight は Approved Insight ではありません。
+
+Pending Insight の保存先:
+
+```text
+docs/knowledge/conversation_insights/pending/
+```
+
+Details follow `docs/workflow/pending_conversation_insight_review_workflow.md`.
 
 ## Candidate Criteria
 
@@ -122,6 +149,12 @@ Use:
 
 ```text
 templates/conversation_insight_template.md
+```
+
+For Pending Insight, use:
+
+```text
+templates/pending_conversation_insight_template.md
 ```
 
 ## Review Fields
@@ -188,3 +221,10 @@ Conversation Insight capture is complete when:
 - Promotion path or archive decision is recorded.
 - README / index route is updated when the artifact becomes a durable entry point.
 - Completion Report records changed files, verification, remaining issues, and next Q.
+
+Pending Insight review is complete when:
+
+- Pending artifact is reviewed.
+- Human decision is recorded.
+- Codex execution remains blocked while Pending.
+- Cleanup decision is confirmed after formal reflection or rejection.

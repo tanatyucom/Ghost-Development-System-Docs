@@ -39,6 +39,7 @@ It may suggest:
 
 - Related Knowledge.
 - Outstanding Review.
+- Pending Insight Review.
 - Promotion Candidates.
 - Future Candidates.
 - Possible next review target.
@@ -51,6 +52,7 @@ It must not decide, promote, generate, implement, or commit automatically.
 Suggestion対象:
 
 - Conversation Insight。
+- Pending Conversation Insight。
 - Future Candidate。
 - Research Mission。
 - Improvement Record。
@@ -173,6 +175,31 @@ Notification content:
 The assistant should avoid repeatedly notifying the same item without a useful
 context change.
 
+## Pending Insight Notification
+
+Pending Conversation Insight は Outstanding Review Notification の一種として
+扱います。ただし、Pending は正式Knowledgeではなく、翌日以降のHuman Reviewで
+扱いを決める一時候補です。
+
+Notification content:
+
+- Type: Pending Insight。
+- ID / Title。
+- Why reviewing now may be valuable。
+- Recommended action。
+- Codex execution restriction。
+
+Possible actions:
+
+- Register as Conversation Insight。
+- Create Q。
+- Keep Pending。
+- Reject。
+- Already Reflected。
+
+The assistant must not turn Pending Insight into a Q, implementation request,
+promotion, or commit without Human Approval.
+
 ## Context-Aware Re-Suggestion
 
 Reviewed or Approved Knowledge may be suggested again when it has high
@@ -236,6 +263,7 @@ Out of scope:
 - 自動Rule化。
 - 自動Architecture化。
 - 自動Archive。
+- Pending Insightからの自動Codex実行。
 - Repository write without Human Approval。
 - 常駐監視。
 - バックグラウンド自動実行。

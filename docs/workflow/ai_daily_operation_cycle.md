@@ -45,6 +45,7 @@ recorded as a reusable task artifact or completion evidence.
 - Current Q File.
 - Startup Checklist.
 - Scope / Out of Scope.
+- Pending Insight Review, when pending candidates exist.
 
 ### 2. Current Q Review
 
@@ -144,6 +145,9 @@ Q が `Do not commit` の場合、commit / push は実行しません。
 Knowledge Poka-Yoke の観点で、繰り返し忘れそうな手順は checklist、template、
 validation、artifact、review、automation candidate に変換します。
 
+Pending Insight がある場合は、正式登録やQ化の前に Human Review を行います。
+Pending状態ではCodex実行へ進みません。
+
 ### 9. Repository Update
 
 公開 knowledge entry point が増えた場合、AI Repository Index を再生成・検証します。
@@ -207,12 +211,14 @@ It does not replace:
 - `templates/daily_operation_checklist_template.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/workflow/startup_checklist_workflow.md`
+- `docs/workflow/pending_conversation_insight_review_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`
 - `docs/workflow/collaborative_decision_workflow.md`
 - `docs/workflow/commit_safety_checklist.md`
 - `docs/rules/workflow_rules.md`
 - `docs/rules/ai_startup_procedure_rules.md`
 - `docs/rules/startup_checklist_rules.md`
+- `docs/rules/pending_conversation_insight_review_rules.md`
 - `docs/rules/completion_checklist_rules.md`
 - `docs/rules/ai_proactive_proposal_rules.md`
 - `docs/rules/core_principles.md`
