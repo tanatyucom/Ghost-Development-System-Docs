@@ -17,6 +17,9 @@ Completion Checklist, Research Mission, Conversation Insight Capture, Artifact F
 Migration First, PIP Case Knowledge Base, and Roadmap2 Knowledge Salvage. Concept Promotion is
 handled as part of PIP Case Knowledge Base. Concept ID Naming is the standard
 for assigning stable Concept IDs and keeping the Concept Index traceable.
+Platform Component Rules define component classification, naming,
+Discoverability 3 Second Rule, shared library limits, migration criteria, and
+Review Center placement policy.
 Persistent Collaboration, Platform First, Repository First, Download First,
 Rule Priority, Command Rule, Review Rule, Completion Report First, AI
 Cognitive Load Reduction, and Platform Philosophy are defined in
@@ -86,6 +89,9 @@ promoted.
 - `migration_first_rules.md`: internal architecture rule for preferring
   standard migration, reference update, verification, and legacy removal over
   permanent compatibility fallback.
+- `platform_component_rules.md`: component classification, folder, naming,
+  shared library, migration, legacy, Review Center, and Human Approval rules for
+  shared Ghost Platform components.
 - `pip_case_knowledge_base_rules.md`: standard locations, metadata, tags,
   case sections, evidence linking, PIP Master Document / Title List handling,
   concept lifecycle, and promotion rules for PIP cases.
@@ -141,14 +147,15 @@ promoted.
 21. `debug_artifact_review_rules.md`
 22. `debug_escalation_ladder_rules.md`
 23. `migration_first_rules.md`
-24. `pip_case_knowledge_base_rules.md`
-25. `concept_id_naming_rules.md`
-26. `roadmap2_knowledge_salvage_rules.md`
-27. `workflow_rules.md`
-28. `quality_rules.md`
-29. `ai_collaboration_rules.md`
-30. `git_rules.md`
-31. `script_architecture_rules.md`
+24. `platform_component_rules.md`
+25. `pip_case_knowledge_base_rules.md`
+26. `concept_id_naming_rules.md`
+27. `roadmap2_knowledge_salvage_rules.md`
+28. `workflow_rules.md`
+29. `quality_rules.md`
+30. `ai_collaboration_rules.md`
+31. `git_rules.md`
+32. `script_architecture_rules.md`
 
 ## Update Policy
 

@@ -74,6 +74,9 @@ reports, and documentation requests can start from a clear reference.
 - `platform_registry_update_completed_examples.md`: completed examples for
   New Standard, Standard Update, Deprecation, Replacement, and Archive registry
   update artifacts.
+- `platform_discoverability_and_component_examples.md`: good and bad examples
+  for Platform folder placement, component classification, naming, plugin
+  discoverability, Review Center split, and migration candidate decisions.
 - `persistent_collaboration_examples.md`: good and bad examples for command
   presentation, review conclusion, Download First, Repository First, Platform
   First, AI collaboration, and completion report priority.
@@ -187,6 +190,9 @@ what a complete, well-scoped document should feel like.
   updating, deprecating, or replacing a Platform Standard Registry entry.
 - Use `platform_registry_update_completed_examples.md` when filling out
   `templates/platform_registry_update_template.md` for a real registry update.
+- Use `platform_discoverability_and_component_examples.md` when deciding whether
+  a component belongs under Platform, a project adapter, shared library, plugin,
+  engine, service, schema, review, import, export, or report folder.
 - Use `persistent_collaboration_examples.md` when applying persistent
   collaboration behavior across ChatGPT, Codex, Claude, Gemini, human review,
   Q files, completion reports, command presentation, and review conclusions.
@@ -222,6 +228,7 @@ When examples conflict with rules or templates, follow:
 - Knowledge Base Index example.
 - Metrics / Evidence completion report example.
 - Platform Standard Registry example.
+- Platform Discoverability / Component Interface example.
 - Multi-AI Handoff example for generated Information Packages.
 - Artifact Metadata examples for future validators and Command Center routing.
 
