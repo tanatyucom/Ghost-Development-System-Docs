@@ -591,6 +591,37 @@ Repository Quality Report は生成直後から日本語本文で出力します
 command、path、status value は互換性維持のため英語表記を残します。
 Platform Standard Registry の整合性は Registry Health として出力されます。
 
+## Documentation Synchronization Gate Index
+
+Documentation Synchronization Gate は、文書追加・文書更新後に README、folder
+index、AI Repository Index、Completion Checklist、Completion Report、
+Repository Quality Audit が同期されているかを確認するための gate です。
+
+Reference points:
+
+- Rule: `docs/rules/documentation_synchronization_rules.md`
+- Workflow: `docs/workflow/documentation_synchronization_workflow.md`
+- Examples: `examples/documentation_synchronization_examples.md`
+- Completion Checklist: `templates/completion_checklist_template.md`
+- Completion Report: `templates/completion_report_template.md`
+- Completion Report Artifact:
+  `reports/documentation_synchronization_gate_completion_report.md`
+
+Core flow:
+
+```text
+Document Change
+  -> README / Folder Index Review
+  -> AI Repository Index Update
+  -> Completion Checklist / Completion Report Synchronization
+  -> Repository Quality Audit
+  -> Human Review
+  -> Commit Decision
+```
+
+この gate は README diff detection policy と Future Auto Sync design の入口です。
+自動同期は将来候補であり、現在は Human Approval First で運用します。
+
 ## Platform Standard Registry Index
 
 Platform Standard Registry は、GDS Platform に昇格した標準機能、標準 Rule、

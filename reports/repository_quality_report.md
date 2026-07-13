@@ -7,10 +7,10 @@
 
 ## 要約
 
-- 生成日時: `2026-07-13T01:22:41Z`
+- 生成日時: `2026-07-13T01:41:08Z`
 - Repository: `Ghost-Development-System-Docs`
 - Overall Repository Health: `Green`
-- 通過したチェック: `11`
+- 通過したチェック: `12`
 - Warnings: `0`
 - Errors: `0`
 
@@ -18,7 +18,7 @@
 
 - Status: `PASS`
 
-### Registry Health: 19 registry items checked.
+### Registry Health: 20 registry items checked.
 
 - Missing Standard: none.
 - Broken Registry Link: none.
@@ -36,7 +36,7 @@
 
 - Status: `PASS`
 - Details:
-  - 380 Markdown files を UTF-8 として読み取れました。
+  - 388 Markdown files を UTF-8 として読み取れました。
 
 ### Mojibake Audit
 
@@ -54,7 +54,7 @@
 
 - Status: `PASS`
 - Details:
-  - OK: 380 Markdown files が index に登録されています。
+  - OK: 388 Markdown files が index に登録されています。
 
 ### GDS Health Validation
 
@@ -96,7 +96,7 @@
 
 - Status: `PASS`
 - Details:
-  - Registry Health: 19 registry items checked.
+  - Registry Health: 20 registry items checked.
   - Missing Standard: none.
   - Broken Registry Link: none.
   - Deprecated Review Needed: none.
@@ -106,6 +106,14 @@
   - Archived Review Needed: none.
   - Registry Update Artifact Storage: pass.
   - Registry Structure / Roadmap Consistency: pass.
+
+### Documentation Synchronization Gate
+
+- Status: `PASS`
+- Details:
+  - Documentation Synchronization Gate validates README / index / checklist / report / AI Index linkage.
+  - Missing: none.
+  - Content gaps: none.
 
 ## 警告 (Warnings)
 

@@ -87,6 +87,18 @@ PLATFORM_REGISTRY_ALLOWED_TRANSITIONS = {
     "Replaced": {"Archived"},
     "Archived": set(),
 }
+DOCUMENTATION_SYNC_RULE_PATH = Path("docs/rules/documentation_synchronization_rules.md")
+DOCUMENTATION_SYNC_WORKFLOW_PATH = Path("docs/workflow/documentation_synchronization_workflow.md")
+DOCUMENTATION_SYNC_EXAMPLE_PATH = Path("examples/documentation_synchronization_examples.md")
+DOCUMENTATION_SYNC_CHECKLIST_PATH = Path("templates/completion_checklist_template.md")
+DOCUMENTATION_SYNC_REPORT_TEMPLATE_PATH = Path("templates/completion_report_template.md")
+DOCUMENTATION_SYNC_ENTRY_POINTS = [
+    Path("README.md"),
+    Path("docs/README.md"),
+    Path("docs/rules/README.md"),
+    Path("docs/workflow/README.md"),
+    Path("examples/README.md"),
+]
 
 
 @dataclass
@@ -551,6 +563,86 @@ def check_platform_registry_consistency(root: Path) -> CheckResult:
     return CheckResult("Platform Registry Consistency Check", "PASS", details)
 
 
+def check_documentation_synchronization_gate(root: Path) -> CheckResult:
+    missing: list[str] = []
+    content_gaps: list[str] = []
+
+    required_files = [
+        DOCUMENTATION_SYNC_RULE_PATH,
+        DOCUMENTATION_SYNC_WORKFLOW_PATH,
+        DOCUMENTATION_SYNC_EXAMPLE_PATH,
+        DOCUMENTATION_SYNC_CHECKLIST_PATH,
+        DOCUMENTATION_SYNC_REPORT_TEMPLATE_PATH,
+    ]
+    for rel_path in required_files:
+        if not (root / rel_path).exists():
+            missing.append(f"{rel_path.as_posix()} が存在しません。")
+
+    for rel_path in DOCUMENTATION_SYNC_ENTRY_POINTS:
+        full_path = root / rel_path
+        if not full_path.exists():
+            missing.append(f"{rel_path.as_posix()} が存在しません。")
+            continue
+        text = full_path.read_text(encoding="utf-8", errors="replace")
+        if "Documentation Synchronization" not in text:
+            content_gaps.append(
+                f"{rel_path.as_posix()} に Documentation Synchronization 導線がありません。"
+            )
+
+    if (root / DOCUMENTATION_SYNC_CHECKLIST_PATH).exists():
+        checklist = (root / DOCUMENTATION_SYNC_CHECKLIST_PATH).read_text(
+            encoding="utf-8", errors="replace"
+        )
+        for needle in (
+            "Documentation Synchronization required",
+            "README / index update completed",
+            "Documentation Synchronization Gate passed",
+        ):
+            if needle not in checklist:
+                content_gaps.append(
+                    f"{DOCUMENTATION_SYNC_CHECKLIST_PATH.as_posix()} に `{needle}` がありません。"
+                )
+
+    if (root / DOCUMENTATION_SYNC_REPORT_TEMPLATE_PATH).exists():
+        report_template = (root / DOCUMENTATION_SYNC_REPORT_TEMPLATE_PATH).read_text(
+            encoding="utf-8", errors="replace"
+        )
+        for needle in (
+            "## Documentation Synchronization Review",
+            "README / index entry points updated",
+            "Documentation Synchronization Gate result",
+        ):
+            if needle not in report_template:
+                content_gaps.append(
+                    f"{DOCUMENTATION_SYNC_REPORT_TEMPLATE_PATH.as_posix()} に `{needle}` がありません。"
+                )
+
+    index_path = root / PLATFORM_REGISTRY_AI_INDEX
+    if not index_path.exists():
+        missing.append(f"{PLATFORM_REGISTRY_AI_INDEX.as_posix()} が存在しません。")
+    else:
+        index_text = index_path.read_text(encoding="utf-8", errors="replace")
+        for needle in (
+            DOCUMENTATION_SYNC_RULE_PATH.as_posix(),
+            DOCUMENTATION_SYNC_WORKFLOW_PATH.as_posix(),
+            DOCUMENTATION_SYNC_EXAMPLE_PATH.as_posix(),
+        ):
+            if needle not in index_text:
+                content_gaps.append(f"AI Repository Index に `{needle}` が登録されていません。")
+
+    details = [
+        "Documentation Synchronization Gate validates README / index / checklist / report / AI Index linkage.",
+        "Missing: none." if not missing else "Missing:",
+        *missing,
+        "Content gaps: none." if not content_gaps else "Content gaps:",
+        *content_gaps,
+    ]
+
+    if missing or content_gaps:
+        return CheckResult("Documentation Synchronization Gate", "ERROR", details)
+    return CheckResult("Documentation Synchronization Gate", "PASS", details)
+
+
 def render_result_list(title: str, results: list[CheckResult]) -> list[str]:
     lines = [f"## {title}", ""]
     if not results:
@@ -659,6 +751,7 @@ def run_audit(root: Path) -> AuditState:
         check_project_profiles,
         check_markdown_structure,
         check_platform_registry_consistency,
+        check_documentation_synchronization_gate,
     ]
     for check in checks:
         state.add(check(root))

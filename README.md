@@ -383,6 +383,26 @@ Report:
 - [`reports/documentation_system_v2_final_review.md`](reports/documentation_system_v2_final_review.md)
 - [`docs/workflow/repository_quality_audit_workflow.md`](docs/workflow/repository_quality_audit_workflow.md)
 
+## Documentation Synchronization
+
+Documentation Synchronization Gate は、Rule、Workflow、Template、Example、
+Architecture、Report などの文書を追加・変更したときに、README、folder index、
+AI Repository Index、Completion Checklist、Completion Report、Repository Quality
+Audit まで同期されているかを確認するための完了ゲートです。
+
+Start from:
+
+- [`docs/rules/documentation_synchronization_rules.md`](docs/rules/documentation_synchronization_rules.md)
+- [`docs/workflow/documentation_synchronization_workflow.md`](docs/workflow/documentation_synchronization_workflow.md)
+- [`examples/documentation_synchronization_examples.md`](examples/documentation_synchronization_examples.md)
+- [`templates/completion_checklist_template.md`](templates/completion_checklist_template.md)
+- [`templates/completion_report_template.md`](templates/completion_report_template.md)
+- [`reports/documentation_synchronization_gate_completion_report.md`](reports/documentation_synchronization_gate_completion_report.md)
+
+この gate は「文書を追加したのに入口がない」「README から辿れない」
+「AI Repository Index が古い」「Completion Report に同期確認がない」
+といった Documentation drift を防ぎます。
+
 ## Platform Standard Registry
 
 GDS Platform に昇格した標準機能、標準 Rule、標準 Workflow、標準 Template、
