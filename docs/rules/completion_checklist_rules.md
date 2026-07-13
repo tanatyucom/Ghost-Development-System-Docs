@@ -27,6 +27,7 @@ Release 判断を置き換えません。完了時にそれらを一貫して確
 - Improvement Review Completed.
 - Commit Required?
 - Commit Executed?
+- Hotfix classification checked when the task is a defect correction?
 - Tag Required?
 - Tag Executed?
 - Release Required?
@@ -133,6 +134,8 @@ Pending Insight を作成、更新、解消、または参照した場合は、C
 - Commit が必要か。
 - Q が commit 禁止なら commit していないか。
 - Commit 済みなら commit hash と message が記録されているか。
+- defect correction の場合、GDS Hotfix か Normal Release / Improvement かが
+  `docs/rules/hotfix_policy_rules.md` に従って分類されているか。
 - Tag が必要か。
 - Tag 済みなら tag name が記録されているか。
 - Release が必要か。
@@ -162,6 +165,8 @@ Completion Checklist:
 - Improvement Review Completed:
 - Commit Required:
 - Commit Executed:
+- Hotfix Classification:
+- GDS Asset Root Cause:
 - Tag Required:
 - Tag Executed:
 - Release Required:

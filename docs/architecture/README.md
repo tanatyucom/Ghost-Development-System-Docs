@@ -32,8 +32,8 @@ runtime behavior.
   placement standard.
 - `platform_first_migration_strategy.md`: staged migration strategy from
   GameGhost to Ghost Platform, including priority matrix, platform / adapter
-  boundary, legacy policy, bootstrap order, AnimeGhost check, and future Ghost
-  compatibility.
+  boundary, legacy policy, bootstrap order, AnimeGhost check, future Ghost
+  compatibility, and the Platform Evolution statement.
 - `review_center_architecture.md`: Review Center architecture for shared human
   review session management, artifact presentation, decision capture,
   persistence, result export, gate readiness, and plugin / adapter boundary.
@@ -311,6 +311,12 @@ migration sequence and makes Review Center the P0 candidate.
 Review Center Architecture defines the P0 candidate boundary before any
 GameGhost runtime implementation or Steam OCR adapter extraction begins.
 
+Project Adoption and Hotfix parking lot candidates are preserved in
+`roadmap/ghost_development_system_roadmap.md`,
+`roadmap/platform_first_migration_roadmap.md`, and
+`docs/rules/hotfix_policy_rules.md`. They do not create a new architecture
+layer and do not change the current OCR Vertical Slice priority.
+
 ## Update Policy
 
 Update architecture documents when responsibility boundaries, design philosophy,
@@ -337,6 +343,7 @@ Do not use this folder to approve Future Candidates by implication.
 - `docs/rules/ai_proactive_proposal_rules.md`
 - `docs/workflow/collaborative_decision_workflow.md`
 - `docs/rules/completion_checklist_rules.md`
+- `docs/rules/hotfix_policy_rules.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/workflow/repository_root_validation_workflow.md`
 - `docs/workflow/completion_checklist_workflow.md`

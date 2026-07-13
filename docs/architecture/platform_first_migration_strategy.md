@@ -53,6 +53,21 @@ Do not start with Favorite Engine, Series Engine, Canonical Name Engine, or
 Metadata Engine. These are valuable, but they contain more domain assumptions
 and should follow after the Review Center boundary is proven.
 
+## Platform Evolution Statement
+
+```text
+Platform Foundation Release is not the completion of the Platform.
+It is the first stable foundation for continued Platform Evolution.
+```
+
+Platform Foundation Release should be treated as a stable adoption base, not as
+the end of platform work. Future SDK, compatibility, adoption, capability, and
+Ghost-series expansion should mature through real project adoption evidence.
+
+The current implementation priority remains GameGhost OCR Vertical Slice. SDK
+Foundation and Project Adoption formalization follow after OCR evidence is
+reviewed.
+
 ## Migration Roadmap
 
 ```text
@@ -339,4 +354,3 @@ Proceed with `Q_GDS_Review_Center_Architecture_JP` next.
 
 The next Q should define architecture only. It should not implement runtime code
 or move GameGhost files.
-

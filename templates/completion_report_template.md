@@ -98,6 +98,15 @@ Safe Commit Set must match Changed Files, or explain every exclusion.
 - Push executed:
 - Push target:
 
+## Hotfix / Release Classification
+
+- Hotfix classification: GDS Hotfix / Project Fix / Normal Release / Not Applicable
+- GDS-owned asset affected:
+- Root cause belongs to GDS:
+- Fix Once, Recover Everywhere applies:
+- Hotfix tag recommended:
+- Adoption impact:
+
 ## Project Edit Status
 
 - Target Project edit status:

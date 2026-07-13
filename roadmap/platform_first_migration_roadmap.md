@@ -23,6 +23,38 @@ future Q files.
 | 8 | Q_GameGhost_Review_Center_Legacy_Cleanup_JP | Remove duplicates after validated migration | Yes, separate Q |
 | 9 | Q_GDS_Review_Center_Platform_Promotion_JP | Promote to Platform Standard if evidence supports it | No |
 
+## Current Priority Guard
+
+Current implementation focus remains:
+
+```text
+Complete GameGhost OCR Vertical Slice first.
+```
+
+After OCR:
+
+- extract SDK requirements from real migration evidence;
+- design SDK Foundation;
+- formalize Project Adoption Model;
+- issue Platform Foundation Release only after exit criteria are met.
+
+## Project Adoption Candidate
+
+Project Adoption is a post-OCR, post-SDK Foundation candidate.
+
+Guiding statement:
+
+```text
+Improve Once, Adopt Many.
+```
+
+Ghost Projects should adopt formal GDS releases instead of every GDS commit.
+Each project should eventually record the adopted GDS tag, commit hash,
+adoption date, migration note, compatibility status, and hotfix adoption state.
+
+This roadmap preserves the direction only. It does not finalize the manifest
+schema or implement adoption validation.
+
 ## Priority Summary
 
 P0:
@@ -54,3 +86,5 @@ approved.
 Do not promote Review Center to Platform Standard until at least one non-GameGhost
 compatibility review has been completed.
 
+Do not formalize Project Adoption before OCR evidence has been reviewed and SDK
+Foundation requirements have been extracted.

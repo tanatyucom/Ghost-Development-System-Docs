@@ -270,6 +270,34 @@ Start from:
 最初の移行候補は Review Center です。実装移動ではなく、まず
 `Q_GDS_Review_Center_Architecture_JP` で Platform / Adapter 境界を確定します。
 
+## Platform Adoption And Hotfix Candidates
+
+GDS4 discussions approved several Parking Lot candidates for repository
+preservation without changing the current OCR Vertical Slice priority.
+
+Current priority:
+
+```text
+Complete GameGhost OCR
+  -> Extract SDK requirements
+  -> Build SDK Foundation
+  -> Formalize Project Adoption
+  -> Release gds-v1.1-platform-foundation
+```
+
+Start from:
+
+- [`roadmap/ghost_development_system_roadmap.md`](roadmap/ghost_development_system_roadmap.md)
+- [`roadmap/platform_first_migration_roadmap.md`](roadmap/platform_first_migration_roadmap.md)
+- [`docs/rules/hotfix_policy_rules.md`](docs/rules/hotfix_policy_rules.md)
+- [`docs/rules/ai_collaboration_rules.md`](docs/rules/ai_collaboration_rules.md)
+
+Key preserved statements:
+
+- `Improve Once, Adopt Many.`
+- `Fix Once, Recover Everywhere.`
+- `Platform Foundation Release is not the completion of the Platform.`
+
 ## Review Center Architecture
 
 Review Center Architecture は、Ghost Platform 共通の Human Review Session

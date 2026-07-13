@@ -147,6 +147,8 @@ Required sections checked:
 - Commit Executed:
 - Commit Hash:
 - Commit Message:
+- Hotfix Classification: GDS Hotfix / Project Fix / Normal Release / Not Applicable
+- GDS Asset Root Cause:
 - Push Required:
 - Push Executed:
 - Push Target:

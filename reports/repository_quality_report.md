@@ -7,7 +7,7 @@
 
 ## 要約
 
-- 生成日時: `2026-07-13T04:13:43Z`
+- 生成日時: `2026-07-13T08:02:01Z`
 - Repository: `Ghost-Development-System-Docs`
 - Overall Repository Health: `Green`
 - 通過したチェック: `12`
@@ -18,7 +18,7 @@
 
 - Status: `PASS`
 
-### Registry Health: 20 registry items checked.
+### Registry Health: 21 registry items checked.
 
 - Missing Standard: none.
 - Broken Registry Link: none.
@@ -36,7 +36,7 @@
 
 - Status: `PASS`
 - Details:
-  - 417 Markdown files を UTF-8 として読み取れました。
+  - 422 Markdown files を UTF-8 として読み取れました。
 
 ### Mojibake Audit
 
@@ -54,7 +54,7 @@
 
 - Status: `PASS`
 - Details:
-  - OK: 417 Markdown files が index に登録されています。
+  - OK: 422 Markdown files が index に登録されています。
 
 ### GDS Health Validation
 
@@ -96,7 +96,7 @@
 
 - Status: `PASS`
 - Details:
-  - Registry Health: 20 registry items checked.
+  - Registry Health: 21 registry items checked.
   - Missing Standard: none.
   - Broken Registry Link: none.
   - Deprecated Review Needed: none.

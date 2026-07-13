@@ -94,6 +94,24 @@ Recommended format:
 - Current Owner。
 - Last Updated。
 
+## Parking Lot Candidate Handling
+
+Roadmap may preserve approved Parking Lot candidates when they should remain
+discoverable but must not interrupt the current implementation priority.
+
+Use this pattern:
+
+```text
+Preserve candidate
+  -> mark as not current implementation scope
+  -> keep current focus explicit
+  -> define future promotion condition
+```
+
+Current preserved examples include Project Adoption Model, Repository Contract /
+Project Manifest direction, Hotfix Policy, Platform Evolution statement, and
+Constraint -> Objective -> Workaround -> Execution collaboration pattern.
+
 ## Standard Management Axes
 
 Roadmap item は必要に応じて次の軸を持ちます。

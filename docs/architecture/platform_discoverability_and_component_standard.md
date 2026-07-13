@@ -231,6 +231,11 @@ Compatibility checklist:
 - Is project-specific logic isolated in an adapter, plugin, or profile?
 - Is the artifact schema stable enough for cross-project use?
 
+Platform Foundation Release is the first stable foundation for continued
+Platform Evolution. It is not the completion of the Platform. Future SDK,
+Compatibility, Adoption, Capability, and Ghost-series expansion should mature
+through real project adoption.
+
 ## Review Center Placement Policy
 
 Review Center is a platform-facing capability, not a GameGhost-only concept.
@@ -304,4 +309,3 @@ This standard is satisfied when:
 - Migration target criteria are defined.
 - Review Center placement policy is documented.
 - Examples and registry links exist.
-

@@ -1,8 +1,8 @@
 # AI Collaboration Rules
 
-**Version:** 2.5
+**Version:** 2.6
 
-**Last Updated:** 2026-07-11
+**Last Updated:** 2026-07-13
 
 ## Purpose
 
@@ -77,6 +77,32 @@ classification, use Collaborative Decision Workflow.
 
 The goal is not to prove that AI or the user is right. The goal is to find the
 most maintainable, reusable, and understandable decision together.
+
+### Constraint To Execution
+
+When AI knows a capability, tool, environment, permission, repository, or scope
+constraint, it should declare that constraint before proposing a solution.
+
+Use this pattern:
+
+```text
+Constraint
+  -> Objective
+  -> Workaround
+  -> Execution
+```
+
+Required behavior:
+
+1. Declare capability, tool, environment, or permission constraints as soon as
+   they are known.
+2. Identify the user's actual objective.
+3. Present practical workarounds that still satisfy the objective.
+4. Recommend the smallest effective path.
+5. Execute only after the path and approval boundary are clear.
+
+This prevents unrelated reasoning, false assumptions, avoidable rework, and
+solutions that optimize for the wrong limitation.
 
 ### Artifact First
 
@@ -178,6 +204,8 @@ AI must not:
   artifacts are needed for review.
 - repair broad or uncertain targets before audit, classification, evidence
   review, and required human approval.
+- skip known constraints and reason as if unavailable tools, permissions,
+  repositories, or runtime capabilities were available.
 
 ## Multi-AI Collaboration
 
@@ -301,6 +329,7 @@ rethink, so they can focus on what truly requires judgment.
 - `docs/rules/core_principles.md`
 - `docs/rules/artifact_first_rules.md`
 - `docs/rules/quality_rules.md`
+- `docs/rules/hotfix_policy_rules.md`
 - `templates/completion_report_template.md`
 - `templates/multi_ai_handoff_template.md`
 - `templates/multi_ai_handoff_checklist_template.md`

@@ -84,8 +84,10 @@ remaining issues, and recommended next work.
 - Overall Progress: Foundation complete; Platform standards, Review Center,
   Plugin Architecture, Product Documentation Hierarchy, and Documentation
   Synchronization are being standardized.
-- Next Milestone: Apply the hierarchy to Review Center V2 and GameGhost
-  production integration planning.
+- Current Focus: Complete GameGhost OCR Vertical Slice first.
+- Next Milestone: After OCR, extract SDK requirements, design SDK Foundation,
+  formalize Project Adoption, and issue Platform Foundation Release only after
+  exit criteria are met.
 - Known Blockers: Runtime implementation requires separate project Qs and
   Human Approval.
 - Current Owner: Ghost Development System Docs.
@@ -172,6 +174,9 @@ Candidate scope:
 - Plugin Architecture.
 - Explicit Plugin Registry.
 - Repository Context Validation Plugin proof.
+- OCR Vertical Slice as first Platform Migration proof.
+- SDK Foundation requirements extraction after OCR.
+- Project Adoption Model candidate.
 
 Exit direction:
 
@@ -185,6 +190,79 @@ Exit direction:
 - Plugin Architecture は標準化済みの設計境界として扱う。ただし runtime
   implementation、自動 discovery、launcher integration は別 Q と Human Approval Gate
   が必要。
+
+## Parking Lot Candidates Preserved
+
+Status: approved for repository preservation; not current implementation scope.
+
+Current priority remains:
+
+```text
+Complete GameGhost OCR
+  -> Extract SDK requirements
+  -> Build SDK Foundation
+  -> Formalize Project Adoption
+  -> Release gds-v1.1-platform-foundation
+```
+
+### Project Adoption Model Candidate
+
+Guiding statement:
+
+```text
+Improve Once, Adopt Many.
+```
+
+Direction:
+
+- GDS continues independent improvement.
+- Ghost Projects adopt formal GDS releases instead of every commit.
+- Each project records the adopted GDS tag and commit hash.
+- Improvement and adoption are separate decisions.
+- Gray Ghost becomes the first formal adoption project after SDK Foundation.
+- OCR remains the first Platform Migration Vertical Slice.
+
+This is preserved as a roadmap candidate. It does not implement adoption
+automation, release tagging, or project migration.
+
+### Repository Contract / Project Manifest Candidate
+
+Minimum future adoption assets:
+
+- Project Manifest.
+- adopted GDS version.
+- adopted commit hash.
+- adoption date.
+- migration note.
+- compatibility status.
+- hotfix adoption state.
+
+Schema finalization is future work after SDK Foundation and Project Adoption Q.
+
+### Platform Evolution Statement
+
+```text
+Platform Foundation Release is not the completion of the Platform.
+It is the first stable foundation for continued Platform Evolution.
+```
+
+今後の SDK、Compatibility、Adoption、Capability、Ghost-series expansion は、
+実Project adoption から得た evidence によって成熟させます。
+
+### Future Candidates
+
+Preserved, not implemented:
+
+- Compatibility Policy.
+- Support Policy.
+- Deprecation Policy.
+- Platform Capability Registry.
+- Compatibility Matrix.
+- Project Status Dashboard.
+- automatic Adoption validation.
+- automatic Hotfix distribution.
+- LTS lifecycle.
+- SDK GUI / Command Center integration.
 
 ## Plugin Architecture Roadmap Direction
 

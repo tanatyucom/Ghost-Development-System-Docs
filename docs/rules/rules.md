@@ -46,6 +46,7 @@ Rules follow these principles:
 - AI Proactive Proposal.
 - Completion Checklist.
 - Completion Report Standard.
+- Hotfix Policy.
 - Beginner & Future Self Test.
 - Research Mission.
 - Conversation Insight Capture.
@@ -88,6 +89,7 @@ own files.
 - `ai_proactive_proposal_rules.md`
 - `completion_checklist_rules.md`
 - `completion_report_rules.md`
+- `hotfix_policy_rules.md`
 - `beginner_future_self_test_rules.md`
 - `research_mission_rules.md`
 - `conversation_insight_capture_rules.md`

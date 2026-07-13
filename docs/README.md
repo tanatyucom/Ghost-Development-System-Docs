@@ -228,6 +228,40 @@ Review question:
 Can this project or artifact be safely resumed by someone who remembers nothing?
 ```
 
+## Platform Adoption And Hotfix Candidates Index
+
+Parking Lot candidates approved during GDS4 discussions are preserved without
+changing the current OCR Vertical Slice priority.
+
+Reference points:
+
+- Master Roadmap: `roadmap/ghost_development_system_roadmap.md`
+- Platform First Migration Roadmap: `roadmap/platform_first_migration_roadmap.md`
+- Platform First Migration Strategy:
+  `docs/architecture/platform_first_migration_strategy.md`
+- Platform Discoverability Standard:
+  `docs/architecture/platform_discoverability_and_component_standard.md`
+- Hotfix Policy: `docs/rules/hotfix_policy_rules.md`
+- AI Collaboration Rules: `docs/rules/ai_collaboration_rules.md`
+
+Current priority:
+
+```text
+Complete GameGhost OCR
+  -> Extract SDK requirements
+  -> Build SDK Foundation
+  -> Formalize Project Adoption
+  -> Release gds-v1.1-platform-foundation
+```
+
+Preserved candidates:
+
+- Project Adoption Model: `Improve Once, Adopt Many.`
+- Repository Contract / Project Manifest direction.
+- Hotfix Policy: `Fix Once, Recover Everywhere.`
+- Platform Evolution statement.
+- Constraint -> Objective -> Workaround -> Execution collaboration pattern.
+
 ## Q File Template And Naming Standard Index
 
 Q files are durable request artifacts. They should define Q ID, repository
