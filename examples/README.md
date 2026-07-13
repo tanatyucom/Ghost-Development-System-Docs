@@ -77,6 +77,9 @@ reports, and documentation requests can start from a clear reference.
 - `platform_discoverability_and_component_examples.md`: good and bad examples
   for Platform folder placement, component classification, naming, plugin
   discoverability, Review Center split, and migration candidate decisions.
+- `review_center_examples.md`: good and bad examples for Review Center
+  platform / adapter split, explicit approval state, resume behavior, and
+  avoiding silent auto approval.
 - `persistent_collaboration_examples.md`: good and bad examples for command
   presentation, review conclusion, Download First, Repository First, Platform
   First, AI collaboration, and completion report priority.
@@ -193,6 +196,9 @@ what a complete, well-scoped document should feel like.
 - Use `platform_discoverability_and_component_examples.md` when deciding whether
   a component belongs under Platform, a project adapter, shared library, plugin,
   engine, service, schema, review, import, export, or report folder.
+- Use `review_center_examples.md` when designing a human review session,
+  adapter boundary, explicit approval state, resume behavior, correction
+  history, or gate-ready review export.
 - Use `persistent_collaboration_examples.md` when applying persistent
   collaboration behavior across ChatGPT, Codex, Claude, Gemini, human review,
   Q files, completion reports, command presentation, and review conclusions.

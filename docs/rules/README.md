@@ -20,6 +20,9 @@ for assigning stable Concept IDs and keeping the Concept Index traceable.
 Platform Component Rules define component classification, naming,
 Discoverability 3 Second Rule, shared library limits, migration criteria, and
 Review Center placement policy.
+Review Center Rules define Human Review Session Manager behavior, explicit
+approval, persistence, plugin registration, gate export, and legacy migration
+guards.
 Persistent Collaboration, Platform First, Repository First, Download First,
 Rule Priority, Command Rule, Review Rule, Completion Report First, AI
 Cognitive Load Reduction, and Platform Philosophy are defined in
@@ -92,6 +95,10 @@ promoted.
 - `platform_component_rules.md`: component classification, folder, naming,
   shared library, migration, legacy, Review Center, and Human Approval rules for
   shared Ghost Platform components.
+- `review_center_rules.md`: Human Review Session Manager rules for Review
+  Center, including platform / domain boundary, GUI name, persistence, missing
+  artifacts, correction history, plugin registration, gate export, and legacy
+  behavior.
 - `pip_case_knowledge_base_rules.md`: standard locations, metadata, tags,
   case sections, evidence linking, PIP Master Document / Title List handling,
   concept lifecycle, and promotion rules for PIP cases.
@@ -148,14 +155,15 @@ promoted.
 22. `debug_escalation_ladder_rules.md`
 23. `migration_first_rules.md`
 24. `platform_component_rules.md`
-25. `pip_case_knowledge_base_rules.md`
-26. `concept_id_naming_rules.md`
-27. `roadmap2_knowledge_salvage_rules.md`
-28. `workflow_rules.md`
-29. `quality_rules.md`
-30. `ai_collaboration_rules.md`
-31. `git_rules.md`
-32. `script_architecture_rules.md`
+25. `review_center_rules.md`
+26. `pip_case_knowledge_base_rules.md`
+27. `concept_id_naming_rules.md`
+28. `roadmap2_knowledge_salvage_rules.md`
+29. `workflow_rules.md`
+30. `quality_rules.md`
+31. `ai_collaboration_rules.md`
+32. `git_rules.md`
+33. `script_architecture_rules.md`
 
 ## Update Policy
 

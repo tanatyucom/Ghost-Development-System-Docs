@@ -62,6 +62,9 @@ gate.
 - `commit_safety_checklist.md`: dirty workspace and commit safety workflow.
 - `debug_artifact_review_workflow.md`: Debug Mode, intermediate artifact
   review, expected state check, AI review handoff, and Fix Q draft workflow.
+- `review_center_workflow.md`: workflow from source artifacts through review
+  plugin / adapter, Review Center session, human decision, save / resume,
+  result export, domain gate adapter, gate readiness, and completion report.
 - `debug_escalation_ladder.md`: standard escalation order from phenomenon
   check to algorithm change.
 - `first_broken_step_methodology.md`: reusable debugging methodology for

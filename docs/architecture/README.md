@@ -34,6 +34,9 @@ runtime behavior.
   GameGhost to Ghost Platform, including priority matrix, platform / adapter
   boundary, legacy policy, bootstrap order, AnimeGhost check, and future Ghost
   compatibility.
+- `review_center_architecture.md`: Review Center architecture for shared human
+  review session management, artifact presentation, decision capture,
+  persistence, result export, gate readiness, and plugin / adapter boundary.
 - `responsibility_boundary.md`: ownership boundaries for DevelopmentSystem,
   Startup Checklist, Repository Root Validation, AI Proactive Proposal,
   Collaborative Decision, Completion Checklist, Output Layer, Migration First
@@ -125,6 +128,10 @@ only describe boundaries and principles that are accepted enough to guide work.
   GameGhost-derived capabilities toward Platform. It defines migration priority,
   platform / adapter split, legacy cleanup timing, bootstrap order, and
   cross-Ghost validation before runtime movement.
+- Review Center Architecture owns the shared Human Review Session Manager
+  boundary. It displays artifacts, captures human decisions, manages progress,
+  persists review state, exports results, and leaves domain correctness to
+  plugins, adapters, and human reviewers.
 - Launcher owns the user entry point.
 
 ## Database Philosophy Summary
@@ -189,6 +196,7 @@ Detailed specification:
 - `docs/architecture/plugin_architecture_standard.md`
 - `docs/architecture/platform_discoverability_and_component_standard.md`
 - `docs/architecture/platform_first_migration_strategy.md`
+- `docs/architecture/review_center_architecture.md`
 - `templates/structured_artifact_metadata_template.md`
 
 AI Proactive Proposal supports human-led collaboration by making concerns and
@@ -282,6 +290,8 @@ by making future component folders and names reviewable before runtime
 migration begins.
 Platform First Migration Strategy applies that component model to the first
 migration sequence and makes Review Center the P0 candidate.
+Review Center Architecture defines the P0 candidate boundary before any
+GameGhost runtime implementation or Steam OCR adapter extraction begins.
 
 ## Update Policy
 
@@ -298,6 +308,7 @@ Do not use this folder to approve Future Candidates by implication.
 - `docs/architecture/platform_standard_registry.md`
 - `docs/architecture/platform_discoverability_and_component_standard.md`
 - `docs/architecture/platform_first_migration_strategy.md`
+- `docs/architecture/review_center_architecture.md`
 - `docs/architecture/gameghost_platform_migration_architecture.md`
 - `docs/architecture/gameghost_workspace_repository_layout.md`
 - `docs/ai_repository_index.md`
