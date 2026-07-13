@@ -75,6 +75,11 @@
 - Beginner & Future Self Test が必要な artifact で実施されている。
 - 初心者、新しい AI session、未来の担当者が purpose、project / domain、
   current position、evidence、next action、authority を追える。
+- Context Recovery Principle の観点で、何も覚えていない人や AI が安全に
+  resume できる。
+- current position、completion report、decision record、next action、
+  Human Approval boundary、known blocker、last verified state など、必要な
+  recovery aid がある。
 - hidden chat context に依存していない。
 - BFS Test のために authoritative source を過剰複製していない。
 - Folder README の構成が必要に応じて `Purpose / Contains / Does NOT Contain /

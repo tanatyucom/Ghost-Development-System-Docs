@@ -34,6 +34,8 @@
 - Beginner & Future Self Test result:
 - BFS blocking issues:
 - BFS smallest recommended improvement:
+- Context Recovery Principle reviewed:
+- Missing recovery aid:
 - Future Candidates separated from approved scope:
 - Pending Insights reviewed:
 - Pending Insight Codex execution restriction respected:
