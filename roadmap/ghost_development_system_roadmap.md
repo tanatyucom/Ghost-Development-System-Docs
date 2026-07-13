@@ -52,13 +52,16 @@ GDS Roadmap work follows Product Documentation Hierarchy v2.
 ```text
 Product Blueprint
   -> Master Roadmap
+     -> Current Position
   -> Domain Roadmap
   -> Execution Roadmap
   -> Decision Record
   -> Q Documents
+  -> Completion Report
 ```
 
 This roadmap is the Master Roadmap for GDS platform evolution.
+Current Position belongs in this Master Roadmap layer, not Product Blueprint.
 
 Domain-specific plans, such as Review Platform, Plugin Architecture, Platform
 Migration, Command Center, Steam, Nintendo, or future Ghost project adapters,
@@ -67,6 +70,26 @@ they become large enough.
 
 Important architecture or strategy choices should be captured as Decision
 Records before implementation Qs.
+
+Completion Reports are the official completion layer after Q Documents. They
+feed future Improvement Records and Promotion decisions with implementation
+results, verification, evidence, lessons learned, promotion candidates,
+remaining issues, and recommended next work.
+
+## Current Position
+
+- Current Mission: Use GDS Foundation to support Platform Integration and
+  cross-project review / knowledge operations.
+- Current Phase: Platform Integration Era.
+- Overall Progress: Foundation complete; Platform standards, Review Center,
+  Plugin Architecture, Product Documentation Hierarchy, and Documentation
+  Synchronization are being standardized.
+- Next Milestone: Apply the hierarchy to Review Center V2 and GameGhost
+  production integration planning.
+- Known Blockers: Runtime implementation requires separate project Qs and
+  Human Approval.
+- Current Owner: Ghost Development System Docs.
+- Last Updated: 2026-07-13.
 
 ## Roadmap Ver2: Platform Era
 

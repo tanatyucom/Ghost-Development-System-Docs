@@ -162,7 +162,8 @@ Start from:
 ## Product Documentation Hierarchy v2
 
 Product Documentation Hierarchy v2 は、Vision、長期計画、domain計画、実行計画、
-設計判断、Q を分離し、AI / human のコンテキストドリフトを減らすための文書階層です。
+設計判断、Q、Completion Report を分離し、AI / human のコンテキストドリフトを
+減らすための文書階層です。
 
 Start from:
 
@@ -170,16 +171,19 @@ Start from:
 - [`roadmap/README.md`](roadmap/README.md)
 - [`templates/roadmap_template.md`](templates/roadmap_template.md)
 - [`templates/decision_template.md`](templates/decision_template.md)
+- [`templates/completion_report_template.md`](templates/completion_report_template.md)
 
 標準階層:
 
 ```text
 Product Blueprint
   -> Master Roadmap
+     -> Current Position
   -> Domain Roadmap
   -> Execution Roadmap
   -> Decision Record
   -> Q Documents
+  -> Completion Report
 ```
 
 ## Plugin Architecture

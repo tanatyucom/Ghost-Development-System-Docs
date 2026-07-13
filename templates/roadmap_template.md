@@ -46,6 +46,19 @@ Use when hierarchy layer is Product Blueprint.
 - Scope Out:
 - Success Definition:
 
+## Current Position
+
+Use this section in Master Roadmap. Do not place Current Position in Product
+Blueprint.
+
+- Current Mission:
+- Current Phase:
+- Overall Progress:
+- Next Milestone:
+- Known Blockers:
+- Current Owner:
+- Last Updated:
+
 ## Responsibility Separation
 
 Ghost Development System が持つ責務と、各 project が持つ責務を分けて記載する。
@@ -125,3 +138,13 @@ requirements require follow-up.
 ## Related Specification
 
 ## Related Decision Record
+
+## Related Completion Report
+
+- Implementation Results:
+- Verification:
+- Evidence:
+- Lessons Learned:
+- Promotion Candidates:
+- Remaining Issues:
+- Recommended Next Work:

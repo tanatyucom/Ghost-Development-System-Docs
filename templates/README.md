@@ -8,8 +8,8 @@ Templates help humans and AI create consistent Q files, specifications, reviews,
 reports, roadmap items, and release documents.
 
 Roadmap and decision templates follow Product Documentation Hierarchy v2 so
-Vision, Master Roadmap, Domain Roadmap, Execution Roadmap, Decision Record, and
-Q Documents stay separated.
+Vision, Master Roadmap, Domain Roadmap, Execution Roadmap, Decision Record,
+Q Documents, and Completion Reports stay separated.
 
 Templates also define when reusable outputs should be generated as file
 artifacts instead of being delivered only in chat.
@@ -174,7 +174,7 @@ Promote improvements into templates when they help future Q files become:
 - better at packaging current project state for AI, human review, and future
   Command Center use without replacing repository source-of-truth documents.
 - better at separating Blueprint, Master Roadmap, Domain Roadmap, Execution
-  Roadmap, Decision Record, and Q Documents.
+  Roadmap, Decision Record, Q Documents, and Completion Reports.
 
 ## Improvement Review
 

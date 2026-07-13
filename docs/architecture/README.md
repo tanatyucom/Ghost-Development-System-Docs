@@ -50,7 +50,8 @@ runtime behavior.
   Validation, and Architecture items.
 - `product_document_hierarchy_v2.md`: Product Documentation Hierarchy for
   separating Product Blueprint, Master Roadmap, Domain Roadmap, Execution
-  Roadmap, Decision Record, and Q Documents to reduce context drift.
+  Roadmap, Decision Record, Q Documents, and Completion Report to reduce
+  context drift.
 - `gameghost_platform_migration_architecture.md`: GameGhostをGDS Platformの
   最初の実利用Projectとして扱うためのPlatform migration architecture review。
 - `gameghost_workspace_repository_layout.md`: `C:\GrayGhostArchive` workspace
@@ -74,7 +75,8 @@ may propose a future architecture change, but the architecture document should
 only describe boundaries and principles that are accepted enough to guide work.
 
 Product Documentation Hierarchy v2 defines how Blueprint、Master Roadmap、
-Domain Roadmap、Execution Roadmap、Decision Record、Q Documents are separated.
+Current Position、Domain Roadmap、Execution Roadmap、Decision Record、
+Q Documents、Completion Report are separated.
 Use it before adding large roadmap or decision documents.
 
 ## Responsibility Boundary Summary

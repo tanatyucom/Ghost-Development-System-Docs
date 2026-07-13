@@ -1582,8 +1582,9 @@ Product Documentation Hierarchy v2:
 
 - `docs/architecture/product_document_hierarchy_v2.md`
 
-この文書は、Product Blueprint、Master Roadmap、Domain Roadmap、Execution Roadmap、
-Decision Record、Q Documents の責務分離を定義します。
+この文書は、Product Blueprint、Master Roadmap、Current Position、Domain Roadmap、
+Execution Roadmap、Decision Record、Q Documents、Completion Report の責務分離を
+定義します。
 
 ### Roadmap を確認したい
 
@@ -1594,7 +1595,7 @@ Ghost Development System 自身の進化は
 
 Roadmap を追加・整理する場合は、先に
 `docs/architecture/product_document_hierarchy_v2.md` を確認し、Blueprint、
-Master、Domain、Execution、Decision、Q のどの層かを決めます。
+Master、Domain、Execution、Decision、Q、Completion Report のどの層かを決めます。
 
 現在の GDS Roadmap は Ver2 Platform Era です。Foundation Era は completed として
 扱い、Platform Integration、Automation Server、Ghost Ecosystem、Continuous

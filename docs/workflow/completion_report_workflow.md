@@ -8,6 +8,9 @@
 
 This workflow explains how to create a Completion Report v2 after a Q, review, documentation update, or implementation task.
 
+In Product Documentation Hierarchy v2, Completion Report is the official layer
+after Q Documents. It feeds future Improvement Records and Promotion decisions.
+
 ## Standard Flow
 
 ```text
@@ -15,11 +18,13 @@ Source Q
   -> Implementation / Documentation Update
   -> Changed Files Review
   -> Verification
+  -> Evidence Review
   -> Safe Commit Set
   -> Project Edit Status
   -> Improvement Review
   -> Lessons Learned
   -> Reusable Assets Created
+  -> Promotion Candidates
   -> Pending Insight Review, when applicable
   -> Remaining Issues
   -> Recommended Next Q
@@ -65,6 +70,9 @@ git diff --check
 ```
 
 Record not-run checks with reasons.
+
+Also record evidence that should feed future Improvement Records or Promotion
+decisions.
 
 ## Step 4: Identify Safe Commit Set
 

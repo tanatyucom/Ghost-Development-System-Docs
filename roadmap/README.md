@@ -15,10 +15,12 @@ Roadmap は Product Documentation Hierarchy v2 の中で、Blueprint と Q の�
 ```text
 Product Blueprint
   -> Master Roadmap
+     -> Current Position
   -> Domain Roadmap
   -> Execution Roadmap
   -> Decision Record
   -> Q Documents
+  -> Completion Report
 ```
 
 Hierarchy details:
@@ -66,10 +68,31 @@ Roadmap work は次の層に分けます。
 |---|---|---|
 | Product Blueprint | Vision、Mission、Product Identity、Principles、Scope、Success Definition | Architecture or product blueprint document |
 | Master Roadmap | Long-term phases、Current Position、Overall Progress | `ghost_development_system_roadmap.md` |
+| Current Position | Current Mission、Current Phase、Overall Progress、Next Milestone、Known Blockers、Current Owner、Last Updated | Master Roadmap section |
 | Domain Roadmap | Steam、Nintendo、Core Engines、Review Platform、Platform などdomain別計画 | domain-specific roadmap |
 | Execution Roadmap | Feature streams、Milestones、Exit Criteria | Q series roadmap or execution plan |
 | Decision Record | Decision、Alternatives、Rationale、Evidence、Expected Impact | `templates/decision_template.md` based record |
 | Q Documents | Implementation / research / documentation specification | `docs/requests/.../request.md` |
+| Completion Report | Implementation Results、Verification、Evidence、Lessons Learned、Promotion Candidates、Remaining Issues、Recommended Next Work | `templates/completion_report_template.md` based artifact |
+
+Current Position belongs to the Master Roadmap, not Product Blueprint.
+Blueprint remains stable and describes product identity and scope.
+Master Roadmap owns the project's current operational state.
+
+## Current Position Standard
+
+Master Roadmap should include Current Position when it helps AI / human restore
+context quickly.
+
+Recommended format:
+
+- Current Mission。
+- Current Phase。
+- Overall Progress。
+- Next Milestone。
+- Known Blockers。
+- Current Owner。
+- Last Updated。
 
 ## Standard Management Axes
 

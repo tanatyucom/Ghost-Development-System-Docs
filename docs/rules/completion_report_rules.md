@@ -10,6 +10,11 @@ Completion Report Rules define the required structure and quality bar for comple
 
 A Completion Report is the durable record that connects a Source Q File to changed files, verification, Safe Commit Set, project edit boundaries, reusable learning, and the recommended next Q.
 
+In Product Documentation Hierarchy v2, Completion Report is the official
+implementation completion layer after Q Documents. It records implementation
+results, verification, evidence, lessons learned, promotion candidates,
+remaining issues, and recommended next work.
+
 ## Core Rule
 
 Every substantial Q should produce a Completion Report artifact when the work is completed, reviewed, or handed off.
@@ -23,19 +28,22 @@ Completion Report v2 requires these sections:
 1. Identity
 2. Changed Files
 3. Summary
-4. Verification
-5. Safe Commit Set
-6. Commit / Push Status
-7. Project Edit Status
-8. Improvement Review
-9. Lessons Learned
-10. Reusable Assets Created
-11. Remaining Issues
-12. Recommended Improvements
-13. Future Candidates
-14. Recommended Next Q
-15. Suggested Commit Message
-16. Pending Insight Review, when Pending Insight was created, updated, reviewed, or used as Q source
+4. Implementation Results
+5. Verification
+6. Evidence, when distinct from verification output
+7. Safe Commit Set
+8. Commit / Push Status
+9. Project Edit Status
+10. Improvement Review
+11. Lessons Learned
+12. Reusable Assets Created
+13. Promotion Candidates, when applicable
+14. Remaining Issues
+15. Recommended Improvements
+16. Future Candidates
+17. Recommended Next Q
+18. Suggested Commit Message
+19. Pending Insight Review, when Pending Insight was created, updated, reviewed, or used as Q source
 
 A section may be marked `Not Applicable`, but it should not be silently omitted.
 
