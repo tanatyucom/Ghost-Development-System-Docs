@@ -159,6 +159,29 @@ Start from:
 - [`docs/knowledge/inventory/gameghost_tool_py_responsibility_inventory.md`](docs/knowledge/inventory/gameghost_tool_py_responsibility_inventory.md)
 - [`roadmap/gameghost_platform_migration_plan.md`](roadmap/gameghost_platform_migration_plan.md)
 
+## Product Documentation Hierarchy v2
+
+Product Documentation Hierarchy v2 は、Vision、長期計画、domain計画、実行計画、
+設計判断、Q を分離し、AI / human のコンテキストドリフトを減らすための文書階層です。
+
+Start from:
+
+- [`docs/architecture/product_document_hierarchy_v2.md`](docs/architecture/product_document_hierarchy_v2.md)
+- [`roadmap/README.md`](roadmap/README.md)
+- [`templates/roadmap_template.md`](templates/roadmap_template.md)
+- [`templates/decision_template.md`](templates/decision_template.md)
+
+標準階層:
+
+```text
+Product Blueprint
+  -> Master Roadmap
+  -> Domain Roadmap
+  -> Execution Roadmap
+  -> Decision Record
+  -> Q Documents
+```
+
 ## Plugin Architecture
 
 Plugin Architecture Standard は、GDS Platform と将来の Ghost Project が共有機能を

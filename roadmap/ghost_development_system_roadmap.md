@@ -45,6 +45,29 @@ GameGhost など各プロジェクトの Roadmap が扱うもの:
 Ghost Development System は各プロジェクトを支援しますが、各プロジェクト固有の
 runtime 責務を所有しません。
 
+## Product Documentation Hierarchy
+
+GDS Roadmap work follows Product Documentation Hierarchy v2.
+
+```text
+Product Blueprint
+  -> Master Roadmap
+  -> Domain Roadmap
+  -> Execution Roadmap
+  -> Decision Record
+  -> Q Documents
+```
+
+This roadmap is the Master Roadmap for GDS platform evolution.
+
+Domain-specific plans, such as Review Platform, Plugin Architecture, Platform
+Migration, Command Center, Steam, Nintendo, or future Ghost project adapters,
+should be separated into Domain Roadmap or Execution Roadmap documents when
+they become large enough.
+
+Important architecture or strategy choices should be captured as Decision
+Records before implementation Qs.
+
 ## Roadmap Ver2: Platform Era
 
 Status: active.

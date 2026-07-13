@@ -1,33 +1,100 @@
 # Decision Template
 
-Decision
+## Identity
 
-Reason
+- Decision ID:
+- Title:
+- Status:
+- Date:
+- Owner:
+- Target Project:
+- Related Product Hierarchy Layer:
 
-Alternatives
+## Decision
 
-Impact
+What was decided:
 
-Affected Documents
+## Alternatives Considered
 
-Rollback
+- Alternative:
+- Why not selected:
 
-Date
+## Rationale
 
-Status
+Why this decision was selected:
 
-Collaborative Decision
+## Evidence
 
-AI Proposal
+- Source:
+- Evidence summary:
+- Confidence:
+- Limitations:
 
-User Proposal
+## Expected Impact
 
-Discussion Summary
+- Architecture:
+- Roadmap:
+- Workflow:
+- Template:
+- Runtime:
+- Cross Project:
 
-Evidence Reviewed
+## Related Q
 
-Knowledge Classification
+- Source Q:
+- Follow-up Q:
 
-Documentation Target
+## Promotion Target
 
-Follow-up Q
+- Rule:
+- Workflow:
+- Architecture:
+- Roadmap:
+- Platform Standard:
+- Future Candidate:
+
+## Management Axes
+
+- Phase:
+- Priority:
+- Dependency:
+- Status:
+- Ownership:
+- Promotion:
+- Trigger:
+- Exit Criteria:
+- Risk:
+- Success Metric:
+- Why:
+- Evidence:
+
+## Review
+
+- Review result:
+- Human approval:
+- Remaining questions:
+
+## Affected Documents
+
+- Documents to update:
+- Documents intentionally not updated:
+
+## Rollback / Reconsideration
+
+- Rollback condition:
+- Reconsider when:
+
+## Collaborative Decision
+
+- AI Proposal:
+- User Proposal:
+- Discussion Summary:
+
+## Knowledge Classification
+
+- Classification:
+- Documentation Target:
+
+## Follow-up
+
+- Follow-up Q:

@@ -48,6 +48,9 @@ runtime behavior.
 - `platform_standard_registry.md`: registry of GDS Platform standards and
   standard candidates for shared Rule, Workflow, Template, Component, Report,
   Validation, and Architecture items.
+- `product_document_hierarchy_v2.md`: Product Documentation Hierarchy for
+  separating Product Blueprint, Master Roadmap, Domain Roadmap, Execution
+  Roadmap, Decision Record, and Q Documents to reduce context drift.
 - `gameghost_platform_migration_architecture.md`: GameGhostをGDS Platformの
   最初の実利用Projectとして扱うためのPlatform migration architecture review。
 - `gameghost_workspace_repository_layout.md`: `C:\GrayGhostArchive` workspace
@@ -69,6 +72,10 @@ Roadmap records long-term direction and future candidates.
 Architecture explains the stable concepts behind that direction. A roadmap item
 may propose a future architecture change, but the architecture document should
 only describe boundaries and principles that are accepted enough to guide work.
+
+Product Documentation Hierarchy v2 defines how Blueprint、Master Roadmap、
+Domain Roadmap、Execution Roadmap、Decision Record、Q Documents are separated.
+Use it before adding large roadmap or decision documents.
 
 ## Responsibility Boundary Summary
 

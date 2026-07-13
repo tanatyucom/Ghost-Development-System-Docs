@@ -1578,12 +1578,23 @@ Evidence Feedback Loop の流れを説明します。
 Architecture は、DevelopmentSystem、Gray Ghost Core、Archive Modules、
 Launcher の責任境界と設計思想を説明します。
 
+Product Documentation Hierarchy v2:
+
+- `docs/architecture/product_document_hierarchy_v2.md`
+
+この文書は、Product Blueprint、Master Roadmap、Domain Roadmap、Execution Roadmap、
+Decision Record、Q Documents の責務分離を定義します。
+
 ### Roadmap を確認したい
 
 `docs/roadmap/` を使います。
 
 Ghost Development System 自身の進化は
 `roadmap/ghost_development_system_roadmap.md` を確認します。
+
+Roadmap を追加・整理する場合は、先に
+`docs/architecture/product_document_hierarchy_v2.md` を確認し、Blueprint、
+Master、Domain、Execution、Decision、Q のどの層かを決めます。
 
 現在の GDS Roadmap は Ver2 Platform Era です。Foundation Era は completed として
 扱い、Platform Integration、Automation Server、Ghost Ecosystem、Continuous
@@ -1687,6 +1698,7 @@ Reviewers は通常、次の順に確認します:
 
 Roadmap work は通常、次の順に確認します:
 
+- `docs/architecture/product_document_hierarchy_v2.md`
 - `roadmap/ghost_development_system_roadmap.md`
 - `roadmap/roadmap.md`
 - `templates/roadmap_template.md`
