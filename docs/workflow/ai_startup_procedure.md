@@ -72,6 +72,9 @@ Minimum targets:
 - Chat移動後のContext復元。
 - 現在作業と関連するKnowledgeの再発見。
 
+これは Context Recovery Principle の実行入口です。AI が過去の会話を覚えている
+ことではなく、repository source から現在地へ復帰できることを前提にします。
+
 これは自動編集、自動Promotion、自動Q生成、自動実装、自動Commitの権限を
 与えません。
 

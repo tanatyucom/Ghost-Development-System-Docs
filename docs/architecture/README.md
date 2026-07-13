@@ -84,6 +84,10 @@ Beginner & Future Self Test confirms whether those documents remain
 understandable to beginners, new AI sessions, returning project owners, and
 future selves without hidden chat context.
 
+Context Recovery Principle explains the underlying design objective: repository
+and documentation structures should optimize for safe recovery from forgotten
+or missing context, not for perfect memory retention.
+
 ## Responsibility Boundary Summary
 
 - DevelopmentSystem owns development infrastructure.

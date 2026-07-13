@@ -21,6 +21,7 @@ Release 判断を置き換えません。完了時にそれらを一貫して確
 - Encoding Regression Validation Passed?
 - Review Completed.
 - Beginner & Future Self Test result when applicable.
+- Context Recovery Principle reviewed when safe resumption is relevant.
 - Completion Report Completed.
 - Completion Report v2 required sections checked.
 - Improvement Review Completed.
@@ -69,6 +70,9 @@ Release 判断を置き換えません。完了時にそれらを一貫して確
   handoff、README / index で BFS Test が必要か。
 - BFS Test が必要な場合、hidden chat context、current position、evidence、
   next action、authority が確認されているか。
+- Context Recovery Principle の観点で、何も覚えていない人や新しい AI session が
+  safe resume できるか。
+- safe resume できない場合、最小の recovery aid が記録されているか。
 
 ### Completion Report Check
 
@@ -170,6 +174,8 @@ Completion Checklist:
 - Beginner & Future Self Test Required:
 - Beginner & Future Self Test Result:
 - BFS Blocking Issues:
+- Context Recovery Principle Reviewed:
+- Missing Recovery Aid:
 - AI Repository Index Update Required:
 - AI Repository Index Updated:
 - AI Repository Index Regenerated:

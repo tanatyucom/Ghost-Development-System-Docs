@@ -47,6 +47,9 @@ reports, and documentation requests can start from a clear reference.
   FAIL, and duplication-guard examples for checking whether documentation is
   understandable to beginners, new AI sessions, returning project owners, and
   future selves.
+- `context_recovery_examples.md`: examples for future self recovery, incident
+  recovery, and new AI session recovery without relying on memory or chat
+  history.
 - `q_file_artifact_workflow.md`: good and bad examples for Task Artifact
   Workspaces, Q files, completion reports, notes, attachments, and related
   commit information.
@@ -179,6 +182,9 @@ what a complete, well-scoped document should feel like.
 - Use `beginner_future_self_test_examples.md` when reviewing whether a
   managed artifact can be understood without hidden chat context and without
   excessive duplication.
+- Use `context_recovery_examples.md` when checking whether a project,
+  artifact, server procedure, or AI handoff can be safely resumed by someone
+  who remembers nothing.
 - Use `q_file_artifact_workflow.md` when saving a Q file in a
   `docs/requests/<project>/<status>/` workspace, naming it, linking it
   to a completion report, storing notes or attachments, moving status, or

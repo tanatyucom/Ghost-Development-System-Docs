@@ -41,6 +41,28 @@ results, and explicit user intent.
 
 Avoid hidden assumptions.
 
+## Context Recovery Principle
+
+Repository and documentation structures should optimize for context recovery,
+not memory retention.
+
+GDS assumes that a human, future self, new contributor, or new AI session may
+return after months or years with little or no retained context. Documentation
+therefore should make the current position, prior decisions, evidence,
+remaining work, next action, authority, Human Approval boundary, and forbidden
+automatic changes recoverable from repository sources rather than chat memory.
+
+The practical review question is:
+
+```text
+Can this project or artifact be safely resumed by someone who remembers nothing?
+```
+
+This principle explains why Startup Procedure, Product Documentation Hierarchy,
+Current Position, Decision Record, Q Documents, Completion Report, Multi-AI
+Handoff, and Beginner & Future Self Test exist as one connected recovery
+system.
+
 ## Evidence First With Metrics
 
 Evidence First should grow from "there is evidence" to "the evidence can be

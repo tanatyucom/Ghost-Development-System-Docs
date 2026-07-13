@@ -1,8 +1,8 @@
 # Core Principles
 
-**Version:** 2.4
+**Version:** 2.5
 
-**Last Updated:** 2026-07-11
+**Last Updated:** 2026-07-13
 
 ## Purpose
 
@@ -22,6 +22,60 @@ architecture.
 
 Write documents so a future maintainer can understand purpose, scope, ownership,
 and status without relying on memory.
+
+### Context Recovery Principle
+
+Repository and documentation structures should optimize for context recovery,
+not memory retention.
+
+Canonical Japanese statement:
+
+```text
+Repositoryと文書体系は、
+利用者が過去を覚えていることではなく、
+忘れた状態から安全かつ迅速に現在地へ復帰できることを前提に設計する。
+```
+
+GDS assumes that humans and AI may return with little or no retained context.
+The system should help them recover:
+
+1. what the artifact or system is;
+2. why it exists;
+3. what the current position is;
+4. what has already been completed;
+5. what remains unfinished;
+6. what decision and evidence led to the current state;
+7. what action should happen next;
+8. where authoritative information is located;
+9. what actions require Human Approval;
+10. what must not be changed automatically.
+
+This principle applies to human users, future selves, new AI sessions,
+Codex / ChatGPT / Claude / Gemini or other AI collaborators, new contributors,
+long-term maintenance, incident recovery, server and infrastructure recovery,
+project resumption after long inactivity, and handoff between projects or agents.
+
+The review question is:
+
+```text
+Can this project or artifact be safely resumed by someone who remembers nothing?
+```
+
+If the answer is no, identify the smallest missing recovery aid. Common aids
+include Current Position, Decision Record, Completion Report, canonical entry
+point, README navigation, recovery procedure, explicit next action, Human
+Approval boundary, known blocker, and last verified state.
+
+Relationship to existing standards:
+
+- AI Startup Procedure provides the canonical entry point.
+- Development Context Synchronization restores repository knowledge, current
+  approved mission, current information package, current task, and human goal.
+- Product Documentation Hierarchy distributes recovery responsibilities across
+  Blueprint, Roadmap, Decision Record, Q Documents, and Completion Report.
+- Beginner & Future Self Test verifies whether the principle works in practice.
+- Completion Report preserves actual results, evidence, lessons learned,
+  remaining issues, and recommended next work.
 
 ### Human And AI Friendly
 
@@ -134,6 +188,9 @@ Validation, Repository Information, Scope / Out of Scope, Q Artifact format,
 Download File Rule, AI Repository Knowledge Access Index, Completion Report,
 Human Review, AI Proactive Proposal, and Collaborative Decision Workflow.
 
+Context Recovery Principle explains the design objective behind these supports:
+forgetting should not block safe resumption.
+
 ### One File One Theme
 
 One document should have one primary purpose. Split documents when unrelated
@@ -212,6 +269,7 @@ Classification:
   - Human Approval Required.
 - Design Principle:
   - Silent Operation Principle.
+  - Context Recovery Principle.
   - Platform First.
   - Reuse Before Rebuild.
 - Platform Architecture:

@@ -10,6 +10,7 @@ Ghost Development System knowledge base.
 
 Core rules include Evidence First, Purpose-Oriented Naming, Human Approval Gate,
 Knowledge Before Automation, Knowledge Poka-Yoke / Design For Forgetfulness,
+Context Recovery Principle,
 UTF-8 Read Rule, Encoding Regression Prevention,
 External Source Access / AI Repository Knowledge Access, AI Startup Procedure, Startup Checklist,
 Repository Root Validation, AI Proactive Proposal,
@@ -41,7 +42,7 @@ promoted.
 
 - `rules.md`: rules index and priority.
 - `core_principles.md`: core development philosophy and Platform Era
-  classification entry point.
+  classification entry point, including Context Recovery Principle.
 - `utf8_read_rules.md`: UTF-8 reading rule for Japanese Markdown, Q files,
   request artifacts, completion reports, and mojibake reporting.
 - `encoding_regression_prevention_rules.md`: commit-gate rule for preventing

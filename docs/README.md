@@ -183,6 +183,51 @@ Where are authoritative related sources?
 BFS Test は hidden chat context を品質リスクとして扱います。ただし、権威あるsourceへの
 linkで足りる場合は、全文複製を避けます。
 
+## Context Recovery Principle Index
+
+Context Recovery Principle は、GDS の repository と文書体系を memory retention
+ではなく context recovery に最適化する公式 design principle です。
+
+Canonical statement:
+
+```text
+Repository and documentation structures should optimize for context recovery,
+not memory retention.
+```
+
+Japanese canonical statement:
+
+```text
+Repositoryと文書体系は、
+利用者が過去を覚えていることではなく、
+忘れた状態から安全かつ迅速に現在地へ復帰できることを前提に設計する。
+```
+
+Reference points:
+
+- Core Principles: `docs/rules/core_principles.md`
+- Design Philosophy: `docs/architecture/design_philosophy.md`
+- Examples: `examples/context_recovery_examples.md`
+- Startup Procedure: `docs/workflow/ai_startup_procedure.md`
+- Product Documentation Hierarchy: `docs/architecture/product_document_hierarchy_v2.md`
+- BFS Test: `docs/rules/beginner_future_self_test_rules.md`
+- Completion Report: `templates/completion_report_template.md`
+
+Relationships:
+
+- AI Startup Procedure provides the canonical entry point.
+- Development Context Synchronization restores repository knowledge, current
+  approved mission, current information package, current task, and human goal.
+- Product Documentation Hierarchy distributes recovery responsibilities.
+- BFS Test verifies whether the principle works in practice.
+- Completion Report preserves actual results and evidence for future recovery.
+
+Review question:
+
+```text
+Can this project or artifact be safely resumed by someone who remembers nothing?
+```
+
 ## Q File Template And Naming Standard Index
 
 Q files are durable request artifacts. They should define Q ID, repository

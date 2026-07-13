@@ -15,6 +15,10 @@ implementation completion layer after Q Documents. It records implementation
 results, verification, evidence, lessons learned, promotion candidates,
 remaining issues, and recommended next work.
 
+Completion Reports support Context Recovery Principle by preserving actual
+results, evidence, remaining issues, and recommended next work so future
+resumption does not depend on memory.
+
 ## Core Rule
 
 Every substantial Q should produce a Completion Report artifact when the work is completed, reviewed, or handed off.

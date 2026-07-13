@@ -25,6 +25,10 @@ BFS Test は、次を短時間で判断できるかを確認します。
 
 BFS Test は判断を支援するための基準です。不要な重複説明や長文化を推奨しません。
 
+BFS Test is the practical quality check for the Context Recovery Principle.
+Context Recovery Principle is the underlying design principle; BFS Test
+verifies whether it works for a concrete artifact.
+
 ## Required Test Questions
 
 - 初心者が artifact purpose を数秒で識別できるか。

@@ -35,6 +35,7 @@ Rules follow these principles:
 - Evidence First.
 - Knowledge Before Automation.
 - Knowledge Poka-Yoke / Design For Forgetfulness.
+- Context Recovery Principle.
 - UTF-8 Read Rule.
 - Encoding Regression Prevention.
 - External Source Access / AI Repository Knowledge Access.
@@ -190,6 +191,18 @@ by checklists, templates, validation, artifact rules, completion reports, human
 review, proactive proposals, and collaborative decisions so forgetting is caught
 before it becomes a repository, scope, commit, release, or knowledge loss
 incident.
+
+Details follow `core_principles.md`.
+
+## Context Recovery Principle
+
+Repository and documentation structures should optimize for context recovery,
+not memory retention.
+
+GDS assumes that humans and AI may return with little or no retained context.
+Documentation and operational structures should help recover current position,
+completed work, unfinished work, decision evidence, next action, authoritative
+sources, Human Approval boundaries, and forbidden automatic changes.
 
 Details follow `core_principles.md`.
 

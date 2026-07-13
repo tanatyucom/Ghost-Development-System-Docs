@@ -204,6 +204,23 @@ BFS Test は hidden chat context 依存を検出し、purpose、current position
 evidence、next action、authority が文書から追えるかを確認します。全文複製ではなく、
 権威あるsourceへの導線と短い要約を優先します。
 
+## Context Recovery Principle
+
+Context Recovery Principle は、GDS の repository と文書体系を「覚えていること」ではなく
+「忘れた状態から安全に復帰できること」を前提に設計する公式 design principle です。
+
+Start from:
+
+- [`docs/rules/core_principles.md`](docs/rules/core_principles.md)
+- [`docs/architecture/design_philosophy.md`](docs/architecture/design_philosophy.md)
+- [`examples/context_recovery_examples.md`](examples/context_recovery_examples.md)
+
+Review question:
+
+```text
+Can this project or artifact be safely resumed by someone who remembers nothing?
+```
+
 ## Plugin Architecture
 
 Plugin Architecture Standard は、GDS Platform と将来の Ghost Project が共有機能を

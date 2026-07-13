@@ -39,6 +39,12 @@ handoff、README / index では、Beginner & Future Self Test が必要か確認
 必要な場合は `PASS`、`PASS WITH MINOR IMPROVEMENTS`、`FAIL`、`NOT APPLICABLE`
 のいずれかを記録します。
 
+Context Recovery Principle の観点で、何も覚えていない人や新しい AI session が
+safe resume できるか確認します。できない場合は、Current Position、Decision
+Record、Completion Report、canonical entry point、README navigation、recovery
+procedure、explicit next action、Human Approval boundary、known blocker、last
+verified state など、最小の recovery aid を記録します。
+
 ### Completion Report
 
 Completion Report が必要な作業では、`templates/completion_report_template.md` と
@@ -119,6 +125,8 @@ Completion Checklist:
 - Pending Insight Cleanup:
 - Beginner & Future Self Test Required:
 - Beginner & Future Self Test Result:
+- Context Recovery Principle Reviewed:
+- Missing Recovery Aid:
 ```
 
 ## Completion Criteria
