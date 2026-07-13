@@ -271,7 +271,7 @@ Do not store one-off chat clarifications here unless they become reusable, revie
 - `docs/workflow/q_revision_addendum_workflow.md`
 - `docs/rules/artifact_first_rules.md`
 - `docs/workflow/output_policy.md`
-- `templates/q_file_template.md`
+- `templates/Q_TEMPLATE.md`
 - `templates/completion_report_template.md`
 - `examples/q_file_artifact_workflow.md`
 - `examples/q_file_examples.md`
