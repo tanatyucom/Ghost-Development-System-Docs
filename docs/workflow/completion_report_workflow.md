@@ -22,6 +22,7 @@ Source Q
   -> Safe Commit Set
   -> Project Edit Status
   -> Improvement Review
+  -> Beginner & Future Self Test Review, when applicable
   -> Lessons Learned
   -> Reusable Assets Created
   -> Promotion Candidates
@@ -105,6 +106,18 @@ Review whether the work produced reusable learning for:
 - Automation / Validation.
 - Metrics / Evidence.
 
+If the task creates or updates durable documentation, roadmap, decision,
+handoff, Q, Completion Report, or README / index artifacts, run or explicitly
+mark the Beginner & Future Self Test as not applicable.
+
+Record:
+
+- perspective;
+- result;
+- blocking / non-blocking issues;
+- smallest recommended improvement;
+- whether excessive duplication was avoided.
+
 ## Step 8: Separate Follow-up Buckets
 
 If Pending Insight was created, updated, reviewed, resolved, or used as Q source,
@@ -153,6 +166,8 @@ After the report is written, complete the Completion Checklist and record:
 
 - `docs/rules/completion_report_rules.md`
 - `templates/completion_report_template.md`
+- `docs/rules/beginner_future_self_test_rules.md`
+- `docs/workflow/beginner_future_self_test_workflow.md`
 - `docs/rules/completion_checklist_rules.md`
 - `docs/workflow/completion_checklist_workflow.md`
 - `docs/rules/pending_conversation_insight_review_rules.md`

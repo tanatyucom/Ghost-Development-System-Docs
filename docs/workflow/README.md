@@ -47,6 +47,10 @@ gate.
   Status, Project Edit Status, Improvement Review, Lessons Learned,
   Reusable Assets Created, Remaining Issues, Recommended Next Q, and
   Suggested Commit Message.
+- `beginner_future_self_test_workflow.md`: lightweight review workflow for
+  checking whether a managed artifact is understandable to beginners, new AI
+  sessions, returning project owners, and future selves without hidden chat
+  context.
 - `research_mission_workflow.md`: scoped investigation workflow from
   Observation to Research Mission, Evidence Collection, Validation,
   Completion Report, Knowledge Promotion Review, Human Approval, and
@@ -151,6 +155,8 @@ Idea
   -> Encoding Regression Validation, before commit approval
   -> Completion Report Artifact
   -> Completion Report v2 Section Check
+  -> Beginner & Future Self Test, when artifact readability across time or
+     handoff matters
   -> Knowledge Inventory, when reusable knowledge is found but not yet promoted
   -> PIP Update, when project state or decisions changed
   -> PIP Case Candidate, when reusable knowledge was found

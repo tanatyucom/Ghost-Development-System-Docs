@@ -28,6 +28,10 @@ Recommended Next Q, and workspace clean state before a task is treated as
 complete. They also check whether the AI Repository Knowledge Access Index
 needs regeneration and validation when public knowledge entry points changed.
 
+Beginner & Future Self Test templates help humans and AI check whether a
+managed artifact is understandable to beginners, new AI sessions, returning
+project owners, and future selves without relying on hidden chat context.
+
 Research Mission templates help humans and AI turn vague investigation
 requests into scoped missions with Goal, Research Questions, Scope, Out of
 Scope, Evidence, Validation, Negative Result handling, Deliverables, and
@@ -130,6 +134,7 @@ restore guidance.
 - `multi_ai_handoff_template.md`
 - `multi_ai_handoff_checklist_template.md`
 - `research_mission_template.md`
+- `beginner_future_self_test_template.md`
 - `completion_checklist_template.md`
 - `q_file_template.md`
 - `ai_implementation_request.md`
@@ -175,6 +180,8 @@ Promote improvements into templates when they help future Q files become:
   Command Center use without replacing repository source-of-truth documents.
 - better at separating Blueprint, Master Roadmap, Domain Roadmap, Execution
   Roadmap, Decision Record, Q Documents, and Completion Reports.
+- better at passing the Beginner & Future Self Test without duplicating
+  authoritative source documents.
 
 ## Improvement Review
 

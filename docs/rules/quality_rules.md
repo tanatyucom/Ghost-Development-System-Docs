@@ -2,7 +2,7 @@
 
 **Version:** 2.4
 
-**Last Updated:** 2026-07-12
+**Last Updated:** 2026-07-13
 
 ## Purpose
 
@@ -25,6 +25,17 @@ quick but ambiguous.
 Documents should be explicit enough that AI does not need to guess and humans do
 not need private context.
 
+### Beginner And Future Self Readability
+
+Managed artifacts should pass the Beginner & Future Self Test, abbreviated as
+BFS Test after first use, when they are important for review, handoff,
+resumption, roadmap tracking, or knowledge promotion.
+
+BFS Test asks whether a beginner, a new AI session, a future contributor, a
+returning project owner, or the future self of the author can understand the
+artifact purpose, project / domain, current position, evidence, next action,
+and authority without hidden chat context.
+
 ## Review Standards
 
 Review documentation for:
@@ -32,6 +43,7 @@ Review documentation for:
 - purpose;
 - scope;
 - ownership;
+- BFS Test result, when applicable;
 - terminology;
 - consistency with roadmap and rules;
 - missing related updates;
@@ -78,6 +90,21 @@ Prevent common errors by:
   accepting tuning, scoring, extraction, or recognition changes;
 - preserving useful negative results when they explain why an attractive fix,
   metric, or candidate was not accepted.
+
+## Beginner & Future Self Test
+
+Use `docs/rules/beginner_future_self_test_rules.md` when a document must remain
+understandable across time, AI sessions, or project handoff.
+
+Accepted outcomes:
+
+- `PASS`
+- `PASS WITH MINOR IMPROVEMENTS`
+- `FAIL`
+- `NOT APPLICABLE`
+
+For non-PASS results, record the failed question, evidence, smallest recommended
+correction, affected artifact, and whether the correction is blocking.
 
 ## Evidence First
 

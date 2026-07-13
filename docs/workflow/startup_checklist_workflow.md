@@ -25,6 +25,8 @@ Start
   -> Q Template Required Fields Confirmation
   -> Applicable Rules Confirmation
   -> Applicable Methodologies Confirmation
+  -> Beginner & Future Self Test Reminder, when durable documentation or
+     handoff quality is relevant
   -> Scope / Out of Scope Confirmation
   -> Conversation Insight Detection
   -> Pending Insight Review
@@ -197,6 +199,10 @@ Confirm:
 - `docs/rules/git_rules.md`
 
 ### Applicable Methodologies Confirmation
+
+When the task creates or reviews durable documentation, roadmap, decision, Q,
+Completion Report, handoff, README, or index artifacts, confirm whether the
+Beginner & Future Self Test should be applied during review or completion.
 
 作業内容に応じて確認する methodology:
 

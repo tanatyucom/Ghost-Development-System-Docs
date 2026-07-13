@@ -34,6 +34,11 @@ Implementation
 人間レビュー、Debug Artifact Review、Human Approval Gate、Future Candidate 分離が
 必要か確認します。
 
+重要な documentation artifact、roadmap、decision、Q、Completion Report、
+handoff、README / index では、Beginner & Future Self Test が必要か確認します。
+必要な場合は `PASS`、`PASS WITH MINOR IMPROVEMENTS`、`FAIL`、`NOT APPLICABLE`
+のいずれかを記録します。
+
 ### Completion Report
 
 Completion Report が必要な作業では、`templates/completion_report_template.md` と
@@ -112,12 +117,16 @@ Completion Checklist:
 - Pending Insight Review Required:
 - Pending Insight Decision:
 - Pending Insight Cleanup:
+- Beginner & Future Self Test Required:
+- Beginner & Future Self Test Result:
 ```
 
 ## Completion Criteria
 
 - Verification が完了または未実行理由付きで記録されている。
 - Review が完了または必要性なしとして記録されている。
+- BFS Test が必要な artifact では、結果と blocking / non-blocking issue が
+  記録されている。
 - Completion Report が必要な場合、完了している。
 - Improvement Review が完了している。
 - Commit / Tag / Release の必要性と実行有無が分かれている。
@@ -141,6 +150,9 @@ Completion Checklist:
 - `docs/rules/pending_conversation_insight_review_rules.md`
 - `examples/completion_report_examples.md`
 - `templates/review_checklist.md`
+- `docs/rules/beginner_future_self_test_rules.md`
+- `docs/workflow/beginner_future_self_test_workflow.md`
+- `templates/beginner_future_self_test_template.md`
 - `docs/workflow/commit_safety_checklist.md`
 - `docs/rules/git_rules.md`
 - `docs/workflow/startup_checklist_workflow.md`

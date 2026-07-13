@@ -172,6 +172,7 @@ Start from:
 - [`templates/roadmap_template.md`](templates/roadmap_template.md)
 - [`templates/decision_template.md`](templates/decision_template.md)
 - [`templates/completion_report_template.md`](templates/completion_report_template.md)
+- [`docs/rules/beginner_future_self_test_rules.md`](docs/rules/beginner_future_self_test_rules.md)
 
 標準階層:
 
@@ -185,6 +186,23 @@ Product Blueprint
   -> Q Documents
   -> Completion Report
 ```
+
+## Beginner & Future Self Test
+
+Beginner & Future Self Test は、管理対象artifactが初心者、新しい AI session、
+未来の担当者、長期中断後に戻った project owner、未来の自分にも理解できるかを
+確認する documentation quality standard です。
+
+Start from:
+
+- [`docs/rules/beginner_future_self_test_rules.md`](docs/rules/beginner_future_self_test_rules.md)
+- [`docs/workflow/beginner_future_self_test_workflow.md`](docs/workflow/beginner_future_self_test_workflow.md)
+- [`templates/beginner_future_self_test_template.md`](templates/beginner_future_self_test_template.md)
+- [`examples/beginner_future_self_test_examples.md`](examples/beginner_future_self_test_examples.md)
+
+BFS Test は hidden chat context 依存を検出し、purpose、current position、
+evidence、next action、authority が文書から追えるかを確認します。全文複製ではなく、
+権威あるsourceへの導線と短い要約を優先します。
 
 ## Plugin Architecture
 

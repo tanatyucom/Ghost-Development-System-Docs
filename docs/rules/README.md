@@ -13,7 +13,7 @@ Knowledge Before Automation, Knowledge Poka-Yoke / Design For Forgetfulness,
 UTF-8 Read Rule, Encoding Regression Prevention,
 External Source Access / AI Repository Knowledge Access, AI Startup Procedure, Startup Checklist,
 Repository Root Validation, AI Proactive Proposal,
-Completion Checklist, Research Mission, Conversation Insight Capture, Pending Conversation Insight Review, Artifact First, Audit Before Repair, Debug Artifact Review, Debug Escalation Ladder,
+Completion Checklist, Beginner & Future Self Test, Research Mission, Conversation Insight Capture, Pending Conversation Insight Review, Artifact First, Audit Before Repair, Debug Artifact Review, Debug Escalation Ladder,
 Migration First, PIP Case Knowledge Base, and Roadmap2 Knowledge Salvage. Concept Promotion is
 handled as part of PIP Case Knowledge Base. Concept ID Naming is the standard
 for assigning stable Concept IDs and keeping the Concept Index traceable.
@@ -69,6 +69,10 @@ promoted.
   verification, review, completion report, Improvement Review, commit, tag,
   release, next Q, and workspace clean confirmation.
 - `completion_report_rules.md`: Completion Report v2 required sections, Safe Commit Set, Commit / Push Status, Project Edit Status, Improvement Review, Lessons Learned, Reusable Assets Created, Remaining Issues, Recommended Next Q, and Suggested Commit Message rules.
+- `beginner_future_self_test_rules.md`: documentation quality rule for checking
+  whether beginners, new AI sessions, future contributors, returning project
+  owners, and future selves can understand purpose, current position, evidence,
+  next action, and authority without hidden chat context.
 - `research_mission_rules.md`: rule for scoped investigation missions that
   define Goal, Scope, Out of Scope, Evidence, Validation, Negative Result
   handling, and Completion Report before research begins. Startup Procedure
@@ -158,26 +162,27 @@ promoted.
 11. `ai_proactive_proposal_rules.md`
 12. `completion_checklist_rules.md`
 13. `completion_report_rules.md`
-14. `research_mission_rules.md`
-15. `conversation_insight_capture_rules.md`
-16. `pending_conversation_insight_review_rules.md`
-17. `artifact_first_rules.md`
-18. `q_file_artifact_standard.md`
-19. `q_file_naming_rules.md`
-20. `q_file_template_rules.md`
-21. `audit_before_repair_rules.md`
-22. `debug_artifact_review_rules.md`
-23. `debug_escalation_ladder_rules.md`
-24. `migration_first_rules.md`
-25. `platform_component_rules.md`
-26. `review_center_rules.md`
-27. `documentation_synchronization_rules.md`
-28. `pip_case_knowledge_base_rules.md`
-29. `concept_id_naming_rules.md`
-30. `roadmap2_knowledge_salvage_rules.md`
-31. `workflow_rules.md`
-32. `quality_rules.md`
-33. `ai_collaboration_rules.md`
+14. `beginner_future_self_test_rules.md`
+15. `research_mission_rules.md`
+16. `conversation_insight_capture_rules.md`
+17. `pending_conversation_insight_review_rules.md`
+18. `artifact_first_rules.md`
+19. `q_file_artifact_standard.md`
+20. `q_file_naming_rules.md`
+21. `q_file_template_rules.md`
+22. `audit_before_repair_rules.md`
+23. `debug_artifact_review_rules.md`
+24. `debug_escalation_ladder_rules.md`
+25. `migration_first_rules.md`
+26. `platform_component_rules.md`
+27. `review_center_rules.md`
+28. `documentation_synchronization_rules.md`
+29. `pip_case_knowledge_base_rules.md`
+30. `concept_id_naming_rules.md`
+31. `roadmap2_knowledge_salvage_rules.md`
+32. `workflow_rules.md`
+33. `quality_rules.md`
+34. `ai_collaboration_rules.md`
 34. `git_rules.md`
 35. `script_architecture_rules.md`
 

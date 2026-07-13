@@ -72,6 +72,11 @@
 - 目的が private context なしで理解できる。
 - 背景と理由が短く残っている。
 - 文書の責務が 1 つに保たれている。
+- Beginner & Future Self Test が必要な artifact で実施されている。
+- 初心者、新しい AI session、未来の担当者が purpose、project / domain、
+  current position、evidence、next action、authority を追える。
+- hidden chat context に依存していない。
+- BFS Test のために authoritative source を過剰複製していない。
 - Folder README の構成が必要に応じて `Purpose / Contains / Does NOT Contain /
   Update Policy / Related Documents` に近い。
 - README 更新が必要な場合、導線が追加されている。

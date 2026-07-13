@@ -174,6 +174,8 @@ Minimum completion report sections:
 - Summary.
 - Verification.
 - Improvement Review.
+- Beginner & Future Self Test result, when durable documentation, roadmap,
+  decision, handoff, review, or index artifacts are created or updated.
 - Recommended Improvements.
 - Future Candidates.
 - Remaining Issues.
@@ -222,3 +224,5 @@ allows it.
 - Do not treat chat text as the authoritative Q when an artifact is required.
 - Do not update AI Repository Index silently; follow the gate.
 - Do not omit Safe Commit Set from the completion report.
+- Do not leave hidden chat context as the only explanation for purpose,
+  current position, evidence, or next action.

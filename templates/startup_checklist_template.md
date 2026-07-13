@@ -112,6 +112,7 @@
 - AI Proactive Proposal:
 - Conversation Insight Capture:
 - Knowledge Suggestion Assistant:
+- Beginner & Future Self Test:
 - Other:
 
 ## Applicable Methodologies
@@ -126,6 +127,7 @@
 - Conversation Insight Detection:
 - Daily Knowledge Source Review:
 - Context-Aware Knowledge Suggestion:
+- Beginner & Future Self Test:
 - Other:
 
 ## Proactive Proposal Check

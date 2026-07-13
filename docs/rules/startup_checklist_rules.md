@@ -34,6 +34,7 @@ Validation、GDS Core Rules / Templates、Target Project Profile を順に確認
 - Conversation Insight Detection.
 - Pending Insight Review.
 - Knowledge Suggestion Assistant.
+- Beginner & Future Self Test, when durable documentation or handoff quality is relevant.
 - Research Task Detection.
 - Repository Information.
 - Q Format.
@@ -100,6 +101,7 @@ Root が一致しない場合は implementation / review / commit を開始し�
 - Roadmap2 Knowledge Salvage.
 - AI Proactive Proposal.
 - Repository Root Validation.
+- Beginner & Future Self Test.
 
 ### Methodology Check
 
@@ -114,6 +116,7 @@ Root が一致しない場合は implementation / review / commit を開始し�
 - Knowledge Before Automation.
 - Evidence Feedback Loop.
 - Knowledge Promotion.
+- Beginner & Future Self Test.
 
 ### Proactive Proposal Check
 

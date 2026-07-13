@@ -122,6 +122,21 @@ Push status: Not pushed.
 - Automation / Validation:
 - Metrics / Evidence:
 
+## Beginner & Future Self Test Review
+
+- BFS Test required: Yes / No / Not Applicable
+- Reviewer perspective:
+- Result: PASS / PASS WITH MINOR IMPROVEMENTS / FAIL / NOT APPLICABLE
+- Purpose discoverable:
+- Current position discoverable:
+- Why / evidence traceable:
+- Next action discoverable:
+- Authority / related sources discoverable:
+- Hidden chat dependency:
+- Blocking issues:
+- Smallest recommended improvement:
+- Duplication avoided:
+
 ## Lessons Learned
 
 - What became clearer:
@@ -264,6 +279,8 @@ Ideas that should remain future work until separately reviewed:
 
 - `docs/rules/completion_report_rules.md`
 - `docs/workflow/completion_report_workflow.md`
+- `docs/rules/beginner_future_self_test_rules.md`
+- `templates/beginner_future_self_test_template.md`
 - `templates/completion_checklist_template.md`
 - `docs/rules/completion_checklist_rules.md`
 - `docs/workflow/completion_checklist_workflow.md`

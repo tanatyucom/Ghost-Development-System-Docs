@@ -43,6 +43,10 @@ reports, and documentation requests can start from a clear reference.
 - `completion_checklist_examples.md`: good and bad examples for completion
   verification, review, completion report, Improvement Review, commit / tag /
   release decisions, next Q, and workspace clean confirmation.
+- `beginner_future_self_test_examples.md`: PASS, PASS WITH MINOR IMPROVEMENTS,
+  FAIL, and duplication-guard examples for checking whether documentation is
+  understandable to beginners, new AI sessions, returning project owners, and
+  future selves.
 - `q_file_artifact_workflow.md`: good and bad examples for Task Artifact
   Workspaces, Q files, completion reports, notes, attachments, and related
   commit information.
@@ -172,6 +176,9 @@ what a complete, well-scoped document should feel like.
   template, or future candidate.
 - Use `completion_checklist_examples.md` before treating work as complete,
   committing, tagging, releasing, or handing off the next Q.
+- Use `beginner_future_self_test_examples.md` when reviewing whether a
+  managed artifact can be understood without hidden chat context and without
+  excessive duplication.
 - Use `q_file_artifact_workflow.md` when saving a Q file in a
   `docs/requests/<project>/<status>/` workspace, naming it, linking it
   to a completion report, storing notes or attachments, moving status, or

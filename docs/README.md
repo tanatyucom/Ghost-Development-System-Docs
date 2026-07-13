@@ -152,6 +152,37 @@ Suggested Commit Message
 
 Commit and push are never implied by report creation.
 
+## Beginner & Future Self Test Index
+
+Beginner & Future Self Test は、managed artifact が初心者、新しい AI session、
+未来の担当者、長期中断後に戻った project owner、未来の自分にも理解できるかを
+確認する documentation quality standard です。初出後は BFS Test と略せます。
+
+Reference points:
+
+- Rules: `docs/rules/beginner_future_self_test_rules.md`
+- Workflow: `docs/workflow/beginner_future_self_test_workflow.md`
+- Template: `templates/beginner_future_self_test_template.md`
+- Examples: `examples/beginner_future_self_test_examples.md`
+- Quality Rules: `docs/rules/quality_rules.md`
+- Review Checklist: `templates/review_checklist.md`
+- Completion Checklist: `templates/completion_checklist_template.md`
+
+Core questions:
+
+```text
+What is this artifact?
+Why does it exist?
+Which project / domain owns it?
+What is the current position?
+Why was this decision made?
+What should happen next?
+Where are authoritative related sources?
+```
+
+BFS Test は hidden chat context を品質リスクとして扱います。ただし、権威あるsourceへの
+linkで足りる場合は、全文複製を避けます。
+
 ## Q File Template And Naming Standard Index
 
 Q files are durable request artifacts. They should define Q ID, repository

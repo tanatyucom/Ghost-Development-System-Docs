@@ -262,6 +262,16 @@ minimum next evidence needed.
 Platform Era reviews should include a `Recommended Next Q` when the next useful
 step is visible.
 
+When the review conclusion is `Commit OK` and the Q or repository policy says
+commit is required, AI should immediately provide copy-paste-ready Git Bash
+commands for the reviewed Safe Commit Set. The commands must start with:
+
+```bash
+cd /c/GitHub/Ghost-Development-System-Docs
+```
+
+AI must not execute the commit unless the user explicitly requests it.
+
 Completion reports and final task summaries should prioritize:
 
 - Summary.

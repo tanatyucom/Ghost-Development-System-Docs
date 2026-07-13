@@ -30,6 +30,10 @@
 - Human Review required:
 - Human Review result:
 - Review Entry Point:
+- Beginner & Future Self Test required:
+- Beginner & Future Self Test result:
+- BFS blocking issues:
+- BFS smallest recommended improvement:
 - Future Candidates separated from approved scope:
 - Pending Insights reviewed:
 - Pending Insight Codex execution restriction respected:

@@ -404,6 +404,9 @@ docs/requests/<project>/<status>/<Q_ID>_<short_topic>/completion_report.md
 - Validation commands are defined.
 - AI Repository Index Update Gate is decided.
 - Completion Report requirements are clear.
+- Beginner & Future Self Test requirement is decided when the Q creates or
+  updates durable documentation, roadmap, decision, handoff, or review
+  artifacts.
 - Safe Commit Set must be reported.
 - Review Decision must be returned.
 
@@ -419,6 +422,7 @@ Completion Report must include:
 - Summary
 - Verification
 - Improvement Review
+- Beginner & Future Self Test result, when applicable
 - Recommended Improvements
 - Future Candidates
 - Remaining Issues
@@ -454,4 +458,6 @@ docs: update ghost development system knowledge base
 - `docs/workflow/q_file_creation_workflow.md`
 - `docs/workflow/q_revision_addendum_workflow.md`
 - `docs/workflow/output_policy.md`
+- `docs/rules/beginner_future_self_test_rules.md`
+- `templates/beginner_future_self_test_template.md`
 - `templates/completion_report_template.md`

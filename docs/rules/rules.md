@@ -45,6 +45,7 @@ Rules follow these principles:
 - AI Proactive Proposal.
 - Completion Checklist.
 - Completion Report Standard.
+- Beginner & Future Self Test.
 - Research Mission.
 - Conversation Insight Capture.
 - Pending Conversation Insight Review.
@@ -86,6 +87,7 @@ own files.
 - `ai_proactive_proposal_rules.md`
 - `completion_checklist_rules.md`
 - `completion_report_rules.md`
+- `beginner_future_self_test_rules.md`
 - `research_mission_rules.md`
 - `conversation_insight_capture_rules.md`
 - `pending_conversation_insight_review_rules.md`
@@ -204,6 +206,19 @@ When important public knowledge entry points are added, moved, renamed, or
 materially changed, update `docs/ai_repository_index.md`.
 
 Details follow `external_source_access_rules.md`.
+
+## Beginner & Future Self Test
+
+Managed documentation should be understandable to a beginner, a new AI session,
+a future contributor, the project owner returning after a long interruption,
+and the future self of the original author.
+
+The Beginner & Future Self Test, abbreviated as BFS Test after first use,
+checks whether an artifact exposes purpose, project / domain, current position,
+decision / evidence, next action, and authoritative related sources without
+requiring hidden chat context.
+
+Details follow `beginner_future_self_test_rules.md`.
 
 ## UTF-8 Read Rule
 

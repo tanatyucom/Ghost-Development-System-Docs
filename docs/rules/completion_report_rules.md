@@ -35,15 +35,16 @@ Completion Report v2 requires these sections:
 8. Commit / Push Status
 9. Project Edit Status
 10. Improvement Review
-11. Lessons Learned
-12. Reusable Assets Created
-13. Promotion Candidates, when applicable
-14. Remaining Issues
-15. Recommended Improvements
-16. Future Candidates
-17. Recommended Next Q
-18. Suggested Commit Message
-19. Pending Insight Review, when Pending Insight was created, updated, reviewed, or used as Q source
+11. Beginner & Future Self Test Review, when applicable
+12. Lessons Learned
+13. Reusable Assets Created
+14. Promotion Candidates, when applicable
+15. Remaining Issues
+16. Recommended Improvements
+17. Future Candidates
+18. Recommended Next Q
+19. Suggested Commit Message
+20. Pending Insight Review, when Pending Insight was created, updated, reviewed, or used as Q source
 
 A section may be marked `Not Applicable`, but it should not be silently omitted.
 
@@ -142,6 +143,10 @@ Completion is not only output delivery. The report must review whether reusable 
 - Automation / Validation.
 - Metrics / Evidence.
 
+When the task creates or updates durable documentation, roadmap, decision,
+handoff, Q, or review artifacts, the report should record the Beginner &
+Future Self Test result or explain why it is not applicable.
+
 ## Lessons Learned Rule
 
 The report should preserve practical lessons discovered during execution.
@@ -215,6 +220,8 @@ This does not authorize commit or push unless the Q or user explicitly allows it
 
 - `templates/completion_report_template.md`
 - `docs/workflow/completion_report_workflow.md`
+- `docs/rules/beginner_future_self_test_rules.md`
+- `templates/beginner_future_self_test_template.md`
 - `templates/completion_checklist_template.md`
 - `docs/rules/completion_checklist_rules.md`
 - `docs/workflow/completion_checklist_workflow.md`
