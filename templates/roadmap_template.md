@@ -9,6 +9,19 @@
 - Related Q:
 - Related Completion Report:
 
+## Canonical Template Synchronization
+
+- Startup completed: Yes / No
+- AI Repository Index verified: Yes / No
+- Current Mission verified: Yes / No
+- Template revision verified: Yes / No
+- Canonical Repository confirmed: Yes / No
+- Canonical Repository path:
+- Raw reference freshness confirmed when applicable: Yes / No / Not Applicable
+- Raw reference URL:
+- Template mismatch found:
+- Template mismatch action:
+
 ## Identity
 
 - Roadmap ID:

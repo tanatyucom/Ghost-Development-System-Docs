@@ -94,6 +94,11 @@ Q-related templates use the Task Artifact Workspace standard for request,
 completion report, notes, attachments, status movement, related commit
 tracking, Q ID, filename, date exception, addendum, and Safe Commit Set.
 
+Canonical templates include synchronization checks for Startup completion,
+AI Repository Index verification, Current Mission verification, template
+revision verification, canonical repository confirmation, and raw reference
+freshness when external raw links or copied artifacts are used.
+
 Completion and review templates also include dirty workspace and commit safety
 fields so unrelated files, restore suggestions, and safe commit sets are
 visible before commit.
@@ -130,6 +135,7 @@ restore guidance.
 - `pending_conversation_insight_template.md`
 - `platform_promotion_decision_report_template.md`
 - `platform_registry_update_template.md`
+- `adr_template.md`
 
 ### Development
 

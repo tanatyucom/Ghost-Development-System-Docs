@@ -18,12 +18,18 @@
 
 ## Startup Completion Evidence
 
+- Startup completed:
 - AI Startup Procedure reviewed:
 - Startup Checklist reviewed:
 - AI Repository Index reviewed:
+- AI Repository Index verified:
 - Current Mission reviewed:
+- Current Mission verified:
 - Current Q reviewed:
 - Canonical `templates/Q_TEMPLATE.md` reviewed, when Q creation or revision is involved:
+- Template revision verified:
+- Canonical Repository confirmed:
+- Raw reference freshness confirmed when applicable:
 - Related Rules reviewed:
 - Related Workflows reviewed:
 - Related ADRs / Architecture reviewed:
@@ -38,6 +44,10 @@
 | --- | --- | --- | --- | --- |
 | Memory Check |  |  |  |  |
 | AI Repository Index |  |  |  |  |
+| Current Mission |  |  |  |  |
+| Template Revision |  |  |  |  |
+| Canonical Repository |  |  |  |  |
+| Raw Reference Freshness |  |  |  |  |
 | Current Q / Mission |  |  |  |  |
 | Q_TEMPLATE |  |  |  |  |
 | Related Rules |  |  |  |  |

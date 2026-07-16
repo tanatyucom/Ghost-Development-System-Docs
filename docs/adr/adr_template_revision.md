@@ -120,14 +120,15 @@ Add Center / Component Alignment when the decision affects:
 - Platform candidate workspace
 - Cross-Ghost reusable component
 
-## Template Update Recommendation
+## Canonical Template
 
-Future template work may add a dedicated `templates/adr_template.md`.
+Use the dedicated canonical ADR template:
 
-Until then, use this guidance beside:
+- `templates/adr_template.md`
+
+This guidance remains as explanatory background beside:
 
 - `templates/decision_template.md`
-- `examples/adr_example.md`
 - `docs/adr/README.md`
 
 ## Out Of Scope

@@ -66,10 +66,16 @@ Completion Report は Context Recovery Principle を支える artifact です。
 
 - Startup Completion Gate result:
 - Startup evidence artifact:
+- Startup completed:
 - Memory Check completed:
 - AI Repository Index reviewed:
+- AI Repository Index verified:
 - Current Q / Mission reviewed:
+- Current Mission verified:
 - Canonical `templates/Q_TEMPLATE.md` reviewed, when Q creation or revision was involved:
+- Template revision verified:
+- Canonical Repository confirmed:
+- Raw reference freshness confirmed when applicable:
 - Related Rules reviewed:
 - Related Workflows reviewed:
 - Related ADRs / Architecture reviewed:
@@ -77,6 +83,21 @@ Completion Report は Context Recovery Principle を支える artifact です。
 - Constraint Check completed:
 - Missing startup evidence:
 - Startup limitations:
+
+## Canonical Template Synchronization Review
+
+- Synchronization check required:
+- Startup completed:
+- AI Repository Index verified:
+- Current Mission verified:
+- Template revision verified:
+- Canonical Repository confirmed:
+- Canonical Repository path:
+- Raw reference freshness confirmed when applicable:
+- Raw reference URL:
+- Template mismatch found:
+- Template mismatch action:
+- Remaining synchronization issue:
 
 ## Capability Verification
 

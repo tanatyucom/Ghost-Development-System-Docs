@@ -28,7 +28,17 @@
 
 ## Startup Confirmation
 
+- Startup completed:
 - AI Repository Index read:
+- AI Repository Index verified:
+- Current Mission verified:
+- Template revision verified:
+- Template revision source:
+- Canonical Repository confirmed:
+- Canonical Repository path:
+- Raw reference freshness confirmed when applicable:
+- Raw reference URL:
+- Raw reference checked at:
 - Daily Knowledge Source Review completed:
 - Daily Knowledge Source Review date:
 - Canonical daily entry point:
@@ -83,6 +93,27 @@
 - Forbidden paths:
 - Commit policy:
 - Dirty workspace checked:
+
+## Canonical Template Synchronization
+
+- Synchronization check required: Yes / No
+- Startup completed before template use:
+- AI Repository Index verified:
+- Current Mission verified:
+- Canonical template path:
+- Canonical template revision / last updated:
+- Local template copy path:
+- Local template copy matches canonical:
+- Raw reference freshness confirmed when applicable:
+- Raw reference URL:
+- Raw reference checked at:
+- Mismatch found:
+- Mismatch action:
+  - Use canonical template
+  - Update local copy
+  - Create revision Q
+  - Record limitation
+  - Not applicable
 
 ## Repository Root Validation
 

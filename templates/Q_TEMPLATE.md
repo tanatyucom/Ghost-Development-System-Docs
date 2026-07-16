@@ -144,6 +144,29 @@ Allowed Edit Scope: GDS documentation only
 Forbidden Edit Scope: GameGhost, runtime DB, production data
 ```
 
+## Canonical Template Synchronization
+
+- Startup completed: Yes / No
+- AI Repository Index verified: Yes / No
+- Current Mission verified: Yes / No
+- Template revision verified: Yes / No
+- Template revision source:
+- Canonical Repository confirmed: Yes / No
+- Canonical Repository path:
+- Raw reference freshness confirmed when applicable: Yes / No / Not Applicable
+- Raw reference URL:
+- Raw reference checked at:
+- Template mismatch found: Yes / No
+- Template mismatch action:
+
+Rules:
+
+```text
+Before creating or executing a Q, confirm the canonical template source.
+Do not assume a downloaded, pasted, or older local template is current.
+If a raw GitHub reference or copied artifact is used, record freshness or mark it not applicable.
+```
+
 ## Commit / Push Policy
 
 - Commit:
@@ -293,6 +316,7 @@ Do not silently skip the decision.
 
 ## Startup Checklist
 
+- Canonical Template Synchronization completed:
 - Current Q File confirmed as authoritative:
 - Q File read with explicit UTF-8 when using Windows PowerShell 5.1:
 - Q File mojibake check result:
@@ -303,6 +327,11 @@ Do not silently skip the decision.
 - Dirty workspace checked:
 - Applicable Rules confirmed:
 - Applicable Workflow confirmed:
+- AI Repository Index verified:
+- Current Mission verified:
+- Template revision verified:
+- Canonical Repository confirmed:
+- Raw reference freshness confirmed when applicable:
 - Project Profile reviewed when applicable:
 - AI Repository Index read when public knowledge is needed:
 - Conversation Insight Detection performed when applicable:
