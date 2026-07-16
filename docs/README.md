@@ -16,6 +16,14 @@ Reference points:
 - Completion Report Template: `templates/completion_report_template.md`
 - Repository Intelligence Dashboard Foundation:
   `docs/architecture/repository_intelligence_dashboard_foundation.md`
+- Canonical Rule Gap Resolution:
+  `docs/architecture/canonical_rule_gap_resolution.md`
+- Local Rule Ownership:
+  `docs/architecture/local_rule_ownership.md`
+- Platform Candidate Workspace:
+  `docs/architecture/platform_candidate_workspace.md`
+- Adapter-Only Execution Policy Review:
+  `docs/architecture/adapter_only_execution_policy_review.md`
 
 Core flow:
 

@@ -8,7 +8,11 @@ Ownership, Local Rule lifecycle, and Vision-Driven Bottom-Up Development start
 from:
 
 - [`docs/adr/README.md`](docs/adr/README.md)
+- [`docs/architecture/canonical_rule_gap_resolution.md`](docs/architecture/canonical_rule_gap_resolution.md)
+- [`docs/architecture/local_rule_ownership.md`](docs/architecture/local_rule_ownership.md)
 - [`docs/architecture/platform_governance_and_experimental_development.md`](docs/architecture/platform_governance_and_experimental_development.md)
+- [`docs/architecture/platform_candidate_workspace.md`](docs/architecture/platform_candidate_workspace.md)
+- [`docs/architecture/adapter_only_execution_policy_review.md`](docs/architecture/adapter_only_execution_policy_review.md)
 - [`docs/architecture/repository_intelligence_dashboard_foundation.md`](docs/architecture/repository_intelligence_dashboard_foundation.md)
 - [`docs/rules/platform_governance_rules.md`](docs/rules/platform_governance_rules.md)
 - [`docs/workflow/architecture_promotion_lifecycle.md`](docs/workflow/architecture_promotion_lifecycle.md)

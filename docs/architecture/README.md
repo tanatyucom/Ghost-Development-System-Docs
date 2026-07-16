@@ -14,6 +14,13 @@ runtime behavior.
 - `artifact_schema_standard.md`: common schema standard for managed artifacts
   such as Q, Completion Report, Information Package, Multi-AI Handoff, Review
   Report, Decision Record, Registry Update, and Health Report.
+- `adapter_only_execution_policy_review.md`: candidate-only review of
+  Adapter-Only Execution for future Engine / Center production boundaries. It
+  does not adopt enforcement or implementation.
+- `canonical_rule_gap_resolution.md`: decision boundary for resolving
+  implementation-repository style findings as repository remediation, Local
+  Rule candidates, Canonical Rule gaps, Temporary Assembly candidates, or Human
+  Architecture Decisions.
 - `command_center_architecture.md`: Command Center architecture specification
   for Repository Scanner, Information Package Builder, Decision Engine,
   Template Engine, Artifact Pipeline, Human Approval Gate, Repository Health
@@ -26,6 +33,11 @@ runtime behavior.
 - `plugin_architecture_standard.md`: Plugin Architecture Standard for explicit
   registry, `PLUGIN_INFO`, `PluginContext`, `PluginResult`, ownership boundary,
   lifecycle, and promotion from Internal Module to Platform Plugin.
+- `local_rule_ownership.md`: ownership boundary for GDS-managed Local Rules
+  discovered in implementation repositories such as GameGhost.
+- `platform_candidate_workspace.md`: recommended future workspace naming and
+  guardrails for `platform_candidates/` without creating the folder or
+  approving runtime use.
 - `repository_intelligence_dashboard_foundation.md`: read-only Repository
   Intelligence Dashboard foundation for Repository Health, Capability Registry,
   Architecture Registry, ADR Summary, Current Mission, Future Candidates, and

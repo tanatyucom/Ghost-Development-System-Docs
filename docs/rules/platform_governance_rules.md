@@ -99,6 +99,51 @@ Promotion requires:
 
 Similarity alone is not enough for promotion.
 
+Implementation repositories may keep local operating documents, but durable
+project-specific rules must be treated as GDS-managed Local Rule candidates.
+Local repository documents must not claim to be the canonical GDS source unless
+GDS has explicitly adopted them.
+
+When a local document mirrors a GDS-managed Local Rule, it should identify:
+
+- canonical owner;
+- local mirror path;
+- project scope;
+- source Q or completion report.
+
+## Platform Candidate Workspace Rule
+
+When an implementation repository needs a temporary isolation area for
+components that may later become GDS Platform, Ghost SDK, public repository, or
+shared Ghost project candidates, prefer:
+
+```text
+platform_candidates/
+```
+
+Creating this folder requires a separate Q and Human Approval. The folder name
+does not approve runtime use, SDK status, Platform Standard status, automatic
+promotion, commit, or push.
+
+`to_github/` is not the preferred default because it is publication-specific
+and does not cover SDK or Platform promotion paths.
+
+## Adapter-Only Execution Candidate
+
+Adapter-Only Execution is a candidate policy, not an adopted rule.
+
+Candidate shape:
+
+```text
+Production Usage
+  -> Domain
+  -> Registered Adapter
+  -> Engine / Center
+```
+
+Future adoption requires operational validation, compatibility review,
+exception rules for tests / validation, and Human Approval.
+
 ## Vision-Driven Bottom-Up Rule
 
 GDS improvement may be discovered bottom-up through real work, but it must stay

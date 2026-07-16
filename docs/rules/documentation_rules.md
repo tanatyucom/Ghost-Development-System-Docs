@@ -52,6 +52,20 @@ Artifact location is part of documentation quality. A missing Q artifact path,
 wrong project folder, wrong status folder, or missing completion report pairing
 should be treated as a documentation review issue.
 
+Implementation repositories may use a mission-phase folder in the `<status>`
+position when this improves recovery and matches the repository's current
+operation, for example:
+
+```text
+docs/requests/gameghost/repository_intelligence/<Q_ID>_<short_topic>/
+docs/requests/gameghost/quality_stabilization/<Q_ID>_<short_topic>/
+```
+
+This is a compatibility allowance, not a new universal default. The workspace
+must still keep `request.md`, `completion_report.md`, and attachments paired
+under the Q ID folder, and the project profile or completion report should make
+the status / phase meaning clear.
+
 ### AI Repository Knowledge Access
 
 When public AI knowledge entry points change, regenerate and validate:
