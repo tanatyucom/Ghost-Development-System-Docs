@@ -14,6 +14,8 @@ Reference points:
 - Rule: `docs/rules/external_source_access_rules.md`
 - Completion Checklist: `templates/completion_checklist_template.md`
 - Completion Report Template: `templates/completion_report_template.md`
+- Repository Intelligence Dashboard Foundation:
+  `docs/architecture/repository_intelligence_dashboard_foundation.md`
 
 Core flow:
 
@@ -814,6 +816,37 @@ Repository Quality Audit checks:
 - Required Artifact Review Needed
 - Archived Review Needed
 - Registry Structure / Roadmap Consistency
+
+## Platform Governance and ADR Index
+
+Platform Governance and Experimental Development defines the GDS rules for
+Temporary Assembly, Core + Adapter experiments, Architecture Promotion,
+Canonical Knowledge Ownership, Local Rule lifecycle, and Vision-Driven
+Bottom-Up Development.
+
+Reference points:
+
+- ADR Index: `docs/adr/README.md`
+- Three Pillars ADR:
+  `docs/adr/ADR-GDS-001_ghost_platform_three_pillars.md`
+- Repository Component Templates ADR:
+  `docs/adr/ADR-GDS-002_repository_component_templates.md`
+- Canonical Knowledge Ownership ADR:
+  `docs/adr/ADR-GDS-003_canonical_knowledge_ownership_and_local_artifact_governance.md`
+- Architecture:
+  `docs/architecture/platform_governance_and_experimental_development.md`
+- Rules:
+  `docs/rules/platform_governance_rules.md`
+- Workflow:
+  `docs/workflow/architecture_promotion_lifecycle.md`
+
+Boundary:
+
+- ADR acceptance records the decision.
+- Rule / Template / Workflow / SDK promotion remains explicit scope.
+- Core + Adapter is recommended when evidence supports it; it is not mandatory.
+- Temporary Assembly is safe, observable, recoverable experimentation, not
+  careless prototyping or production mutation.
 
 ## Startup Checklist Index
 

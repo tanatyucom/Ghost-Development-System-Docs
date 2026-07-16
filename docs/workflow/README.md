@@ -69,6 +69,10 @@ gate.
 - `review_center_workflow.md`: workflow from source artifacts through review
   plugin / adapter, Review Center session, human decision, save / resume,
   result export, domain gate adapter, gate readiness, and completion report.
+- `architecture_promotion_lifecycle.md`: workflow from Problem, Q,
+  Implementation, Completion Report, Operational Validation, Repository
+  Operation, Maturity & Evidence Confirmation, Architecture Decision, ADR, and
+  optional GDS Rule / Template / Workflow / SDK promotion.
 - Documentation Synchronization:
   `documentation_synchronization_workflow.md` is the gate workflow for keeping
   README / folder index, AI Repository Index, completion checklist, completion
@@ -164,6 +168,8 @@ Idea
   -> Conversation Insight, when conversation-origin philosophy or long-term
      operation knowledge should be preserved
   -> Innovation Pipeline, when a reusable experiment may become Platform Standard
+  -> Architecture Promotion Lifecycle, when a field result may become an ADR or
+     GDS standard
   -> Platform Registry Update Artifact, when Platform Standard Registry changes
   -> Roadmap2 Knowledge Salvage, when Roadmap2-only knowledge remains
   -> Human Review

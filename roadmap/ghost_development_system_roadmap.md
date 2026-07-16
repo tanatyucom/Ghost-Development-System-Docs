@@ -173,10 +173,17 @@ Candidate scope:
 - Repository Health.
 - Plugin Architecture.
 - Explicit Plugin Registry.
+- Platform Governance and Experimental Development.
+- ADR-backed Architecture Promotion Lifecycle.
 - Repository Context Validation Plugin proof.
 - OCR Vertical Slice as first Platform Migration proof.
 - SDK Foundation requirements extraction after OCR.
 - Project Adoption Model candidate.
+
+Platform Governance and Experimental Development records how Temporary
+Assembly, Core + Adapter, canonical knowledge ownership, Local Rule lifecycle,
+and Architecture Promotion are handled before future SDK or platform
+implementation work.
 
 Exit direction:
 

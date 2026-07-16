@@ -278,6 +278,7 @@ GameGhost など各Projectが所有するもの:
 
 ## Related Documents
 
+- `docs/adr/README.md`
 - `roadmap/README.md`
 - `roadmap/ghost_development_system_roadmap.md`
 - `templates/roadmap_template.md`

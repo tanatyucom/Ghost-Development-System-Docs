@@ -24,6 +24,9 @@ Review Center placement policy.
 Review Center Rules define Human Review Session Manager behavior, explicit
 approval, persistence, plugin registration, gate export, and legacy migration
 guards.
+Platform Governance Rules define Temporary Assembly, Core + Adapter
+Experimental Pattern, Architecture Promotion Lifecycle, Canonical Knowledge
+Ownership, Local Rule lifecycle, and Vision-Driven Bottom-Up Development.
 Documentation Synchronization Rules define the gate for keeping README files,
 folder indexes, AI Repository Index, completion checklist, completion report,
 and repository quality audit aligned after documentation changes.
@@ -117,6 +120,10 @@ promoted.
   Center, including platform / domain boundary, GUI name, persistence, missing
   artifacts, correction history, plugin registration, gate export, and legacy
   behavior.
+- `platform_governance_rules.md`: platform governance, Temporary Assembly,
+  Core + Adapter Experimental Pattern, Architecture Promotion, canonical
+  knowledge ownership, Local Rule lifecycle, and Vision-Driven Bottom-Up
+  Development rules.
 - `documentation_synchronization_rules.md`: rules for detecting documentation
   changes that require README, folder index, AI Repository Index, completion
   checklist, completion report, and repository quality synchronization before
@@ -181,15 +188,16 @@ promoted.
 26. `migration_first_rules.md`
 27. `platform_component_rules.md`
 28. `review_center_rules.md`
-29. `documentation_synchronization_rules.md`
-30. `pip_case_knowledge_base_rules.md`
-31. `concept_id_naming_rules.md`
-32. `roadmap2_knowledge_salvage_rules.md`
-33. `workflow_rules.md`
-34. `quality_rules.md`
-35. `ai_collaboration_rules.md`
-34. `git_rules.md`
-35. `script_architecture_rules.md`
+29. `platform_governance_rules.md`
+30. `documentation_synchronization_rules.md`
+31. `pip_case_knowledge_base_rules.md`
+32. `concept_id_naming_rules.md`
+33. `roadmap2_knowledge_salvage_rules.md`
+34. `workflow_rules.md`
+35. `quality_rules.md`
+36. `ai_collaboration_rules.md`
+37. `git_rules.md`
+38. `script_architecture_rules.md`
 
 ## Update Policy
 

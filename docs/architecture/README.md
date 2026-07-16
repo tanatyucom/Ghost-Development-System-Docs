@@ -26,6 +26,12 @@ runtime behavior.
 - `plugin_architecture_standard.md`: Plugin Architecture Standard for explicit
   registry, `PLUGIN_INFO`, `PluginContext`, `PluginResult`, ownership boundary,
   lifecycle, and promotion from Internal Module to Platform Plugin.
+- `repository_intelligence_dashboard_foundation.md`: read-only Repository
+  Intelligence Dashboard foundation for Repository Health, Capability Registry,
+  Architecture Registry, ADR Summary, Current Mission, Future Candidates, and
+  Repository Scanner Summary. It defines metadata and integration boundaries
+  without implementing UI, database, scanner runtime, automation, promotion, or
+  repository mutation.
 - `platform_discoverability_and_component_standard.md`: Platform folder,
   component classification, naming suffix, 3 second discoverability, migration
   criteria, legacy placement, future Ghost compatibility, and Review Center
@@ -34,6 +40,10 @@ runtime behavior.
   GameGhost to Ghost Platform, including priority matrix, platform / adapter
   boundary, legacy policy, bootstrap order, AnimeGhost check, future Ghost
   compatibility, and the Platform Evolution statement.
+- `platform_governance_and_experimental_development.md`: platform governance,
+  Temporary Assembly Principle, Core + Adapter Experimental Pattern,
+  Architecture Promotion Lifecycle, Canonical Knowledge Ownership, Local Rule
+  lifecycle, and Vision-Driven Bottom-Up Development.
 - `review_center_architecture.md`: Review Center architecture for shared human
   review session management, artifact presentation, decision capture,
   persistence, result export, gate readiness, and plugin / adapter boundary.
@@ -146,10 +156,20 @@ or missing context, not for perfect memory retention.
   GameGhost-derived capabilities toward Platform. It defines migration priority,
   platform / adapter split, legacy cleanup timing, bootstrap order, and
   cross-Ghost validation before runtime movement.
+- Platform Governance and Experimental Development owns the governance boundary
+  for ADR-backed platform decisions, Temporary Assembly, Core + Adapter
+  experiments, canonical knowledge ownership, Local Rule lifecycle, and
+  Architecture Promotion. It does not approve SDK completion, runtime
+  implementation, automatic promotion, or bulk migration.
 - Review Center Architecture owns the shared Human Review Session Manager
   boundary. It displays artifacts, captures human decisions, manages progress,
   persists review state, exports results, and leaves domain correctness to
   plugins, adapters, and human reviewers.
+- Repository Intelligence Dashboard Foundation owns the read-only visibility
+  layer for repository health, registries, governance, architecture, current
+  mission, future candidates, and scanner summaries. It does not own canonical
+  sources, automatic promotion, UI implementation, database implementation,
+  scanner runtime, commit, push, or repository mutation.
 - Launcher owns the user entry point.
 
 ## Database Philosophy Summary
@@ -310,6 +330,9 @@ Platform First Migration Strategy applies that component model to the first
 migration sequence and makes Review Center the P0 candidate.
 Review Center Architecture defines the P0 candidate boundary before any
 GameGhost runtime implementation or Steam OCR adapter extraction begins.
+Repository Intelligence Dashboard Foundation defines the visibility layer that
+can later sit between Repository Scanner output and Command Center, while
+keeping canonical documents and Human Approval as the authority.
 
 Project Adoption and Hotfix parking lot candidates are preserved in
 `roadmap/ghost_development_system_roadmap.md`,
@@ -332,6 +355,7 @@ Do not use this folder to approve Future Candidates by implication.
 - `docs/architecture/platform_standard_registry.md`
 - `docs/architecture/platform_discoverability_and_component_standard.md`
 - `docs/architecture/platform_first_migration_strategy.md`
+- `docs/architecture/repository_intelligence_dashboard_foundation.md`
 - `docs/architecture/review_center_architecture.md`
 - `docs/architecture/gameghost_platform_migration_architecture.md`
 - `docs/architecture/gameghost_workspace_repository_layout.md`

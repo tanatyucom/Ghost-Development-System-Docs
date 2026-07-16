@@ -70,6 +70,13 @@ Rules follow these principles:
 - Repository First.
 - Download First.
 - AI Cognitive Load Reduction.
+- Platform Governance.
+- Temporary Assembly.
+- Core + Adapter Experimental Pattern.
+- Architecture Promotion Lifecycle.
+- Canonical Knowledge Ownership.
+- Local Rule Lifecycle.
+- Vision-Driven Bottom-Up Development.
 
 `rules.md` is the index and priority document. Detailed rules belong in their
 own files.
@@ -102,6 +109,7 @@ own files.
 - `debug_artifact_review_rules.md`
 - `debug_escalation_ladder_rules.md`
 - `migration_first_rules.md`
+- `platform_governance_rules.md`
 - `pip_case_knowledge_base_rules.md`
 - `concept_id_naming_rules.md`
 - `roadmap2_knowledge_salvage_rules.md`

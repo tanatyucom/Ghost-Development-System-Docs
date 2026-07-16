@@ -1,5 +1,18 @@
 # Ghost Development System Docs
 
+## Platform Governance / ADR
+
+GDS platform governance, accepted ADRs, Temporary Assembly, Core + Adapter
+experimental development, Architecture Promotion Lifecycle, Canonical Knowledge
+Ownership, Local Rule lifecycle, and Vision-Driven Bottom-Up Development start
+from:
+
+- [`docs/adr/README.md`](docs/adr/README.md)
+- [`docs/architecture/platform_governance_and_experimental_development.md`](docs/architecture/platform_governance_and_experimental_development.md)
+- [`docs/architecture/repository_intelligence_dashboard_foundation.md`](docs/architecture/repository_intelligence_dashboard_foundation.md)
+- [`docs/rules/platform_governance_rules.md`](docs/rules/platform_governance_rules.md)
+- [`docs/workflow/architecture_promotion_lifecycle.md`](docs/workflow/architecture_promotion_lifecycle.md)
+
 Ghost Development System の公式 Knowledge Base です。
 
 このリポジトリは、Ghost Development System を人間主導・AI 支援で開発する
