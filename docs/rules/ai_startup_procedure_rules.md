@@ -13,7 +13,8 @@ AI Startup Procedure は、AI が GDS 作業を始める前に読む順番と確
 AI は実装、レビュー、文書更新、Q 実行を始める前に、次の順番で前提を確認します。
 
 ```text
-AI Repository Index
+Capability Verification, when capability is asked or uncertain
+  -> AI Repository Index
   -> Daily Knowledge Source Review, when first major project work of the day
   -> Information Package, when provided
   -> Current Q File
@@ -36,6 +37,16 @@ AI Repository Index
 取り違えないための開始手順です。
 
 ## Required Checks
+
+### Capability Verification
+
+ユーザーが capability を問う場合、または repository、tool、permission、connected
+service、current chat limitation が不明な場合、AI は計画前に capability を確認します。
+
+AI は未検証の状態で `できます` と断定してはいけません。
+
+Details follow `docs/workflow/capability_verification_first.md` and
+`docs/rules/capability_disclosure_rule.md`.
 
 ### AI Repository Index
 

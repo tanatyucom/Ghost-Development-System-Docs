@@ -22,6 +22,7 @@ Artifact Generation / Documentation Update
 ## Required Checks
 
 - Startup Completion Evidence passed or limitation recorded.
+- Capability disclosure still matches actual work, when capability was discussed.
 - Correct repository scope.
 - Correct output format requested by the user.
 - User language preference respected.
@@ -80,6 +81,9 @@ Pre-Response Verification Gate:
 - Final response ready:
 ```
 
+If capability was discussed, the final response must not claim more capability
+than was verified.
+
 ## Out Of Scope
 
 - Automatic enforcement.
@@ -91,6 +95,8 @@ Pre-Response Verification Gate:
 ## Related Documents
 
 - `templates/ai_response_checklist_v2.md`
+- `docs/workflow/capability_verification_first.md`
+- `docs/rules/capability_disclosure_rule.md`
 - `templates/response_verification_checklist.md`
 - `docs/workflow/startup_completion_evidence.md`
 - `docs/workflow/startup_completion_gate.md`

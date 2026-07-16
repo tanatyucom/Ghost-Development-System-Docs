@@ -23,6 +23,9 @@ gate.
 - `ai_startup_procedure.md`: AI reading order and startup procedure before
   Startup Checklist, Q execution, implementation, review, or documentation
   update.
+- `capability_verification_first.md`: workflow for verifying current AI,
+  repository, tool, permission, connected service, and chat capabilities before
+  answering whether a task can be done.
 - `ai_daily_operation_cycle.md`: daily operating cycle that connects AI
   Startup Procedure, Q review, implementation, verification, human review,
   Completion Checklist, commit / push, Knowledge Update, Repository Update,
@@ -140,6 +143,7 @@ Innovation Pipeline records should use
 ```text
 Idea
   -> AI Daily Operation Cycle
+  -> Capability Verification, when capability is asked or uncertain
   -> AI Startup Procedure
   -> Startup Checklist
   -> Startup Completion Evidence

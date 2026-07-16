@@ -79,6 +79,9 @@ implementation, review, documentation update, or Q execution.
 
 Reference points:
 
+- Capability Verification First: `docs/workflow/capability_verification_first.md`
+- Capability Disclosure Rule: `docs/rules/capability_disclosure_rule.md`
+- Capability Decision Matrix: `templates/capability_decision_matrix.md`
 - Rules: `docs/rules/ai_startup_procedure_rules.md`
 - Workflow: `docs/workflow/ai_startup_procedure.md`
 - Startup Checklist Rules: `docs/rules/startup_checklist_rules.md`
@@ -100,7 +103,8 @@ Reference points:
 Core flow:
 
 ```text
-AI Repository Index
+Capability Verification, when capability is asked or uncertain
+  -> AI Repository Index
   -> Repository Root Validation
   -> GDS Core Rules / Workflow
   -> Target Project Profile

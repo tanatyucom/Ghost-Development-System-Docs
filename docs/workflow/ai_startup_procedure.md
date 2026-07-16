@@ -12,6 +12,7 @@ Startup Checklist が「開始直前のチェックリスト」なら、AI Start
 
 ```text
 Start
+  -> Capability Verification, when capability is asked or uncertain
   -> AI Repository Index Check
   -> Daily Knowledge Source Review, when first major project work of the day
   -> Information Package Check, when provided
@@ -31,6 +32,24 @@ Start
 ```
 
 ## Step Details
+
+### 0. Capability Verification
+
+ユーザーが「このAIでできるか」「このチャットで完了できるか」「このtoolを使えるか」
+など capability を問う場合、または能力・権限・接続状態が不明な場合は、計画前に
+Capability Verification First を実行します。
+
+確認すること:
+
+- Memory availability.
+- Repository accessibility.
+- Tool availability.
+- Commit / Push authority.
+- Connected service availability.
+- Current chat limitations.
+- Alternative workflows when unavailable.
+
+Details follow `capability_verification_first.md`.
 
 ### 1. AI Repository Index Check
 

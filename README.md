@@ -62,6 +62,8 @@ AI が GDS 作業を開始する前に、毎回同じ順番で前提を確認し
 
 Start from:
 
+- [`docs/workflow/capability_verification_first.md`](docs/workflow/capability_verification_first.md)
+- [`docs/rules/capability_disclosure_rule.md`](docs/rules/capability_disclosure_rule.md)
 - [`docs/rules/ai_startup_procedure_rules.md`](docs/rules/ai_startup_procedure_rules.md)
 - [`docs/workflow/ai_startup_procedure.md`](docs/workflow/ai_startup_procedure.md)
 - [`docs/workflow/startup_completion_evidence.md`](docs/workflow/startup_completion_evidence.md)
@@ -102,7 +104,8 @@ python scripts/validate_encoding_regression.py --all
 標準順序:
 
 ```text
-AI Repository Index
+Capability Verification, when capability is asked or uncertain
+  -> AI Repository Index
   -> Repository Root Validation
   -> GDS Core Rules / Workflow
   -> Target Project Profile

@@ -12,6 +12,7 @@ Core rules include Evidence First, Purpose-Oriented Naming, Human Approval Gate,
 Knowledge Before Automation, Knowledge Poka-Yoke / Design For Forgetfulness,
 Context Recovery Principle,
 UTF-8 Read Rule, Encoding Regression Prevention,
+Capability Disclosure,
 External Source Access / AI Repository Knowledge Access, AI Startup Procedure, Startup Checklist,
 Startup Completion Evidence / Gate,
 Repository Root Validation, AI Proactive Proposal,
@@ -55,6 +56,9 @@ promoted.
   rewrite regressions.
 - `external_source_access_rules.md`: Raw URL Index and external public
   repository access rule for ChatGPT, Codex, and other AI systems.
+- `capability_disclosure_rule.md`: rule requiring AI to verify and disclose
+  current capability before planning or execution when capability is asked or
+  uncertain.
 - `ai_startup_procedure_rules.md`: AI startup reading order and stop
   conditions before implementation, review, documentation update, or Q
   execution begins. Includes Information Package check and Research Task

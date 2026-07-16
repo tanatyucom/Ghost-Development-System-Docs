@@ -78,6 +78,18 @@ Completion Report は Context Recovery Principle を支える artifact です。
 - Missing startup evidence:
 - Startup limitations:
 
+## Capability Verification
+
+- Capability Verification required:
+- Capability checked before planning:
+- Capability disclosure provided:
+- Can do:
+- Cannot do:
+- Need approval:
+- Need user input:
+- Alternative workflow:
+- Unverified capability claim avoided:
+
 ## Pre-Response Verification Gate
 
 - Gate result:

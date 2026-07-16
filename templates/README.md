@@ -36,6 +36,9 @@ AI response checklist templates help humans and AI verify the final response
 before delivery, including repository scope, requested output format, approval
 boundaries, commit / push state, and remaining issues.
 
+Capability decision templates help humans and AI distinguish verified ability,
+limitations, approval needs, and alternative workflows before planning.
+
 Beginner & Future Self Test templates help humans and AI check whether a
 managed artifact is understandable to beginners, new AI sessions, returning
 project owners, and future selves without relying on hidden chat context.
@@ -147,6 +150,7 @@ restore guidance.
 - `completion_checklist_template.md`
 - `ai_response_checklist_v2.md`
 - `response_verification_checklist.md`
+- `capability_decision_matrix.md`
 - `Q_TEMPLATE.md`
 - `ai_implementation_request.md`
 - `codex_review_template.md`

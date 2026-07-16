@@ -107,6 +107,9 @@ reports, and documentation requests can start from a clear reference.
 - `artifact_metadata_reference_examples.md`: good and bad examples for
   Structured Artifact Metadata YAML front matter across Q, Completion Report,
   Information Package, Multi-AI Handoff, Registry Update, and Health Report.
+- `capability_examples.md`: good and bad examples for verifying capability
+  before answering whether the current AI, repository, tool, permission, or
+  connected service can complete a task.
 - `repository_information.md`: example of repository boundaries, source of
   truth, scope guard, and completion criteria.
 - `authority_matrix.md`: example edit and reference authority matrix.
