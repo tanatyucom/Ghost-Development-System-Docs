@@ -18,6 +18,10 @@ Startup checklist templates help humans and AI confirm repository boundaries,
 applicable rules, methodologies, Q artifact status, scope, and commit policy
 before implementation or review begins.
 
+Startup verification checklist templates help humans and AI record evidence
+that canonical sources were reviewed before Q creation, implementation, review,
+or documentation update.
+
 Repository root validation templates help confirm the actual Git repository root
 matches the expected Working Repository before implementation, review, commit,
 tag, or release work begins.
@@ -126,6 +130,7 @@ restore guidance.
 ### AI Collaboration
 
 - `startup_checklist_template.md`
+- `startup_verification_checklist.md`
 - `daily_operation_checklist_template.md`
 - `repository_root_validation_template.md`
 - `collaborative_decision_template.md`

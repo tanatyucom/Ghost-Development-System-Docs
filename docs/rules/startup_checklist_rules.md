@@ -35,6 +35,8 @@ Validation、GDS Core Rules / Templates、Target Project Profile を順に確認
 - Pending Insight Review.
 - Knowledge Suggestion Assistant.
 - Beginner & Future Self Test, when durable documentation or handoff quality is relevant.
+- Startup Completion Evidence.
+- Startup Completion Gate.
 - Research Task Detection.
 - Repository Information.
 - Q Format.
@@ -266,6 +268,34 @@ Research Taskの場合、`templates/research_mission_template.md` を読み、
 Goal、Scope、Out of Scope、Required Evidence、Validation Methodを確認してから
 Research Mission Workflowへ進みます。
 
+### Startup Completion Evidence
+
+Startup Checklist の結果は、作業開始前に Startup Completion Evidence として
+確認可能な証跡にします。
+
+確認すること:
+
+- Memory Check completed.
+- Startup reviewed.
+- AI Repository Index reviewed.
+- Current Mission / Current Q reviewed.
+- Canonical `templates/Q_TEMPLATE.md` reviewed, when Q creation or revision is involved.
+- Related Rules reviewed.
+- Related Workflows reviewed.
+- Related ADRs / Architecture reviewed, when relevant.
+- Constraint Check completed.
+
+### Startup Completion Gate
+
+Startup Completion Gate は、Startup Completion Evidence を確認してから
+implementation / review / documentation update / Q creation へ進むための gate です。
+
+Gate result:
+
+- PASS: 必須証跡が揃っている。
+- PASS WITH LIMITATION: 未確認事項の理由と次Actionが明記されている。
+- BLOCKED: repository、Q、scope、commit policy、Human Approval などに重大な未確認または矛盾がある。
+
 ## Startup Checklist Output
 
 Startup Checklist の結果は、必要に応じて短く記録します。
@@ -295,6 +325,9 @@ Startup Checklist:
 - Conversation Insight Draft approved:
 - Research Task Detection:
 - Research Mission required:
+- Startup Completion Evidence:
+- Startup Completion Gate:
+- Missing startup evidence:
 - Q artifact status:
 - Commit policy:
 - Repository root validation:
@@ -320,11 +353,14 @@ Startup Checklist は、既存 Knowledge を増やすためではなく、既存
 
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/workflow/ai_startup_procedure.md`
+- `docs/workflow/startup_completion_evidence.md`
+- `docs/workflow/startup_completion_gate.md`
 - `docs/rules/ai_startup_procedure_rules.md`
 - `docs/rules/research_mission_rules.md`
 - `docs/rules/conversation_insight_capture_rules.md`
 - `docs/architecture/context_aware_knowledge_suggestion_assistant.md`
 - `templates/startup_checklist_template.md`
+- `templates/startup_verification_checklist.md`
 - `templates/research_mission_template.md`
 - `templates/conversation_insight_template.md`
 - `templates/information_package_template.md`

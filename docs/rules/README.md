@@ -13,6 +13,7 @@ Knowledge Before Automation, Knowledge Poka-Yoke / Design For Forgetfulness,
 Context Recovery Principle,
 UTF-8 Read Rule, Encoding Regression Prevention,
 External Source Access / AI Repository Knowledge Access, AI Startup Procedure, Startup Checklist,
+Startup Completion Evidence / Gate,
 Repository Root Validation, AI Proactive Proposal,
 Completion Checklist, Completion Report, Hotfix Policy, Beginner & Future Self Test, Research Mission, Conversation Insight Capture, Pending Conversation Insight Review, Artifact First, Audit Before Repair, Debug Artifact Review, Debug Escalation Ladder,
 Migration First, PIP Case Knowledge Base, and Roadmap2 Knowledge Salvage. Concept Promotion is
@@ -63,6 +64,11 @@ promoted.
 - `startup_checklist_rules.md`: startup confirmation rule for repository,
   scope, applicable rules, methodologies, Q artifacts, and commit policy before
   implementation or review begins.
+- Startup Completion Evidence / Gate is defined in
+  `docs/workflow/startup_completion_evidence.md` and
+  `docs/workflow/startup_completion_gate.md` as the proof layer after Startup
+  Checklist and before Q creation, implementation, review, or documentation
+  update.
 - `repository_root_validation_rules.md`: rule for validating actual Git root
   against Working Repository before implementation, review, commit, tag, or
   release work begins.

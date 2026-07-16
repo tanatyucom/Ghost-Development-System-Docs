@@ -83,6 +83,9 @@ Reference points:
 - Workflow: `docs/workflow/ai_startup_procedure.md`
 - Startup Checklist Rules: `docs/rules/startup_checklist_rules.md`
 - Startup Checklist Template: `templates/startup_checklist_template.md`
+- Startup Completion Evidence: `docs/workflow/startup_completion_evidence.md`
+- Startup Completion Gate: `docs/workflow/startup_completion_gate.md`
+- Startup Verification Checklist: `templates/startup_verification_checklist.md`
 - Project Profiles: `project_profiles/README.md`
 - UTF-8 Read Rule: `docs/rules/utf8_read_rules.md`
 - Encoding Regression Prevention:
@@ -103,6 +106,8 @@ AI Repository Index
   -> Target Project Profile
   -> Current Q File
   -> Startup Checklist
+  -> Startup Completion Evidence
+  -> Startup Completion Gate
   -> Scope / Out of Scope
   -> Implementation / Review Start
 ```

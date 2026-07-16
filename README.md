@@ -64,7 +64,10 @@ Start from:
 
 - [`docs/rules/ai_startup_procedure_rules.md`](docs/rules/ai_startup_procedure_rules.md)
 - [`docs/workflow/ai_startup_procedure.md`](docs/workflow/ai_startup_procedure.md)
+- [`docs/workflow/startup_completion_evidence.md`](docs/workflow/startup_completion_evidence.md)
+- [`docs/workflow/startup_completion_gate.md`](docs/workflow/startup_completion_gate.md)
 - [`templates/startup_checklist_template.md`](templates/startup_checklist_template.md)
+- [`templates/startup_verification_checklist.md`](templates/startup_verification_checklist.md)
 
 Windows PowerShell 5.1 で Q file や日本語 Markdown を読む場合は UTF-8 を
 明示します。
@@ -105,6 +108,8 @@ AI Repository Index
   -> Target Project Profile
   -> Current Q File
   -> Startup Checklist
+  -> Startup Completion Evidence
+  -> Startup Completion Gate
   -> Scope / Out of Scope
   -> Implementation / Review Start
 ```

@@ -35,6 +35,8 @@ Start
   -> Proactive Proposal Check
   -> Dirty Workspace / Commit Policy Confirmation
   -> Checklist Complete
+  -> Startup Completion Evidence
+  -> Startup Completion Gate
   -> Normal Implementation / Review Start, when not research
   -> Research Mission, when research
 ```
@@ -352,6 +354,30 @@ AI は、より安全または短い進め方、repository / scope conflict、ru
 methodology conflict、maintenance risk、knowledge opportunity を検知した場合、
 勝手に実装変更せず、根拠と影響を添えて提案します。
 
+### Startup Completion Evidence
+
+Checklist Complete の後、実装やレビューへ進む前に Startup Completion Evidence を
+確認します。
+
+確認すること:
+
+- Memory Check が完了している。
+- AI Repository Index、Current Q / Mission、関連 Rules / Workflows / ADRs が
+  確認されている。
+- Q 作成や revision の場合、canonical `templates/Q_TEMPLATE.md` が確認されている。
+- Constraint Check が完了している。
+
+Details follow `startup_completion_evidence.md`.
+
+### Startup Completion Gate
+
+Startup Completion Evidence を確認し、Gate result を PASS / PASS WITH LIMITATION /
+BLOCKED のいずれかで記録します。
+
+BLOCKED の場合、作業を開始せず、不足証跡または指示矛盾を解消します。
+
+Details follow `startup_completion_gate.md`.
+
 ## Minimal Startup Checklist
 
 短い作業では、以下の最小形式でよいです。
@@ -400,6 +426,8 @@ Checklist 自体が再利用、レビュー、Git 管理対象になる場合は
 - Daily Knowledge Source Review が確認されている。
 - Outstanding Review Notification と Related Knowledge Suggestions の要否が確認されている。
 - Research Task の場合、Research Mission の入口が確認されている。
+- Startup Completion Evidence が確認されている。
+- Startup Completion Gate が PASS または PASS WITH LIMITATION になっている。
 - Commit policy が確認されている。
 - Checklist 完了後に implementation / review を開始できる。
 
@@ -407,6 +435,8 @@ Checklist 自体が再利用、レビュー、Git 管理対象になる場合は
 
 - `docs/rules/startup_checklist_rules.md`
 - `docs/rules/ai_startup_procedure_rules.md`
+- `docs/workflow/startup_completion_evidence.md`
+- `docs/workflow/startup_completion_gate.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/rules/research_mission_rules.md`
 - `docs/rules/conversation_insight_capture_rules.md`
@@ -420,6 +450,7 @@ Checklist 自体が再利用、レビュー、Git 管理対象になる場合は
 - `templates/pending_conversation_insight_template.md`
 - `templates/information_package_template.md`
 - `templates/startup_checklist_template.md`
+- `templates/startup_verification_checklist.md`
 - `examples/startup_checklist_examples.md`
 - `docs/workflow/README.md`
 - `docs/rules/rules.md`

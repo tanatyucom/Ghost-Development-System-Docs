@@ -62,6 +62,22 @@ Completion Report は Context Recovery Principle を支える artifact です。
 - Not verified:
 - Verification limitations:
 
+## Startup Completion Evidence
+
+- Startup Completion Gate result:
+- Startup evidence artifact:
+- Memory Check completed:
+- AI Repository Index reviewed:
+- Current Q / Mission reviewed:
+- Canonical `templates/Q_TEMPLATE.md` reviewed, when Q creation or revision was involved:
+- Related Rules reviewed:
+- Related Workflows reviewed:
+- Related ADRs / Architecture reviewed:
+- Repository Root Validation completed:
+- Constraint Check completed:
+- Missing startup evidence:
+- Startup limitations:
+
 標準候補:
 
 ```powershell

@@ -20,6 +20,8 @@ Start
   -> GDS Core Rules / Templates Check
   -> Target Project Profile Check
   -> Startup Checklist
+  -> Startup Completion Evidence
+  -> Startup Completion Gate
   -> Scope / Out of Scope Confirmation
   -> Conversation Insight Detection
   -> Pending Insight Review, when pending candidates exist
@@ -204,7 +206,36 @@ Startup Checklist:
 - Ready:
 ```
 
-### 9. Scope / Out of Scope Confirmation
+### 9. Startup Completion Evidence
+
+Startup Checklist の後、作業開始前に Startup Completion Evidence を確認します。
+
+確認すること:
+
+- Memory Check completed.
+- AI Startup Procedure reviewed.
+- AI Repository Index reviewed.
+- Current Mission / Current Q reviewed.
+- Canonical `templates/Q_TEMPLATE.md` reviewed, when Q creation or revision is involved.
+- Related Rules reviewed.
+- Related Workflows reviewed.
+- Related ADRs / Architecture reviewed, when relevant.
+- Repository Root Validation completed.
+- Constraint Check completed.
+
+Details follow `startup_completion_evidence.md`.
+
+### 10. Startup Completion Gate
+
+Required evidence が揃っているかを確認し、Gate result を
+PASS / PASS WITH LIMITATION / BLOCKED のいずれかで判断します。
+
+Q 作成、implementation、review、documentation update は、この Gate の後に
+開始します。
+
+Details follow `startup_completion_gate.md`.
+
+### 11. Scope / Out of Scope Confirmation
 
 実装・レビュー・文書更新を始める直前に、今回触ってよい対象と触ってはいけない対象を
 確認します。
@@ -216,7 +247,7 @@ Startup Checklist:
 - generated artifacts を Git 管理対象にするか。
 - commit してよい Q か。
 
-### 10. Conversation Insight Detection
+### 12. Conversation Insight Detection
 
 Scope確認後、今回の会話やQに Conversation Insight Candidate が含まれるか判定します。
 

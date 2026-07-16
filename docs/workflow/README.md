@@ -15,6 +15,11 @@ gate.
 - `startup_checklist_workflow.md`: startup confirmation flow for repository,
   Q artifacts, applicable rules, methodologies, scope, dirty workspace, and
   commit policy before implementation or review begins.
+- `startup_completion_evidence.md`: evidence standard showing which canonical
+  sources were reviewed before Q creation, implementation, review, or
+  documentation update.
+- `startup_completion_gate.md`: verification gate after Startup Checklist and
+  before Q creation, implementation, review, or documentation update.
 - `ai_startup_procedure.md`: AI reading order and startup procedure before
   Startup Checklist, Q execution, implementation, review, or documentation
   update.
@@ -134,6 +139,8 @@ Idea
   -> AI Daily Operation Cycle
   -> AI Startup Procedure
   -> Startup Checklist
+  -> Startup Completion Evidence
+  -> Startup Completion Gate
   -> Repository Root Validation
   -> Information Package Check, when provided
   -> Current Q Check
@@ -267,6 +274,20 @@ Start
 ```
 
 Details follow `startup_checklist_workflow.md`.
+
+## Startup Completion Gate
+
+After Startup Checklist, use Startup Completion Evidence to record the minimum
+proof that canonical sources were checked.
+
+```text
+Startup Checklist
+  -> Startup Completion Evidence
+  -> Startup Completion Gate
+  -> Q Creation / Implementation / Review
+```
+
+Details follow `startup_completion_evidence.md` and `startup_completion_gate.md`.
 
 ## Repository Root Validation Workflow
 

@@ -69,6 +69,11 @@
 - Research Mission required:
 - Research Mission artifact:
 - Session Health checked:
+- Startup Completion Evidence required:
+- Startup Completion Evidence completed:
+- Startup Completion Gate result:
+- Missing startup evidence:
+- Constraint Check completed:
 - Current Working Directory:
 - Git repository root:
 - Root matches Working Repository:
@@ -89,6 +94,34 @@
 - Production Repository:
 - Backup / Reference Repository:
 - Safe to start:
+
+## Startup Completion Evidence
+
+- Memory Check completed:
+- AI Startup Procedure reviewed:
+- Startup Checklist reviewed:
+- AI Repository Index reviewed:
+- Current Mission reviewed:
+- Current Q reviewed:
+- Canonical `templates/Q_TEMPLATE.md` reviewed, when Q creation or revision is involved:
+- Related Rules reviewed:
+- Related Workflows reviewed:
+- Related ADRs / Architecture reviewed:
+- Repository Root Validation completed:
+- Scope / Out of Scope confirmed:
+- Commit / Push policy confirmed:
+- Constraint Check completed:
+
+## Startup Completion Gate
+
+- Gate result: PASS / PASS WITH LIMITATION / BLOCKED
+- Evidence artifact:
+- Missing evidence:
+- Limitation:
+- Human confirmation required:
+- Ready to create Q:
+- Ready to implement:
+- Ready to review:
 
 ## Applicable Rules
 
