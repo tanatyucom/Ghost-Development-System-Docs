@@ -259,6 +259,7 @@ Reference points:
 
 - Master Roadmap: `roadmap/ghost_development_system_roadmap.md`
 - Platform First Migration Roadmap: `roadmap/platform_first_migration_roadmap.md`
+- Platform Evolution Track: `roadmap/platform_evolution_track.md`
 - Platform First Migration Strategy:
   `docs/architecture/platform_first_migration_strategy.md`
 - Platform Discoverability Standard:
@@ -494,6 +495,8 @@ Reference points:
   `docs/architecture/platform_first_migration_strategy.md`
 - Migration Roadmap:
   `roadmap/platform_first_migration_roadmap.md`
+- Platform Evolution Track:
+  `roadmap/platform_evolution_track.md`
 - Component Standard:
   `docs/architecture/platform_discoverability_and_component_standard.md`
 - Completion Report:

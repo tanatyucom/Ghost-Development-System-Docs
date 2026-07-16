@@ -50,6 +50,7 @@ Hierarchy details:
 
 | Roadmap | Status | Owner | Purpose |
 |---|---|---|---|
+| Platform Evolution Track | Active / Dual Vertical Slice Evidence | Ghost Development System Docs | Center Pattern evidence, Dual Experiment milestone, Metadata Center future platform candidate, and Capability-driven Provider Selection roadmap direction. |
 | Ghost Development System Roadmap | Active / Ver2 Platform Era | Ghost Development System Docs | Foundation Complete 後の Platform Integration、Automation Server、Ghost Ecosystem、Continuous Improvement を管理する |
 | Plugin Architecture Roadmap | Active / Architecture Standard Added | Ghost Development System Docs | Plugin standard、explicit registry、Repository Context Validation proof、future adapter / launcher integration review を管理する |
 | Platform First Migration Roadmap | Active / Strategy Added | Ghost Development System Docs | Review Centerを最初の移行候補として、GameGhostからPlatformへの段階移行順序を管理する |
@@ -182,6 +183,19 @@ Platform Dashboard、Automation Server などは、別 Q と Human Approval Gate
 Command Center は Auto Q Generator 単体ではなく、Repository Scan、Information
 Package、Decision Engine、Template Engine、Repository Health、Recommended Next Q
 を接続する Repository Orchestrator として扱います。
+
+## Platform Evolution Track
+
+Platform Evolution is now tracked as a dedicated roadmap direction after dual
+vertical slice evidence.
+
+- Roadmap: `platform_evolution_track.md`
+- Current milestone: Dual Experiment comparison.
+- Future candidates: Metadata Center, Capability-driven Provider Selection,
+  shared Center Pattern contracts.
+- Guard: no runtime implementation, SDK extraction, provider API integration,
+  metadata write, DB write, or automatic promotion is approved by the roadmap
+  update alone.
 
 ## Does NOT Contain
 

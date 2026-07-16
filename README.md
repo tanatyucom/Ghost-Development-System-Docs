@@ -291,6 +291,7 @@ Start from:
 
 - [`docs/architecture/platform_first_migration_strategy.md`](docs/architecture/platform_first_migration_strategy.md)
 - [`roadmap/platform_first_migration_roadmap.md`](roadmap/platform_first_migration_roadmap.md)
+- [`roadmap/platform_evolution_track.md`](roadmap/platform_evolution_track.md)
 - [`docs/architecture/platform_discoverability_and_component_standard.md`](docs/architecture/platform_discoverability_and_component_standard.md)
 
 最初の移行候補は Review Center です。実装移動ではなく、まず
@@ -315,6 +316,7 @@ Start from:
 
 - [`roadmap/ghost_development_system_roadmap.md`](roadmap/ghost_development_system_roadmap.md)
 - [`roadmap/platform_first_migration_roadmap.md`](roadmap/platform_first_migration_roadmap.md)
+- [`roadmap/platform_evolution_track.md`](roadmap/platform_evolution_track.md)
 - [`docs/rules/hotfix_policy_rules.md`](docs/rules/hotfix_policy_rules.md)
 - [`docs/rules/ai_collaboration_rules.md`](docs/rules/ai_collaboration_rules.md)
 

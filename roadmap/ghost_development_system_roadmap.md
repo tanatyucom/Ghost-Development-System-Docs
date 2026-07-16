@@ -271,6 +271,60 @@ Preserved, not implemented:
 - LTS lifecycle.
 - SDK GUI / Command Center integration.
 
+## Platform Evolution Track
+
+Status: active roadmap track after dual vertical slice evidence.
+
+Roadmap:
+
+- `roadmap/platform_evolution_track.md`
+
+Purpose:
+
+```text
+Use validated Center Pattern vertical slices to identify reusable Ghost Platform
+contracts without approving runtime implementation or SDK extraction.
+```
+
+Current milestone:
+
+```text
+Repository Intelligence Center
+  + Metadata Center
+  -> shared SDK evidence comparison
+  -> Center Pattern boundary review
+  -> platform candidate decision
+```
+
+Future Platform Candidates:
+
+- Metadata Center.
+- Repository Intelligence Center shared contracts.
+- Capability-driven Provider Selection.
+- Provider Capability Registry.
+- Reviewable Result Contract.
+- Adapter Boundary Contract.
+- Center Validation Artifact Contract.
+
+Center Pattern consistency:
+
+- Center owns orchestration and coordination.
+- Engine owns reusable reasoning or scoring logic.
+- Registry owns discoverable records and capability metadata.
+- Adapter owns source-specific or project-specific access.
+- Contract owns reviewable input / output boundaries.
+- Validation Artifact owns evidence for human review and future promotion.
+
+Guard:
+
+- This roadmap update does not approve runtime implementation.
+- This roadmap update does not approve SDK extraction.
+- This roadmap update does not approve provider API integration.
+- This roadmap update does not approve metadata write, DB write, automatic
+  repair, or automatic promotion.
+- Platform promotion still requires a later Q, validation evidence, and Human
+  Approval where required.
+
 ## Plugin Architecture Roadmap Direction
 
 Status: active architecture standard under Platform Integration Era.
