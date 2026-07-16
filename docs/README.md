@@ -283,6 +283,7 @@ Preserved candidates:
 - Repository Contract / Project Manifest direction.
 - Hotfix Policy: `Fix Once, Recover Everywhere.`
 - Platform Evolution statement.
+- Identity Locale and Canonical Policy under Metadata Center.
 - Constraint -> Objective -> Workaround -> Execution collaboration pattern.
 
 ## Q File Template And Naming Standard Index

@@ -50,7 +50,7 @@ Hierarchy details:
 
 | Roadmap | Status | Owner | Purpose |
 |---|---|---|---|
-| Platform Evolution Track | Active / Dual Vertical Slice Evidence | Ghost Development System Docs | Center Pattern evidence, Dual Experiment milestone, Metadata Center future platform candidate, and Capability-driven Provider Selection roadmap direction. |
+| Platform Evolution Track | Active / Dual Vertical Slice Evidence | Ghost Development System Docs | Center Pattern evidence, Dual Experiment milestone, Metadata Center future platform candidate, Capability-driven Provider Selection, and Identity Locale / Canonical Policy roadmap direction. |
 | Ghost Development System Roadmap | Active / Ver2 Platform Era | Ghost Development System Docs | Foundation Complete 後の Platform Integration、Automation Server、Ghost Ecosystem、Continuous Improvement を管理する |
 | Plugin Architecture Roadmap | Active / Architecture Standard Added | Ghost Development System Docs | Plugin standard、explicit registry、Repository Context Validation proof、future adapter / launcher integration review を管理する |
 | Platform First Migration Roadmap | Active / Strategy Added | Ghost Development System Docs | Review Centerを最初の移行候補として、GameGhostからPlatformへの段階移行順序を管理する |

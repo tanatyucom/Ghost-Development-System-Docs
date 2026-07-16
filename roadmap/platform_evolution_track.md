@@ -61,10 +61,68 @@ this roadmap update.
 - Metadata Center.
 - Repository Intelligence Center shared contracts.
 - Capability-driven Provider Selection.
+- Identity Locale and Canonical Policy.
 - Provider Capability Registry.
 - Reviewable Result Contract.
 - Adapter Boundary Contract.
 - Center Validation Artifact Contract.
+
+## Identity Locale and Canonical Policy
+
+Identity Locale and Canonical Policy is a future candidate under Metadata
+Center for later multi-language display, multi-region release handling, and
+canonical title policy review.
+
+Candidate model:
+
+```text
+Identity
+  -> Identity ID
+  -> Origin Market
+  -> Canonical Policy
+  -> Canonical Title Reference
+  -> Localized Titles
+     -> ja-JP
+     -> en-US
+     -> en-GB
+     -> fr-FR
+     -> de-DE
+     -> ko-KR
+     -> zh-CN
+     -> zh-TW
+  -> Regional Releases
+  -> Aliases
+```
+
+Initial canonical policy candidates:
+
+- ORIGIN_MARKET.
+- FIRST_RELEASE.
+- GLOBAL_OFFICIAL.
+- USER_DEFINED.
+
+This candidate does not define an enum, schema, contract, fallback behavior,
+or runtime policy. Display Locale is treated as a future user preference or
+application configuration concern, not as identity ownership.
+
+Promotion conditions:
+
+- Metadata Center vertical slice operational evidence exists.
+- Identity ID has basic operational evidence.
+- Localized titles are observed from more than one provider or source.
+- Region / locale differences are documented with concrete examples.
+- A real canonical policy conflict requires review.
+- GameGhost or another field project provides operational validation.
+- Human Architecture Review approves promotion scope.
+
+Guardrails:
+
+- Do not treat this Future Candidate as approved architecture.
+- Do not force Canonical Policy into current GameGhost operation.
+- Do not mix Origin Market with Display Locale.
+- Do not treat Region and Language / Locale as the same concept.
+- Do not automatically change existing canonical names.
+- Do not freeze schema without evidence.
 
 ## Capability-driven Provider Selection
 
@@ -109,4 +167,3 @@ A Center Pattern candidate can move toward platform standard review only after:
 ## Recommended Next Q
 
 `GG-PLATFORM-ASSEMBLY-005_dual_experiment_sdk_evidence_comparison`
-
