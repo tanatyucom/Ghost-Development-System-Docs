@@ -18,6 +18,7 @@ Implementation
   -> Completion Report
   -> Completion Report v2 Section Check
   -> Completion Checklist
+  -> Pre-Response Verification Gate
   -> Commit / Tag / Release Decision
   -> Recommended Next Q
   -> End
@@ -86,6 +87,20 @@ Pending Insight changed?
   -> Review Required: stop before Codex execution or commit approval
 ```
 
+### Pre-Response Verification Gate
+
+Completion Checklist の後、最終回答を出す直前に
+`docs/workflow/pre_response_verification_gate.md` を確認します。
+
+確認すること:
+
+- Startup Completion Evidence が通過済み、または制約が記録されている。
+- repository scope、output format、language preference が合っている。
+- Revision-first policy、Human Approval boundary、Commit / Push boundary が守られている。
+- Scope creep がない。
+- Constraint Check がまだ有効。
+- Changed Files、verification result、remaining issues が最終回答と一致している。
+
 ### Commit / Tag / Release Decision
 
 Commit、Tag、Release は自動的に実行しません。Q、Human Approval、release policy、
@@ -127,6 +142,8 @@ Completion Checklist:
 - Beginner & Future Self Test Result:
 - Context Recovery Principle Reviewed:
 - Missing Recovery Aid:
+- Pre-Response Verification Gate:
+- Final Response Ready:
 ```
 
 ## Completion Criteria
@@ -144,6 +161,7 @@ Completion Checklist:
 - public AI knowledge entry point が変わった場合、`docs/ai_repository_index.md` が再生成・検証されている。
 - documentation entry point が変わった場合、README / index 更新、AI Repository Index、Repository Quality Audit の同期結果が記録されている。
 - Pending Insight が変わった場合、Human Review decision、Codex execution restriction、cleanup status が記録されている。
+- Pre-Response Verification Gate が PASS または PASS WITH LIMITATION になっている。
 
 ## Related Documents
 
@@ -156,11 +174,14 @@ Completion Checklist:
 - `docs/workflow/documentation_synchronization_workflow.md`
 - `docs/workflow/pending_conversation_insight_review_workflow.md`
 - `docs/rules/pending_conversation_insight_review_rules.md`
+- `docs/workflow/pre_response_verification_gate.md`
 - `examples/completion_report_examples.md`
 - `templates/review_checklist.md`
 - `docs/rules/beginner_future_self_test_rules.md`
 - `docs/workflow/beginner_future_self_test_workflow.md`
 - `templates/beginner_future_self_test_template.md`
 - `docs/workflow/commit_safety_checklist.md`
+- `templates/ai_response_checklist_v2.md`
+- `templates/response_verification_checklist.md`
 - `docs/rules/git_rules.md`
 - `docs/workflow/startup_checklist_workflow.md`

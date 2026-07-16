@@ -15,6 +15,7 @@ UTF-8 Read Rule, Encoding Regression Prevention,
 External Source Access / AI Repository Knowledge Access, AI Startup Procedure, Startup Checklist,
 Startup Completion Evidence / Gate,
 Repository Root Validation, AI Proactive Proposal,
+Pre-Response Verification Gate,
 Completion Checklist, Completion Report, Hotfix Policy, Beginner & Future Self Test, Research Mission, Conversation Insight Capture, Pending Conversation Insight Review, Artifact First, Audit Before Repair, Debug Artifact Review, Debug Escalation Ladder,
 Migration First, PIP Case Knowledge Base, and Roadmap2 Knowledge Salvage. Concept Promotion is
 handled as part of PIP Case Knowledge Base. Concept ID Naming is the standard
@@ -78,6 +79,9 @@ promoted.
 - `completion_checklist_rules.md`: completion confirmation rule for
   verification, review, completion report, Improvement Review, commit, tag,
   release, next Q, and workspace clean confirmation.
+- Pre-Response Verification Gate is defined in
+  `docs/workflow/pre_response_verification_gate.md` as the final quality gate
+  before an AI response is delivered.
 - `completion_report_rules.md`: Completion Report v2 required sections, Safe Commit Set, Commit / Push Status, Project Edit Status, Improvement Review, Lessons Learned, Reusable Assets Created, Remaining Issues, Recommended Next Q, and Suggested Commit Message rules.
 - `hotfix_policy_rules.md`: rule for separating GDS Hotfix from normal
   release or improvement work. Defines Fix Once, Recover Everywhere, GDS asset

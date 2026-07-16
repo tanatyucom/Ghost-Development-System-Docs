@@ -47,6 +47,9 @@ gate.
 - `completion_checklist_workflow.md`: completion confirmation flow for
   verification, review, completion report, Improvement Review, commit, tag,
   release, next Q, and workspace clean confirmation.
+- `pre_response_verification_gate.md`: final response quality gate for checking
+  repository scope, requested output format, approval boundaries, commit /
+  push reality, and constraint validity before the final AI response.
 - `completion_report_workflow.md`: workflow for creating Completion Report v2
   with Identity, Changed Files, Verification, Safe Commit Set, Commit / Push
   Status, Project Edit Status, Improvement Review, Lessons Learned,
@@ -181,6 +184,7 @@ Idea
   -> Roadmap2 Knowledge Salvage, when Roadmap2-only knowledge remains
   -> Human Review
   -> Completion Checklist
+  -> Pre-Response Verification Gate
   -> Commit
   -> Knowledge Promotion
   -> Archive
@@ -216,6 +220,7 @@ AI Startup Procedure
   -> Verification
   -> Human Review
   -> Completion Checklist
+  -> Pre-Response Verification Gate
   -> Commit / Push
   -> Knowledge Update
   -> Repository Update
@@ -288,6 +293,20 @@ Startup Checklist
 ```
 
 Details follow `startup_completion_evidence.md` and `startup_completion_gate.md`.
+
+## Pre-Response Verification Gate
+
+Before delivering a final AI response, confirm that the response matches the
+actual changed files, verification results, repository scope, output format,
+Human Approval boundary, and commit / push state.
+
+```text
+Completion Checklist
+  -> Pre-Response Verification Gate
+  -> Final Response
+```
+
+Details follow `pre_response_verification_gate.md`.
 
 ## Repository Root Validation Workflow
 

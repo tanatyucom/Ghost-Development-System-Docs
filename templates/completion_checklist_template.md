@@ -177,6 +177,25 @@ Required sections checked:
 - Runtime code edit status:
 - Production data edit status:
 
+## Pre-Response Verification Gate
+
+- Startup Completion Evidence passed or limitation recorded:
+- Correct repository scope:
+- Correct output format requested by user:
+- User language preference respected:
+- Command format appropriate:
+- Download link / artifact path format correct:
+- Revision-first policy respected:
+- Human Approval boundary respected:
+- Commit / Push boundary respected:
+- Scope creep check completed:
+- Constraint Check still valid:
+- Changed Files accurately reported:
+- Verification results accurately reported:
+- Not-run checks stated:
+- Remaining Issues stated:
+- Final response ready:
+
 ## End Decision
 
 - Work can be treated as complete:

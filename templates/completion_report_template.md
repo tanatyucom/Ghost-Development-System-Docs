@@ -78,6 +78,22 @@ Completion Report は Context Recovery Principle を支える artifact です。
 - Missing startup evidence:
 - Startup limitations:
 
+## Pre-Response Verification Gate
+
+- Gate result:
+- Startup evidence checked:
+- Correct repository scope:
+- Correct output format:
+- User language preference:
+- Human Approval boundary:
+- Commit / Push boundary:
+- Scope creep check:
+- Constraint Check still valid:
+- Changed Files report accuracy:
+- Verification result accuracy:
+- Remaining Issues stated:
+- Final response ready:
+
 標準候補:
 
 ```powershell

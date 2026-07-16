@@ -132,6 +132,7 @@ AI Startup Procedure
   -> Verification
   -> Human Review
   -> Completion Checklist
+  -> Pre-Response Verification Gate
   -> Commit / Push
   -> Knowledge Update
   -> Repository Update
@@ -683,6 +684,17 @@ Start from:
 - [`examples/completion_checklist_examples.md`](examples/completion_checklist_examples.md)
 
 Completion Checklist は Startup Checklist の対になる終了時ゲートです。
+
+## Pre-Response Verification Gate
+
+AI が最終回答を出す直前に、成果物、検証結果、repository scope、出力形式、
+Human Approval boundary、Commit / Push 状態が回答内容と一致しているか確認します。
+
+Start from:
+
+- [`docs/workflow/pre_response_verification_gate.md`](docs/workflow/pre_response_verification_gate.md)
+- [`templates/ai_response_checklist_v2.md`](templates/ai_response_checklist_v2.md)
+- [`templates/response_verification_checklist.md`](templates/response_verification_checklist.md)
 
 ## Repository Root Validation
 

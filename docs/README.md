@@ -143,6 +143,9 @@ Reference points:
 - Checklist Template: `templates/completion_checklist_template.md`
 - Checklist Rules: `docs/rules/completion_checklist_rules.md`
 - Checklist Workflow: `docs/workflow/completion_checklist_workflow.md`
+- Pre-Response Verification Gate: `docs/workflow/pre_response_verification_gate.md`
+- AI Response Checklist v2: `templates/ai_response_checklist_v2.md`
+- Response Verification Checklist: `templates/response_verification_checklist.md`
 - Examples: `examples/completion_report_examples.md`
 
 Required sections:

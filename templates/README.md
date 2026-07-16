@@ -32,6 +32,10 @@ Recommended Next Q, and workspace clean state before a task is treated as
 complete. They also check whether the AI Repository Knowledge Access Index
 needs regeneration and validation when public knowledge entry points changed.
 
+AI response checklist templates help humans and AI verify the final response
+before delivery, including repository scope, requested output format, approval
+boundaries, commit / push state, and remaining issues.
+
 Beginner & Future Self Test templates help humans and AI check whether a
 managed artifact is understandable to beginners, new AI sessions, returning
 project owners, and future selves without relying on hidden chat context.
@@ -141,6 +145,8 @@ restore guidance.
 - `research_mission_template.md`
 - `beginner_future_self_test_template.md`
 - `completion_checklist_template.md`
+- `ai_response_checklist_v2.md`
+- `response_verification_checklist.md`
 - `Q_TEMPLATE.md`
 - `ai_implementation_request.md`
 - `codex_review_template.md`
