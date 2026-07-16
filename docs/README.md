@@ -1749,6 +1749,31 @@ Product Documentation Hierarchy v2:
 Execution Roadmap、Decision Record、Q Documents、Completion Report の責務分離を
 定義します。
 
+### ADR を確認したい
+
+`docs/adr/` を使います。
+
+ADRs は重要な architecture decision を保存する Decision Record です。ADR は
+decision を記録しますが、runtime implementation、file movement、SDK completion、
+automatic promotion、production behavior change を自動承認しません。
+
+Reference points:
+
+- ADR Index: `docs/adr/README.md`
+- ADR Pattern Enhancement: `docs/adr/adr_pattern_enhancement.md`
+- ADR Template Revision Guidance: `docs/adr/adr_template_revision.md`
+- Architecture Status Guidance: `docs/adr/architecture_status_guidance.md`
+
+Status distinction:
+
+```text
+ADR Status
+  -> decision record の状態
+
+Architecture Status
+  -> 対象 architecture の lifecycle 状態
+```
+
 ### Roadmap を確認したい
 
 `docs/roadmap/` を使います。

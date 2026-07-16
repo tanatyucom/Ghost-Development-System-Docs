@@ -38,6 +38,30 @@ ADR-GDS-001_ghost_platform_three_pillars.md
 Changing an ADR to `Accepted`, `Superseded`, or `Deprecated` requires Human
 Approval or a human-reviewed completion report.
 
+## ADR Pattern Guidance
+
+Use these guidance documents before creating or revising ADR patterns:
+
+- `adr_pattern_enhancement.md`: canonical ADR pattern, Center Pattern
+  alignment, and ADR versus implementation boundary.
+- `adr_template_revision.md`: recommended structure for future ADRs.
+- `architecture_status_guidance.md`: distinction between ADR Status and the
+  lifecycle status of the architecture subject.
+
+Important distinction:
+
+```text
+ADR Status
+  -> status of the decision record
+
+Architecture Status
+  -> lifecycle status of the subject being decided
+```
+
+An accepted ADR does not automatically approve runtime implementation, file
+movement, SDK completion, automatic promotion, or production behavior change.
+Those actions require their own Q, review, validation, and completion report.
+
 ## Relationship To Product Documentation Hierarchy
 
 ADRs are part of the `Decision Record` layer defined by
@@ -58,8 +82,17 @@ review.
 - `ADR-GDS-002_repository_component_templates.md`
 - `ADR-GDS-003_canonical_knowledge_ownership_and_local_artifact_governance.md`
 
+## Guidance Index
+
+- `adr_pattern_enhancement.md`
+- `adr_template_revision.md`
+- `architecture_status_guidance.md`
+
 ## Related Documents
 
+- `docs/adr/adr_pattern_enhancement.md`
+- `docs/adr/adr_template_revision.md`
+- `docs/adr/architecture_status_guidance.md`
 - `examples/adr_example.md`
 - `templates/decision_template.md`
 - `docs/architecture/product_document_hierarchy_v2.md`
