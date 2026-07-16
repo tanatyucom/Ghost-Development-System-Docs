@@ -11,6 +11,11 @@ Roadmap and decision templates follow Product Documentation Hierarchy v2 so
 Vision, Master Roadmap, Domain Roadmap, Execution Roadmap, Decision Record,
 Q Documents, and Completion Reports stay separated.
 
+Roadmap templates also record owner, canonical repository, roadmap type,
+promotion stage, promotion evidence, architecture impact, dependencies, and
+validation strategy so platform direction does not get confused with runtime
+implementation approval.
+
 Templates also define when reusable outputs should be generated as file
 artifacts instead of being delivered only in chat.
 
