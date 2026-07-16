@@ -1763,6 +1763,8 @@ Reference points:
 - ADR Pattern Enhancement: `docs/adr/adr_pattern_enhancement.md`
 - ADR Template Revision Guidance: `docs/adr/adr_template_revision.md`
 - Architecture Status Guidance: `docs/adr/architecture_status_guidance.md`
+- Metadata Center Architecture Adoption:
+  `docs/adr/ADR-GDS-004_metadata_center_architecture_adoption.md`
 
 Status distinction:
 
@@ -1773,6 +1775,11 @@ ADR Status
 Architecture Status
   -> 対象 architecture の lifecycle 状態
 ```
+
+Metadata Center is adopted as the canonical GDS architecture direction for
+Ghost Platform metadata coordination. The ADR accepts the architecture
+direction, but it does not implement runtime behavior, SDK extraction, metadata
+write, DB write, or provider adapters.
 
 ### Roadmap を確認したい
 

@@ -81,6 +81,7 @@ review.
 - `ADR-GDS-001_ghost_platform_three_pillars.md`
 - `ADR-GDS-002_repository_component_templates.md`
 - `ADR-GDS-003_canonical_knowledge_ownership_and_local_artifact_governance.md`
+- `ADR-GDS-004_metadata_center_architecture_adoption.md`
 
 ## Guidance Index
 
@@ -88,8 +89,18 @@ review.
 - `adr_template_revision.md`
 - `architecture_status_guidance.md`
 
+## Metadata Center Adoption
+
+- `ADR-GDS-004_metadata_center_architecture_adoption.md`
+- `metadata_center_architecture_review.md`
+- `metadata_center_adr_adoption.md`
+- `architecture_status_review.md`
+
 ## Related Documents
 
+- `docs/adr/ADR-GDS-004_metadata_center_architecture_adoption.md`
+- `docs/adr/metadata_center_architecture_review.md`
+- `docs/adr/metadata_center_adr_adoption.md`
 - `docs/adr/adr_pattern_enhancement.md`
 - `docs/adr/adr_template_revision.md`
 - `docs/adr/architecture_status_guidance.md`

@@ -194,6 +194,7 @@ Required distinctions:
 - `docs/adr/ADR-GDS-001_ghost_platform_three_pillars.md`
 - `docs/adr/ADR-GDS-002_repository_component_templates.md`
 - `docs/adr/ADR-GDS-003_canonical_knowledge_ownership_and_local_artifact_governance.md`
+- `docs/adr/ADR-GDS-004_metadata_center_architecture_adoption.md`
 
 ## Related Documents
 
