@@ -2,7 +2,7 @@
 
 **Version:** 2.1
 
-**Last Updated:** 2026-07-11
+**Last Updated:** 2026-07-17
 
 ## Purpose
 
@@ -100,13 +100,18 @@ remaining issues, and recommended next work.
   managed artifact generation cannot begin before workflow resolution,
   knowledge requirement resolution, canonical template verification, Revision
   First, Constraint Check, and Human Approval boundary review.
+- Current Platform Core Sequencing Priority: before specializing Runtime
+  Startup Enforcement evidence as STARTUP-005, define a common Platform
+  Execution Evidence Contract so Intent Engine, Startup Enforcement,
+  Repository Quality, Command Center, Completion Review, and Knowledge
+  Promotion do not create competing evidence models.
 - Next Milestone: After OCR, extract SDK requirements, design SDK Foundation,
   formalize Project Adoption, and issue Platform Foundation Release only after
   exit criteria are met.
 - Known Blockers: Runtime implementation requires separate project Qs and
   Human Approval.
 - Current Owner: Ghost Development System Docs.
-- Last Updated: 2026-07-13.
+- Last Updated: 2026-07-17.
 
 ## Roadmap Ver2: Platform Era
 
@@ -1084,6 +1089,54 @@ Guard:
 - No automatic Push.
 - No Human Approval boundary relaxation.
 - No runtime or Ghost Repository implementation in this roadmap item.
+
+## Platform Core Responsibility And Execution Sequence
+
+Status: active roadmap review decision; runtime implementation not approved.
+
+Purpose:
+
+Align the core platform responsibilities before the next runtime-oriented Q so
+Startup Enforcement, Intent Engine, Command Center, Knowledge Promotion, and
+Repository Quality share a coherent execution sequence.
+
+Recommended sequence:
+
+```text
+Intent Engine / Intent Registry
+  -> Common Platform Execution Evidence Contract
+  -> Startup Enforcement Evidence Specialization
+  -> Repository Quality Runtime Gate Contract
+  -> Command Center Core Orchestration Contract
+  -> Template Engine / Artifact Pipeline Preflight
+  -> Completion Review
+  -> Knowledge Promotion
+```
+
+Decision:
+
+- STARTUP-005 remains valuable, but should be revised and deferred until the
+  common Platform Execution Evidence Contract is defined.
+- Repository Quality remains a real gate evidence source, not a report-only
+  feature.
+- Command Center owns orchestration and display, not engine-specific reasoning
+  or Human Approval replacement.
+- Knowledge Promotion remains approval-gated and primarily post-review, while
+  its canonical knowledge can inform future Startup and Intent decisions.
+
+Recommended Next Q:
+
+```text
+Q_GDS-PLATFORM-EXECUTION-EVIDENCE-001_common_platform_execution_evidence_contract_JP.md
+```
+
+Guard:
+
+- No runtime implementation approval.
+- No STARTUP-005 implementation in this roadmap item.
+- No Command Center implementation.
+- No automatic artifact generation.
+- No automatic commit, push, tag, release, or repository mutation.
 
 ## Priority Platform Candidate: Intent-Driven Workflow Foundation
 
