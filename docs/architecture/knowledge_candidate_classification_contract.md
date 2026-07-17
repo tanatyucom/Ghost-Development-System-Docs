@@ -2,7 +2,7 @@
 
 **Status:** Draft Contract
 
-**Last Updated:** 2026-07-17
+**Last Updated:** 2026-07-18
 
 ## Purpose
 
@@ -30,17 +30,61 @@ evidence:
 related_artifacts: []
 proposed_canonical_target:
 confidence: low | medium | high
-duplicate_status: unchecked | no_duplicate_found | revision_preferred | duplicate_possible | duplicate_confirmed
+classification_result: revision_preferred | future_candidate | evidence_only | new_candidate_review_required | reject
+blocking_state: none | scw_required
+duplicate_status: unchecked | no_duplicate_found | duplicate_possible | duplicate_confirmed
 required_approval:
   draft_creation: true
   canonical_promotion: true
   repository_mutation: true
-recommended_next_action: carry_forward | revise_existing | create_draft | create_child_q | scw
+recommended_next_action: revise_existing | carry_forward | attach_evidence | create_draft | create_child_q | reject | scw
 reason_codes: []
 blocking_reasons: []
 application_targets: []
-status: detected | recommended | pending_approval | carried_forward | draft_created | promoted | rejected | archived | scw
+status: detected | classified | recommended | pending_approval | carried_forward | draft_created | promoted | rejected | archived | blocked
 ```
+
+## Classification Result Taxonomy
+
+`classification_result` records the classification decision. It does not record
+the next action, approval state, duplicate state, or execution state.
+
+| Result | Meaning | Typical Next Action |
+| --- | --- | --- |
+| `revision_preferred` | Existing canonical artifact should be revised instead of creating a new artifact. | `revise_existing` |
+| `future_candidate` | The idea is valid but not mature enough for canonical promotion now. | `carry_forward` or `create_draft` |
+| `evidence_only` | The material should remain as supporting evidence, not a promoted knowledge item. | `attach_evidence` |
+| `new_candidate_review_required` | No suitable existing artifact is known, but human review is required before creating a new draft. | `create_draft` or `create_child_q` after approval |
+| `reject` | The candidate should not be promoted or carried forward. | `reject` |
+
+`revision_preferred` is the default preferred result when an existing canonical
+artifact can absorb the knowledge without creating a parallel artifact.
+
+## Blocking State
+
+`blocking_state` records whether classification can continue.
+
+| State | Meaning | Required Behavior |
+| --- | --- | --- |
+| `none` | No blocking condition is active. | Continue with the recommended next action after required approval. |
+| `scw_required` | Source, canonical target, approval, or repository state is ambiguous enough to require Stop / Clarify / Wait. | Stop and emit SCW output before repository mutation. |
+
+`blocking_state` is separate from `classification_result`. A candidate can have
+a likely classification result and still require SCW before any repository
+change.
+
+## Responsibility Separation
+
+The classification fields have separate responsibilities:
+
+- `classification_result` says what the candidate is.
+- `blocking_state` says whether action must stop.
+- `duplicate_status` says whether an existing artifact or candidate may already cover it.
+- `recommended_next_action` says what should happen next.
+- `status` says where the candidate is in the lifecycle.
+
+Do not use `recommended_next_action` as a substitute for classification.
+Do not use `classification_result` as execution approval.
 
 ## Candidate Types
 
@@ -99,6 +143,26 @@ Preferred outcomes:
 4. create Draft;
 5. create child Q.
 
+These outcomes should be represented through `classification_result` and
+`recommended_next_action`, not by overloading `duplicate_status`.
+
+Example:
+
+```yaml
+classification_result: revision_preferred
+duplicate_status: no_duplicate_found
+recommended_next_action: revise_existing
+```
+
+If a near-duplicate exists but the canonical owner is unclear, use:
+
+```yaml
+classification_result: revision_preferred
+blocking_state: scw_required
+duplicate_status: duplicate_possible
+recommended_next_action: scw
+```
+
 ## Approval Boundary
 
 The following require Human Approval:
@@ -114,6 +178,8 @@ The following require Human Approval:
 ## Positive Reason Codes
 
 - `KNOWLEDGE_CANDIDATE_DETECTED`
+- `CLASSIFICATION_RESULT_ASSIGNED`
+- `BLOCKING_STATE_CONFIRMED`
 - `PROMOTION_TARGET_IDENTIFIED`
 - `CANONICAL_SOURCE_CONFIRMED`
 - `EXISTING_ARTIFACT_REVISION_PREFERRED`
