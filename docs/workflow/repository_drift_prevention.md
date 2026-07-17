@@ -112,6 +112,67 @@ current task:
 This declaration is not a new approval gate. It is a lightweight reference
 anchor for later verification.
 
+## AI Context Synchronization Countermeasures
+
+AI Context Synchronization Countermeasures is a related future candidate for
+reducing template non-reference and working context mismatch.
+
+This countermeasure set focuses on operational improvement for repository
+synchronization quality. Continued preservation of Execution Context through
+the full task lifecycle is handled by Startup Execution Context Preservation
+and should be reviewed as GDS-QUALITY-004.
+
+It groups four practical countermeasures:
+
+```text
+Preflight Reference Check
+  -> Evidence Based Confirmation
+  -> Repository Re-anchor
+  -> Context Recovery Rule
+```
+
+### Preflight Reference Check
+
+Before artifact creation or implementation, confirm:
+
+- Target Repository.
+- Working Directory.
+- Current Mission.
+- Canonical Template.
+- Applicable Rules.
+- Commit / Push Permission.
+
+### Evidence Based Confirmation
+
+Do not only say that a check was done. Record enough evidence for human review:
+
+- Template Path.
+- Template Revision.
+- Working Directory.
+- Referenced Rules.
+
+### Context Recovery Rule
+
+When context synchronization appears broken, stop treating the current output
+as reliable and recover the context before continuing.
+
+Symptoms:
+
+- Template was not referenced.
+- Old repository context appears in the output.
+- Scope drift is visible.
+- Current Mission does not match the result.
+- The same correction is repeated.
+
+Candidate response:
+
+```text
+SCW
+  -> New chat, when needed
+  -> Startup synchronization
+  -> Q re-execution
+```
+
 ## When To Consider Re-anchor
 
 Use or propose Repository Re-anchor when:
@@ -211,6 +272,8 @@ Future review should observe:
 - recurrence rate in long-running chats;
 - whether Repository Re-anchor reduces stale-template or missing-section
   outputs.
+- new-chat quality after an intentionally minimal user prompt;
+- whether Evidence Based Confirmation reduces unverifiable startup claims.
 
 ## Expected Review Decisions
 

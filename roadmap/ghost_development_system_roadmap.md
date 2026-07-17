@@ -1041,6 +1041,7 @@ follow-up Q を記録する。
 - OCR Metrics Report.
 - Documentation health report.
 - Repository Drift Prevention and Re-anchor Workflow.
+- AI Context Synchronization Countermeasures.
 - Startup Execution Context Preservation.
 - AI instruction map.
 - Generated documentation inventory.
