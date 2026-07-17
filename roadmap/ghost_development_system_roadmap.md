@@ -1543,6 +1543,45 @@ Approving a visible Commit Approval Request does not approve Push, Tag, or
 Release. Future Command Center and AI frontend behavior must display the exact
 requested operation before asking for approval.
 
+### GDS6 Milestone: Human-AI Collaboration Foundation
+
+Status: established.
+
+GDS6 established Human-AI Collaboration Foundation as the operational model for
+AI-assisted repository work.
+
+Core model:
+
+```text
+AI Proposal
+  -> Repository Recommendation
+  -> Workflow Recommendation
+  -> Human Final Approval
+  -> Governed Repository Execution
+  -> Execution Evidence
+```
+
+Key concepts:
+
+- Visible Requested Action.
+- Working Agreement.
+- Current Phase / Current Review / Current Position / Next Action.
+- Independent Approval Boundaries.
+- Codex as Repository Recommendation and governed execution actor.
+- ChatGPT as Workflow Recommendation actor.
+- Human as Final Approval Authority.
+
+This milestone does not authorize runtime UI, dashboard, Fast Path, Command
+Center implementation, or new engine creation.
+
+GDS7 candidates:
+
+1. Approval Request Runtime.
+2. Review Handoff Package.
+3. Execution Evidence Dashboard.
+4. Fast Path.
+5. Command Center Integration.
+
 ### Updated Phase Direction
 
 Phase 1: Knowledge Foundation
