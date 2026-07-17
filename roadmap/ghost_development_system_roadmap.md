@@ -96,6 +96,10 @@ remaining issues, and recommended next work.
   architecture-only foundation so Completion Review can detect reusable
   knowledge, classify it, check duplicates, carry it forward, and require
   Human Approval before canonical promotion.
+- Current Startup Quality Priority: define Intent-Aware Startup Enforcement so
+  managed artifact generation cannot begin before workflow resolution,
+  knowledge requirement resolution, canonical template verification, Revision
+  First, Constraint Check, and Human Approval boundary review.
 - Next Milestone: After OCR, extract SDK requirements, design SDK Foundation,
   formalize Project Adoption, and issue Platform Foundation Release only after
   exit criteria are met.
@@ -1192,3 +1196,37 @@ Guard:
 - No GameGhost edits.
 - No cross-repository mutation.
 - No bypass of artifact-specific lifecycle rules.
+
+## Architecture Candidate: Intent-Aware Startup Enforcement
+
+Status: draft architecture / workflow / rule foundation; runtime enforcement
+not approved.
+
+Purpose:
+
+Prevent managed artifact generation from starting before the AI resolves the
+user intent into required workflow, required knowledge, canonical repository /
+template source, Revision First decision, Constraint Check, and Human Approval
+boundary.
+
+Target flow:
+
+```text
+Intent
+  -> Workflow Resolution
+  -> Knowledge Requirement Resolution
+  -> Canonical Repository / Template Verification
+  -> Revision First
+  -> Constraint Check
+  -> Recommendation or Draft Generation
+  -> Pending Action
+  -> Human Approval
+  -> Execution
+```
+
+Guard:
+
+- No runtime automation approval.
+- No generation from remembered templates.
+- No SCW as a substitute for available checks.
+- No automatic commit, push, tag, release, or cross-repository mutation.

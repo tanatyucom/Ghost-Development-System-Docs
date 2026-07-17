@@ -29,6 +29,10 @@ runtime behavior.
   natural language user intent through repository / conversation state review,
   workflow selection, quality gate / SCW, Human Approval, and approved action
   boundaries without implementing runtime automation.
+- `intent_aware_startup_enforcement.md`: architecture foundation for blocking
+  managed artifact generation until artifact intent, required workflow,
+  required knowledge, canonical repository / template verification,
+  Revision First, Constraint Check, and Human Approval boundary are resolved.
 - `intent_registry_and_pending_action_contract.md`: initial Intent Registry,
   Pending Action Contract, Approval Resolution Rule for `お願いします` / `はい` /
   `OK`, Commit / Push / Tag recommendation rules, and reason code set.
@@ -205,6 +209,10 @@ or missing context, not for perfect memory retention.
   Recommendation and Pending Action artifacts, but it does not execute commit,
   push, tag, release, file deletion, data mutation, or external publication
   without explicit Human Approval.
+- Intent-Aware Startup Enforcement owns the pre-generation gate for managed
+  artifacts. It prevents direct generation from remembered templates or
+  incomplete context by resolving required workflow, required knowledge,
+  canonical source, Revision First, Constraint Check, and approval boundary.
 - Knowledge Artifact Responsibility Map owns the separation between Q, Issa,
   ADR, Improvement Record, Rule, Architecture Principle, and Workflow so that
   GDS preserves what changed, why it mattered, what was decided, and what should

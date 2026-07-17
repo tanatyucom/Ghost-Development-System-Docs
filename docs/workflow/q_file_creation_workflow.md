@@ -13,6 +13,7 @@ AI execution.
 
 ```text
 Idea
+  -> Artifact Creation Startup Enforcement
   -> Decide Q ID
   -> Select Target Project
   -> Confirm Repository Context
@@ -26,6 +27,20 @@ Idea
 ```
 
 ## Step 1: Decide Q ID
+
+Before deciding a Q ID, run Artifact Creation Startup Enforcement.
+
+Confirm:
+
+- artifact intent is Q creation or Q revision;
+- `docs/workflow/q_file_creation_workflow.md` is the required workflow;
+- `templates/Q_TEMPLATE.md` is the canonical template;
+- related rules, workflow, architecture, roadmap, and Current Mission were
+  checked;
+- Revision First does not require updating an existing Q or addendum instead;
+- Constraint Check is complete.
+
+Details follow `artifact_creation_startup_enforcement_workflow.md`.
 
 Use `docs/rules/q_file_naming_rules.md`.
 

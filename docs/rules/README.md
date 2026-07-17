@@ -17,7 +17,7 @@ External Source Access / AI Repository Knowledge Access, AI Startup Procedure, S
 Startup Completion Evidence / Gate,
 Repository Root Validation, AI Proactive Proposal,
 Pre-Response Verification Gate,
-Completion Checklist, Completion Report, Hotfix Policy, Beginner & Future Self Test, Research Mission, Conversation Insight Capture, Pending Conversation Insight Review, Artifact First, Audit Before Repair, Debug Artifact Review, Debug Escalation Ladder,
+Completion Checklist, Completion Report, Hotfix Policy, Beginner & Future Self Test, Research Mission, Conversation Insight Capture, Pending Conversation Insight Review, Artifact First, Artifact Creation Startup Enforcement, Audit Before Repair, Debug Artifact Review, Debug Escalation Ladder,
 Migration First, PIP Case Knowledge Base, and Roadmap2 Knowledge Salvage. Concept Promotion is
 handled as part of PIP Case Knowledge Base. Concept ID Naming is the standard
 for assigning stable Concept IDs and keeping the Concept Index traceable.

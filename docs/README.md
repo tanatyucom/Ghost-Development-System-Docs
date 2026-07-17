@@ -144,6 +144,36 @@ Recommendation is not Action. Short approval phrases approve only the latest
 explicit Pending Action when repository, operation, scope, diff, and state are
 still unambiguous. Otherwise, apply SCW.
 
+## Artifact Creation Startup Enforcement Index
+
+Artifact Creation Startup Enforcement is the pre-generation gate for managed
+artifacts such as Q, ADR, Rule, Workflow, Template, Roadmap, Completion Report,
+Knowledge artifact, registry update, and index update.
+
+Reference points:
+
+- Architecture: `docs/architecture/intent_aware_startup_enforcement.md`
+- Workflow: `docs/workflow/artifact_creation_startup_enforcement_workflow.md`
+- Rule: `docs/rules/artifact_creation_startup_enforcement_rules.md`
+- Q Creation Workflow: `docs/workflow/q_file_creation_workflow.md`
+- Startup Completion Gate: `docs/workflow/startup_completion_gate.md`
+
+Core flow:
+
+```text
+Artifact Intent
+  -> Required Workflow
+  -> Required Knowledge
+  -> Canonical Repository / Template Verification
+  -> Revision First
+  -> Constraint Check
+  -> Gate Decision
+  -> Draft / Recommendation / SCW
+```
+
+Direct generation from memory, stale templates, unresolved knowledge, or
+unattempted repository access is not allowed.
+
 ## Knowledge Preservation Gate Index
 
 Knowledge Preservation Gate decides whether important reasoning, architecture

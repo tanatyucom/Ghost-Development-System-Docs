@@ -27,6 +27,10 @@ gate.
   user utterance to canonical source review, repository / conversation state
   review, workflow selection, Recommendation, Pending Action, Human Approval,
   Action, or SCW.
+- `artifact_creation_startup_enforcement_workflow.md`: pre-generation workflow
+  for managed artifacts that requires artifact intent classification, workflow
+  resolution, knowledge resolution, canonical template verification, Revision
+  First, Constraint Check, and Gate Decision before drafting.
 - `knowledge_preservation_gate.md`: workflow for deciding whether a Q, review,
   completion, or design conversation should produce an Issa draft, ADR
   candidate, Improvement Record candidate, Architecture Principle candidate, or
@@ -161,6 +165,8 @@ Idea
   -> Intent-Driven Workflow, when the user gives a natural language goal such
      as "続きやろう", "何をやったらいい？", "終わった", "お願いします",
      "commitしていい？", "pushしていい？", or "次は？"
+  -> Artifact Creation Startup Enforcement, when a managed artifact will be
+     created or revised
   -> AI Daily Operation Cycle
   -> Capability Verification, when capability is asked or uncertain
   -> AI Startup Procedure
@@ -897,6 +903,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `templates/daily_operation_checklist_template.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/workflow/intent_driven_workflow.md`
+- `docs/workflow/artifact_creation_startup_enforcement_workflow.md`
 - `docs/workflow/knowledge_preservation_gate.md`
 - `docs/workflow/knowledge_carry_forward_workflow.md`
 - `docs/workflow/startup_checklist_workflow.md`

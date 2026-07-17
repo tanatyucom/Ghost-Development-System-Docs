@@ -19,6 +19,7 @@ workflow を提案します。
 ```text
 User Natural Language
   -> Intent Candidate
+  -> Artifact Creation Startup Enforcement, when managed artifact generation is requested
   -> Canonical Source Review
   -> Repository / Conversation State Review
   -> Workflow Selection
@@ -68,6 +69,11 @@ release、外部公開は別途 Human Approval が必要です。
 | `次は？` | Recommended Next Q Review |
 | `調査して` | Research Mission Detection |
 | `待って` | Stop / SCW |
+
+When the selected workflow creates or revises a managed artifact, run
+Artifact Creation Startup Enforcement before drafting.
+
+Details follow `artifact_creation_startup_enforcement_workflow.md`.
 
 ## Completion Review Workflow
 

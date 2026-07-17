@@ -122,6 +122,24 @@ Start from:
 - Commit / Push / Tag / Release / 削除 / 外部公開は Human Approval なしに
   実行しません。
 
+## Artifact Creation Startup Enforcement
+
+Q、ADR、Rule、Workflow、Template、Roadmap、Completion Reportなどの管理対象
+Artifactを生成する前に、AIはIntentに応じたWorkflow、Knowledge、Canonical
+Template、Revision First、Constraint Checkを解決します。
+
+Start from:
+
+- [`docs/architecture/intent_aware_startup_enforcement.md`](docs/architecture/intent_aware_startup_enforcement.md)
+- [`docs/workflow/artifact_creation_startup_enforcement_workflow.md`](docs/workflow/artifact_creation_startup_enforcement_workflow.md)
+- [`docs/rules/artifact_creation_startup_enforcement_rules.md`](docs/rules/artifact_creation_startup_enforcement_rules.md)
+
+境界:
+
+- 記憶上のテンプレート構成から直接生成しません。
+- Repository確認を試みずに「見られない」と報告しません。
+- SCWは、実行可能な必須確認の代替にはしません。
+
 ## Knowledge Preservation / Architecture Promotion
 
 重要な設計議論、問題定義の変化、再利用可能な思考過程、Architecture Decision

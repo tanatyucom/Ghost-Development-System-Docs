@@ -668,10 +668,15 @@ advisory until Human Approval. It must not bypass Human Approval Gate, execute
 Git operations, mutate repositories, publish externally, or replace Completion
 Checklist / Pre-Response Verification Gate.
 
+For managed artifact generation, future Command Center behavior should route
+through Intent-Aware Startup Enforcement before Template Engine or Artifact
+Pipeline prepares a draft.
+
 Details follow:
 
 - `docs/architecture/intent_driven_workflow.md`
 - `docs/architecture/intent_registry_and_pending_action_contract.md`
+- `docs/architecture/intent_aware_startup_enforcement.md`
 - `docs/workflow/intent_driven_workflow.md`
 
 ## Review Points
