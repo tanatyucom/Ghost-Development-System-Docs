@@ -1,8 +1,8 @@
 # Completion Report Template
 
-**Template Version:** 2.0
+**Template Version:** 2.1
 
-**Last Updated:** 2026-07-13
+**Last Updated:** 2026-07-17
 
 このテンプレートは、Q完了後の結果を再利用・レビュー・Git管理できるCompletion Report Artifactとして残すための標準形式です。
 
@@ -83,6 +83,25 @@ Completion Report は Context Recovery Principle を支える artifact です。
 - Constraint Check completed:
 - Missing startup evidence:
 - Startup limitations:
+
+## Artifact Creation Startup Enforcement Evidence
+
+- Enforcement required:
+- Artifact Intent:
+- Required Workflow resolved:
+- Required Workflow source:
+- Required Knowledge resolved:
+- Required Knowledge sources:
+- Canonical Repository Verification:
+- Canonical Template Verification:
+- Revision First Decision:
+- Constraint Check:
+- Gate Decision:
+- Gate Reason Codes:
+- Missing / Conflicting Evidence:
+- SCW Reason:
+- PASS_WITH_LIMITATION limitation:
+- BLOCK / SCW resolution:
 
 ## Canonical Template Synchronization Review
 

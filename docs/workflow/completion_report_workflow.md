@@ -44,6 +44,8 @@ Record:
 - Target Project.
 - Working Repository.
 - Working Directory.
+- Artifact Creation Startup Enforcement result, when managed artifact creation
+  or revision was involved.
 
 If no Source Q exists, record the user request or artifact that authorized the work.
 

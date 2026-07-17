@@ -114,6 +114,46 @@ If a Q is created from a Pending Insight, record:
 - Codex execution restriction cleared by Human Approval.
 - Pending cleanup expectation.
 
+## Artifact Creation Startup Enforcement Evidence
+
+Official Q files must record Artifact Creation Startup Enforcement evidence
+before the body is treated as ready for execution.
+
+Required fields:
+
+```text
+Artifact Intent:
+Required Workflow:
+Required Knowledge:
+Canonical Repository Verification:
+Canonical Template Verification:
+Revision First Decision:
+Constraint Check:
+Gate Decision:
+Gate Reason Codes:
+Missing / Conflicting Evidence:
+SCW Reason:
+```
+
+Allowed Gate Decision values:
+
+```text
+PASS
+PASS_WITH_LIMITATION
+BLOCK
+SCW_REQUIRED
+```
+
+Rules:
+
+- `PASS_WITH_LIMITATION` must record the limitation and next action.
+- `BLOCK` means Q drafting or execution must not proceed until resolved.
+- `SCW_REQUIRED` means Stop, Call, Wait. It is not a substitute for performing
+  an available required check.
+- Remembered template structure is not canonical evidence.
+- Uploaded or downloaded copies must record freshness before they are treated as
+  current.
+
 ## Deliverables
 
 Separate required and optional deliverables.

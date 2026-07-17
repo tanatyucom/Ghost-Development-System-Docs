@@ -38,6 +38,21 @@
 - Commit / Push policy confirmed:
 - Constraint Check completed:
 
+## Artifact Creation Startup Enforcement
+
+- Enforcement required:
+- Artifact Intent:
+- Required Workflow resolved:
+- Required Knowledge resolved:
+- Canonical Repository Verification:
+- Canonical Template Verification:
+- Revision First Decision:
+- Constraint Check:
+- Gate Decision: PASS / PASS_WITH_LIMITATION / BLOCK / SCW_REQUIRED
+- Gate Reason Codes:
+- Missing / Conflicting Evidence:
+- SCW Reason:
+
 ## Source Evidence
 
 | Evidence Item | Source Checked | Result | Gap / Limitation | Action |
@@ -55,10 +70,11 @@
 | Related ADRs / Architecture |  |  |  |  |
 | Repository Root Validation |  |  |  |  |
 | Constraint Check |  |  |  |  |
+| Artifact Creation Startup Enforcement |  |  |  |  |
 
 ## Startup Completion Gate
 
-- Gate result: PASS / PASS WITH LIMITATION / BLOCKED
+- Gate result: PASS / PASS_WITH_LIMITATION / BLOCK
 - Missing evidence:
 - Limitation:
 - Human confirmation required:

@@ -1,8 +1,8 @@
 # Q File Template
 
-**Template Version:** 2.0
+**Template Version:** 2.1
 
-**Last Updated:** 2026-07-13
+**Last Updated:** 2026-07-17
 
 このテンプレートは、Codex / ChatGPT / Claude / Gemini / human review に渡すQファイルを、チャット本文ではなく管理可能なArtifactとして保存するための標準形式です。
 
@@ -165,6 +165,32 @@ Rules:
 Before creating or executing a Q, confirm the canonical template source.
 Do not assume a downloaded, pasted, or older local template is current.
 If a raw GitHub reference or copied artifact is used, record freshness or mark it not applicable.
+```
+
+## Artifact Creation Startup Enforcement Evidence
+
+- Artifact Intent:
+- Required Workflow:
+  -
+- Required Knowledge:
+  -
+- Canonical Repository Verification: PASS / PASS_WITH_LIMITATION / BLOCK / SCW_REQUIRED
+- Canonical Template Verification: PASS / PASS_WITH_LIMITATION / BLOCK / SCW_REQUIRED
+- Revision First Decision: new_artifact_allowed / revision_required / addendum_required / duplicate_found / scw_required
+- Constraint Check: PASS / PASS_WITH_LIMITATION / BLOCK / SCW_REQUIRED
+- Gate Decision: PASS / PASS_WITH_LIMITATION / BLOCK / SCW_REQUIRED
+- Gate Reason Codes:
+  -
+- Missing / Conflicting Evidence:
+- SCW Reason:
+
+Rules:
+
+```text
+Do not generate the managed artifact body before Artifact Intent, Required Workflow, Required Knowledge, Canonical Repository / Template Verification, Revision First, Constraint Check, and Gate Decision are recorded.
+PASS_WITH_LIMITATION requires a limitation and next action.
+BLOCK and SCW_REQUIRED must stop draft generation until the blocking condition is resolved or a Human Decision is recorded.
+SCW is not a substitute for performing an available required check.
 ```
 
 ## Commit / Push Policy

@@ -37,6 +37,7 @@ Start
 - Commit / Push policy が明確。
 - Q 作成または revision では canonical `templates/Q_TEMPLATE.md` を確認済み。
 - 管理対象artifact生成では Artifact Creation Startup Enforcement が完了している。
+- `PASS_WITH_LIMITATION` の場合、limitation と next action が記録されている。
 
 ### PASS WITH LIMITATION
 
@@ -59,6 +60,7 @@ Start
 - Commit禁止とCommit要求など、重大な指示矛盾がある。
 - Related repository の編集可否が不明。
 - Human Approval が必要な作業で承認がない。
+- Artifact Creation Startup Enforcement が `BLOCK` または `SCW_REQUIRED`。
 
 ## Required Output
 
@@ -70,6 +72,7 @@ Startup Completion Gate:
 - Evidence artifact:
 - Missing evidence:
 - Constraint check:
+- Artifact Creation Startup Enforcement:
 - Ready to start:
 ```
 

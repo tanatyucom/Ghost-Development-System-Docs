@@ -92,6 +92,34 @@ Required sections follow:
 - `docs/rules/q_file_template_rules.md`
 - `docs/rules/q_file_artifact_standard.md`
 
+The Q Template includes Artifact Creation Startup Enforcement Evidence.
+
+Before filling the main Q body, record:
+
+- Artifact Intent.
+- Required Workflow.
+- Required Knowledge.
+- Canonical Repository Verification.
+- Canonical Template Verification.
+- Revision First Decision.
+- Constraint Check.
+- Gate Decision.
+- Gate Reason Codes.
+- Missing / Conflicting Evidence.
+- SCW Reason, when applicable.
+
+Gate Decision values:
+
+```text
+PASS
+PASS_WITH_LIMITATION
+BLOCK
+SCW_REQUIRED
+```
+
+`PASS_WITH_LIMITATION` requires limitation evidence. `BLOCK` and
+`SCW_REQUIRED` stop drafting or execution until resolved.
+
 ## Step 5: Save Task Artifact Workspace
 
 Preferred workspace:

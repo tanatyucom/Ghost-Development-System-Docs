@@ -1,4 +1,4 @@
-﻿# GDS-QUALITY-005 Notes
+# GDS-QUALITY-005 Notes
 
 ## Startup Evidence
 

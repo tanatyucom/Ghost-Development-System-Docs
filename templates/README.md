@@ -27,6 +27,14 @@ Startup verification checklist templates help humans and AI record evidence
 that canonical sources were reviewed before Q creation, implementation, review,
 or documentation update.
 
+Q templates, completion report templates, and startup verification checklists
+also include Artifact Creation Startup Enforcement evidence. When managed
+artifact generation is requested, the artifact intent, required workflow,
+required knowledge, canonical repository verification, canonical template
+verification, Revision First decision, constraint check, gate decision, gate
+reason codes, missing or conflicting evidence, and SCW reason must be recorded
+before draft generation proceeds.
+
 Repository root validation templates help confirm the actual Git repository root
 matches the expected Working Repository before implementation, review, commit,
 tag, or release work begins.

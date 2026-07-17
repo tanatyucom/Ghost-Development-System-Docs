@@ -1,4 +1,4 @@
-﻿# GDS-QUALITY-005 Completion Report
+# GDS-QUALITY-005 Completion Report
 
 ## Identity
 

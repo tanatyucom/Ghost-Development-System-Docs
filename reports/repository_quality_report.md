@@ -7,11 +7,11 @@
 
 ## 要約
 
-- 生成日時: `2026-07-17T06:43:44Z`
+- 生成日時: `2026-07-17T07:04:28Z`
 - Repository: `Ghost-Development-System-Docs`
-- Overall Repository Health: `Yellow`
-- 通過したチェック: `11`
-- Warnings: `1`
+- Overall Repository Health: `Green`
+- 通過したチェック: `12`
+- Warnings: `0`
 - Errors: `0`
 
 ## Registry Health
@@ -36,7 +36,7 @@
 
 - Status: `PASS`
 - Details:
-  - 538 Markdown files を UTF-8 として読み取れました。
+  - 545 Markdown files を UTF-8 として読み取れました。
 
 ### Mojibake Audit
 
@@ -54,7 +54,7 @@
 
 - Status: `PASS`
 - Details:
-  - OK: 538 Markdown files が index に登録されています。
+  - OK: 545 Markdown files が index に登録されています。
 
 ### GDS Health Validation
 
@@ -86,6 +86,12 @@
 - Details:
   - required project profile files は存在します。
 
+### Markdown Validation
+
+- Status: `PASS`
+- Details:
+  - Markdown files には H1 heading があります。
+
 ### Platform Registry Consistency Check
 
 - Status: `PASS`
@@ -111,12 +117,7 @@
 
 ## 警告 (Warnings)
 
-### Markdown Validation
-
-- Status: `WARN`
-- Details:
-  - docs/requests/gds/draft/GDS-QUALITY-005_ai_repository_index_update_gate/completion_report.md: H1 heading がありません。
-  - docs/requests/gds/draft/GDS-QUALITY-005_ai_repository_index_update_gate/notes.md: H1 heading がありません。
+なし。
 
 ## エラー (Errors)
 
@@ -124,7 +125,7 @@
 
 ## 推奨改善 (Recommended Improvements)
 
-- warnings を確認し、想定内の例外、documentation debt、または follow-up Q 候補のどれに該当するか判断します。
+- 大きな documentation 変更または validation 変更後は、この audit を継続して実行します。
 
 ## Notes
 
