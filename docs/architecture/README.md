@@ -79,6 +79,13 @@ runtime behavior.
   producer / consumer responsibilities, extension policy, versioning,
   compatibility, Human Approval, SCW, and integration boundaries without
   implementing runtime schema or automation.
+- `repository_quality_gate_evidence_specialization.md`: Repository
+  Quality-specific evidence specialization that extends Platform Execution
+  Evidence Contract. It separates quality state from gate result, maps
+  Green / Yellow / Red / Unknown to PASS / PASS_WITH_LIMITATION / BLOCK /
+  SCW_REQUIRED, and defines check severity, reason codes, report relationship,
+  freshness, Human Approval, SCW, and consumer boundaries without implementing
+  schema or runtime code.
 - `repository_intelligence_dashboard_foundation.md`: read-only Repository
   Intelligence Dashboard foundation for Repository Health, Capability Registry,
   Architecture Registry, ADR Summary, Current Mission, Future Candidates, and
@@ -248,6 +255,11 @@ or missing context, not for perfect memory retention.
   interpretation of Platform Execution Evidence Contract. It keeps Startup
   gate truth compatible with the parent contract while preserving Command
   Center as consumer / orchestrator and Human Approval as the approval owner.
+- Repository Quality Gate Evidence Specialization owns the Repository
+  Quality-specific interpretation of Platform Execution Evidence Contract. It
+  keeps Repository Quality Report as human-readable presentation while making
+  quality state, gate result, warnings, errors, freshness, approval state, and
+  SCW state available as platform decision evidence.
 - Knowledge Artifact Responsibility Map owns the separation between Q, Issa,
   ADR, Improvement Record, Rule, Architecture Principle, and Workflow so that
   GDS preserves what changed, why it mattered, what was decided, and what should

@@ -53,7 +53,9 @@ gate.
   Validate related structure and links with `scripts/validate_gds_health.py`.
 - `repository_quality_audit_workflow.md`: repository-wide quality audit flow
   that combines UTF-8, mojibake, AI index, GDS Health, link, README, history,
-  project profile, and Markdown validation checks.
+  project profile, and Markdown validation checks. Its result can be described
+  as Repository Quality Gate Evidence through
+  `docs/architecture/repository_quality_gate_evidence_specialization.md`.
 - `encoding_regression_prevention_workflow.md`: commit-gate workflow for
   UTF-8, mojibake regression, intentional evidence exclusions, and staged
   Markdown validation.

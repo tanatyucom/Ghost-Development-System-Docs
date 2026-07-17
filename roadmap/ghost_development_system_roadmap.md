@@ -102,10 +102,10 @@ remaining issues, and recommended next work.
   First, Constraint Check, and Human Approval boundary review.
 - Current Platform Core Sequencing Priority: Platform Execution Evidence
   Contract is now defined as the common parent model, and Runtime Startup
-  Enforcement Evidence Specialization is now defined as the Startup-specific
-  extension. Repository Quality, Command Center, Completion Review, and
-  Knowledge Promotion should follow the same parent-specialization pattern
-  instead of creating competing evidence models.
+  Enforcement Evidence Specialization and Repository Quality Gate Evidence
+  Specialization are now defined as the first domain extensions. Completion
+  Review, Command Center, and Knowledge Promotion should follow the same
+  parent-specialization pattern instead of creating competing evidence models.
 - Next Milestone: After OCR, extract SDK requirements, design SDK Foundation,
   formalize Project Adoption, and issue Platform Foundation Release only after
   exit criteria are met.
@@ -1107,7 +1107,7 @@ Recommended sequence:
 Intent Engine / Intent Registry
   -> Common Platform Execution Evidence Contract
   -> Startup Enforcement Evidence Specialization
-  -> Repository Quality Runtime Gate Contract
+  -> Repository Quality Gate Evidence Specialization
   -> Command Center Core Orchestration Contract
   -> Template Engine / Artifact Pipeline Preflight
   -> Completion Review
@@ -1120,8 +1120,9 @@ Decision:
   execution evidence.
 - Runtime Startup Enforcement Evidence Specialization extends the parent
   contract for Startup-specific gate evidence.
-- Repository Quality remains a real gate evidence source, not a report-only
-  feature.
+- Repository Quality Gate Evidence Specialization extends the parent contract
+  for quality state, gate result, warning / error, freshness, report, and
+  approval / SCW evidence.
 - Command Center owns orchestration and display, not engine-specific reasoning
   or Human Approval replacement.
 - Knowledge Promotion remains approval-gated and primarily post-review, while
@@ -1130,7 +1131,7 @@ Decision:
 Recommended Next Q:
 
 ```text
-Q_GDS-REPOSITORY-QUALITY-EVIDENCE-001_repository_quality_gate_evidence_specialization_JP.md
+Q_GDS-COMPLETION-REVIEW-EVIDENCE-001_completion_review_execution_evidence_specialization_JP.md
 ```
 
 Guard:
