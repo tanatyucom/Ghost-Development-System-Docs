@@ -8,6 +8,11 @@ Codex, Claude, Gemini, human review, or another AI-assisted execution context.
 The handoff should be factual, concise, reproducible, and repository-first.
 Do not rely on chat history when the repository contains the same information.
 
+When the handoff crosses major task, AI generation, tool, architecture phase,
+or platform readiness boundaries, use `templates/HANDOFF_TEMPLATE_V2.md` or
+include its required sections. Handoff quality must preserve design intent and
+intended human / AI experience, not only file status.
+
 ## Current Status
 
 - Overall status:
@@ -105,6 +110,9 @@ Use when the handoff includes a commit-ready change set.
 - Repository First:
 - Platform First:
 - Artifact First:
+- North Star preserved:
+- Experience continuity preserved:
+- Approval boundary clear:
 - Factual and concise:
 - Reproducible:
 - Chat history dependency avoided:
@@ -112,10 +120,13 @@ Use when the handoff includes a commit-ready change set.
 ## Receiver Checklist
 
 - Read Knowledge Access Index:
+- Read North Star:
+- Read intended experience / Vision Scenario:
 - Read repository documents named above:
 - Read Completion Report:
 - Confirm scope:
 - Confirm forbidden targets:
+- Confirm pending Approval Request:
 - Confirm verification:
 - Confirm remaining issues:
 - Confirm next action:
@@ -124,6 +135,10 @@ Use when the handoff includes a commit-ready change set.
 
 - `docs/rules/ai_collaboration_rules.md`
 - `templates/multi_ai_handoff_checklist_template.md`
+- `templates/HANDOFF_TEMPLATE_V2.md`
+- `templates/VISION_SCENARIO_TEMPLATE.md`
+- `docs/philosophy/north_star.md`
+- `docs/architecture/experience_layer.md`
 - `templates/completion_report_template.md`
 - `docs/ai_repository_index.md`
 - `examples/multi_ai_handoff_reference_examples.md`

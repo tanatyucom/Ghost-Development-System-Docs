@@ -16,6 +16,10 @@ Docs.
 Humans approve goals, architecture, scope, naming, release decisions, and
 destructive changes.
 
+Human approval applies only to the latest valid Approval Request. A review
+result such as PASS, Ready, or Commit OK is not execution authority by itself.
+Commit approval must not be reused as push approval.
+
 ### AI Is A Partner
 
 AI helps draft, review, compare, summarize, and propose improvements. AI should
@@ -252,6 +256,10 @@ boundaries.
 
 Use `templates/multi_ai_handoff_checklist_template.md` to review whether the
 handoff artifact is complete enough for the receiving AI or human reviewer.
+
+Use `templates/HANDOFF_TEMPLATE_V2.md` when the handoff must preserve North
+Star, design intent, intended experience, Vision Scenario, Approval Request
+lifecycle, or generation-to-generation continuity.
 
 ## Communication Rules
 

@@ -5,6 +5,9 @@
 This document collects the design philosophy behind the Ghost Development
 System knowledge base.
 
+For the current canonical collaboration goal, see
+`docs/philosophy/north_star.md`.
+
 ## Archive First
 
 Design for Gray Ghost Archive first.

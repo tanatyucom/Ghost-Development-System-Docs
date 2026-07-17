@@ -78,6 +78,11 @@ handoff checklist template reviews whether that artifact is complete enough for
 the receiver. Reference examples live in
 `examples/multi_ai_handoff_reference_examples.md`.
 
+Handoff Template v2 and Vision Scenario Template preserve generation-to-
+generation design intent, North Star, Experience continuity, Approval Request
+lifecycle, Pending Human Approval, and what must not be lost when the handoff
+is more than a file/status transfer.
+
 Information Package templates help AI assistants, humans, and future Command
 Center workflows share Project Summary, Current Status, Current Focus, Active
 Repository, Related Rules, Related Templates, Recent Decisions, Open Issues,
@@ -164,6 +169,8 @@ restore guidance.
 - `structured_artifact_metadata_template.md`
 - `multi_ai_handoff_template.md`
 - `multi_ai_handoff_checklist_template.md`
+- `HANDOFF_TEMPLATE_V2.md`
+- `VISION_SCENARIO_TEMPLATE.md`
 - `research_mission_template.md`
 - `beginner_future_self_test_template.md`
 - `completion_checklist_template.md`

@@ -106,6 +106,10 @@ remaining issues, and recommended next work.
   Specialization, and Completion Review Execution Evidence Specialization are
   now defined as the first domain extensions. Platform Ready Review should
   verify these compatible gates before GameGhost dogfooding resumes.
+- Current Experience Continuity Priority: preserve North Star, intended human /
+  AI collaboration experience, Vision Scenario, Approval Request lifecycle, and
+  handoff quality so future GDS generations inherit why the system exists, not
+  only which files and contracts exist.
 - Next Milestone: After OCR, extract SDK requirements, design SDK Foundation,
   formalize Project Adoption, and issue Platform Foundation Release only after
   exit criteria are met.
@@ -1126,6 +1130,12 @@ Decision:
 - Completion Review Execution Evidence Specialization extends the parent
   contract for completion decision, upstream evidence consumption, Safe Commit
   Set, commit / push recommendation, remaining issues, and next Q evidence.
+- Experience Layer and Design Intent Preservation define the handoff-quality
+  boundary that Platform Ready Review must check before returning to GameGhost
+  dogfooding.
+- Approval Request Evidence should be defined before Platform Ready Review,
+  because Experience continuity depends on explicit Approval Request and
+  Pending Human Approval state.
 - Command Center owns orchestration and display, not engine-specific reasoning
   or Human Approval replacement.
 - Knowledge Promotion remains approval-gated and primarily post-review, while
@@ -1134,7 +1144,7 @@ Decision:
 Recommended Next Q:
 
 ```text
-Q_GDS-PLATFORM-READY-REVIEW-001_platform_ready_review_before_gameghost_dogfooding_JP.md
+Q_GDS-APPROVAL-REQUEST-EVIDENCE-001_approval_request_and_pending_human_approval_evidence_JP.md
 ```
 
 Guard:

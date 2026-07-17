@@ -9,6 +9,11 @@ context.
 The goal is to preserve context, protect scope, and let the next AI continue
 from repository evidence instead of temporary chat memory.
 
+For generation-to-generation or platform-readiness handoffs, also check design
+intent, North Star, Vision Scenario, Approval Request lifecycle, and Experience
+continuity. Use `templates/HANDOFF_TEMPLATE_V2.md` when those sections are
+required.
+
 Use `templates/multi_ai_handoff_template.md` for the handoff artifact itself.
 Use this checklist to confirm the artifact is complete enough for the receiver.
 
@@ -51,6 +56,18 @@ Notes:
 - Secondary focus:
 - Out of focus:
 - Next expected action:
+
+## Design Intent / Experience Continuity
+
+- North Star preserved:
+- What must not be lost:
+- Intended experience preserved:
+- Vision Scenario included:
+- End-to-End User Journey clear:
+- Approval Request lifecycle clear:
+- Pending Human Approval state clear:
+- BLOCK / SCW behavior clear:
+- Commit approval separated from Push approval:
 
 ## Scope Protection
 
@@ -149,6 +166,9 @@ Recommended Next Q:
 
 - Summary is clear:
 - Verification is visible:
+- North Star is visible:
+- Intended experience is recoverable:
+- Human Approval boundary is recoverable:
 - Remaining issues are explicit:
 - Next action is explicit:
 - Scope boundaries are explicit:
@@ -159,6 +179,10 @@ Recommended Next Q:
 
 - `docs/rules/ai_collaboration_rules.md`
 - `templates/multi_ai_handoff_template.md`
+- `templates/HANDOFF_TEMPLATE_V2.md`
+- `templates/VISION_SCENARIO_TEMPLATE.md`
+- `docs/philosophy/north_star.md`
+- `docs/architecture/experience_layer.md`
 - `docs/rules/core_principles.md`
 - `docs/ai_repository_index.md`
 - `templates/completion_report_template.md`

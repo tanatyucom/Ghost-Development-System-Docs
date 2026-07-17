@@ -41,6 +41,13 @@ gate.
 - `knowledge_carry_forward_workflow.md`: low-friction workflow for attaching
   approved knowledge promotion candidates to the most relevant current or
   future Q instead of generating many standalone Q files.
+- `generation_handoff_workflow.md`: workflow for preserving North Star,
+  design intent, Vision Scenario, Experience continuity, current mission,
+  pending decisions, and approval boundaries when work moves between AI
+  generations, tools, tasks, or human review contexts.
+- `improvement_record_promotion_workflow.md`: workflow for turning observed
+  operation gaps into Improvement Records, Promotion Candidates, and future
+  standards without automatic approval or repository mutation.
 - `capability_verification_first.md`: workflow for verifying current AI,
   repository, tool, permission, connected service, and chat capabilities before
   answering whether a task can be done.

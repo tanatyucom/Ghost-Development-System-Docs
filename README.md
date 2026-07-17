@@ -14,6 +14,9 @@ from:
 - [`docs/architecture/platform_candidate_workspace.md`](docs/architecture/platform_candidate_workspace.md)
 - [`docs/architecture/adapter_only_execution_policy_review.md`](docs/architecture/adapter_only_execution_policy_review.md)
 - [`docs/architecture/repository_intelligence_dashboard_foundation.md`](docs/architecture/repository_intelligence_dashboard_foundation.md)
+- [`docs/philosophy/north_star.md`](docs/philosophy/north_star.md)
+- [`docs/architecture/experience_layer.md`](docs/architecture/experience_layer.md)
+- [`docs/architecture/design_intent_preservation.md`](docs/architecture/design_intent_preservation.md)
 - [`docs/rules/platform_governance_rules.md`](docs/rules/platform_governance_rules.md)
 - [`docs/workflow/architecture_promotion_lifecycle.md`](docs/workflow/architecture_promotion_lifecycle.md)
 

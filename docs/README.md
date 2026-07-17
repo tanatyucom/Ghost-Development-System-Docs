@@ -24,6 +24,16 @@ Reference points:
   `docs/architecture/platform_candidate_workspace.md`
 - Adapter-Only Execution Policy Review:
   `docs/architecture/adapter_only_execution_policy_review.md`
+- North Star:
+  `docs/philosophy/north_star.md`
+- Experience Layer:
+  `docs/architecture/experience_layer.md`
+- Design Intent Preservation:
+  `docs/architecture/design_intent_preservation.md`
+- Q Knowledge Classification:
+  `docs/standards/q_knowledge_classification.md`
+- Handoff Template v2:
+  `templates/HANDOFF_TEMPLATE_V2.md`
 
 Core flow:
 

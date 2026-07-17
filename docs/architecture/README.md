@@ -25,6 +25,12 @@ runtime behavior.
   for Repository Scanner, Information Package Builder, Decision Engine,
   Template Engine, Artifact Pipeline, Human Approval Gate, Repository Health
   Adapter, Registry Adapter, and Handoff / Completion Adapter.
+- `design_intent_preservation.md`: architecture for preserving why a design
+  exists, what experience it should produce, and what must not be lost during
+  generation-to-generation or tool-to-tool handoff.
+- `experience_layer.md`: user-visible collaboration state layer for Vision
+  Scenario, End-to-End User Journey, Approval Request, Pending Human Approval,
+  BLOCK / SCW recovery, and execution boundaries.
 - `intent_driven_workflow.md`: canonical architecture foundation for routing
   natural language user intent through repository / conversation state review,
   workflow selection, quality gate / SCW, Human Approval, and approved action
