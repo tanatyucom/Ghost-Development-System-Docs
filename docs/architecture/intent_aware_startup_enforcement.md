@@ -17,6 +17,9 @@ check, and approval boundary.
 This document defines the architecture boundary. It does not implement runtime
 automation or autonomous execution.
 
+Runtime execution details are defined separately in
+`docs/architecture/runtime_startup_enforcement.md`.
+
 ## Problem Statement
 
 GDS has Startup, Q File Creation Workflow, Canonical Template Synchronization,
@@ -228,6 +231,9 @@ Blocking:
 
 - Intent-Driven Workflow decides what the user is asking for.
 - Startup Enforcement decides what must be checked before artifact generation.
+- Runtime Startup Enforcement defines how a future runtime caller executes that
+  gate, records evidence, returns gate decisions, and preserves Human Approval
+  and SCW boundaries.
 - Q File Creation Workflow defines how Q artifacts are created.
 - Q File Template Rules define mandatory Q fields.
 - ADR-GDS-005 explains repository-based context reconstruction and

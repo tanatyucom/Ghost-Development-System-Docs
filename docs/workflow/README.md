@@ -31,6 +31,9 @@ gate.
   for managed artifacts that requires artifact intent classification, workflow
   resolution, knowledge resolution, canonical template verification, Revision
   First, Constraint Check, and Gate Decision before drafting.
+- `runtime_startup_enforcement_workflow.md`: future runtime workflow for
+  executing Startup Enforcement as a state machine before Template Engine,
+  Artifact Pipeline, or Command Center draft generation.
 - `knowledge_preservation_gate.md`: workflow for deciding whether a Q, review,
   completion, or design conversation should produce an Issa draft, ADR
   candidate, Improvement Record candidate, Architecture Principle candidate, or
@@ -167,6 +170,8 @@ Idea
      "commitしていい？", "pushしていい？", or "次は？"
   -> Artifact Creation Startup Enforcement, when a managed artifact will be
      created or revised
+  -> Runtime Startup Enforcement, when a future runtime caller executes the
+     gate before Template Engine or Artifact Pipeline
   -> AI Daily Operation Cycle
   -> Capability Verification, when capability is asked or uncertain
   -> AI Startup Procedure

@@ -33,6 +33,11 @@ runtime behavior.
   managed artifact generation until artifact intent, required workflow,
   required knowledge, canonical repository / template verification,
   Revision First, Constraint Check, and Human Approval boundary are resolved.
+- `runtime_startup_enforcement.md`: runtime architecture contract for executing
+  Startup Enforcement before managed artifact generation, including state
+  machine, gate decision behavior, evidence model, execution log, failure
+  recovery, repository interaction contract, and Command Center integration
+  boundary.
 - `intent_registry_and_pending_action_contract.md`: initial Intent Registry,
   Pending Action Contract, Approval Resolution Rule for `お願いします` / `はい` /
   `OK`, Commit / Push / Tag recommendation rules, and reason code set.
@@ -213,6 +218,12 @@ or missing context, not for perfect memory retention.
   artifacts. It prevents direct generation from remembered templates or
   incomplete context by resolving required workflow, required knowledge,
   canonical source, Revision First, Constraint Check, and approval boundary.
+- Runtime Startup Enforcement owns the future execution contract for running
+  that gate before Template Engine or Artifact Pipeline starts managed artifact
+  generation. It may read repository state and emit evidence, but it does not
+  own artifact content generation, autonomous repository mutation, Human
+  Approval replacement, commit, push, tag, release, GUI, or plugin
+  implementation.
 - Knowledge Artifact Responsibility Map owns the separation between Q, Issa,
   ADR, Improvement Record, Rule, Architecture Principle, and Workflow so that
   GDS preserves what changed, why it mattered, what was decided, and what should

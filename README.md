@@ -131,7 +131,9 @@ Template、Revision First、Constraint Checkを解決します。
 Start from:
 
 - [`docs/architecture/intent_aware_startup_enforcement.md`](docs/architecture/intent_aware_startup_enforcement.md)
+- [`docs/architecture/runtime_startup_enforcement.md`](docs/architecture/runtime_startup_enforcement.md)
 - [`docs/workflow/artifact_creation_startup_enforcement_workflow.md`](docs/workflow/artifact_creation_startup_enforcement_workflow.md)
+- [`docs/workflow/runtime_startup_enforcement_workflow.md`](docs/workflow/runtime_startup_enforcement_workflow.md)
 - [`docs/rules/artifact_creation_startup_enforcement_rules.md`](docs/rules/artifact_creation_startup_enforcement_rules.md)
 
 境界:
@@ -139,6 +141,7 @@ Start from:
 - 記憶上のテンプレート構成から直接生成しません。
 - Repository確認を試みずに「見られない」と報告しません。
 - SCWは、実行可能な必須確認の代替にはしません。
+- Runtime設計はHuman Approval、SCW、Commit / Push禁止境界を置き換えません。
 
 ## Knowledge Preservation / Architecture Promotion
 

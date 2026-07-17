@@ -153,7 +153,9 @@ Knowledge artifact, registry update, and index update.
 Reference points:
 
 - Architecture: `docs/architecture/intent_aware_startup_enforcement.md`
+- Runtime Architecture: `docs/architecture/runtime_startup_enforcement.md`
 - Workflow: `docs/workflow/artifact_creation_startup_enforcement_workflow.md`
+- Runtime Workflow: `docs/workflow/runtime_startup_enforcement_workflow.md`
 - Rule: `docs/rules/artifact_creation_startup_enforcement_rules.md`
 - Q Creation Workflow: `docs/workflow/q_file_creation_workflow.md`
 - Startup Completion Gate: `docs/workflow/startup_completion_gate.md`
@@ -173,6 +175,11 @@ Artifact Intent
 
 Direct generation from memory, stale templates, unresolved knowledge, or
 unattempted repository access is not allowed.
+
+Runtime Startup Enforcement defines the future execution contract for Command
+Center, Template Engine, or Artifact Pipeline callers. It does not approve
+autonomous repository modification, automatic commit, automatic push, or Human
+Approval replacement.
 
 ## Knowledge Preservation Gate Index
 

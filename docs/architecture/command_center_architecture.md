@@ -672,11 +672,18 @@ For managed artifact generation, future Command Center behavior should route
 through Intent-Aware Startup Enforcement before Template Engine or Artifact
 Pipeline prepares a draft.
 
+Runtime Startup Enforcement is the future execution contract for that route.
+Command Center may call it to receive a gate decision, evidence record,
+allowed next step, pending action, and display summary. Command Center must
+treat `BLOCK` and `SCW_REQUIRED` as stop states, and must show
+`PASS_WITH_LIMITATION` limitations before draft generation proceeds.
+
 Details follow:
 
 - `docs/architecture/intent_driven_workflow.md`
 - `docs/architecture/intent_registry_and_pending_action_contract.md`
 - `docs/architecture/intent_aware_startup_enforcement.md`
+- `docs/architecture/runtime_startup_enforcement.md`
 - `docs/workflow/intent_driven_workflow.md`
 
 ## Review Points
