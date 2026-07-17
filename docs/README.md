@@ -118,6 +118,32 @@ Capability Verification, when capability is asked or uncertain
   -> Implementation / Review Start
 ```
 
+## Intent-Driven Workflow Index
+
+Intent-Driven Workflow lets AI route natural language user intent such as
+`続きやろう`, `何をやったらいい？`, `終わった`, `commitしていい？`,
+`お願いします`, and `次は？` into the correct GDS workflow without treating
+the utterance as automatic execution approval.
+
+Reference points:
+
+- Architecture: `docs/architecture/intent_driven_workflow.md`
+- Contract: `docs/architecture/intent_registry_and_pending_action_contract.md`
+- Workflow: `docs/workflow/intent_driven_workflow.md`
+- Command Center: `docs/architecture/command_center_architecture.md`
+- Completion Report Workflow: `docs/workflow/completion_report_workflow.md`
+- Pre-Response Verification Gate: `docs/workflow/pre_response_verification_gate.md`
+
+Core boundary:
+
+```text
+Intent -> Recommendation -> Pending Action -> Human Approval -> Action
+```
+
+Recommendation is not Action. Short approval phrases approve only the latest
+explicit Pending Action when repository, operation, scope, diff, and state are
+still unambiguous. Otherwise, apply SCW.
+
 When Windows PowerShell 5.1 reads a Q file or Japanese Markdown, use:
 
 ```powershell

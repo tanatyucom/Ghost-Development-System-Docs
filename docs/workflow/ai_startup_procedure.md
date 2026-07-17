@@ -12,6 +12,7 @@ Startup Checklist が「開始直前のチェックリスト」なら、AI Start
 
 ```text
 Start
+  -> Intent-Driven Workflow, when the user starts from natural language intent
   -> Capability Verification, when capability is asked or uncertain
   -> AI Repository Index Check
   -> Daily Knowledge Source Review, when first major project work of the day
@@ -50,6 +51,25 @@ Capability Verification First を実行します。
 - Alternative workflows when unavailable.
 
 Details follow `capability_verification_first.md`.
+
+### 0A. Intent-Driven Workflow
+
+ユーザーが `続きやろう`、`何をやったらいい？`、`終わった`、
+`commitしていい？`、`お願いします`、`次は？` のような自然言語で開始した場合、
+AI はその発言を直接実行コマンドとして扱わず、Intent-Driven Workflow として
+分類します。
+
+確認すること:
+
+- intent candidate。
+- 対象 repository。
+- conversation state。
+- current Pending Action。
+- Human Approval が必要な操作か。
+- SCW 条件に該当しないか。
+
+Details follow `intent_driven_workflow.md` and
+`../architecture/intent_registry_and_pending_action_contract.md`.
 
 ### 1. AI Repository Index Check
 

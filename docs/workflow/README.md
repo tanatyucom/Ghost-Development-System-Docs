@@ -23,6 +23,10 @@ gate.
 - `ai_startup_procedure.md`: AI reading order and startup procedure before
   Startup Checklist, Q execution, implementation, review, or documentation
   update.
+- `intent_driven_workflow.md`: natural language intent routing workflow from
+  user utterance to canonical source review, repository / conversation state
+  review, workflow selection, Recommendation, Pending Action, Human Approval,
+  Action, or SCW.
 - `capability_verification_first.md`: workflow for verifying current AI,
   repository, tool, permission, connected service, and chat capabilities before
   answering whether a task can be done.
@@ -147,6 +151,9 @@ Innovation Pipeline records should use
 
 ```text
 Idea
+  -> Intent-Driven Workflow, when the user gives a natural language goal such
+     as "続きやろう", "何をやったらいい？", "終わった", "お願いします",
+     "commitしていい？", "pushしていい？", or "次は？"
   -> AI Daily Operation Cycle
   -> Capability Verification, when capability is asked or uncertain
   -> AI Startup Procedure
@@ -878,6 +885,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/workflow/japanese_documentation_localization_workflow.md`
 - `templates/daily_operation_checklist_template.md`
 - `docs/workflow/ai_startup_procedure.md`
+- `docs/workflow/intent_driven_workflow.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/rules/conversation_insight_capture_rules.md`
 - `docs/workflow/repository_root_validation_workflow.md`

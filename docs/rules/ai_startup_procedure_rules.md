@@ -13,7 +13,8 @@ AI Startup Procedure は、AI が GDS 作業を始める前に読む順番と確
 AI は実装、レビュー、文書更新、Q 実行を始める前に、次の順番で前提を確認します。
 
 ```text
-Capability Verification, when capability is asked or uncertain
+Intent-Driven Workflow, when the user starts from natural language intent
+  -> Capability Verification, when capability is asked or uncertain
   -> AI Repository Index
   -> Daily Knowledge Source Review, when first major project work of the day
   -> Information Package, when provided
@@ -47,6 +48,20 @@ AI は未検証の状態で `できます` と断定してはいけません。
 
 Details follow `docs/workflow/capability_verification_first.md` and
 `docs/rules/capability_disclosure_rule.md`.
+
+### Intent-Driven Workflow
+
+ユーザーが `続きやろう`、`何をやったらいい？`、`終わった`、
+`お願いします`、`commitしていい？`、`pushしていい？`、`次は？` のような
+自然言語で作業意図を示した場合、AI はその発言を直接実行コマンドとして扱わず、
+Intent-Driven Workflow によって workflow selection、Recommendation、
+Pending Action、Human Approval、SCW のいずれかへ分類します。
+
+`お願いします`、`はい`、`OK` は、直前に一意な Pending Action が存在し、
+repository、operation、scope、diff、state が変化していない場合だけ承認として
+扱えます。
+
+Details follow `docs/workflow/intent_driven_workflow.md`.
 
 ### AI Repository Index
 

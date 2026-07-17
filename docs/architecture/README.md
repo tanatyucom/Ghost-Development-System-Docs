@@ -25,6 +25,13 @@ runtime behavior.
   for Repository Scanner, Information Package Builder, Decision Engine,
   Template Engine, Artifact Pipeline, Human Approval Gate, Repository Health
   Adapter, Registry Adapter, and Handoff / Completion Adapter.
+- `intent_driven_workflow.md`: canonical architecture foundation for routing
+  natural language user intent through repository / conversation state review,
+  workflow selection, quality gate / SCW, Human Approval, and approved action
+  boundaries without implementing runtime automation.
+- `intent_registry_and_pending_action_contract.md`: initial Intent Registry,
+  Pending Action Contract, Approval Resolution Rule for `お願いします` / `はい` /
+  `OK`, Commit / Push / Tag recommendation rules, and reason code set.
 - `context_aware_knowledge_suggestion_assistant.md`: draft architecture
   proposal for suggesting related Conversation Insight, Future Candidate,
   Research Mission, Improvement Record, CASE, Architecture, Rule, and Workflow
@@ -182,6 +189,11 @@ or missing context, not for perfect memory retention.
   mission, future candidates, and scanner summaries. It does not own canonical
   sources, automatic promotion, UI implementation, database implementation,
   scanner runtime, commit, push, or repository mutation.
+- Intent-Driven Workflow owns the interpretation boundary between natural
+  language user intent and GDS workflow recommendation. It may produce
+  Recommendation and Pending Action artifacts, but it does not execute commit,
+  push, tag, release, file deletion, data mutation, or external publication
+  without explicit Human Approval.
 - Launcher owns the user entry point.
 
 ## Database Philosophy Summary

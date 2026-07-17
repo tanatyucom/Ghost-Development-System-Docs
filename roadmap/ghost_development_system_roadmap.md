@@ -85,6 +85,9 @@ remaining issues, and recommended next work.
   Plugin Architecture, Product Documentation Hierarchy, and Documentation
   Synchronization are being standardized.
 - Current Focus: Complete GameGhost OCR Vertical Slice first.
+- Current Platform Priority: Intent-Driven Workflow Foundation is a top
+  priority for reducing command memorization burden and routing natural
+  language user intent into safe GDS workflows.
 - Next Milestone: After OCR, extract SDK requirements, design SDK Foundation,
   formalize Project Adoption, and issue Platform Foundation Release only after
   exit criteria are met.
@@ -1069,3 +1072,53 @@ Guard:
 - No automatic Push.
 - No Human Approval boundary relaxation.
 - No runtime or Ghost Repository implementation in this roadmap item.
+
+## Priority Platform Candidate: Intent-Driven Workflow Foundation
+
+Status: architecture foundation added; runtime implementation not approved.
+
+Purpose:
+
+Allow users to resume and operate GDS through natural language such as
+`続きやろう`, `何をやったらいい？`, `Qを作って`, `終わった`,
+`お願いします`, and `次は？` without needing to memorize every GDS command,
+gate, or checklist name.
+
+Direction:
+
+```text
+User Intent
+  -> Intent Interpretation
+  -> Repository / Conversation State Review
+  -> Workflow Selection
+  -> Quality Gate / SCW
+  -> Human Approval
+  -> Action
+```
+
+Initial platform scope:
+
+- Intent-Driven Workflow architecture.
+- Intent Registry.
+- Pending Action Contract.
+- Approval Resolution Rule.
+- Completion Review intent.
+- Commit / Push / Tag Recommendation rules.
+- Reason Code registry.
+- Command Center integration candidate.
+
+Current Mission relationship:
+
+Intent-Driven Workflow supports the current Platform Integration Era by making
+Startup, Q Creation, Completion Review, AI Repository Index Update Gate,
+Commit / Push / Tag recommendation, and SCW reachable from user intent rather
+than memorized commands.
+
+Guard:
+
+- No runtime Intent Engine implementation in this roadmap item.
+- No LLM classifier implementation.
+- No automatic Git operation.
+- No automatic approval.
+- No Human Approval boundary relaxation.
+- No GameGhost or other field repository runtime change.

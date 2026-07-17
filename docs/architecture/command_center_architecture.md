@@ -655,6 +655,25 @@ This specification follows Roadmap v2.1:
 - Artifact Pipeline prepares drafts.
 - Human Approval Gate remains mandatory.
 
+## Intent-Driven Workflow Relationship
+
+Intent Engine is a future Command Center front-door component.
+
+It interprets natural language user intent and routes it to Repository Scan,
+Information Package, Decision Engine, Artifact Pipeline, Completion Review,
+Commit / Push / Tag Recommendation, or SCW.
+
+Command Center may consume Intent Engine output, but Intent Engine output is
+advisory until Human Approval. It must not bypass Human Approval Gate, execute
+Git operations, mutate repositories, publish externally, or replace Completion
+Checklist / Pre-Response Verification Gate.
+
+Details follow:
+
+- `docs/architecture/intent_driven_workflow.md`
+- `docs/architecture/intent_registry_and_pending_action_contract.md`
+- `docs/workflow/intent_driven_workflow.md`
+
 ## Review Points
 
 Review this specification for:

@@ -101,6 +101,27 @@ python scripts/validate_encoding_regression.py --all
 - [`docs/workflow/japanese_documentation_localization_workflow.md`](docs/workflow/japanese_documentation_localization_workflow.md)
 - [`reports/japanese_documentation_localization_report.md`](reports/japanese_documentation_localization_report.md)
 
+## Intent-Driven Workflow
+
+ユーザーが `続きやろう`、`何をやったらいい？`、`終わった`、
+`commitしていい？`、`お願いします`、`次は？` のように自然言語で目的を示した
+場合、AI は Intent-Driven Workflow に従い、意図を GDS workflow へ安全に
+接続します。
+
+Start from:
+
+- [`docs/architecture/intent_driven_workflow.md`](docs/architecture/intent_driven_workflow.md)
+- [`docs/architecture/intent_registry_and_pending_action_contract.md`](docs/architecture/intent_registry_and_pending_action_contract.md)
+- [`docs/workflow/intent_driven_workflow.md`](docs/workflow/intent_driven_workflow.md)
+
+重要な境界:
+
+- Recommendation は Action ではありません。
+- `お願いします`、`はい`、`OK` は、直前の一意な Pending Action がある場合だけ
+  その操作への承認として扱えます。
+- Commit / Push / Tag / Release / 削除 / 外部公開は Human Approval なしに
+  実行しません。
+
 標準順序:
 
 ```text
