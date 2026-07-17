@@ -387,3 +387,19 @@ Do not add one-off request details to templates. Add only reusable structure.
 - `docs/rules/project_rules.md`
 - `docs/rules/language_rules.md`
 - `docs/workflow/README.md`
+
+## AI Repository Index Update Gate
+
+GDS-QUALITY-005 adds a stronger completion gate for AI Repository Index freshness.
+
+If a Q changes index-target Knowledge Assets, the Q and Completion Report templates must require:
+
+- `python scripts/generate_ai_repository_index.py --write`
+- `python scripts/generate_ai_repository_index.py --validate`
+- `git diff --check`
+- `git status --short --untracked-files=all`
+- generated entry count evidence
+- Safe Commit Set inclusion decision for `docs/ai_repository_index.md`
+- explicit distinction between local index regeneration and public Raw availability after Commit / Push
+
+This extends the existing AI Repository Index decision field instead of replacing the Completion Checklist or Documentation Synchronization workflows.

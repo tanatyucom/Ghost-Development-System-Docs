@@ -368,3 +368,33 @@ Ideas that should remain future work until separately reviewed:
 - `docs/rules/encoding_regression_prevention_rules.md`
 - `docs/workflow/encoding_regression_prevention_workflow.md`
 - `docs/workflow/commit_safety_checklist.md`
+
+## AI Repository Index Update Gate Evidence
+
+When a Q changes index-target Knowledge Assets, Completion Report must include explicit evidence for the AI Repository Index Update Gate.
+
+Required fields:
+
+- Index generation required: Yes / No / Review Required
+- Index generation command:
+- Index generation result:
+- Generated entry count:
+- Index validation command:
+- Index validation result:
+- `docs/ai_repository_index.md` changed:
+- Index diff included in Safe Commit Set:
+- `git diff --check` result:
+- `git status --short --untracked-files=all` result:
+- Commit approved:
+- Commit executed:
+- Push approved:
+- Push executed:
+- Public Raw Index update status:
+- Not required reason:
+- Failure action / SCW result:
+
+Required boundary statement:
+
+```text
+Local index regeneration does not mean the public Raw Index has been updated. Public Raw availability requires Commit and Push first.
+```

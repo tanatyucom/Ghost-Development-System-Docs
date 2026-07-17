@@ -1047,3 +1047,25 @@ follow-up Q を記録する。
 - Generated documentation inventory.
 - Development Knowledge DB.
 - Command Center information architecture.
+
+## Future Candidate: AI Repository Index Update Gate Automation
+
+Status: future candidate; manual gate standardized by GDS-QUALITY-005.
+
+Purpose:
+
+Keep Canonical AI Repository Index freshness visible during Q completion by requiring regeneration, validation, entry-count evidence, Safe Commit Set classification, and Raw publication boundary reporting whenever index-target Knowledge Assets change.
+
+Future direction:
+
+- Complete Q Validation Script candidate.
+- Raw availability check after Commit / Push.
+- Completion Gate automation through Command Center or Artifact Pipeline.
+- Repository synchronization monitor for local repository, GitHub main, and Raw content state.
+
+Guard:
+
+- No automatic Commit.
+- No automatic Push.
+- No Human Approval boundary relaxation.
+- No runtime or Ghost Repository implementation in this roadmap item.

@@ -174,3 +174,36 @@ After the report is written, complete the Completion Checklist and record:
 - `docs/workflow/pending_conversation_insight_review_workflow.md`
 - `templates/completion_checklist_template.md`
 - `docs/workflow/commit_safety_checklist.md`
+
+## AI Repository Index Update Gate
+
+GDS-QUALITY-005 formalizes the AI Repository Index Update Gate as a completion responsibility.
+
+Use this gate after Verification and before the final Completion Report / Completion Checklist decision when a Q changes index-target Knowledge Assets.
+
+```text
+Knowledge Asset changed
+  -> Regenerate docs/ai_repository_index.md
+  -> Validate index
+  -> Run git diff --check
+  -> Check git status --short --untracked-files=all
+  -> Record generated entry count and Safe Commit Set decision
+  -> Human Review / Commit decision
+```
+
+Failure action:
+
+- If generation or validation fails, apply SCW and do not mark the Q complete.
+- If repository boundary, canonical path, duplicate entry, missing entry, or dirty workspace scope is unclear, stop and request review.
+- Do not continue by relying on memory or inferred Raw URLs.
+
+Raw publication boundary:
+
+```text
+Index generation -> local index update
+Commit -> Git history
+Push -> GitHub main
+Raw retrieval -> public Canonical Index / Artifact availability
+```
+
+This gate complements Startup / Q Creation Gate. Startup proves canonical knowledge was readable before work starts; AI Repository Index Update Gate proves repository changes were reflected before completion.

@@ -104,3 +104,28 @@ Commit approval is blocked when required synchronization is missing.
 
 Commit remains a human decision. This workflow does not execute commit or push.
 
+
+## AI Repository Index Update Gate Detail
+
+For documentation changes that add, update, move, rename, or delete index-target Knowledge Assets, Documentation Synchronization must run the AI Repository Index Update Gate before completion.
+
+Required commands:
+
+```powershell
+python scripts/generate_ai_repository_index.py --write
+python scripts/generate_ai_repository_index.py --validate
+git diff --check
+git status --short --untracked-files=all
+```
+
+Required evidence:
+
+- generation result;
+- generated entry count;
+- validation result;
+- whether `docs/ai_repository_index.md` changed;
+- whether the index change is in the Safe Commit Set;
+- Commit / Push not executed unless explicitly approved;
+- public Raw availability remains pending until Push.
+
+If generation, validation, path resolution, or Safe Commit Set classification fails, use SCW and do not approve completion.

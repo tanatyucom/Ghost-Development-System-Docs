@@ -490,3 +490,48 @@ docs: update ghost development system knowledge base
 - `docs/rules/beginner_future_self_test_rules.md`
 - `templates/beginner_future_self_test_template.md`
 - `templates/completion_report_template.md`
+
+## AI Repository Index Update Gate Requirements
+
+GDS-QUALITY-005 formalizes this gate for Q completion.
+
+When a Q adds, changes, moves, renames, or deletes an index-target Knowledge Asset inside this repository, the executor must regenerate and validate the Canonical AI Repository Index before treating the Q as complete.
+
+Index-target Knowledge Assets are the Markdown files currently included by `scripts/generate_ai_repository_index.py`. In the current repository structure, this includes public Markdown under areas such as `README.md`, `docs/`, `templates/`, `examples/`, `roadmap/`, `pip/`, `project_profiles/`, `requests/`, `registry_updates/`, and `reports/`. Do not hard-code nonexistent paths into a request; confirm the real repository structure and generator behavior.
+
+Required commands for GDS Docs completion evidence:
+
+```powershell
+cd C:\GitHub\Ghost-Development-System-Docs
+python scripts/generate_ai_repository_index.py --write
+python scripts/generate_ai_repository_index.py --validate
+git diff --check
+git status --short --untracked-files=all
+```
+
+Completion Report required evidence:
+
+- Index generation result.
+- Generated entry count.
+- Index validation result.
+- `git diff --check` result.
+- Whether `docs/ai_repository_index.md` changed.
+- Whether the index change is included in the Safe Commit Set.
+- Commit approval status.
+- Push approval status.
+- Statement that public Raw Index availability is updated only after Commit and Push.
+
+Failure action:
+
+Apply SCW and do not treat the Q as complete when index generation fails, validation fails, an expected Knowledge Asset is missing from the index, duplicate or invalid Raw URL entries are suspected, canonical paths cannot be resolved, repository boundaries are unclear, or unrelated dirty files may enter the Safe Commit Set.
+
+Publication boundary:
+
+```text
+Index generation -> local docs/ai_repository_index.md update
+Commit           -> Git history records the update
+Push             -> GitHub main receives the update
+Raw retrieval    -> public Canonical Index / Artifact can be fetched
+```
+
+Do not report local index generation as public Raw availability.

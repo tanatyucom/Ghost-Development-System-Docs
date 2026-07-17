@@ -1159,3 +1159,24 @@ Field Project
 Metrics は Human Approval を置き換えません。Success Rate、Review Rate、Review
 Iterations、Documentation Reuse、Knowledge Promotion Count、Automation Rate などを
 使い、改善が実運用で効いたかを review できる形にします。
+
+## AI Repository Index Update Gate
+
+GDS-QUALITY-005 defines the completion gate for keeping the Canonical AI Repository Index synchronized when index-target Knowledge Assets change.
+
+Start from:
+
+- [`templates/Q_TEMPLATE.md`](templates/Q_TEMPLATE.md)
+- [`templates/completion_report_template.md`](templates/completion_report_template.md)
+- [`docs/workflow/completion_report_workflow.md`](docs/workflow/completion_report_workflow.md)
+- [`docs/workflow/documentation_synchronization_workflow.md`](docs/workflow/documentation_synchronization_workflow.md)
+- [`docs/ai_repository_index.md`](docs/ai_repository_index.md)
+
+Required boundary:
+
+```text
+Index generation -> local index update
+Commit -> Git history
+Push -> GitHub main
+Raw retrieval -> public Canonical Index / Artifact availability
+```

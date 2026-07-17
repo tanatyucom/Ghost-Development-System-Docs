@@ -921,3 +921,11 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `templates/innovation_pipeline_template.md`
 - `docs/templates/review_checklist.md`
 - `docs/history/knowledge_base_history.md`
+
+## AI Repository Index Update Gate
+
+Use `completion_report_workflow.md` and `documentation_synchronization_workflow.md` for the AI Repository Index Update Gate introduced by GDS-QUALITY-005.
+
+The gate requires index regeneration, validation, `git diff --check`, workspace status evidence, generated entry count, and Safe Commit Set classification whenever index-target Knowledge Assets change.
+
+It also requires distinguishing local index generation from public Raw availability after Commit and Push.

@@ -1992,3 +1992,28 @@ docs/
   templates/     recurring documentation work の reusable structure。
   workflow/      development flow と knowledge promotion process。
 ```
+
+## AI Repository Index Update Gate Index
+
+GDS-QUALITY-005 standardizes the completion gate for AI Repository Index freshness.
+
+Use it when a Q changes index-target Knowledge Assets such as rules, workflow, templates, roadmap, architecture, examples, requests, reports, PIP, CASE, Concept, project profiles, or other Markdown assets included by `scripts/generate_ai_repository_index.py`.
+
+Reference points:
+
+- Q Template: `templates/Q_TEMPLATE.md`
+- Completion Report Template: `templates/completion_report_template.md`
+- Completion Report Workflow: `docs/workflow/completion_report_workflow.md`
+- Documentation Synchronization Workflow: `docs/workflow/documentation_synchronization_workflow.md`
+- AI Repository Index: `docs/ai_repository_index.md`
+
+Required commands:
+
+```bash
+python scripts/generate_ai_repository_index.py --write
+python scripts/generate_ai_repository_index.py --validate
+git diff --check
+git status --short --untracked-files=all
+```
+
+Index generation updates the local repository only. Public Raw availability requires Commit and Push first.
