@@ -154,7 +154,10 @@ Architecture Principle candidate, or child Q.
 Reference points:
 
 - Responsibility Map: `docs/architecture/knowledge_artifact_responsibility_map.md`
+- Knowledge Promotion Engine: `docs/architecture/knowledge_promotion_engine.md`
+- Candidate Contract: `docs/architecture/knowledge_candidate_classification_contract.md`
 - Workflow: `docs/workflow/knowledge_preservation_gate.md`
+- Carry-Forward Workflow: `docs/workflow/knowledge_carry_forward_workflow.md`
 - Proposed ADR: `docs/adr/ADR-GDS-005_context_reconstruction_and_knowledge_guided_recommendations.md`
 - Related Architecture: `docs/architecture/intent_driven_workflow.md`
 
@@ -170,6 +173,14 @@ Reasoning / Decision Signal
 
 The gate does not automatically approve ADRs, canonicalize Issa, change
 roadmap priority, commit, push, or tag.
+
+Knowledge Promotion Engine extends this by defining the governed loop:
+
+```text
+Experience -> Candidate -> Classification -> Duplicate Check
+  -> Recommendation -> Human Approval -> Carry-Forward
+  -> Validation -> Promotion -> Application
+```
 
 When Windows PowerShell 5.1 reads a Q file or Japanese Markdown, use:
 

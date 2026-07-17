@@ -18,6 +18,14 @@ Knowledge は、Research、Completion Report、Debug Artifact、Human Review か
 - [`conversation_insights/pending/README.md`](conversation_insights/pending/README.md):
   即時登録やCodex実行を避け、翌日以降のHuman Reviewへ回すPending Insight Queue。
 
+Related promotion architecture and workflow:
+
+- [`../architecture/knowledge_promotion_engine.md`](../architecture/knowledge_promotion_engine.md)
+- [`../architecture/knowledge_candidate_classification_contract.md`](../architecture/knowledge_candidate_classification_contract.md)
+- [`../architecture/knowledge_artifact_responsibility_map.md`](../architecture/knowledge_artifact_responsibility_map.md)
+- [`../workflow/knowledge_preservation_gate.md`](../workflow/knowledge_preservation_gate.md)
+- [`../workflow/knowledge_carry_forward_workflow.md`](../workflow/knowledge_carry_forward_workflow.md)
+
 ## Role
 
 ```text

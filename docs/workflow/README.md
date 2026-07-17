@@ -31,6 +31,9 @@ gate.
   completion, or design conversation should produce an Issa draft, ADR
   candidate, Improvement Record candidate, Architecture Principle candidate, or
   child Q without automatically promoting it.
+- `knowledge_carry_forward_workflow.md`: low-friction workflow for attaching
+  approved knowledge promotion candidates to the most relevant current or
+  future Q instead of generating many standalone Q files.
 - `capability_verification_first.md`: workflow for verifying current AI,
   repository, tool, permission, connected service, and chat capabilities before
   answering whether a task can be done.
@@ -202,6 +205,8 @@ Idea
      GDS standard
   -> Knowledge Preservation Gate, when problem definition, reasoning,
      architecture decision, or future reconstruction value may be lost
+  -> Knowledge Carry-Forward, when approved promotion candidates should be
+     preserved in the current or next Q
   -> Platform Registry Update Artifact, when Platform Standard Registry changes
   -> Roadmap2 Knowledge Salvage, when Roadmap2-only knowledge remains
   -> Human Review
@@ -893,6 +898,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/workflow/intent_driven_workflow.md`
 - `docs/workflow/knowledge_preservation_gate.md`
+- `docs/workflow/knowledge_carry_forward_workflow.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/rules/conversation_insight_capture_rules.md`
 - `docs/workflow/repository_root_validation_workflow.md`

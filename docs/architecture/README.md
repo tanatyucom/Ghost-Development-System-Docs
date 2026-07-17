@@ -36,6 +36,13 @@ runtime behavior.
   ADR, Improvement Record, Rule, Architecture Principle, and Workflow,
   including triggers, lifecycle, approval boundary, canonical location, and
   cross-reference / promotion rules.
+- `knowledge_promotion_engine.md`: architecture foundation for detecting,
+  classifying, deduplicating, recommending, approving, carrying forward,
+  validating, promoting, and applying knowledge candidates without automatic
+  canonical promotion or Git operations.
+- `knowledge_candidate_classification_contract.md`: candidate record contract,
+  candidate types, evidence requirements, duplicate checks, approval boundary,
+  and reason codes for Knowledge Promotion Engine.
 - `context_aware_knowledge_suggestion_assistant.md`: draft architecture
   proposal for suggesting related Conversation Insight, Future Candidate,
   Research Mission, Improvement Record, CASE, Architecture, Rule, and Workflow
@@ -202,6 +209,10 @@ or missing context, not for perfect memory retention.
   ADR, Improvement Record, Rule, Architecture Principle, and Workflow so that
   GDS preserves what changed, why it mattered, what was decided, and what should
   be promoted without collapsing all knowledge into a single artifact.
+- Knowledge Promotion Engine owns the governed learning loop from development
+  experience to candidate detection, classification, canonical source check,
+  promotion recommendation, Human Approval, Knowledge Carry-Forward, validation,
+  canonical promotion, lineage, and future application targets.
 - Launcher owns the user entry point.
 
 ## Database Philosophy Summary

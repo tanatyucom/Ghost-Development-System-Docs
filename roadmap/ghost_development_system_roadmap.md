@@ -92,6 +92,10 @@ remaining issues, and recommended next work.
   architecture decisions behind Intent-Driven Workflow through Knowledge
   Preservation Gate, ADR candidate review, and Issa storage standardization
   without replacing the existing Current Mission.
+- Current Knowledge Promotion Priority: define Knowledge Promotion Engine as
+  architecture-only foundation so Completion Review can detect reusable
+  knowledge, classify it, check duplicates, carry it forward, and require
+  Human Approval before canonical promotion.
 - Next Milestone: After OCR, extract SDK requirements, design SDK Foundation,
   formalize Project Adoption, and issue Platform Foundation Release only after
   exit criteria are met.
@@ -1153,3 +1157,38 @@ Guard:
 - No runtime Intent Engine implementation.
 - No roadmap priority replacement without Human Approval.
 - No commit, push, or tag.
+
+## Architecture Candidate: Knowledge Promotion Engine
+
+Status: draft architecture foundation; implementation not approved.
+
+Purpose:
+
+Turn implementation and review experience into reusable repository knowledge
+through governed detection, classification, duplicate check, recommendation,
+Human Approval, Knowledge Carry-Forward, validation, promotion, lineage, and
+application target declaration.
+
+Target loop:
+
+```text
+Implementation / Review Result
+  -> Knowledge Candidate Detection
+  -> Classification and Evidence
+  -> Duplicate / Canonical Source Check
+  -> Promotion Recommendation
+  -> Human Approval
+  -> Draft Creation or Knowledge Carry-Forward
+  -> Validation
+  -> Canonical Promotion
+  -> Future Intent / Workflow / Rule Uses the Knowledge
+```
+
+Guard:
+
+- No autonomous canonical promotion.
+- No automatic commit, push, tag, or release.
+- No unrestricted LLM classification.
+- No GameGhost edits.
+- No cross-repository mutation.
+- No bypass of artifact-specific lifecycle rules.

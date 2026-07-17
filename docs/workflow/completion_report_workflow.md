@@ -19,6 +19,7 @@ Source Q
   -> Changed Files Review
   -> Verification
   -> Evidence Review
+  -> Knowledge Promotion Candidate Review
   -> Safe Commit Set
   -> Project Edit Status
   -> Improvement Review
@@ -75,25 +76,43 @@ Record not-run checks with reasons.
 Also record evidence that should feed future Improvement Records or Promotion
 decisions.
 
-## Step 4: Identify Safe Commit Set
+## Step 4: Knowledge Promotion Candidate Review
+
+Before Safe Commit Set, check whether the work produced reusable knowledge that
+should enter Knowledge Promotion Engine.
+
+Record:
+
+- candidate type;
+- evidence;
+- duplicate / canonical source check;
+- proposed promotion target;
+- Knowledge Carry-Forward target;
+- Human Approval requirement;
+- application target.
+
+This review does not approve canonical promotion, ADR acceptance, Rule changes,
+commit, push, tag, release, or cross-repository mutation.
+
+## Step 5: Identify Safe Commit Set
 
 List files that are safe to commit together.
 
 Exclude unrelated files, runtime data, temporary files, generated debug artifacts, and files outside the Q scope.
 
-## Step 5: Record Commit / Push Status
+## Step 6: Record Commit / Push Status
 
 Record the Q policy and actual execution state.
 
 Commit and push are never implied by Completion Report creation.
 
-## Step 6: Record Project Edit Status
+## Step 7: Record Project Edit Status
 
 Confirm target and non-target project boundaries.
 
 If GameGhost is non-target, state whether GameGhost was edited.
 
-## Step 7: Improvement Review
+## Step 8: Improvement Review
 
 Review whether the work produced reusable learning for:
 
@@ -118,7 +137,7 @@ Record:
 - smallest recommended improvement;
 - whether excessive duplication was avoided.
 
-## Step 8: Separate Follow-up Buckets
+## Step 9: Separate Follow-up Buckets
 
 If Pending Insight was created, updated, reviewed, resolved, or used as Q source,
 record:
@@ -136,7 +155,7 @@ Use separate sections:
 - Future Candidates.
 - Recommended Next Q.
 
-## Step 9: Save Completion Report Artifact
+## Step 10: Save Completion Report Artifact
 
 Save the report beside the Source Q when a task workspace exists:
 
@@ -150,7 +169,7 @@ For repository-wide documentation tasks without a request workspace, save a repo
 reports/<short_topic>_completion_report.md
 ```
 
-## Step 10: Completion Checklist
+## Step 11: Completion Checklist
 
 After the report is written, complete the Completion Checklist and record:
 

@@ -130,7 +130,10 @@ Start from:
 Start from:
 
 - [`docs/architecture/knowledge_artifact_responsibility_map.md`](docs/architecture/knowledge_artifact_responsibility_map.md)
+- [`docs/architecture/knowledge_promotion_engine.md`](docs/architecture/knowledge_promotion_engine.md)
+- [`docs/architecture/knowledge_candidate_classification_contract.md`](docs/architecture/knowledge_candidate_classification_contract.md)
 - [`docs/workflow/knowledge_preservation_gate.md`](docs/workflow/knowledge_preservation_gate.md)
+- [`docs/workflow/knowledge_carry_forward_workflow.md`](docs/workflow/knowledge_carry_forward_workflow.md)
 - [`docs/adr/ADR-GDS-005_context_reconstruction_and_knowledge_guided_recommendations.md`](docs/adr/ADR-GDS-005_context_reconstruction_and_knowledge_guided_recommendations.md)
 
 境界:
@@ -138,6 +141,8 @@ Start from:
 - Issa Draft は reasoning preservation であり、実装指示ではありません。
 - ADR `Proposed` は承認済み決定ではありません。
 - Human ApprovalなしにCanonical Promotion、Commit、Push、Tagは行いません。
+- Knowledge Promotion Engine は候補検出とCarry-Forwardを支援しますが、
+  canonical promotionやGit操作を自動実行しません。
 
 標準順序:
 
