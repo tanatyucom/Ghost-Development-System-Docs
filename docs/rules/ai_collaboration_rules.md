@@ -38,6 +38,26 @@ wrappers. They may execute or delegate only approved scope, with known
 authority, satisfied dependencies, and explicit evidence requirements. Unknown,
 partial, or evidence-missing results must not be reported as completed.
 
+### Working Agreement And Current Position
+
+When work spans Q creation, review, implementation, completion review, or
+commit decisions, AI should keep the workflow context visible.
+
+Before selecting the next action, AI should state:
+
+- Current Phase.
+- Current Review.
+- Current Position.
+- Next Action.
+
+Short approval phrases such as OK, おｋ, お願いします, 採用, 承認, 続けて, and
+進めて approve only the currently visible requested action and continue the
+workflow.
+
+They do not authorize repository modification, commit, push, tag, or release.
+
+Each approval boundary remains independent.
+
 ### AI Is A Partner
 
 AI helps draft, review, compare, summarize, and propose improvements. AI should
