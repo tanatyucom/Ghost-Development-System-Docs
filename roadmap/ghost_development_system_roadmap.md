@@ -110,6 +110,33 @@ remaining issues, and recommended next work.
   AI collaboration experience, Vision Scenario, Approval Request lifecycle, and
   handoff quality so future GDS generations inherit why the system exists, not
   only which files and contracts exist.
+- Current Approval Request Priority: Approval Request Evidence now separates
+  Candidate Disclosure, Requested Operations, Intent Queue, Execution Authority,
+  Delegation, and Execution Evidence. The next runtime candidate is an Intent
+  Queue and Approval State Resolver, not automatic Git execution.
+- Current Runtime Intent Queue Priority: define the documentation-level Runtime
+  Intent Queue Resolver, Execution Queue Visualization, Deliverables,
+  Canonical Artifact, and Codex Handoff before execution adapters, GUI, MCP, or
+  automatic Git operations.
+- Current Execution Adapter Priority: define Governed Execution Adapter as the
+  boundary between Runtime Queue and execution actors/tools, including
+  Execution Request, Result / Evidence, Adapter Registry, authority, scope,
+  dependency, idempotency, and SCW behavior before any runtime Git adapter,
+  MCP, GUI, or automatic execution implementation.
+- Current Governed Git Execution Status: Governed Git Execution Vertical Slice
+  is proven by `GDS-GIT-EXECUTION-ADAPTER-CODEX-COMMIT-PROBE-001`. Codex
+  executed one human-approved scoped commit against the exact Safe Commit Set
+  without push, tag, release, merge, rebase, reset, amend, or unrelated dirty
+  workspace mutation.
+- Current Command Center Direction: Command Center is an orchestration
+  capability for Repository Center, Approval Center, Evidence Center,
+  Notification Center, Intent Engine, Decision Engine, Runtime Engine,
+  Execution Engine, and governed Execution Adapters. It is not merely a GUI or
+  Auto Q Generator.
+- Current AI Collaboration Platform Direction: ChatGPT and future AI surfaces
+  are remote conversational frontends or exchangeable actors. The repository
+  remains the Single Source of Truth, and GDS-owned runtime state, approval,
+  evidence, and execution boundaries must remain outside any single AI vendor.
 - Next Milestone: After OCR, extract SDK requirements, design SDK Foundation,
   formalize Project Adoption, and issue Platform Foundation Release only after
   exit criteria are met.
@@ -1136,6 +1163,18 @@ Decision:
 - Approval Request Evidence should be defined before Platform Ready Review,
   because Experience continuity depends on explicit Approval Request and
   Pending Human Approval state.
+- Approval Request Evidence now fixes the boundary between approval,
+  delegation, execution, and evidence. Platform Ready Review should check that
+  `お願いします`, `これ全てお願いします`, exclusion phrases, and chained intents
+  are interpreted through visible scope and do not imply hidden operations.
+- Runtime Intent Queue Resolver now defines Pending / Delegated / Waiting For
+  Evidence / Completed queue display, canonical artifact handoff, and evidence
+  reconciliation as prerequisites for future execution adapters and Command
+  Center UI.
+- Governed Execution Adapter Foundation now defines execution adapters as
+  governance and evidence-provider boundaries, not command wrappers. Future Git,
+  Codex, Human, MCP, GUI, or filesystem adapters must satisfy the same request
+  and evidence contracts.
 - Command Center owns orchestration and display, not engine-specific reasoning
   or Human Approval replacement.
 - Knowledge Promotion remains approval-gated and primarily post-review, while
@@ -1144,7 +1183,7 @@ Decision:
 Recommended Next Q:
 
 ```text
-Q_GDS-APPROVAL-REQUEST-EVIDENCE-001_approval_request_and_pending_human_approval_evidence_JP.md
+Q_GDS-GIT-EXECUTION-ADAPTER-VERTICAL-SLICE-001_git_execution_adapter_vertical_slice_JP.md
 ```
 
 Guard:
@@ -1299,3 +1338,258 @@ Guard:
 - No generation from remembered templates.
 - No SCW as a substitute for available checks.
 - No automatic commit, push, tag, release, or cross-repository mutation.
+
+## Architecture Candidate: Git Execution Adapter Vertical Slice
+
+Status: proven vertical slice for scoped AI commit execution; runtime adapter
+implementation, push, tag, release, GUI, MCP, and credential management are not
+approved by this roadmap item.
+
+Purpose:
+
+Define the first concrete Execution Adapter Vertical Slice by treating GDS as
+Core, AI as an exchangeable Actor / Interpreter / Delegate, and Git as the
+Adapter target for Commit / Push / Tag.
+
+Proven evidence:
+
+```text
+Test ID: GDS-GIT-EXECUTION-ADAPTER-CODEX-COMMIT-PROBE-001
+Verified Commit: 44a712c95bd11c61f64eadf909a69c15bc3964b7
+Commit Subject: test: verify Codex scoped commit execution
+Result: PASS
+```
+
+Target flow:
+
+```text
+Human Approval
+  -> GDS Core
+  -> Execution Request
+  -> Git Adapter Target
+  -> Git Evidence
+  -> GDS Core Reconciliation
+```
+
+Guard:
+
+- No production Git adapter implementation.
+- No automatic commit, push, or tag.
+- No MCP, GUI, or credential management.
+- No GameGhost edits.
+- Commit, Push, Tag Create, and Tag Push remain separate capabilities.
+
+## Roadmap Promotion: AI Collaboration Platform And Governed Git Execution
+
+Status: roadmap direction adopted; implementation remains gated by future Qs.
+
+Purpose:
+
+Reflect the latest GDS execution evidence in the Master Roadmap and move the
+system from documentation-only governance toward a governed AI collaboration
+platform.
+
+This is not a production automation approval. It records proven capability,
+responsibility boundaries, and the next platform direction.
+
+### Command Center Responsibility Model
+
+Command Center is an orchestration capability, not just a GUI and not just an
+Auto Q Generator.
+
+```text
+Ghost Development System
+  -> Command Center
+     -> Repository Center
+     -> Approval Center
+     -> Evidence Center
+     -> Notification Center
+     -> Intent Engine
+     -> Decision Engine
+     -> Runtime Engine
+     -> Execution Engine
+     -> Execution Adapters
+```
+
+GUI, CLI, ChatGPT, local AI, and future MCP tools are frontends, actors, or
+transport adapters that connect to Command Center. They do not replace GDS
+Core, repository source-of-truth, Human Approval, or execution evidence.
+
+### ChatGPT Remote Frontend
+
+ChatGPT is positioned as a remote conversational frontend for GDS operation.
+
+It may:
+
+- receive user intent;
+- explain repository state;
+- propose Completion Review and Safe Commit Set;
+- collect Human Approval;
+- call future Command Center API endpoints;
+- relay execution evidence;
+- suggest next Q candidates.
+
+It must not become the canonical repository, runtime state owner, approval
+owner, or evidence owner.
+
+### REST API First / MCP Future
+
+Initial remote integration direction is REST API First.
+
+Future endpoint candidates:
+
+```text
+/status
+/current-mission
+/repository-health
+/prepare-commit
+/approve-commit
+/execute-commit
+/evidence
+/notifications
+```
+
+MCP is a future transport adapter. It must not replace Command Center Core or
+Human Approval.
+
+```text
+Command Center Core
+  -> REST Adapter
+  -> MCP Adapter (Future)
+```
+
+### Notification Center
+
+Notification Center is a future Command Center component.
+
+Initial adapter candidates:
+
+- Email.
+- LINE.
+- Discord.
+- Slack.
+- Push Notification.
+
+Notification principle:
+
+```text
+Healthy
+  -> no notification
+
+Improvement Candidate
+  -> summary notification
+
+Error / Blocker / SCW
+  -> immediate notification
+```
+
+### Silent Dogfooding
+
+Silent Dogfooding is an operational loop, not a one-off internal test.
+
+```text
+Operation
+  -> Observation
+  -> Improvement Candidate
+  -> Q Draft
+  -> Human Review
+  -> Implementation
+  -> Verification
+  -> Operation
+```
+
+Normal operation should stay quiet. Improvement candidates should be reviewed
+periodically. Errors, blockers, and SCW conditions should surface immediately.
+
+### Governed Git Execution
+
+The first governed AI commit is proven.
+
+Canonical evidence:
+
+- Test ID: `GDS-GIT-EXECUTION-ADAPTER-CODEX-COMMIT-PROBE-001`
+- Commit: `44a712c95bd11c61f64eadf909a69c15bc3964b7`
+- Subject: `test: verify Codex scoped commit execution`
+- Result: PASS
+- Completion Report:
+  `docs/requests/gds/completed/GDS-GIT-EXECUTION-ADAPTER-CODEX-COMMIT-PROBE-001/completion_report.md`
+- Test Artifact:
+  `docs/testing/git_execution_adapter_codex_commit_probe_001.md`
+
+Roadmap label:
+
+```text
+Governed Git Execution Vertical Slice: Proven
+```
+
+### Approval Unit Separation
+
+Commit, Push, Tag, and Release approval are separate units.
+
+```text
+Commit Approval
+Push Approval
+Tag Approval
+Release Approval
+```
+
+Approving a visible Commit Approval Request does not approve Push, Tag, or
+Release. Future Command Center and AI frontend behavior must display the exact
+requested operation before asking for approval.
+
+### Updated Phase Direction
+
+Phase 1: Knowledge Foundation
+
+- Status: complete.
+- Includes rules, workflow, templates, standards, ADR, AI Repository Index, and
+  Repository Quality.
+
+Phase 2: Development Governance
+
+- Status: operational foundation complete.
+- Includes Human Approval First, Intent-Driven Workflow, Approval Request,
+  Queue / Runtime State, Execution Evidence, Git Execution Adapter Vertical
+  Slice, and Governed Git Execution Vertical Slice: Proven.
+
+Phase 3: Command Center Foundation
+
+- Status: current / next major phase candidate.
+- Includes Command Center responsibility model, Repository Center, Approval
+  Center, Evidence Center, Notification Center foundation, Intent Engine,
+  Decision Engine, Runtime Engine, Execution Engine, Current Mission
+  integration, Repository Health integration, and Queue / Roadmap integration.
+
+Phase 4: Repository Intelligence Foundation
+
+- Status: planned platform foundation.
+- Repository Scanner is organized as an observation capability under
+  Repository Center, not as an isolated final product.
+
+Phase 5: AI Collaboration Platform
+
+- Status: planned.
+- Includes Remote Command Center, ChatGPT Frontend, REST API Gateway, Approval
+  API, Evidence API, Notification API, Server Runtime, Multi-AI Actor model,
+  Codex Adapter, Claude Adapter, Gemini Adapter, Local AI Adapter, and future
+  MCP Adapter.
+
+Phase 6: Governed Automation
+
+- Status: future.
+- Includes Prepare Commit Runtime, Execute Commit Runtime, Push Approval Test,
+  Tag Approval Test, Release Approval Test, evidence automatic capture,
+  notification delivery, Silent Dogfooding operation, Improvement Candidate
+  automation, and Q Draft generation.
+
+### Guard
+
+- No REST API runtime implementation in this roadmap item.
+- No MCP adapter implementation.
+- No Notification adapter implementation.
+- No server runtime implementation.
+- No Git Push / Tag / Release test.
+- No GUI implementation.
+- No Repository Scanner implementation.
+- No deletion or replacement of existing roadmap history.
+- No claim that unimplemented runtime pieces are complete.
