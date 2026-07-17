@@ -55,7 +55,8 @@ gate.
   push reality, and constraint validity before the final AI response.
 - `repository_drift_prevention.md`: Future Candidate workflow for preventing
   AI Repository Drift during artifact generation by re-anchoring to canonical
-  repository sources between reasoning and output.
+  repository sources between reasoning and output, and for preserving Startup
+  execution context through completion.
 - `completion_report_workflow.md`: workflow for creating Completion Report v2
   with Identity, Changed Files, Verification, Safe Commit Set, Commit / Push
   Status, Project Edit Status, Improvement Review, Lessons Learned,

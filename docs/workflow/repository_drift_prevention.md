@@ -78,6 +78,40 @@ generation.
 
 Repository Re-anchor is not a second Startup and does not reset the task.
 
+## Startup Execution Context Preservation
+
+Startup Execution Context Preservation is a related future candidate that
+keeps the information synchronized during Startup visible throughout execution.
+
+It addresses a different part of the same quality risk:
+
+```text
+Startup
+  -> Execution Context Declaration
+  -> Development
+  -> Repository Re-anchor
+  -> Completion Context Verification
+```
+
+Startup answers "what was checked before work started." Execution Context
+Preservation asks whether that checked context stayed active until the output
+was completed.
+
+## Execution Context Declaration
+
+At the end of Startup, the AI may declare the minimum execution context for the
+current task:
+
+- Target Repository.
+- Current Mission.
+- Applicable Template.
+- Template Revision.
+- Applicable Rules.
+- Constraint Summary.
+
+This declaration is not a new approval gate. It is a lightweight reference
+anchor for later verification.
+
 ## When To Consider Re-anchor
 
 Use or propose Repository Re-anchor when:
@@ -103,6 +137,33 @@ Choose only sources relevant to the current output.
 - Current roadmap or architecture document.
 - Current request artifact or completion report, when revising.
 
+## Completion Context Verification
+
+Before completion, compare the declared execution context with the actual
+artifact or implementation result.
+
+Minimum checks:
+
+- Target Repository still matches the actual edited repository.
+- Current Mission still matches the produced output.
+- Applicable Template was used at the point of output.
+- Template Revision did not drift from the canonical source.
+- Applicable Rules were not bypassed.
+- Constraint Summary still matches the actual scope, approval state, and
+  commit / push boundary.
+
+Suggested evidence block:
+
+```text
+Completion Context Verification:
+- Declared context checked:
+- Artifact / implementation matches context:
+- Template alignment:
+- Scope alignment:
+- Constraint alignment:
+- Remaining context risk:
+```
+
 ## Output Evidence
 
 When Repository Re-anchor is used, record a short evidence block in the
@@ -127,15 +188,29 @@ This candidate may be promoted after:
 - Human Review confirms that the practice reduces missing sections,
   stale-template output, or repository mismatch;
 - the additional review cost is acceptable.
+- Startup context preservation can be reviewed without excessive overhead.
 
 ## Guardrails
 
 - Do not treat Repository Re-anchor as automatic enforcement.
 - Do not create background repository reads without task relevance.
 - Do not replace Startup or Pre-Response Verification Gate.
+- Do not treat Execution Context Declaration as implementation approval.
 - Do not use Re-anchor as permission to expand scope.
 - Do not auto-update files, generate Qs, or commit changes without explicit
   approval.
+
+## Validation Plan
+
+Future review should observe:
+
+- template reference rate after Startup;
+- Current Mission preservation rate;
+- scope drift rate;
+- repository alignment rate;
+- recurrence rate in long-running chats;
+- whether Repository Re-anchor reduces stale-template or missing-section
+  outputs.
 
 ## Expected Review Decisions
 
