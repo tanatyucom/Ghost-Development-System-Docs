@@ -20,6 +20,7 @@ from:
 - [`docs/architecture/approval_request_intent_queue_execution_evidence.md`](docs/architecture/approval_request_intent_queue_execution_evidence.md)
 - [`docs/architecture/runtime_intent_queue_resolver.md`](docs/architecture/runtime_intent_queue_resolver.md)
 - [`docs/architecture/governed_execution_adapter_foundation.md`](docs/architecture/governed_execution_adapter_foundation.md)
+- [`docs/standards/ghost_package_standard_candidate.md`](docs/standards/ghost_package_standard_candidate.md)
 - [`docs/rules/approval_request_rules.md`](docs/rules/approval_request_rules.md)
 - [`docs/rules/runtime_intent_resolution_rules.md`](docs/rules/runtime_intent_resolution_rules.md)
 - [`docs/rules/execution_adapter_rules.md`](docs/rules/execution_adapter_rules.md)

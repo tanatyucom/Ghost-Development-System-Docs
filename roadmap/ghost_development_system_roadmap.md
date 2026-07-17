@@ -2,7 +2,7 @@
 
 **Version:** 2.1
 
-**Last Updated:** 2026-07-17
+**Last Updated:** 2026-07-18
 
 ## Purpose
 
@@ -137,6 +137,12 @@ remaining issues, and recommended next work.
   are remote conversational frontends or exchangeable actors. The repository
   remains the Single Source of Truth, and GDS-owned runtime state, approval,
   evidence, and execution boundaries must remain outside any single AI vendor.
+- Current GPS Direction: Ghost Package Standard is registered as an
+  Architecture Standard Candidate and Future Capability. It defines the
+  direction for PACKAGE.md, PACKAGE.yaml, Design Package, Milestone Package,
+  package discovery, package registry, and multi-AI package handoff, but does
+  not approve package scanner, registry runtime, ZIP validation automation, or
+  Command Center package browser implementation.
 - Next Milestone: After OCR, extract SDK requirements, design SDK Foundation,
   formalize Project Adoption, and issue Platform Foundation Release only after
   exit criteria are met.
@@ -1574,6 +1580,34 @@ Phase 5: AI Collaboration Platform
   Codex Adapter, Claude Adapter, Gemini Adapter, Local AI Adapter, and future
   MCP Adapter.
 
+Phase 5 Candidate Extension: Ghost Package Standard
+
+- Status: Architecture Standard Candidate / Future Capability.
+- Includes Design Package, Milestone Package, Release Package direction,
+  PACKAGE.md, PACKAGE.yaml, package discovery, package manifest, package ZIP
+  transport, package metadata, package lifecycle, Package Scanner, Package
+  Registry, Multi-AI Package Handoff Protocol, and Command Center Package
+  Browser direction.
+- The expanded repository folder is the intended canonical artifact. ZIP is a
+  transport artifact. PACKAGE.yaml is the machine-readable manifest and
+  PACKAGE.md is the human-readable summary.
+- Further design is required before implementation: PACKAGE.yaml v0.1 schema,
+  lifecycle state machine, validation rules, promotion criteria, canonical
+  artifact rule, cross-repository identity, and supersession / deprecation
+  model.
+- Recommended sequence:
+
+```text
+GPS Architecture Standard Candidate
+  -> PACKAGE.yaml v0.1
+  -> Package Lifecycle
+  -> Validation Rules
+  -> Package Scanner design
+  -> Package Registry design
+  -> Command Center integration
+  -> Implementation Q
+```
+
 Phase 6: Governed Automation
 
 - Status: future.
@@ -1591,5 +1625,10 @@ Phase 6: Governed Automation
 - No Git Push / Tag / Release test.
 - No GUI implementation.
 - No Repository Scanner implementation.
+- No Ghost Package Standard runtime implementation.
+- No Package Scanner implementation.
+- No Package Registry implementation.
+- No Package ZIP validation automation.
+- No Command Center Package Browser implementation.
 - No deletion or replacement of existing roadmap history.
 - No claim that unimplemented runtime pieces are complete.

@@ -23,6 +23,10 @@ workflow or template.
   Push, Tag Create, and Tag Push.
 - `git_adapter_registry_profile.md`: draft Git-specific adapter and capability
   registry profile for the Git Execution Adapter Vertical Slice.
+- `ghost_package_standard_candidate.md`: architecture standard candidate for
+  Ghost Package Standard, including PACKAGE.md / PACKAGE.yaml direction,
+  package lifecycle, validation, discovery, registry, multi-AI handoff, and
+  Command Center package integration boundaries.
 
 ## Related Documents
 
@@ -33,3 +37,4 @@ workflow or template.
 - `docs/architecture/governed_execution_adapter_foundation.md`
 - `docs/architecture/git_execution_adapter_vertical_slice.md`
 - `docs/rules/git_execution_adapter_rules.md`
+- `roadmap/ghost_development_system_roadmap.md`

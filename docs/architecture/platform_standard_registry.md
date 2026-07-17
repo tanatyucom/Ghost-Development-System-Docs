@@ -152,6 +152,7 @@ Repository Quality Audit can detect invalid transitions.
 | Architecture Promotion Lifecycle | Workflow | Standard | Platform Governance Q | 2026-07-16 | 2026-07-16 | `docs/rules/platform_governance_rules.md` | `docs/workflow/architecture_promotion_lifecycle.md` | `templates/decision_template.md` | `docs/requests/gds/draft/GDS-PLATFORM-GOVERNANCE-001_platform_governance_and_experimental_development/completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Defines Problem -> Q -> Implementation -> Completion Report -> Operational Validation -> Repository Operation -> Evidence -> Architecture Decision -> ADR -> optional promotion. | Review after first ADR-driven promotion Q. |
 | Local Rule Lifecycle | Rule | Standard | ADR-GDS-003 / Platform Governance Q | 2026-07-16 | 2026-07-16 | `docs/rules/platform_governance_rules.md` | `docs/workflow/architecture_promotion_lifecycle.md` | `templates/decision_template.md` | `docs/requests/gds/draft/GDS-PLATFORM-GOVERNANCE-001_platform_governance_and_experimental_development/completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Defines Candidate -> Local -> Shared -> Core for GDS-managed project-specific rules. Similarity alone does not authorize promotion. | Review before creating Local Rule templates or migration plans. |
 | Vision-Driven Bottom-Up Development | Architecture | Standard | Platform Governance Q | 2026-07-16 | 2026-07-16 | `docs/rules/platform_governance_rules.md` | `docs/workflow/architecture_promotion_lifecycle.md` | `templates/decision_template.md` | `docs/requests/gds/draft/GDS-PLATFORM-GOVERNANCE-001_platform_governance_and_experimental_development/completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Vision defines the destination, improvement discovers the route, and architecture keeps the route coherent. It does not approve unrestricted feature growth. | Review during SDK Foundation and Project Adoption planning. |
+| Ghost Package Standard | Architecture | Candidate | GDS Milestone 001 / GPS Roadmap Package v3 | 2026-07-18 | 2026-07-18 | none | `docs/workflow/architecture_promotion_lifecycle.md` | none | `docs/requests/gds/draft/GDS-GPS-ROADMAP-001_gps_architecture_standard_candidate_registration/completion_report.md` | GDS, GameGhost, AnimeGhost, ComicGhost, Future Ghost | Registers GPS as an Architecture Standard Candidate and Future Capability for PACKAGE.md, PACKAGE.yaml, Design Package, Milestone Package, package discovery, package registry, and multi-AI package handoff. Runtime scanner, registry, ZIP validation automation, and Command Center Package Browser remain future Q scope. | Review during `Q_GDS-GPS-001_GHOST_PACKAGE_STANDARD_FOUNDATION`. |
 
 ## Standard / Candidate Classification
 
@@ -188,8 +189,7 @@ Current initial registry classification:
   - Local Rule Lifecycle.
   - Vision-Driven Bottom-Up Development.
 - Candidate:
-  - None in the initial registry. Future Platform Promotion decisions may add
-    Candidate rows before final Standard adoption.
+  - Ghost Package Standard.
 
 ## Update Policy
 

@@ -33,7 +33,8 @@ Hierarchy details:
   Knowledge Base、Workflow、Rules、Templates、Architecture、AI Collaboration、
   Knowledge Platform、Development Platform、Command Center、Ghost Ecosystem の
   Roadmap。Ver2 では Foundation Complete 後の Platform Era と Command Center as
-  Repository Orchestrator direction を管理します。
+  Repository Orchestrator direction、Ghost Package Standard Architecture
+  Standard Candidate を管理します。
 - `plugin_architecture_roadmap.md`: Plugin Architecture Standard をもとに、
   Explicit Registry、Repository Context Validation proof、Registry Validation、
   Field Project Adapter、GhostPlatform runtime ownership、Launcher integration
@@ -52,6 +53,7 @@ Hierarchy details:
 |---|---|---|---|
 | Platform Evolution Track | Active / Dual Vertical Slice Evidence | Ghost Development System Docs | Center Pattern evidence, Dual Experiment milestone, Metadata Center future platform candidate, Capability-driven Provider Selection, and Identity Locale / Canonical Policy roadmap direction. |
 | Ghost Development System Roadmap | Active / Ver2 Platform Era | Ghost Development System Docs | Foundation Complete 後の Platform Integration、Platform Core execution sequence、Automation Server、Ghost Ecosystem、Continuous Improvement を管理する |
+| Ghost Package Standard Candidate | Architecture Standard Candidate / Future Capability | Ghost Development System Docs | PACKAGE.md、PACKAGE.yaml、Design Package、Milestone Package、Package Scanner、Package Registry、Multi-AI Package Handoff、Command Center Package Browser の方向性を管理する。実装は別Q。 |
 | Intent-Driven Workflow Foundation | Priority Platform Candidate / Architecture Foundation | Ghost Development System Docs | 自然言語の user intent を Startup、Q Creation、Completion Review、Commit / Push / Tag Recommendation、SCW、Human Approval へ安全に接続する |
 | Plugin Architecture Roadmap | Active / Architecture Standard Added | Ghost Development System Docs | Plugin standard、explicit registry、Repository Context Validation proof、future adapter / launcher integration review を管理する |
 | Platform First Migration Roadmap | Active / Strategy Added | Ghost Development System Docs | Review Centerを最初の移行候補として、GameGhostからPlatformへの段階移行順序を管理する |

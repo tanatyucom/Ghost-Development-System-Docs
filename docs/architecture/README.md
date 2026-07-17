@@ -116,6 +116,11 @@ runtime behavior.
   Repository Scanner Summary. It defines metadata and integration boundaries
   without implementing UI, database, scanner runtime, automation, promotion, or
   repository mutation.
+- `../standards/ghost_package_standard_candidate.md`: Ghost Package Standard
+  architecture standard candidate for PACKAGE.md, PACKAGE.yaml, Design Package,
+  Milestone Package, package discovery, package registry, multi-AI package
+  handoff, and future Command Center package integration without implementing
+  scanner, registry, ZIP validation, or runtime automation.
 - `platform_discoverability_and_component_standard.md`: Platform folder,
   component classification, naming suffix, 3 second discoverability, migration
   criteria, legacy placement, future Ghost compatibility, and Review Center

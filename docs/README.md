@@ -40,6 +40,8 @@ Reference points:
   `docs/architecture/runtime_intent_queue_resolver.md`
 - Governed Execution Adapter Foundation:
   `docs/architecture/governed_execution_adapter_foundation.md`
+- Ghost Package Standard Candidate:
+  `docs/standards/ghost_package_standard_candidate.md`
 - Execution Queue Display Contract:
   `docs/standards/execution_queue_display_contract.md`
 - Execution Request Contract:
