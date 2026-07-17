@@ -53,6 +53,9 @@ gate.
 - `pre_response_verification_gate.md`: final response quality gate for checking
   repository scope, requested output format, approval boundaries, commit /
   push reality, and constraint validity before the final AI response.
+- `repository_drift_prevention.md`: Future Candidate workflow for preventing
+  AI Repository Drift during artifact generation by re-anchoring to canonical
+  repository sources between reasoning and output.
 - `completion_report_workflow.md`: workflow for creating Completion Report v2
   with Identity, Changed Files, Verification, Safe Commit Set, Commit / Push
   Status, Project Edit Status, Improvement Review, Lessons Learned,
@@ -188,6 +191,7 @@ Idea
   -> Roadmap2 Knowledge Salvage, when Roadmap2-only knowledge remains
   -> Human Review
   -> Completion Checklist
+  -> Repository Re-anchor, when long artifact generation or drift risk exists
   -> Pre-Response Verification Gate
   -> Commit
   -> Knowledge Promotion

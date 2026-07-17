@@ -89,6 +89,8 @@ Reference points:
 - Startup Completion Evidence: `docs/workflow/startup_completion_evidence.md`
 - Startup Completion Gate: `docs/workflow/startup_completion_gate.md`
 - Startup Verification Checklist: `templates/startup_verification_checklist.md`
+- Repository Drift Prevention:
+  `docs/workflow/repository_drift_prevention.md`
 - Project Profiles: `project_profiles/README.md`
 - UTF-8 Read Rule: `docs/rules/utf8_read_rules.md`
 - Encoding Regression Prevention:

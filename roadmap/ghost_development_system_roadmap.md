@@ -1040,6 +1040,7 @@ follow-up Q を記録する。
 - Workflow Metrics Report.
 - OCR Metrics Report.
 - Documentation health report.
+- Repository Drift Prevention and Re-anchor Workflow.
 - AI instruction map.
 - Generated documentation inventory.
 - Development Knowledge DB.
