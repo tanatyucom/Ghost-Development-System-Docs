@@ -83,6 +83,10 @@ review.
 - `ADR-GDS-003_canonical_knowledge_ownership_and_local_artifact_governance.md`
 - `ADR-GDS-004_metadata_center_architecture_adoption.md`
 - `ADR-GDS-005_context_reconstruction_and_knowledge_guided_recommendations.md`
+- `ADR-GDS-006_approval_state_and_execution_state_separation.md`
+- `ADR-GDS-007_runtime_intent_resolution_and_queue_state_boundary.md`
+- `ADR-GDS-008_governed_execution_adapter_boundary.md`
+- `ADR-GDS-009_gds_core_ai_actor_git_adapter_boundary.md`
 
 ## Guidance Index
 
@@ -101,6 +105,10 @@ review.
 
 - `docs/adr/ADR-GDS-004_metadata_center_architecture_adoption.md`
 - `docs/adr/ADR-GDS-005_context_reconstruction_and_knowledge_guided_recommendations.md`
+- `docs/adr/ADR-GDS-006_approval_state_and_execution_state_separation.md`
+- `docs/adr/ADR-GDS-007_runtime_intent_resolution_and_queue_state_boundary.md`
+- `docs/adr/ADR-GDS-008_governed_execution_adapter_boundary.md`
+- `docs/adr/ADR-GDS-009_gds_core_ai_actor_git_adapter_boundary.md`
 - `docs/adr/metadata_center_architecture_review.md`
 - `docs/adr/metadata_center_adr_adoption.md`
 - `docs/adr/adr_pattern_enhancement.md`

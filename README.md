@@ -17,6 +17,15 @@ from:
 - [`docs/philosophy/north_star.md`](docs/philosophy/north_star.md)
 - [`docs/architecture/experience_layer.md`](docs/architecture/experience_layer.md)
 - [`docs/architecture/design_intent_preservation.md`](docs/architecture/design_intent_preservation.md)
+- [`docs/architecture/approval_request_intent_queue_execution_evidence.md`](docs/architecture/approval_request_intent_queue_execution_evidence.md)
+- [`docs/architecture/runtime_intent_queue_resolver.md`](docs/architecture/runtime_intent_queue_resolver.md)
+- [`docs/architecture/governed_execution_adapter_foundation.md`](docs/architecture/governed_execution_adapter_foundation.md)
+- [`docs/rules/approval_request_rules.md`](docs/rules/approval_request_rules.md)
+- [`docs/rules/runtime_intent_resolution_rules.md`](docs/rules/runtime_intent_resolution_rules.md)
+- [`docs/rules/execution_adapter_rules.md`](docs/rules/execution_adapter_rules.md)
+- [`templates/approval_request_block_template.md`](templates/approval_request_block_template.md)
+- [`templates/execution_queue_status_template.md`](templates/execution_queue_status_template.md)
+- [`templates/execution_adapter_record_template.md`](templates/execution_adapter_record_template.md)
 - [`docs/rules/platform_governance_rules.md`](docs/rules/platform_governance_rules.md)
 - [`docs/workflow/architecture_promotion_lifecycle.md`](docs/workflow/architecture_promotion_lifecycle.md)
 
@@ -1247,3 +1256,19 @@ Commit -> Git history
 Push -> GitHub main
 Raw retrieval -> public Canonical Index / Artifact availability
 ```
+
+## Git Execution Adapter Vertical Slice
+
+GDS defines itself as Core, AI as an exchangeable Actor / Interpreter /
+Delegate, and Git as an Adapter target. Git Commit, Push, Tag Create, and Tag
+Push are separate capabilities with separate evidence requirements.
+
+Start from:
+
+- [`docs/architecture/gds_core_ai_actor_adapter_boundary.md`](docs/architecture/gds_core_ai_actor_adapter_boundary.md)
+- [`docs/architecture/git_execution_adapter_vertical_slice.md`](docs/architecture/git_execution_adapter_vertical_slice.md)
+- [`docs/workflow/git_execution_adapter_vertical_slice_workflow.md`](docs/workflow/git_execution_adapter_vertical_slice_workflow.md)
+- [`docs/rules/git_execution_adapter_rules.md`](docs/rules/git_execution_adapter_rules.md)
+- [`docs/standards/git_execution_evidence_profile.md`](docs/standards/git_execution_evidence_profile.md)
+- [`docs/standards/git_adapter_registry_profile.md`](docs/standards/git_adapter_registry_profile.md)
+- [`templates/git_execution_adapter_record_template.md`](templates/git_execution_adapter_record_template.md)

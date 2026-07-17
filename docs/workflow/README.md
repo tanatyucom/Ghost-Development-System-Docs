@@ -45,6 +45,15 @@ gate.
   design intent, Vision Scenario, Experience continuity, current mission,
   pending decisions, and approval boundaries when work moves between AI
   generations, tools, tasks, or human review contexts.
+- `approval_request_intent_queue_workflow.md`: workflow from Review Result to
+  Candidate Disclosure, Approval Request, Human Approval, Intent Queue,
+  Execution Authority, Delegation, Execution Evidence, and Completion.
+- `runtime_intent_queue_resolution_workflow.md`: workflow for resolving
+  approval phrases into Intent Queue and Execution Queue, showing deliverables,
+  canonical artifact, Codex handoff, delegation, and evidence state.
+- `governed_execution_adapter_workflow.md`: workflow connecting Runtime Queue
+  items to governed execution or delegation through request contracts, adapter
+  routing, result / evidence envelopes, reconciliation, and completion review.
 - `improvement_record_promotion_workflow.md`: workflow for turning observed
   operation gaps into Improvement Records, Promotion Candidates, and future
   standards without automatic approval or repository mutation.
@@ -941,6 +950,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `docs/workflow/concept_promotion_workflow.md`
 - `docs/workflow/pip_case_knowledge_base_workflow.md`
 - `docs/workflow/roadmap2_knowledge_salvage_loop.md`
+- `docs/workflow/git_execution_adapter_vertical_slice_workflow.md`
 - `docs/rules/workflow_rules.md`
 - `docs/rules/migration_first_rules.md`
 - `docs/rules/debug_artifact_review_rules.md`

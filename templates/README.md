@@ -83,6 +83,19 @@ generation design intent, North Star, Experience continuity, Approval Request
 lifecycle, Pending Human Approval, and what must not be lost when the handoff
 is more than a file/status transfer.
 
+Approval Request Block Template helps humans and AI display Requested
+Operations, Recommended Follow-up Candidates, operation-specific approval
+prompts, intent interpretation, execution authority, scope lock, and execution
+evidence before commit / push / tag or chained follow-up work.
+
+Execution Queue Status Template records approval context, deliverables, Codex
+handoff, queue state, authority, dependencies, evidence reconciliation, SCW,
+and completion state after approval.
+
+Execution Adapter Record Template records adapter identity, capability,
+authority, request envelope, result envelope, evidence, retry, idempotency,
+and reconciliation details for governed execution adapter reviews.
+
 Information Package templates help AI assistants, humans, and future Command
 Center workflows share Project Summary, Current Status, Current Focus, Active
 Repository, Related Rules, Related Templates, Recent Decisions, Open Issues,
@@ -171,6 +184,9 @@ restore guidance.
 - `multi_ai_handoff_checklist_template.md`
 - `HANDOFF_TEMPLATE_V2.md`
 - `VISION_SCENARIO_TEMPLATE.md`
+- `approval_request_block_template.md`
+- `execution_queue_status_template.md`
+- `execution_adapter_record_template.md`
 - `research_mission_template.md`
 - `beginner_future_self_test_template.md`
 - `completion_checklist_template.md`
@@ -380,6 +396,7 @@ Do not add one-off request details to templates. Add only reusable structure.
 - `templates/completion_report_template.md`
 - `templates/research_mission_template.md`
 - `templates/codex_review_template.md`
+- `templates/git_execution_adapter_record_template.md`
 - `docs/ai_repository_index.md`
 - `docs/health/gds_health_dashboard.md`
 - `docs/rules/external_source_access_rules.md`

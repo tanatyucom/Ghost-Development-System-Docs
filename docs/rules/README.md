@@ -80,6 +80,15 @@ promoted.
 - `ai_proactive_proposal_rules.md`: rule for AI to propose evidence-based
   improvements, time savings, conflicts, risks, or knowledge opportunities
   without silently changing implementation.
+- `approval_request_rules.md`: rules for Candidate First approval requests,
+  visible scope, `お願いします`, `これ全てお願いします`, exclusions, chained
+  intents, execution authority, and no execution claim without evidence.
+- `runtime_intent_resolution_rules.md`: rules for v1.1 Runtime Intent Queue
+  resolution, execution queue states, deliverables, canonical artifact, Codex
+  handoff, and evidence-aware completion.
+- `execution_adapter_rules.md`: rules for governed execution adapters,
+  approval reference, authority, scope, evidence, dependency, retry,
+  idempotency, unknown / partial results, and prohibited behavior.
 - `completion_checklist_rules.md`: completion confirmation rule for
   verification, review, completion report, Improvement Review, commit, tag,
   release, next Q, and workspace clean confirmation.
@@ -210,8 +219,9 @@ promoted.
 34. `workflow_rules.md`
 35. `quality_rules.md`
 36. `ai_collaboration_rules.md`
-37. `git_rules.md`
-38. `script_architecture_rules.md`
+37. `git_execution_adapter_rules.md`
+38. `git_rules.md`
+39. `script_architecture_rules.md`
 
 ## Update Policy
 

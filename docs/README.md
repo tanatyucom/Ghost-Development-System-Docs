@@ -30,6 +30,26 @@ Reference points:
   `docs/architecture/experience_layer.md`
 - Design Intent Preservation:
   `docs/architecture/design_intent_preservation.md`
+- Approval Request / Intent Queue / Execution Evidence:
+  `docs/architecture/approval_request_intent_queue_execution_evidence.md`
+- Approval Request Rules:
+  `docs/rules/approval_request_rules.md`
+- Approval Request Block Template:
+  `templates/approval_request_block_template.md`
+- Runtime Intent Queue Resolver:
+  `docs/architecture/runtime_intent_queue_resolver.md`
+- Governed Execution Adapter Foundation:
+  `docs/architecture/governed_execution_adapter_foundation.md`
+- Execution Queue Display Contract:
+  `docs/standards/execution_queue_display_contract.md`
+- Execution Request Contract:
+  `docs/standards/execution_request_contract.md`
+- Execution Result / Evidence Contract:
+  `docs/standards/execution_result_evidence_contract.md`
+- Execution Queue Status Template:
+  `templates/execution_queue_status_template.md`
+- Execution Adapter Record Template:
+  `templates/execution_adapter_record_template.md`
 - Q Knowledge Classification:
   `docs/standards/q_knowledge_classification.md`
 - Handoff Template v2:
@@ -139,6 +159,22 @@ Reference points:
 
 - Architecture: `docs/architecture/intent_driven_workflow.md`
 - Contract: `docs/architecture/intent_registry_and_pending_action_contract.md`
+- Approval Request Evidence:
+  `docs/architecture/approval_request_intent_queue_execution_evidence.md`
+- Approval Request Workflow:
+  `docs/workflow/approval_request_intent_queue_workflow.md`
+- Approval Request Rules: `docs/rules/approval_request_rules.md`
+- Runtime Resolver:
+  `docs/architecture/runtime_intent_queue_resolver.md`
+- Runtime Resolution Workflow:
+  `docs/workflow/runtime_intent_queue_resolution_workflow.md`
+- Runtime Resolution Rules: `docs/rules/runtime_intent_resolution_rules.md`
+- Execution Adapter Foundation:
+  `docs/architecture/governed_execution_adapter_foundation.md`
+- Execution Adapter Workflow:
+  `docs/workflow/governed_execution_adapter_workflow.md`
+- Execution Adapter Rules:
+  `docs/rules/execution_adapter_rules.md`
 - Workflow: `docs/workflow/intent_driven_workflow.md`
 - Command Center: `docs/architecture/command_center_architecture.md`
 - Completion Report Workflow: `docs/workflow/completion_report_workflow.md`
@@ -2128,3 +2164,17 @@ git status --short --untracked-files=all
 ```
 
 Index generation updates the local repository only. Public Raw availability requires Commit and Push first.
+
+## Git Execution Adapter Vertical Slice
+
+Use this entry point when reviewing the GDS Core / AI Actor / Adapter boundary
+or the Git Commit / Push / Tag documentation-only vertical slice.
+
+- `docs/architecture/gds_core_ai_actor_adapter_boundary.md`
+- `docs/architecture/git_execution_adapter_vertical_slice.md`
+- `docs/workflow/git_execution_adapter_vertical_slice_workflow.md`
+- `docs/rules/git_execution_adapter_rules.md`
+- `docs/standards/git_execution_evidence_profile.md`
+- `docs/standards/git_adapter_registry_profile.md`
+- `templates/git_execution_adapter_record_template.md`
+- `docs/adr/ADR-GDS-009_gds_core_ai_actor_git_adapter_boundary.md`

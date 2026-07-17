@@ -31,6 +31,18 @@ runtime behavior.
 - `experience_layer.md`: user-visible collaboration state layer for Vision
   Scenario, End-to-End User Journey, Approval Request, Pending Human Approval,
   BLOCK / SCW recovery, and execution boundaries.
+- `approval_request_intent_queue_execution_evidence.md`: Approval Request
+  specialization that defines Candidate Disclosure, Requested Operations,
+  natural-language approval resolution, Intent Queue, Execution Authority,
+  Delegation, and Execution Evidence without runtime Git automation.
+- `runtime_intent_queue_resolver.md`: documentation-level Runtime Intent Queue
+  Resolver foundation for resolving approval phrases into visible execution
+  queue state, execution authority, delegation, evidence reconciliation,
+  deliverables, canonical artifact, and Codex handoff.
+- `governed_execution_adapter_foundation.md`: governed boundary between Runtime
+  Queue and execution actors/tools, defining approval, authority, scope,
+  dependency, idempotency, result envelope, evidence provider, and state
+  reconciliation responsibilities.
 - `intent_driven_workflow.md`: canonical architecture foundation for routing
   natural language user intent through repository / conversation state review,
   workflow selection, quality gate / SCW, Human Approval, and approved action
@@ -448,6 +460,10 @@ GameGhost runtime implementation or Steam OCR adapter extraction begins.
 Repository Intelligence Dashboard Foundation defines the visibility layer that
 can later sit between Repository Scanner output and Command Center, while
 keeping canonical documents and Human Approval as the authority.
+GDS Core / AI Actor / Adapter Boundary defines GDS as Core, AI as an
+exchangeable Actor / Interpreter / Delegate, and target systems as governed
+Adapter targets. Git Execution Adapter Vertical Slice applies that boundary to
+Git Commit / Push / Tag without approving production automation.
 
 Project Adoption and Hotfix parking lot candidates are preserved in
 `roadmap/ghost_development_system_roadmap.md`,
@@ -472,6 +488,8 @@ Do not use this folder to approve Future Candidates by implication.
 - `docs/architecture/platform_first_migration_strategy.md`
 - `docs/architecture/repository_intelligence_dashboard_foundation.md`
 - `docs/architecture/review_center_architecture.md`
+- `docs/architecture/gds_core_ai_actor_adapter_boundary.md`
+- `docs/architecture/git_execution_adapter_vertical_slice.md`
 - `docs/architecture/gameghost_platform_migration_architecture.md`
 - `docs/architecture/gameghost_workspace_repository_layout.md`
 - `docs/ai_repository_index.md`

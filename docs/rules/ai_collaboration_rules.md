@@ -20,6 +20,24 @@ Human approval applies only to the latest valid Approval Request. A review
 result such as PASS, Ready, or Commit OK is not execution authority by itself.
 Commit approval must not be reused as push approval.
 
+Approval Request must be Candidate First when follow-up work is reasonably
+discoverable. Show Requested Operations and Recommended Follow-up Candidates
+before asking for approval. `お願いします` approves only the visible Requested
+Operations. `これ全てお願いします` applies only to the visible Requested
+Operations and visible Recommended Follow-up Candidates. Approved work must not
+be reported as executed until verifiable Execution Evidence exists.
+
+After approval, Runtime Intent Queue output should show Pending, Delegated,
+Waiting For Evidence, Blocked, Excluded, and Completed states. Completion
+Review should also distinguish `Codexへ渡す` from `閲覧用`, and explicitly
+declare the Canonical Artifact. When a ZIP exists, the ZIP is canonical; when no
+ZIP exists, Markdown is canonical.
+
+Execution adapters must be treated as governed boundaries, not generic command
+wrappers. They may execute or delegate only approved scope, with known
+authority, satisfied dependencies, and explicit evidence requirements. Unknown,
+partial, or evidence-missing results must not be reported as completed.
+
 ### AI Is A Partner
 
 AI helps draft, review, compare, summarize, and propose improvements. AI should
@@ -321,6 +339,19 @@ Patterns that repeat should become rules, workflows, templates, examples,
 checklists, or validations so humans and AI can spend attention on design,
 judgment, review, and improvement rather than remembering mechanical steps.
 
+## AI Actor And Adapter Boundary
+
+GDS is the Core authority for approval, intent resolution, queue state, policy,
+and completion judgment.
+
+AI is an exchangeable Actor / Interpreter / Delegate. AI may interpret,
+prepare, delegate, and report, but it must not become the canonical owner of
+runtime state or treat natural-language claims as execution evidence.
+
+Target systems such as Git are Adapter targets. Commit, Push, and Tag
+operations require governed adapter boundaries and verifiable evidence before
+they may be reported as completed.
+
 ## Goal
 
 The goal is a durable collaboration system where humans and AI share the same
@@ -342,3 +373,6 @@ rethink, so they can focus on what truly requires judgment.
 - `templates/multi_ai_handoff_template.md`
 - `templates/multi_ai_handoff_checklist_template.md`
 - `docs/workflow/ai_daily_operation_cycle.md`
+- `docs/architecture/gds_core_ai_actor_adapter_boundary.md`
+- `docs/architecture/git_execution_adapter_vertical_slice.md`
+- `docs/rules/git_execution_adapter_rules.md`
