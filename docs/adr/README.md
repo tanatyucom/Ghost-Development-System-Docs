@@ -82,6 +82,7 @@ review.
 - `ADR-GDS-002_repository_component_templates.md`
 - `ADR-GDS-003_canonical_knowledge_ownership_and_local_artifact_governance.md`
 - `ADR-GDS-004_metadata_center_architecture_adoption.md`
+- `ADR-GDS-005_context_reconstruction_and_knowledge_guided_recommendations.md`
 
 ## Guidance Index
 
@@ -99,6 +100,7 @@ review.
 ## Related Documents
 
 - `docs/adr/ADR-GDS-004_metadata_center_architecture_adoption.md`
+- `docs/adr/ADR-GDS-005_context_reconstruction_and_knowledge_guided_recommendations.md`
 - `docs/adr/metadata_center_architecture_review.md`
 - `docs/adr/metadata_center_adr_adoption.md`
 - `docs/adr/adr_pattern_enhancement.md`

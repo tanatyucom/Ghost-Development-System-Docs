@@ -122,6 +122,23 @@ Start from:
 - Commit / Push / Tag / Release / 削除 / 外部公開は Human Approval なしに
   実行しません。
 
+## Knowledge Preservation / Architecture Promotion
+
+重要な設計議論、問題定義の変化、再利用可能な思考過程、Architecture Decision
+候補が見つかった場合は、Knowledge Preservation Gateで保存先を判断します。
+
+Start from:
+
+- [`docs/architecture/knowledge_artifact_responsibility_map.md`](docs/architecture/knowledge_artifact_responsibility_map.md)
+- [`docs/workflow/knowledge_preservation_gate.md`](docs/workflow/knowledge_preservation_gate.md)
+- [`docs/adr/ADR-GDS-005_context_reconstruction_and_knowledge_guided_recommendations.md`](docs/adr/ADR-GDS-005_context_reconstruction_and_knowledge_guided_recommendations.md)
+
+境界:
+
+- Issa Draft は reasoning preservation であり、実装指示ではありません。
+- ADR `Proposed` は承認済み決定ではありません。
+- Human ApprovalなしにCanonical Promotion、Commit、Push、Tagは行いません。
+
 標準順序:
 
 ```text

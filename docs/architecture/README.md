@@ -32,6 +32,10 @@ runtime behavior.
 - `intent_registry_and_pending_action_contract.md`: initial Intent Registry,
   Pending Action Contract, Approval Resolution Rule for `お願いします` / `はい` /
   `OK`, Commit / Push / Tag recommendation rules, and reason code set.
+- `knowledge_artifact_responsibility_map.md`: responsibility map for Q, Issa,
+  ADR, Improvement Record, Rule, Architecture Principle, and Workflow,
+  including triggers, lifecycle, approval boundary, canonical location, and
+  cross-reference / promotion rules.
 - `context_aware_knowledge_suggestion_assistant.md`: draft architecture
   proposal for suggesting related Conversation Insight, Future Candidate,
   Research Mission, Improvement Record, CASE, Architecture, Rule, and Workflow
@@ -194,6 +198,10 @@ or missing context, not for perfect memory retention.
   Recommendation and Pending Action artifacts, but it does not execute commit,
   push, tag, release, file deletion, data mutation, or external publication
   without explicit Human Approval.
+- Knowledge Artifact Responsibility Map owns the separation between Q, Issa,
+  ADR, Improvement Record, Rule, Architecture Principle, and Workflow so that
+  GDS preserves what changed, why it mattered, what was decided, and what should
+  be promoted without collapsing all knowledge into a single artifact.
 - Launcher owns the user entry point.
 
 ## Database Philosophy Summary

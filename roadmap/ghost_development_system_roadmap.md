@@ -88,6 +88,10 @@ remaining issues, and recommended next work.
 - Current Platform Priority: Intent-Driven Workflow Foundation is a top
   priority for reducing command memorization burden and routing natural
   language user intent into safe GDS workflows.
+- Current Knowledge Preservation Priority: preserve the reasoning and
+  architecture decisions behind Intent-Driven Workflow through Knowledge
+  Preservation Gate, ADR candidate review, and Issa storage standardization
+  without replacing the existing Current Mission.
 - Next Milestone: After OCR, extract SDK requirements, design SDK Foundation,
   formalize Project Adoption, and issue Platform Foundation Release only after
   exit criteria are met.
@@ -1122,3 +1126,30 @@ Guard:
 - No automatic approval.
 - No Human Approval boundary relaxation.
 - No GameGhost or other field repository runtime change.
+
+## Immediate Follow-up: Knowledge Preservation and Architecture Promotion
+
+Status: draft workflow and proposed ADR added; Human Review required.
+
+Purpose:
+
+Ensure that the reasoning behind Intent-Driven Workflow is not lost as chat
+history, and that future users can reconstruct why GDS favors context recovery,
+knowledge-guided recommendations, Pending Action, and Human Approval.
+
+Scope:
+
+- Knowledge Artifact Responsibility Map.
+- Knowledge Preservation Gate.
+- Issa draft recommendation and SCW handling.
+- ADR candidate review.
+- Proposed ADR for context reconstruction and knowledge-guided recommendations.
+- Child Q candidates for Issa storage and template standardization.
+
+Guard:
+
+- No automatic ADR acceptance.
+- No canonical Issa storage approval.
+- No runtime Intent Engine implementation.
+- No roadmap priority replacement without Human Approval.
+- No commit, push, or tag.

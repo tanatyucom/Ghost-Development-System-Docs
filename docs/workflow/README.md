@@ -27,6 +27,10 @@ gate.
   user utterance to canonical source review, repository / conversation state
   review, workflow selection, Recommendation, Pending Action, Human Approval,
   Action, or SCW.
+- `knowledge_preservation_gate.md`: workflow for deciding whether a Q, review,
+  completion, or design conversation should produce an Issa draft, ADR
+  candidate, Improvement Record candidate, Architecture Principle candidate, or
+  child Q without automatically promoting it.
 - `capability_verification_first.md`: workflow for verifying current AI,
   repository, tool, permission, connected service, and chat capabilities before
   answering whether a task can be done.
@@ -196,6 +200,8 @@ Idea
   -> Innovation Pipeline, when a reusable experiment may become Platform Standard
   -> Architecture Promotion Lifecycle, when a field result may become an ADR or
      GDS standard
+  -> Knowledge Preservation Gate, when problem definition, reasoning,
+     architecture decision, or future reconstruction value may be lost
   -> Platform Registry Update Artifact, when Platform Standard Registry changes
   -> Roadmap2 Knowledge Salvage, when Roadmap2-only knowledge remains
   -> Human Review
@@ -886,6 +892,7 @@ Do not treat an unreviewed Future Candidate as approved workflow.
 - `templates/daily_operation_checklist_template.md`
 - `docs/workflow/ai_startup_procedure.md`
 - `docs/workflow/intent_driven_workflow.md`
+- `docs/workflow/knowledge_preservation_gate.md`
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/rules/conversation_insight_capture_rules.md`
 - `docs/workflow/repository_root_validation_workflow.md`

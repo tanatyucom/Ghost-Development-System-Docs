@@ -144,6 +144,33 @@ Recommendation is not Action. Short approval phrases approve only the latest
 explicit Pending Action when repository, operation, scope, diff, and state are
 still unambiguous. Otherwise, apply SCW.
 
+## Knowledge Preservation Gate Index
+
+Knowledge Preservation Gate decides whether important reasoning, architecture
+decisions, operational improvement evidence, or future reconstruction value
+should become an Issa draft, ADR candidate, Improvement Record candidate,
+Architecture Principle candidate, or child Q.
+
+Reference points:
+
+- Responsibility Map: `docs/architecture/knowledge_artifact_responsibility_map.md`
+- Workflow: `docs/workflow/knowledge_preservation_gate.md`
+- Proposed ADR: `docs/adr/ADR-GDS-005_context_reconstruction_and_knowledge_guided_recommendations.md`
+- Related Architecture: `docs/architecture/intent_driven_workflow.md`
+
+Core boundary:
+
+```text
+Reasoning / Decision Signal
+  -> Knowledge Preservation Check
+  -> Draft or Candidate
+  -> Human Review
+  -> Promotion or Archive
+```
+
+The gate does not automatically approve ADRs, canonicalize Issa, change
+roadmap priority, commit, push, or tag.
+
 When Windows PowerShell 5.1 reads a Q file or Japanese Markdown, use:
 
 ```powershell
