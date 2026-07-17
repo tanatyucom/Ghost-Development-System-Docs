@@ -1,6 +1,6 @@
 # Q_GDS-STARTUP-002 Intent-Aware Startup Enforcement Foundation
 
-**Template Version:** 2.0  
+**Template Version:** 2.0
 **Template Source Last Updated:** 2026-07-13
 
 ## Identity
@@ -39,7 +39,7 @@ docs/requests/gds/draft/GDS-STARTUP-002_intent_aware_startup_enforcement_foundat
 └── attachments/
 ```
 
-This downloaded standalone Q file is the human handoff source.  
+This downloaded standalone Q file is the human handoff source.
 After Codex begins work, the authoritative repository Q must be saved as:
 
 ```text
