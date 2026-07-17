@@ -678,10 +678,15 @@ allowed next step, pending action, and display summary. Command Center must
 treat `BLOCK` and `SCW_REQUIRED` as stop states, and must show
 `PASS_WITH_LIMITATION` limitations before draft generation proceeds.
 
+Command Center should consume Platform Execution Evidence Contract records for
+Startup Enforcement, Repository Quality, Completion Review, and Knowledge
+Promotion rather than define incompatible evidence models.
+
 Details follow:
 
 - `docs/architecture/intent_driven_workflow.md`
 - `docs/architecture/intent_registry_and_pending_action_contract.md`
+- `docs/architecture/platform_execution_evidence_contract.md`
 - `docs/architecture/intent_aware_startup_enforcement.md`
 - `docs/architecture/runtime_startup_enforcement.md`
 - `docs/workflow/intent_driven_workflow.md`

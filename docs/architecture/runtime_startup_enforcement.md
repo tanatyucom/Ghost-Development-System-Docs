@@ -25,6 +25,10 @@ GDS-STARTUP-004 は、同じgateを将来のCommand Center、Template Engine、
 Artifact Pipeline、またはAutomation Server候補が呼び出せるruntime contractへ
 落とし込みます。
 
+Startup-specific runtime evidence must extend
+`docs/architecture/platform_execution_evidence_contract.md` rather than define
+a competing parent evidence model.
+
 ```text
 User
   -> Intent Classification
@@ -165,6 +169,9 @@ RESUMED
 ## Evidence Model
 
 Runtime Startup Enforcement returns an evidence record.
+
+This record is a Startup Enforcement specialization of Platform Execution
+Evidence Contract.
 
 ```yaml
 startup_execution_id:
@@ -360,7 +367,8 @@ Blocking:
 
 ## Future Candidates
 
-- Runtime Startup Enforcement JSON schema.
+- Runtime Startup Enforcement Evidence Specialization.
+- Runtime Startup Enforcement JSON schema after the specialization is reviewed.
 - Startup execution log template.
 - Command Center Startup Gate adapter.
 - Artifact Pipeline preflight validator.

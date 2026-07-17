@@ -100,11 +100,12 @@ remaining issues, and recommended next work.
   managed artifact generation cannot begin before workflow resolution,
   knowledge requirement resolution, canonical template verification, Revision
   First, Constraint Check, and Human Approval boundary review.
-- Current Platform Core Sequencing Priority: before specializing Runtime
-  Startup Enforcement evidence as STARTUP-005, define a common Platform
-  Execution Evidence Contract so Intent Engine, Startup Enforcement,
+- Current Platform Core Sequencing Priority: Platform Execution Evidence
+  Contract is now defined as the common parent model before specializing
+  Runtime Startup Enforcement evidence as STARTUP-005. Startup Enforcement,
   Repository Quality, Command Center, Completion Review, and Knowledge
-  Promotion do not create competing evidence models.
+  Promotion must extend this parent contract instead of creating competing
+  evidence models.
 - Next Milestone: After OCR, extract SDK requirements, design SDK Foundation,
   formalize Project Adoption, and issue Platform Foundation Release only after
   exit criteria are met.
@@ -1115,8 +1116,10 @@ Intent Engine / Intent Registry
 
 Decision:
 
-- STARTUP-005 remains valuable, but should be revised and deferred until the
-  common Platform Execution Evidence Contract is defined.
+- Platform Execution Evidence Contract is the parent model for platform
+  execution evidence.
+- STARTUP-005 remains valuable, but should be revised as Runtime Startup
+  Enforcement Evidence Specialization.
 - Repository Quality remains a real gate evidence source, not a report-only
   feature.
 - Command Center owns orchestration and display, not engine-specific reasoning
@@ -1127,7 +1130,7 @@ Decision:
 Recommended Next Q:
 
 ```text
-Q_GDS-PLATFORM-EXECUTION-EVIDENCE-001_common_platform_execution_evidence_contract_JP.md
+Q_GDS-STARTUP-005_runtime_startup_enforcement_evidence_specialization_JP.md
 ```
 
 Guard:

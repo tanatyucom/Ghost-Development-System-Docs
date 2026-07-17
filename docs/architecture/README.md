@@ -65,6 +65,13 @@ runtime behavior.
 - `platform_candidate_workspace.md`: recommended future workspace naming and
   guardrails for `platform_candidates/` without creating the folder or
   approving runtime use.
+- `platform_execution_evidence_contract.md`: common execution evidence parent
+  contract for Startup Enforcement Evidence, Repository Quality Evidence,
+  Command Center Execution Evidence, Completion Review Evidence, and Knowledge
+  Promotion Evidence. It defines lifecycle, required fields, ownership,
+  producer / consumer responsibilities, extension policy, versioning,
+  compatibility, Human Approval, SCW, and integration boundaries without
+  implementing runtime schema or automation.
 - `repository_intelligence_dashboard_foundation.md`: read-only Repository
   Intelligence Dashboard foundation for Repository Health, Capability Registry,
   Architecture Registry, ADR Summary, Current Mission, Future Candidates, and
@@ -182,6 +189,12 @@ or missing context, not for perfect memory retention.
   future Ghost SDK candidates.
   Structured Artifact Metadata Template maps that schema into optional YAML
   front matter for new managed artifacts.
+- Platform Execution Evidence Contract owns the common evidence model for
+  platform execution decisions and gate results. It is the parent contract for
+  Startup Enforcement, Repository Quality, Command Center, Completion Review,
+  and Knowledge Promotion evidence. It does not implement JSON schema,
+  runtime automation, GUI, plugin behavior, repository mutation, or approval
+  replacement.
 - Plugin Architecture Standard owns the explicit plugin boundary for future GDS
   Platform extensions. It defines Plugin versus Internal Module, registry,
   metadata, interface, ownership, lifecycle, and promotion rules. It does not
