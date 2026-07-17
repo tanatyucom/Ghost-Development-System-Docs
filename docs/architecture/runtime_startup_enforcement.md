@@ -29,6 +29,9 @@ Startup-specific runtime evidence must extend
 `docs/architecture/platform_execution_evidence_contract.md` rather than define
 a competing parent evidence model.
 
+The Startup-specific extension is defined in
+`docs/architecture/runtime_startup_enforcement_evidence_specialization.md`.
+
 ```text
 User
   -> Intent Classification
@@ -355,6 +358,8 @@ Blocking:
   the evidence fields.
 - `docs/architecture/command_center_architecture.md` defines the future
   orchestrator that may call this runtime contract.
+- `docs/architecture/runtime_startup_enforcement_evidence_specialization.md`
+  defines the Startup evidence specialization for this runtime contract.
 
 ## Non-Goals
 

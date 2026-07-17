@@ -13,6 +13,9 @@ The workflow is intended for future Command Center, Template Engine, Artifact
 Pipeline, or automation boundary components. It is not an implementation plan
 for autonomous repository modification.
 
+Evidence produced by this workflow should follow
+`docs/architecture/runtime_startup_enforcement_evidence_specialization.md`.
+
 ## Standard Flow
 
 ```text
@@ -274,6 +277,7 @@ When Runtime Startup Enforcement is used, the Completion Report should record:
 ## Related Documents
 
 - `docs/architecture/runtime_startup_enforcement.md`
+- `docs/architecture/runtime_startup_enforcement_evidence_specialization.md`
 - `docs/architecture/intent_aware_startup_enforcement.md`
 - `docs/workflow/artifact_creation_startup_enforcement_workflow.md`
 - `docs/architecture/command_center_architecture.md`

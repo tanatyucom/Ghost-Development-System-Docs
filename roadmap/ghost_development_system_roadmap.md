@@ -101,11 +101,11 @@ remaining issues, and recommended next work.
   knowledge requirement resolution, canonical template verification, Revision
   First, Constraint Check, and Human Approval boundary review.
 - Current Platform Core Sequencing Priority: Platform Execution Evidence
-  Contract is now defined as the common parent model before specializing
-  Runtime Startup Enforcement evidence as STARTUP-005. Startup Enforcement,
-  Repository Quality, Command Center, Completion Review, and Knowledge
-  Promotion must extend this parent contract instead of creating competing
-  evidence models.
+  Contract is now defined as the common parent model, and Runtime Startup
+  Enforcement Evidence Specialization is now defined as the Startup-specific
+  extension. Repository Quality, Command Center, Completion Review, and
+  Knowledge Promotion should follow the same parent-specialization pattern
+  instead of creating competing evidence models.
 - Next Milestone: After OCR, extract SDK requirements, design SDK Foundation,
   formalize Project Adoption, and issue Platform Foundation Release only after
   exit criteria are met.
@@ -1118,8 +1118,8 @@ Decision:
 
 - Platform Execution Evidence Contract is the parent model for platform
   execution evidence.
-- STARTUP-005 remains valuable, but should be revised as Runtime Startup
-  Enforcement Evidence Specialization.
+- Runtime Startup Enforcement Evidence Specialization extends the parent
+  contract for Startup-specific gate evidence.
 - Repository Quality remains a real gate evidence source, not a report-only
   feature.
 - Command Center owns orchestration and display, not engine-specific reasoning
@@ -1130,13 +1130,12 @@ Decision:
 Recommended Next Q:
 
 ```text
-Q_GDS-STARTUP-005_runtime_startup_enforcement_evidence_specialization_JP.md
+Q_GDS-REPOSITORY-QUALITY-EVIDENCE-001_repository_quality_gate_evidence_specialization_JP.md
 ```
 
 Guard:
 
 - No runtime implementation approval.
-- No STARTUP-005 implementation in this roadmap item.
 - No Command Center implementation.
 - No automatic artifact generation.
 - No automatic commit, push, tag, release, or repository mutation.

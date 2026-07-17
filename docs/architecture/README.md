@@ -38,6 +38,13 @@ runtime behavior.
   machine, gate decision behavior, evidence model, execution log, failure
   recovery, repository interaction contract, and Command Center integration
   boundary.
+- `runtime_startup_enforcement_evidence_specialization.md`: Startup-specific
+  evidence specialization that extends Platform Execution Evidence Contract.
+  It maps parent fields, Startup fields, lifecycle states, result meanings,
+  reason codes, producer / consumer behavior, Human Approval, SCW, Revision
+  First, repository verification, template verification, workflow / knowledge
+  resolution, constraint evidence, and startup log relationship without
+  implementing JSON schema or runtime code.
 - `intent_registry_and_pending_action_contract.md`: initial Intent Registry,
   Pending Action Contract, Approval Resolution Rule for `お願いします` / `はい` /
   `OK`, Commit / Push / Tag recommendation rules, and reason code set.
@@ -237,6 +244,10 @@ or missing context, not for perfect memory retention.
   own artifact content generation, autonomous repository mutation, Human
   Approval replacement, commit, push, tag, release, GUI, or plugin
   implementation.
+- Runtime Startup Enforcement Evidence Specialization owns the Startup-specific
+  interpretation of Platform Execution Evidence Contract. It keeps Startup
+  gate truth compatible with the parent contract while preserving Command
+  Center as consumer / orchestrator and Human Approval as the approval owner.
 - Knowledge Artifact Responsibility Map owns the separation between Q, Issa,
   ADR, Improvement Record, Rule, Architecture Principle, and Workflow so that
   GDS preserves what changed, why it mattered, what was decided, and what should
