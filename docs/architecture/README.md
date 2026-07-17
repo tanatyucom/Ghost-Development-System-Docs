@@ -86,6 +86,12 @@ runtime behavior.
   SCW_REQUIRED, and defines check severity, reason codes, report relationship,
   freshness, Human Approval, SCW, and consumer boundaries without implementing
   schema or runtime code.
+- `completion_review_execution_evidence_specialization.md`: Completion
+  Review-specific evidence specialization that extends Platform Execution
+  Evidence Contract. It defines completion decision, upstream Startup /
+  Repository Quality evidence consumption, Safe Commit Set, commit / push
+  recommendation boundaries, Human Approval, SCW, and Completion Report
+  relationship without implementing schema or runtime code.
 - `repository_intelligence_dashboard_foundation.md`: read-only Repository
   Intelligence Dashboard foundation for Repository Health, Capability Registry,
   Architecture Registry, ADR Summary, Current Mission, Future Candidates, and
@@ -260,6 +266,11 @@ or missing context, not for perfect memory retention.
   keeps Repository Quality Report as human-readable presentation while making
   quality state, gate result, warnings, errors, freshness, approval state, and
   SCW state available as platform decision evidence.
+- Completion Review Execution Evidence Specialization owns the completion
+  decision interpretation of Platform Execution Evidence Contract. It connects
+  Startup Evidence and Repository Quality Evidence to Completion Report,
+  Safe Commit Set, commit / push recommendation, Human Approval, SCW,
+  remaining issues, and Recommended Next Q.
 - Knowledge Artifact Responsibility Map owns the separation between Q, Issa,
   ADR, Improvement Record, Rule, Architecture Principle, and Workflow so that
   GDS preserves what changed, why it mattered, what was decided, and what should

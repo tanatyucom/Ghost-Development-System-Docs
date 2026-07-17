@@ -103,9 +103,9 @@ remaining issues, and recommended next work.
 - Current Platform Core Sequencing Priority: Platform Execution Evidence
   Contract is now defined as the common parent model, and Runtime Startup
   Enforcement Evidence Specialization and Repository Quality Gate Evidence
-  Specialization are now defined as the first domain extensions. Completion
-  Review, Command Center, and Knowledge Promotion should follow the same
-  parent-specialization pattern instead of creating competing evidence models.
+  Specialization, and Completion Review Execution Evidence Specialization are
+  now defined as the first domain extensions. Platform Ready Review should
+  verify these compatible gates before GameGhost dogfooding resumes.
 - Next Milestone: After OCR, extract SDK requirements, design SDK Foundation,
   formalize Project Adoption, and issue Platform Foundation Release only after
   exit criteria are met.
@@ -1108,9 +1108,9 @@ Intent Engine / Intent Registry
   -> Common Platform Execution Evidence Contract
   -> Startup Enforcement Evidence Specialization
   -> Repository Quality Gate Evidence Specialization
+  -> Completion Review Execution Evidence Specialization
   -> Command Center Core Orchestration Contract
   -> Template Engine / Artifact Pipeline Preflight
-  -> Completion Review
   -> Knowledge Promotion
 ```
 
@@ -1123,6 +1123,9 @@ Decision:
 - Repository Quality Gate Evidence Specialization extends the parent contract
   for quality state, gate result, warning / error, freshness, report, and
   approval / SCW evidence.
+- Completion Review Execution Evidence Specialization extends the parent
+  contract for completion decision, upstream evidence consumption, Safe Commit
+  Set, commit / push recommendation, remaining issues, and next Q evidence.
 - Command Center owns orchestration and display, not engine-specific reasoning
   or Human Approval replacement.
 - Knowledge Promotion remains approval-gated and primarily post-review, while
@@ -1131,7 +1134,7 @@ Decision:
 Recommended Next Q:
 
 ```text
-Q_GDS-COMPLETION-REVIEW-EVIDENCE-001_completion_review_execution_evidence_specialization_JP.md
+Q_GDS-PLATFORM-READY-REVIEW-001_platform_ready_review_before_gameghost_dogfooding_JP.md
 ```
 
 Guard:

@@ -1,0 +1,61 @@
+# Reason Code Catalog
+
+## Policy
+
+- Use uppercase snake case.
+- Keep codes stable and machine-readable.
+- Do not reuse a deprecated code for a different meaning.
+- Unknown codes may be displayed, but must not be treated as PASS.
+- Human-readable explanation must be available in evidence or documentation.
+
+## Success Codes
+
+- `COMPLETION_SCOPE_CONFIRMED`
+- `COMPLETION_REPORT_PRESENT`
+- `COMPLETION_CHECKLIST_COMPLETE`
+- `STARTUP_EVIDENCE_REVIEWED`
+- `QUALITY_EVIDENCE_REVIEWED`
+- `VERIFICATION_PASSED`
+- `SAFE_COMMIT_SET_CONFIRMED`
+- `NON_TARGET_PROJECT_UNTOUCHED`
+- `REMAINING_ISSUES_RECORDED`
+- `NEXT_Q_RECOMMENDED`
+
+## Limitation Codes
+
+- `VERIFICATION_LIMITED`
+- `STARTUP_EVIDENCE_LIMITED`
+- `QUALITY_EVIDENCE_LIMITED`
+- `COMPLETION_CHECKLIST_LIMITED`
+- `SAFE_COMMIT_SET_LIMITED`
+- `HUMAN_REVIEW_RECOMMENDED`
+- `COMMIT_APPROVAL_REQUIRED`
+- `PUSH_APPROVAL_REQUIRED`
+
+## Blocking Codes
+
+- `VERIFICATION_FAILED`
+- `COMPLETION_REPORT_MISSING`
+- `COMPLETION_CHECKLIST_MISSING`
+- `SAFE_COMMIT_SET_UNCLEAR`
+- `DIRTY_WORKSPACE_CONFLICT`
+- `NON_TARGET_PROJECT_CHANGED`
+- `COMMIT_POLICY_DO_NOT_COMMIT`
+- `QUALITY_EVIDENCE_RED`
+- `STARTUP_EVIDENCE_BLOCKED`
+
+## SCW Codes
+
+- `EVIDENCE_STALE`
+- `EVIDENCE_CONFLICT`
+- `SCOPE_UNCLEAR`
+- `Q_POLICY_CONFLICT`
+- `APPROVAL_BOUNDARY_UNCLEAR`
+- `SCW_REQUIRED`
+
+## Precedence
+
+1. Known blocking failure -> `BLOCK`.
+2. Unsafe uncertainty -> `SCW_REQUIRED`.
+3. Known limitation -> `PASS_WITH_LIMITATION`.
+4. Complete evidence and no blocking limitation -> `PASS`.

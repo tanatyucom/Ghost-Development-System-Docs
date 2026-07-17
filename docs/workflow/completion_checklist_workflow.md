@@ -9,6 +9,11 @@ workspace clean confirmation を確認する標準フローです。
 Startup Checklist が開始時の確認を担当し、Completion Checklist が終了時の確認を
 担当します。
 
+Completion Checklist の結果を Platform Execution Evidence として扱う場合は、
+`docs/architecture/completion_review_execution_evidence_specialization.md` に従います。
+このspecializationでは、Completion Reportを人間向けartifact、Completion Review
+Evidenceをplatform判断用の記録として分離します。
+
 ## Standard Flow
 
 ```text
@@ -166,6 +171,7 @@ Completion Checklist:
 ## Related Documents
 
 - `docs/rules/completion_checklist_rules.md`
+- `docs/architecture/completion_review_execution_evidence_specialization.md`
 - `templates/completion_checklist_template.md`
 - `examples/completion_checklist_examples.md`
 - `templates/completion_report_template.md`

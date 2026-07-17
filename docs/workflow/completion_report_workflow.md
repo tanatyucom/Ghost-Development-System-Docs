@@ -11,6 +11,12 @@ This workflow explains how to create a Completion Report v2 after a Q, review, d
 In Product Documentation Hierarchy v2, Completion Report is the official layer
 after Q Documents. It feeds future Improvement Records and Promotion decisions.
 
+When a Completion Report is used as platform execution evidence, follow
+`docs/architecture/completion_review_execution_evidence_specialization.md`.
+That specialization separates the human-readable Completion Report from the
+Completion Review Evidence used for completion, commit recommendation, SCW,
+and Platform Ready Review decisions.
+
 ## Standard Flow
 
 ```text
@@ -186,6 +192,7 @@ After the report is written, complete the Completion Checklist and record:
 ## Related Documents
 
 - `docs/rules/completion_report_rules.md`
+- `docs/architecture/completion_review_execution_evidence_specialization.md`
 - `templates/completion_report_template.md`
 - `docs/rules/beginner_future_self_test_rules.md`
 - `docs/workflow/beginner_future_self_test_workflow.md`
