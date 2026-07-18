@@ -30,6 +30,38 @@ Gate を通過できるだけの証跡を残します。
 - Scope / Out of Scope confirmed.
 - Constraint Check completed.
 
+## Repository Context Evidence
+
+Startup Completion Evidence must distinguish between:
+
+```text
+AI knows that a repository exists
+```
+
+and:
+
+```text
+AI opened and resolved the current canonical assets required for this task
+```
+
+For repository-governed work, record the minimum repository context that
+governs the response or artifact:
+
+- repository name;
+- working directory;
+- git root or repository root evidence;
+- branch or revision when available;
+- AI Repository Index path and validation / freshness state;
+- Current Q, Current Mission, or Information Package path;
+- canonical template path and revision source when a template is used;
+- related rules, workflows, ADRs, architecture, standards, or registries read;
+- unavailable or unresolved assets;
+- conflict status;
+- Startup result timestamp or task identifier when useful.
+
+AI memory, previous chat summaries, uploaded copies, and remembered template
+shapes are not sufficient repository context evidence by themselves.
+
 ## Evidence Format
 
 Evidence は次の粒度で記録します。
@@ -45,6 +77,29 @@ Evidence は次の粒度で記録します。
 短い作業ではチャット上の要約で十分です。再利用、レビュー、Git 管理、handoff を
 前提とする場合は、`templates/startup_verification_checklist.md` を使って file
 artifact として保存します。
+
+## Freshness And Invalidation
+
+Startup evidence becomes stale when the repository-governed context changes or
+the task moves to a new governance state.
+
+Refresh Startup evidence, run a task-specific context refresh, or explicitly
+record a limitation when:
+
+- a new chat or AI session begins;
+- repository files changed after the last Startup evidence;
+- Codex or another actor completed work that affects canonical rules,
+  workflows, templates, ADRs, roadmap, registries, or indexes;
+- the task type changes, such as Architecture Review -> Q Creation ->
+  Completion Review -> Approval Request -> Execution;
+- workflow state, approval state, or Pending Action state changes;
+- the user reports that the AI response conflicts with repository policy;
+- the AI identifies missing, stale, or conflicting canonical context;
+- the human explicitly requests repository verification;
+- a required canonical asset cannot be found or opened.
+
+If a required refresh cannot be completed, do not claim Startup PASS. Record
+`PASS_WITH_LIMITATION`, `BLOCKED`, or `SCW_REQUIRED` according to the risk.
 
 ## Gate Position
 
@@ -67,6 +122,10 @@ AI Startup Procedure
 - Scope / Out of Scope または commit policy が未確認。
 - Q 作成なのに canonical `templates/Q_TEMPLATE.md` を確認していない。
 - 未確認事項を「記憶しているはず」として扱っている。
+- repository context evidence が古い、欠落している、または会話記憶だけに
+  依存している。
+- task type、approval state、repository state の変化後に必要な context refresh を
+  行っていない。
 
 ## Not A Log Dump
 

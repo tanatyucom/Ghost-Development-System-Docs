@@ -66,6 +66,23 @@ Completion Report は Context Recovery Principle を支える artifact です。
 
 - Startup Completion Gate result:
 - Startup evidence artifact:
+- Repository Context Evidence:
+  - Repository:
+  - Repository root:
+  - Branch or revision:
+  - AI Repository Index path:
+  - AI Repository Index freshness / validation:
+  - Current Q / Mission / Information Package path:
+  - Canonical template path:
+  - Related rules / workflows / ADRs / architecture:
+  - Unresolved canonical assets:
+  - Conflict status:
+- Freshness / Invalidation:
+  - Startup evidence still valid:
+  - Task-specific context refresh required:
+  - Task-specific context refresh completed:
+  - Refresh trigger:
+  - Refresh limitation:
 - Startup completed:
 - Memory Check completed:
 - AI Repository Index reviewed:
@@ -134,6 +151,12 @@ Completion Report は Context Recovery Principle を支える artifact です。
 
 - Gate result:
 - Startup evidence checked:
+- Repository context evidence checked:
+- Repository context freshness checked:
+- Task-specific context refresh checked:
+- Canonical assets loaded:
+- Unresolved canonical assets disclosed:
+- Conversation vs repository precedence checked:
 - Correct repository scope:
 - Correct output format:
 - User language preference:

@@ -6,8 +6,12 @@ AI Repository Knowledge Access Index is the first file ChatGPT, Codex, and
 other AI systems should read when using the public GDS Docs GitHub repository
 as a Knowledge Source.
 
+For a new AI chat or a session with unclear memory / repository context, start
+with the AI Bootstrap Source Card, then continue to the AI Repository Index.
+
 Reference points:
 
+- Bootstrap Source Card: `docs/ai_bootstrap_source_card.md`
 - Index: `docs/ai_repository_index.md`
 - Raw URL:
   `https://raw.githubusercontent.com/tanatyucom/Ghost-Development-System-Docs/main/docs/ai_repository_index.md`
@@ -195,6 +199,12 @@ Capability Verification, when capability is asked or uncertain
   -> Scope / Out of Scope
   -> Implementation / Review Start
 ```
+
+Startup evidence must prove task-relevant repository context, not only claim
+that Startup was performed. Repository Context Evidence records the repository,
+root / revision, AI Repository Index state, Current Q / Mission, canonical
+template source, related canonical assets, unresolved assets, conflicts, and
+freshness / invalidation status.
 
 ## Intent-Driven Workflow Index
 

@@ -38,6 +38,29 @@ Intent-Driven Workflow, when the user starts from natural language intent
 ありません。対象リポジトリ、対象プロジェクト、適用ルール、作業範囲を
 取り違えないための開始手順です。
 
+## Repository-Aware AI Rule
+
+When a canonical repository exists, AI must not use conversation memory alone
+for repository-governed decisions.
+
+AI must resolve the current canonical repository state and load the
+task-relevant authoritative assets before planning, creating, revising,
+reviewing, recommending, or executing repository work.
+
+Decision precedence:
+
+```text
+Canonical Repository
+  -> Current governed repository state
+  -> Explicit current Human instruction within authority boundaries
+  -> Session context
+  -> Model memory / generic behavior
+```
+
+If repository access or a required canonical source is unavailable, AI must
+record the limitation, apply SCW when needed, and avoid claiming Startup PASS
+or repository-governed verification from memory.
+
 ## Required Checks
 
 ### Capability Verification
@@ -266,6 +289,14 @@ Startup Checklist の後、AI は確認した source と結果を短く証跡化
 
 AI memory、過去チャット、前回作業の印象は authoritative source ではありません。
 
+Repository Context Evidence should include repository identity, git root or
+repository root evidence, branch or revision when available, AI Repository
+Index state, Current Q / Mission, canonical template source, related canonical
+assets read, unresolved assets, conflict status, and freshness limitation.
+
+Startup evidence must be refreshed or limited when repository state, task
+type, workflow state, approval state, or Pending Action state changes.
+
 ### Startup Completion Gate
 
 Startup Completion Evidence を確認し、Gate result を PASS / PASS WITH LIMITATION /
@@ -397,6 +428,10 @@ Research Mission Workflowへ進みます。
   Evidence、Validation が不明。
 - Commit policy が不明。
 - Chat-only Q で、Artifact First 対象なのに保存先がない。
+- repository-governed decision が必要なのに、現在のcanonical repository sourceを
+  読まず、会話記憶や古い添付だけで判断しようとしている。
+- repository state、task type、workflow state、approval state、Pending Action state
+  の変化後にStartup evidenceを再確認していない。
 
 ## Decision Background
 

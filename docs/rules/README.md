@@ -69,8 +69,9 @@ promoted.
   uncertain.
 - `ai_startup_procedure_rules.md`: AI startup reading order and stop
   conditions before implementation, review, documentation update, or Q
-  execution begins. Includes Information Package check and Research Task
-  Detection before normal implementation starts.
+  execution begins. Includes Repository-Aware AI Rule, Repository Context
+  Evidence, Information Package check, freshness / invalidation, and Research
+  Task Detection before normal implementation starts.
 - `project_rules.md`: Project First Principle and Cross Project rules.
 - `language_rules.md`: Japanese-first documentation operation rules.
 - `documentation_rules.md`: documentation structure and update rules.

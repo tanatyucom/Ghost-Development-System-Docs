@@ -22,6 +22,12 @@ Artifact Generation / Documentation Update
 ## Required Checks
 
 - Startup Completion Evidence passed or limitation recorded.
+- Repository Context Evidence supports the current response.
+- Startup evidence freshness is still valid for the current task type,
+  repository state, workflow state, and approval state.
+- Required task-specific canonical assets were opened or unresolved assets are
+  visibly reported.
+- Conversation context does not override newer canonical repository policy.
 - Capability disclosure still matches actual work, when capability was discussed.
 - Correct repository scope.
 - Correct output format requested by the user.
@@ -66,6 +72,8 @@ Artifact Generation / Documentation Update
 - Unapproved Approval Units remain Hold.
 - Scope creep check completed.
 - Constraint Check still valid.
+- Repository context refresh completed when repository state, task type,
+  workflow state, or approval state changed after Startup.
 - Changed files and verification results are accurately reported.
 - Remaining issues and not-run checks are not hidden.
 
@@ -92,6 +100,9 @@ Examples:
 Do not deliver a final response if:
 
 - The response would claim unverified work was verified.
+- The response would claim repository synchronization without source evidence.
+- The response would use remembered policy where current canonical repository
+  policy is required but not checked.
 - The response would imply commit / push was done when it was not.
 - Required Human Approval is missing.
 - The response asks for the same approval again after valid Human Final
@@ -102,6 +113,9 @@ Do not deliver a final response if:
 - Workflow Recommendation asserts `Completed` without valid Execution Evidence.
 - A governed repository operation is recommended but the final response omits
   Repository Recommendation, Workflow Recommendation, or Approval Request.
+- A governed repository operation is recommended from stale Startup evidence,
+  stale Repository Recommendation, stale workflow state, or stale approval
+  state.
 - Approval Request is generated without a registry-backed Execution Actor,
   Approval Unit, scope, Human Approval requirement, and evidence responsibility.
 - Approval Request is generated when Capability is missing, deprecated,
@@ -112,6 +126,8 @@ Do not deliver a final response if:
   requirements.
 - Unapproved Approval Units are promoted to Approved.
 - Repository scope is unclear.
+- Required repository context is unavailable and the response does not apply
+  SCW or disclose the limitation.
 - The requested output format is not satisfied.
 - A reusable project artifact is returned only as inline text without explicit
   user request.
@@ -125,6 +141,12 @@ Completion Report または最終回答前の内部確認として、次を確�
 Pre-Response Verification Gate:
 - Gate result:
 - Startup evidence checked:
+- Repository context evidence:
+- Repository context freshness:
+- Task-specific context refresh:
+- Canonical assets loaded:
+- Unresolved canonical assets:
+- Conversation vs repository precedence:
 - Scope check:
 - Output format check:
 - Output Contract check:

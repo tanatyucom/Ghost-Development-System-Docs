@@ -54,8 +54,12 @@ Ghost Development System の公式 Knowledge Base です。
 ChatGPT / Codex / AI が公開 GitHub リポジトリから GDS Docs を読む場合は、
 通常の GitHub ページではなく Raw URL Index から開始します。
 
+新しいAIチャット、またはmemory / repository contextが不明なAI sessionは、
+まずBootstrap Source Cardで最小入口を確認します。
+
 Start from:
 
+- [`docs/ai_bootstrap_source_card.md`](docs/ai_bootstrap_source_card.md)
 - [`docs/ai_repository_index.md`](docs/ai_repository_index.md)
 - Raw URL:
   `https://raw.githubusercontent.com/tanatyucom/Ghost-Development-System-Docs/main/docs/ai_repository_index.md`
@@ -83,6 +87,8 @@ Profile を読み、最後に Q File と Startup Checklist を確認します。
 ## AI Startup Procedure
 
 AI が GDS 作業を開始する前に、毎回同じ順番で前提を確認します。
+Startup は人間向けの儀式ではなく、AI が repository truth と同期してから
+repository-governed reasoning を行うための protocol です。
 
 Start from:
 
@@ -99,6 +105,11 @@ Start from:
 Startup now includes Pending Decision Review for conversation-approved but
 not-yet-canonical decisions. Pending Decision is a temporary review state, not
 canonical knowledge and not execution approval.
+
+Startup Completion Evidence must include Repository Context Evidence when the
+task depends on repository-governed knowledge. AI must record which canonical
+assets were opened, whether the context is fresh, and whether task, workflow,
+repository, or approval state changes require context refresh.
 
 Windows PowerShell 5.1 で Q file や日本語 Markdown を読む場合は UTF-8 を
 明示します。

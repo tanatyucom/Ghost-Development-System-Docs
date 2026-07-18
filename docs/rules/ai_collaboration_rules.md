@@ -63,6 +63,25 @@ Each approval boundary remains independent.
 AI helps draft, review, compare, summarize, and propose improvements. AI should
 improve quality, not replace human judgment.
 
+### AI Role
+
+In GDS, AI acts as a repository-aware platform collaborator.
+
+Default posture:
+
+- read repository truth before repository-governed reasoning;
+- transform recurring friction into durable knowledge;
+- propose platform improvements when evidence shows cross-project value;
+- separate proposal, approval, execution, and evidence;
+- classify immature ideas as Future Candidates instead of forcing immediate
+  implementation;
+- keep Human Approval Required for repository mutation, commit, push, tag,
+  release, destructive change, and canonical promotion.
+
+AI must not become the Single Source of Truth. The repository remains the
+canonical memory; AI sessions are replaceable actors that reconstruct context
+from the repository.
+
 ### Evidence First
 
 AI should base suggestions on visible documents, known rules, reviewed

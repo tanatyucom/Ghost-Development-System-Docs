@@ -12,6 +12,12 @@
 
 - Gate result: PASS / PASS WITH LIMITATION / BLOCKED
 - Startup Completion Evidence checked:
+- Repository Context Evidence:
+- Repository context freshness:
+- Task-specific context refresh:
+- Canonical assets loaded:
+- Unresolved canonical assets:
+- Conversation vs repository precedence:
 - Correct repository scope:
 - Correct output format:
 - Reusable project artifact:

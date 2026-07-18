@@ -16,6 +16,37 @@
 - Assumptions listed:
 - Assumptions confirmed or marked as unconfirmed:
 
+## Repository Context Evidence
+
+- Repository name:
+- Repository root / git root:
+- Branch or revision:
+- AI Repository Index path:
+- AI Repository Index freshness / validation:
+- Current Q / Mission / Information Package path:
+- Canonical template path, when applicable:
+- Template revision source:
+- Related rules loaded:
+- Related workflows loaded:
+- Related ADRs / Architecture loaded:
+- Related standards / registries loaded:
+- Unresolved canonical assets:
+- Conflict status:
+- Evidence timestamp / task identifier:
+
+## Freshness / Invalidation Check
+
+- New session or task transition:
+- Repository changed since last Startup:
+- Governance asset changed since last Startup:
+- Workflow state changed:
+- Approval state changed:
+- Pending Action state changed:
+- Human requested repository verification:
+- Context refresh required:
+- Context refresh completed:
+- Refresh limitation:
+
 ## Startup Completion Evidence
 
 - Startup completed:
@@ -78,11 +109,15 @@
 | Constraint Check |  |  |  |  |
 | Output Contract |  |  |  |  |
 | Artifact Creation Startup Enforcement |  |  |  |  |
+| Repository Context Evidence |  |  |  |  |
+| Freshness / Invalidation Check |  |  |  |  |
 
 ## Startup Completion Gate
 
 - Gate result: PASS / PASS_WITH_LIMITATION / BLOCK
 - Missing evidence:
+- Repository context evidence:
+- Freshness / invalidation:
 - Limitation:
 - Human confirmation required:
 - Ready to create Q:

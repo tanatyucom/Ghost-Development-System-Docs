@@ -17,7 +17,8 @@ gate.
   commit policy before implementation or review begins.
 - `startup_completion_evidence.md`: evidence standard showing which canonical
   sources were reviewed before Q creation, implementation, review, or
-  documentation update.
+  documentation update. It includes Repository Context Evidence, freshness /
+  invalidation checks, and task-specific context refresh.
 - `startup_completion_gate.md`: verification gate after Startup Checklist and
   before Q creation, implementation, review, or documentation update.
 - `ai_startup_procedure.md`: AI reading order and startup procedure before
@@ -94,7 +95,8 @@ gate.
   release, next Q, and workspace clean confirmation.
 - `pre_response_verification_gate.md`: final response quality gate for checking
   repository scope, requested output format, approval boundaries, commit /
-  push reality, and constraint validity before the final AI response.
+  push reality, Repository Context Evidence freshness, and constraint validity
+  before the final AI response.
 - `repository_drift_prevention.md`: Future Candidate workflow for preventing
   AI Repository Drift during artifact generation by re-anchoring to canonical
   repository sources between reasoning and output, and for preserving Startup

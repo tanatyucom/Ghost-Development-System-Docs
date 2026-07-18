@@ -193,6 +193,69 @@ Why it is bad:
 - It mixes proposal and implementation.
 - It may create scope drift.
 
+### Classify Before Implement
+
+Good:
+
+```text
+New idea
+  -> Rule?
+  -> Schema?
+  -> Template?
+  -> Example?
+  -> Architecture?
+  -> Future Candidate?
+  -> Implement only after scope and approval are clear
+```
+
+Why it is good:
+
+- It prevents premature implementation.
+- It keeps reusable platform value visible.
+- It gives the human a decision point before scope expands.
+
+Bad:
+
+```text
+New idea
+  -> Implement immediately
+```
+
+Why it is bad:
+
+- It may bypass the correct Knowledge owner.
+- It may create duplicate rules or templates.
+- It may turn a Future Candidate into unapproved current scope.
+
+### Human Approval
+
+Good:
+
+```text
+AI proposes.
+Human approves.
+AI executes only the approved operation.
+AI reports execution evidence.
+```
+
+Why it is good:
+
+- Proposal, approval, execution, and evidence stay separate.
+- Commit approval is not reused for push.
+- The next AI session can reconstruct what actually happened.
+
+Bad:
+
+```text
+AI assumes approval because the proposal sounded reasonable.
+```
+
+Why it is bad:
+
+- It bypasses Human Approval First.
+- It may mutate the wrong repository or scope.
+- It creates unverifiable governance history.
+
 ### Completion Report Priority
 
 Good:

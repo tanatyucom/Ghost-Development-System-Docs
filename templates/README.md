@@ -25,7 +25,9 @@ before implementation or review begins.
 
 Startup verification checklist templates help humans and AI record evidence
 that canonical sources were reviewed before Q creation, implementation, review,
-or documentation update.
+or documentation update. They also record Repository Context Evidence,
+freshness / invalidation checks, and task-specific context refresh results so
+AI does not claim repository synchronization from memory alone.
 
 Q templates, completion report templates, and startup verification checklists
 also include Artifact Creation Startup Enforcement evidence. When managed
@@ -47,7 +49,8 @@ needs regeneration and validation when public knowledge entry points changed.
 
 AI response checklist templates help humans and AI verify the final response
 before delivery, including repository scope, requested output format, approval
-boundaries, commit / push state, and remaining issues.
+boundaries, commit / push state, Repository Context Evidence freshness, and
+remaining issues.
 
 Capability decision templates help humans and AI distinguish verified ability,
 limitations, approval needs, and alternative workflows before planning.
