@@ -61,6 +61,12 @@ requests into scoped missions with Goal, Research Questions, Scope, Out of
 Scope, Evidence, Validation, Negative Result handling, Deliverables, and
 Completion Report requirements.
 
+Ghost Research templates help humans and AI preserve external OSS, framework,
+architecture, and engineering-practice research as governed Knowledge Assets
+with source traceability, idea-level Adoption Decisions, GG validation paths,
+Evidence requirements, Future Candidate links, Platform Candidate potential,
+and OSS copying boundaries.
+
 Pending Conversation Insight templates help humans and AI temporarily hold
 conversation-origin ideas that should be reviewed later before Q化, Repository
 registration, Promotion, or Codex execution.
@@ -200,6 +206,7 @@ restore guidance.
 - `execution_queue_status_template.md`
 - `execution_adapter_record_template.md`
 - `research_mission_template.md`
+- `ghost_research_template.md`
 - `beginner_future_self_test_template.md`
 - `completion_checklist_template.md`
 - `ai_response_checklist_v2.md`

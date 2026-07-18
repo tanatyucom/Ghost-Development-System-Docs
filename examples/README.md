@@ -32,6 +32,11 @@ reports, and documentation requests can start from a clear reference.
   invalidation, independent approval units, execution evidence binding,
   duplicate execution prevention, unknown execution handling, supersession, and
   UTF-8 display checks.
+- `ghost_research_examples.md`: good and bad examples for Ghost Research
+  candidate extraction, idea-level Adoption Decisions, GG validation,
+  duplicate Future Candidate handling, Platform Promotion, ADR linkage, source
+  attribution, stale / superseded research, Repository Intelligence input, and
+  OSS copying boundaries.
 - `improvement_review.md`: example Improvement Review section.
 - `purpose_oriented_naming.md`: before and after examples for
   purpose-oriented naming.
@@ -176,6 +181,10 @@ what a complete, well-scoped document should feel like.
   Request / Approval Unit lifecycle behavior, generic approval wording,
   Commit / Push / Tag independence, stale approval handling, duplicate
   execution prevention, and evidence-to-unit binding.
+- Use `ghost_research_examples.md` when external OSS, framework, architecture,
+  or engineering-practice learning should become a governed Research asset
+  without directly authorizing implementation, dependency adoption, or GDS
+  Standard promotion.
 - Use `improvement_review.md` when you need to separate near-term recommended
   improvements from future candidates.
 - Use `purpose_oriented_naming.md` when renaming roadmap items or public

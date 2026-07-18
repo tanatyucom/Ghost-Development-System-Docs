@@ -6,14 +6,15 @@
 
 ## Purpose
 
-This document separates the responsibilities of Q, Issa, ADR, Improvement
-Record, Rule, Architecture Principle, and Workflow so that GDS can preserve
-knowledge without putting every concern into one artifact.
+This document separates the responsibilities of Q, Ghost Research, Issa, ADR,
+Improvement Record, Rule, Architecture Principle, and Workflow so that GDS can
+preserve knowledge without putting every concern into one artifact.
 
 The goal is knowledge lineage:
 
 ```text
 Conversation Insight
+  -> Ghost Research, when the source is external architecture or OSS learning
   -> Issa / reasoning draft
   -> ADR / Architecture Principle
   -> Q
@@ -27,6 +28,7 @@ Conversation Insight
 | Artifact | Purpose | Trigger | Required Content | Approval Boundary | Canonical Location |
 | --- | --- | --- | --- | --- | --- |
 | Q | Define what will be changed, reviewed, or verified. | A scoped task needs execution, review, or documentation update. | Purpose, scope, out of scope, repository, completion criteria, validation, commit policy. | Approval required before execution scope is treated as accepted. | `docs/requests/<project>/<status>/.../request.md` |
+| Ghost Research | Preserve what was learned and evaluated from external OSS, frameworks, architectures, or engineering practices before candidate extraction. | External design knowledge may influence GDS or Ghost Platform direction. | Research question, sources, design ideas, strengths, weaknesses, GDS overlap, idea-level Adoption Decisions, validation path, evidence requirements, copying boundary. | Research completion does not approve adoption. Promotion requires Future Candidate / Evidence / Platform Promotion / ADR gates. | `docs/research/` |
 | Issa | Preserve how reasoning evolved: hypotheses, discomfort, decomposition, reversals, and why a conclusion became valuable. | Problem definition changed, reusable reasoning emerged, or Q alone would lose the why. | Context, turning points, hypotheses, rejected paths, insights, future reconstruction value. | Canonical storage is not yet approved; use draft / SCW until standardized. | Not yet canonical. Draft under request `attachments/` until approved. |
 | ADR | Record a durable architecture decision and why it was chosen. | A human-reviewed architecture decision affects boundaries, compatibility, ownership, or long-term direction. | Status, context, decision, alternatives, consequences, related docs. | `Accepted`, `Superseded`, or `Deprecated` requires Human Approval. | `docs/adr/` |
 | Improvement Record | Preserve an observed improvement lifecycle from problem through validation and promotion candidate. | Repeated work reveals improvement evidence or future promotion potential. | Observation, change, validation, impact, remaining issues, promotion path. | Promotion requires review; record alone does not approve standardization. | Current implementation uses PIP / completion reports / knowledge inventory until a dedicated standard exists. |
@@ -39,6 +41,8 @@ Conversation Insight
 Use the smallest durable artifact that preserves the missing knowledge.
 
 - Use Q when the primary question is what to do now.
+- Use Ghost Research when the primary need is to preserve and evaluate
+  external design knowledge before extracting Ghost-native candidates.
 - Use Issa when the primary risk is losing how the idea was discovered.
 - Use ADR when the primary need is to explain an architecture choice.
 - Use Improvement Record when the primary evidence is operational improvement.

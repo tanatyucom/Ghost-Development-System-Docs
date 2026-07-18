@@ -62,6 +62,12 @@ Reference points:
   `docs/standards/q_knowledge_classification.md`
 - Handoff Template v2:
   `templates/HANDOFF_TEMPLATE_V2.md`
+- Ghost Research Knowledge Asset:
+  `docs/architecture/ghost_research_knowledge_asset.md`
+- Ghost Research Registry:
+  `docs/research/research_registry.md`
+- Ghost Research Template:
+  `templates/ghost_research_template.md`
 
 Core flow:
 

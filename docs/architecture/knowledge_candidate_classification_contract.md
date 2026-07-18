@@ -98,6 +98,7 @@ Do not use `classification_result` as execution approval.
 | `workflow_candidate` | Repeated sequence should become visible and reviewable. | `docs/workflow/` |
 | `template_candidate` | Repeated artifact structure should become reusable. | `templates/` |
 | `example_candidate` | Good / bad examples would prevent future ambiguity. | `examples/` |
+| `ghost_research_candidate` | External OSS, framework, architecture, or engineering-practice learning should be preserved and evaluated before candidate extraction. | `docs/research/` |
 | `checklist_candidate` | Repeated review items should become checkable. | `templates/` or `docs/workflow/` |
 | `intent_registry_candidate` | Intent routing may need registry update. | Intent Registry / related architecture. |
 | `quality_gate_candidate` | Validation or completion gate may need update. | workflow / rules / templates. |

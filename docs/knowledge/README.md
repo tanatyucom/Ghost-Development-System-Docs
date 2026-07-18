@@ -17,9 +17,14 @@ Knowledge は、Research、Completion Report、Debug Artifact、Human Review か
   長期構想を、Human Approval付きのpre-promotion knowledgeとして保存する入口。
 - [`conversation_insights/pending/README.md`](conversation_insights/pending/README.md):
   即時登録やCodex実行を避け、翌日以降のHuman Reviewへ回すPending Insight Queue。
+- [`../research/README.md`](../research/README.md):
+  OSS、framework、architecture、engineering practice から学んだ外部知識を、
+  Ghost Researchとして整理し、Future Candidate、GG Validation、Evidence、
+  Platform Candidate、GDS Standardへつなぐ入口。
 
 Related promotion architecture and workflow:
 
+- [`../architecture/ghost_research_knowledge_asset.md`](../architecture/ghost_research_knowledge_asset.md)
 - [`../architecture/knowledge_promotion_engine.md`](../architecture/knowledge_promotion_engine.md)
 - [`../architecture/knowledge_candidate_classification_contract.md`](../architecture/knowledge_candidate_classification_contract.md)
 - [`../architecture/knowledge_artifact_responsibility_map.md`](../architecture/knowledge_artifact_responsibility_map.md)
@@ -30,6 +35,10 @@ Related promotion architecture and workflow:
 
 ```text
 Research
+  -> Ghost Research
+  -> Future Candidate
+  -> GG Validation
+  -> Evidence
   -> Knowledge Inventory
   -> Knowledge Promotion
   -> Rule / Template / Workflow / CASE / Registry / PIP

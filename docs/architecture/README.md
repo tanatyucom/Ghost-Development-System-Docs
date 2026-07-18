@@ -75,6 +75,11 @@ runtime behavior.
   ADR, Improvement Record, Rule, Architecture Principle, and Workflow,
   including triggers, lifecycle, approval boundary, canonical location, and
   cross-reference / promotion rules.
+- `ghost_research_knowledge_asset.md`: canonical Knowledge Asset definition for
+  governed intake of external OSS / framework / architecture knowledge into
+  Ghost Research, Future Candidate, GG validation, Evidence, Platform Candidate,
+  ADR, and GDS Standard flows without authorizing implementation or code
+  copying.
 - `knowledge_promotion_engine.md`: architecture foundation for detecting,
   classifying, deduplicating, recommending, approving, carrying forward,
   validating, promoting, and applying knowledge candidates without automatic

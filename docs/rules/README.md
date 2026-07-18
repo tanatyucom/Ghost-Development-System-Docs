@@ -21,6 +21,8 @@ Completion Checklist, Completion Report, Hotfix Policy, Beginner & Future Self T
 Migration First, PIP Case Knowledge Base, and Roadmap2 Knowledge Salvage. Concept Promotion is
 handled as part of PIP Case Knowledge Base. Concept ID Naming is the standard
 for assigning stable Concept IDs and keeping the Concept Index traceable.
+Ghost Research Rules define external-knowledge intake, source attribution,
+idea-level Adoption Decision, validation gate, and OSS copying boundaries.
 Platform Component Rules define component classification, naming,
 Discoverability 3 Second Rule, shared library limits, migration criteria, and
 Review Center placement policy.
@@ -107,6 +109,10 @@ promoted.
   define Goal, Scope, Out of Scope, Evidence, Validation, Negative Result
   handling, and Completion Report before research begins. Startup Procedure
   branches here when Research Task Detection is Yes.
+- `ghost_research_rules.md`: rules for Ghost Research as a Knowledge Asset for
+  external-knowledge intake, idea-level Adoption Decisions, source attribution,
+  OSS copying boundary, Future Candidate linkage, GG validation, and promotion
+  gate separation.
 - `conversation_insight_capture_rules.md`: rule for detecting conversation-origin
   design philosophy, operation policy, maintenance policy, migration strategy,
   Command Center concepts, and long-term vision as Human Approval-gated

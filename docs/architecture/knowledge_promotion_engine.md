@@ -73,6 +73,7 @@ Detects candidate knowledge from:
 
 - Q acceptance criteria;
 - Completion Report;
+- Ghost Research Adoption Decisions;
 - changed files;
 - validation results;
 - review findings;
@@ -95,6 +96,7 @@ Classifies each candidate as one of:
 - Workflow candidate;
 - Template candidate;
 - Example candidate;
+- Ghost Research candidate;
 - Checklist candidate;
 - Intent Registry candidate;
 - Quality Gate candidate;
@@ -114,6 +116,7 @@ Checks whether the candidate is already covered by:
 - existing Workflows;
 - existing Templates;
 - existing Knowledge Inventory;
+- existing Ghost Research assets;
 - existing Conversation Insights;
 - existing request / child Q candidates;
 - related Completion Reports.
@@ -263,6 +266,7 @@ intentionally historical evidence.
 ## Related Documents
 
 - `docs/architecture/knowledge_artifact_responsibility_map.md`
+- `docs/architecture/ghost_research_knowledge_asset.md`
 - `docs/architecture/intent_driven_workflow.md`
 - `docs/workflow/knowledge_preservation_gate.md`
 - `docs/workflow/knowledge_carry_forward_workflow.md`

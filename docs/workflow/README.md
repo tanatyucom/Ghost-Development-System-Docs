@@ -107,6 +107,10 @@ gate.
   Observation to Research Mission, Evidence Collection, Validation,
   Completion Report, Knowledge Promotion Review, Human Approval, and
   Repository update.
+- `ghost_research_workflow.md`: external-knowledge intake workflow from
+  External Source to Ghost Research, idea-level Adoption Decision, Future
+  Candidate, GG Validation, Evidence, Platform Candidate, ADR, and GDS Standard
+  without automatic adoption or implementation.
 - `output_policy.md`: chat versus file artifact output decision policy.
 - `q_file_creation_workflow.md`: workflow from idea to Q ID, repository
   context, template completion, Task Artifact Workspace save, and approval

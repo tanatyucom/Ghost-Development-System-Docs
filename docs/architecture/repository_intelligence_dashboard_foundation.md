@@ -84,6 +84,8 @@ Purpose:
 
 Canonical sources:
 
+- `docs/research/research_registry.md`
+- `docs/architecture/ghost_research_knowledge_asset.md`
 - `docs/architecture/platform_standard_registry.md`
 - `docs/architecture/platform_discoverability_and_component_standard.md`
 - `docs/architecture/plugin_architecture_standard.md`
