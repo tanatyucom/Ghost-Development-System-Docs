@@ -33,6 +33,7 @@ Rules follow these principles:
 - Project First Principle.
 - Japanese First.
 - Evidence First.
+- Authority-Driven Responsibility.
 - Knowledge Before Automation.
 - Knowledge Poka-Yoke / Design For Forgetfulness.
 - Context Recovery Principle.
@@ -86,6 +87,7 @@ own files.
 - `core_principles.md`
 - `utf8_read_rules.md`
 - `encoding_regression_prevention_rules.md`
+- `responsibility_assignment_rules.md`
 - `external_source_access_rules.md`
 - `ai_startup_procedure_rules.md`
 - `project_rules.md`

@@ -8,6 +8,64 @@ System.
 Clear boundaries help humans and AI decide where a feature, document, workflow,
 or future candidate belongs.
 
+## Authority-Driven Responsibility
+
+GDS assigns responsibility by authority, not by feature description.
+
+Canonical statement:
+
+```text
+責務は機能ではなく、権限で決める。
+```
+
+Before assigning a new responsibility, confirm:
+
+- whether the operation changes state;
+- whether it has an external side effect;
+- which actor has execution authority;
+- whether Human Approval is required;
+- which actor displays the Approval Request;
+- which actor generates Execution Evidence;
+- whether Review Actor and Execution Actor are mixed.
+
+If authority, approval target, or evidence owner is unclear, use SCW and do not
+execute.
+
+Related principle:
+
+```text
+docs/architecture/authority_driven_responsibility_principle.md
+```
+
+## Authority-Driven Responsibility
+
+GDS assigns responsibility by authority, not by feature description.
+
+Canonical statement:
+
+```text
+責務は機能ではなく、権限で決める。
+```
+
+Before assigning a new responsibility, confirm:
+
+- whether the operation changes state;
+- whether it has an external side effect;
+- which actor has execution authority;
+- whether Human Approval is required;
+- which actor displays the Approval Request;
+- which actor generates Execution Evidence;
+- whether Review Actor and Execution Actor are mixed.
+
+If authority, approval target, or evidence owner is unclear, use SCW and do not
+execute.
+
+Related principle:
+
+```text
+docs/architecture/authority_driven_responsibility_principle.md
+```
+
 ## DevelopmentSystem
 
 DevelopmentSystem owns archive-wide development infrastructure.

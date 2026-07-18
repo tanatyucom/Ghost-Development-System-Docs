@@ -95,6 +95,7 @@ The router chooses a target adapter only after:
 
 ```text
 Human Approval
+  -> Authority-Driven Responsibility Check
   -> Actor Capability
   -> Tool Availability
   -> Repository Boundary
@@ -116,6 +117,16 @@ Human Approval
 | `AUTHORITY_UNKNOWN` | Authority cannot be proven; execution must stop. |
 
 `AUTHORITY_UNKNOWN` is not safe to execute.
+
+Authority-driven responsibility check:
+
+```text
+責務は機能ではなく、権限で決める。
+```
+
+If the selected actor can explain or review an operation but cannot execute or
+delegate it through a governed adapter, it must not own the Approval Request or
+Execution Evidence for that operation.
 
 ## Runtime Queue State Mapping
 

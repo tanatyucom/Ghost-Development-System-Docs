@@ -17,6 +17,10 @@ runtime behavior.
 - `adapter_only_execution_policy_review.md`: candidate-only review of
   Adapter-Only Execution for future Engine / Center production boundaries. It
   does not adopt enforcement or implementation.
+- `authority_driven_responsibility_principle.md`: architecture principle for
+  assigning responsibility by authority rather than feature description,
+  separating Review Actor, Execution Actor, Human Authority, Approval Request,
+  and Execution Evidence.
 - `canonical_rule_gap_resolution.md`: decision boundary for resolving
   implementation-repository style findings as repository remediation, Local
   Rule candidates, Canonical Rule gaps, Temporary Assembly candidates, or Human

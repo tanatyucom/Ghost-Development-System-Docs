@@ -66,15 +66,15 @@ Human approval may be expressed naturally. The system must still separate:
 ## Responsibility Boundary
 
 ```text
-Codex
+Review Actor
+  -> Completion Review / Independent Review / Execution Guidance
+Execution Actor
   -> Repository Recommendation
-ChatGPT
-  -> Workflow Recommendation / Completion Review
+  -> Workflow Recommendation
+  -> Approval Request
 Human
   -> Final Approval
-ChatGPT
-  -> Human-facing Execution Instruction
-Codex / Adapter
+Execution Actor / Adapter
   -> Governed Execution
 Execution Evidence
   -> Execution Proof
@@ -83,15 +83,26 @@ Execution Evidence
 Codex and ChatGPT provide recommendations only. Human approval owns the final
 decision to execute a visible Approval Unit.
 
-Codex Repository Recommendation is the repository-state and evidence-backed
-input to ChatGPT Completion Review / Workflow Recommendation. It may recommend
-Commit, Push, or Tag as `Recommended`, `Hold`, or `Not Applicable`, but it must
-not use `Approved` and must not ask the human for approval.
+Authority-Driven Responsibility Principle applies:
 
-After Human Final Approval, ChatGPT owns the coordination output that tells the
-human what was approved and what to request from the governed execution actor.
-This output is Execution Instruction. It is not a new Approval Request, it is
-not a direct ChatGPT-to-Codex command, and it is not execution evidence.
+```text
+責務は機能ではなく、権限で決める。
+```
+
+Approval Request belongs to the Execution Actor or governed execution surface
+that can execute or delegate the approved operation. A Review Actor may provide
+Completion Review, Independent Review, risk identification, and execution
+guidance, but it must not request execution permission for an operation it
+cannot execute or delegate through a governed path.
+
+Repository Recommendation is the repository-state and evidence-backed input to
+Workflow Recommendation and optional Completion Review / Independent Review. It
+may recommend Commit, Push, or Tag as `Recommended`, `Hold`, or
+`Not Applicable`, but it must not use `Approved`.
+
+After Human Final Approval, the next output is Execution Instruction for the
+approved units. It is not a new Approval Request, it is not a direct
+ChatGPT-to-Codex command, and it is not execution evidence.
 
 ## Required Flow
 
@@ -148,12 +159,14 @@ execution authority, scope lock, SCW, or evidence requirements.
 
 ## Workflow Recommendation
 
-Workflow Recommendation is produced by ChatGPT after Completion Review. It is a
-human-facing recommendation and next-step surface.
+Workflow Recommendation is produced by the Execution Actor as a human-facing
+recommendation and next-step surface when a governed repository operation is
+being recommended. ChatGPT or another Review Actor may review it through
+Completion Review or Independent Review.
 
 It must not be treated as:
 
-- Codex Repository Recommendation;
+- Repository Recommendation;
 - Human Final Approval;
 - Execution Instruction after approval;
 - repository action execution;

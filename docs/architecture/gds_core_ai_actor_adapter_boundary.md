@@ -75,7 +75,8 @@ AI may:
 
 - interpret natural language;
 - explain proposed actions;
-- create Approval Requests;
+- create Approval Requests only when it is the execution-capable actor or is
+  preparing a governed delegation through GDS policy;
 - resolve or propose Intent candidates;
 - prepare Execution Requests;
 - delegate to available tools;
@@ -88,8 +89,19 @@ AI must not:
 - bypass GDS policy;
 - treat its own natural-language assertion as Execution Evidence;
 - assume tool availability or authority;
+- request execution permission for an operation it cannot execute or delegate
+  through a governed path;
 - mark an operation Completed without evidence;
 - bind GDS to one AI vendor.
+
+Authority-driven rule:
+
+```text
+責務は機能ではなく、権限で決める。
+```
+
+Responsibility must follow execution authority, delegation authority, or
+governance authority, not the actor's ability to explain a feature.
 
 ## Adapter Responsibilities
 

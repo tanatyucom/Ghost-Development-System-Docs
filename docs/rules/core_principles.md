@@ -114,6 +114,31 @@ investigate the conflict. Do not treat either side as automatically correct.
 Use pipeline trace, intermediate artifacts, and first broken step analysis to
 find why the evidence disagrees.
 
+### Authority-Driven Responsibility
+
+Responsibility should be assigned by authority, not by feature name or
+explanation capability.
+
+Canonical Japanese statement:
+
+```text
+責務は機能ではなく、権限で決める。
+```
+
+An actor that can review or explain an operation does not automatically own the
+right to request execution permission, mutate repository state, or claim
+execution evidence. Approval Request for a mutation belongs to the
+execution-capable actor or governed execution surface.
+
+When authority, approval target, or evidence ownership is unclear, use SCW.
+
+Details follow:
+
+```text
+docs/architecture/authority_driven_responsibility_principle.md
+docs/rules/responsibility_assignment_rules.md
+```
+
 ### Knowledge Before Automation
 
 When automation fails, first ask whether the system lacks reusable knowledge

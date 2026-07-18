@@ -64,6 +64,14 @@
 - Project First Principle が守られている。
 - Japanese First が守られている。
 - Human Approval が必要な事項を AI が勝手に昇格していない。
+- Authority-Driven Responsibility Principle が必要な設計で確認されている。
+- Responsibility と Authority が一致している。
+- Actor が実行不可能な操作の許可を求めていない。
+- Review Actor が Execution Actor を代行していない。
+- Human Approval の対象 Action が明確である。
+- Approval Unit と Execution Unit が一致している。
+- 実行後 Evidence の生成主体が明確である。
+- 権限不明時は SCW に従い停止する。
 - Future Candidates が approved scope と混同されていない。
 - Purpose-Oriented Naming が使われている。
 

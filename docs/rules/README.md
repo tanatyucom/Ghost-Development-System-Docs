@@ -12,6 +12,7 @@ Core rules include Evidence First, Purpose-Oriented Naming, Human Approval Gate,
 Knowledge Before Automation, Knowledge Poka-Yoke / Design For Forgetfulness,
 Context Recovery Principle,
 UTF-8 Read Rule, Encoding Regression Prevention,
+Authority-Driven Responsibility,
 Capability Disclosure,
 External Source Access / AI Repository Knowledge Access, AI Startup Procedure, Startup Checklist,
 Startup Completion Evidence / Gate,
@@ -56,6 +57,9 @@ promoted.
 - `encoding_regression_prevention_rules.md`: commit-gate rule for preventing
   new mojibake, replacement characters, invalid UTF-8, and broad Markdown
   rewrite regressions.
+- `responsibility_assignment_rules.md`: rule for assigning responsibility by
+  execution / delegation / governance authority, separating Review Actor,
+  Execution Actor, Human Authority, Approval Request, and Execution Evidence.
 - `external_source_access_rules.md`: Raw URL Index and external public
   repository access rule for ChatGPT, Codex, and other AI systems.
 - `capability_disclosure_rule.md`: rule requiring AI to verify and disclose

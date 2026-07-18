@@ -24,6 +24,8 @@ Reference points:
   `docs/architecture/platform_candidate_workspace.md`
 - Adapter-Only Execution Policy Review:
   `docs/architecture/adapter_only_execution_policy_review.md`
+- Authority-Driven Responsibility Principle:
+  `docs/architecture/authority_driven_responsibility_principle.md`
 - North Star:
   `docs/philosophy/north_star.md`
 - Experience Layer:
@@ -36,6 +38,8 @@ Reference points:
   `docs/architecture/approval_runtime_state_machine.md`
 - Approval Request Rules:
   `docs/rules/approval_request_rules.md`
+- Responsibility Assignment Rules:
+  `docs/rules/responsibility_assignment_rules.md`
 - Approval Request Block Template:
   `templates/approval_request_block_template.md`
 - Repository Recommendation Template:
