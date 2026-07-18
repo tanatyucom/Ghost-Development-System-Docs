@@ -244,6 +244,11 @@ Core boundary:
 Intent -> Recommendation -> Pending Action -> Human Approval -> Action
 ```
 
+Command Center may use this boundary as an AI Project Manager surface for
+current priority, workflow progression, approval state, deferred items, next Q
+recommendation, and handoff. It does not replace Bootstrap, Startup, Human
+Approval, Codex execution, or Execution Adapters.
+
 Recommendation is not Action. Short approval phrases approve only the latest
 explicit Pending Action when repository, operation, scope, diff, and state are
 still unambiguous. Otherwise, apply SCW.

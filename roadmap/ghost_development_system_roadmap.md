@@ -132,7 +132,10 @@ remaining issues, and recommended next work.
   capability for Repository Center, Approval Center, Evidence Center,
   Notification Center, Intent Engine, Decision Engine, Runtime Engine,
   Execution Engine, and governed Execution Adapters. It is not merely a GUI or
-  Auto Q Generator.
+  Auto Q Generator. It is also an AI Project Manager candidate that can manage
+  derived working context, current priority, workflow progression, approval
+  state, deferred items, handoff, and next Q recommendations without owning
+  repository truth, Human Approval, or execution.
 - Current AI Collaboration Platform Direction: ChatGPT and future AI surfaces
   are remote conversational frontends or exchangeable actors. The repository
   remains the Single Source of Truth, and GDS-owned runtime state, approval,
@@ -439,6 +442,13 @@ Command Center は、単独の Auto Q Generator ではありません。Command 
 Repository Orchestrator として、GDS repository 全体を読み取り、状態を整理し、
 人間が判断しやすい draft artifact を生成する Platform 中核です。
 
+Command Center は将来的に AI Project Manager として扱います。これは単なる
+Dashboardではなく、Repository Context、Current Priority、Current Focus、
+Deferred Items、Repository Health、Completion Review、Approval Request、
+Workflow progression、Current Mission、Information Package、Repository
+Intelligence、Next Q、Handoff を整理し、人間が次の判断をしやすくする
+coordination capability です。
+
 Architecture direction:
 
 ```text
@@ -474,6 +484,26 @@ Core responsibilities:
 - Repository Health:
   repository quality、AI Repository Index、registry consistency、README routes、
   UTF-8、diff check などの状態を判断材料として扱う。
+- AI Project Manager:
+  BootstrapとStartupで同期されたrepository contextを使い、current priority、
+  current focus、deferred items、workflow state、approval state、completion
+  review status、handoff、next Q candidateを整理する。
+
+Phase 1 boundary:
+
+- Current Mission / Information Package / Repository Health / Completion
+  Review / Approval Request / Deferred Items / Next Q recommendationを
+  evidence-backedに表示・整理する。
+- Command CenterはWorking Contextを組み立てて表示できるが、canonical source of
+  truthにはならない。
+- Current Priorityの自動生成はcandidateに留め、Human Reviewなしにpriorityやscopeを
+  変更しない。
+
+Future boundary:
+
+- Repository Intelligence integration、priority scoring、Approval Center、
+  Execution Queue visualization、Dashboard / UI、runtime adapter orchestrationは
+  別QとHuman Approval Gateを必要とする。
 
 Auto Q Generation:
 
@@ -487,6 +517,8 @@ Guard:
 - Command Center は Human Approval を置き換えない。
 - Command Center は repository source of truth を置き換えない。
 - Command Center は GameGhost など field project の runtime 責務を所有しない。
+- Command Center は Bootstrap または Startup を置き換えない。
+- Command Center は Codex や Execution Adapter の実行責務を所有しない。
 - Command Center 実装、automation、UI、server は別 Q と Human Approval Gate を
   必要とする。
 

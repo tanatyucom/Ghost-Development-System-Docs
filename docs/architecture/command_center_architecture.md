@@ -11,6 +11,12 @@
 This document defines the architecture boundary for Command Center as a
 Repository Orchestrator.
 
+Command Center also evolves toward an AI Project Manager model. In this model,
+Command Center does not merely display repository state. It coordinates
+repository context, current priority, workflow progression, approval state,
+handoff, and next Q recommendation while preserving Human Approval and
+execution boundaries.
+
 Command Center is not implemented by this document. This specification defines
 responsibilities, non-responsibilities, components, data flow, artifact
 lifecycle, trust boundaries, failure behavior, and integration boundaries so
@@ -20,6 +26,7 @@ ownership, and human approval responsibilities.
 ## Approved Decisions
 
 - Command Center is a Repository Orchestrator, not only an Auto Q Generator.
+- Command Center is an AI Project Manager candidate, not merely a dashboard.
 - Auto Q Generation is one Command Center capability.
 - Information Package is the standard artifact for current repository state.
 - Repository remains the Single Source of Truth.
@@ -30,6 +37,86 @@ ownership, and human approval responsibilities.
   responsibilities.
 - Command Center follows Repository First, Platform First, Template First, and
   Artifact First.
+
+## AI Project Manager Model
+
+Command Center as AI Project Manager means:
+
+```text
+Repository state
+  -> Working context summary
+  -> Current priority / focus
+  -> Workflow state
+  -> Approval state
+  -> Next action candidates
+  -> Human decision surface
+  -> Handoff / execution routing
+```
+
+The model is managerial and coordinative. It does not own canonical truth,
+Human Approval, domain runtime logic, or execution adapter behavior.
+
+### Core Responsibilities
+
+Command Center may coordinate:
+
+- Current Priority.
+- Current Focus.
+- Deferred Items.
+- Repository Health.
+- Completion Review status.
+- Approval Request status.
+- Workflow progression.
+- Current Mission.
+- Information Package awareness.
+- Repository Intelligence integration.
+- Next Q recommendation.
+- Handoff generation.
+
+### Non-Responsibilities
+
+Command Center must not:
+
+- replace Bootstrap as the first-read entry point;
+- replace Startup as repository synchronization;
+- override Startup Completion Evidence;
+- decide Human Approval;
+- execute Codex work directly;
+- mutate repositories without approved execution flow;
+- collapse Execution Adapters into the Command Center;
+- own GameGhost or other field-project runtime state;
+- treat generated priority or recommended next Q as approved work.
+
+## Boundary With Bootstrap / Startup / Human / Codex / Adapters
+
+| Actor / Capability | Owns | Does Not Own |
+| --- | --- | --- |
+| Bootstrap | First-read entry for new AI chats and unclear memory context. | Project management, priority, workflow state, execution. |
+| Startup | Repository synchronization and evidence before governed work. | Ongoing project management or approval decisions. |
+| Command Center | Aggregated working context, priority, status, recommendations, handoff. | Repository truth, Human Approval, execution, domain runtime. |
+| Human | Goal, priority judgment, approval, scope decisions, risk acceptance. | Mechanical repository scanning or evidence aggregation. |
+| Codex | Approved implementation or documentation execution with evidence. | Final approval, long-term project state ownership. |
+| Execution Adapters | Scoped approved operation execution / delegation and evidence. | Project management, approval authority, repository truth. |
+
+### Working Context Ownership
+
+Command Center may assemble and display Working Context, but the canonical
+truth remains in the repository and evidence artifacts.
+
+Working Context is therefore:
+
+```text
+Derived, reviewable, and refreshable.
+```
+
+It is not:
+
+```text
+Canonical source of truth.
+```
+
+When Working Context conflicts with repository sources, Command Center must
+rebuild context from repository evidence or route to SCW.
 
 ## System Context
 
@@ -92,7 +179,70 @@ Approved Artifact / Approved Next Q
 Command Center may prepare artifacts. It must not treat prepared artifacts as
 approved actions.
 
+## AI Project Manager Flow
+
+```text
+AI Bootstrap
+  -> Startup / Repository Context Evidence
+  -> Repository Intelligence / Repository Health
+  -> Information Package / Current Mission
+  -> Command Center Working Context
+  -> Priority / Focus / Deferred Item review
+  -> Workflow / Approval State review
+  -> Next Q / Handoff / Review recommendation
+  -> Human Approval
+  -> Codex / Execution Adapter handoff
+  -> Completion Evidence
+  -> Working Context refresh
+```
+
+Command Center uses Bootstrap and Startup output. It does not replace them.
+
 ## Core Components
+
+## Phase 1 Capability Boundary
+
+Phase 1 should remain architecture / evidence / artifact oriented.
+
+Phase 1 candidates:
+
+- Read repository entry points and AI Repository Index.
+- Consume Startup Completion Evidence and Repository Context Evidence.
+- Display Current Mission and Information Package references.
+- Surface Repository Health and validation status.
+- Show Completion Review and Approval Request status.
+- List Deferred Items and remaining issues from completion reports.
+- Recommend Next Q candidates with evidence paths.
+- Generate handoff drafts from approved templates.
+- Preserve Human Approval boundary and execution actor boundary.
+
+Phase 1 must not implement:
+
+- automatic priority mutation;
+- autonomous Q execution;
+- automatic commit / push / tag;
+- background repository mutation;
+- Execution Adapter implementation;
+- runtime queue execution;
+- GUI / server / database as part of this architecture Q.
+
+## Future Capability Boundary
+
+Future phases may evaluate:
+
+- automatic Repository Intelligence ingestion;
+- Working Context package generation;
+- priority scoring based on roadmap, blockers, and repository health;
+- Approval Center integration;
+- Execution Queue visualization;
+- Command Center package browser;
+- remote conversational frontend integration;
+- dashboard / UI;
+- runtime adapter orchestration;
+- validator-backed context freshness checks.
+
+Each future capability requires separate Q, evidence, and Human Approval before
+implementation.
 
 ### Repository Scanner
 

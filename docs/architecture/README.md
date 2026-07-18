@@ -35,7 +35,9 @@ runtime behavior.
 - `command_center_architecture.md`: Command Center architecture specification
   for Repository Scanner, Information Package Builder, Decision Engine,
   Template Engine, Artifact Pipeline, Human Approval Gate, Repository Health
-  Adapter, Registry Adapter, and Handoff / Completion Adapter.
+  Adapter, Registry Adapter, Handoff / Completion Adapter, and the AI Project
+  Manager model for current priority, workflow progression, approval state,
+  deferred items, next Q recommendation, and handoff coordination.
 - `design_intent_preservation.md`: architecture for preserving why a design
   exists, what experience it should produce, and what must not be lost during
   generation-to-generation or tool-to-tool handoff.
