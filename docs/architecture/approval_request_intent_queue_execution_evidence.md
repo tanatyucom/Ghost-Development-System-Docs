@@ -56,6 +56,7 @@ Human approval may be expressed naturally. The system must still separate:
 - visible selected scope from hidden internal ideas.
 - recommendation from approval.
 - approval from execution proof.
+- approval request from execution instruction.
 
 ## Responsibility Boundary
 
@@ -66,6 +67,8 @@ ChatGPT
   -> Workflow Recommendation / Completion Review
 Human
   -> Final Approval
+ChatGPT
+  -> Execution Instruction
 Codex / Adapter
   -> Governed Execution
 Execution Evidence
@@ -74,6 +77,10 @@ Execution Evidence
 
 Codex and ChatGPT provide recommendations only. Human approval owns the final
 decision to execute a visible Approval Unit.
+
+After Human Final Approval, ChatGPT owns the coordination output that tells the
+governed execution actor what was approved. This output is Execution
+Instruction. It is not a new Approval Request and it is not execution evidence.
 
 ## Required Flow
 
@@ -85,6 +92,7 @@ Review Result
   -> Approval Request
   -> Pending Human Approval
   -> Human Approval
+  -> Execution Instruction
   -> Intent Queue
   -> Execution Authority Check
   -> Execution or Delegation
@@ -181,6 +189,45 @@ Examples:
 
 Each Approval Unit must declare its recommendation source, scope lock,
 execution authority, and required evidence.
+
+## Execution Instruction
+
+Execution Instruction is the post-approval bridge from Human Final Approval to
+governed execution.
+
+It records:
+
+- approved units;
+- held units;
+- execution actor;
+- scope lock;
+- required execution evidence.
+
+It must not:
+
+- ask for the same approval again;
+- expand approval to held units;
+- claim execution happened;
+- replace Codex / Adapter execution evidence.
+
+Valid Commit-only instruction:
+
+```text
+Commit: Approved
+Push: Hold
+Tag: Hold
+
+Commit OKです。
+Codex側でCommitを実行してください。
+
+Execution Evidence Required
+```
+
+Invalid post-approval output:
+
+```text
+コミットしても良いですか？
+```
 
 ## Recommended Follow-up Candidates
 

@@ -29,13 +29,15 @@ It prevents these common mistakes:
 6. Recommended Follow-up Candidates disclosed
 7. Approval Request Block shown
 8. Human response resolved
-9. Intent Queue built
-10. Repository and scope lock confirmed
-11. Execution Authority checked
-12. Operation executed or delegated
-13. Execution Evidence collected
-14. Queue continues or stops
-15. Completion Report records result
+9. Approval state checked
+10. Execution Instruction issued when approval is valid
+11. Intent Queue built
+12. Repository and scope lock confirmed
+13. Execution Authority checked
+14. Operation executed or delegated
+15. Execution Evidence collected
+16. Queue continues or stops
+17. Completion Report records result
 ```
 
 ## Recommendation Confirmation
@@ -99,6 +101,64 @@ STOP -> CALL -> WAIT
 Short approval phrases are valid only when a visible Approval Request Block is
 current, repository state is locked, and the approval maps to exactly one safe
 operation set.
+
+## Post-Approval Execution Instruction
+
+After Human Final Approval is resolved for the current Approval Request, the
+next output is Execution Instruction.
+
+Do not ask the same approval question again.
+
+Approval Request asks:
+
+```text
+コミットしても良いですか？
+```
+
+Execution Instruction instructs:
+
+```text
+Commit OKです。
+Codex側でCommitを実行してください。
+```
+
+Execution Instruction must include:
+
+- approved Approval Units;
+- held Approval Units;
+- execution actor;
+- scope lock;
+- evidence required after execution.
+
+Example after Commit-only approval:
+
+```text
+Commit: Approved
+Push: Hold
+Tag: Hold
+
+Commit OKです。
+Codex側でCommitを実行してください。
+
+Execution Evidence Required
+```
+
+Example after Commit and Push approval:
+
+```text
+Commit: Approved
+Push: Approved
+Tag: Hold
+
+CommitとPushはOKです。
+Codex側でCommitとPushを実行してください。
+
+Execution Evidence Required
+```
+
+If repository state, approval scope, branch, validation, or changed files
+materially changed after approval, do not issue Execution Instruction. Invalidate
+the approval and create a new Approval Request through SCW.
 
 ## Approval Unit Handling
 
@@ -201,6 +261,8 @@ Completion Report must record:
 - queued intents;
 - execution authority;
 - execution evidence;
+- whether post-approval output was Execution Instruction;
+- duplicate approval request check result;
 - unresolved items;
 - recommended next Q;
 - commit / push / tag status.

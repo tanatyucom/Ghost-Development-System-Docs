@@ -96,6 +96,45 @@ If the required Repository Recommendation or Workflow Recommendation is
 missing, do not ask for approval. Use SCW or re-display the block after the
 missing recommendation is available.
 
+## Execution Instruction
+
+Use this section only after valid Human Final Approval.
+
+- Approval State: Approved / Partially Approved / Invalidated / SCW Required
+- Next Output Type: Execution Instruction
+- Duplicate Approval Request: Prohibited
+- Execution Actor: Codex / Adapter / Human
+
+### Approved Units
+
+| Unit | State |
+| --- | --- |
+| Commit | Approved / Hold |
+| Push | Approved / Hold |
+| Tag | Approved / Hold |
+
+### Standard Wording
+
+Commit only:
+
+```text
+Commit OKです。
+Codex側でCommitを実行してください。
+```
+
+Commit and Push:
+
+```text
+CommitとPushはOKです。
+Codex側でCommitとPushを実行してください。
+```
+
+### Execution Evidence Required
+
+- Commit: Commit ID, message, changed file scope, validation summary
+- Push: Remote, branch / ref, push result, pushed commit ID
+- Tag: Tag name, target commit ID, tag push result when requested
+
 ## Interpretation Notice
 
 ```text

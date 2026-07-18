@@ -36,6 +36,13 @@ Artifact Generation / Documentation Update
 - Revision-first policy respected.
 - Human Approval boundary respected.
 - Commit / Push boundary respected.
+- Approval state checked before generating approval or execution wording.
+- If Human Final Approval already exists for the current Approval Request, the
+  response uses Execution Instruction instead of repeating the same Approval
+  Request.
+- Execution Instruction names the execution actor and required Execution
+  Evidence.
+- Unapproved Approval Units remain Hold.
 - Scope creep check completed.
 - Constraint Check still valid.
 - Changed files and verification results are accurately reported.
@@ -66,6 +73,11 @@ Do not deliver a final response if:
 - The response would claim unverified work was verified.
 - The response would imply commit / push was done when it was not.
 - Required Human Approval is missing.
+- The response asks for the same approval again after valid Human Final
+  Approval and no invalidation occurred.
+- Execution Instruction is missing after valid Human Final Approval.
+- Execution Instruction omits actor or evidence requirements.
+- Unapproved Approval Units are promoted to Approved.
 - Repository scope is unclear.
 - The requested output format is not satisfied.
 - A reusable project artifact is returned only as inline text without explicit
@@ -86,6 +98,10 @@ Pre-Response Verification Gate:
 - Reusable artifact delivery:
 - Human Approval boundary:
 - Commit / Push boundary:
+- Approval state:
+- Next output type:
+- Duplicate approval request:
+- Execution instruction evidence:
 - Constraint check:
 - Final response ready:
 ```

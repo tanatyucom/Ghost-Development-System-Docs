@@ -24,6 +24,12 @@
 - Revision-first policy:
 - Human Approval boundary:
 - Commit / Push boundary:
+- Approval State:
+- Next Output Type: Approval Request / Execution Instruction / Completion Confirmation / Other
+- Duplicate Approval Request:
+- Execution actor:
+- Execution Evidence required:
+- Unapproved Approval Units remain Hold:
 - Scope creep check:
 - Constraint Check still valid:
 
