@@ -85,6 +85,11 @@ Completion Report は Context Recovery Principle を支える artifact です。
   - Refresh limitation:
 - Startup completed:
 - Memory Check completed:
+- Memory Capability:
+  - Read: PASS / UNAVAILABLE / UNKNOWN
+  - Write: PASS / UNAVAILABLE / UNKNOWN
+  - Limitation:
+  - Repository-backed alternative:
 - AI Repository Index reviewed:
 - AI Repository Index verified:
 - Current Q / Mission reviewed:

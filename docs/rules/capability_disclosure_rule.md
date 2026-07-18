@@ -36,6 +36,26 @@ AI は必要に応じて次を開示します。
 AI memory や過去チャットを authoritative source として扱いません。
 必要な情報は repository、添付ファイル、明示された会話文脈から確認します。
 
+Memory capability must distinguish read and write capability.
+
+Do not report a single ambiguous `Memory Available` state when memory is
+relevant. Use explicit capability status:
+
+```text
+Memory Capability:
+- Read: PASS / UNAVAILABLE / UNKNOWN
+- Write: PASS / UNAVAILABLE / UNKNOWN
+```
+
+`Read: PASS` means existing memory can be considered as non-authoritative
+context. It does not imply `Write: PASS`.
+
+`Write: PASS` means the current AI surface can create or update memory through
+an available memory mechanism. If the AI can read memory but cannot create new
+memory, report `Write: UNAVAILABLE` and offer repository-backed alternatives
+such as Conversation Insight, Pending Insight, Q artifact, ADR, Rule,
+Architecture, or Roadmap update.
+
 ### Repository
 
 Repository access は実測します。

@@ -70,6 +70,18 @@ service、current chat limitation が不明な場合、AI は計画前に capabi
 
 AI は未検証の状態で `できます` と断定してはいけません。
 
+Memory capability must not be summarized as only `Memory Available`. Startup
+and Capability Verification should distinguish:
+
+```text
+Memory Capability:
+- Read: PASS / UNAVAILABLE / UNKNOWN
+- Write: PASS / UNAVAILABLE / UNKNOWN
+```
+
+Memory Read availability does not imply Memory Write availability. If Write is
+unavailable, use repository-backed artifacts for durable knowledge capture.
+
 Details follow `docs/workflow/capability_verification_first.md` and
 `docs/rules/capability_disclosure_rule.md`.
 
@@ -277,6 +289,9 @@ Startup Checklist の後、AI は確認した source と結果を短く証跡化
 必須証跡:
 
 - Memory Check completed.
+- Memory Capability recorded:
+  - Read: PASS / UNAVAILABLE / UNKNOWN.
+  - Write: PASS / UNAVAILABLE / UNKNOWN.
 - AI Startup Procedure reviewed.
 - AI Repository Index reviewed.
 - Current Mission / Current Q reviewed.

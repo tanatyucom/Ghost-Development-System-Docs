@@ -45,6 +45,7 @@ docs/registries/execution_authority_registry.yaml
 ## Required Verification
 
 - Memory availability.
+- Memory Read / Write capability status.
 - Repository accessibility.
 - Filesystem read / write boundary.
 - Tool availability.
@@ -67,6 +68,17 @@ Capability:
 - Need approval:
 - Alternative workflow:
 ```
+
+Memory capability should be reported explicitly when relevant:
+
+```text
+Memory Capability:
+- Read: PASS / UNAVAILABLE / UNKNOWN
+- Write: PASS / UNAVAILABLE / UNKNOWN
+```
+
+`Read: PASS` does not imply `Write: PASS`. If write is unavailable, use a
+repository-backed artifact workflow for durable knowledge.
 
 ## Decision States
 

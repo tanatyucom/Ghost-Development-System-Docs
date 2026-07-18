@@ -12,6 +12,11 @@
 ## Memory Check
 
 - Prior memory treated as non-authoritative:
+- Memory Capability:
+  - Read: PASS / UNAVAILABLE / UNKNOWN
+  - Write: PASS / UNAVAILABLE / UNKNOWN
+  - Limitation:
+  - Repository-backed alternative:
 - Repository source checked before planning:
 - Assumptions listed:
 - Assumptions confirmed or marked as unconfirmed:
@@ -95,6 +100,8 @@
 | Evidence Item | Source Checked | Result | Gap / Limitation | Action |
 | --- | --- | --- | --- | --- |
 | Memory Check |  |  |  |  |
+| Memory Capability Read |  |  |  |  |
+| Memory Capability Write |  |  |  |  |
 | AI Repository Index |  |  |  |  |
 | Current Mission |  |  |  |  |
 | Template Revision |  |  |  |  |

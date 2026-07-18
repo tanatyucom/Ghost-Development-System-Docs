@@ -210,6 +210,10 @@ root / revision, AI Repository Index state, Current Q / Mission, canonical
 template source, related canonical assets, unresolved assets, conflicts, and
 freshness / invalidation status.
 
+Startup Memory Check must report Memory Capability explicitly as Read / Write /
+Unknown. Do not use ambiguous `Memory Available` wording when memory capability
+matters.
+
 ## Intent-Driven Workflow Index
 
 Intent-Driven Workflow lets AI route natural language user intent such as

@@ -66,7 +66,8 @@ promoted.
   repository access rule for ChatGPT, Codex, and other AI systems.
 - `capability_disclosure_rule.md`: rule requiring AI to verify and disclose
   current capability before planning or execution when capability is asked or
-  uncertain.
+  uncertain. Memory capability must distinguish Read, Write, and Unknown
+  states instead of using ambiguous `Memory Available` wording.
 - `ai_startup_procedure_rules.md`: AI startup reading order and stop
   conditions before implementation, review, documentation update, or Q
   execution begins. Includes Repository-Aware AI Rule, Repository Context

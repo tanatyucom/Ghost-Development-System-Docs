@@ -43,6 +43,34 @@ Capability:
 - Alternative workflow: 公式repository内の既存文書を根拠に作業します。
 ```
 
+## Good Example: Memory Read Available But Write Unavailable
+
+```text
+Memory Capability:
+- Read: PASS
+- Write: UNAVAILABLE
+- Limitation: 既存memoryは参照できますが、このAI surfaceでは新規memory保存はできません。
+- Repository-backed alternative: Conversation Insight / Pending Insight / Q artifact / ADR / Rule / Architectureへ保存候補を作れます。
+```
+
+良い点:
+
+- Memory Read と Memory Write を分けている。
+- `Memory Available` とだけ書いていない。
+- 長期保存の代替手段が repository-backed artifact として示されている。
+
+## Bad Example: Ambiguous Memory Available
+
+```text
+Memory Available
+```
+
+問題:
+
+- 読み取り可能なのか、書き込み可能なのか分からない。
+- Human が `Memoryへ保存できる` と誤解する可能性がある。
+- Repository-backed alternative が示されていない。
+
 ## Good Example: Connected Service
 
 ```text

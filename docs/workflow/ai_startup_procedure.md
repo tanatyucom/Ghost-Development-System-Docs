@@ -67,7 +67,9 @@ Capability Verification First を実行します。
 
 確認すること:
 
-- Memory availability.
+- Memory capability status:
+  - Read: PASS / UNAVAILABLE / UNKNOWN.
+  - Write: PASS / UNAVAILABLE / UNKNOWN.
 - Repository accessibility.
 - Tool availability.
 - Commit / Push authority.
@@ -307,6 +309,9 @@ Startup Checklist の後、作業開始前に Startup Completion Evidence を確
 確認すること:
 
 - Memory Check completed.
+- Memory Capability recorded:
+  - Read: PASS / UNAVAILABLE / UNKNOWN.
+  - Write: PASS / UNAVAILABLE / UNKNOWN.
 - AI Startup Procedure reviewed.
 - AI Repository Index reviewed.
 - Current Mission / Current Q reviewed.

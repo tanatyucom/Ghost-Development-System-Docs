@@ -66,7 +66,9 @@ gate.
   standards without automatic approval or repository mutation.
 - `capability_verification_first.md`: workflow for verifying current AI,
   repository, tool, permission, connected service, and chat capabilities before
-  answering whether a task can be done.
+  answering whether a task can be done. Memory capability should be reported as
+  separate Read / Write / Unknown status rather than an ambiguous availability
+  flag.
 - `ai_daily_operation_cycle.md`: daily operating cycle that connects AI
   Startup Procedure, Q review, implementation, verification, human review,
   Completion Checklist, commit / push, Knowledge Update, Repository Update,

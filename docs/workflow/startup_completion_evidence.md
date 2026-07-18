@@ -19,6 +19,9 @@ Gate を通過できるだけの証跡を残します。
 ## Required Evidence
 
 - Memory Check completed.
+- Memory Capability recorded:
+  - Read: PASS / UNAVAILABLE / UNKNOWN.
+  - Write: PASS / UNAVAILABLE / UNKNOWN.
 - AI Startup Procedure reviewed.
 - AI Repository Index reviewed.
 - Current Mission or Current Q reviewed.
@@ -61,6 +64,30 @@ governs the response or artifact:
 
 AI memory, previous chat summaries, uploaded copies, and remembered template
 shapes are not sufficient repository context evidence by themselves.
+
+## Memory Capability Evidence
+
+Startup evidence must avoid ambiguous wording such as `Memory Available` when
+memory is relevant.
+
+Use:
+
+```text
+Memory Capability:
+- Read: PASS / UNAVAILABLE / UNKNOWN
+- Write: PASS / UNAVAILABLE / UNKNOWN
+- Limitation:
+- Repository-backed alternative:
+```
+
+Memory Read means existing memory may be visible as non-authoritative context.
+Memory Write means the current AI surface can create or update memory. These
+are independent capabilities.
+
+If Memory Write is unavailable, durable knowledge should be captured through
+repository-backed artifacts such as Conversation Insight, Pending Insight, Q
+artifact, ADR, Rule, Architecture, Workflow, or Roadmap update after the
+required Human Approval.
 
 ## Evidence Format
 

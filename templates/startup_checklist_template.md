@@ -135,6 +135,11 @@
 ## Startup Completion Evidence
 
 - Memory Check completed:
+- Memory Capability:
+  - Read: PASS / UNAVAILABLE / UNKNOWN
+  - Write: PASS / UNAVAILABLE / UNKNOWN
+  - Limitation:
+  - Repository-backed alternative:
 - AI Startup Procedure reviewed:
 - Startup Checklist reviewed:
 - AI Repository Index reviewed:
