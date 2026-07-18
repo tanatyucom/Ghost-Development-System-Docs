@@ -35,6 +35,11 @@ runtime behavior.
   specialization that defines Candidate Disclosure, Requested Operations,
   natural-language approval resolution, Intent Queue, Execution Authority,
   Delegation, and Execution Evidence without runtime Git automation.
+- `approval_runtime_state_machine.md`: canonical runtime specification for
+  Approval Request, Approval Unit, Human Approval, Execution Instruction,
+  Action Execution, Execution Evidence, valid / invalid transitions,
+  invalidation, persistence, audit events, schema direction, and conceptual API
+  boundaries without implementing runtime code.
 - `runtime_intent_queue_resolver.md`: documentation-level Runtime Intent Queue
   Resolver foundation for resolving approval phrases into visible execution
   queue state, execution authority, delegation, evidence reconciliation,

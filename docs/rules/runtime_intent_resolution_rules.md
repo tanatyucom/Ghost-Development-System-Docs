@@ -9,6 +9,12 @@
 These rules define how GDS resolves approval phrases into an Intent Queue and
 Execution Queue after Candidate Disclosure.
 
+Approval Request and Approval Unit lifecycle states are defined by:
+
+```text
+docs/architecture/approval_runtime_state_machine.md
+```
+
 ## Single Source Rule
 
 For `GDS-INTENT-QUEUE-RUNTIME-001`, v1.1 supersedes v1.0.
@@ -20,6 +26,7 @@ Use v1.1 as the only review source for Runtime Intent Queue work.
 `お願いします`:
 
 - requires one active Approval Request;
+- requires the active request to be current and unambiguous;
 - selects Requested Operations only;
 - does not select Recommended Follow-up Candidates.
 

@@ -48,6 +48,7 @@ Applies to:
 - Repository Quality audit and gate status.
 - Command Center recommendation and artifact pipeline routing.
 - Completion Review.
+- Approval Runtime state transitions and execution evidence binding.
 - Knowledge Promotion candidate review.
 - Future runtime preflight checks.
 
@@ -92,7 +93,7 @@ compatible.
 | Field | Required | Purpose |
 | --- | --- | --- |
 | `evidence_id` | Yes | Stable identifier for the evidence record. |
-| `evidence_type` | Yes | Type such as `startup_gate`, `repository_quality`, `command_center_decision`, `completion_review`, `knowledge_promotion`. |
+| `evidence_type` | Yes | Type such as `startup_gate`, `repository_quality`, `command_center_decision`, `completion_review`, `approval_runtime`, `knowledge_promotion`. |
 | `producer` | Yes | Component or workflow that produced the evidence. |
 | `consumer` | Yes | Component, workflow, report, or human review that consumes it. |
 | `source_request` | Yes | Q, user request, pending action, or trigger. |

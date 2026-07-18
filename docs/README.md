@@ -32,6 +32,8 @@ Reference points:
   `docs/architecture/design_intent_preservation.md`
 - Approval Request / Intent Queue / Execution Evidence:
   `docs/architecture/approval_request_intent_queue_execution_evidence.md`
+- Approval Runtime State Machine:
+  `docs/architecture/approval_runtime_state_machine.md`
 - Approval Request Rules:
   `docs/rules/approval_request_rules.md`
 - Approval Request Block Template:

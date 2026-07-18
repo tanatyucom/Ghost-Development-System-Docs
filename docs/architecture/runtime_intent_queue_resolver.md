@@ -17,6 +17,7 @@ automatic Git execution, commit, push, tag, or GameGhost changes.
 ## Parent Architecture
 
 - `docs/architecture/approval_request_intent_queue_execution_evidence.md`
+- `docs/architecture/approval_runtime_state_machine.md`
 - `docs/architecture/platform_execution_evidence_contract.md`
 - `docs/architecture/completion_review_execution_evidence_specialization.md`
 - `docs/architecture/intent_registry_and_pending_action_contract.md`
@@ -59,6 +60,7 @@ Runtime Intent Queue Resolver owns:
 It does not own:
 
 - human approval itself;
+- canonical Approval Request / Approval Unit state machine definitions;
 - arbitrary shell execution;
 - Git mutation;
 - MCP implementation;

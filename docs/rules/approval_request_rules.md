@@ -10,6 +10,12 @@ These rules define how GDS handles Approval Request, Pending Human Approval,
 bulk approval, chained natural-language intent, delegation, and execution
 evidence.
 
+Canonical runtime state transitions are specified in:
+
+```text
+docs/architecture/approval_runtime_state_machine.md
+```
+
 ## Core Rule
 
 Approval is not execution.
@@ -17,6 +23,10 @@ Approval is not execution.
 Execution is not complete without evidence.
 
 Recommendation is not approval.
+
+Approval is a governed state transition. Conversational wording alone does not
+create approval unless it binds to a current, visible, unambiguous Approval
+Request and Approval Unit.
 
 Codex and ChatGPT provide recommendations only. Human remains the final
 approval authority.

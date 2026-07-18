@@ -27,6 +27,7 @@ docs/architecture/platform_execution_evidence_contract.md
 Related specializations:
 
 ```text
+docs/architecture/approval_runtime_state_machine.md
 docs/architecture/completion_review_execution_evidence_specialization.md
 docs/architecture/intent_registry_and_pending_action_contract.md
 docs/architecture/experience_layer.md
@@ -34,6 +35,10 @@ docs/architecture/experience_layer.md
 
 Approval Request Evidence must extend the parent contract. It must not create a
 competing evidence parent.
+
+Runtime state transitions for Approval Request, Approval Unit, Human Approval,
+Execution Instruction, Action Execution, and Execution Evidence are specified
+by `docs/architecture/approval_runtime_state_machine.md`.
 
 ## North Star
 

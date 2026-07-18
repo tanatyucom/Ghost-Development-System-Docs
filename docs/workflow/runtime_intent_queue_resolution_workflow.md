@@ -10,6 +10,12 @@ This workflow describes how GDS resolves approval phrases into a visible
 execution queue and keeps approval, delegation, execution, evidence, and
 deliverables separate.
 
+The canonical Approval Request and Approval Unit state machine is specified in:
+
+```text
+docs/architecture/approval_runtime_state_machine.md
+```
+
 ## Flow
 
 ```text
@@ -63,6 +69,10 @@ Do not hide selectable follow-up candidates and later treat them as approved.
 | `これ全てお願いします Tagだけ除外` | All visible selectable items except Tag. |
 
 If the active Approval Request is missing, stale, or ambiguous, use SCW.
+
+If the active Approval Request is expired, invalidated, superseded, or attached
+to a changed repository fingerprint, do not bind the human phrase to execution.
+Use SCW or re-review.
 
 ## Execution Queue Step
 

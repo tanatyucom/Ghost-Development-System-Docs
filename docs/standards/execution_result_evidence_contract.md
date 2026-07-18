@@ -9,6 +9,12 @@
 Execution Result / Evidence Contract defines how an adapter reports execution,
 delegation, failure, partial success, or unknown state back to Runtime Queue.
 
+Approval Runtime binds execution evidence to Approval Units as specified in:
+
+```text
+docs/architecture/approval_runtime_state_machine.md
+```
+
 ## Minimal Shape
 
 ```yaml
@@ -49,6 +55,10 @@ execution_result:
 - `SCW_REQUIRED`
 
 `SUCCEEDED` is not enough for `COMPLETED` if required evidence is missing.
+
+Execution evidence for one Approval Unit must not complete another Approval
+Unit. For example, Commit SHA evidence completes Commit only; it does not
+complete Push or Tag.
 
 ## Evidence Requirements
 

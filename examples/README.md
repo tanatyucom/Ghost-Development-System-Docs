@@ -27,6 +27,11 @@ reports, and documentation requests can start from a clear reference.
   mode, missing pending request, independent approval units, stale state, mixed
   scope, audience wording, duplicate approval prompt, tag independence, and
   UTF-8 display false positives.
+- `approval_runtime_state_machine_examples.md`: validation examples for
+  Approval Runtime state transitions, human approval binding, repository state
+  invalidation, independent approval units, execution evidence binding,
+  duplicate execution prevention, unknown execution handling, supersession, and
+  UTF-8 display checks.
 - `improvement_review.md`: example Improvement Review section.
 - `purpose_oriented_naming.md`: before and after examples for
   purpose-oriented naming.
@@ -167,6 +172,10 @@ what a complete, well-scoped document should feel like.
 - Use `workflow_recommendation_examples.md` when ChatGPT needs to convert
   Completion Review and Codex Repository Recommendation into a human-facing
   Workflow Recommendation or Execution Instruction.
+- Use `approval_runtime_state_machine_examples.md` when checking Approval
+  Request / Approval Unit lifecycle behavior, generic approval wording,
+  Commit / Push / Tag independence, stale approval handling, duplicate
+  execution prevention, and evidence-to-unit binding.
 - Use `improvement_review.md` when you need to separate near-term recommended
   improvements from future candidates.
 - Use `purpose_oriented_naming.md` when renaming roadmap items or public
