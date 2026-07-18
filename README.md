@@ -559,14 +559,18 @@ Start from:
 - [`docs/workflow/conversation_insight_capture_workflow.md`](docs/workflow/conversation_insight_capture_workflow.md)
 - [`docs/rules/pending_conversation_insight_review_rules.md`](docs/rules/pending_conversation_insight_review_rules.md)
 - [`docs/workflow/pending_conversation_insight_review_workflow.md`](docs/workflow/pending_conversation_insight_review_workflow.md)
+- [`docs/rules/memory_candidate_rules.md`](docs/rules/memory_candidate_rules.md)
+- [`docs/workflow/memory_candidate_workflow.md`](docs/workflow/memory_candidate_workflow.md)
 - [`docs/knowledge/conversation_insights/README.md`](docs/knowledge/conversation_insights/README.md)
 - [`docs/knowledge/conversation_insights/pending/README.md`](docs/knowledge/conversation_insights/pending/README.md)
+- [`docs/knowledge/memory_candidates/README.md`](docs/knowledge/memory_candidates/README.md)
 - [`docs/knowledge/conversation_insights/CI-00001_knowledge_mining_from_casual_conversation.md`](docs/knowledge/conversation_insights/CI-00001_knowledge_mining_from_casual_conversation.md)
 - [`docs/knowledge/conversation_insights/CI-00002_design_conversation_mode.md`](docs/knowledge/conversation_insights/CI-00002_design_conversation_mode.md)
 - [`docs/knowledge/conversation_insights/CI-00003_gameghost_domain_purification_and_animeghost_bootstrap_strategy.md`](docs/knowledge/conversation_insights/CI-00003_gameghost_domain_purification_and_animeghost_bootstrap_strategy.md)
 - [`docs/knowledge/conversation_insights/CI-00004_encoding_regression_prevention_as_poka_yoke.md`](docs/knowledge/conversation_insights/CI-00004_encoding_regression_prevention_as_poka_yoke.md)
 - [`templates/conversation_insight_template.md`](templates/conversation_insight_template.md)
 - [`templates/pending_conversation_insight_template.md`](templates/pending_conversation_insight_template.md)
+- [`templates/memory_candidate_template.md`](templates/memory_candidate_template.md)
 - [`examples/conversation_insight_examples.md`](examples/conversation_insight_examples.md)
 - [`examples/pending_conversation_insight_examples.md`](examples/pending_conversation_insight_examples.md)
 
@@ -575,6 +579,7 @@ Start from:
 ```text
 Conversation
   -> Conversation Insight Candidate
+  -> Memory Candidate, when destination is not yet decided
   -> Pending Insight, when immediate decision should be deferred
   -> Human Approval To Draft
   -> Conversation Insight Artifact
@@ -593,6 +598,11 @@ AI Startup Procedure と Startup Checklist では、Conversation Insight Detecti
 
 Pending Insight は、雑談中、飲酒中、疲労時など即時判断を避けたい候補を
 翌日以降のHuman Reviewへ回す一時Queueです。Pending状態ではCodex実行しません。
+
+Memory Candidate は、Memory、Q、Repository Knowledge、Conversation Insightの
+どこへ進めるか未確定だが失うと困る会話由来Knowledgeを一時的に保持する
+GDS Knowledge Inboxです。MCはCanonical Knowledgeではなく、実装、Commit、
+Promotionの直接根拠には使いません。
 
 ## GDS Health
 

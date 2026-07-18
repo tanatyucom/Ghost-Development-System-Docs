@@ -18,7 +18,7 @@ External Source Access / AI Repository Knowledge Access, AI Startup Procedure, S
 Startup Completion Evidence / Gate,
 Repository Root Validation, AI Proactive Proposal,
 Pre-Response Verification Gate,
-Completion Checklist, Completion Report, Hotfix Policy, Beginner & Future Self Test, Research Mission, Conversation Insight Capture, Pending Conversation Insight Review, Artifact First, Artifact Creation Startup Enforcement, Audit Before Repair, Debug Artifact Review, Debug Escalation Ladder,
+Completion Checklist, Completion Report, Hotfix Policy, Beginner & Future Self Test, Research Mission, Conversation Insight Capture, Pending Conversation Insight Review, Memory Candidate, Artifact First, Artifact Creation Startup Enforcement, Audit Before Repair, Debug Artifact Review, Debug Escalation Ladder,
 Migration First, PIP Case Knowledge Base, and Roadmap2 Knowledge Salvage. Concept Promotion is
 handled as part of PIP Case Knowledge Base. Concept ID Naming is the standard
 for assigning stable Concept IDs and keeping the Concept Index traceable.
@@ -39,6 +39,9 @@ and repository quality audit aligned after documentation changes.
 Pending Conversation Insight Review Rules define the temporary queue between
 Conversation Insight Candidate and formal registration when next-day or
 next-chat Human Review is safer than immediate Q化 or Codex execution.
+Memory Candidate Rules define the GDS Knowledge Inbox for conversation-born
+knowledge that may be lost before Memory, Q, or Repository Knowledge
+registration. MC is temporary and is not Canonical Knowledge.
 Persistent Collaboration, Platform First, Repository First, Download First,
 Rule Priority, Command Rule, Review Rule, Completion Report First, AI
 Cognitive Load Reduction, and Platform Philosophy are defined in
@@ -129,6 +132,8 @@ promoted.
   conversation-origin candidates, reviewing them at Startup / Daily Knowledge
   Review, blocking Codex execution while pending, and confirming cleanup after
   reflection.
+- `memory_candidate_rules.md`: rule for capturing Memory Candidates as a
+  temporary Knowledge Inbox before Memory, Q, or Repository registration.
 - `artifact_first_rules.md`: file generation rules for reusable Q files,
   design documents, AI requests, roadmap proposals, and long reviews.
 - `q_file_artifact_standard.md`: Task Artifact Workspace, save location,

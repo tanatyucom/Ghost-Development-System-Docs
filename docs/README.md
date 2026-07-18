@@ -795,6 +795,8 @@ Reference points:
   `docs/architecture/command_center_architecture.md`
 - Conversation Insights:
   `docs/knowledge/conversation_insights/README.md`
+- Memory Candidates:
+  `docs/knowledge/memory_candidates/README.md`
 - Pending Conversation Insights:
   `docs/knowledge/conversation_insights/pending/README.md`
 - AI Proactive Proposal:
@@ -872,6 +874,8 @@ Reference points:
   `docs/workflow/pending_conversation_insight_review_workflow.md`
 - Storage:
   `docs/knowledge/conversation_insights/README.md`
+- Memory Candidate Inbox:
+  `docs/knowledge/memory_candidates/README.md`
 - Pending Queue:
   `docs/knowledge/conversation_insights/pending/README.md`
 - Initial Approved Insights:
@@ -886,6 +890,8 @@ Reference points:
   `templates/conversation_insight_template.md`
 - Pending Template:
   `templates/pending_conversation_insight_template.md`
+- Memory Candidate Template:
+  `templates/memory_candidate_template.md`
 - Examples:
   `examples/conversation_insight_examples.md`
 - Pending Examples:
@@ -898,6 +904,7 @@ Core flow:
 ```text
 Conversation
   -> Conversation Insight Candidate
+  -> Memory Candidate, when destination is not yet decided
   -> Pending Insight, when immediate decision should be deferred
   -> Human Approval To Draft
   -> Conversation Insight Artifact
@@ -917,6 +924,36 @@ Startup integration:
   auto-save, no full chat capture, and Human Approval To Draft.
 - Pending Insight Review confirms next-day / next-chat candidates, Human Review
   decision, Codex execution restriction, and cleanup confirmation.
+
+## Memory Candidate Index
+
+Memory Candidate は、Memory、Q、Repository Knowledge、Conversation Insightの
+どこへ進めるか未確定だが、失うと困る会話由来Knowledgeを一時的に保持する
+GDS Knowledge Inboxです。
+
+Reference points:
+
+- Rule:
+  `docs/rules/memory_candidate_rules.md`
+- Workflow:
+  `docs/workflow/memory_candidate_workflow.md`
+- Template:
+  `templates/memory_candidate_template.md`
+- Storage:
+  `docs/knowledge/memory_candidates/README.md`
+
+Core boundary:
+
+```text
+Conversation
+  -> Memory Candidate
+  -> Memory / Q / Repository Draft / Conversation Insight / Deferred / Reject / Duplicate
+  -> Repository Registered or Closed
+```
+
+MC is not Canonical Knowledge and does not grant implementation, commit, or
+promotion authority. Startup and Completion checks use MC to avoid losing
+important knowledge before a formal destination is chosen.
 
 ## GDS Health Index
 
@@ -1117,6 +1154,9 @@ Reference points:
 - Rules: `docs/rules/startup_checklist_rules.md`
 - Workflow: `docs/workflow/startup_checklist_workflow.md`
 - Template: `templates/startup_checklist_template.md`
+- Memory Candidate Rules: `docs/rules/memory_candidate_rules.md`
+- Memory Candidate Workflow: `docs/workflow/memory_candidate_workflow.md`
+- Memory Candidate Template: `templates/memory_candidate_template.md`
 - Examples: `examples/startup_checklist_examples.md`
 - Rules Index: `docs/rules/rules.md`
 - Workflow Index: `docs/workflow/README.md`
@@ -1152,6 +1192,9 @@ Reference points:
 - Rules: `docs/rules/completion_checklist_rules.md`
 - Workflow: `docs/workflow/completion_checklist_workflow.md`
 - Template: `templates/completion_checklist_template.md`
+- Memory Candidate Rules: `docs/rules/memory_candidate_rules.md`
+- Memory Candidate Workflow: `docs/workflow/memory_candidate_workflow.md`
+- Memory Candidate Template: `templates/memory_candidate_template.md`
 - Examples: `examples/completion_checklist_examples.md`
 - Completion Report Template: `templates/completion_report_template.md`
 - Review Checklist: `templates/review_checklist.md`

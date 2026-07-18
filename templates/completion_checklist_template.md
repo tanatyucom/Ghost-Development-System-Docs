@@ -40,6 +40,11 @@
 - Pending Insights reviewed:
 - Pending Insight Codex execution restriction respected:
 - Pending Insight cleanup needed:
+- End-of-Session Review completed:
+- Lost Context Risk:
+- Memory Candidates reviewed:
+- Memory Candidates captured:
+- MC required before closing:
 
 ## Completion Report v2
 
@@ -109,6 +114,29 @@ Required sections checked:
 - Codex execution blocked while pending:
 - Cleanup confirmation recorded:
 - Related Pending Insight artifacts:
+- Not required reason:
+
+## Memory Candidate / End-of-Session Review
+
+- Review required:
+- Lost Context Risk:
+- Conversation-born knowledge not yet saved:
+- Existing MC duplicate checked:
+- MC created:
+- MC artifact:
+- MC decision:
+  - Save to Memory
+  - Create Q
+  - Create Repository Draft
+  - Register Conversation Insight
+  - Keep Deferred
+  - Reject
+  - Duplicate
+  - Expire
+- Canonical Knowledge separation confirmed:
+- Implementation authority avoided:
+- Commit authority avoided:
+- Next action:
 - Not required reason:
 
 ## GDS Health
@@ -210,6 +238,9 @@ Required sections checked:
 - `templates/completion_report_template.md`
 - `docs/rules/completion_checklist_rules.md`
 - `docs/workflow/completion_checklist_workflow.md`
+- `docs/rules/memory_candidate_rules.md`
+- `docs/workflow/memory_candidate_workflow.md`
+- `templates/memory_candidate_template.md`
 - `docs/ai_repository_index.md`
 - `docs/rules/external_source_access_rules.md`
 - `docs/rules/q_file_naming_rules.md`

@@ -29,6 +29,7 @@ Start
      handoff quality is relevant
   -> Scope / Out of Scope Confirmation
   -> Conversation Insight Detection
+  -> Memory Candidate Review
   -> Pending Insight Review
   -> Knowledge Suggestion Assistant Check
   -> Research Task Detection
@@ -96,6 +97,7 @@ Minimum targets:
 - Current Project Profile。
 - Current Roadmap。
 - Conversation Insights。
+- Memory Candidates。
 - Future Candidates。
 - Research Missions。
 - Improvement Records。
@@ -269,6 +271,34 @@ Promotionには別途reviewと該当workflowが必要です。
 
 判断保留が望ましい候補は Pending Insight として扱い、後日レビューへ回します。
 
+### Memory Candidate Review
+
+Conversation Insight Detection後、会話由来の重要な知見がMemory、Q、Repository
+Knowledgeのどれにもまだ整理されていない場合は、Memory Candidateとして扱うかを
+確認します。
+
+確認する項目:
+
+- Lost Context Risk。
+- Existing MC duplicate。
+- Promotion target候補。
+- Human Approval needed。
+- Deferred Review needed。
+
+分岐:
+
+```text
+Memory Candidate: Not needed
+  -> Continue startup checklist
+
+Memory Candidate: Needed
+  -> Capture as temporary MC
+  -> Decide Memory / Q / Repository Draft / Deferred / Rejected / Duplicate later
+```
+
+MCはCanonical Knowledgeではありません。実装、Commit、Promotionの直接根拠には
+使いません。
+
 ### Pending Insight Review
 
 Startupまたは当日最初の適切なProject interactionで、
@@ -394,6 +424,7 @@ Startup Checklist:
 - Q artifact:
 - Proposal:
 - Conversation Insight:
+- Memory Candidate:
 - Pending Insight Review:
 - Knowledge Suggestions:
 - Commit:
@@ -422,6 +453,7 @@ Checklist 自体が再利用、レビュー、Git 管理対象になる場合は
 - Scope / Out of Scope が確認されている。
 - Research Task Detection が確認されている。
 - Conversation Insight Detection が確認されている。
+- Memory Candidate Review が確認されている。
 - Pending Insight Review が確認されている。
 - Daily Knowledge Source Review が確認されている。
 - Outstanding Review Notification と Related Knowledge Suggestions の要否が確認されている。
@@ -441,13 +473,16 @@ Checklist 自体が再利用、レビュー、Git 管理対象になる場合は
 - `docs/rules/research_mission_rules.md`
 - `docs/rules/conversation_insight_capture_rules.md`
 - `docs/rules/pending_conversation_insight_review_rules.md`
+- `docs/rules/memory_candidate_rules.md`
 - `docs/workflow/research_mission_workflow.md`
 - `docs/workflow/conversation_insight_capture_workflow.md`
 - `docs/workflow/pending_conversation_insight_review_workflow.md`
+- `docs/workflow/memory_candidate_workflow.md`
 - `docs/architecture/context_aware_knowledge_suggestion_assistant.md`
 - `templates/research_mission_template.md`
 - `templates/conversation_insight_template.md`
 - `templates/pending_conversation_insight_template.md`
+- `templates/memory_candidate_template.md`
 - `templates/information_package_template.md`
 - `templates/startup_checklist_template.md`
 - `templates/startup_verification_checklist.md`

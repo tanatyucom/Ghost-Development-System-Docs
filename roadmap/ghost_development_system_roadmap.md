@@ -1169,6 +1169,7 @@ follow-up Q を記録する。
 - Repository Drift Prevention and Re-anchor Workflow.
 - AI Context Synchronization Countermeasures.
 - Startup Execution Context Preservation.
+- Memory Candidate Retrospective.
 - AI instruction map.
 - Generated documentation inventory.
 - Development Knowledge DB.

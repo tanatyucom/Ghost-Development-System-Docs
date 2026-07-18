@@ -77,6 +77,13 @@
 - Conversation Insight duplicate check:
 - Conversation Insight auto-save avoided:
 - Conversation Insight draft approval:
+- Memory Candidate Review checked:
+- Memory Candidate items:
+- Memory Candidate related to current project:
+- Memory Candidate decision:
+- Memory Candidate Deferred Review needed:
+- Lost Context Risk:
+- MC required before session end:
 - Pending Insight candidate:
 - Pending Insight artifact required:
 - Pending Insight Codex execution blocked:
@@ -186,6 +193,7 @@
 - Repository Root Validation:
 - AI Proactive Proposal:
 - Conversation Insight Capture:
+- Memory Candidate:
 - Knowledge Suggestion Assistant:
 - Beginner & Future Self Test:
 - Other:
@@ -200,6 +208,7 @@
 - Evidence Feedback Loop:
 - Knowledge Promotion:
 - Conversation Insight Detection:
+- Memory Candidate Review:
 - Daily Knowledge Source Review:
 - Context-Aware Knowledge Suggestion:
 - Beginner & Future Self Test:
@@ -227,6 +236,7 @@
 - Current Project Profile checked:
 - Current Roadmap checked:
 - Conversation Insights checked:
+- Memory Candidates checked:
 - Pending Decisions checked:
 - Future Candidates checked:
 - Research Missions checked:
@@ -252,6 +262,11 @@
 - Pending Decision review value:
 - Pending Decision recommended action:
 - Pending Decision decision:
+- Memory Candidate Notification needed: Yes / No
+- Memory Candidate items:
+- Memory Candidate review value:
+- Memory Candidate recommended action:
+- Memory Candidate decision:
 - Related Knowledge Suggestions needed: Yes / No
 - Related Knowledge Suggestions:
 - Reviewed / Approved Knowledge re-suggested:
@@ -312,6 +327,30 @@
 - Pending Insight artifact path:
 - Promotion candidate type:
 - Next action:
+
+## Memory Candidate Review
+
+- Memory Candidate Review required: Yes / No
+- Existing MC index checked:
+- MC items found:
+- Lost Context Risk:
+- Destination undecided:
+- Duplicate Knowledge checked:
+- Recommended action:
+  - Save to Memory
+  - Create Q
+  - Create Repository Draft
+  - Register Conversation Insight
+  - Keep Deferred
+  - Reject
+  - Duplicate
+  - Expire
+- Human Approval required:
+- Auto-promotion avoided:
+- Auto-implementation authority avoided:
+- MC artifact required:
+- MC artifact path:
+- Notes:
 
 ## Pending Insight Review
 
@@ -376,12 +415,15 @@
 - `docs/workflow/startup_checklist_workflow.md`
 - `docs/rules/research_mission_rules.md`
 - `docs/rules/conversation_insight_capture_rules.md`
+- `docs/rules/memory_candidate_rules.md`
 - `docs/workflow/research_mission_workflow.md`
 - `docs/workflow/conversation_insight_capture_workflow.md`
+- `docs/workflow/memory_candidate_workflow.md`
 - `docs/architecture/context_aware_knowledge_suggestion_assistant.md`
 - `templates/research_mission_template.md`
 - `templates/conversation_insight_template.md`
 - `templates/pending_conversation_insight_template.md`
+- `templates/memory_candidate_template.md`
 - `templates/information_package_template.md`
 - `docs/README.md`
 - `docs/rules/rules.md`

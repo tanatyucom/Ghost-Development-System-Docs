@@ -52,6 +52,7 @@ Rules follow these principles:
 - Research Mission.
 - Conversation Insight Capture.
 - Pending Conversation Insight Review.
+- Memory Candidate.
 - Artifact First.
 - Q File Artifact Standard.
 - Q File Naming.
@@ -103,6 +104,7 @@ own files.
 - `research_mission_rules.md`
 - `conversation_insight_capture_rules.md`
 - `pending_conversation_insight_review_rules.md`
+- `memory_candidate_rules.md`
 - `artifact_first_rules.md`
 - `q_file_artifact_standard.md`
 - `q_file_naming_rules.md`
@@ -420,6 +422,32 @@ Conversation Insight Candidate
 ```
 
 Details follow `pending_conversation_insight_review_rules.md`.
+
+## Memory Candidate
+
+Memory Candidate, abbreviated as MC, is the official GDS Knowledge Inbox
+mechanism for valuable conversation-born knowledge that may be lost before it
+can be saved to Memory, converted into a Q, or registered as Repository
+Knowledge.
+
+MC is not Canonical Knowledge. Repository remains the Single Source of Truth.
+MC must not be used directly as implementation authority.
+
+Standard flow:
+
+```text
+Conversation
+  -> Captured
+  -> Triaged
+  -> Memory Saved / Q Created / Repository Drafted / Rejected / Duplicate / Deferred / Expired
+  -> Repository Registered
+  -> Closed
+```
+
+At session close, if Lost Context Risk is Yes, AI should propose or create an
+MC before ending the session. Automatic promotion is prohibited.
+
+Details follow `memory_candidate_rules.md`.
 
 ## Debug Artifact Review
 
