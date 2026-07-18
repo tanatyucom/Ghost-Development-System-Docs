@@ -21,6 +21,10 @@ runtime behavior.
   assigning responsibility by authority rather than feature description,
   separating Review Actor, Execution Actor, Human Authority, Approval Request,
   and Execution Evidence.
+- `execution_authority_registry.md`: architecture contract for the canonical
+  Execution Authority Registry, its actor model, Approval Unit mapping,
+  validation rules, lifecycle, and source-of-truth relationship to
+  `docs/registries/execution_authority_registry.yaml`.
 - `canonical_rule_gap_resolution.md`: decision boundary for resolving
   implementation-repository style findings as repository remediation, Local
   Rule candidates, Canonical Rule gaps, Temporary Assembly candidates, or Human

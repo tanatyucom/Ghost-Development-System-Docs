@@ -14,12 +14,13 @@ evidence without turning approval into automatic execution.
 ```text
 1. Runtime Queue item selected
 2. Execution Request Envelope created
-3. Adapter Router checks approval, authority, scope, dependency, idempotency
-4. Adapter executes or delegates
-5. Execution Result / Evidence Envelope returned
-6. Evidence Reconciler validates result
-7. Runtime Queue state updates
-8. Completion Report records outcome
+3. Authority Validation Gate checks actor, Approval Unit, scope, approval, and evidence
+4. Adapter Router checks approval, authority, scope, dependency, idempotency
+5. Adapter executes or delegates
+6. Execution Result / Evidence Envelope returned
+7. Evidence Reconciler validates result
+8. Runtime Queue state updates
+9. Completion Report records outcome
 ```
 
 ## Preconditions
@@ -27,6 +28,7 @@ evidence without turning approval into automatic execution.
 Before execution or delegation:
 
 - approval reference exists;
+- Execution Authority Registry resolves the actor and Approval Unit;
 - approved scope is explicit;
 - actor authority is known;
 - tool availability is known;
@@ -35,6 +37,18 @@ Before execution or delegation:
 - repository boundary is verified.
 
 Missing preconditions produce `BLOCKED` or `SCW_REQUIRED`.
+
+Authority source of truth:
+
+```text
+docs/registries/execution_authority_registry.yaml
+```
+
+Gate:
+
+```text
+docs/workflow/authority_validation_gate.md
+```
 
 ## Delegation
 

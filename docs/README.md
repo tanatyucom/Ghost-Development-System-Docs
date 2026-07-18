@@ -26,6 +26,12 @@ Reference points:
   `docs/architecture/adapter_only_execution_policy_review.md`
 - Authority-Driven Responsibility Principle:
   `docs/architecture/authority_driven_responsibility_principle.md`
+- Execution Authority Registry:
+  `docs/architecture/execution_authority_registry.md`
+- Execution Authority Registry Source:
+  `docs/registries/execution_authority_registry.yaml`
+- Approval Unit Authority Mapping:
+  `docs/standards/approval_unit_authority_mapping.md`
 - North Star:
   `docs/philosophy/north_star.md`
 - Experience Layer:
@@ -50,6 +56,8 @@ Reference points:
   `docs/architecture/runtime_intent_queue_resolver.md`
 - Governed Execution Adapter Foundation:
   `docs/architecture/governed_execution_adapter_foundation.md`
+- Authority Validation Gate:
+  `docs/workflow/authority_validation_gate.md`
 - Ghost Package Standard Candidate:
   `docs/standards/ghost_package_standard_candidate.md`
 - Execution Queue Display Contract:

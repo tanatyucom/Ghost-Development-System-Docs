@@ -19,6 +19,12 @@ workflow or template.
 - `adapter_registry_foundation.md`: draft standard for identifying governed
   execution adapters, capability, authority, contracts, retry policy, and
   availability.
+- `execution_authority_registry_schema.md`: draft standard for the
+  machine-readable Execution Authority Registry fields, actor entries,
+  Approval Unit entries, validation rules, and human-readable view.
+- `approval_unit_authority_mapping.md`: human-readable Approval Unit mapping
+  for Commit, Push, Tag, File Mutation, Repository Migration, External API
+  Write, Data Deletion, Automation Activation, Release, and Deployment.
 - `git_execution_evidence_profile.md`: draft evidence profile for Git Commit,
   Push, Tag Create, and Tag Push.
 - `git_adapter_registry_profile.md`: draft Git-specific adapter and capability

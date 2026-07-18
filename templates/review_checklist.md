@@ -65,6 +65,7 @@
 - Japanese First が守られている。
 - Human Approval が必要な事項を AI が勝手に昇格していない。
 - Authority-Driven Responsibility Principle が必要な設計で確認されている。
+- Execution Authority Registry が必要な設計で参照されている。
 - Responsibility と Authority が一致している。
 - Actor が実行不可能な操作の許可を求めていない。
 - Review Actor が Execution Actor を代行していない。

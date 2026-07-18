@@ -60,6 +60,8 @@ promoted.
 - `responsibility_assignment_rules.md`: rule for assigning responsibility by
   execution / delegation / governance authority, separating Review Actor,
   Execution Actor, Human Authority, Approval Request, and Execution Evidence.
+  It references Execution Authority Registry before Approval Request,
+  execution, mutation, delegation, external side effects, or Execution Evidence.
 - `external_source_access_rules.md`: Raw URL Index and external public
   repository access rule for ChatGPT, Codex, and other AI systems.
 - `capability_disclosure_rule.md`: rule requiring AI to verify and disclose

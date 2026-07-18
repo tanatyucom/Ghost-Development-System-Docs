@@ -46,6 +46,18 @@ adapter:
 Adapter Registry may connect to a future Capability Registry, but this Q does
 not implement that registry.
 
+Execution Authority Registry is the higher-level actor / capability authority
+source of truth:
+
+```text
+docs/registries/execution_authority_registry.yaml
+```
+
+Adapter Registry must not grant execution authority by itself. It describes
+adapter capability and availability. Authority Validation Gate must still check
+actor authority, Approval Unit, scope, Human Approval requirement, and Evidence
+Responsibility.
+
 Capability records should identify:
 
 - capability ID;

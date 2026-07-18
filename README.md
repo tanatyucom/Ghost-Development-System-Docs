@@ -14,6 +14,7 @@ from:
 - [`docs/architecture/platform_candidate_workspace.md`](docs/architecture/platform_candidate_workspace.md)
 - [`docs/architecture/adapter_only_execution_policy_review.md`](docs/architecture/adapter_only_execution_policy_review.md)
 - [`docs/architecture/authority_driven_responsibility_principle.md`](docs/architecture/authority_driven_responsibility_principle.md)
+- [`docs/architecture/execution_authority_registry.md`](docs/architecture/execution_authority_registry.md)
 - [`docs/architecture/repository_intelligence_dashboard_foundation.md`](docs/architecture/repository_intelligence_dashboard_foundation.md)
 - [`docs/philosophy/north_star.md`](docs/philosophy/north_star.md)
 - [`docs/architecture/experience_layer.md`](docs/architecture/experience_layer.md)
@@ -34,6 +35,7 @@ from:
 - [`templates/approval_request_block_template.md`](templates/approval_request_block_template.md)
 - [`templates/execution_queue_status_template.md`](templates/execution_queue_status_template.md)
 - [`templates/execution_adapter_record_template.md`](templates/execution_adapter_record_template.md)
+- [`docs/registries/execution_authority_registry.yaml`](docs/registries/execution_authority_registry.yaml)
 - [`docs/rules/platform_governance_rules.md`](docs/rules/platform_governance_rules.md)
 - [`docs/workflow/architecture_promotion_lifecycle.md`](docs/workflow/architecture_promotion_lifecycle.md)
 

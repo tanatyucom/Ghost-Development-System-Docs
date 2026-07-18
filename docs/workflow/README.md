@@ -54,6 +54,10 @@ gate.
 - `governed_execution_adapter_workflow.md`: workflow connecting Runtime Queue
   items to governed execution or delegation through request contracts, adapter
   routing, result / evidence envelopes, reconciliation, and completion review.
+- `authority_validation_gate.md`: workflow for checking Execution Authority
+  Registry, Approval Unit, actor authority, scope, Human Approval requirement,
+  approval state, and evidence responsibility before Approval Request,
+  execution, delegation, or SCW.
 - `improvement_record_promotion_workflow.md`: workflow for turning observed
   operation gaps into Improvement Records, Promotion Candidates, and future
   standards without automatic approval or repository mutation.

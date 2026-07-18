@@ -1,0 +1,294 @@
+registry_id: gds.execution_authority_registry
+version: "0.1"
+status: Draft
+last_updated: "2026-07-18"
+source_of_truth: docs/registries/execution_authority_registry.yaml
+human_readable:
+  architecture: docs/architecture/execution_authority_registry.md
+  schema: docs/standards/execution_authority_registry_schema.md
+  validation_gate: docs/workflow/authority_validation_gate.md
+principle:
+  id: authority_driven_responsibility
+  statement_ja: "責務は機能ではなく、権限で決める。"
+authority_categories:
+  - Observe
+  - Analyze
+  - Recommend
+  - RequestApproval
+  - Execute
+  - Mutate
+  - ProduceEvidence
+lifecycle_states:
+  - Draft
+  - Reviewed
+  - Approved
+  - Active
+  - Deprecated
+  - Revoked
+  - Archived
+actors:
+  - actor_id: chatgpt.review_actor
+    actor_name: ChatGPT
+    actor_type: ReviewActor
+    status: Active
+    repository_scope: ContextDependent
+    authorities:
+      observe: Limited
+      analyze: Yes
+      recommend: Yes
+      request_approval: No
+      execute_git: No
+      mutate_repository: No
+      produce_execution_evidence: No
+      produce_review_evidence: Yes
+    human_approval_requirement: NotApplicable
+    risk_level: Low
+    scw_conditions:
+      - asked_to_request_approval_for_operation_it_cannot_execute
+      - asked_to_claim_execution_evidence_without_execution
+      - repository_state_unavailable_but_execution_decision_requested
+    source_of_truth:
+      - docs/architecture/authority_driven_responsibility_principle.md
+      - docs/rules/responsibility_assignment_rules.md
+  - actor_id: codex.repository_execution_actor
+    actor_name: Codex
+    actor_type: ExecutionActor
+    status: Active
+    repository_scope: CurrentWorkingRepository
+    authorities:
+      observe: Yes
+      analyze: Yes
+      recommend: Yes
+      request_approval: YesForExecutableActions
+      execute_git: YesWhenApproved
+      mutate_repository: YesWithinApprovedScope
+      produce_execution_evidence: Yes
+      produce_review_evidence: Yes
+    human_approval_requirement: RequiredForMutation
+    risk_level: Medium
+    scw_conditions:
+      - approval_missing_or_stale
+      - safe_commit_set_unclear
+      - repository_scope_mismatch
+      - authority_unknown
+      - unrelated_dirty_files_mixed
+    source_of_truth:
+      - docs/architecture/governed_execution_adapter_foundation.md
+      - docs/rules/approval_request_rules.md
+  - actor_id: human.final_authority
+    actor_name: Human
+    actor_type: HumanAuthority
+    status: Active
+    repository_scope: VisibleApprovalRequestScope
+    authorities:
+      observe: Yes
+      analyze: Yes
+      recommend: Yes
+      request_approval: NotApplicable
+      execute_git: ManualOrDelegated
+      mutate_repository: ManualOrDelegated
+      produce_execution_evidence: CanProvideManualEvidence
+      produce_review_evidence: Yes
+    human_approval_requirement: OwnsFinalApproval
+    risk_level: Variable
+    scw_conditions:
+      - approval_target_unclear
+      - requested_units_not_visible
+      - repository_state_changed_after_request
+    source_of_truth:
+      - docs/rules/approval_request_rules.md
+      - docs/architecture/approval_request_intent_queue_execution_evidence.md
+  - actor_id: automation.conditional_actor
+    actor_name: Automation Actor
+    actor_type: AutomationActor
+    status: Draft
+    repository_scope: ExplicitConfiguredScopeOnly
+    authorities:
+      observe: Conditional
+      analyze: Conditional
+      recommend: Conditional
+      request_approval: NoUnlessGovernedExecutionSurface
+      execute_git: NoByDefault
+      mutate_repository: NoByDefault
+      produce_execution_evidence: RequiredIfExecutionGranted
+      produce_review_evidence: Conditional
+    human_approval_requirement: DependsOnActionClass
+    risk_level: HighUntilReviewed
+    scw_conditions:
+      - authority_not_explicitly_granted
+      - action_class_unknown
+      - approval_requirement_unknown
+      - scope_missing
+    source_of_truth:
+      - docs/workflow/authority_validation_gate.md
+      - docs/architecture/governed_execution_adapter_foundation.md
+  - actor_id: adapter.read_only
+    actor_name: Read-only Adapter
+    actor_type: Adapter
+    status: Draft
+    repository_scope: ExplicitReadScope
+    authorities:
+      observe: Yes
+      analyze: Limited
+      recommend: No
+      request_approval: No
+      execute_git: No
+      mutate_repository: No
+      produce_execution_evidence: No
+      produce_review_evidence: CanProduceObservationEvidence
+    human_approval_requirement: NotApplicableForReadOnly
+    risk_level: Low
+    scw_conditions:
+      - mutation_requested
+      - write_capability_assumed
+    source_of_truth:
+      - docs/standards/adapter_registry_foundation.md
+  - actor_id: adapter.repository_mutation
+    actor_name: Repository Mutation Adapter
+    actor_type: Adapter
+    status: Draft
+    repository_scope: ExplicitApprovedRepositoryScope
+    authorities:
+      observe: Yes
+      analyze: Limited
+      recommend: No
+      request_approval: No
+      execute_git: Conditional
+      mutate_repository: Conditional
+      produce_execution_evidence: YesIfExecuted
+      produce_review_evidence: No
+    human_approval_requirement: Required
+    risk_level: High
+    scw_conditions:
+      - approval_reference_missing
+      - scope_mismatch
+      - evidence_contract_missing
+      - adapter_availability_unknown
+    source_of_truth:
+      - docs/architecture/governed_execution_adapter_foundation.md
+      - docs/standards/adapter_registry_foundation.md
+approval_units:
+  - approval_unit: Commit
+    execution_actor: codex.repository_execution_actor
+    approval_request_actor: codex.repository_execution_actor
+    required_human_authority: human.final_authority
+    evidence_type:
+      - commit_id
+      - commit_message
+      - changed_file_scope
+      - validation_summary
+    risk_level: Medium
+    default_recommendation_policy: RecommendedOnlyAfterCleanSafeCommitSetAndValidation
+  - approval_unit: Push
+    execution_actor: codex.repository_execution_actor
+    approval_request_actor: codex.repository_execution_actor
+    required_human_authority: human.final_authority
+    evidence_type:
+      - remote
+      - branch_or_ref
+      - push_result
+      - pushed_commit_id
+    risk_level: High
+    default_recommendation_policy: HoldUnlessCommitExistsAndRemoteStateKnown
+  - approval_unit: Tag
+    execution_actor: codex.repository_execution_actor
+    approval_request_actor: codex.repository_execution_actor
+    required_human_authority: human.final_authority
+    evidence_type:
+      - tag_name
+      - target_commit_id
+      - tag_creation_result
+    risk_level: High
+    default_recommendation_policy: HoldUnlessReleaseOrMilestoneScopeIsExplicit
+  - approval_unit: FileMutation
+    execution_actor: codex.repository_execution_actor
+    approval_request_actor: codex.repository_execution_actor
+    required_human_authority: human.final_authority
+    evidence_type:
+      - changed_file_list
+      - diff_summary
+      - validation_summary
+    risk_level: Medium
+    default_recommendation_policy: AllowedWithinCurrentQScope
+  - approval_unit: RepositoryMigration
+    execution_actor: adapter.repository_mutation
+    approval_request_actor: codex.repository_execution_actor
+    required_human_authority: human.final_authority
+    evidence_type:
+      - migration_plan
+      - before_after_scope
+      - validation_summary
+    risk_level: High
+    default_recommendation_policy: HoldUnlessSeparateMigrationQApproved
+  - approval_unit: ExternalApiWrite
+    execution_actor: adapter.repository_mutation
+    approval_request_actor: codex.repository_execution_actor
+    required_human_authority: human.final_authority
+    evidence_type:
+      - api_target
+      - request_summary
+      - response_summary
+    risk_level: High
+    default_recommendation_policy: HoldByDefault
+  - approval_unit: DataDeletion
+    execution_actor: adapter.repository_mutation
+    approval_request_actor: codex.repository_execution_actor
+    required_human_authority: human.final_authority
+    evidence_type:
+      - deletion_scope
+      - confirmation_record
+      - post_delete_verification
+    risk_level: Critical
+    default_recommendation_policy: HoldUnlessExplicitDeletionQAndApproval
+  - approval_unit: AutomationActivation
+    execution_actor: automation.conditional_actor
+    approval_request_actor: codex.repository_execution_actor
+    required_human_authority: human.final_authority
+    evidence_type:
+      - automation_id
+      - trigger_scope
+      - activation_result
+    risk_level: High
+    default_recommendation_policy: HoldUntilAuthorityAndRollbackAreReviewed
+  - approval_unit: Release
+    execution_actor: adapter.repository_mutation
+    approval_request_actor: codex.repository_execution_actor
+    required_human_authority: human.final_authority
+    evidence_type:
+      - release_id
+      - target_commit_id
+      - publication_result
+    risk_level: Critical
+    default_recommendation_policy: HoldUnlessReleaseQApproved
+  - approval_unit: Deployment
+    execution_actor: adapter.repository_mutation
+    approval_request_actor: codex.repository_execution_actor
+    required_human_authority: human.final_authority
+    evidence_type:
+      - deployment_target
+      - deployment_result
+      - rollback_or_status_link
+    risk_level: Critical
+    default_recommendation_policy: HoldByDefault
+validation_rules:
+  - rule_id: authority.approval_request_requires_execution
+    statement: Approval Request Authority requires matching Execution Authority.
+    failure_result: SCW_REQUIRED
+  - rule_id: authority.mutation_requires_scope
+    statement: Mutation Authority requires defined repository or resource scope.
+    failure_result: SCW_REQUIRED
+  - rule_id: authority.high_risk_requires_human_approval
+    statement: High-risk Execution Authority requires Human Approval Requirement.
+    failure_result: BLOCKED_OR_SCW_REQUIRED
+  - rule_id: authority.execution_requires_evidence
+    statement: Execution Authority requires Evidence Responsibility.
+    failure_result: SCW_REQUIRED
+  - rule_id: authority.unknown_conflicting_missing_scope
+    statement: Unknown Authority, Conflicting Authority, or Missing Scope requires SCW.
+    failure_result: SCW_REQUIRED
+  - rule_id: authority.recommendation_is_not_execution
+    statement: Recommendation Authority does not imply Execution Authority.
+    failure_result: BLOCKED_OR_SCW_REQUIRED
+  - rule_id: authority.review_actor_no_approval_request
+    statement: Review Actor must not issue Approval Request unless it is also the registered Execution Actor for that Approval Unit.
+    failure_result: SCW_REQUIRED

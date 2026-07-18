@@ -128,6 +128,20 @@ When adding or revising a responsibility, answer at minimum:
 
 If the answers are unclear, use SCW and do not execute.
 
+## Registry Lookup
+
+When the responsibility involves Approval Request, execution, mutation,
+delegation, external side effects, or Execution Evidence, consult:
+
+```text
+docs/registries/execution_authority_registry.yaml
+```
+
+The registry is the machine-readable source of truth for initial actor,
+capability, Approval Unit, and evidence authority. If the registry is missing,
+conflicting, stale, or does not cover the requested action, use SCW before
+Approval Request or execution.
+
 ## Application Targets
 
 This principle applies beyond Approval Request.

@@ -48,6 +48,29 @@ Before adding or changing a responsibility, confirm:
 
 If any answer is unclear, use SCW and do not proceed to execution.
 
+## Registry Requirement
+
+For Approval Request, execution, mutation, delegation, external side effect, or
+Execution Evidence responsibilities, check the Execution Authority Registry:
+
+```text
+docs/registries/execution_authority_registry.yaml
+```
+
+The registry must identify:
+
+- actor ID;
+- Approval Unit;
+- execution actor;
+- Approval Request actor;
+- repository / resource scope;
+- Human Approval requirement;
+- Evidence Responsibility;
+- SCW conditions.
+
+If the registry cannot resolve the actor, authority, scope, or evidence owner,
+use SCW.
+
 ## Review Actor Boundary
 
 Review Actor may own:
@@ -122,6 +145,9 @@ Use SCW when:
 ## Related Documents
 
 - `docs/architecture/authority_driven_responsibility_principle.md`
+- `docs/architecture/execution_authority_registry.md`
+- `docs/registries/execution_authority_registry.yaml`
+- `docs/workflow/authority_validation_gate.md`
 - `docs/rules/approval_request_rules.md`
 - `docs/architecture/responsibility_boundary.md`
 - `docs/architecture/approval_request_intent_queue_execution_evidence.md`

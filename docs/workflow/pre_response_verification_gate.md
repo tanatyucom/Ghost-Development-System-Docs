@@ -36,11 +36,15 @@ Artifact Generation / Documentation Update
 - Revision-first policy respected.
 - Human Approval boundary respected.
 - Commit / Push boundary respected.
+- Execution Authority Registry checked when Approval Request, execution,
+  mutation, delegation, or external side effect is being recommended.
 - When Commit, Push, Tag, release, canonical promotion, or another governed
   repository operation is recommended, the final response includes the visible
   sequence `Repository Recommendation -> Workflow Recommendation -> Approval
   Request`.
 - Approval state checked before generating approval or execution wording.
+- Approval Request actor matches the registered Execution Actor or governed
+  execution surface for the visible Approval Unit.
 - Approval Request shows `Current Step: Approval Request` and visible Approval
   Units before asking for Human Final Approval.
 - Whether Workflow Recommendation already served as the Approval Request.
@@ -93,6 +97,8 @@ Do not deliver a final response if:
 - Workflow Recommendation asserts `Completed` without valid Execution Evidence.
 - A governed repository operation is recommended but the final response omits
   Repository Recommendation, Workflow Recommendation, or Approval Request.
+- Approval Request is generated without a registry-backed Execution Actor,
+  Approval Unit, scope, Human Approval requirement, and evidence responsibility.
 - Approval Request omits `Current Step` or visible Approval Units.
 - Execution Instruction is missing after valid Human Final Approval.
 - Execution Instruction omits human-facing audience, intended actor, or evidence
@@ -118,12 +124,14 @@ Pre-Response Verification Gate:
 - Reusable artifact delivery:
 - Human Approval boundary:
 - Commit / Push boundary:
+- Execution Authority Registry checked:
 - Repository Recommendation included:
 - Workflow Recommendation included:
 - Approval Request included:
 - Required output sequence:
 - Approval state:
 - Approval Request current step:
+- Approval Request actor authority:
 - Approval Units visible:
 - Workflow Recommendation served as Approval Request:
 - Workflow Recommendation current step:
