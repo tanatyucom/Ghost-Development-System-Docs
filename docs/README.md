@@ -78,6 +78,8 @@ Reference points:
   `templates/execution_queue_status_template.md`
 - Execution Adapter Record Template:
   `templates/execution_adapter_record_template.md`
+- Repository Action Status and Recommendation Model:
+  `docs/standards/repository_action_status_and_recommendation_model.md`
 - Q Knowledge Classification:
   `docs/standards/q_knowledge_classification.md`
 - Handoff Template v2:

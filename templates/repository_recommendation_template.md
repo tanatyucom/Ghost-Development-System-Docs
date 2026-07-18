@@ -10,6 +10,10 @@ the human and optional Completion Review / Independent Review. It is not Human
 Final Approval, Workflow Recommendation, Execution Instruction, or execution
 evidence for an action that has not happened yet.
 
+When repository actions are relevant, Repository Recommendation should appear
+after an explicit Execution Status block. The reader must see what has actually
+happened before seeing what is recommended.
+
 ## Standard Block
 
 ```text
@@ -106,6 +110,30 @@ Tag normally requires:
 - required release validation complete.
 
 If evidence is insufficient, use `Hold`.
+
+## Relationship To Execution Status
+
+Use `docs/standards/repository_action_status_and_recommendation_model.md` for
+execution status values and display order.
+
+Repository Recommendation answers:
+
+```text
+What should happen next?
+```
+
+Execution Status answers:
+
+```text
+What is happening or has already happened?
+```
+
+Suggested Commit Message, Suggested Command, Suggested Tag Name, and similar
+details are proposals. They are not execution evidence.
+
+After an action is completed, show immutable execution evidence such as commit
+ID, pushed branch / SHA, tag name / target, release ID, promotion result, or
+export artifact. Do not rely on suggested details to prove execution.
 
 ## Safe Commit Set
 

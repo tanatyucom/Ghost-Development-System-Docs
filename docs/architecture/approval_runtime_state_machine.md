@@ -46,6 +46,7 @@ scope.
 - `docs/architecture/runtime_intent_queue_resolver.md`
 - `docs/architecture/completion_review_execution_evidence_specialization.md`
 - `docs/architecture/platform_execution_evidence_contract.md`
+- `docs/standards/repository_action_status_and_recommendation_model.md`
 - `templates/repository_recommendation_template.md`
 - `templates/workflow_recommendation_template.md`
 

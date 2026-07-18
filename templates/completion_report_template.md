@@ -1,8 +1,8 @@
 # Completion Report Template
 
-**Template Version:** 2.2
+**Template Version:** 2.3
 
-**Last Updated:** 2026-07-17
+**Last Updated:** 2026-07-18
 
 このテンプレートは、Q完了後の結果を再利用・レビュー・Git管理できるCompletion Report Artifactとして残すための標準形式です。
 
@@ -198,6 +198,36 @@ git status --short --untracked-files=all
 Safe Commit Set must match Changed Files, or explain every exclusion.
 ```
 
+## Execution Status
+
+Use `docs/standards/repository_action_status_and_recommendation_model.md` for
+the canonical status model.
+
+- Commit Status: Not Evaluated / Not Applicable / Not Executed / Executing / Completed / Failed / Blocked
+- Commit ID:
+- Commit Subject:
+- Push Status: Not Evaluated / Not Applicable / Not Executed / Executing / Completed / Failed / Blocked
+- Push Target:
+- Push Result:
+- Tag Status: Not Evaluated / Not Applicable / Not Executed / Executing / Completed / Failed / Blocked
+- Tag Name:
+- Tag Target:
+- Release Status: Not Evaluated / Not Applicable / Not Executed / Executing / Completed / Failed / Blocked
+- Promotion Status: Not Evaluated / Not Applicable / Not Executed / Executing / Completed / Failed / Blocked
+- SDK Export Status: Not Evaluated / Not Applicable / Not Executed / Executing / Completed / Failed / Blocked
+- Execution evidence path:
+- Execution status note:
+
+Rules:
+
+```text
+Execution Status must appear before Repository Recommendation when repository actions are relevant.
+Completed requires valid Execution Evidence.
+Suggested Commit Message is not Execution Evidence.
+Failed means execution was attempted and failed.
+Blocked means execution was not attempted because a gate, approval, scope, validation, authority, or repository condition blocked it.
+```
+
 ## Repository Recommendation
 
 Use `templates/repository_recommendation_template.md` for the canonical block.
@@ -300,7 +330,10 @@ If Repository Recommendation or Workflow Recommendation is missing, do not ask f
 After valid Human Final Approval, output Execution Instruction instead of repeating the same Approval Request.
 ```
 
-## Commit / Push Status
+## Legacy Commit / Push Status
+
+Use this only for backward compatibility with older reports. Prefer
+`Execution Status` for new reports.
 
 - Commit policy from Q:
 - Commit required:
@@ -412,6 +445,10 @@ Ideas that should remain future work until separately reviewed:
 - Priority:
 
 ## Suggested Commit Message
+
+Use this only when Commit Status is `Not Executed`, `Blocked`, `Not Evaluated`,
+or when retaining historical input is useful. If commit already completed,
+prefer Commit ID and Execution Evidence.
 
 ```text
 <type>: <summary>

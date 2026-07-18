@@ -24,6 +24,23 @@ Execution is not complete without evidence.
 
 Recommendation is not approval.
 
+Execution Status is not recommendation.
+
+Suggested action details are not execution evidence.
+
+Canonical reporting model:
+
+```text
+Recommendation describes what should happen.
+Approval authorizes what may happen.
+Execution Status records what is happening or has happened.
+Execution Evidence proves what happened.
+```
+
+When repository actions are relevant, Completion Reports and chat-facing
+completion summaries should show Execution Status before Repository
+Recommendation.
+
 Approval is a governed state transition. Conversational wording alone does not
 create approval unless it binds to a current, visible, unambiguous Approval
 Request and Approval Unit.

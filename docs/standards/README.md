@@ -34,6 +34,10 @@ workflow or template.
   Push, Tag Create, and Tag Push.
 - `git_adapter_registry_profile.md`: draft Git-specific adapter and capability
   registry profile for the Git Execution Adapter Vertical Slice.
+- `repository_action_status_and_recommendation_model.md`: draft standard for
+  separating Execution Status, Repository Recommendation, Approval Status,
+  Suggested Action Details, and Execution Evidence so proposed repository
+  actions are not confused with completed actions.
 - `ghost_package_standard_candidate.md`: architecture standard candidate for
   Ghost Package Standard, including PACKAGE.md / PACKAGE.yaml direction,
   package lifecycle, validation, discovery, registry, multi-AI handoff, and

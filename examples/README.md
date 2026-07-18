@@ -22,6 +22,9 @@ reports, and documentation requests can start from a clear reference.
   Recommendation blocks, including normal commit recommendation, validation
   failure, mixed scope, push review, diverged branch, tag recommendation, stale
   recommendation, and insufficient evidence.
+- `repository_action_status_examples.md`: good and bad examples for separating
+  Execution Status, Repository Recommendation, Approval Status, Suggested Action
+  Details, and Execution Evidence for Commit, Push, and Tag.
 - `workflow_recommendation_examples.md`: examples for ChatGPT Workflow
   Recommendation blocks, including approval request mode, execution instruction
   mode, missing pending request, independent approval units, stale state, mixed
@@ -174,6 +177,10 @@ what a complete, well-scoped document should feel like.
 - Use `repository_recommendation_examples.md` when Codex needs to recommend
   Commit, Push, or Tag to ChatGPT without implying Human Final Approval or
   execution authority.
+- Use `repository_action_status_examples.md` when a Completion Report or final
+  response must make clear whether Commit, Push, Tag, release, promotion, SDK
+  export, or another governed action is recommended, waiting for approval,
+  already completed, failed, blocked, or not executed.
 - Use `workflow_recommendation_examples.md` when ChatGPT needs to convert
   Completion Review and Codex Repository Recommendation into a human-facing
   Workflow Recommendation or Execution Instruction.

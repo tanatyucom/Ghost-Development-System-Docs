@@ -128,6 +128,11 @@ remaining issues, and recommended next work.
   executed one human-approved scoped commit against the exact Safe Commit Set
   without push, tag, release, merge, rebase, reset, amend, or unrelated dirty
   workspace mutation.
+- Current Repository Action Reporting Priority: Completion Reports and
+  chat-facing summaries must separate Execution Status, Repository
+  Recommendation, Approval Status, Suggested Action Details, and Execution
+  Evidence so suggested commit messages or commands cannot be confused with
+  completed repository actions.
 - Current Command Center Direction: Command Center is an orchestration
   capability for Repository Center, Approval Center, Evidence Center,
   Notification Center, Intent Engine, Decision Engine, Runtime Engine,
