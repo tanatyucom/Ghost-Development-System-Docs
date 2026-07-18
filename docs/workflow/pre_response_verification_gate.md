@@ -36,7 +36,13 @@ Artifact Generation / Documentation Update
 - Revision-first policy respected.
 - Human Approval boundary respected.
 - Commit / Push boundary respected.
+- When Commit, Push, Tag, release, canonical promotion, or another governed
+  repository operation is recommended, the final response includes the visible
+  sequence `Repository Recommendation -> Workflow Recommendation -> Approval
+  Request`.
 - Approval state checked before generating approval or execution wording.
+- Approval Request shows `Current Step: Approval Request` and visible Approval
+  Units before asking for Human Final Approval.
 - Whether Workflow Recommendation already served as the Approval Request.
 - Workflow Recommendation Current Step is explicit when a workflow next-step
   recommendation is shown.
@@ -85,6 +91,9 @@ Do not deliver a final response if:
   Recommendation that already served as the Approval Request.
 - Workflow Recommendation asserts `Approved` before Human Final Approval.
 - Workflow Recommendation asserts `Completed` without valid Execution Evidence.
+- A governed repository operation is recommended but the final response omits
+  Repository Recommendation, Workflow Recommendation, or Approval Request.
+- Approval Request omits `Current Step` or visible Approval Units.
 - Execution Instruction is missing after valid Human Final Approval.
 - Execution Instruction omits human-facing audience, intended actor, or evidence
   requirements.
@@ -109,7 +118,13 @@ Pre-Response Verification Gate:
 - Reusable artifact delivery:
 - Human Approval boundary:
 - Commit / Push boundary:
+- Repository Recommendation included:
+- Workflow Recommendation included:
+- Approval Request included:
+- Required output sequence:
 - Approval state:
+- Approval Request current step:
+- Approval Units visible:
 - Workflow Recommendation served as Approval Request:
 - Workflow Recommendation current step:
 - Workflow Recommendation state vocabulary:

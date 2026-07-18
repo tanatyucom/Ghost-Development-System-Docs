@@ -52,10 +52,12 @@ the required Approval Request fields, requested Approval Units, scope lock,
 recommendation basis, and approval prompt. In that case, the Workflow
 Recommendation is the single approval point.
 
-Workflow Recommendation is ChatGPT's human-facing recommendation after
-Completion Review. It is not Codex Repository Recommendation, Human Final
-Approval, Execution Instruction, repository action execution, or Execution
-Evidence.
+Workflow Recommendation is the human-facing next-step recommendation that Codex
+must display after implementation and verification when it recommends Commit,
+Push, Tag, release, canonical promotion, or another governed repository
+operation. ChatGPT may later review it through Completion Review or Independent
+Review. It is not Repository Recommendation, Human Final Approval, Execution
+Instruction, repository action execution, or Execution Evidence.
 
 Workflow Recommendation values before Human Final Approval are:
 
@@ -74,8 +76,8 @@ Instruction, not a second Approval Request for the same unchanged Approval Unit.
 
 | Actor / Layer | Responsibility | Boundary |
 | --- | --- | --- |
-| Codex | Repository Recommendation and governed repository execution when approved. | Does not provide final approval. |
-| ChatGPT | Workflow Recommendation and Completion Review. | Does not execute repository mutation without tool evidence and approval. |
+| Codex | Repository Recommendation, Workflow Recommendation, Approval Request, governed repository execution when approved, and Execution Evidence. | Does not provide final approval. |
+| ChatGPT | Completion Review, Independent Review, architecture / design review, and execution guidance. | Does not execute repository mutation in this workflow. |
 | Human | Final Approval for scoped operations. | Approval applies only to the visible request. |
 | Codex / Adapter | Governed Execution after approval and authority checks. | Must not expand scope. |
 | Execution Evidence | Proof that approved execution happened. | Approval text alone is not evidence. |
@@ -93,12 +95,26 @@ Before Human Approval is requested for commit, push, tag, release, canonical
 promotion, or another repository mutation, the Approval Request must show the
 applicable recommendations.
 
+Minimum visible sequence in Codex final output:
+
+```text
+Repository Recommendation
+
+↓
+
+Workflow Recommendation
+
+↓
+
+Approval Request
+```
+
 Minimum recommendation types:
 
 - Repository Recommendation: usually produced by Codex or repository-aware
   review.
-- Workflow Recommendation: usually produced by ChatGPT, Completion Review, or
-  workflow-aware review.
+- Workflow Recommendation: produced by Codex as the chat-facing next-step
+  recommendation, and reviewable by ChatGPT or another reviewer.
 
 If a required recommendation is missing, do not accept approval as valid.
 Use SCW or re-display the Approval Request with the missing recommendation.
@@ -128,10 +144,11 @@ The block must identify:
 - execution authority;
 - evidence required after execution.
 
-Repository Recommendation should hand off to ChatGPT with:
+Repository Recommendation should make the review boundary explicit without
+asking for approval by itself:
 
 ```text
-ChatGPT Completion Review / Workflow Recommendation required.
+ChatGPT Completion Review / Independent Review optional; Human Final Approval required.
 ```
 
 It must not ask the human for approval and must not issue a Human-facing

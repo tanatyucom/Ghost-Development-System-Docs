@@ -83,6 +83,13 @@ AI needs public GDS knowledge
 Regenerate and validate the index when public AI knowledge entry points are
 added, moved, renamed, or materially changed.
 
+CodexがCommit、Push、Tag、release、canonical promotionなどのRepository操作を
+推奨する場合、chat-facing final response は次の順序を必須とします。
+
+```text
+Repository Recommendation -> Workflow Recommendation -> Approval Request
+```
+
 CI validation:
 
 - Workflow: `.github/workflows/ai-repository-index-validation.yml`

@@ -5,8 +5,8 @@
 This template standardizes the Repository Recommendation produced by Codex
 after implementation and verification.
 
-Repository Recommendation is an evidence-backed recommendation from Codex to
-ChatGPT for Completion Review and Workflow Recommendation. It is not Human
+Repository Recommendation is an evidence-backed recommendation from Codex for
+the human and optional Completion Review / Independent Review. It is not Human
 Final Approval, Workflow Recommendation, Execution Instruction, or execution
 evidence for an action that has not happened yet.
 
@@ -62,7 +62,7 @@ Remaining Issues:
 - <issue or None>
 
 Review Boundary:
-ChatGPT Completion Review / Workflow Recommendation required.
+ChatGPT Completion Review / Independent Review optional; Human Final Approval required.
 ```
 
 ## Allowed Recommendation Values
@@ -142,7 +142,7 @@ Workflow Recommendation, Human Final Approval, or execution handoff.
 Primary audience:
 
 ```text
-ChatGPT Completion Review / Workflow Recommendation
+ChatGPT Completion Review / Independent Review optional; Human Final Approval required
 ```
 
 Repository Recommendation may also be read by the human, but it must not ask
@@ -152,10 +152,10 @@ Boundary:
 
 ```text
 Codex:
-Repository Recommendation
+Repository Recommendation / Workflow Recommendation / Approval Request
 
 ChatGPT:
-Completion Review / Workflow Recommendation
+Completion Review / Independent Review / architecture or design review
 
 Human:
 Final Approval

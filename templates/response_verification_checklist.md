@@ -27,8 +27,14 @@
 - Repository Recommendation boundary:
 - Repository Recommendation values:
 - Safe Commit Set evidence:
+- Chat-facing Repository Recommendation:
+- Chat-facing Workflow Recommendation:
+- Chat-facing Approval Request:
+- Required output sequence: Repository Recommendation -> Workflow Recommendation -> Approval Request:
 - Workflow Recommendation Current Step:
 - Workflow Recommendation state vocabulary:
+- Approval Request Current Step:
+- Approval Units visible:
 - Approval State:
 - Workflow Recommendation served as Approval Request:
 - Next Output Type: Approval Request / Execution Instruction / Completion Confirmation / Other

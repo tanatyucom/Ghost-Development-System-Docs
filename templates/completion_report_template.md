@@ -1,6 +1,6 @@
 # Completion Report Template
 
-**Template Version:** 2.1
+**Template Version:** 2.2
 
 **Last Updated:** 2026-07-17
 
@@ -139,6 +139,10 @@ Completion Report は Context Recovery Principle を支える artifact です。
 - User language preference:
 - Human Approval boundary:
 - Commit / Push boundary:
+- Repository Recommendation included when repository action is recommended:
+- Workflow Recommendation included when repository action is recommended:
+- Approval Request included when repository action is recommended:
+- Required output sequence:
 - Scope creep check:
 - Constraint Check still valid:
 - Changed Files report accuracy:
@@ -196,7 +200,7 @@ Use `templates/repository_recommendation_template.md` for the canonical block.
 - Reasons:
 - Known Warnings:
 - Remaining Issues:
-- Review Boundary: ChatGPT Completion Review / Workflow Recommendation required.
+- Review Boundary: ChatGPT Completion Review / Independent Review optional; Human Final Approval required.
 
 Rules:
 
@@ -211,8 +215,8 @@ Every Recommended action must be evidence-backed.
 ## Workflow Recommendation
 
 Use `templates/workflow_recommendation_template.md` for the canonical block
-when ChatGPT Completion Review produces a human-facing next-step
-recommendation.
+when Codex produces a chat-facing human next-step recommendation after
+implementation and verification.
 
 - Current Step: Approval Request / Execution Instruction / Execution Pending / Execution Evidence Review / Hold / Stop / Completed
 - Completion Review: PASS / PASS WITH REVISIONS / HOLD / STOP
@@ -233,6 +237,44 @@ Workflow Recommendation is not Human Final Approval.
 Approved is used only after Human Final Approval.
 Completed requires valid Execution Evidence.
 Workflow Recommendation can serve as the single Approval Request when all visible Approval Units requiring judgment are shown.
+```
+
+## Approval Request
+
+Use `templates/approval_request_block_template.md` for the canonical block when
+Commit, Push, Tag, release, canonical promotion, or another governed repository
+operation is recommended.
+
+Required chat-facing sequence:
+
+```text
+Repository Recommendation
+
+↓
+
+Workflow Recommendation
+
+↓
+
+Approval Request
+```
+
+- Current Step: Approval Request / Execution Instruction / Hold / Stop / Completed
+- Approval Units:
+  - Commit: Recommended / Hold / Not Applicable
+  - Push: Recommended / Hold / Not Applicable
+  - Tag: Recommended / Hold / Not Applicable
+- Approval Prompt:
+- Human Final Approval required:
+- Duplicate Approval Request avoided:
+
+Rules:
+
+```text
+Approval Request is not Human Final Approval.
+Approval Request must show visible Approval Units.
+If Repository Recommendation or Workflow Recommendation is missing, do not ask for approval.
+After valid Human Final Approval, output Execution Instruction instead of repeating the same Approval Request.
 ```
 
 ## Commit / Push Status

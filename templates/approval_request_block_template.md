@@ -10,7 +10,7 @@
 ## Recommendation Source
 
 - Repository Recommendation Source: Codex / Human / Other / Not Available
-- Workflow Recommendation Source: ChatGPT / Completion Review / Human / Other / Not Available
+- Workflow Recommendation Source: Codex / Completion Review / Human / Other / Not Available
 - Recommendation Timestamp:
 
 ## Repository Recommendation
@@ -26,7 +26,7 @@
 - Validation Summary:
 - Known Warnings:
 - Remaining Issues:
-- Review Boundary: ChatGPT Completion Review / Workflow Recommendation required.
+- Review Boundary: ChatGPT Completion Review / Independent Review optional; Human Final Approval required.
 - Reason:
 - Missing Recommendation: Yes / No
 
@@ -50,6 +50,38 @@ human-facing Workflow Recommendation block.
 If `Serves as Approval Request` is `Yes`, Human Final Approval of this Workflow
 Recommendation is the single approval point. Do not ask the same approval
 question again after approval; proceed to Execution Instruction.
+
+## Required Chat-Facing Output Contract
+
+When Codex recommends Commit, Push, Tag, release, canonical promotion, or
+another governed repository operation, the final response must show this
+sequence before asking for approval:
+
+```text
+Repository Recommendation
+
+↓
+
+Workflow Recommendation
+
+↓
+
+Approval Request
+```
+
+The Approval Request must show `Current Step: Approval Request` and the visible
+Approval Units:
+
+```text
+Current Step:
+Approval Request
+
+Approval Units
+
+Commit: Recommended / Hold / Not Applicable
+Push: Recommended / Hold / Not Applicable
+Tag: Recommended / Hold / Not Applicable
+```
 
 ## Requested Operations
 

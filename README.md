@@ -27,6 +27,8 @@ from:
 - [`docs/rules/approval_request_rules.md`](docs/rules/approval_request_rules.md)
 - [`docs/rules/runtime_intent_resolution_rules.md`](docs/rules/runtime_intent_resolution_rules.md)
 - [`docs/rules/execution_adapter_rules.md`](docs/rules/execution_adapter_rules.md)
+- [`templates/repository_recommendation_template.md`](templates/repository_recommendation_template.md)
+- [`templates/workflow_recommendation_template.md`](templates/workflow_recommendation_template.md)
 - [`templates/approval_request_block_template.md`](templates/approval_request_block_template.md)
 - [`templates/execution_queue_status_template.md`](templates/execution_queue_status_template.md)
 - [`templates/execution_adapter_record_template.md`](templates/execution_adapter_record_template.md)
@@ -144,6 +146,9 @@ Start from:
   decision を Startup で見直す一時状態です。
 - Commit / Push / Tag / Release / 削除 / 外部公開は Human Approval なしに
   実行しません。
+- CodexがCommit / Push / TagなどのRepository操作を推奨する場合、最終出力は
+  `Repository Recommendation -> Workflow Recommendation -> Approval Request`
+  の順で表示します。
 
 ## Artifact Creation Startup Enforcement
 
