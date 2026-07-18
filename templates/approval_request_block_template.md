@@ -103,7 +103,8 @@ Use this section only after valid Human Final Approval.
 - Approval State: Approved / Partially Approved / Invalidated / SCW Required
 - Next Output Type: Execution Instruction
 - Duplicate Approval Request: Prohibited
-- Execution Actor: Codex / Adapter / Human
+- Audience: Human
+- Intended Execution Actor: Codex / Adapter / Human
 
 ### Approved Units
 
@@ -119,14 +120,14 @@ Commit only:
 
 ```text
 Commit OKです。
-Codex側でCommitを実行してください。
+次に、人間側からCodexへCommit実行を依頼してください。
 ```
 
 Commit and Push:
 
 ```text
 CommitとPushはOKです。
-Codex側でCommitとPushを実行してください。
+次に、人間側からCodexへCommitとPushの実行を依頼してください。
 ```
 
 ### Execution Evidence Required

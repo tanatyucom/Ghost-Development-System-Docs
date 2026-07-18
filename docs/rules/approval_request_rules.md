@@ -37,8 +37,11 @@ Instruction, not a second Approval Request for the same unchanged Approval Unit.
 | Execution Evidence | Proof that approved execution happened. | Approval text alone is not evidence. |
 
 After Human Final Approval, ChatGPT coordinates the transition to governed
-execution by issuing an Execution Instruction to Codex or the approved Adapter.
-ChatGPT must not execute repository actions directly in this workflow.
+execution by presenting an Execution Instruction to the human. The human then
+requests execution from Codex or the approved Adapter.
+
+ChatGPT must not present the instruction as if ChatGPT directly commands Codex,
+and must not execute repository actions directly in this workflow.
 
 ## Recommendation Requirement
 
@@ -80,10 +83,11 @@ Execution Instruction is the governed output after valid Human Final Approval.
 It must:
 
 - acknowledge the valid approval;
+- clarify that the audience is the human;
 - mark only approved Approval Units as `Approved`;
 - keep unapproved Approval Units as `Hold`;
-- identify the execution actor: Codex / Adapter / Human;
-- instruct execution only for approved units;
+- identify the intended execution actor: Codex / Adapter / Human;
+- present the next human-facing execution request only for approved units;
 - require Execution Evidence after execution.
 
 Standard Commit-only wording:
@@ -94,7 +98,7 @@ Push: Hold
 Tag: Hold
 
 Commit OKです。
-Codex側でCommitを実行してください。
+次に、人間側からCodexへCommit実行を依頼してください。
 
 Execution Evidence Required
 ```
@@ -107,7 +111,7 @@ Push: Approved
 Tag: Hold
 
 CommitとPushはOKです。
-Codex側でCommitとPushを実行してください。
+次に、人間側からCodexへCommitとPushの実行を依頼してください。
 
 Execution Evidence Required
 ```
@@ -289,7 +293,8 @@ Do not:
 - ask for the same Approval Unit again after valid Human Final Approval;
 - output `コミットしても良いですか？` after Commit approval when repository state
   and approval scope are unchanged;
-- issue Execution Instruction without naming the execution actor;
+- issue Execution Instruction as if ChatGPT directly commands Codex;
+- issue Execution Instruction without naming the intended execution actor;
 - issue Execution Instruction without requiring Execution Evidence;
 - promote unapproved Approval Units to approved status;
 - report commit / push / tag complete without evidence;

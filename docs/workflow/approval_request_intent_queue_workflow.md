@@ -109,24 +109,28 @@ next output is Execution Instruction.
 
 Do not ask the same approval question again.
 
+The audience of Execution Instruction is the human. It is a human-facing
+handoff message that tells the human what to ask Codex or the approved Adapter
+to execute. It must not read as if ChatGPT directly commands Codex.
+
 Approval Request asks:
 
 ```text
 コミットしても良いですか？
 ```
 
-Execution Instruction instructs:
+Execution Instruction presents the next human-facing request:
 
 ```text
 Commit OKです。
-Codex側でCommitを実行してください。
+次に、人間側からCodexへCommit実行を依頼してください。
 ```
 
 Execution Instruction must include:
 
 - approved Approval Units;
 - held Approval Units;
-- execution actor;
+- intended execution actor;
 - scope lock;
 - evidence required after execution.
 
@@ -138,7 +142,7 @@ Push: Hold
 Tag: Hold
 
 Commit OKです。
-Codex側でCommitを実行してください。
+次に、人間側からCodexへCommit実行を依頼してください。
 
 Execution Evidence Required
 ```
@@ -151,7 +155,7 @@ Push: Approved
 Tag: Hold
 
 CommitとPushはOKです。
-Codex側でCommitとPushを実行してください。
+次に、人間側からCodexへCommitとPushの実行を依頼してください。
 
 Execution Evidence Required
 ```

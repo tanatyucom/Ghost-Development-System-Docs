@@ -68,7 +68,7 @@ ChatGPT
 Human
   -> Final Approval
 ChatGPT
-  -> Execution Instruction
+  -> Human-facing Execution Instruction
 Codex / Adapter
   -> Governed Execution
 Execution Evidence
@@ -79,8 +79,9 @@ Codex and ChatGPT provide recommendations only. Human approval owns the final
 decision to execute a visible Approval Unit.
 
 After Human Final Approval, ChatGPT owns the coordination output that tells the
-governed execution actor what was approved. This output is Execution
-Instruction. It is not a new Approval Request and it is not execution evidence.
+human what was approved and what to request from the governed execution actor.
+This output is Execution Instruction. It is not a new Approval Request, it is
+not a direct ChatGPT-to-Codex command, and it is not execution evidence.
 
 ## Required Flow
 
@@ -195,11 +196,14 @@ execution authority, and required evidence.
 Execution Instruction is the post-approval bridge from Human Final Approval to
 governed execution.
 
+Its audience is the human. It records the approved request and presents the
+next request that the human can give to Codex or the approved Adapter.
+
 It records:
 
 - approved units;
 - held units;
-- execution actor;
+- intended execution actor;
 - scope lock;
 - required execution evidence.
 
@@ -218,7 +222,7 @@ Push: Hold
 Tag: Hold
 
 Commit OKです。
-Codex側でCommitを実行してください。
+次に、人間側からCodexへCommit実行を依頼してください。
 
 Execution Evidence Required
 ```

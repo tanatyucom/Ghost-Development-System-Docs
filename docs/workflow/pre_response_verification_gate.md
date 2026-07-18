@@ -40,8 +40,10 @@ Artifact Generation / Documentation Update
 - If Human Final Approval already exists for the current Approval Request, the
   response uses Execution Instruction instead of repeating the same Approval
   Request.
-- Execution Instruction names the execution actor and required Execution
-  Evidence.
+- Execution Instruction is addressed to the human and does not read as a direct
+  ChatGPT-to-Codex command.
+- Execution Instruction names the intended execution actor and required
+  Execution Evidence.
 - Unapproved Approval Units remain Hold.
 - Scope creep check completed.
 - Constraint Check still valid.
@@ -76,7 +78,8 @@ Do not deliver a final response if:
 - The response asks for the same approval again after valid Human Final
   Approval and no invalidation occurred.
 - Execution Instruction is missing after valid Human Final Approval.
-- Execution Instruction omits actor or evidence requirements.
+- Execution Instruction omits human-facing audience, intended actor, or evidence
+  requirements.
 - Unapproved Approval Units are promoted to Approved.
 - Repository scope is unclear.
 - The requested output format is not satisfied.
@@ -101,6 +104,7 @@ Pre-Response Verification Gate:
 - Approval state:
 - Next output type:
 - Duplicate approval request:
+- Execution instruction audience:
 - Execution instruction evidence:
 - Constraint check:
 - Final response ready:

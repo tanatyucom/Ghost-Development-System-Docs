@@ -27,7 +27,8 @@
 - Approval State:
 - Next Output Type: Approval Request / Execution Instruction / Completion Confirmation / Other
 - Duplicate Approval Request:
-- Execution actor:
+- Execution Instruction audience:
+- Intended execution actor:
 - Execution Evidence required:
 - Unapproved Approval Units remain Hold:
 - Scope creep check:
