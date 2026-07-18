@@ -18,6 +18,10 @@ reports, and documentation requests can start from a clear reference.
   Commit / Push Status, Project Edit Status, Improvement Review, Lessons
   Learned, Reusable Assets Created, Remaining Issues, Recommended Next Q, and
   Suggested Commit Message.
+- `repository_recommendation_examples.md`: examples for Codex Repository
+  Recommendation blocks, including normal commit recommendation, validation
+  failure, mixed scope, push review, diverged branch, tag recommendation, stale
+  recommendation, and insufficient evidence.
 - `improvement_review.md`: example Improvement Review section.
 - `purpose_oriented_naming.md`: before and after examples for
   purpose-oriented naming.
@@ -152,6 +156,9 @@ what a complete, well-scoped document should feel like.
 - Use `good_completion_report.md` when reporting finished documentation work.
 - Use `completion_report_examples.md` when checking whether a Completion
   Report v2 is complete, reviewable, and safe to hand off.
+- Use `repository_recommendation_examples.md` when Codex needs to recommend
+  Commit, Push, or Tag to ChatGPT without implying Human Final Approval or
+  execution authority.
 - Use `improvement_review.md` when you need to separate near-term recommended
   improvements from future candidates.
 - Use `purpose_oriented_naming.md` when renaming roadmap items or public

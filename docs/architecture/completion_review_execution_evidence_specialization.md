@@ -26,6 +26,7 @@ Applies to:
 - Documentation update completion review.
 - Implementation completion review.
 - Completion Report readiness.
+- Repository Recommendation consumption.
 - Safe Commit Set review.
 - Commit / Push recommendation boundary.
 - Startup Evidence and Repository Quality Evidence consumption.
@@ -166,6 +167,27 @@ Completion Review should answer:
 ## Commit / Push Recommendation
 
 Commit and Push are sub-decisions, not automatic actions.
+
+Completion Review may consume a Codex Repository Recommendation as input, but
+must not treat it as Human Final Approval, Workflow Recommendation, Execution
+Instruction, or execution evidence for a future action.
+
+Repository Recommendation standard values:
+
+- `Recommended`
+- `Hold`
+- `Not Applicable`
+
+`Approved` is not a Repository Recommendation value.
+
+Repository Recommendation must provide repository, branch, request / Q,
+completion status, repository quality, scope review, repository state, remote
+state, safe commit set, validation summary, approval unit recommendations,
+reasons, known warnings, remaining issues, and the review boundary:
+
+```text
+ChatGPT Completion Review / Workflow Recommendation required.
+```
 
 Allowed recommendation values:
 

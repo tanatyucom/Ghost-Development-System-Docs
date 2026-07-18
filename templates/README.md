@@ -88,6 +88,11 @@ Operations, Recommended Follow-up Candidates, operation-specific approval
 prompts, intent interpretation, execution authority, scope lock, and execution
 evidence before commit / push / tag or chained follow-up work.
 
+Repository Recommendation Template standardizes the Codex-produced
+evidence-backed recommendation block that ChatGPT consumes for Completion
+Review and Workflow Recommendation. It keeps Commit, Push, and Tag independent
+and uses `Recommended`, `Hold`, and `Not Applicable` instead of approval values.
+
 Execution Queue Status Template records approval context, deliverables, Codex
 handoff, queue state, authority, dependencies, evidence reconciliation, SCW,
 and completion state after approval.
@@ -184,6 +189,7 @@ restore guidance.
 - `multi_ai_handoff_checklist_template.md`
 - `HANDOFF_TEMPLATE_V2.md`
 - `VISION_SCENARIO_TEMPLATE.md`
+- `repository_recommendation_template.md`
 - `approval_request_block_template.md`
 - `execution_queue_status_template.md`
 - `execution_adapter_record_template.md`

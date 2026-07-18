@@ -61,6 +61,17 @@ Repository Recommendation missing
 
 Recommendations are inputs to Human Approval. They are not approval.
 
+Repository Recommendation must use `Recommended`, `Hold`, or `Not Applicable`
+for Commit, Push, and Tag. It must not use `Approved`.
+
+Repository Recommendation must identify its Safe Commit Set, validation
+summary, repository state, remote state, known warnings, remaining issues, and
+handoff boundary before ChatGPT Completion Review / Workflow Recommendation.
+
+If the Repository Recommendation is stale, incomplete, or cannot separate a
+safe commit set from unrelated changes, use SCW and hold the affected Approval
+Unit.
+
 ## Workflow Recommendation As Approval Request
 
 A Workflow Recommendation can serve as the single Approval Request when it

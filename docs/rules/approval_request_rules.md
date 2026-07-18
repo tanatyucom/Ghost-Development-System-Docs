@@ -23,6 +23,20 @@ approval authority.
 
 Approval Request and Execution Instruction are separate governed outputs.
 
+Repository Recommendation is a Codex-produced recommendation based on
+repository state and execution evidence. It is not Human Final Approval,
+Workflow Recommendation, Execution Instruction, or permission to commit, push,
+or tag.
+
+Repository Recommendation approval unit values are:
+
+- `Recommended`
+- `Hold`
+- `Not Applicable`
+
+Do not use `Approved` in Repository Recommendation. `Approved` is reserved for
+Human Final Approval or an explicitly approved Approval Unit.
+
 Workflow Recommendation can act as the Approval Request when it visibly includes
 the required Approval Request fields, requested Approval Units, scope lock,
 recommendation basis, and approval prompt. In that case, the Workflow
@@ -64,6 +78,9 @@ Minimum recommendation types:
 If a required recommendation is missing, do not accept approval as valid.
 Use SCW or re-display the Approval Request with the missing recommendation.
 
+If Repository Recommendation evidence is incomplete, stale, or mixed-scope
+without a clear Safe Commit Set, the affected Approval Unit must be `Hold`.
+
 ## Approval Request Block Requirement
 
 Approval without a visible Approval Request Block is invalid for commit, push,
@@ -85,6 +102,15 @@ The block must identify:
 - repository state lock;
 - execution authority;
 - evidence required after execution.
+
+Repository Recommendation should hand off to ChatGPT with:
+
+```text
+ChatGPT Completion Review / Workflow Recommendation required.
+```
+
+It must not ask the human for approval and must not issue a Human-facing
+Execution Instruction.
 
 ## Execution Instruction Rule
 
@@ -299,6 +325,8 @@ Do not:
 
 - treat hidden candidates as approved;
 - treat a recommendation as final approval;
+- treat Repository Recommendation as Human Final Approval;
+- use `Approved` as a Repository Recommendation value;
 - treat Human Approval as execution evidence;
 - request approval for repository mutation without a visible Approval Request
   Block;

@@ -18,8 +18,19 @@
 - Commit: Recommended / Hold / Not Applicable
 - Push: Recommended / Hold / Not Applicable
 - Tag: Recommended / Hold / Not Applicable
+- Repository Quality: Green / Yellow / Red / Unknown
+- Scope Review: Clean / Mixed Scope / Unrelated Changes Detected / Unknown
+- Repository State: Clean / Dirty
+- Remote State: ahead / behind / diverged / up to date / unknown
+- Safe Commit Set:
+- Validation Summary:
+- Known Warnings:
+- Remaining Issues:
+- Review Boundary: ChatGPT Completion Review / Workflow Recommendation required.
 - Reason:
 - Missing Recommendation: Yes / No
+
+Repository Recommendation values must not use `Approved`.
 
 ## Workflow Recommendation
 

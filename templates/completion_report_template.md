@@ -171,6 +171,43 @@ git status --short --untracked-files=all
 Safe Commit Set must match Changed Files, or explain every exclusion.
 ```
 
+## Repository Recommendation
+
+Use `templates/repository_recommendation_template.md` for the canonical block.
+
+- Repository:
+- Branch:
+- Request / Q:
+- Completion Status: PASS / PASS WITH REVISIONS / HOLD / STOP
+- Repository Quality: Green / Yellow / Red / Unknown
+- Scope Review: Clean / Mixed Scope / Unrelated Changes Detected / Unknown
+- Repository State: Clean / Dirty
+- Remote State: ahead / behind / diverged / up to date / unknown
+- Safe Commit Set:
+- Validation Summary:
+  - AI Repository Index: PASS / FAIL / NOT RUN
+  - Encoding Regression: PASS / FAIL / NOT RUN
+  - Repository Quality Audit: PASS / FAIL / NOT RUN
+  - Git Diff Check: PASS / FAIL / NOT RUN
+- Approval Units:
+  - Commit: Recommended / Hold / Not Applicable
+  - Push: Recommended / Hold / Not Applicable
+  - Tag: Recommended / Hold / Not Applicable
+- Reasons:
+- Known Warnings:
+- Remaining Issues:
+- Review Boundary: ChatGPT Completion Review / Workflow Recommendation required.
+
+Rules:
+
+```text
+Repository Recommendation is not Human Final Approval.
+Repository Recommendation is not Workflow Recommendation.
+Repository Recommendation is not Execution Instruction.
+Repository Recommendation must not use Approved.
+Every Recommended action must be evidence-backed.
+```
+
 ## Commit / Push Status
 
 - Commit policy from Q:

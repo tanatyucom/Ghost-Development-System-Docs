@@ -78,6 +78,11 @@ Execution Evidence
 Codex and ChatGPT provide recommendations only. Human approval owns the final
 decision to execute a visible Approval Unit.
 
+Codex Repository Recommendation is the repository-state and evidence-backed
+input to ChatGPT Completion Review / Workflow Recommendation. It may recommend
+Commit, Push, or Tag as `Recommended`, `Hold`, or `Not Applicable`, but it must
+not use `Approved` and must not ask the human for approval.
+
 After Human Final Approval, ChatGPT owns the coordination output that tells the
 human what was approved and what to request from the governed execution actor.
 This output is Execution Instruction. It is not a new Approval Request, it is
@@ -195,6 +200,24 @@ Requested Operations
 
 Requested Operations must be visible before a short approval phrase can approve
 them.
+
+## Repository Recommendation
+
+Repository Recommendation is produced by Codex after implementation and
+verification. It summarizes repository state, remote state, validation,
+warnings, remaining issues, and the Safe Commit Set for ChatGPT review.
+
+Allowed approval unit recommendation values:
+
+- `Recommended`
+- `Hold`
+- `Not Applicable`
+
+`Approved` belongs to Human Final Approval, not Repository Recommendation.
+
+Repository Recommendation is invalidated when the diff, branch, HEAD,
+validation result, remote state, or unrelated workspace state changes after it
+was produced.
 
 ## Approval Units
 

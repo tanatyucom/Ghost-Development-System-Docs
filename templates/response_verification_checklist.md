@@ -24,6 +24,9 @@
 - Revision-first policy:
 - Human Approval boundary:
 - Commit / Push boundary:
+- Repository Recommendation boundary:
+- Repository Recommendation values:
+- Safe Commit Set evidence:
 - Approval State:
 - Workflow Recommendation served as Approval Request:
 - Next Output Type: Approval Request / Execution Instruction / Completion Confirmation / Other
