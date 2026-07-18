@@ -26,6 +26,16 @@ The registry answers:
 - which operations require Human Approval;
 - which evidence the actor must produce after execution.
 
+Capability integration:
+
+```text
+docs/registries/capability_authority_bindings.yaml
+```
+
+Execution Authority Registry defines what may be executed. Capability /
+Authority Binding Registry defines whether the required capability exists and
+is bound to the actor, scope, Approval Unit, and evidence requirement.
+
 ## Source Of Truth
 
 Machine-readable source:
@@ -110,6 +120,22 @@ Minimum rules:
 6. Recommendation Authority does not imply Execution Authority.
 7. Review Actor must not issue Approval Request unless it is also the
    registered Execution Actor for that Approval Unit.
+
+Additional execution readiness requires Capability / Authority binding:
+
+```text
+Capability does not grant Authority.
+Authority does not prove Capability.
+Execution requires both.
+```
+
+Additional execution readiness requires Capability / Authority binding:
+
+```text
+Capability does not grant Authority.
+Authority does not prove Capability.
+Execution requires both.
+```
 
 ## Lifecycle
 

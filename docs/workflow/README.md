@@ -58,6 +58,8 @@ gate.
   Registry, Approval Unit, actor authority, scope, Human Approval requirement,
   approval state, and evidence responsibility before Approval Request,
   execution, delegation, or SCW.
+  It also checks Capability / Authority bindings when execution or mutation is
+  involved.
 - `improvement_record_promotion_workflow.md`: workflow for turning observed
   operation gaps into Improvement Records, Promotion Candidates, and future
   standards without automatic approval or repository mutation.

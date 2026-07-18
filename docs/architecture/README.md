@@ -25,6 +25,9 @@ runtime behavior.
   Execution Authority Registry, its actor model, Approval Unit mapping,
   validation rules, lifecycle, and source-of-truth relationship to
   `docs/registries/execution_authority_registry.yaml`.
+- `capability_authority_integration.md`: architecture contract connecting
+  capability resolution and authority resolution, defining why execution
+  requires both active Capability and matching Authority.
 - `canonical_rule_gap_resolution.md`: decision boundary for resolving
   implementation-repository style findings as repository remediation, Local
   Rule candidates, Canonical Rule gaps, Temporary Assembly candidates, or Human

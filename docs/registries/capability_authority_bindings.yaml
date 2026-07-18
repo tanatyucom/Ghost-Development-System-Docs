@@ -1,0 +1,391 @@
+registry_id: gds.capability_authority_bindings
+version: "0.1"
+status: Draft
+last_updated: "2026-07-18"
+source_of_truth: docs/registries/capability_authority_bindings.yaml
+related_registries:
+  execution_authority_registry: docs/registries/execution_authority_registry.yaml
+human_readable:
+  architecture: docs/architecture/capability_authority_integration.md
+  schema: docs/standards/capability_authority_binding_schema.md
+  delegation_contract: docs/standards/capability_delegation_contract.md
+principle:
+  statement: Capability does not grant Authority. Authority does not prove Capability. Execution requires both.
+  statement_ja: "能力があることは、実行権限があることを意味しない。実行権限があることは、能力が実装されていることを意味しない。実行にはCapabilityとAuthorityの両方が必要である。"
+capability_classes:
+  - Observe
+  - Analyze
+  - Recommend
+  - ApprovalRequest
+  - Execute
+  - Mutate
+  - Evidence
+lifecycle_states:
+  - Draft
+  - Reviewed
+  - Approved
+  - Active
+  - Deprecated
+  - Revoked
+  - Archived
+capabilities:
+  - capability_id: review.completion
+    capability_name: Completion Review
+    provider: chatgpt.review_actor
+    provider_type: ReviewActor
+    capability_class: Analyze
+    lifecycle_status: Active
+    risk_level: Low
+    resource_scope: ContextDependent
+    input_contract: completion_report_or_evidence
+    output_contract: completion_review_result
+    evidence_capability: review.evidence
+  - capability_id: review.architecture
+    capability_name: Architecture Review
+    provider: chatgpt.review_actor
+    provider_type: ReviewActor
+    capability_class: Analyze
+    lifecycle_status: Active
+    risk_level: Low
+    resource_scope: ContextDependent
+    input_contract: design_or_architecture_artifact
+    output_contract: review_findings
+    evidence_capability: review.evidence
+  - capability_id: recommendation.workflow
+    capability_name: Workflow Recommendation
+    provider: codex.repository_execution_actor
+    provider_type: ExecutionActor
+    capability_class: Recommend
+    lifecycle_status: Active
+    risk_level: Low
+    resource_scope: CurrentWorkingRepository
+    input_contract: repository_recommendation_and_validation
+    output_contract: workflow_recommendation
+    evidence_capability: review.evidence
+  - capability_id: approval_request.commit
+    capability_name: Commit Approval Request
+    provider: codex.repository_execution_actor
+    provider_type: ExecutionActor
+    capability_class: ApprovalRequest
+    lifecycle_status: Active
+    risk_level: Medium
+    resource_scope: CurrentWorkingRepository
+    input_contract: safe_commit_set_and_validation
+    output_contract: approval_request
+    evidence_capability: approval.linkage_evidence
+  - capability_id: git.commit
+    capability_name: Git Commit
+    provider: codex.repository_execution_actor
+    provider_type: ExecutionActor
+    capability_class: Execute
+    lifecycle_status: Active
+    risk_level: Medium
+    resource_scope: CurrentWorkingRepository
+    input_contract: approved_commit_request
+    output_contract: commit_result
+    evidence_capability: evidence.commit_id_capture
+  - capability_id: git.push
+    capability_name: Git Push
+    provider: codex.repository_execution_actor
+    provider_type: ExecutionActor
+    capability_class: Execute
+    lifecycle_status: Active
+    risk_level: High
+    resource_scope: CurrentWorkingRepository
+    input_contract: approved_push_request
+    output_contract: push_result
+    evidence_capability: evidence.push_result_capture
+  - capability_id: git.tag
+    capability_name: Git Tag
+    provider: codex.repository_execution_actor
+    provider_type: ExecutionActor
+    capability_class: Execute
+    lifecycle_status: Active
+    risk_level: High
+    resource_scope: CurrentWorkingRepository
+    input_contract: approved_tag_request
+    output_contract: tag_result
+    evidence_capability: evidence.tag_result_capture
+  - capability_id: repository.file_mutation
+    capability_name: Repository File Mutation
+    provider: codex.repository_execution_actor
+    provider_type: ExecutionActor
+    capability_class: Mutate
+    lifecycle_status: Active
+    risk_level: Medium
+    resource_scope: CurrentQScope
+    input_contract: approved_or_in_scope_file_change
+    output_contract: changed_files_and_diff
+    evidence_capability: evidence.diff_summary
+  - capability_id: registry.update
+    capability_name: Registry Update
+    provider: codex.repository_execution_actor
+    provider_type: ExecutionActor
+    capability_class: Mutate
+    lifecycle_status: Active
+    risk_level: Medium
+    resource_scope: ApprovedRegistryScope
+    input_contract: registry_update_request
+    output_contract: registry_diff
+    evidence_capability: evidence.diff_summary
+  - capability_id: adapter.read_only
+    capability_name: Read-only Adapter
+    provider: adapter.read_only
+    provider_type: Adapter
+    capability_class: Observe
+    lifecycle_status: Draft
+    risk_level: Low
+    resource_scope: ExplicitReadScope
+    input_contract: read_request
+    output_contract: observation_evidence
+    evidence_capability: evidence.observation
+  - capability_id: automation.validation
+    capability_name: Automation Validation
+    provider: automation.conditional_actor
+    provider_type: AutomationActor
+    capability_class: Analyze
+    lifecycle_status: Draft
+    risk_level: Medium
+    resource_scope: ExplicitConfiguredScopeOnly
+    input_contract: validation_trigger
+    output_contract: validation_result
+    evidence_capability: evidence.validation_result
+bindings:
+  - binding_id: bind.chatgpt.review.completion
+    capability_id: review.completion
+    capability_provider: chatgpt.review_actor
+    execution_actor: chatgpt.review_actor
+    authority_type: Analyze
+    authority_registry_actor: chatgpt.review_actor
+    resource_scope: ContextDependent
+    approval_unit: NotApplicable
+    human_approval_requirement: NotApplicable
+    evidence_type:
+      - review_result
+    risk_level: Low
+    scw_conditions:
+      - repository_state_unavailable_but_execution_decision_requested
+    status: Active
+    source_of_truth:
+      - docs/workflow/capability_verification_first.md
+      - docs/registries/execution_authority_registry.yaml
+  - binding_id: bind.codex.approval_request.commit
+    capability_id: approval_request.commit
+    capability_provider: codex.repository_execution_actor
+    execution_actor: codex.repository_execution_actor
+    authority_type: RequestApproval
+    authority_registry_actor: codex.repository_execution_actor
+    resource_scope: CurrentWorkingRepository
+    approval_unit: Commit
+    human_approval_requirement: Required
+    evidence_type:
+      - approval_linkage
+      - safe_commit_set
+    risk_level: Medium
+    scw_conditions:
+      - safe_commit_set_unclear
+      - matching_execution_capability_missing
+      - matching_execution_authority_missing
+    status: Active
+    source_of_truth:
+      - docs/registries/execution_authority_registry.yaml
+      - docs/workflow/authority_validation_gate.md
+  - binding_id: bind.codex.git.commit
+    capability_id: git.commit
+    capability_provider: codex.repository_execution_actor
+    execution_actor: codex.repository_execution_actor
+    authority_type: Execute
+    authority_registry_actor: codex.repository_execution_actor
+    resource_scope: CurrentWorkingRepository
+    approval_unit: Commit
+    human_approval_requirement: Required
+    evidence_type:
+      - commit_id
+      - commit_message
+      - changed_file_scope
+      - validation_summary
+    risk_level: Medium
+    scw_conditions:
+      - approval_missing_or_stale
+      - capability_unavailable
+      - authority_missing
+      - scope_mismatch
+    status: Active
+    source_of_truth:
+      - docs/registries/execution_authority_registry.yaml
+      - docs/standards/git_adapter_registry_profile.md
+  - binding_id: bind.codex.git.push
+    capability_id: git.push
+    capability_provider: codex.repository_execution_actor
+    execution_actor: codex.repository_execution_actor
+    authority_type: Execute
+    authority_registry_actor: codex.repository_execution_actor
+    resource_scope: CurrentWorkingRepository
+    approval_unit: Push
+    human_approval_requirement: Required
+    evidence_type:
+      - remote
+      - branch_or_ref
+      - push_result
+      - pushed_commit_id
+    risk_level: High
+    scw_conditions:
+      - approval_missing_or_stale
+      - commit_identity_unknown
+      - remote_state_unknown
+    status: Active
+    source_of_truth:
+      - docs/registries/execution_authority_registry.yaml
+      - docs/standards/git_adapter_registry_profile.md
+  - binding_id: bind.codex.git.tag
+    capability_id: git.tag
+    capability_provider: codex.repository_execution_actor
+    execution_actor: codex.repository_execution_actor
+    authority_type: Execute
+    authority_registry_actor: codex.repository_execution_actor
+    resource_scope: CurrentWorkingRepository
+    approval_unit: Tag
+    human_approval_requirement: Required
+    evidence_type:
+      - tag_name
+      - target_commit_id
+      - tag_creation_result
+    risk_level: High
+    scw_conditions:
+      - approval_missing_or_stale
+      - tag_scope_unknown
+      - target_commit_unknown
+    status: Active
+    source_of_truth:
+      - docs/registries/execution_authority_registry.yaml
+      - docs/standards/git_adapter_registry_profile.md
+  - binding_id: bind.codex.file_mutation
+    capability_id: repository.file_mutation
+    capability_provider: codex.repository_execution_actor
+    execution_actor: codex.repository_execution_actor
+    authority_type: Mutate
+    authority_registry_actor: codex.repository_execution_actor
+    resource_scope: CurrentQScope
+    approval_unit: FileMutation
+    human_approval_requirement: RequiredForOutOfScopeOrHighRisk
+    evidence_type:
+      - changed_file_list
+      - diff_summary
+      - validation_summary
+    risk_level: Medium
+    scw_conditions:
+      - scope_mismatch
+      - related_repository_not_editable
+      - evidence_capability_missing
+    status: Active
+    source_of_truth:
+      - docs/rules/repository_root_validation_rules.md
+      - docs/rules/responsibility_assignment_rules.md
+  - binding_id: bind.codex.registry_update
+    capability_id: registry.update
+    capability_provider: codex.repository_execution_actor
+    execution_actor: codex.repository_execution_actor
+    authority_type: Mutate
+    authority_registry_actor: codex.repository_execution_actor
+    resource_scope: ApprovedRegistryScope
+    approval_unit: RegistryUpdate
+    human_approval_requirement: Required
+    evidence_type:
+      - registry_diff
+      - validation_summary
+    risk_level: Medium
+    scw_conditions:
+      - registry_scope_missing
+      - authority_binding_missing
+      - schema_unknown
+    status: Active
+    source_of_truth:
+      - docs/registries/execution_authority_registry.yaml
+      - docs/registries/capability_authority_bindings.yaml
+  - binding_id: bind.adapter.read_only.observe
+    capability_id: adapter.read_only
+    capability_provider: adapter.read_only
+    execution_actor: adapter.read_only
+    authority_type: Observe
+    authority_registry_actor: adapter.read_only
+    resource_scope: ExplicitReadScope
+    approval_unit: NotApplicable
+    human_approval_requirement: NotApplicableForReadOnly
+    evidence_type:
+      - observation_evidence
+    risk_level: Low
+    scw_conditions:
+      - mutation_requested
+      - write_capability_assumed
+    status: Draft
+    source_of_truth:
+      - docs/standards/adapter_registry_foundation.md
+  - binding_id: bind.automation.validation
+    capability_id: automation.validation
+    capability_provider: automation.conditional_actor
+    execution_actor: automation.conditional_actor
+    authority_type: Analyze
+    authority_registry_actor: automation.conditional_actor
+    resource_scope: ExplicitConfiguredScopeOnly
+    approval_unit: NotApplicable
+    human_approval_requirement: DependsOnActionClass
+    evidence_type:
+      - validation_result
+    risk_level: Medium
+    scw_conditions:
+      - action_class_unknown
+      - automation_authority_missing
+      - approval_requirement_unknown
+    status: Draft
+    source_of_truth:
+      - docs/registries/execution_authority_registry.yaml
+validation_rules:
+  - rule_id: capability_authority.execution_requires_both
+    statement: Execution requires Active Capability and Active Authority.
+    failure_result: BLOCKED_OR_SCW_REQUIRED
+  - rule_id: capability_authority.provider_matches_actor_or_delegate
+    statement: Capability Provider must match registered Execution Actor or delegated Tool.
+    failure_result: SCW_REQUIRED
+  - rule_id: capability_authority.scope_narrower_than_authority
+    statement: Capability Scope must be equal to or narrower than Authority Scope.
+    failure_result: SCW_REQUIRED
+  - rule_id: capability_authority.approval_request_requires_execution_binding
+    statement: Approval Request Capability requires matching Execution Capability and Execution Authority.
+    failure_result: SCW_REQUIRED
+  - rule_id: capability_authority.mutation_requires_authority_and_scope
+    statement: Mutation Capability requires Mutation Authority and defined Resource Scope.
+    failure_result: SCW_REQUIRED
+  - rule_id: capability_authority.high_risk_requires_human_mapping
+    statement: High-risk Capability requires Human Approval Mapping.
+    failure_result: BLOCKED_OR_SCW_REQUIRED
+  - rule_id: capability_authority.execution_requires_evidence_capability
+    statement: Execution Capability requires Evidence Capability or Evidence Provider.
+    failure_result: SCW_REQUIRED
+  - rule_id: capability_authority.deprecated_revoked_unknown_stop
+    statement: Deprecated, Revoked, or Unknown Capability requires SCW.
+    failure_result: SCW_REQUIRED
+  - rule_id: capability_authority.authority_without_capability
+    statement: Authority exists but Capability is missing.
+    failure_result: BLOCKED
+  - rule_id: capability_authority.capability_without_authority
+    statement: Capability exists but Authority is missing.
+    failure_result: SCW_REQUIRED
+resolution_matrix:
+  - capability_status: Available
+    authority_status: Allowed
+    result: Executable
+  - capability_status: Available
+    authority_status: ApprovalRequired
+    result: PendingApproval
+  - capability_status: Available
+    authority_status: Denied
+    result: SCW_REQUIRED
+  - capability_status: Unavailable
+    authority_status: Allowed
+    result: BLOCKED
+  - capability_status: Deprecated
+    authority_status: Allowed
+    result: SCW_REQUIRED
+  - capability_status: Unknown
+    authority_status: Unknown
+    result: SCW_REQUIRED

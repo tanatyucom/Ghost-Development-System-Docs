@@ -17,6 +17,7 @@
 | Filesystem write boundary | Test known workspace or use permission profile |  |  |  |
 | Tool availability | Confirm available tool or command |  |  |  |
 | Commit / Push authority | Q policy and human approval checked |  |  |  |
+| Capability / Authority binding | `docs/registries/capability_authority_bindings.yaml` and `docs/registries/execution_authority_registry.yaml` checked when execution or mutation is involved |  |  |  |
 | Connected service availability | Connector/tool availability checked |  |  |  |
 | Current chat limitations | Attachments/context checked |  |  |  |
 | Alternative workflow | Fallback defined |  |  |  |
@@ -48,4 +49,6 @@ Capability:
 - Capability verified before planning:
 - Capability disclosed before planning:
 - User approval needed before execution:
+- Capability and Authority both satisfied:
+- Capability / Authority mismatch:
 - Ready to plan:

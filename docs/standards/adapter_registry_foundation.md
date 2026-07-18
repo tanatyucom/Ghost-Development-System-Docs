@@ -53,10 +53,20 @@ source of truth:
 docs/registries/execution_authority_registry.yaml
 ```
 
+Capability / Authority Binding Registry connects adapter or tool capability to
+execution actor authority:
+
+```text
+docs/registries/capability_authority_bindings.yaml
+```
+
 Adapter Registry must not grant execution authority by itself. It describes
 adapter capability and availability. Authority Validation Gate must still check
 actor authority, Approval Unit, scope, Human Approval requirement, and Evidence
 Responsibility.
+
+Adapter capability is not executable unless a valid Capability / Authority
+binding exists.
 
 Capability records should identify:
 

@@ -25,6 +25,11 @@ workflow or template.
 - `approval_unit_authority_mapping.md`: human-readable Approval Unit mapping
   for Commit, Push, Tag, File Mutation, Repository Migration, External API
   Write, Data Deletion, Automation Activation, Release, and Deployment.
+- `capability_authority_binding_schema.md`: draft standard for binding
+  Capability ID, provider, Execution Actor, Authority Type, scope, Approval
+  Unit, Human Approval requirement, evidence, risk, SCW conditions, and status.
+- `capability_delegation_contract.md`: draft standard for Actor-to-tool
+  delegation where tool capability does not grant actor authority.
 - `git_execution_evidence_profile.md`: draft evidence profile for Git Commit,
   Push, Tag Create, and Tag Push.
 - `git_adapter_registry_profile.md`: draft Git-specific adapter and capability

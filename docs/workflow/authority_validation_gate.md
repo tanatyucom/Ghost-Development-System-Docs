@@ -13,12 +13,16 @@ It consumes:
 
 ```text
 docs/registries/execution_authority_registry.yaml
+docs/registries/capability_authority_bindings.yaml
 ```
 
 ## Standard Flow
 
 ```text
 Intent / Requested Action
+  -> Resolve Required Capability
+  -> Resolve Capability Provider
+  -> Check Capability Status
   -> Resolve Approval Unit
   -> Resolve Execution Actor
   -> Check Execution Authority
@@ -35,12 +39,15 @@ Intent / Requested Action
 Before Codex displays an Approval Request, confirm:
 
 - Codex or the selected actor is registered as the Execution Actor.
+- Required Capability is active or otherwise valid for the action.
+- Capability Provider matches the Execution Actor or delegated Tool.
 - The Approval Unit is known.
 - The actor has matching Execution Authority.
 - The actor has Approval Request Authority for that unit.
 - Human Approval requirement is known.
 - Repository or resource scope matches the current Q.
 - Evidence responsibility is defined.
+- Evidence Capability or Evidence Provider exists.
 
 If any check fails, do not show the Approval Request. Use SCW with the missing
 or conflicting authority reason.
@@ -52,6 +59,8 @@ Before execution or delegation, confirm:
 - Human Approval exists when required.
 - Approval scope matches the requested action.
 - Execution Actor matches the registry.
+- Required Capability is available.
+- Capability scope is equal to or narrower than authority scope.
 - Mutation scope is defined.
 - Adapter or tool authority is known.
 - Evidence contract is available.
@@ -68,11 +77,25 @@ Unknown, conflicting, or stale authority blocks execution.
 | `BLOCKED` | Known violation. | Stop and report. |
 | `SCW_REQUIRED` | Authority, scope, approval, or evidence is unclear. | Stop / Call / Wait. |
 
+## Capability / Authority Results
+
+| Capability | Authority | Result |
+| --- | --- | --- |
+| Available | Allowed | `AUTHORIZED_FOR_EXECUTION` |
+| Available | Approval Required | `AUTHORIZED_FOR_APPROVAL_REQUEST` or `PENDING_APPROVAL` |
+| Available | Denied | `SCW_REQUIRED` |
+| Unavailable | Allowed | `BLOCKED` |
+| Deprecated | Allowed | `SCW_REQUIRED` |
+| Unknown | Unknown | `SCW_REQUIRED` |
+
 ## SCW Conditions
 
 Use SCW when:
 
 - Approval Unit cannot be resolved.
+- Required Capability cannot be resolved.
+- Capability exists but Authority is missing.
+- Deprecated, Revoked, or Unknown Capability is selected.
 - Execution Actor is missing from the registry.
 - Approval Request Actor is not the registered Execution Actor or governed
   execution surface.

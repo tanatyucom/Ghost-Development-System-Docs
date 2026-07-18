@@ -30,6 +30,10 @@ Reference points:
   `docs/architecture/execution_authority_registry.md`
 - Execution Authority Registry Source:
   `docs/registries/execution_authority_registry.yaml`
+- Capability / Authority Integration:
+  `docs/architecture/capability_authority_integration.md`
+- Capability / Authority Binding Source:
+  `docs/registries/capability_authority_bindings.yaml`
 - Approval Unit Authority Mapping:
   `docs/standards/approval_unit_authority_mapping.md`
 - North Star:
