@@ -60,6 +60,7 @@ this roadmap update.
 
 - Metadata Center.
 - Repository Intelligence Center shared contracts.
+- Evidence-Driven Platform Promotion Pattern.
 - Capability-driven Provider Selection.
 - Identity Locale and Canonical Policy.
 - Provider Capability Registry.
@@ -154,6 +155,23 @@ A Center Pattern candidate can move toward platform standard review only after:
 - result contracts are documented;
 - validation artifacts are reproducible;
 - SDK candidates are compared before extraction.
+
+## Governance Pattern Candidates
+
+Evidence-Driven Platform Promotion Pattern is registered as an Architecture
+Pattern Candidate, not as an official platform pattern.
+
+Candidate role:
+
+- preserve the Steam OCR promotion evidence as a reusable governance pattern;
+- define Repository Adoption as a required gate before shared guidance;
+- require multiple-domain validation before official promotion;
+- keep implementation, SDK extraction, automatic promotion, commit, push, tag,
+  and release outside this roadmap entry.
+
+Reference:
+
+- `docs/architecture/patterns/evidence_driven_platform_promotion_pattern.md`
 
 ## Guardrails
 

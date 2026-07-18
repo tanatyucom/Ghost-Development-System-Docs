@@ -11,6 +11,7 @@ from:
 - [`docs/architecture/canonical_rule_gap_resolution.md`](docs/architecture/canonical_rule_gap_resolution.md)
 - [`docs/architecture/local_rule_ownership.md`](docs/architecture/local_rule_ownership.md)
 - [`docs/architecture/platform_governance_and_experimental_development.md`](docs/architecture/platform_governance_and_experimental_development.md)
+- [`docs/architecture/patterns/evidence_driven_platform_promotion_pattern.md`](docs/architecture/patterns/evidence_driven_platform_promotion_pattern.md)
 - [`docs/architecture/platform_candidate_workspace.md`](docs/architecture/platform_candidate_workspace.md)
 - [`docs/architecture/adapter_only_execution_policy_review.md`](docs/architecture/adapter_only_execution_policy_review.md)
 - [`docs/architecture/authority_driven_responsibility_principle.md`](docs/architecture/authority_driven_responsibility_principle.md)

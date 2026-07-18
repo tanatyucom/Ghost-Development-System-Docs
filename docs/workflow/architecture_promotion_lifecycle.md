@@ -101,6 +101,7 @@ Stop when:
 ## Related Documents
 
 - `docs/architecture/platform_governance_and_experimental_development.md`
+- `docs/architecture/patterns/evidence_driven_platform_promotion_pattern.md`
 - `docs/rules/platform_governance_rules.md`
 - `docs/adr/README.md`
 - `docs/workflow/innovation_pipeline_workflow.md`

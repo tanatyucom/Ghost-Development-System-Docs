@@ -204,3 +204,4 @@ Required distinctions:
 - `docs/architecture/product_document_hierarchy_v2.md`
 - `docs/architecture/platform_discoverability_and_component_standard.md`
 - `docs/architecture/platform_first_migration_strategy.md`
+- `docs/architecture/patterns/evidence_driven_platform_promotion_pattern.md`

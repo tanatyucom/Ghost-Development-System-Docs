@@ -20,6 +20,10 @@ Reference points:
 - Completion Report Template: `templates/completion_report_template.md`
 - Repository Intelligence Dashboard Foundation:
   `docs/architecture/repository_intelligence_dashboard_foundation.md`
+- Architecture Pattern Candidates:
+  `docs/architecture/patterns/README.md`
+- Evidence-Driven Platform Promotion Pattern:
+  `docs/architecture/patterns/evidence_driven_platform_promotion_pattern.md`
 - Canonical Rule Gap Resolution:
   `docs/architecture/canonical_rule_gap_resolution.md`
 - Local Rule Ownership:

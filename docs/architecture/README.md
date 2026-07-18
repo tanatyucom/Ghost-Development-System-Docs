@@ -160,6 +160,12 @@ runtime behavior.
   Temporary Assembly Principle, Core + Adapter Experimental Pattern,
   Architecture Promotion Lifecycle, Canonical Knowledge Ownership, Local Rule
   lifecycle, and Vision-Driven Bottom-Up Development.
+- `patterns/README.md`: index for Architecture Pattern Candidates that have
+  repository evidence but are not yet official GDS patterns.
+- `patterns/evidence_driven_platform_promotion_pattern.md`: Evidence-Driven
+  Platform Promotion Pattern candidate for promoting reusable architecture from
+  field-project evidence through Repository Adoption and multiple-domain
+  validation.
 - `review_center_architecture.md`: Review Center architecture for shared human
   review session management, artifact presentation, decision capture,
   persistence, result export, gate readiness, and plugin / adapter boundary.

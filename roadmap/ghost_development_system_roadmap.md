@@ -158,6 +158,12 @@ remaining issues, and recommended next work.
   package discovery, package registry, and multi-AI package handoff, but does
   not approve package scanner, registry runtime, ZIP validation automation, or
   Command Center package browser implementation.
+- Current Architecture Pattern Candidate Direction: Evidence-Driven Platform
+  Promotion Pattern is registered as a candidate based on Steam OCR evidence.
+  It records how field-project evidence can become reusable platform knowledge
+  through Repository Adoption and multiple-domain validation, but it is not an
+  official GDS pattern and does not approve implementation or promotion by
+  itself.
 - Next Milestone: After OCR, extract SDK requirements, design SDK Foundation,
   formalize Project Adoption, and issue Platform Foundation Release only after
   exit criteria are met.
@@ -373,6 +379,7 @@ Future Platform Candidates:
 
 - Metadata Center.
 - Repository Intelligence Center shared contracts.
+- Evidence-Driven Platform Promotion Pattern.
 - Capability-driven Provider Selection.
 - Provider Capability Registry.
 - Reviewable Result Contract.
@@ -395,6 +402,9 @@ Guard:
 - This roadmap update does not approve provider API integration.
 - This roadmap update does not approve metadata write, DB write, automatic
   repair, or automatic promotion.
+- Evidence-Driven Platform Promotion Pattern remains a governance-principle
+  candidate until multiple-domain validation and Human Architecture Review
+  approve official pattern promotion.
 - Platform promotion still requires a later Q, validation evidence, and Human
   Approval where required.
 
