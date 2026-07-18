@@ -25,6 +25,7 @@
 - Human Approval boundary:
 - Commit / Push boundary:
 - Approval State:
+- Workflow Recommendation served as Approval Request:
 - Next Output Type: Approval Request / Execution Instruction / Completion Confirmation / Other
 - Duplicate Approval Request:
 - Execution Instruction audience:

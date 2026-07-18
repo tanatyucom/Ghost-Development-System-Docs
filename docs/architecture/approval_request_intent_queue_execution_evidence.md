@@ -115,6 +115,27 @@ Review Result
 | `INVALIDATED` | Repository state, validation state, scope, or candidate set changed after presentation. |
 | `SCW_REQUIRED` | Stop / Call / Wait is required because intent or scope is unsafe. |
 
+## Workflow Recommendation As Approval Request
+
+Workflow Recommendation may act as the Approval Request when it contains the
+required visible approval fields: recommendation basis, requested operations,
+Approval Units, scope lock, validation summary, repository state lock, and the
+operation-specific approval prompt.
+
+In this mode, the approval surface is:
+
+```text
+Workflow Recommendation / Approval Request
+  -> Human Final Approval
+  -> Execution Instruction
+```
+
+The system must not insert a second approval prompt between Human Final
+Approval and Execution Instruction unless the prior approval was invalidated.
+
+This is a UX simplification only. It does not change approval authority,
+execution authority, scope lock, SCW, or evidence requirements.
+
 ## Execution State
 
 | State | Meaning |

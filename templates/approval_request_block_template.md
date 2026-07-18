@@ -27,6 +27,12 @@
 - Recommended Action:
 - Reason:
 - Missing Recommendation: Yes / No
+- Serves as Approval Request: Yes / No
+- Approval Request Fields Complete: Yes / No
+
+If `Serves as Approval Request` is `Yes`, Human Final Approval of this Workflow
+Recommendation is the single approval point. Do not ask the same approval
+question again after approval; proceed to Execution Instruction.
 
 ## Requested Operations
 
@@ -95,6 +101,9 @@ Use exactly one operation-specific prompt:
 If the required Repository Recommendation or Workflow Recommendation is
 missing, do not ask for approval. Use SCW or re-display the block after the
 missing recommendation is available.
+
+If this prompt was already displayed as part of an approval-capable Workflow
+Recommendation and the human approved it, do not display it again.
 
 ## Execution Instruction
 

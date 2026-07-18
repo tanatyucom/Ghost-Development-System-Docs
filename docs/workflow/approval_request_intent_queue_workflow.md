@@ -27,7 +27,7 @@ It prevents these common mistakes:
 4. Requested Operations identified
 5. Approval Units identified
 6. Recommended Follow-up Candidates disclosed
-7. Approval Request Block shown
+7. Approval Request Block shown, or embedded in Workflow Recommendation
 8. Human response resolved
 9. Approval state checked
 10. Execution Instruction issued when approval is valid
@@ -60,6 +60,33 @@ Repository Recommendation missing
 ```
 
 Recommendations are inputs to Human Approval. They are not approval.
+
+## Workflow Recommendation As Approval Request
+
+A Workflow Recommendation can serve as the single Approval Request when it
+visibly includes:
+
+- Repository Recommendation or its missing-state;
+- Workflow Recommendation result;
+- Requested Operations;
+- Approval Units;
+- Safe Commit Set or operation scope;
+- validation summary;
+- repository state lock;
+- operation-specific approval prompt.
+
+When the human approves that Workflow Recommendation, treat it as Human Final
+Approval for the visible Approval Units. Do not generate a separate duplicate
+Approval Request.
+
+```text
+Workflow Recommendation
+  -> Human Final Approval
+  -> Execution Instruction
+```
+
+If any required approval field is missing, the Workflow Recommendation is not
+enough. Use SCW or re-display the Approval Request with the missing fields.
 
 ## Candidate Disclosure
 
@@ -113,7 +140,7 @@ The audience of Execution Instruction is the human. It is a human-facing
 handoff message that tells the human what to ask Codex or the approved Adapter
 to execute. It must not read as if ChatGPT directly commands Codex.
 
-Approval Request asks:
+Approval Request, including an approval-capable Workflow Recommendation, asks:
 
 ```text
 コミットしても良いですか？
@@ -163,6 +190,10 @@ Execution Evidence Required
 If repository state, approval scope, branch, validation, or changed files
 materially changed after approval, do not issue Execution Instruction. Invalidate
 the approval and create a new Approval Request through SCW.
+
+If the human already approved the approval-capable Workflow Recommendation,
+asking `コミットしても良いですか？` again is a duplicate approval prompt and must be
+blocked by the Pre-Response Verification Gate.
 
 ## Approval Unit Handling
 
@@ -267,6 +298,7 @@ Completion Report must record:
 - execution evidence;
 - whether post-approval output was Execution Instruction;
 - duplicate approval request check result;
+- whether Workflow Recommendation served as the Approval Request;
 - unresolved items;
 - recommended next Q;
 - commit / push / tag status.

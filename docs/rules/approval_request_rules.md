@@ -23,6 +23,11 @@ approval authority.
 
 Approval Request and Execution Instruction are separate governed outputs.
 
+Workflow Recommendation can act as the Approval Request when it visibly includes
+the required Approval Request fields, requested Approval Units, scope lock,
+recommendation basis, and approval prompt. In that case, the Workflow
+Recommendation is the single approval point.
+
 After valid Human Final Approval, the next ChatGPT output must be an Execution
 Instruction, not a second Approval Request for the same unchanged Approval Unit.
 
@@ -65,6 +70,11 @@ Approval without a visible Approval Request Block is invalid for commit, push,
 tag, release, canonical promotion, destructive changes, or cross-repository
 mutation.
 
+The required block may be presented as a standalone Approval Request Block or
+embedded inside a Workflow Recommendation. Do not require a second approval
+prompt when the Workflow Recommendation already served as the visible Approval
+Request and the human approved it.
+
 The block must identify:
 
 - recommendation source;
@@ -79,6 +89,10 @@ The block must identify:
 ## Execution Instruction Rule
 
 Execution Instruction is the governed output after valid Human Final Approval.
+
+When the human approves a Workflow Recommendation that includes the required
+Approval Request fields, the next output is Execution Instruction. Do not ask
+`コミットしても良いですか？` again for the same unchanged Approval Unit.
 
 It must:
 
@@ -291,6 +305,8 @@ Do not:
 - accept approval when the required Repository Recommendation or Workflow
   Recommendation is missing;
 - ask for the same Approval Unit again after valid Human Final Approval;
+- ask for the same approval again after the human approved a Workflow
+  Recommendation that already served as the Approval Request;
 - output `コミットしても良いですか？` after Commit approval when repository state
   and approval scope are unchanged;
 - issue Execution Instruction as if ChatGPT directly commands Codex;
