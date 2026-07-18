@@ -42,6 +42,21 @@ the required Approval Request fields, requested Approval Units, scope lock,
 recommendation basis, and approval prompt. In that case, the Workflow
 Recommendation is the single approval point.
 
+Workflow Recommendation is ChatGPT's human-facing recommendation after
+Completion Review. It is not Codex Repository Recommendation, Human Final
+Approval, Execution Instruction, repository action execution, or Execution
+Evidence.
+
+Workflow Recommendation values before Human Final Approval are:
+
+- `Recommended`
+- `Hold`
+- `Not Applicable`
+- `Completed`
+
+`Approved` must not be asserted in Workflow Recommendation before Human Final
+Approval. `Completed` requires valid Execution Evidence.
+
 After valid Human Final Approval, the next ChatGPT output must be an Execution
 Instruction, not a second Approval Request for the same unchanged Approval Unit.
 
@@ -326,7 +341,11 @@ Do not:
 - treat hidden candidates as approved;
 - treat a recommendation as final approval;
 - treat Repository Recommendation as Human Final Approval;
+- treat Workflow Recommendation as Human Final Approval before the human
+  approves it;
 - use `Approved` as a Repository Recommendation value;
+- use `Approved` in Workflow Recommendation before Human Final Approval;
+- use `Completed` without valid Execution Evidence;
 - treat Human Approval as execution evidence;
 - request approval for repository mutation without a visible Approval Request
   Block;

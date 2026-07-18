@@ -93,6 +93,11 @@ evidence-backed recommendation block that ChatGPT consumes for Completion
 Review and Workflow Recommendation. It keeps Commit, Push, and Tag independent
 and uses `Recommended`, `Hold`, and `Not Applicable` instead of approval values.
 
+Workflow Recommendation Template standardizes the ChatGPT-produced
+human-facing recommendation block after Completion Review. It records Current
+Step, Approval Unit state, recommendation, reason, next human action, audience,
+and responsibility boundary without implying direct ChatGPT execution.
+
 Execution Queue Status Template records approval context, deliverables, Codex
 handoff, queue state, authority, dependencies, evidence reconciliation, SCW,
 and completion state after approval.
@@ -190,6 +195,7 @@ restore guidance.
 - `HANDOFF_TEMPLATE_V2.md`
 - `VISION_SCENARIO_TEMPLATE.md`
 - `repository_recommendation_template.md`
+- `workflow_recommendation_template.md`
 - `approval_request_block_template.md`
 - `execution_queue_status_template.md`
 - `execution_adapter_record_template.md`

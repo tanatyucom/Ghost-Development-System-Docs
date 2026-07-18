@@ -38,6 +38,9 @@ Artifact Generation / Documentation Update
 - Commit / Push boundary respected.
 - Approval state checked before generating approval or execution wording.
 - Whether Workflow Recommendation already served as the Approval Request.
+- Workflow Recommendation Current Step is explicit when a workflow next-step
+  recommendation is shown.
+- Workflow Recommendation state vocabulary matches responsibility ownership.
 - If Human Final Approval already exists for the current Approval Request, the
   response uses Execution Instruction instead of repeating the same Approval
   Request.
@@ -80,6 +83,8 @@ Do not deliver a final response if:
   Approval and no invalidation occurred.
 - The response asks for approval again after the human approved a Workflow
   Recommendation that already served as the Approval Request.
+- Workflow Recommendation asserts `Approved` before Human Final Approval.
+- Workflow Recommendation asserts `Completed` without valid Execution Evidence.
 - Execution Instruction is missing after valid Human Final Approval.
 - Execution Instruction omits human-facing audience, intended actor, or evidence
   requirements.
@@ -106,6 +111,8 @@ Pre-Response Verification Gate:
 - Commit / Push boundary:
 - Approval state:
 - Workflow Recommendation served as Approval Request:
+- Workflow Recommendation current step:
+- Workflow Recommendation state vocabulary:
 - Next output type:
 - Duplicate approval request:
 - Execution instruction audience:

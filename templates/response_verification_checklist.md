@@ -27,12 +27,15 @@
 - Repository Recommendation boundary:
 - Repository Recommendation values:
 - Safe Commit Set evidence:
+- Workflow Recommendation Current Step:
+- Workflow Recommendation state vocabulary:
 - Approval State:
 - Workflow Recommendation served as Approval Request:
 - Next Output Type: Approval Request / Execution Instruction / Completion Confirmation / Other
 - Duplicate Approval Request:
 - Execution Instruction audience:
 - Intended execution actor:
+- Next human action:
 - Execution Evidence required:
 - Unapproved Approval Units remain Hold:
 - Scope creep check:

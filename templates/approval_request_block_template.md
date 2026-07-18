@@ -35,11 +35,17 @@ Repository Recommendation values must not use `Approved`.
 ## Workflow Recommendation
 
 - Completion Review Result:
+- Current Step: Approval Request / Execution Instruction / Execution Pending / Execution Evidence Review / Hold / Stop / Completed
 - Recommended Action:
 - Reason:
+- Next Human Action:
+- Boundary:
 - Missing Recommendation: Yes / No
 - Serves as Approval Request: Yes / No
 - Approval Request Fields Complete: Yes / No
+
+Use `templates/workflow_recommendation_template.md` for the canonical
+human-facing Workflow Recommendation block.
 
 If `Serves as Approval Request` is `Yes`, Human Final Approval of this Workflow
 Recommendation is the single approval point. Do not ask the same approval

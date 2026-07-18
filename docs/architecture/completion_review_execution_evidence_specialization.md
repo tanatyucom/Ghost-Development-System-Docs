@@ -27,6 +27,7 @@ Applies to:
 - Implementation completion review.
 - Completion Report readiness.
 - Repository Recommendation consumption.
+- Workflow Recommendation production.
 - Safe Commit Set review.
 - Commit / Push recommendation boundary.
 - Startup Evidence and Repository Quality Evidence consumption.
@@ -163,6 +164,26 @@ Completion Review should answer:
 - Are non-target projects untouched or explicitly documented?
 - Are remaining issues separated from future candidates?
 - Is there exactly one recommended next Q when useful?
+
+## Workflow Recommendation Binding
+
+Workflow Recommendation is produced after Completion Review. It should confirm:
+
+- Q objective satisfied;
+- changed scope matches request;
+- Safe Commit Set is credible;
+- validation evidence is sufficient;
+- repository quality is acceptable;
+- warnings and remaining issues are correctly classified;
+- no prohibited action occurred;
+- recommendation state is fresh enough to use;
+- responsibility vocabulary is correct.
+
+A `PASS` result does not automatically require Commit recommendation.
+
+`HOLD` or `STOP` must not produce an executable Approval Request. Use Hold,
+Stop, or SCW when repository state, evidence, scope, audience, or next action
+is ambiguous.
 
 ## Commit / Push Recommendation
 

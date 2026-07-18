@@ -38,6 +38,8 @@ Reference points:
   `templates/approval_request_block_template.md`
 - Repository Recommendation Template:
   `templates/repository_recommendation_template.md`
+- Workflow Recommendation Template:
+  `templates/workflow_recommendation_template.md`
 - Runtime Intent Queue Resolver:
   `docs/architecture/runtime_intent_queue_resolver.md`
 - Governed Execution Adapter Foundation:

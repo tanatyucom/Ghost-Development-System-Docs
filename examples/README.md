@@ -22,6 +22,11 @@ reports, and documentation requests can start from a clear reference.
   Recommendation blocks, including normal commit recommendation, validation
   failure, mixed scope, push review, diverged branch, tag recommendation, stale
   recommendation, and insufficient evidence.
+- `workflow_recommendation_examples.md`: examples for ChatGPT Workflow
+  Recommendation blocks, including approval request mode, execution instruction
+  mode, missing pending request, independent approval units, stale state, mixed
+  scope, audience wording, duplicate approval prompt, tag independence, and
+  UTF-8 display false positives.
 - `improvement_review.md`: example Improvement Review section.
 - `purpose_oriented_naming.md`: before and after examples for
   purpose-oriented naming.
@@ -159,6 +164,9 @@ what a complete, well-scoped document should feel like.
 - Use `repository_recommendation_examples.md` when Codex needs to recommend
   Commit, Push, or Tag to ChatGPT without implying Human Final Approval or
   execution authority.
+- Use `workflow_recommendation_examples.md` when ChatGPT needs to convert
+  Completion Review and Codex Repository Recommendation into a human-facing
+  Workflow Recommendation or Execution Instruction.
 - Use `improvement_review.md` when you need to separate near-term recommended
   improvements from future candidates.
 - Use `purpose_oriented_naming.md` when renaming roadmap items or public

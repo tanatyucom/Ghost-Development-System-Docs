@@ -99,6 +99,27 @@ Workflow Recommendation
 If any required approval field is missing, the Workflow Recommendation is not
 enough. Use SCW or re-display the Approval Request with the missing fields.
 
+Workflow Recommendation must show `Current Step` using one of:
+
+- `Approval Request`
+- `Execution Instruction`
+- `Execution Pending`
+- `Execution Evidence Review`
+- `Hold`
+- `Stop`
+- `Completed`
+
+Before Human Final Approval, Workflow Recommendation may use `Recommended`,
+`Hold`, `Not Applicable`, or `Completed`. It must not assert `Approved`.
+After Human Final Approval, Execution Instruction may use `Approved`.
+
+`Completed` requires valid Execution Evidence. A PASS Completion Review does
+not automatically require Commit recommendation.
+
+When mapping from Codex Repository Recommendation, ChatGPT must review evidence
+and scope instead of mechanically copying values. Codex `Hold` must not become
+Workflow `Recommended` without new evidence and explicit reason.
+
 ## Candidate Disclosure
 
 Before asking for approval, show:
@@ -310,6 +331,8 @@ Completion Report must record:
 - whether post-approval output was Execution Instruction;
 - duplicate approval request check result;
 - whether Workflow Recommendation served as the Approval Request;
+- Workflow Recommendation Current Step;
+- Workflow Recommendation audience and next human action;
 - unresolved items;
 - recommended next Q;
 - commit / push / tag status.

@@ -141,6 +141,47 @@ Approval and Execution Instruction unless the prior approval was invalidated.
 This is a UX simplification only. It does not change approval authority,
 execution authority, scope lock, SCW, or evidence requirements.
 
+## Workflow Recommendation
+
+Workflow Recommendation is produced by ChatGPT after Completion Review. It is a
+human-facing recommendation and next-step surface.
+
+It must not be treated as:
+
+- Codex Repository Recommendation;
+- Human Final Approval;
+- Execution Instruction after approval;
+- repository action execution;
+- Execution Evidence.
+
+It must declare `Current Step`:
+
+- `Approval Request`
+- `Execution Instruction`
+- `Execution Pending`
+- `Execution Evidence Review`
+- `Hold`
+- `Stop`
+- `Completed`
+
+Before Human Final Approval, allowed unit values are:
+
+- `Recommended`
+- `Hold`
+- `Not Applicable`
+- `Completed`
+
+After Human Final Approval, Execution Instruction may use:
+
+- `Approved`
+- `Hold`
+- `Not Applicable`
+- `Completed`
+
+`Completed` requires valid Execution Evidence. `Approved` requires Human Final
+Approval. ChatGPT must not copy Repository Recommendation values mechanically;
+it must confirm evidence, scope, freshness, and responsibility boundaries.
+
 ## Execution State
 
 | State | Meaning |

@@ -208,6 +208,33 @@ Repository Recommendation must not use Approved.
 Every Recommended action must be evidence-backed.
 ```
 
+## Workflow Recommendation
+
+Use `templates/workflow_recommendation_template.md` for the canonical block
+when ChatGPT Completion Review produces a human-facing next-step
+recommendation.
+
+- Current Step: Approval Request / Execution Instruction / Execution Pending / Execution Evidence Review / Hold / Stop / Completed
+- Completion Review: PASS / PASS WITH REVISIONS / HOLD / STOP
+- Approval Units:
+  - Commit: Recommended / Approved / Hold / Not Applicable / Completed
+  - Push: Recommended / Approved / Hold / Not Applicable / Completed
+  - Tag: Recommended / Approved / Hold / Not Applicable / Completed
+- Recommendation:
+- Reason:
+- Next Human Action:
+- Boundary:
+
+Rules:
+
+```text
+Workflow Recommendation is not Repository Recommendation.
+Workflow Recommendation is not Human Final Approval.
+Approved is used only after Human Final Approval.
+Completed requires valid Execution Evidence.
+Workflow Recommendation can serve as the single Approval Request when all visible Approval Units requiring judgment are shown.
+```
+
 ## Commit / Push Status
 
 - Commit policy from Q:
