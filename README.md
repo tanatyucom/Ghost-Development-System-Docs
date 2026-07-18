@@ -166,6 +166,10 @@ Start from:
 - CodexがCommit / Push / TagなどのRepository操作を推奨する場合、最終出力は
   `Repository Recommendation -> Workflow Recommendation -> Approval Request`
   の順で表示します。
+- ChatGPTがCompletion Reviewのみを行い、Commit実行はCodexへ依頼する運用では、
+  Commit可能判定だけで新しいApproval Requestを作りません。Human Approval後は
+  `ChatGPTとしてはCommit OKです。人間側からCodexへCommit実行を依頼してください。`
+  というExecution Instructionで終えます。
 
 ## Artifact Creation Startup Enforcement
 

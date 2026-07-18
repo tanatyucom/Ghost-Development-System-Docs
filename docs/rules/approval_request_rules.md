@@ -89,6 +89,13 @@ Approval. `Completed` requires valid Execution Evidence.
 After valid Human Final Approval, the next ChatGPT output must be an Execution
 Instruction, not a second Approval Request for the same unchanged Approval Unit.
 
+When ChatGPT is acting only as a Completion Review or Independent Review actor
+and cannot execute the repository mutation itself, it must not create a new
+Approval Request merely because Commit is eligible. It should report Commit
+eligibility, Safe Commit Set, and Suggested Commit Message, or, after valid
+Human Final Approval, output a human-facing Execution Instruction that tells
+the human to ask Codex to execute the approved Commit.
+
 ## Responsibility Boundaries
 
 | Actor / Layer | Responsibility | Boundary |
@@ -179,6 +186,11 @@ When the human approves a Workflow Recommendation that includes the required
 Approval Request fields, the next output is Execution Instruction. Do not ask
 `コミットしても良いですか？` again for the same unchanged Approval Unit.
 
+If ChatGPT is the current actor and the approved action must be executed by
+Codex, ChatGPT's Execution Instruction must be addressed to the human. It must
+not imply that ChatGPT can directly execute Commit, Push, or Tag, and must not
+ask the same approval question again.
+
 It must:
 
 - acknowledge the valid approval;
@@ -196,8 +208,19 @@ Commit: Approved
 Push: Hold
 Tag: Hold
 
-Commit OKです。
-次に、人間側からCodexへCommit実行を依頼してください。
+Execution Instruction
+
+ChatGPTとしてはCommit OKです。
+
+Commitする場合は、
+
+人間側からCodexへCommit実行を依頼してください。
+
+推奨コミットメッセージ
+
+<suggested commit message>
+
+Push / Tag は Hold のままです。
 
 Execution Evidence Required
 ```
@@ -217,6 +240,44 @@ Execution Evidence Required
 
 After valid approval, asking the same approval question again is prohibited
 unless the approval was invalidated.
+
+## Approval Request Generation Suppression
+
+Do not generate a Human Approval Request when all of the following are true:
+
+- the current actor is ChatGPT or another non-executing review actor;
+- the current task is Completion Review, Independent Review, or review of a
+  Codex Completion Report;
+- the output is Commit eligibility, Safe Commit Set, or Suggested Commit
+  Message;
+- execution must be requested separately from Codex, an Adapter, or the human;
+- no repository mutation will be executed by the current actor.
+
+In this case, use `Commit OK` plus the human-facing Codex handoff wording
+instead of asking `コミットしても良いですか？`.
+
+Root cause of past regressions:
+
+- `Approval Request` remained the canonical next block whenever Commit was
+  recommended.
+- The positive ChatGPT handoff wording was present only as an example, not as
+  a suppression rule.
+- Templates still contained operation-specific approval prompts without first
+  checking whether the current actor could execute the approved action.
+
+Correct separation:
+
+```text
+Commit eligible
+!=
+Approval Request required
+
+Commit approved for ChatGPT review
+->
+Execution Instruction to the human
+->
+Human asks Codex to execute
+```
 
 ## Candidate First
 

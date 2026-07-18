@@ -154,6 +154,11 @@ missing recommendation is available.
 If this prompt was already displayed as part of an approval-capable Workflow
 Recommendation and the human approved it, do not display it again.
 
+Do not use these prompts when ChatGPT is only performing Completion Review or
+Independent Review and cannot execute the repository mutation. In that case,
+use Execution Instruction after valid approval, or report Commit eligibility
+without creating an Approval Request.
+
 ## Execution Instruction
 
 Use this section only after valid Human Final Approval.
@@ -177,8 +182,19 @@ Use this section only after valid Human Final Approval.
 Commit only:
 
 ```text
-Commit OKです。
-次に、人間側からCodexへCommit実行を依頼してください。
+Execution Instruction
+
+ChatGPTとしてはCommit OKです。
+
+Commitする場合は、
+
+人間側からCodexへCommit実行を依頼してください。
+
+推奨コミットメッセージ
+
+<suggested commit message>
+
+Push / Tag は Hold のままです。
 ```
 
 Commit and Push:

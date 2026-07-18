@@ -161,6 +161,11 @@ Transition directly to Execution Instruction.
 
 Use this mode only after Human Final Approval.
 
+Use this mode when ChatGPT or another non-executing review actor has confirmed
+Commit eligibility and the human has already approved Commit. In that case,
+do not generate a new Approval Request. Show the human-facing handoff to Codex
+instead.
+
 ```text
 Completion Review
 
@@ -178,15 +183,45 @@ Approval Units:
 - Tag: Hold
 
 Execution Instruction:
-CodexとしてはCommit OKです。
+ChatGPTとしてはCommit OKです。
 
 Commitする場合は、
 人間側からCodexへCommit実行を依頼してください。
 
+推奨コミットメッセージ
+
+<suggested commit message>
+
+Push / Tag は Hold のままです。
+
 Boundary:
-Codexは人間向けの実行依頼文を提示しています。Human Final ApprovalなしにCommitは実行しません。
+ChatGPTは人間向けの実行依頼文を提示しています。ChatGPT自身はCommitを実行しません。
 Execution Evidence is required after Codex execution.
 ```
+
+### ChatGPT Commit Handoff Standard
+
+When ChatGPT reviews a Codex Completion Report and the correct outcome is
+Commit OK, use this wording:
+
+```text
+Execution Instruction
+
+ChatGPTとしてはCommit OKです。
+
+Commitする場合は、
+
+人間側からCodexへCommit実行を依頼してください。
+
+推奨コミットメッセージ
+
+<suggested commit message>
+
+Push / Tag は Hold のままです。
+```
+
+Do not add `コミットしても良いですか？` to this output. ChatGPT is not the
+execution actor in this workflow.
 
 ## Mapping From Repository Recommendation
 

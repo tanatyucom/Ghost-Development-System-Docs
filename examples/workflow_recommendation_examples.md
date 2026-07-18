@@ -47,7 +47,14 @@ Execution Instruction:
 ChatGPTとしてはCommit OKです。
 
 Commitする場合は、
+
 人間側からCodexへCommit実行を依頼してください。
+
+推奨コミットメッセージ
+
+docs: define approval runtime state machine
+
+Push / Tag は Hold のままです。
 ```
 
 Do not ask `コミットしても良いですか？` again.
@@ -176,6 +183,24 @@ Correct:
 Workflow Recommendation
 -> Human approval
 -> Execution Instruction
+```
+
+Correct ChatGPT output:
+
+```text
+Execution Instruction
+
+ChatGPTとしてはCommit OKです。
+
+Commitする場合は、
+
+人間側からCodexへCommit実行を依頼してください。
+
+推奨コミットメッセージ
+
+docs: define approval runtime state machine
+
+Push / Tag は Hold のままです。
 ```
 
 ## Case 11: Tag Independence
