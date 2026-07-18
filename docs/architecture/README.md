@@ -38,6 +38,10 @@ runtime behavior.
   Adapter, Registry Adapter, Handoff / Completion Adapter, and the AI Project
   Manager model for current priority, workflow progression, approval state,
   deferred items, next Q recommendation, and handoff coordination.
+- `command_center_working_context_model.md`: architecture candidate defining
+  Working Context as a generated operational view for Command Center. It
+  clarifies contents, refresh triggers, lifecycle, storage policy, and
+  repository source-of-truth boundaries without approving implementation.
 - `design_intent_preservation.md`: architecture for preserving why a design
   exists, what experience it should produce, and what must not be lost during
   generation-to-generation or tool-to-tool handoff.
@@ -250,6 +254,11 @@ or missing context, not for perfect memory retention.
   boundary. It may scan repository documents, assemble Information Packages,
   route to Knowledge Dashboard or Editor, surface Repository Health, and draft
   Q / review / completion / registry update artifacts through templates.
+- Command Center Working Context Model owns the derived operational view
+  boundary for Current Priority, Current Focus, Current Mission, Active Q,
+  Repository Health, Approval Status, Completion Review Status, Deferred Items,
+  Blocking Issues, and Recommended Next Action. It does not own repository
+  truth, approval, or execution.
 - Artifact Schema Standard owns the common documentation schema for artifacts
   generated or managed by Command Center, Template Engine, Decision Engine, and
   future Ghost SDK candidates.
@@ -515,6 +524,7 @@ Do not use this folder to approve Future Candidates by implication.
 - `docs/architecture/platform_discoverability_and_component_standard.md`
 - `docs/architecture/platform_first_migration_strategy.md`
 - `docs/architecture/repository_intelligence_dashboard_foundation.md`
+- `docs/architecture/command_center_working_context_model.md`
 - `docs/architecture/review_center_architecture.md`
 - `docs/architecture/gds_core_ai_actor_adapter_boundary.md`
 - `docs/architecture/git_execution_adapter_vertical_slice.md`

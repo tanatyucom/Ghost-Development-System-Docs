@@ -449,6 +449,11 @@ Workflow progression、Current Mission、Information Package、Repository
 Intelligence、Next Q、Handoff を整理し、人間が次の判断をしやすくする
 coordination capability です。
 
+Working Context は、Command Center がこの判断面を表示するための generated
+operational view です。Repository、Repository Context Evidence、Completion
+Report、Approval Request、Repository Quality、Roadmap、Current Mission から
+生成される要約であり、repository source of truth にはなりません。
+
 Architecture direction:
 
 ```text
@@ -488,6 +493,11 @@ Core responsibilities:
   BootstrapとStartupで同期されたrepository contextを使い、current priority、
   current focus、deferred items、workflow state、approval state、completion
   review status、handoff、next Q candidateを整理する。
+- Working Context:
+  Current Priority、Current Focus、Current Mission、Active Q、Repository
+  Health、Approval Status、Completion Review Status、Deferred Items、
+  Blocking Issues、Recommended Next Actionを、repository evidenceから生成される
+  operational viewとして整理する。
 
 Phase 1 boundary:
 
@@ -496,14 +506,16 @@ Phase 1 boundary:
   evidence-backedに表示・整理する。
 - Command CenterはWorking Contextを組み立てて表示できるが、canonical source of
   truthにはならない。
+- Working Contextは原則として一時的に生成し、handoff、approval packet、
+  completion reviewなど監査上必要な場合のみsource evidence付きで保存する。
 - Current Priorityの自動生成はcandidateに留め、Human Reviewなしにpriorityやscopeを
   変更しない。
 
 Future boundary:
 
 - Repository Intelligence integration、priority scoring、Approval Center、
-  Execution Queue visualization、Dashboard / UI、runtime adapter orchestrationは
-  別QとHuman Approval Gateを必要とする。
+  Execution Queue visualization、Working Context package format、Dashboard / UI、
+  runtime adapter orchestrationは別QとHuman Approval Gateを必要とする。
 
 Auto Q Generation:
 
@@ -516,6 +528,8 @@ Guard:
 
 - Command Center は Human Approval を置き換えない。
 - Command Center は repository source of truth を置き換えない。
+- Working Context は repository source of truth、Repository Context Evidence、
+  Human Approval、Execution Evidence を置き換えない。
 - Command Center は GameGhost など field project の runtime 責務を所有しない。
 - Command Center は Bootstrap または Startup を置き換えない。
 - Command Center は Codex や Execution Adapter の実行責務を所有しない。

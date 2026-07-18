@@ -88,6 +88,8 @@ Reference points:
   `docs/research/research_registry.md`
 - Ghost Research Template:
   `templates/ghost_research_template.md`
+- Command Center Working Context Model:
+  `docs/architecture/command_center_working_context_model.md`
 
 Core flow:
 
@@ -248,6 +250,12 @@ Command Center may use this boundary as an AI Project Manager surface for
 current priority, workflow progression, approval state, deferred items, next Q
 recommendation, and handoff. It does not replace Bootstrap, Startup, Human
 Approval, Codex execution, or Execution Adapters.
+
+Working Context is the generated operational view used by Command Center. It
+may summarize Current Priority, Current Focus, Current Mission, Active Q,
+Repository Health, Approval Status, Completion Review Status, Deferred Items,
+Blocking Issues, and Recommended Next Action, but repository documents and
+evidence remain the Single Source of Truth.
 
 Recommendation is not Action. Short approval phrases approve only the latest
 explicit Pending Action when repository, operation, scope, diff, and state are

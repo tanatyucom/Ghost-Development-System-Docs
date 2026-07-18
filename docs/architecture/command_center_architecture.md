@@ -27,6 +27,8 @@ ownership, and human approval responsibilities.
 
 - Command Center is a Repository Orchestrator, not only an Auto Q Generator.
 - Command Center is an AI Project Manager candidate, not merely a dashboard.
+- Working Context is a generated operational view, not a repository source of
+  truth.
 - Auto Q Generation is one Command Center capability.
 - Information Package is the standard artifact for current repository state.
 - Repository remains the Single Source of Truth.
@@ -117,6 +119,45 @@ Canonical source of truth.
 
 When Working Context conflicts with repository sources, Command Center must
 rebuild context from repository evidence or route to SCW.
+
+Detailed model:
+
+- `docs/architecture/command_center_working_context_model.md`
+
+### Working Context Contents
+
+Working Context may summarize:
+
+- Current Priority.
+- Current Focus.
+- Current Mission.
+- Active Q.
+- Repository Health.
+- Approval Status.
+- Completion Review Status.
+- Deferred Items.
+- Blocking Issues.
+- Recommended Next Action.
+
+These fields are derived from repository state, Q artifacts, Repository Context
+Evidence, quality evidence, approval evidence, completion reports, roadmap
+state, and human decisions. They are not independent canonical records.
+
+### Working Context Refresh Triggers
+
+Command Center should rebuild or invalidate Working Context when:
+
+- Startup completes;
+- Repository Context Evidence changes;
+- relevant repository files change;
+- Repository Quality or AI Repository Index state changes;
+- Completion Review completes;
+- Approval state changes;
+- Current Mission or Active Q changes;
+- blocker / SCW state changes.
+
+If refresh cannot prove freshness from repository evidence, Working Context must
+be labeled stale, partial, or blocked.
 
 ## System Context
 
@@ -877,6 +918,7 @@ Review this specification for:
 ## Related Documents
 
 - `roadmap/ghost_development_system_roadmap.md`
+- `docs/architecture/command_center_working_context_model.md`
 - `docs/architecture/responsibility_boundary.md`
 - `docs/architecture/README.md`
 - `templates/information_package_template.md`
