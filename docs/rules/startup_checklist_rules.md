@@ -404,12 +404,14 @@ Startup Checklist は、既存 Knowledge を増やすためではなく、既存
 - `docs/rules/research_mission_rules.md`
 - `docs/rules/conversation_insight_capture_rules.md`
 - `docs/rules/memory_candidate_rules.md`
+- `docs/workflow/memory_candidate_operation_guide.md`
 - `docs/architecture/context_aware_knowledge_suggestion_assistant.md`
 - `templates/startup_checklist_template.md`
 - `templates/startup_verification_checklist.md`
 - `templates/research_mission_template.md`
 - `templates/conversation_insight_template.md`
 - `templates/memory_candidate_template.md`
+- `templates/memory_candidate_review_checklist.md`
 - `templates/information_package_template.md`
 - `examples/startup_checklist_examples.md`
 - `docs/rules/project_rules.md`

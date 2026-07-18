@@ -556,10 +556,12 @@ Startup Checklist:
 - `docs/workflow/research_mission_workflow.md`
 - `docs/workflow/conversation_insight_capture_workflow.md`
 - `docs/workflow/memory_candidate_workflow.md`
+- `docs/workflow/memory_candidate_operation_guide.md`
 - `docs/architecture/context_aware_knowledge_suggestion_assistant.md`
 - `templates/research_mission_template.md`
 - `templates/conversation_insight_template.md`
 - `templates/memory_candidate_template.md`
+- `templates/memory_candidate_review_checklist.md`
 - `docs/ai_repository_index.md`
 - `project_profiles/README.md`
 - `templates/startup_checklist_template.md`

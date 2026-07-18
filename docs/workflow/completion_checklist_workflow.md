@@ -190,8 +190,10 @@ Completion Checklist:
 - `docs/workflow/pending_conversation_insight_review_workflow.md`
 - `docs/rules/pending_conversation_insight_review_rules.md`
 - `docs/workflow/memory_candidate_workflow.md`
+- `docs/workflow/memory_candidate_operation_guide.md`
 - `docs/rules/memory_candidate_rules.md`
 - `templates/memory_candidate_template.md`
+- `templates/memory_candidate_review_checklist.md`
 - `docs/workflow/pre_response_verification_gate.md`
 - `examples/completion_report_examples.md`
 - `templates/review_checklist.md`

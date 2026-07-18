@@ -99,6 +99,9 @@ reports, and documentation requests can start from a clear reference.
 - `pending_conversation_insight_examples.md`: good and bad examples for
   temporarily holding conversation-origin ideas, next-day review, Codex
   execution restriction, and cleanup confirmation.
+- `memory_candidate_examples.md`: good and bad examples for creating,
+  reviewing, promoting, deferring, and closing Memory Candidates without using
+  them as canonical or implementation authority.
 - `platform_promotion_decision_report_examples.md`: examples for Promote,
   Revise, Reject, and Archive decisions after Innovation Pipeline validation.
 - `platform_standard_registry_examples.md`: examples for Candidate to
@@ -257,6 +260,9 @@ what a complete, well-scoped document should feel like.
 - Use `pending_conversation_insight_examples.md` when a conversation reveals a
   promising idea but immediate registration, Q化, or Codex execution should be
   deferred until next Startup or Human Review.
+- Use `memory_candidate_examples.md` when deciding whether conversation-born
+  knowledge should become an MC, be rejected as low-value, be marked duplicate,
+  or be promoted without treating MC as canonical authority.
 - Use `platform_promotion_decision_report_examples.md` when deciding whether a
   validated Innovation Pipeline item should be promoted, revised, rejected, or
   archived.

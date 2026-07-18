@@ -561,6 +561,7 @@ Start from:
 - [`docs/workflow/pending_conversation_insight_review_workflow.md`](docs/workflow/pending_conversation_insight_review_workflow.md)
 - [`docs/rules/memory_candidate_rules.md`](docs/rules/memory_candidate_rules.md)
 - [`docs/workflow/memory_candidate_workflow.md`](docs/workflow/memory_candidate_workflow.md)
+- [`docs/workflow/memory_candidate_operation_guide.md`](docs/workflow/memory_candidate_operation_guide.md)
 - [`docs/knowledge/conversation_insights/README.md`](docs/knowledge/conversation_insights/README.md)
 - [`docs/knowledge/conversation_insights/pending/README.md`](docs/knowledge/conversation_insights/pending/README.md)
 - [`docs/knowledge/memory_candidates/README.md`](docs/knowledge/memory_candidates/README.md)
@@ -571,6 +572,8 @@ Start from:
 - [`templates/conversation_insight_template.md`](templates/conversation_insight_template.md)
 - [`templates/pending_conversation_insight_template.md`](templates/pending_conversation_insight_template.md)
 - [`templates/memory_candidate_template.md`](templates/memory_candidate_template.md)
+- [`templates/memory_candidate_review_checklist.md`](templates/memory_candidate_review_checklist.md)
+- [`examples/memory_candidate_examples.md`](examples/memory_candidate_examples.md)
 - [`examples/conversation_insight_examples.md`](examples/conversation_insight_examples.md)
 - [`examples/pending_conversation_insight_examples.md`](examples/pending_conversation_insight_examples.md)
 

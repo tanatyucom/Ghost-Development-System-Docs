@@ -416,6 +416,7 @@
 - `docs/rules/research_mission_rules.md`
 - `docs/rules/conversation_insight_capture_rules.md`
 - `docs/rules/memory_candidate_rules.md`
+- `docs/workflow/memory_candidate_operation_guide.md`
 - `docs/workflow/research_mission_workflow.md`
 - `docs/workflow/conversation_insight_capture_workflow.md`
 - `docs/workflow/memory_candidate_workflow.md`
@@ -424,6 +425,7 @@
 - `templates/conversation_insight_template.md`
 - `templates/pending_conversation_insight_template.md`
 - `templates/memory_candidate_template.md`
+- `templates/memory_candidate_review_checklist.md`
 - `templates/information_package_template.md`
 - `docs/README.md`
 - `docs/rules/rules.md`

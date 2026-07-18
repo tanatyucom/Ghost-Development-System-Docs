@@ -105,7 +105,10 @@ Review decision:
 ## Related Documents
 
 - `docs/rules/memory_candidate_rules.md`
+- `docs/workflow/memory_candidate_operation_guide.md`
 - `templates/memory_candidate_template.md`
+- `templates/memory_candidate_review_checklist.md`
+- `examples/memory_candidate_examples.md`
 - `docs/knowledge/memory_candidates/README.md`
 - `docs/rules/completion_checklist_rules.md`
 - `docs/workflow/completion_checklist_workflow.md`

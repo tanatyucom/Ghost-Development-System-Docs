@@ -41,7 +41,10 @@ MC-00003
 
 - Rule: `docs/rules/memory_candidate_rules.md`
 - Workflow: `docs/workflow/memory_candidate_workflow.md`
+- Operation Guide: `docs/workflow/memory_candidate_operation_guide.md`
 - Template: `templates/memory_candidate_template.md`
+- Review Checklist: `templates/memory_candidate_review_checklist.md`
+- Examples: `examples/memory_candidate_examples.md`
 
 ## Future Candidate
 

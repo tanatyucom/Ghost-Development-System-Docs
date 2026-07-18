@@ -170,6 +170,8 @@ gate.
   knowledge as temporary Memory Candidates, triaging it to Memory / Q /
   Repository Knowledge, and closing or deferring it without treating it as
   canonical authority.
+- `memory_candidate_operation_guide.md`: daily operation guide for deciding
+  when to create, review, promote, defer, or close Memory Candidates.
 - `platform_registry_update_artifact_storage.md`: storage location, naming
   rule, and management workflow for Platform Registry Update Artifacts.
 - `auto_registry_update_from_promotion_report.md`: workflow design for

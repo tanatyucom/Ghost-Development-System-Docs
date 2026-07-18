@@ -937,8 +937,14 @@ Reference points:
   `docs/rules/memory_candidate_rules.md`
 - Workflow:
   `docs/workflow/memory_candidate_workflow.md`
+- Operation Guide:
+  `docs/workflow/memory_candidate_operation_guide.md`
 - Template:
   `templates/memory_candidate_template.md`
+- Review Checklist:
+  `templates/memory_candidate_review_checklist.md`
+- Examples:
+  `examples/memory_candidate_examples.md`
 - Storage:
   `docs/knowledge/memory_candidates/README.md`
 
@@ -1156,7 +1162,9 @@ Reference points:
 - Template: `templates/startup_checklist_template.md`
 - Memory Candidate Rules: `docs/rules/memory_candidate_rules.md`
 - Memory Candidate Workflow: `docs/workflow/memory_candidate_workflow.md`
+- Memory Candidate Operation Guide: `docs/workflow/memory_candidate_operation_guide.md`
 - Memory Candidate Template: `templates/memory_candidate_template.md`
+- Memory Candidate Review Checklist: `templates/memory_candidate_review_checklist.md`
 - Examples: `examples/startup_checklist_examples.md`
 - Rules Index: `docs/rules/rules.md`
 - Workflow Index: `docs/workflow/README.md`
@@ -1194,7 +1202,9 @@ Reference points:
 - Template: `templates/completion_checklist_template.md`
 - Memory Candidate Rules: `docs/rules/memory_candidate_rules.md`
 - Memory Candidate Workflow: `docs/workflow/memory_candidate_workflow.md`
+- Memory Candidate Operation Guide: `docs/workflow/memory_candidate_operation_guide.md`
 - Memory Candidate Template: `templates/memory_candidate_template.md`
+- Memory Candidate Review Checklist: `templates/memory_candidate_review_checklist.md`
 - Examples: `examples/completion_checklist_examples.md`
 - Completion Report Template: `templates/completion_report_template.md`
 - Review Checklist: `templates/review_checklist.md`

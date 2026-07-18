@@ -78,6 +78,8 @@ Memory Candidate templates help humans and AI capture conversation-born
 knowledge that may be lost before it becomes Memory, Q, or Repository
 Knowledge. They keep MC items temporary, reviewable, and clearly separated
 from Canonical Knowledge.
+The Memory Candidate Review Checklist supports daily creation, promotion,
+deferred review, and close decisions.
 
 Daily operation checklist templates help humans and AI record the whole AI
 Daily Operation Cycle from startup through Current Q Review, implementation,
@@ -184,6 +186,7 @@ restore guidance.
 - `conversation_insight_template.md`
 - `pending_conversation_insight_template.md`
 - `memory_candidate_template.md`
+- `memory_candidate_review_checklist.md`
 - `platform_promotion_decision_report_template.md`
 - `platform_registry_update_template.md`
 - `adr_template.md`

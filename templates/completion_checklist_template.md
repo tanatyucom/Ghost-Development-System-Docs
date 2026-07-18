@@ -240,7 +240,9 @@ Required sections checked:
 - `docs/workflow/completion_checklist_workflow.md`
 - `docs/rules/memory_candidate_rules.md`
 - `docs/workflow/memory_candidate_workflow.md`
+- `docs/workflow/memory_candidate_operation_guide.md`
 - `templates/memory_candidate_template.md`
+- `templates/memory_candidate_review_checklist.md`
 - `docs/ai_repository_index.md`
 - `docs/rules/external_source_access_rules.md`
 - `docs/rules/q_file_naming_rules.md`

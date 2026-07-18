@@ -474,6 +474,7 @@ Checklist 自体が再利用、レビュー、Git 管理対象になる場合は
 - `docs/rules/conversation_insight_capture_rules.md`
 - `docs/rules/pending_conversation_insight_review_rules.md`
 - `docs/rules/memory_candidate_rules.md`
+- `docs/workflow/memory_candidate_operation_guide.md`
 - `docs/workflow/research_mission_workflow.md`
 - `docs/workflow/conversation_insight_capture_workflow.md`
 - `docs/workflow/pending_conversation_insight_review_workflow.md`
@@ -483,6 +484,7 @@ Checklist 自体が再利用、レビュー、Git 管理対象になる場合は
 - `templates/conversation_insight_template.md`
 - `templates/pending_conversation_insight_template.md`
 - `templates/memory_candidate_template.md`
+- `templates/memory_candidate_review_checklist.md`
 - `templates/information_package_template.md`
 - `templates/startup_checklist_template.md`
 - `templates/startup_verification_checklist.md`
