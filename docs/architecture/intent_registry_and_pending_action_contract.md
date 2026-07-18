@@ -2,7 +2,7 @@
 
 **Status:** Draft Contract Foundation
 
-**Last Updated:** 2026-07-17
+**Last Updated:** 2026-07-18
 
 ## Purpose
 
@@ -20,8 +20,26 @@ LLM classification, Git execution, or Command Center UI.
 | Workflow | Intent を安全に処理するための標準手順。 |
 | Recommendation | 根拠付きの提案。Actionではない。 |
 | Pending Action | Human Approval待ちの一意な操作候補。 |
+| Pending Decision | 会話で承認されたが、まだcanonical repository assetへ統合されていない一時decision record。 |
 | Approval | 人間が特定Pending Actionを承認すること。 |
 | Action | 承認後に実行される具体操作。 |
+
+## Pending Decision Boundary
+
+Pending Decision and Pending Action are different.
+
+| Type | Owns | Does Not Own |
+| --- | --- | --- |
+| Pending Decision | Temporary review of conversation-approved but not-yet-canonical decisions. | Operation approval or execution. |
+| Pending Action | Human approval wait state for a specific operation. | Canonical architecture decision memory. |
+
+Pending Decision must not be resolved as execution approval. A short approval
+phrase such as `お願いします` can approve only a valid Pending Action, not a
+Pending Decision.
+
+Pending Decision can create a follow-up Q, ADR, Rule, Workflow, Roadmap update,
+or archive decision, but only through the appropriate workflow and Human
+Approval.
 
 ## Initial Intent Registry
 

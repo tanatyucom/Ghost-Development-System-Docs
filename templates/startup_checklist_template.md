@@ -57,6 +57,12 @@
 - Q naming rules checked:
 - Scope / Out of Scope confirmed:
 - Outstanding Review Notification checked:
+- Pending Decision Review checked:
+- Pending Decision items:
+- Pending Decision related to current project:
+- Pending Decision status:
+- Pending Decision integration target:
+- Pending Decision next action:
 - Pending Insight Review checked:
 - Pending Insight items:
 - Pending Insight related to current project:
@@ -216,6 +222,7 @@
 - Current Project Profile checked:
 - Current Roadmap checked:
 - Conversation Insights checked:
+- Pending Decisions checked:
 - Future Candidates checked:
 - Research Missions checked:
 - Improvement Records checked:
@@ -235,6 +242,11 @@
 - Pending Insight review value:
 - Pending Insight recommended action:
 - Pending Insight decision:
+- Pending Decision Notification needed: Yes / No
+- Pending Decision items:
+- Pending Decision review value:
+- Pending Decision recommended action:
+- Pending Decision decision:
 - Related Knowledge Suggestions needed: Yes / No
 - Related Knowledge Suggestions:
 - Reviewed / Approved Knowledge re-suggested:

@@ -16,6 +16,7 @@ Rule / Architecture / Workflow へ昇格できる状態にすることです。
 Conversation
   -> Conversation Insight Candidate
   -> Pending Insight, when immediate decision should be deferred
+  -> Pending Decision, when a conversation-approved decision is not yet canonical
   -> Human Approval To Draft
   -> Conversation Insight Artifact
   -> Review
@@ -105,6 +106,42 @@ docs/knowledge/conversation_insights/pending/
 
 Details follow `docs/workflow/pending_conversation_insight_review_workflow.md`.
 
+## Pending Decision Branch
+
+Pending Decision は、Conversation Insight や Pending Insight とは別に、
+会話で人間が承認した設計判断がまだ canonical repository asset に統合されて
+いない場合に使う一時review stateです。
+
+Use this branch when:
+
+- a concrete architecture / workflow / governance decision was approved in
+  conversation;
+- the decision has not yet been integrated into Rule, Workflow, Architecture,
+  Roadmap, ADR, Q, or another canonical artifact;
+- losing the decision across chat boundaries would cause rediscovery or
+  repeated review.
+
+Do not use Pending Decision for:
+
+- vague insight or philosophy without a concrete decision;
+- action approval waiting for execution, which is Pending Action;
+- implementation request, which should become a Q;
+- accepted ADR or already canonical document.
+
+Pending Decision lifecycle:
+
+```text
+Conversation Decision
+  -> Human Approval To Record
+  -> Pending Decision
+  -> Startup Review
+  -> Classification
+  -> Canonical Integration / Rejected / Superseded / Archived
+```
+
+Pending Decision must never become a second canonical repository. It exists
+only until integrated, rejected, superseded, or archived.
+
 ## Candidate Criteria
 
 Conversation Insight Candidate として提案してよい条件:
@@ -175,6 +212,20 @@ Every Conversation Insight artifact should record:
 - Human approval.
 - Review result.
 - Recommended next action.
+
+Pending Decision records should include:
+
+- Decision ID.
+- Title.
+- Source Conversation.
+- Human Approval Evidence.
+- Decision Summary.
+- Scope.
+- Integration Target.
+- Status.
+- Conflict Check.
+- Next Action.
+- Review / Expiration Condition.
 
 ## Promotion Path
 

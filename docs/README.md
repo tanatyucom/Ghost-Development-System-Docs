@@ -121,6 +121,7 @@ Reference points:
 - Startup Completion Evidence: `docs/workflow/startup_completion_evidence.md`
 - Startup Completion Gate: `docs/workflow/startup_completion_gate.md`
 - Startup Verification Checklist: `templates/startup_verification_checklist.md`
+- Decision Template: `templates/decision_template.md`
 - Artifact Creation Startup Enforcement:
   `docs/workflow/artifact_creation_startup_enforcement_workflow.md`
 - Artifact Creation Startup Enforcement Rules:
@@ -153,6 +154,7 @@ Capability Verification, when capability is asked or uncertain
   -> Startup Checklist
   -> Startup Completion Evidence
   -> Startup Completion Gate
+  -> Pending Decision Review, when conversation-approved decisions are not yet canonical
   -> Artifact Creation Startup Enforcement, when generating managed artifacts
   -> Output Contract Check, when generating reusable project artifacts
   -> Scope / Out of Scope
@@ -200,6 +202,10 @@ Intent -> Recommendation -> Pending Action -> Human Approval -> Action
 Recommendation is not Action. Short approval phrases approve only the latest
 explicit Pending Action when repository, operation, scope, diff, and state are
 still unambiguous. Otherwise, apply SCW.
+
+Pending Decision is separate from Pending Action. It preserves a
+conversation-approved but not-yet-canonical decision for Startup review only;
+it does not approve execution.
 
 ## Artifact Creation Startup Enforcement Index
 

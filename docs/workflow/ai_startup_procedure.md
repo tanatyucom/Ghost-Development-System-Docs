@@ -25,6 +25,7 @@ Start
   -> Startup Completion Evidence
   -> Startup Completion Gate
   -> Scope / Out of Scope Confirmation
+  -> Pending Decision Review, when pending decisions exist
   -> Conversation Insight Detection
   -> Pending Insight Review, when pending candidates exist
   -> Research Task Detection
@@ -100,6 +101,7 @@ Minimum targets:
 - Current Roadmap。
 - Conversation Insights。
 - Pending Conversation Insights。
+- Pending Decisions。
 - Future Candidates。
 - Research Missions。
 - Improvement Records。
@@ -118,6 +120,34 @@ Minimum targets:
 
 これは自動編集、自動Promotion、自動Q生成、自動実装、自動Commitの権限を
 与えません。
+
+### 2A. Pending Decision Review
+
+Pending Decision は、会話で人間が承認したが、まだ canonical repository asset に
+統合されていない一時的な decision record です。
+
+Startup では、repository sync の後、Current Mission や開発開始の前に、
+現在の作業と関連する Pending Decision がないかを確認します。
+
+```text
+Repository Sync
+  -> Pending Decision Review
+  -> Current Mission
+  -> Development
+```
+
+確認すること:
+
+- conversation-approved decision が未統合のまま残っていないか。
+- Human Approval To Record があるか。
+- integration target が Rule / Workflow / Architecture / Roadmap / ADR / Q のどれか。
+- conflicting or obsolete decision がないか。
+- status が pending / integrated / rejected / superseded / archived のどれか。
+- Current Q で扱うべきか、別 Q にするべきか。
+
+Pending Decision は canonical knowledge ではありません。実装、commit、push、
+canonical promotion の根拠にするには、対象文書へ統合し、必要な Human Approval と
+Completion Report を経由します。
 
 ### 3. Information Package Check
 
@@ -238,6 +268,7 @@ Startup Checklist:
 - Current Q read:
 - Daily Knowledge Source Review:
 - Outstanding Review Notification:
+- Pending Decision Review:
 - Pending Insight Review:
 - Related Knowledge Suggestions:
 - Scope / Out of Scope confirmed:

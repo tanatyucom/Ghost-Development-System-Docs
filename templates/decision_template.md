@@ -9,6 +9,7 @@
 - Owner:
 - Target Project:
 - Related Product Hierarchy Layer:
+- Temporary State: none / Pending Decision
 
 ## Decision
 
@@ -73,6 +74,22 @@ Why this decision was selected:
 - Review result:
 - Human approval:
 - Remaining questions:
+
+## Pending Decision Contract
+
+- Pending Decision:
+- Source Conversation:
+- Human Approval Evidence:
+- Decision Summary:
+- Scope:
+- Integration Target:
+- Status: pending / integrated / rejected / superseded / archived
+- Conflict Check:
+- Next Action:
+- Review / Expiration Condition:
+
+Pending Decision is not canonical knowledge until integrated into the target
+artifact through the appropriate workflow.
 
 ## Affected Documents
 

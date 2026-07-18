@@ -83,6 +83,11 @@ Start from:
 - [`docs/workflow/startup_completion_gate.md`](docs/workflow/startup_completion_gate.md)
 - [`templates/startup_checklist_template.md`](templates/startup_checklist_template.md)
 - [`templates/startup_verification_checklist.md`](templates/startup_verification_checklist.md)
+- [`templates/decision_template.md`](templates/decision_template.md)
+
+Startup now includes Pending Decision Review for conversation-approved but
+not-yet-canonical decisions. Pending Decision is a temporary review state, not
+canonical knowledge and not execution approval.
 
 Windows PowerShell 5.1 で Q file や日本語 Markdown を読む場合は UTF-8 を
 明示します。
@@ -132,6 +137,8 @@ Start from:
 - Recommendation は Action ではありません。
 - `お願いします`、`はい`、`OK` は、直前の一意な Pending Action がある場合だけ
   その操作への承認として扱えます。
+- Pending Decision は Pending Action ではありません。会話で承認された未統合の
+  decision を Startup で見直す一時状態です。
 - Commit / Push / Tag / Release / 削除 / 外部公開は Human Approval なしに
   実行しません。
 
