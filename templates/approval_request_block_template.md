@@ -7,12 +7,58 @@
 - Scope:
 - Limitations:
 
+## Recommendation Source
+
+- Repository Recommendation Source: Codex / Human / Other / Not Available
+- Workflow Recommendation Source: ChatGPT / Completion Review / Human / Other / Not Available
+- Recommendation Timestamp:
+
+## Repository Recommendation
+
+- Commit: Recommended / Hold / Not Applicable
+- Push: Recommended / Hold / Not Applicable
+- Tag: Recommended / Hold / Not Applicable
+- Reason:
+- Missing Recommendation: Yes / No
+
+## Workflow Recommendation
+
+- Completion Review Result:
+- Recommended Action:
+- Reason:
+- Missing Recommendation: Yes / No
+
 ## Requested Operations
 
 - [ ] Commit
 - [ ] Push
 - [ ] Tag
 - [ ] Other:
+
+## Approval Units
+
+| Unit | Requested | Independent Approval Required | Prompt |
+| --- | --- | --- | --- |
+| Commit | Yes / No | Yes | `コミットしても良いですか？` |
+| Push | Yes / No | Yes | `Pushしても良いですか？` |
+| Tag | Yes / No | Yes | `タグを作成しても良いですか？` |
+| Tag Push | Yes / No | Yes | `タグをPushしても良いですか？` |
+| Release | Yes / No | Yes | `Releaseしても良いですか？` |
+
+## Safe Commit Set / Operation Scope
+
+- Repository:
+- Branch:
+- Safe Commit Set:
+- Excluded Files:
+- Out of Scope:
+
+## Validation Summary
+
+- Validation Result:
+- Commands Run:
+- Not-run Checks:
+- Warnings:
 
 ## Recommended Follow-up Candidates
 
@@ -46,6 +92,10 @@ Use exactly one operation-specific prompt:
 タグを作成・Pushしても良いですか？
 ```
 
+If the required Repository Recommendation or Workflow Recommendation is
+missing, do not ask for approval. Use SCW or re-display the block after the
+missing recommendation is available.
+
 ## Interpretation Notice
 
 ```text
@@ -69,14 +119,23 @@ Use exactly one operation-specific prompt:
 - Delegation Required:
 - Delegation Target:
 
-## Scope Lock
+## Repository State Lock
 
 - Repository:
 - Branch:
 - Changed Files:
 - Validation Result:
+- Recommendation Source:
+- Approval Units:
 - Approval Request Timestamp:
 - Approval Text:
+
+## Evidence Required After Execution
+
+- Commit: Commit ID, message, changed file scope, validation summary
+- Push: Remote, branch / ref, push result, pushed commit ID
+- Tag: Tag name, target commit ID, tag push result when requested
+- Artifact: Artifact path, validation status
 
 ## Execution Evidence Summary
 

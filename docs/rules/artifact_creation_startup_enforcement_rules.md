@@ -18,6 +18,29 @@ Before generating Q, ADR, Rule, Workflow, Template, Roadmap, Completion Report,
 Knowledge artifact, registry update, or similar durable artifact, AI must
 complete the Artifact Creation Startup Enforcement Workflow.
 
+## Output Contract Rule
+
+When the primary deliverable is a reusable project artifact, the default output
+is a repository-saved or downloadable Markdown artifact.
+
+Reusable project artifacts include:
+
+- Q;
+- ADR;
+- Roadmap;
+- handoff;
+- report;
+- specification;
+- review request;
+- design document;
+- template;
+- completion report;
+- approval packet.
+
+For these deliverables, chat should contain only a short summary, the artifact
+path or download link, and verification notes unless the user explicitly
+requests inline text.
+
 ## Required Checks
 
 - Artifact Intent classified.
@@ -28,6 +51,7 @@ complete the Artifact Creation Startup Enforcement Workflow.
 - Related Rule / Workflow / ADR / Roadmap / Current Mission checked.
 - Revision First decision recorded.
 - Constraint Check completed.
+- Output Contract checked.
 - Human Approval boundary identified.
 
 ## Forbidden Behavior
@@ -42,6 +66,8 @@ AI must not:
 - bypass Human Approval with generic agreement phrases;
 - treat Future Candidates as approved scope;
 - commit, push, tag, release, or cross repositories without approval.
+- return only inline text for a reusable project artifact when the project
+  Output Contract requires a managed file artifact.
 
 ## SCW Conditions
 
@@ -55,6 +81,7 @@ Apply SCW when:
 - duplicate artifact is possible;
 - Revision First cannot be decided;
 - constraint check fails;
+- Output Contract cannot be satisfied;
 - Human Approval boundary is unclear.
 
 ## Reason Codes
@@ -68,6 +95,7 @@ PASS:
 - `CANONICAL_TEMPLATE_VERIFIED`
 - `REVISION_FIRST_DECIDED`
 - `CONSTRAINT_CHECK_PASSED`
+- `OUTPUT_CONTRACT_CHECKED`
 
 BLOCK / SCW:
 
@@ -79,6 +107,8 @@ BLOCK / SCW:
 - `DUPLICATE_FOUND`
 - `REVISION_REQUIRED`
 - `CONSTRAINT_FAILED`
+- `OUTPUT_CONTRACT_UNRESOLVED`
+- `INLINE_ONLY_NOT_ALLOWED`
 - `REPOSITORY_ACCESS_UNATTEMPTED`
 - `REPOSITORY_ACCESS_FAILED`
 - `HUMAN_APPROVAL_REQUIRED`

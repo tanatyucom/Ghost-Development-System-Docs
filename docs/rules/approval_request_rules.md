@@ -2,7 +2,7 @@
 
 **Status:** Draft Rule
 
-**Last Updated:** 2026-07-17
+**Last Updated:** 2026-07-18
 
 ## Purpose
 
@@ -15,6 +15,54 @@ evidence.
 Approval is not execution.
 
 Execution is not complete without evidence.
+
+Recommendation is not approval.
+
+Codex and ChatGPT provide recommendations only. Human remains the final
+approval authority.
+
+## Responsibility Boundaries
+
+| Actor / Layer | Responsibility | Boundary |
+| --- | --- | --- |
+| Codex | Repository Recommendation and governed repository execution when approved. | Does not provide final approval. |
+| ChatGPT | Workflow Recommendation and Completion Review. | Does not execute repository mutation without tool evidence and approval. |
+| Human | Final Approval for scoped operations. | Approval applies only to the visible request. |
+| Codex / Adapter | Governed Execution after approval and authority checks. | Must not expand scope. |
+| Execution Evidence | Proof that approved execution happened. | Approval text alone is not evidence. |
+
+## Recommendation Requirement
+
+Before Human Approval is requested for commit, push, tag, release, canonical
+promotion, or another repository mutation, the Approval Request must show the
+applicable recommendations.
+
+Minimum recommendation types:
+
+- Repository Recommendation: usually produced by Codex or repository-aware
+  review.
+- Workflow Recommendation: usually produced by ChatGPT, Completion Review, or
+  workflow-aware review.
+
+If a required recommendation is missing, do not accept approval as valid.
+Use SCW or re-display the Approval Request with the missing recommendation.
+
+## Approval Request Block Requirement
+
+Approval without a visible Approval Request Block is invalid for commit, push,
+tag, release, canonical promotion, destructive changes, or cross-repository
+mutation.
+
+The block must identify:
+
+- recommendation source;
+- requested operations;
+- approval units;
+- safe commit set or operation scope;
+- validation summary;
+- repository state lock;
+- execution authority;
+- evidence required after execution.
 
 ## Candidate First
 
@@ -55,6 +103,23 @@ It must not include:
 valid visible Requested Operations.
 
 They do not automatically approve optional follow-up candidates.
+
+They do not approve any operation that was not shown in the Approval Request
+Block.
+
+## Approval Unit Rule
+
+Commit, push, tag, release, delete, and canonical promotion are independent
+Approval Units.
+
+Approving one unit does not approve another unit.
+
+Examples:
+
+- Review PASS does not approve Commit.
+- Commit approval does not approve Push.
+- Push approval does not approve Tag.
+- Tag creation approval does not approve Tag push unless both are displayed.
 
 ## Exclusion Rule
 
@@ -152,6 +217,12 @@ Create a new Approval Request after review.
 Do not:
 
 - treat hidden candidates as approved;
+- treat a recommendation as final approval;
+- treat Human Approval as execution evidence;
+- request approval for repository mutation without a visible Approval Request
+  Block;
+- accept approval when the required Repository Recommendation or Workflow
+  Recommendation is missing;
 - report commit / push / tag complete without evidence;
 - collapse Approval Accepted and Execution Completed;
 - use Review PASS as commit approval;

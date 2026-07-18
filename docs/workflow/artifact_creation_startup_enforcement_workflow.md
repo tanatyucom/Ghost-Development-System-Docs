@@ -23,6 +23,7 @@ Artifact Generation Request
   -> Canonical Repository / Template Verification
   -> Revision First Decision
   -> Constraint Check
+  -> Output Contract Verification
   -> Gate Decision
   -> Draft / Recommendation / SCW
 ```
@@ -116,7 +117,32 @@ Confirm:
 - Human Approval boundary.
 - Validation commands.
 
-## Step 7: Gate Decision
+## Step 7: Output Contract Verification
+
+Confirm how the artifact must be delivered before drafting the final output.
+
+Default rule:
+
+```text
+Reusable project artifact -> Markdown artifact -> artifact path / download link
+```
+
+Reusable project artifacts include Q, ADR, Roadmap, Handoff, Report,
+Specification, Review Request, design document, Template, Completion Report,
+and approval packet.
+
+Record:
+
+- whether the output is a reusable project artifact;
+- whether a repository-saved or downloadable Markdown artifact is required;
+- whether an existing artifact is being revised;
+- whether inline text was explicitly requested by the user;
+- the expected artifact path or delivery path.
+
+Chat-only delivery is allowed only when the output is a short consultation,
+status update, or the user explicitly requests inline text.
+
+## Step 8: Gate Decision
 
 Decision values:
 
@@ -138,6 +164,7 @@ Record:
 - canonical template source;
 - revision first decision;
 - constraint check result;
+- output contract check result;
 - gate decision;
 - missing or conflicting evidence;
 - SCW reason when applicable.

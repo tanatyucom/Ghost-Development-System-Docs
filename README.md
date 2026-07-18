@@ -140,6 +140,8 @@ Start from:
 Q、ADR、Rule、Workflow、Template、Roadmap、Completion Reportなどの管理対象
 Artifactを生成する前に、AIはIntentに応じたWorkflow、Knowledge、Canonical
 Template、Revision First、Constraint Checkを解決します。
+Reusable project artifact を作る場合は、Output Contract も確認し、
+Markdown artifact と artifact path / download link を既定出力にします。
 
 Start from:
 
@@ -155,6 +157,7 @@ Start from:
 - Repository確認を試みずに「見られない」と報告しません。
 - SCWは、実行可能な必須確認の代替にはしません。
 - Runtime設計はHuman Approval、SCW、Commit / Push禁止境界を置き換えません。
+- Reusable artifact を、明示依頼なしに inline text のみで返しません。
 
 ## Knowledge Preservation / Architecture Promotion
 

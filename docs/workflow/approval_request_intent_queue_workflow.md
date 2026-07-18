@@ -2,7 +2,7 @@
 
 **Status:** Draft Workflow
 
-**Last Updated:** 2026-07-17
+**Last Updated:** 2026-07-18
 
 ## Purpose
 
@@ -22,24 +22,52 @@ It prevents these common mistakes:
 
 ```text
 1. Review result confirmed
-2. Requested Operations identified
-3. Recommended Follow-up Candidates disclosed
-4. Approval Request shown
-5. Human response resolved
-6. Intent Queue built
-7. Repository and scope lock confirmed
-8. Execution Authority checked
-9. Operation executed or delegated
-10. Execution Evidence collected
-11. Queue continues or stops
-12. Completion Report records result
+2. Repository Recommendation confirmed or marked missing
+3. Workflow Recommendation confirmed or marked missing
+4. Requested Operations identified
+5. Approval Units identified
+6. Recommended Follow-up Candidates disclosed
+7. Approval Request Block shown
+8. Human response resolved
+9. Intent Queue built
+10. Repository and scope lock confirmed
+11. Execution Authority checked
+12. Operation executed or delegated
+13. Execution Evidence collected
+14. Queue continues or stops
+15. Completion Report records result
 ```
+
+## Recommendation Confirmation
+
+Before showing an Approval Request for repository mutation, confirm:
+
+- Repository Recommendation;
+- Workflow Recommendation / Completion Review result;
+- whether either recommendation is missing;
+- whether SCW or re-display is required.
+
+If Commit, Push, Tag, Release, canonical promotion, destructive changes, or
+cross-repository mutation is requested without the required recommendation
+context, stop and call for the missing recommendation.
+
+```text
+Repository Recommendation missing
+  -> SCW / re-display request
+  -> Approval Request Block
+```
+
+Recommendations are inputs to Human Approval. They are not approval.
 
 ## Candidate Disclosure
 
 Before asking for approval, show:
 
+- Recommendation Source;
+- Repository Recommendation;
+- Workflow Recommendation;
 - Requested Operations;
+- Approval Units;
 - Recommended Follow-up Candidates;
 - each candidate's reason;
 - whether the candidate mutates the repository;
@@ -67,6 +95,28 @@ When phrase mapping is unclear:
 ```text
 STOP -> CALL -> WAIT
 ```
+
+Short approval phrases are valid only when a visible Approval Request Block is
+current, repository state is locked, and the approval maps to exactly one safe
+operation set.
+
+## Approval Unit Handling
+
+Commit, push, tag, release, delete, and canonical promotion are separate units.
+
+The queue must preserve unit boundaries:
+
+```text
+Commit Approval
+  -> Commit Execution
+  -> Commit Evidence
+  -> Push Approval
+  -> Push Execution
+  -> Push Evidence
+```
+
+Bundled approval is allowed only when the Approval Request Block explicitly
+shows the bundled units, their ordering, and their shared scope lock.
 
 ## Queue Construction
 
@@ -99,6 +149,9 @@ Before execution, confirm:
 - repository root;
 - branch;
 - changed files;
+- safe commit set or operation scope;
+- recommendation source;
+- approval units;
 - selected operations;
 - excluded items;
 - validation result;
@@ -137,7 +190,11 @@ Examples:
 
 Completion Report must record:
 
+- recommendation source;
+- repository recommendation;
+- workflow recommendation;
 - requested operations;
+- approval units;
 - displayed candidates;
 - selected items;
 - excluded items;

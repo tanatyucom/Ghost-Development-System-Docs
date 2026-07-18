@@ -48,6 +48,12 @@
 - Canonical Template Verification:
 - Revision First Decision:
 - Constraint Check:
+- Output Contract:
+- Reusable project artifact:
+- Markdown artifact required:
+- Existing artifact revision:
+- Inline text explicitly requested:
+- Expected artifact path / download link:
 - Gate Decision: PASS / PASS_WITH_LIMITATION / BLOCK / SCW_REQUIRED
 - Gate Reason Codes:
 - Missing / Conflicting Evidence:
@@ -70,6 +76,7 @@
 | Related ADRs / Architecture |  |  |  |  |
 | Repository Root Validation |  |  |  |  |
 | Constraint Check |  |  |  |  |
+| Output Contract |  |  |  |  |
 | Artifact Creation Startup Enforcement |  |  |  |  |
 
 ## Startup Completion Gate

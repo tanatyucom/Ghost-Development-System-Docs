@@ -25,6 +25,11 @@ Artifact Generation / Documentation Update
 - Capability disclosure still matches actual work, when capability was discussed.
 - Correct repository scope.
 - Correct output format requested by the user.
+- Reusable project artifact check completed.
+- Project Output Contract respected.
+- Markdown artifact path or download link provided when the Output Contract
+  requires file delivery.
+- Inline-only response is explicitly requested or justified as not reusable.
 - User language preference respected.
 - Git Bash / PowerShell command format appropriate for the context.
 - Download link or artifact path format correct, when required.
@@ -63,6 +68,8 @@ Do not deliver a final response if:
 - Required Human Approval is missing.
 - Repository scope is unclear.
 - The requested output format is not satisfied.
+- A reusable project artifact is returned only as inline text without explicit
+  user request.
 - Known remaining issues are omitted.
 
 ## Required Output
@@ -75,6 +82,8 @@ Pre-Response Verification Gate:
 - Startup evidence checked:
 - Scope check:
 - Output format check:
+- Output Contract check:
+- Reusable artifact delivery:
 - Human Approval boundary:
 - Commit / Push boundary:
 - Constraint check:

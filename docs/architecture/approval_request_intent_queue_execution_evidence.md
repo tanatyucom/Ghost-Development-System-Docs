@@ -2,7 +2,7 @@
 
 **Status:** Draft Architecture Contract
 
-**Last Updated:** 2026-07-17
+**Last Updated:** 2026-07-18
 
 ## Purpose
 
@@ -54,11 +54,33 @@ Human approval may be expressed naturally. The system must still separate:
 - execution from evidence;
 - requested operations from optional follow-up candidates;
 - visible selected scope from hidden internal ideas.
+- recommendation from approval.
+- approval from execution proof.
+
+## Responsibility Boundary
+
+```text
+Codex
+  -> Repository Recommendation
+ChatGPT
+  -> Workflow Recommendation / Completion Review
+Human
+  -> Final Approval
+Codex / Adapter
+  -> Governed Execution
+Execution Evidence
+  -> Execution Proof
+```
+
+Codex and ChatGPT provide recommendations only. Human approval owns the final
+decision to execute a visible Approval Unit.
 
 ## Required Flow
 
 ```text
 Review Result
+  -> Repository Recommendation
+  -> Workflow Recommendation
   -> Candidate Disclosure
   -> Approval Request
   -> Pending Human Approval
@@ -143,6 +165,22 @@ Requested Operations
 
 Requested Operations must be visible before a short approval phrase can approve
 them.
+
+## Approval Units
+
+Commit, push, tag, release, delete, and canonical promotion are independent
+Approval Units.
+
+Approval for one unit does not imply approval for another unit.
+
+Examples:
+
+- Review PASS is not Commit approval.
+- Commit approval is not Push approval.
+- Tag creation approval is not Tag push approval unless both are displayed.
+
+Each Approval Unit must declare its recommendation source, scope lock,
+execution authority, and required evidence.
 
 ## Recommended Follow-up Candidates
 

@@ -121,6 +121,13 @@ Reference points:
 - Startup Completion Evidence: `docs/workflow/startup_completion_evidence.md`
 - Startup Completion Gate: `docs/workflow/startup_completion_gate.md`
 - Startup Verification Checklist: `templates/startup_verification_checklist.md`
+- Artifact Creation Startup Enforcement:
+  `docs/workflow/artifact_creation_startup_enforcement_workflow.md`
+- Artifact Creation Startup Enforcement Rules:
+  `docs/rules/artifact_creation_startup_enforcement_rules.md`
+- AI Response Checklist v2: `templates/ai_response_checklist_v2.md`
+- Pre-Response Verification Gate:
+  `docs/workflow/pre_response_verification_gate.md`
 - Repository Drift Prevention:
   `docs/workflow/repository_drift_prevention.md`
 - Project Profiles: `project_profiles/README.md`
@@ -146,6 +153,8 @@ Capability Verification, when capability is asked or uncertain
   -> Startup Checklist
   -> Startup Completion Evidence
   -> Startup Completion Gate
+  -> Artifact Creation Startup Enforcement, when generating managed artifacts
+  -> Output Contract Check, when generating reusable project artifacts
   -> Scope / Out of Scope
   -> Implementation / Review Start
 ```

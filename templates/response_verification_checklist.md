@@ -14,6 +14,10 @@
 - Startup Completion Evidence checked:
 - Correct repository scope:
 - Correct output format:
+- Reusable project artifact:
+- Project Output Contract:
+- Markdown artifact path / download link:
+- Inline text explicitly requested:
 - User language preference:
 - Command format:
 - Download link / artifact path format:
