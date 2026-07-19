@@ -7,10 +7,10 @@ idea, field-project lesson, design discussion, or implementation result toward
 official GDS architecture.
 
 It is a Command Center orchestration model, not an automation license. It
-connects Human vision, GDS governance, Codex review / validation /
-implementation, repository evidence, approval state, and next-action
-recommendation while preserving existing Human Approval and execution
-authority boundaries.
+connects Human vision, repository-owned review loops, Codex review /
+validation / implementation, GDS platform promotion governance, repository
+evidence, approval state, and next-action recommendation while preserving
+existing Human Approval and execution authority boundaries.
 
 ## Core Principle
 
@@ -27,10 +27,10 @@ can describe, recommend, or review an operation.
 | Actor | Owns | Does Not Own |
 | --- | --- | --- |
 | Human | Vision, final approval, priority judgment, risk acceptance, scope changes. | Mechanical repository scanning, evidence aggregation, implementation detail execution. |
-| GDS | Architecture, governance, canonical rules, workflows, standards, promotion gates. | Field-project runtime state or direct repository mutation. |
-| Codex | Review, validation, scoped implementation, documentation edits, verification evidence, completion reporting. | Final approval, canonical truth ownership, unapproved execution. |
+| GDS | Architecture, governance, canonical rules, workflows, standards, and Platform Promotion Review for mature handoff packages. | Field-project runtime state, repository-specific refinement loops, or direct repository mutation. |
+| Codex | Review, validation, scoped implementation, documentation edits, verification evidence, and completion reporting inside the owning repository context. | Final approval, canonical truth ownership, unapproved execution, or platform promotion decisions unless explicitly requested as review. |
 | Command Center | Current Mission, Active Q, workflow stage, repository state summary, pending approvals, completion review status, recommended next action. | Human Approval, repository truth, execution authority, domain runtime behavior. |
-| Repository | Single Source of Truth for canonical artifacts, evidence, history, and committed state. | Human judgment or AI intent interpretation. |
+| Repository | Domain-specific review loop, Q refinement, implementation follow-up, completion review, handoff package preparation, canonical artifacts, evidence, history, and committed state. | Human judgment, AI intent interpretation, or GDS platform promotion ownership. |
 
 ## Standard Promotion Flow
 
@@ -38,12 +38,13 @@ can describe, recommend, or review an operation.
 Vision (Human)
   -> Intent Engine
   -> Command Center
-  -> Architecture Review (GDS / Codex)
-  -> GDS Refinement
-  -> Codex Validation
-  -> Completion Review / Recommendation, when work output is ready
+  -> Repository-Owned Review / Refinement
+  -> Codex Validation / Implementation, inside the owning repository context
+  -> Repository Completion Review / Recommendation, when work output is ready
   -> Human Approval
   -> Commit / Push / Repository Update, when approved and executable
+  -> Handoff Package, when platform promotion is proposed
+  -> GDS Platform Promotion Review, when the handoff is mature
   -> Command Center Refresh
   -> Recommended Next Task
 ```
@@ -57,6 +58,11 @@ Review may occur before repository mutation when the review output is the basis
 for Commit / Push approval. After execution, Command Center performs a refresh
 or reconciliation step instead of treating the previous recommendation as
 fresh forever.
+
+For a Ghost repository such as GameGhost, the repository owns its
+domain-specific review and refinement loop. GDS evaluates mature handoff
+packages for Platform promotion; it does not own every project-specific
+iteration before that knowledge is ready.
 
 ## Command Center Governance Role
 
@@ -83,13 +89,15 @@ artifacts remain the Single Source of Truth.
 VISION
   -> INTENT_CAPTURED
   -> WORKFLOW_SELECTED
-  -> ARCHITECTURE_REVIEW
-  -> REFINEMENT
-  -> VALIDATION
-  -> COMPLETION_REVIEW_READY
+  -> FIELD_REPOSITORY_REVIEW
+  -> FIELD_REPOSITORY_REFINEMENT
+  -> FIELD_REPOSITORY_VALIDATION
+  -> FIELD_REPOSITORY_COMPLETION_REVIEW
   -> HUMAN_APPROVAL_PENDING
   -> APPROVED_FOR_EXECUTION
   -> EXECUTED
+  -> HANDOFF_PACKAGE_READY
+  -> GDS_PLATFORM_PROMOTION_REVIEW
   -> REPOSITORY_REFRESH
   -> NEXT_ACTION_RECOMMENDED
 ```
@@ -117,6 +125,11 @@ AI Multi-Stage Promotion Workflow does not replace:
 
 It coordinates these workflows into a visible lifecycle for long-running
 architecture evolution.
+
+It does not move repository-specific refinement ownership into GDS. The
+owning repository matures domain-specific evidence first; GDS reviews
+promotion only after reusable knowledge is packaged clearly enough for
+Platform evaluation.
 
 ### Completion Review Compatibility
 

@@ -248,12 +248,13 @@ working-state model for architecture evolution.
 Vision (Human)
   -> Intent Engine
   -> Command Center
-  -> Architecture Review
-  -> GDS Refinement
-  -> Codex Validation / Implementation, when authorized
-  -> Completion Review / Recommendation
+  -> Repository-Owned Review / Refinement
+  -> Codex Validation / Implementation, when authorized in the owning repository
+  -> Repository Completion Review / Recommendation
   -> Human Approval
   -> Repository Update
+  -> Handoff Package, when platform promotion is proposed
+  -> GDS Platform Promotion Review
   -> Command Center Refresh
   -> Recommended Next Task
 ```
@@ -272,6 +273,11 @@ Command Center may display:
 
 These are derived working-context fields. Command Center must not treat them
 as approval, execution authority, or repository truth.
+
+For field-project work, Command Center should show repository-owned review
+states separately from GDS Platform Promotion Review. It must not imply that
+GDS owns project-specific refinement loops before a mature handoff package
+exists.
 
 Completion Review may occur before Commit / Push approval when it is used to
 produce a Safe Commit Set and recommendation. After execution, Command Center

@@ -15,10 +15,11 @@ runtime behavior.
   such as Q, Completion Report, Information Package, Multi-AI Handoff, Review
   Report, Decision Record, Registry Update, and Health Report.
 - `ai_multi_stage_promotion_workflow.md`: architecture governance model for
-  moving human vision, field-project lessons, Codex review / validation,
-  Human Approval, repository updates, Completion Review, Command Center
-  refresh, and next-action recommendation through a visible multi-stage
-  promotion lifecycle.
+  moving human vision, repository-owned review loops, Codex review /
+  validation, Human Approval, repository updates, Completion Review, handoff
+  package preparation, GDS Platform Promotion Review, Command Center refresh,
+  and next-action recommendation through a visible multi-stage promotion
+  lifecycle.
 - `adapter_only_execution_policy_review.md`: candidate-only review of
   Adapter-Only Execution for future Engine / Center production boundaries. It
   does not adopt enforcement or implementation.

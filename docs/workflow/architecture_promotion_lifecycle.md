@@ -30,12 +30,13 @@ Center may represent the same lifecycle as a multi-stage promotion flow:
 Vision (Human)
   -> Intent Engine
   -> Command Center
-  -> Architecture Review
-  -> GDS Refinement
-  -> Codex Validation
-  -> Completion Review / Recommendation
+  -> Repository-Owned Review / Refinement
+  -> Codex Validation / Implementation, inside the owning repository context
+  -> Repository Completion Review / Recommendation
   -> Human Approval
   -> Repository Update, when approved
+  -> Handoff Package, when platform promotion is proposed
+  -> GDS Platform Promotion Review
   -> Command Center Refresh
   -> Recommended Next Task
 ```
@@ -47,6 +48,12 @@ This multi-stage view preserves the existing practice where Completion Review
 can happen before Commit / Push approval. Repository update is followed by a
 Command Center refresh / reconciliation stage so the next recommendation is
 based on current repository state.
+
+For field projects, the owning repository performs domain-specific review,
+refinement, implementation follow-up, and completion review before GDS
+promotion review. GDS receives mature handoff material and evaluates whether
+the knowledge should become a GDS rule, template, workflow, SDK requirement,
+or platform standard.
 
 ## Stage Definitions
 
@@ -83,9 +90,18 @@ failures, and maintenance cost become evidence.
 Evidence is reviewed before architecture is standardized. A single success does
 not automatically prove platform readiness.
 
+For repository-originated knowledge, this maturity step is prepared by the
+owning repository through its review loop, operational evidence, and completion
+review. GDS does not need to own the repository-specific loop before the
+handoff is ready.
+
 ### Architecture Decision
 
 Human-approved decision event. This is where direction is chosen.
+
+When the decision concerns Platform promotion, this event occurs during GDS
+Platform Promotion Review after the field repository has prepared a mature
+handoff package.
 
 ### ADR
 

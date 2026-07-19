@@ -48,6 +48,11 @@ from:
 - [`docs/rules/platform_governance_rules.md`](docs/rules/platform_governance_rules.md)
 - [`docs/workflow/architecture_promotion_lifecycle.md`](docs/workflow/architecture_promotion_lifecycle.md)
 
+Field repositories own their domain-specific review, refinement,
+implementation follow-up, completion review, and handoff package preparation.
+GDS evaluates mature handoff packages through Platform Promotion Review; it
+does not own every repository-specific refinement loop.
+
 Ghost Development System の公式 Knowledge Base です。
 
 このリポジトリは、Ghost Development System を人間主導・AI 支援で開発する

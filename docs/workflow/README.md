@@ -140,7 +140,8 @@ gate.
   Operation, Maturity & Evidence Confirmation, Architecture Decision, ADR, and
   optional GDS Rule / Template / Workflow / SDK promotion. It is compatible
   with AI Multi-Stage Promotion Workflow as a Command Center orchestration
-  view over the same promotion lifecycle.
+  view over the same promotion lifecycle, while preserving repository-owned
+  review loops before GDS Platform Promotion Review.
 - Documentation Synchronization:
   `documentation_synchronization_workflow.md` is the gate workflow for keeping
   README / folder index, AI Repository Index, completion checklist, completion
