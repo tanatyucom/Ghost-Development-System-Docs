@@ -196,7 +196,7 @@ practical evidence independent while maintaining traceability between them.
 
 Initial case study:
 
-- GameGhost Repository Cleanup.
+- `docs/architecture/case_studies/gameghost_repository_cleanup.md`
 
 The GameGhost case showed that direct DB access or legacy implementation
 surface alone should not automatically trigger Repository migration. Migration

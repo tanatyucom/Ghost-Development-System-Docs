@@ -150,6 +150,12 @@ runtime behavior.
   Architecture Lifetime Assessment, Repository Readiness Assessment,
   Engineering Investment, and Evidence-based Non-Implementation Decision
   without approving scanner, assessment engine, or quality gate implementation.
+- `case_studies/README.md`: index for field evidence behind accepted GDS
+  architecture principles.
+- `case_studies/gameghost_repository_cleanup.md`: first Architecture Case Study
+  showing how Progressive Architecture Adoption emerged from GameGhost
+  Repository Cleanup, direct DB access inventory, canonical DB authority
+  resolution, selective read-only conversion, human review, and SCW checkpoints.
 - `../standards/ghost_package_standard_candidate.md`: Ghost Package Standard
   architecture standard candidate for PACKAGE.md, PACKAGE.yaml, Design Package,
   Milestone Package, package discovery, package registry, multi-AI package

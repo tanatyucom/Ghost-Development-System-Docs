@@ -24,6 +24,10 @@ Reference points:
   `docs/architecture/design_principles/README.md`
 - Progressive Architecture Adoption:
   `docs/architecture/design_principles/progressive_architecture_adoption.md`
+- Architecture Case Studies:
+  `docs/architecture/case_studies/README.md`
+- GameGhost Repository Cleanup Case Study:
+  `docs/architecture/case_studies/gameghost_repository_cleanup.md`
 - Architecture Pattern Candidates:
   `docs/architecture/patterns/README.md`
 - Evidence-Driven Platform Promotion Pattern:
