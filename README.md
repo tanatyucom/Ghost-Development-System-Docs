@@ -17,6 +17,7 @@ from:
 - [`docs/architecture/authority_driven_responsibility_principle.md`](docs/architecture/authority_driven_responsibility_principle.md)
 - [`docs/architecture/execution_authority_registry.md`](docs/architecture/execution_authority_registry.md)
 - [`docs/architecture/capability_authority_integration.md`](docs/architecture/capability_authority_integration.md)
+- [`docs/architecture/ai_multi_stage_promotion_workflow.md`](docs/architecture/ai_multi_stage_promotion_workflow.md)
 - [`docs/architecture/repository_intelligence_dashboard_foundation.md`](docs/architecture/repository_intelligence_dashboard_foundation.md)
 - [`docs/architecture/design_principles/README.md`](docs/architecture/design_principles/README.md)
 - [`docs/architecture/design_principles/progressive_architecture_adoption.md`](docs/architecture/design_principles/progressive_architecture_adoption.md)

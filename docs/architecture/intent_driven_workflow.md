@@ -226,6 +226,30 @@ Commit Recommendation、or SCW.
 Intent Engine does not replace Command Center, Decision Engine, Template Engine,
 Human Approval Gate, or Artifact Pipeline.
 
+## Relationship With AI Multi-Stage Promotion Workflow
+
+AI Multi-Stage Promotion Workflow uses Intent-Driven Workflow as its entry
+point when a human expresses a broad goal such as a vision, review request,
+promotion request, `お願いします`, `次は？`, or `終わった`.
+
+Intent-Driven Workflow resolves the user utterance into a workflow candidate,
+Recommendation, Pending Action, or SCW. AI Multi-Stage Promotion then lets
+Command Center show which stage the work is in:
+
+```text
+Intent
+  -> Workflow Selection
+  -> Review / Refinement / Validation
+  -> Human Approval, when needed
+  -> Execution, when authorized
+  -> Completion Review
+  -> Next Action Recommendation
+```
+
+The multi-stage model does not loosen approval resolution. Short approvals are
+still valid only when the Pending Action is explicit, unique, fresh, and
+execution-authorized.
+
 ## Relationship With Repository Scanner / Asset Registry
 
 Intent Engine needs repository state. Repository Scanner and future Asset

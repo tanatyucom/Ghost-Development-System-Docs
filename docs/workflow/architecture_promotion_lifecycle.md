@@ -21,6 +21,33 @@ Problem
   -> GDS Rule / Template / Workflow / SDK
 ```
 
+## AI Multi-Stage Governance Flow
+
+When the promotion candidate emerges through human / AI collaboration, Command
+Center may represent the same lifecycle as a multi-stage promotion flow:
+
+```text
+Vision (Human)
+  -> Intent Engine
+  -> Command Center
+  -> Architecture Review
+  -> GDS Refinement
+  -> Codex Validation
+  -> Completion Review / Recommendation
+  -> Human Approval
+  -> Repository Update, when approved
+  -> Command Center Refresh
+  -> Recommended Next Task
+```
+
+This is an orchestration view over the Architecture Promotion Lifecycle, not a
+replacement for evidence, ADR, Human Approval, or repository source of truth.
+
+This multi-stage view preserves the existing practice where Completion Review
+can happen before Commit / Push approval. Repository update is followed by a
+Command Center refresh / reconciliation stage so the next recommendation is
+based on current repository state.
+
 ## Stage Definitions
 
 ### Problem
@@ -100,6 +127,7 @@ Stop when:
 
 ## Related Documents
 
+- `docs/architecture/ai_multi_stage_promotion_workflow.md`
 - `docs/architecture/platform_governance_and_experimental_development.md`
 - `docs/architecture/patterns/evidence_driven_platform_promotion_pattern.md`
 - `docs/rules/platform_governance_rules.md`

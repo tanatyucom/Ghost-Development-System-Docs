@@ -138,7 +138,9 @@ gate.
 - `architecture_promotion_lifecycle.md`: workflow from Problem, Q,
   Implementation, Completion Report, Operational Validation, Repository
   Operation, Maturity & Evidence Confirmation, Architecture Decision, ADR, and
-  optional GDS Rule / Template / Workflow / SDK promotion.
+  optional GDS Rule / Template / Workflow / SDK promotion. It is compatible
+  with AI Multi-Stage Promotion Workflow as a Command Center orchestration
+  view over the same promotion lifecycle.
 - Documentation Synchronization:
   `documentation_synchronization_workflow.md` is the gate workflow for keeping
   README / folder index, AI Repository Index, completion checklist, completion

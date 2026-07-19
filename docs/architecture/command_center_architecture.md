@@ -239,6 +239,49 @@ AI Bootstrap
 
 Command Center uses Bootstrap and Startup output. It does not replace them.
 
+## AI Multi-Stage Promotion Orchestration
+
+Command Center may orchestrate AI Multi-Stage Promotion Workflow as a visible
+working-state model for architecture evolution.
+
+```text
+Vision (Human)
+  -> Intent Engine
+  -> Command Center
+  -> Architecture Review
+  -> GDS Refinement
+  -> Codex Validation / Implementation, when authorized
+  -> Completion Review / Recommendation
+  -> Human Approval
+  -> Repository Update
+  -> Command Center Refresh
+  -> Recommended Next Task
+```
+
+Command Center may display:
+
+- Current Mission.
+- Active Q.
+- Workflow Stage.
+- Repository State.
+- Completion Review.
+- Pending Approval.
+- Repository Health.
+- Roadmap.
+- Recommended Next Action.
+
+These are derived working-context fields. Command Center must not treat them
+as approval, execution authority, or repository truth.
+
+Completion Review may occur before Commit / Push approval when it is used to
+produce a Safe Commit Set and recommendation. After execution, Command Center
+refreshes repository state and next-action recommendations rather than
+reusing stale pre-execution context.
+
+Reference:
+
+- `docs/architecture/ai_multi_stage_promotion_workflow.md`
+
 ## Core Components
 
 ## Phase 1 Capability Boundary

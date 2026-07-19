@@ -16,6 +16,12 @@ The governing principle is:
 責務は機能ではなく、権限で決める。
 ```
 
+Equivalent architecture wording:
+
+```text
+Responsibility follows execution authority.
+```
+
 ## Core Rule
 
 Assign responsibility to the actor that has authority to execute, delegate, or
@@ -33,6 +39,21 @@ that operation.
 Review Actor may recommend, review, or guide. Review Actor must not request
 execution permission for an operation it cannot execute or delegate through a
 governed path.
+
+## Multi-Stage Promotion Responsibility Rule
+
+In AI Multi-Stage Promotion Workflow, responsibility remains stage-specific:
+
+- Human owns vision and final approval.
+- GDS owns canonical governance and architecture boundary.
+- Codex owns scoped review, validation, implementation, and evidence only when
+  the current Q authorizes that work.
+- Command Center owns orchestration display and next-action recommendation.
+- Repository owns canonical truth.
+
+Command Center stage visibility must not be treated as execution authority.
+Codex review or validation must not be treated as Human Approval.
+Human approval applies only to the visible Pending Action or Approval Unit.
 
 ## Required Assignment Checks
 
@@ -152,5 +173,6 @@ Use SCW when:
 - `docs/architecture/responsibility_boundary.md`
 - `docs/architecture/approval_request_intent_queue_execution_evidence.md`
 - `docs/architecture/governed_execution_adapter_foundation.md`
+- `docs/architecture/ai_multi_stage_promotion_workflow.md`
 - `templates/review_checklist.md`
 - `templates/approval_request_block_template.md`
