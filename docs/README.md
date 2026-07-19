@@ -20,6 +20,10 @@ Reference points:
 - Completion Report Template: `templates/completion_report_template.md`
 - Repository Intelligence Dashboard Foundation:
   `docs/architecture/repository_intelligence_dashboard_foundation.md`
+- Design Principles:
+  `docs/architecture/design_principles/README.md`
+- Progressive Architecture Adoption:
+  `docs/architecture/design_principles/progressive_architecture_adoption.md`
 - Architecture Pattern Candidates:
   `docs/architecture/patterns/README.md`
 - Evidence-Driven Platform Promotion Pattern:

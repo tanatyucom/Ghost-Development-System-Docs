@@ -143,6 +143,13 @@ runtime behavior.
   Repository Scanner Summary. It defines metadata and integration boundaries
   without implementing UI, database, scanner runtime, automation, promotion, or
   repository mutation.
+- `design_principles/README.md`: index for accepted GDS design principles.
+- `design_principles/progressive_architecture_adoption.md`: accepted design
+  principle for deciding where engineering investment should be made during
+  repository evolution. It covers Simple First, Evidence Before Abstraction,
+  Architecture Lifetime Assessment, Repository Readiness Assessment,
+  Engineering Investment, and Evidence-based Non-Implementation Decision
+  without approving scanner, assessment engine, or quality gate implementation.
 - `../standards/ghost_package_standard_candidate.md`: Ghost Package Standard
   architecture standard candidate for PACKAGE.md, PACKAGE.yaml, Design Package,
   Milestone Package, package discovery, package registry, multi-AI package
