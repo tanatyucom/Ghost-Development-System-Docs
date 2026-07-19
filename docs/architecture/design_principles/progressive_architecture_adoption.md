@@ -190,6 +190,7 @@ practical evidence independent while maintaining traceability between them.
 
 - Source Q: `GDS-ARCH-001`
 - Promotion Q: `GDS-ARCH-002`
+- Accepted ADR: `docs/adr/ADR-GDS-010_progressive_architecture_adoption.md`
 - Related architecture index: `docs/architecture/README.md`
 
 ## Related Case Studies

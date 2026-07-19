@@ -28,6 +28,8 @@ Reference points:
   `docs/architecture/case_studies/README.md`
 - GameGhost Repository Cleanup Case Study:
   `docs/architecture/case_studies/gameghost_repository_cleanup.md`
+- Progressive Architecture Adoption ADR:
+  `docs/adr/ADR-GDS-010_progressive_architecture_adoption.md`
 - Architecture Pattern Candidates:
   `docs/architecture/patterns/README.md`
 - Evidence-Driven Platform Promotion Pattern:
@@ -2324,3 +2326,4 @@ or the Git Commit / Push / Tag documentation-only vertical slice.
 - `docs/standards/git_adapter_registry_profile.md`
 - `templates/git_execution_adapter_record_template.md`
 - `docs/adr/ADR-GDS-009_gds_core_ai_actor_git_adapter_boundary.md`
+- `docs/adr/ADR-GDS-010_progressive_architecture_adoption.md`

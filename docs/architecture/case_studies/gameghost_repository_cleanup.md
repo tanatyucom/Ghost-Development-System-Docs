@@ -392,6 +392,8 @@ The case study should also inform future automation:
 
 - Design Principle:
   `docs/architecture/design_principles/progressive_architecture_adoption.md`
+- Accepted ADR:
+  `docs/adr/ADR-GDS-010_progressive_architecture_adoption.md`
 - Architecture Case Studies Index:
   `docs/architecture/case_studies/README.md`
 - ARCH-001: `GDS-ARCH-001`
