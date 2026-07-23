@@ -154,6 +154,23 @@ Do not begin implementation by guessing. Report the missing or conflicting
 evidence, affected scope, recommended decision, and safe next action, then wait
 for the required Human Decision or capability restoration.
 
+#### Repository And Branch Context
+
+Repository verification must resolve the repository root, expected remote,
+current branch, working tree status, untracked files, and protected scope.
+When the Q does not explicitly name a base branch, prefer `origin/HEAD`; if it
+cannot be resolved, inspect local and remote branch references and use SCW
+instead of assuming `main` or another branch.
+
+If the current branch differs from the verified expected base, do not switch,
+merge, rebase, or create a branch automatically. If the workspace is dirty, do
+not clean, reset, stash, discard, overwrite, or modify existing untracked
+files. Report the mismatch and wait for a Human Decision.
+
+An isolated worktree may be proposed when it protects existing work, but its
+base branch must exist and the Q must authorize creation. Ambiguous branch or
+worktree authority requires SCW.
+
 ### Evidence Before Completion
 
 Completion requires evidence from validation, changed-file review, repository

@@ -343,6 +343,11 @@ Q files should make Q ID, repository context, scope, non-scope, target files,
 deliverables, validation, AI Repository Index Update Gate, Safe Commit Set,
 and commit / push policy explicit.
 
+Q Template v2.4 adds mandatory Target Repository, Repository Branch Context,
+Repository Verification, Branch Mismatch, Workspace Safety, Worktree, and
+Execution Context fields. Default branches are detected from `origin/HEAD`
+rather than assumed, and unresolved or unsafe branch context connects to SCW.
+
 Q files should also make Output Format and Required Artifacts explicit.
 
 Default artifact policy:

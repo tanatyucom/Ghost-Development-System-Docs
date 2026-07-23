@@ -1,6 +1,6 @@
 # Q File Template
 
-**Template Version:** 2.3
+**Template Version:** 2.4
 
 **Last Updated:** 2026-07-23
 
@@ -143,6 +143,103 @@ Non-Target Project: GameGhost
 Allowed Edit Scope: GDS documentation only
 Forbidden Edit Scope: GameGhost, runtime DB, production data
 ```
+
+## Target Repository
+
+- Repository Name: Required
+- Repository Role: Required
+- Repository Root: Required, or define an explicit auto-detection rule
+- Remote: Optional
+- Expected Base Branch: Explicit branch or `Auto-detect from origin/HEAD`
+- Working Directory: Required
+
+Rules:
+
+```text
+Do not infer the repository from the current shell or conversation context.
+For multiple repositories, record each repository separately with its own edit
+and protection boundary.
+```
+
+## Repository Branch Context
+
+- Expected Base Branch:
+- Detected Default Branch:
+- Current Branch:
+- Branch Source: origin/HEAD / explicit Q instruction / Human Decision
+- Local Branches checked:
+- Remote Branches checked:
+
+Rules:
+
+```text
+Do not assume main.
+When no branch is explicit, resolve origin/HEAD first.
+If origin/HEAD is unavailable, inspect local and remote branch references.
+Do not guess an unresolved branch. Use SCW.
+```
+
+## Repository Verification
+
+Verify and report before execution:
+
+- Repository exists:
+- Repository Root is correct:
+- Remote is expected:
+- Default Branch is detected:
+- Current Branch is detected:
+- Working Tree status is known:
+- Untracked files are known:
+- Protected scope is understood:
+- Verification Result: PASS / PASS_WITH_LIMITATION / SCW_REQUIRED
+
+## Branch Mismatch Policy
+
+If Current Branch differs from Expected Base Branch:
+
+- Do not switch, merge, or rebase automatically.
+- Do not create a branch from an unverified base.
+- Report the mismatch and use SCW.
+- Wait for a Human Decision to continue on the current branch, use the detected
+  default branch, create an isolated worktree, switch branch, or abort.
+- Offer only branches whose existence was verified.
+
+## Workspace Safety Policy
+
+If the working tree is dirty:
+
+- Do not clean, reset, stash, discard, or overwrite existing work.
+- Do not switch branches automatically.
+- Do not modify existing untracked files.
+- Use SCW before an operation that may affect the workspace.
+
+## Worktree Policy
+
+Consider an isolated worktree when the current workspace is dirty, inspection
+must not affect current work, the verified target base differs from the current
+branch, or parallel work is required.
+
+Before creating a worktree:
+
+- Verify the base branch and local and remote references.
+- Do not assume `main`.
+- Prefer the detected default branch unless the Q explicitly requires another
+  verified branch.
+- Obtain Human Approval when branch context or worktree authority is ambiguous.
+- Use SCW when worktree creation is outside the Q authority.
+
+## Execution Context
+
+- Mode: Inspection / Documentation / Implementation / Migration / Validation
+- Mutation: Allowed / Restricted / Forbidden
+- Runtime Change: Allowed / Forbidden
+- Database Change: Allowed / Forbidden
+- File Move: Allowed / Forbidden
+- File Delete: Allowed / Forbidden
+- Commit: Allowed after Human Approval / Forbidden
+- Push: Allowed after Human Approval / Forbidden
+- Tag: Allowed after Human Approval / Forbidden
+- External Write: Allowed / Forbidden
 
 ## Canonical Template Synchronization
 
@@ -416,6 +513,15 @@ Do not silently skip the decision.
 - Q File read with explicit UTF-8 when using Windows PowerShell 5.1:
 - Q File mojibake check result:
 - Repository Root Validation completed:
+- Target Repository verified:
+- `origin/HEAD` checked:
+- Local and remote branches checked:
+- Detected Default Branch recorded:
+- Current Branch recorded:
+- Branch mismatch policy applied:
+- Workspace Safety Policy applied:
+- Worktree decision recorded:
+- Execution Context confirmed:
 - Working Repository confirmed:
 - Scope / Out of Scope confirmed:
 - Commit / Push Policy confirmed:
