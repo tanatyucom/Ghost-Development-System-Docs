@@ -1,8 +1,8 @@
 # Q File Template
 
-**Template Version:** 2.1
+**Template Version:** 2.2
 
-**Last Updated:** 2026-07-17
+**Last Updated:** 2026-07-23
 
 このテンプレートは、Codex / ChatGPT / Claude / Gemini / human review に渡すQファイルを、チャット本文ではなく管理可能なArtifactとして保存するための標準形式です。
 
@@ -197,6 +197,8 @@ SCW is not a substitute for performing an available required check.
 
 - Commit:
 - Push:
+- Tag:
+- Human Approval State: NOT REQUESTED / PENDING HUMAN APPROVAL / APPROVED FOR SPECIFIED ACTION / NOT APPLICABLE
 - Suggested Commit Message:
 
 許可値:
@@ -209,6 +211,9 @@ Commit: Required after Commit OK
 Push: Do not execute
 Push: Execute only after explicit approval
 Push: Required after Commit
+
+Tag: Do not execute
+Tag: Execute only after explicit approval
 ```
 
 デフォルト:
@@ -216,6 +221,31 @@ Push: Required after Commit
 ```text
 Commit: Do not execute
 Push: Do not execute
+Tag: Do not execute
+```
+
+## Execution Contract
+
+- Self-contained Q: Yes / No
+- External Knowledge required for execution: None / List
+- External Knowledge fallback:
+- Canonical Knowledge Priority confirmed: Yes / No
+- Codex Execution Standard version:
+- One Q = One Responsibility confirmed: Yes / No
+
+Canonical priority:
+
+```text
+Current Q -> Repository formal documents -> Accepted ADR / Rules / Standards /
+Architecture -> Supplemental external knowledge -> Unpromoted conversation notes
+```
+
+Rules:
+
+```text
+The Q must remain safe and reproducible without Notion or another external service.
+External knowledge may support research but must not be the only execution dependency.
+If the Q materially conflicts with accepted architecture, use SCW.
 ```
 
 ## Purpose
@@ -241,6 +271,16 @@ Push: Do not execute
 - Do not change runtime code.
 - Do not create a release.
 - Do not implement Future Candidates.
+
+## Forbidden Actions
+
+- Commit / Push / Tag without the explicit policy and Human Approval required by this Q.
+- Destructive action without an explicit, current Approval Request.
+- Unapproved architecture or responsibility change.
+- Hidden refactoring or unrelated cleanup.
+- Unauthorized Platform or Core promotion.
+- Promotion of Optional Package candidates into Core or a mandatory template.
+- Notion or other external-source write unless explicitly in scope and approved.
 
 ## Existing Knowledge / Dependencies
 
@@ -465,6 +505,28 @@ docs/requests/<project>/<status>/<Q_ID>_<short_topic>/completion_report.md
 - Safe Commit Set must be reported.
 - Review Decision must be returned.
 
+## Completion Review Contract
+
+Completion Review must include:
+
+- Summary.
+- Changed Files.
+- Unchanged / Protected Scope.
+- Validation / Tests.
+- Repository Status.
+- Risks.
+- Follow-up Candidates.
+- Completion Judgment: PASS / PASS WITH FOLLOW-UP / SCW-BLOCKED.
+- Commit Recommendation.
+- Approval State and any concrete Approval Request.
+
+Rules:
+
+```text
+Completion Review PASS is not authority to Commit, Push, or Tag.
+Approval applies only to the latest explicit, unexecuted Approval Request.
+```
+
 ## Completion Report Requirements
 
 Completion Report must include:
@@ -507,6 +569,7 @@ docs: update ghost development system knowledge base
 
 ## Related Documents
 
+- `docs/standards/codex_execution_standard.md`
 - `docs/rules/q_file_artifact_standard.md`
 - `docs/rules/q_file_naming_rules.md`
 - `docs/rules/q_file_template_rules.md`

@@ -7,6 +7,9 @@ workflow or template.
 
 ## Contains
 
+- `codex_execution_standard.md`: adopted v1.0 execution contract for
+  architecture-first Q execution, external knowledge independence, SCW,
+  Completion Review, and Human Approval boundaries.
 - `q_knowledge_classification.md`: proposed standard for Q type and Knowledge
   Asset type classification.
 - `execution_queue_display_contract.md`: draft standard for execution queue
@@ -45,6 +48,7 @@ workflow or template.
 
 ## Related Documents
 
+- `templates/Q_TEMPLATE.md`
 - `docs/architecture/knowledge_candidate_classification_contract.md`
 - `docs/architecture/design_intent_preservation.md`
 - `docs/philosophy/north_star.md`
