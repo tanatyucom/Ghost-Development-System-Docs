@@ -1,6 +1,6 @@
 # Codex Execution Standard
 
-**Version:** 1.0
+**Version:** 1.1
 
 **Status:** Adopted
 
@@ -107,9 +107,52 @@ When moving or renaming files or transferring responsibility, record:
 
 ### Capability Verification First
 
-Before work begins, verify access to the required repository, tools,
-permissions, and external knowledge. Never claim or assume an unavailable
-capability.
+Before execution begins, the AI executor must verify and report:
+
+- Repository.
+- Branch.
+- Workspace Status.
+- Available Tools.
+- Repository Search Capability.
+- GitHub Access.
+- Notion Access.
+- External Knowledge Access.
+- Write Permission.
+- Approval Required Operations.
+- Protected Scope.
+
+Verification must distinguish technical capability from execution authority.
+For example, an available GitHub or Notion write tool does not authorize its
+use when the Q prohibits writes or requires Human Approval.
+
+The result must be emitted as a Startup Capability Report before implementation
+or documentation editing begins. The report includes:
+
+- Capability Verification Result: `PASS`, `PASS_WITH_LIMITATION`, or
+  `SCW_REQUIRED`.
+- Verified repository, branch, and workspace state.
+- Available and unavailable required capabilities.
+- Access and permission limitations.
+- Approval-required operations.
+- Protected scope.
+- Safe Next Action.
+
+Never claim or assume an unavailable capability.
+
+#### Verification Failure Rule
+
+If a required capability, access path, permission, repository identity, or
+workspace state cannot be verified, use SCW:
+
+```text
+Stop
+  -> Call
+  -> Wait
+```
+
+Do not begin implementation by guessing. Report the missing or conflicting
+evidence, affected scope, recommended decision, and safe next action, then wait
+for the required Human Decision or capability restoration.
 
 ### Evidence Before Completion
 
@@ -212,7 +255,7 @@ safe commit set, repository state, or Q policy changes.
 
 ```text
 Q Intake
-  -> Capability Verification
+  -> Capability Verification And Startup Capability Report
   -> Startup And Canonical Discovery
   -> Scope And Architecture Check
   -> Execute The Single Responsibility

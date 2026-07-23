@@ -1,6 +1,6 @@
 # Q File Template
 
-**Template Version:** 2.2
+**Template Version:** 2.3
 
 **Last Updated:** 2026-07-23
 
@@ -191,6 +191,35 @@ Do not generate the managed artifact body before Artifact Intent, Required Workf
 PASS_WITH_LIMITATION requires a limitation and next action.
 BLOCK and SCW_REQUIRED must stop draft generation until the blocking condition is resolved or a Human Decision is recorded.
 SCW is not a substitute for performing an available required check.
+```
+
+## Capability Verification
+
+Complete this section and emit the Startup Capability Report before execution
+or artifact editing begins.
+
+- Capability Verification Result: PASS / PASS_WITH_LIMITATION / SCW_REQUIRED
+- Repository:
+- Branch:
+- Workspace Status:
+- Available Tools:
+- Repository Search Capability:
+- GitHub Access:
+- Notion Access:
+- External Knowledge Access:
+- Write Permission:
+- Approval Required Operations:
+- Protected Scope:
+- Missing / Conflicting Evidence:
+- Limitations:
+- Safe Next Action:
+
+Rules:
+
+```text
+Technical capability does not grant execution authority.
+If a required capability cannot be verified, use SCW and do not begin execution
+by guessing.
 ```
 
 ## Commit / Push Policy
@@ -509,6 +538,8 @@ docs/requests/<project>/<status>/<Q_ID>_<short_topic>/completion_report.md
 
 Completion Review must include:
 
+- Capability Verification Result.
+- Startup Capability Report.
 - Summary.
 - Changed Files.
 - Unchanged / Protected Scope.

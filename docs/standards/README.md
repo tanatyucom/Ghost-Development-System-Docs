@@ -7,9 +7,10 @@ workflow or template.
 
 ## Contains
 
-- `codex_execution_standard.md`: adopted v1.0 execution contract for
-  architecture-first Q execution, external knowledge independence, SCW,
-  Completion Review, and Human Approval boundaries.
+- `codex_execution_standard.md`: adopted v1.1 execution contract for AI
+  Capability Verification First, architecture-first Q execution, external
+  knowledge independence, SCW, Completion Review, and Human Approval
+  boundaries.
 - `q_knowledge_classification.md`: proposed standard for Q type and Knowledge
   Asset type classification.
 - `execution_queue_display_contract.md`: draft standard for execution queue
