@@ -491,3 +491,7 @@ This extends the existing AI Repository Index decision field instead of replacin
 
 - `follow_up_candidate_template.md`
 - `repository_registry_entry_template.md`
+- `generated_draft_q_template.md`
+- `missing_input_report_template.md`
+- `draft_q_provenance_block_template.md`
+- `draft_q_review_checklist.md`

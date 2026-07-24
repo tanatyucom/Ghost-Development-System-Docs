@@ -91,3 +91,8 @@ workflow or template.
 - `repository_registry_standard.md`
 - `repository_identity_standard.md`
 - `repository_freshness_and_verification_standard.md`
+- `draft_q_generation_standard.md`
+- `draft_q_lifecycle_standard.md`
+- `missing_input_classification_standard.md`
+- `schemas/draft_q_generator.schema.yaml`
+- `schemas/draft_q_metadata.schema.yaml`

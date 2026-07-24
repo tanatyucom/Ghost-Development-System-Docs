@@ -1,0 +1,33 @@
+schema_id: gds.draft_q_generator_metadata
+version: "1.0"
+required_fields:
+  - generator_version
+  - template_version
+  - generated_at
+  - source_provenance
+  - inherited_fields
+  - generated_fields
+  - corrected_fields
+  - missing_fields
+  - invalidated_fields
+  - warnings
+  - draft_status
+  - execution_authority
+draft_status_values: [Generated, DraftReady, ReviewRequired, Incomplete, WaitingForInput]
+execution_authority_value: NONE
+provenance_fields:
+  - source_artifact
+  - source_field
+  - observed_value
+  - observed_date
+  - freshness_status
+  - derivation
+  - invalidation_condition
+missing_input_fields:
+  - field
+  - classification
+  - reason
+  - known_context
+  - owner
+  - resolution_method
+  - resume_condition

@@ -1011,3 +1011,4 @@ It also requires distinguishing local index generation from public Raw availabil
 - `safe_context_correction_workflow.md`
 - `follow_up_to_draft_q_workflow.md`
 - `repository_registry_lifecycle_workflow.md`
+- `draft_q_review_and_approval_workflow.md`

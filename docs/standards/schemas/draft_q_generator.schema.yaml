@@ -1,0 +1,33 @@
+schema_id: gds.draft_q_generator_input_output
+version: "1.0"
+status: DocumentationCandidate
+required_inputs:
+  - enriched_follow_up_candidate
+  - canonical_q_template_version
+  - repository_registry
+  - source_q_identity
+  - source_completion_report_identity
+conditional_inputs:
+  - handover_project_state
+  - startup_report
+  - source_notes
+  - related_q
+  - dependency_q
+  - human_decision_override
+output_sections:
+  - identity
+  - mandatory_execution_context
+  - work_definition
+  - capability_matrix
+  - deliverables
+  - validation
+  - startup_sequence
+  - scw_conditions
+  - completion_contract
+  - generator_metadata
+invariants:
+  status: Draft
+  execution_authority: NONE
+  approval_status: NOT_APPROVED
+  startup: NOT_PERMITTED
+  mutation: NOT_PERMITTED

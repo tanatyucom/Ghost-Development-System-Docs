@@ -102,6 +102,12 @@ directory/workspace, root mapping from identity, and Registry mutation class
 from Q authority. Runtime discovery, database storage, repository bootstrap,
 and cross-machine synchronization remain separate future work.
 
+Canonical Draft Q Generator Foundation is now documentation-complete. It maps
+Enriched Follow-up, Registry, Completion, Handover, and Canonical Template
+evidence into a non-executable Draft envelope with provenance, missing-input
+classification, minimal questions, and a separate Human Approval handoff.
+Runtime/CLI/GUI generation remains a separately approved implementation Q.
+
 Runtime implementation, automatic Commit/Push, migration, and release remain
 separate Qs with their own Human Approval gates.
 
