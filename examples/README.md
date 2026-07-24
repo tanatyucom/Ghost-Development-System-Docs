@@ -377,3 +377,4 @@ Do not use examples to introduce new rules. Promote reusable standards to
 - `approval_policy_examples.md`
 - `repository_registry_examples.md`
 - `draft_q_generator_examples.md`
+- `implementation_host_decision_examples.md`

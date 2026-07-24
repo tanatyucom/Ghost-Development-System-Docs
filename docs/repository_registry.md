@@ -10,6 +10,8 @@
 | `GAMEGHOST` | GameGhost | Active / Verified | fixed | `C:/GrayGhostArchive/GameGhost` | `develop` | NORMAL |
 | `AI-ARTIFACT-EXCHANGE-MCP-PROVISIONAL` | AI Artifact Exchange MCP Repository | Planned / Pending | unresolved | UNKNOWN | UNKNOWN | NONE |
 | `ALLARCHIVE-PROVISIONAL` | AllArchive | Planned / Pending | unresolved | UNKNOWN | UNKNOWN | NONE |
+| `GDS-RUNTIME-PROVISIONAL` | GDS Runtime | Planned / Pending | unresolved | UNKNOWN | UNKNOWN | NONE |
+| `GDS-RUNTIME-PROVISIONAL` | GDS Runtime | Planned / Pending | unresolved | UNKNOWN | UNKNOWN | NONE |
 
 ## Interpretation
 
@@ -22,6 +24,14 @@ The two Planned entries are concepts only. Neither root nor remote is asserted,
 and neither may be selected as an execution target. The AI artifact exchange
 concept is unrelated to Steam, and `C:/SteamAI/mcp` is not evidence of its
 repository identity.
+
+GDS Runtime is the selected future implementation host, but remains Planned.
+No repository, root, remote, or branch exists by this decision. Bootstrap and
+activation require a separate approved Q before any implementation may start.
+
+GDS Runtime is the selected future implementation host, but remains Planned.
+No repository, root, remote, or branch exists by this decision. Bootstrap and
+activation require a separate approved Q before any implementation may start.
 
 ## Usage
 

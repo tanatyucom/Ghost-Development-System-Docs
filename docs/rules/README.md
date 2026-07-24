@@ -269,3 +269,4 @@ document or ADR when needed.
 - `scw_applicability_rules_v2.md`
 - `repository_registry_update_rules.md`
 - `generated_draft_safety_rules.md`
+- `implementation_mutation_authority_rules.md`

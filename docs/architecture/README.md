@@ -590,3 +590,5 @@ Do not use this folder to approve Future Candidates by implication.
 - `canonical_draft_q_generator.md`
 - `handover_framework_v2.md`
 - `repository_registry_architecture.md`
+- `implementation_host_runtime_architecture.md`
+- `gds_tooling_module_architecture.md`

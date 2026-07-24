@@ -108,6 +108,11 @@ evidence into a non-executable Draft envelope with provenance, missing-input
 classification, minimal questions, and a separate Human Approval handoff.
 Runtime/CLI/GUI generation remains a separately approved implementation Q.
 
+Implementation Host Architecture now selects a dedicated Planned GDS Runtime
+repository with a Python core. The immediate dependency is a separately approved
+repository bootstrap and Registry activation Q. GDS-DOCS and GameGhost remain
+prohibited runtime hosts; MCP remains a future transport adapter.
+
 Runtime implementation, automatic Commit/Push, migration, and release remain
 separate Qs with their own Human Approval gates.
 

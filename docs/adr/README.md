@@ -89,6 +89,7 @@ review.
 - `ADR-GDS-009_gds_core_ai_actor_git_adapter_boundary.md`
 - `ADR-GDS-010_progressive_architecture_adoption.md`
 - `ADR-GDS-011_continuity_quality_and_design_context_handover.md`
+- `ADR-GDS-012_implementation_host_and_runtime_selection.md`
 
 ## Guidance Index
 

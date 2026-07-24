@@ -96,3 +96,5 @@ workflow or template.
 - `missing_input_classification_standard.md`
 - `schemas/draft_q_generator.schema.yaml`
 - `schemas/draft_q_metadata.schema.yaml`
+- `runtime_dependency_policy.md`
+- `implementation_repository_standard.md`
