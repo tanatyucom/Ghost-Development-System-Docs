@@ -267,3 +267,4 @@ document or ADR when needed.
 ## Developer Experience Rules
 
 - `scw_applicability_rules_v2.md`
+- `repository_registry_update_rules.md`

@@ -96,6 +96,12 @@ Implementation sequence:
 6. Consider the separate MCP repository bootstrap only after repository and
    security approval; it is unrelated to Steam.
 
+Repository Registry Foundation is now documentation-complete. Its canonical
+YAML and human-readable view distinguish Active from Planned, repository from
+directory/workspace, root mapping from identity, and Registry mutation class
+from Q authority. Runtime discovery, database storage, repository bootstrap,
+and cross-machine synchronization remain separate future work.
+
 Runtime implementation, automatic Commit/Push, migration, and release remain
 separate Qs with their own Human Approval gates.
 

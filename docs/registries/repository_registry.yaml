@@ -1,0 +1,121 @@
+registry_id: gds.repository_registry
+version: "1.0"
+status: Active
+last_updated: "2026-07-24"
+owner: GDS
+human_authority: Project Owner
+source_of_truth: docs/registries/repository_registry.yaml
+schema: docs/standards/repository_registry_standard.md
+entries:
+  - repository_id: GDS-DOCS
+    name: Ghost-Development-System-Docs
+    type: Documentation / Governance
+    status: Active
+    purpose: Canonical GDS architecture, governance, workflow, Q, roadmap, and standards
+    canonical_root: C:/GitHub/Ghost-Development-System-Docs
+    root_policy: fixed
+    machine_roots: []
+    default_branch_basis: explicit
+    default_branch: main
+    supported_roles: [SOURCE, TARGET, OUTPUT, VALIDATION, REFERENCE]
+    mutation_class: DOCUMENTATION_ONLY
+    owner: Project Owner
+    hosting: GitHub
+    remote_identity: https://github.com/tanatyucom/Ghost-Development-System-Docs.git
+    last_verified: "2026-07-24"
+    verification_status: Verified
+    verification_method: local_git_read_only
+    verified_by: Codex
+    provenance:
+      - Q_GDS-REPOSITORY-REGISTRY-001
+      - git_revision:2c018333cb379dfc98c951c2780b22bec3dfdc98
+    notes: []
+  - repository_id: GAMEGHOST
+    name: GameGhost
+    type: Application
+    status: Active
+    purpose: Personal game archive and application repository
+    canonical_root: C:/GrayGhostArchive/GameGhost
+    root_policy: fixed
+    machine_roots: []
+    default_branch_basis: explicit
+    default_branch: develop
+    supported_roles: [SOURCE, TARGET, VALIDATION, REFERENCE]
+    mutation_class: NORMAL
+    owner: Project Owner
+    hosting: GitHub
+    remote_identity: https://github.com/tanatyucom/GrayGhostArchive.git
+    last_verified: "2026-07-24"
+    verification_status: Verified
+    verification_method: command_scoped_safe_directory_git_read_only
+    verified_by: Codex
+    provenance:
+      - Q_GDS-REPOSITORY-REGISTRY-001
+      - git_revision:59e671bed6e724051555a9a5628f15f55042f2e0
+    notes:
+      - Nested repository root was verified independently from its remote name.
+      - Dirty workspace observed; no files were changed by this Q.
+  - repository_id: AI-ARTIFACT-EXCHANGE-MCP-PROVISIONAL
+    name: AI Artifact Exchange MCP Repository
+    type: Infrastructure
+    status: Planned
+    purpose: AI-to-AI exchange of Q files, execution packages, review packages, completion evidence, and artifacts
+    canonical_root: null
+    root_policy: unresolved
+    machine_roots: []
+    default_branch_basis: unresolved
+    default_branch: null
+    supported_roles: [TARGET, OUTPUT]
+    mutation_class: NONE
+    owner: Project Owner
+    hosting: null
+    remote_identity: null
+    last_verified: "2026-07-24"
+    verification_status: Pending
+    verification_method: concept_only_no_repository_claim
+    verified_by: Codex
+    provenance:
+      - Q_GDS-REPOSITORY-REGISTRY-001
+    notes:
+      - Provisional identity; repository creation is not approved.
+      - Steam integration is unrelated.
+      - C:/SteamAI/mcp must not be inferred as this repository.
+  - repository_id: ALLARCHIVE-PROVISIONAL
+    name: AllArchive
+    type: Platform
+    status: Planned
+    purpose: Future umbrella platform
+    canonical_root: null
+    root_policy: unresolved
+    machine_roots: []
+    default_branch_basis: unresolved
+    default_branch: null
+    supported_roles: [SOURCE, TARGET, OUTPUT, VALIDATION, REFERENCE]
+    mutation_class: NONE
+    owner: Project Owner
+    hosting: null
+    remote_identity: null
+    last_verified: "2026-07-24"
+    verification_status: Pending
+    verification_method: concept_only_no_repository_claim
+    verified_by: Codex
+    provenance:
+      - Q_GDS-REPOSITORY-REGISTRY-001
+    notes:
+      - Provisional identity; not an execution target.
+validation_rules:
+  - rule_id: repository.unique_id
+    statement: repository_id must be unique.
+    failure_result: BLOCK
+  - rule_id: repository.active_requires_verified_root
+    statement: Active repositories require a verified root and branch basis.
+    failure_result: SCW_REQUIRED
+  - rule_id: repository.planned_is_not_execution_target
+    statement: Planned repositories use NONE and cannot be execution targets.
+    failure_result: BLOCK
+  - rule_id: repository.role_is_capability
+    statement: Supported role does not replace Q-specific role assignment.
+    failure_result: BLOCK
+  - rule_id: repository.mutation_class_is_not_authority
+    statement: Mutation class must not elevate Q-specific authority.
+    failure_result: SCW_REQUIRED

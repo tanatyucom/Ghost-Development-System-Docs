@@ -15,6 +15,8 @@ notes, examples, and workflows live in `docs/architecture/`, `docs/standards/`,
   Execution Authority Registry v0.1.
 - `capability_authority_bindings.yaml`: machine-readable source of truth for
   Capability / Authority bindings v0.1.
+- `repository_registry.yaml`: canonical Repository Identity, lifecycle, root
+  policy, supported roles, mutation class, ownership, and freshness source.
 
 ## Does NOT Contain
 

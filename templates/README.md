@@ -490,3 +490,4 @@ This extends the existing AI Repository Index decision field instead of replacin
 ## Developer Experience Template
 
 - `follow_up_candidate_template.md`
+- `repository_registry_entry_template.md`

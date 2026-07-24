@@ -589,3 +589,4 @@ Do not use this folder to approve Future Candidates by implication.
 - `approval_engine_v2.md`
 - `canonical_draft_q_generator.md`
 - `handover_framework_v2.md`
+- `repository_registry_architecture.md`

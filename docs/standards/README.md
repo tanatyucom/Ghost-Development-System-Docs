@@ -88,3 +88,6 @@ workflow or template.
 - `approval_policy_standard.md`
 - `follow_up_candidate_contract.md`
 - `developer_experience_quality_standard.md`
+- `repository_registry_standard.md`
+- `repository_identity_standard.md`
+- `repository_freshness_and_verification_standard.md`

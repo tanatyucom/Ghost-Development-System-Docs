@@ -375,3 +375,4 @@ Do not use examples to introduce new rules. Promote reusable standards to
 ## Developer Experience Examples
 
 - `approval_policy_examples.md`
+- `repository_registry_examples.md`
