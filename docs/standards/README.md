@@ -1,5 +1,18 @@
 # Standards
 
+## Execution Context Governance
+
+- `execution_context_standard.md` defines the mandatory pre-execution context
+  and Q-issue validation gate.
+- `repository_role_definitions.md` separates Output, Source, Target, Validation,
+  and Reference authority.
+- `branch_and_working_directory_policy.md` prohibits branch and repository
+  inference.
+- `mutation_policy_standard.md` defines the four repository mutation levels.
+- `commit_push_tag_policy_standard.md` separates Git-operation approvals.
+- `capability_verification_startup_spec.md` defines capability evidence and
+  `GO`, `GO_WITH_WARNINGS`, and `SCW` decisions.
+
 ## Purpose
 
 This folder stores documentation standards that are broader than a single

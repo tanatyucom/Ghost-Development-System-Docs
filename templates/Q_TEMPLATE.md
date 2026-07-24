@@ -1,12 +1,42 @@
 # Q File Template
 
-**Template Version:** 2.4
+**Template Version:** 3.0
 
-**Last Updated:** 2026-07-23
+**Last Updated:** 2026-07-24
 
 このテンプレートは、Codex / ChatGPT / Claude / Gemini / human review に渡すQファイルを、チャット本文ではなく管理可能なArtifactとして保存するための標準形式です。
 
 日本語を基本にし、コマンド、パス、ファイル名、識別子、commit message は英語表記のままで構いません。
+
+## Canonical Lifecycle
+
+```text
+Draft
+  -> Template Validation
+  -> Approved Q
+  -> Execution
+  -> Completion Review
+  -> Archive
+```
+
+Template ValidationはExecution直前ではなくIssue前の必須Gateです。結果は
+`ISSUE_OK`、`ISSUE_NG`、`SCW_REQUIRED` のいずれかとし、`ISSUE_OK` 以外のQを
+実行可能Qとして発行してはいけません。
+
+StartupとCompletionは次の順序を変更しません。
+
+```text
+Capability Verification
+  -> Repository Verification
+  -> Execution Context Validation
+  -> Startup Report
+  -> Execution
+
+Verification
+  -> Completion Review
+  -> Safe Commit Set
+  -> STOP
+```
 
 ## Identity
 
@@ -14,7 +44,8 @@
 - Title:
 - Version:
 - Status:
-- Priority:
+- Priority: `<Critical / High / Medium / Low>`
+- Risk: `<SAFE / NORMAL / HIGH / CRITICAL>`
 - Category:
 - Created Date:
 - Last Updated Date:
@@ -116,6 +147,65 @@ Draft / Approved / In Progress / Review / Completed / Archived / Rejected
 ```text
 draft / approved / in_progress / review / completed / archived / rejected
 ```
+
+## Mandatory Execution Context
+
+このSectionは全実行可能Qで必須です。Identityの後、Objectiveより前に配置し、
+placeholderを残したまま実行可能Qとして発行してはいけません。
+
+- Repository Name:
+- Repository Type:
+- Repository Purpose:
+- Repository ID:
+- Repository Role: `<SOURCE / OUTPUT / TARGET / VALIDATION / REFERENCE>`
+- Workspace Root: `<required absolute path>`
+- Repository Root: `<required absolute path>`
+- Execution Root: `<required absolute path>`
+- Working Directory: `<required absolute path>`
+- Workspace Boundary:
+- Expected Base Branch: `<explicit branch or origin/HEAD auto-detection>`
+- Expected Remote / Tracking Branch:
+- Execution Mode: `<Documentation / ReadOnly / Review / Mutation / Migration / Release / Emergency>`
+- Mutation Authority: `<NONE / DOCUMENTATION_ONLY / SAFE / NORMAL / CONTROLLED / FULL>`
+- Allowed Paths:
+- Allowed Operations:
+- Prohibited Operations:
+- Approval Scope:
+  - Repository:
+  - Workflow:
+  - Operation:
+  - Capability:
+- Commit Policy: `<PROHIBITED / SEPARATE_APPROVAL / INCLUDED_IN_GOVERNED_WORKFLOW>`
+- Push Policy: `<PROHIBITED / SEPARATE_APPROVAL / INCLUDED_IN_GOVERNED_WORKFLOW>`
+- Tag Policy: `<PROHIBITED / SEPARATE_APPROVAL / INCLUDED_IN_GOVERNED_WORKFLOW>`
+- Release Policy: `<PROHIBITED / SEPARATE_APPROVAL / INCLUDED_IN_GOVERNED_WORKFLOW>`
+- Completion Stop Point:
+
+`FULL` は無制限または破壊的操作の許可ではありません。force push、history rewrite、
+branch/tag deletion、bulk deletionは別のCritical Governanceが明示されない限り禁止です。
+Repository状態またはScopeの重大変更は既存Approvalを無効化します。
+
+## Required Capability Matrix
+
+各Capabilityについて `REQUIRED / OPTIONAL / NOT_REQUIRED`、利用可否、read/write、
+side effect、必要Approval、fallback、SCW条件を記録します。
+
+| Capability | Requirement | Availability | Authority / Approval | Limitation / SCW Condition |
+| --- | --- | --- | --- | --- |
+| Git |  |  |  |  |
+| Filesystem |  |  |  |  |
+| Python |  |  |  |  |
+| GitHub |  |  |  |  |
+| Network |  |  |  |  |
+| Notion |  |  |  |  |
+| MCP / Execution Gateway |  |  |  |  |
+
+複数Repository Qでは `templates/multi_repository_q_template.md` を使い、Repositoryごとに
+Role、Root、Branch、Working Directory、Mutation Policy、許可・禁止操作、Git方針を
+独立して宣言します。あるRepositoryの承認を別Repositoryへ流用してはいけません。
+
+発行前に `templates/q_template_validation_checklist.md` を実行します。不足、placeholder、
+矛盾、推測が必要な値がある場合はValidation Resultを `FAIL` とします。
 
 ## Repository Context
 
@@ -228,9 +318,9 @@ Before creating a worktree:
 - Obtain Human Approval when branch context or worktree authority is ambiguous.
 - Use SCW when worktree creation is outside the Q authority.
 
-## Execution Context
+## Operational Execution Controls
 
-- Mode: Inspection / Documentation / Implementation / Migration / Validation
+- Mode: Documentation / ReadOnly / Review / Mutation / Migration / Release / Emergency
 - Mutation: Allowed / Restricted / Forbidden
 - Runtime Change: Allowed / Forbidden
 - Database Change: Allowed / Forbidden

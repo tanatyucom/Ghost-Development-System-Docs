@@ -1,8 +1,8 @@
 # Q File Template Rules
 
-**Version:** 1.0
+**Version:** 2.0
 
-**Last Updated:** 2026-07-13
+**Last Updated:** 2026-07-24
 
 ## Purpose
 
@@ -13,6 +13,34 @@ and Safe Commit Set are explicit before AI work begins.
 ## Required Sections
 
 Every official Q should include these sections or mark them `Not Applicable`.
+
+## Mandatory Execution Context
+
+Every executable Q uses Canonical Q Template v3.0. Mandatory Execution Context
+is placed after Identity and before Objective and declares:
+
+- Repository Name, Type, Purpose, ID, and Role;
+- Workspace Root, Repository Root, Execution Root, Working Directory, and Boundary;
+- expected base branch and remote or tracking basis;
+- Execution Mode and Mutation Authority;
+- separate Priority and Risk;
+- Approval Scope for Repository, Workflow, Operation, and Capability;
+- independent Commit, Push, Tag, and Release policies;
+- allowed and prohibited operations and the Completion Stop Point.
+
+Multi-repository Q files repeat the declaration for every repository. Template
+Validation occurs before Issue and returns `ISSUE_OK`, `ISSUE_NG`, or
+`SCW_REQUIRED`. Only `ISSUE_OK` may become an Approved Q.
+
+```text
+Draft -> Template Validation -> Approved Q -> Execution -> Completion Review -> Archive
+```
+
+Capability availability never grants authority. `FULL` Mutation Authority is
+bounded and does not authorize unrestricted destructive operations. Material
+repository-state or scope changes invalidate the applicable approval. See
+`docs/standards/execution_context_standard.md` and
+`templates/q_template_validation_checklist.md`.
 
 ## Identity
 

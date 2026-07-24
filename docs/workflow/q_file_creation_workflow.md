@@ -1,8 +1,8 @@
 # Q File Creation Workflow
 
-**Version:** 1.0
+**Version:** 2.0
 
-**Last Updated:** 2026-07-13
+**Last Updated:** 2026-07-24
 
 ## Purpose
 
@@ -16,13 +16,14 @@ Idea
   -> Artifact Creation Startup Enforcement
   -> Decide Q ID
   -> Select Target Project
-  -> Confirm Repository Context
-  -> Fill Q Template
+  -> Fill Canonical Q Template v3.0
+  -> Complete Mandatory Execution Context
   -> Decide Commit / Push Policy
   -> Decide AI Repository Index Gate
   -> Save Task Artifact Workspace
   -> Verify request.md exists
-  -> Human Approval
+  -> Template Validation
+  -> Approved Q
   -> Codex / AI Execution
 ```
 
@@ -67,17 +68,23 @@ When GameGhost is reference only, write:
 GameGhost: Do not edit
 ```
 
-## Step 3: Confirm Repository Context
+## Step 3: Complete Mandatory Execution Context
 
-Record:
+Record before Issue:
 
 ```text
-Working Repository:
-Working Directory:
-Preferred Shell:
+Repository Name / Type / Purpose / ID / Role
+Workspace Root / Repository Root / Execution Root / Working Directory / Boundary
+Expected Base Branch / Expected Remote or Tracking Branch
+Execution Mode / Mutation Authority
+Priority / Risk
+Approval Scope: Repository / Workflow / Operation / Capability
+Commit / Push / Tag / Release Policy
+Required Capability Matrix
 ```
 
-AI should validate the actual repository root before implementation.
+Do not infer missing values. Missing context returns `ISSUE_NG`; unsafe or
+unresolvable conflict returns `SCW_REQUIRED`.
 
 ## Step 4: Fill Q Template
 
@@ -138,21 +145,45 @@ The authoritative Q is:
 request.md
 ```
 
-## Step 6: Verify Before Execution
+## Step 6: Template Validation And Issue
+
+Run `templates/q_template_validation_checklist.md` after saving the draft and
+before issuing it as executable.
+
+```text
+ISSUE_OK       -> Human Approval -> Approved Q
+ISSUE_NG       -> return to Draft
+SCW_REQUIRED   -> Stop / Call / Wait
+```
+
+Validate each repository separately. Capability availability is evidence, not
+permission. Material repository-state or scope changes invalidate the related
+approval.
+
+## Step 7: Verify Before Execution
 
 Before execution:
 
 - `request.md` exists.
-- Working Repository / Working Directory are explicit.
+- Template Validation result is `ISSUE_OK`.
+- Repository identity, workspace boundary, and Working Directory are explicit.
 - Target / Non-Target scope is explicit.
-- Commit / Push policy is explicit.
+- Commit / Push / Tag / Release policy is explicit.
 - Validation commands exist.
 - AI Repository Index Update Gate exists.
 - Safe Commit Set requirement exists.
 
-## Step 7: Execute
+## Step 8: Execute
 
 AI may execute only within the approved scope.
+
+```text
+Capability Verification
+  -> Repository Verification
+  -> Execution Context Validation
+  -> Startup Report
+  -> Execution
+```
 
 Chat should contain a short summary and artifact paths, not the whole Q body.
 
@@ -163,9 +194,9 @@ When work completes:
 ```text
 Implementation
   -> Verification
-  -> completion_report.md
+  -> Completion Review
   -> Safe Commit Set
-  -> Human Review Decision
+  -> STOP
 ```
 
 Do not commit unless the Q and user approval allow it.

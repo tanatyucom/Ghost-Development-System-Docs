@@ -1,0 +1,38 @@
+# Startup Report v3.0
+
+- Q ID:
+- Repository Name / ID:
+- Repository Type / Purpose / Role:
+- Workspace Root:
+- Repository Root:
+- Execution Root:
+- Working Directory:
+- Workspace Boundary:
+- Expected Base Branch:
+- Detected Base Branch:
+- Current Branch:
+- Detached HEAD:
+- Remote:
+- Workspace Status:
+- Execution Mode:
+- Mutation Authority:
+- Priority / Risk:
+- Approval Scope: Repository / Workflow / Operation / Capability
+- Commit / Push / Tag / Release Policy:
+- Required Capabilities:
+- Unavailable Capabilities:
+- Git:
+- Filesystem:
+- Python:
+- Repository Search Capability:
+- GitHub Access:
+- Network Access:
+- Notion Access:
+- MCP / Execution Gateway:
+- Write Permission:
+- Approval Required Operations:
+- Protected Scope:
+- Warnings:
+- SCW Conditions Present:
+- Execution Decision: `<GO / GO_WITH_WARNINGS / SCW>`
+- Safe Next Action:

@@ -1,5 +1,16 @@
 # Templates
 
+## Execution Context Templates
+
+- `Q_TEMPLATE.md` is the Canonical Q Template v3.0 and preserves the v2.5
+  specialized governance sections behind the new lifecycle gates.
+- `single_repository_q_template.md` is the compact v3.0 schema for one-repository Q
+  files.
+- `multi_repository_q_template.md` is the compact v3.0 schema for independent repository roles and
+  mutation boundaries.
+- `startup_report_template.md` records verified startup evidence.
+- `q_template_validation_checklist.md` blocks incomplete Q files before issue.
+
 ## Purpose
 
 This folder contains reusable templates for Ghost Development System Docs.

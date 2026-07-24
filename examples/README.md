@@ -1,5 +1,12 @@
 # Examples
 
+## Canonical Q Template v3.0
+
+- `single_repository_q_v3_example.md` demonstrates an `ISSUE_OK`
+  documentation-only Q.
+- `multi_repository_q_v3_example.md` demonstrates independent Output and
+  read-only Validation repository boundaries.
+
 ## Purpose
 
 This folder is the best practice library for Ghost Development System Docs.
