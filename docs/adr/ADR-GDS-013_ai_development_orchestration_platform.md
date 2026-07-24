@@ -1,7 +1,10 @@
 # ADR-GDS-013: Independent AI Development Orchestration Platform
 
-**Status:** Proposed
+**Status:** Accepted
 **Date:** 2026-07-25
+**Accepted Date:** 2026-07-25
+**Decision Owner:** Project Owner
+**Adoption Authority:** Q_GDS-ADR-GDS-013-HUMAN-ADOPTION-001
 
 ## Context
 
@@ -115,10 +118,11 @@ and the threat-model gates mitigate them.
 
 ## Follow-up
 
-Human adoption of this Proposed ADR precedes repository bootstrap. Then execute
-GDS Runtime bootstrap, verify its Registry activation, execute GDO bootstrap,
-add its Planned Registry entry through separate authority, and progress through
-Artifact Exchange, Queue/Worker, Gateway, and advanced recovery phases.
+Human adoption is complete. Next, execute GDS Runtime bootstrap under separate
+repository-creation authority, verify its Registry activation, execute GDO
+bootstrap, add its Planned Registry entry through separate authority, and
+progress through Artifact Exchange, Queue/Worker, Gateway, and advanced recovery
+phases.
 
 ## Related Decisions
 

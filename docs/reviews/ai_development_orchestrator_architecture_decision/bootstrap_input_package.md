@@ -36,7 +36,8 @@ workers, MCP dependency, Git effects, remote workers, service installation, and 
 
 ## Required approval sequence
 
-1. Human adopts Proposed ADR-GDS-013.
+1. Human adoption of ADR-GDS-013 completed on 2026-07-25 through
+   `Q_GDS-ADR-GDS-013-HUMAN-ADOPTION-001`.
 2. Execute GDS Runtime repository bootstrap under separate creation authority.
 3. Verify GDS Runtime and separately approve Planned-to-Active Registry mutation.
 4. Execute GDO repository bootstrap under separate local/remote authority.
