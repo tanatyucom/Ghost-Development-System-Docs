@@ -1004,3 +1004,9 @@ Use `completion_report_workflow.md` and `documentation_synchronization_workflow.
 The gate requires index regeneration, validation, `git diff --check`, workspace status evidence, generated entry count, and Safe Commit Set classification whenever index-target Knowledge Assets change.
 
 It also requires distinguishing local index generation from public Raw availability after Commit and Push.
+
+## Developer Experience Workflows
+
+- `approval_resolution_workflow.md`
+- `safe_context_correction_workflow.md`
+- `follow_up_to_draft_q_workflow.md`

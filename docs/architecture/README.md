@@ -583,3 +583,9 @@ Do not use this folder to approve Future Candidates by implication.
 - `docs/rules/project_rules.md`
 - `docs/roadmap/ghost_development_system_roadmap.md`
 - `docs/roadmap/roadmap.md`
+
+## Developer Experience Architecture
+
+- `approval_engine_v2.md`
+- `canonical_draft_q_generator.md`
+- `handover_framework_v2.md`

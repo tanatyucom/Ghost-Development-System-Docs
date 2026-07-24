@@ -78,6 +78,27 @@ remaining issues, and recommended next work.
 
 ## Current Position
 
+### GDS5.6 Developer Experience Optimization
+
+GDS5.6 adds a governance-friction reduction track without weakening Human
+Approval, repository boundaries, or execution evidence. The documentation
+foundation now defines Approval Engine v2 classification, Safe Auto-Correction,
+SCW Applicability v2, enriched Follow-up Candidates, Canonical Draft Q
+generation, Context Inheritance, and Developer Experience quality metrics.
+
+Implementation sequence:
+
+1. Measure baseline friction and validate the documentation contracts.
+2. Establish Repository Registry ownership and machine-readable identity.
+3. Prototype the Draft Q Generator without auto-approval.
+4. Prototype Approval Engine v2 classification without automatic Git execution.
+5. Add DX metrics collection after privacy and ownership approval.
+6. Consider the separate MCP repository bootstrap only after repository and
+   security approval; it is unrelated to Steam.
+
+Runtime implementation, automatic Commit/Push, migration, and release remain
+separate Qs with their own Human Approval gates.
+
 - Current Mission: Use GDS Foundation to support Platform Integration and
   cross-project review / knowledge operations.
 - Current Phase: Platform Integration Era.

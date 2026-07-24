@@ -263,3 +263,7 @@ Use it to explain why the rule exists in a few lines.
 Do not use it as a full Decision Log. Detailed alternatives, rejected options,
 approval history, and long rationale should be handled by a separate decision
 document or ADR when needed.
+
+## Developer Experience Rules
+
+- `scw_applicability_rules_v2.md`

@@ -371,3 +371,7 @@ Do not use examples to introduce new rules. Promote reusable standards to
 - `docs/workflow/audit_before_repair_workflow.md`
 - `docs/workflow/debug_artifact_review_workflow.md`
 - `docs/history/knowledge_base_history.md`
+
+## Developer Experience Examples
+
+- `approval_policy_examples.md`

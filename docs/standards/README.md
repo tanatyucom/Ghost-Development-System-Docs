@@ -82,3 +82,9 @@ workflow or template.
 - `docs/architecture/git_execution_adapter_vertical_slice.md`
 - `docs/rules/git_execution_adapter_rules.md`
 - `roadmap/ghost_development_system_roadmap.md`
+
+## Developer Experience Standards
+
+- `approval_policy_standard.md`
+- `follow_up_candidate_contract.md`
+- `developer_experience_quality_standard.md`

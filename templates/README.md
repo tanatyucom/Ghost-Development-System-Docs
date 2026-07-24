@@ -486,3 +486,7 @@ If a Q changes index-target Knowledge Assets, the Q and Completion Report templa
 - explicit distinction between local index regeneration and public Raw availability after Commit / Push
 
 This extends the existing AI Repository Index decision field instead of replacing the Completion Checklist or Documentation Synchronization workflows.
+
+## Developer Experience Template
+
+- `follow_up_candidate_template.md`
