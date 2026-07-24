@@ -1,10 +1,113 @@
-# Handoff Template v2
+# Canonical Handoff Template v2.1
 
 ## Purpose
 
 Use this template when a handoff must preserve not only current files and
 status, but also design intent, collaboration experience, approval boundaries,
 and what must not be lost.
+
+Complete every Mandatory section. Use `Not Applicable` rather than omission.
+
+## Handover Identity
+
+- Handover ID:
+- Source Session / AI:
+- Target Session / AI:
+- Created At:
+- Source Q / Completion Report:
+- Framework Version: Handover Framework v2
+- Validation Result: `ACCEPTED / PARTIAL / SCW_REQUIRED`
+
+## Current State
+
+- Project State: `Active / Blocked / Waiting / Deprecated / Cancelled / Future Candidate`
+- State subject and scope:
+- State reason and evidence:
+- Completed / In progress / Not started:
+- Blocked / waiting condition:
+- Resume / exit condition:
+
+## Session Goal
+
+- Goal entering the source session:
+- Actual result:
+- Success criteria status:
+
+## Decision Summary
+
+- Current material decisions:
+- Approval status:
+- Effective scope:
+
+## Decision History
+
+- Decision ID / date / owner / status:
+- Trigger or question:
+- Decision:
+- Concise rationale and evidence:
+- Alternatives considered:
+- Rejected options and reason for rejection:
+- Assumptions and constraints:
+- Consequences and risks:
+- Invalidation / revisit condition:
+- Related ADR / Q / report:
+
+## Architecture Intent
+
+- Intended responsibility boundaries:
+- Portable Core:
+- Adapter / project-specific concerns:
+- What must not be inferred or collapsed:
+
+## Current Risks
+
+- Risk / impact / evidence / mitigation / owner:
+
+## Open Questions
+
+- Question / why unresolved / required evidence / owner:
+
+## Blocked Items
+
+- Item / blocker / SCW evidence / resume requirement:
+
+## Assumptions
+
+- Assumption / source / freshness / invalidation condition:
+
+## Terminology
+
+- Term / fixed definition / aliases / prohibited interpretation:
+
+## Context Contract
+
+- Repository Name / ID / Type / Purpose / Role / Root / Revision:
+- Workspace Root / Execution Root / Working Directory / Boundary:
+- Validation / Reference repositories:
+- Execution Mode / Mutation Authority:
+- Allowed and prohibited paths / operations:
+- Approval Scope and invalidation conditions:
+- Commit / Push / Tag / Release state:
+- Source priority and freshness:
+- Missing / conflicting context:
+- SCW conditions:
+
+## Next Session Entry Point
+
+- Exact first action:
+- Required reading order:
+- Do not redo:
+- Do not assume:
+- Expected first decision:
+
+## Session Summary
+
+- Reasoning Summary: evidence, constraints, alternatives, and rationale only;
+  do not include hidden chain-of-thought:
+- Architecture Change Summary:
+- Learning Summary:
+- Changed Files / Validation:
+- Remaining work:
 
 ## North Star
 
@@ -127,6 +230,12 @@ Failure:
 - Repository Quality checked:
 - Completion Review checked:
 - Commit / Push not executed without approval:
+- Mandatory sections complete:
+- Decision reasons and rejected options reconstructable:
+- Context Contract complete and fresh:
+- Project State and resume conditions explicit:
+- Next Session Entry Point executable:
+- Receiver can explain design intent without chat history:
 
 ## Related Documents
 
@@ -134,3 +243,8 @@ Failure:
 - `docs/architecture/experience_layer.md`
 - `docs/workflow/generation_handoff_workflow.md`
 - `templates/VISION_SCENARIO_TEMPLATE.md`
+- `docs/architecture/handover_framework_v2.md`
+- `docs/standards/decision_history_standard.md`
+- `docs/standards/handover_context_contract.md`
+- `docs/standards/project_state_standard.md`
+- `docs/standards/session_summary_standard.md`

@@ -88,6 +88,7 @@ review.
 - `ADR-GDS-008_governed_execution_adapter_boundary.md`
 - `ADR-GDS-009_gds_core_ai_actor_git_adapter_boundary.md`
 - `ADR-GDS-010_progressive_architecture_adoption.md`
+- `ADR-GDS-011_continuity_quality_and_design_context_handover.md`
 
 ## Guidance Index
 
@@ -111,6 +112,7 @@ review.
 - `docs/adr/ADR-GDS-008_governed_execution_adapter_boundary.md`
 - `docs/adr/ADR-GDS-009_gds_core_ai_actor_git_adapter_boundary.md`
 - `docs/adr/ADR-GDS-010_progressive_architecture_adoption.md`
+- `docs/adr/ADR-GDS-011_continuity_quality_and_design_context_handover.md`
 - `docs/architecture/design_principles/progressive_architecture_adoption.md`
 - `docs/architecture/case_studies/gameghost_repository_cleanup.md`
 - `docs/adr/metadata_center_architecture_review.md`

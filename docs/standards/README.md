@@ -13,6 +13,17 @@
 - `capability_verification_startup_spec.md` defines capability evidence and
   `GO`, `GO_WITH_WARNINGS`, and `SCW` decisions.
 
+## Continuity Quality
+
+- `decision_history_standard.md` preserves decisions, alternatives, rejection
+  reasons, evidence, and revisit conditions.
+- `handover_context_contract.md` freezes repository roles, workspace boundaries,
+  terminology, authority, and source freshness for the receiving session.
+- `project_state_standard.md` defines Active, Blocked, Waiting, Deprecated,
+  Cancelled, and Future Candidate.
+- `session_summary_standard.md` defines the durable end-of-session continuity
+  artifact without storing private chain-of-thought.
+
 ## Purpose
 
 This folder stores documentation standards that are broader than a single

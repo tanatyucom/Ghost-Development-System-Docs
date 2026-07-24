@@ -105,10 +105,14 @@ handoff checklist template reviews whether that artifact is complete enough for
 the receiver. Reference examples live in
 `examples/multi_ai_handoff_reference_examples.md`.
 
-Handoff Template v2 and Vision Scenario Template preserve generation-to-
+Canonical Handoff Template v2.1 and Vision Scenario Template preserve generation-to-
 generation design intent, North Star, Experience continuity, Approval Request
 lifecycle, Pending Human Approval, and what must not be lost when the handoff
 is more than a file/status transfer.
+
+Handoff Template v2.1 also makes Decision History, rejected options, assumptions,
+terminology, Context Contract, Project State, Session Summary, and Next Session
+Entry Point mandatory for authoritative cross-session handovers.
 
 Approval Request Block Template helps humans and AI display Requested
 Operations, Recommended Follow-up Candidates, operation-specific approval
