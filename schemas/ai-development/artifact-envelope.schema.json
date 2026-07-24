@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gds.example/schemas/ai-development/artifact-envelope.schema.json",
+  "title": "Artifact Envelope 1.0.0",
+  "type": "object",
+  "required": ["artifact_id", "artifact_type", "schema_id", "schema_version", "created_at", "producer_id", "producer_type", "q_id", "repository_id", "approval_id", "execution_id", "attempt_id", "correlation_id", "causation_id", "parent_artifact_id", "classification", "content_type", "content_encoding", "payload_digest", "payload_size", "retention_class", "redaction_state", "status", "metadata", "payload"],
+  "properties": {
+    "artifact_id": {"$ref": "common.schema.json#/$defs/id"}, "artifact_type": {"$ref": "common.schema.json#/$defs/id"},
+    "schema_id": {"$ref": "common.schema.json#/$defs/id"}, "schema_version": {"$ref": "common.schema.json#/$defs/version"},
+    "created_at": {"$ref": "common.schema.json#/$defs/timestamp"}, "producer_id": {"$ref": "common.schema.json#/$defs/id"},
+    "producer_type": {"enum": ["HUMAN", "GDS_RUNTIME", "ORCHESTRATOR", "WORKER", "EXECUTION_GATEWAY", "VALIDATOR"]},
+    "q_id": {"$ref": "common.schema.json#/$defs/nullableId"}, "repository_id": {"$ref": "common.schema.json#/$defs/nullableId"},
+    "approval_id": {"$ref": "common.schema.json#/$defs/nullableId"}, "execution_id": {"$ref": "common.schema.json#/$defs/nullableId"},
+    "attempt_id": {"$ref": "common.schema.json#/$defs/nullableId"}, "correlation_id": {"$ref": "common.schema.json#/$defs/id"},
+    "causation_id": {"$ref": "common.schema.json#/$defs/nullableId"}, "parent_artifact_id": {"$ref": "common.schema.json#/$defs/nullableId"},
+    "classification": {"$ref": "common.schema.json#/$defs/classification"}, "content_type": {"type": "string", "minLength": 1},
+    "content_encoding": {"enum": ["utf-8", "base64", "identity"]}, "payload_digest": {"$ref": "common.schema.json#/$defs/digest"},
+    "payload_size": {"type": "integer", "minimum": 0}, "retention_class": {"$ref": "common.schema.json#/$defs/retention"},
+    "redaction_state": {"enum": ["NONE", "REDACTED_DERIVATIVE", "REJECTED_SECRET"]}, "status": {"enum": ["CREATED", "VALIDATED", "REJECTED", "SUPERSEDED"]},
+    "metadata": {"type": "object"}, "payload": {}
+  },
+  "additionalProperties": true
+}

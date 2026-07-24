@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://gds.example/schemas/ai-development/approval-reference.schema.json",
+  "title": "Approval Reference 1.0.0", "type": "object",
+  "required": ["approval_id", "approval_type", "subject_type", "subject_id", "issued_by", "issued_at", "expires_at", "scope_digest", "repository_id", "branch", "remote", "expected_head", "allowed_paths", "allowed_operations", "safe_commit_set_digest", "conditions", "invalidation_conditions", "status"],
+  "properties": {
+    "approval_id": {"$ref": "common.schema.json#/$defs/id"}, "approval_type": {"enum": ["EXECUTION", "COMMIT", "PUSH", "TAG_CREATE", "TAG_PUSH", "FILESYSTEM"]},
+    "subject_type": {"enum": ["Q", "EXECUTION", "EFFECT"]}, "subject_id": {"$ref": "common.schema.json#/$defs/id"},
+    "issued_by": {"$ref": "common.schema.json#/$defs/id"}, "issued_at": {"$ref": "common.schema.json#/$defs/timestamp"},
+    "expires_at": {"type": ["string", "null"], "format": "date-time"}, "scope_digest": {"$ref": "common.schema.json#/$defs/digest"},
+    "repository_id": {"$ref": "common.schema.json#/$defs/id"}, "branch": {"type": "string", "minLength": 1},
+    "remote": {"type": ["string", "null"]}, "expected_head": {"type": ["string", "null"], "pattern": "^[0-9a-f]{40}$"},
+    "allowed_paths": {"$ref": "common.schema.json#/$defs/stringArray"}, "allowed_operations": {"$ref": "common.schema.json#/$defs/stringArray"},
+    "safe_commit_set_digest": {"type": ["string", "null"], "pattern": "^sha256:[0-9a-f]{64}$"},
+    "conditions": {"type": "array", "items": {"type": "string"}}, "invalidation_conditions": {"type": "array", "items": {"type": "string"}},
+    "status": {"enum": ["ACTIVE", "EXPIRED", "INVALIDATED", "REVOKED", "CONSUMED"]}
+  }, "additionalProperties": false
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://gds.example/schemas/ai-development/effect-receipt.schema.json",
+  "title": "Effect Receipt 1.0.0", "type": "object",
+  "required": ["receipt_id", "effect_id", "effect_type", "status", "executed_by", "started_at", "completed_at", "repository_id", "branch", "remote", "head_before", "head_after", "commit_id", "tag_name", "idempotency_key", "request_digest", "result_digest", "evidence", "error"],
+  "properties": {
+    "receipt_id": {"$ref": "common.schema.json#/$defs/id"}, "effect_id": {"$ref": "common.schema.json#/$defs/id"}, "effect_type": {"enum": ["git.commit", "git.push", "git.tag.create", "git.tag.push", "filesystem.write", "filesystem.move", "filesystem.delete"]},
+    "status": {"enum": ["SUCCEEDED", "FAILED_RETRYABLE", "FAILED_PERMANENT", "REJECTED"]}, "executed_by": {"$ref": "common.schema.json#/$defs/id"}, "started_at": {"$ref": "common.schema.json#/$defs/timestamp"}, "completed_at": {"$ref": "common.schema.json#/$defs/timestamp"},
+    "repository_id": {"$ref": "common.schema.json#/$defs/id"}, "branch": {"type": "string"}, "remote": {"type": ["string", "null"]}, "head_before": {"type": ["string", "null"], "pattern": "^[0-9a-f]{40}$"}, "head_after": {"type": ["string", "null"], "pattern": "^[0-9a-f]{40}$"}, "commit_id": {"type": ["string", "null"], "pattern": "^[0-9a-f]{40}$"}, "tag_name": {"type": ["string", "null"]},
+    "idempotency_key": {"$ref": "common.schema.json#/$defs/id"}, "request_digest": {"$ref": "common.schema.json#/$defs/digest"}, "result_digest": {"$ref": "common.schema.json#/$defs/digest"}, "evidence": {"type": "object"}, "error": {"type": ["object", "null"]}
+  }, "additionalProperties": false
+}

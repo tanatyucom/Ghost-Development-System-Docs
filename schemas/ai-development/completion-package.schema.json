@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://gds.example/schemas/ai-development/completion-package.schema.json",
+  "title": "Completion Package 1.0.0", "type": "object",
+  "required": ["schema_id", "schema_version", "q_id", "execution_id", "attempt_id", "correlation_id", "startup_report", "completion_report", "changed_files", "validation_evidence", "safe_commit_set", "suggested_commit_message", "repository_state", "expected_head_at_review", "actual_head", "diff_digest", "follow_up_candidates", "scw_warnings", "produced_artifacts", "completion_status"],
+  "properties": {
+    "schema_id": {"$ref": "common.schema.json#/$defs/id"}, "schema_version": {"$ref": "common.schema.json#/$defs/version"}, "q_id": {"$ref": "common.schema.json#/$defs/id"}, "execution_id": {"$ref": "common.schema.json#/$defs/id"}, "attempt_id": {"$ref": "common.schema.json#/$defs/id"}, "correlation_id": {"$ref": "common.schema.json#/$defs/id"},
+    "startup_report": {"type": "object"}, "completion_report": {"type": "object"}, "changed_files": {"$ref": "common.schema.json#/$defs/stringArray"}, "validation_evidence": {"type": "array", "items": {"type": "object"}}, "safe_commit_set": {"$ref": "common.schema.json#/$defs/stringArray"},
+    "suggested_commit_message": {"type": ["string", "null"]}, "repository_state": {"type": "object"}, "expected_head_at_review": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "actual_head": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "diff_digest": {"$ref": "common.schema.json#/$defs/digest"},
+    "follow_up_candidates": {"type": "array", "items": {"type": "string"}}, "scw_warnings": {"type": "array", "items": {"type": "object"}}, "produced_artifacts": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id"}}, "completion_status": {"enum": ["PASS", "PASS_WITH_FOLLOW_UP", "REVISE", "SCW", "FAILED"]}
+  }, "additionalProperties": false
+}

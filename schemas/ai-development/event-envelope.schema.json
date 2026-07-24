@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://gds.example/schemas/ai-development/event-envelope.schema.json",
+  "title": "Event Envelope 1.0.0", "type": "object",
+  "required": ["event_id", "event_type", "schema_id", "schema_version", "occurred_at", "recorded_at", "producer_id", "actor_id", "q_id", "repository_id", "approval_id", "execution_id", "attempt_id", "artifact_id", "effect_id", "correlation_id", "causation_id", "idempotency_key", "sequence", "status", "payload_digest", "payload"],
+  "properties": {
+    "event_id": {"$ref": "common.schema.json#/$defs/id"}, "event_type": {"type": "string", "pattern": "^[a-z]+(\\.[a-z]+)+$"},
+    "schema_id": {"$ref": "common.schema.json#/$defs/id"}, "schema_version": {"$ref": "common.schema.json#/$defs/version"},
+    "occurred_at": {"$ref": "common.schema.json#/$defs/timestamp"}, "recorded_at": {"$ref": "common.schema.json#/$defs/timestamp"},
+    "producer_id": {"$ref": "common.schema.json#/$defs/id"}, "actor_id": {"$ref": "common.schema.json#/$defs/id"},
+    "q_id": {"$ref": "common.schema.json#/$defs/nullableId"}, "repository_id": {"$ref": "common.schema.json#/$defs/nullableId"},
+    "approval_id": {"$ref": "common.schema.json#/$defs/nullableId"}, "execution_id": {"$ref": "common.schema.json#/$defs/nullableId"},
+    "attempt_id": {"$ref": "common.schema.json#/$defs/nullableId"}, "artifact_id": {"$ref": "common.schema.json#/$defs/nullableId"},
+    "effect_id": {"$ref": "common.schema.json#/$defs/nullableId"}, "correlation_id": {"$ref": "common.schema.json#/$defs/id"},
+    "causation_id": {"$ref": "common.schema.json#/$defs/nullableId"}, "idempotency_key": {"$ref": "common.schema.json#/$defs/id"},
+    "sequence": {"type": "integer", "minimum": 0}, "status": {"enum": ["OBSERVED", "ACCEPTED", "REJECTED"]},
+    "payload_digest": {"$ref": "common.schema.json#/$defs/digest"}, "payload": {"type": "object"}
+  }, "additionalProperties": true
+}

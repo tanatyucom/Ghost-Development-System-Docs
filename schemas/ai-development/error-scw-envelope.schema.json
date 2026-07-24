@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://gds.example/schemas/ai-development/error-scw-envelope.schema.json",
+  "title": "Error and SCW Envelope 1.0.0", "type": "object",
+  "required": ["error_id", "error_class", "severity", "recoverability", "stop_reason", "root_cause", "missing_input", "resume_condition", "retry_allowed", "retry_after", "human_decision_required", "related_artifact_id", "related_event_id", "related_effect_id", "evidence_references"],
+  "properties": {
+    "error_id": {"$ref": "common.schema.json#/$defs/id"}, "error_class": {"enum": ["VALIDATION", "AUTHORITY", "CONFLICT", "CAPABILITY", "DELIVERY", "INTEGRITY", "SECURITY", "PERMANENT"]}, "severity": {"enum": ["INFO", "WARNING", "ERROR", "CRITICAL"]}, "recoverability": {"enum": ["RETRYABLE", "HUMAN_REQUIRED", "PERMANENT"]},
+    "stop_reason": {"type": "string", "minLength": 1}, "root_cause": {"type": "string", "minLength": 1}, "missing_input": {"type": ["string", "null"]}, "resume_condition": {"type": ["string", "null"]}, "retry_allowed": {"type": "boolean"}, "retry_after": {"type": ["string", "null"], "format": "date-time"}, "human_decision_required": {"type": "boolean"},
+    "related_artifact_id": {"$ref": "common.schema.json#/$defs/nullableId"}, "related_event_id": {"$ref": "common.schema.json#/$defs/nullableId"}, "related_effect_id": {"$ref": "common.schema.json#/$defs/nullableId"}, "evidence_references": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id"}}
+  }, "additionalProperties": false
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://gds.example/schemas/ai-development/effect-request.schema.json",
+  "title": "Effect Request 1.0.0", "type": "object",
+  "required": ["effect_id", "effect_type", "approval_id", "q_id", "repository_id", "execution_id", "attempt_id", "requested_by", "requested_at", "idempotency_key", "expected_branch", "expected_remote", "expected_head", "safe_commit_set_digest", "actual_diff_digest", "allowed_operations", "expires_at", "conditions"],
+  "properties": {
+    "effect_id": {"$ref": "common.schema.json#/$defs/id"}, "effect_type": {"enum": ["git.commit", "git.push", "git.tag.create", "git.tag.push", "filesystem.write", "filesystem.move", "filesystem.delete"]},
+    "approval_id": {"$ref": "common.schema.json#/$defs/id"}, "q_id": {"$ref": "common.schema.json#/$defs/id"}, "repository_id": {"$ref": "common.schema.json#/$defs/id"}, "execution_id": {"$ref": "common.schema.json#/$defs/id"}, "attempt_id": {"$ref": "common.schema.json#/$defs/id"},
+    "requested_by": {"$ref": "common.schema.json#/$defs/id"}, "requested_at": {"$ref": "common.schema.json#/$defs/timestamp"}, "idempotency_key": {"$ref": "common.schema.json#/$defs/id"},
+    "expected_branch": {"type": "string"}, "expected_remote": {"type": ["string", "null"]}, "expected_head": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "safe_commit_set_digest": {"type": ["string", "null"], "pattern": "^sha256:[0-9a-f]{64}$"}, "actual_diff_digest": {"type": ["string", "null"], "pattern": "^sha256:[0-9a-f]{64}$"},
+    "allowed_operations": {"$ref": "common.schema.json#/$defs/stringArray"}, "expires_at": {"$ref": "common.schema.json#/$defs/timestamp"}, "conditions": {"type": "array", "items": {"type": "string"}}
+  }, "additionalProperties": false
+}
