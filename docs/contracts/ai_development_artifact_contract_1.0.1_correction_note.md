@@ -10,3 +10,5 @@ Corrected fixtures:
 - `ai_artifact_contract_execution_started_event.json`: digest replaced with the RFC 8785 result. Event Envelope has no `payload_size` field.
 
 Consumers pinned to 1.0.0 remain reproducible. New bindings must pin the publication commit containing 1.0.1 and verify the machine-readable manifest before trusting schemas or fixtures.
+
+Publication clarification: the content manifest identifies bytes and delegates the Git commit pin to a subsequent machine-readable Publication Receipt. Consumers pin both the content publication commit and the Receipt publication commit; same-commit self-reference is prohibited.

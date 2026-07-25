@@ -1,0 +1,12 @@
+{
+  "contract_name": "AI Development Artifact Contract",
+  "contract_version": "1.0.1",
+  "canonical_repository": "GDS-DOCS",
+  "publication_commit": "21e1b99d0cc0a54319cee70092dd053aa383481f",
+  "schema_bundle_digest": "sha256:8b6c859acce1c6deba169323e1ac30d49c7bb4836c469a4c436adfcd0649c93b",
+  "fixture_bundle_digest": "sha256:ec6416e79b462e5e16919c992f1b7080deae3489982bd8390d9b87bb9f8fbde0",
+  "contract_bundle_digest": "sha256:c3dcb3dd056616ec1fa72fe221e23e5d2815111fde830ca192710822680d752c",
+  "publication_status": "PUBLISHED",
+  "receipt_version": "1.0",
+  "receipt_digest": "sha256:ffe510c0282fe71df0903b59ff2a4069ef5b796f4c09e25384901d96c9cba81a"
+}
