@@ -106,7 +106,7 @@ entries:
   - repository_id: GDS-RUNTIME-PROVISIONAL
     name: Ghost Development System Runtime
     type: Platform Tooling Runtime
-    status: Planned
+    status: Active
     purpose: Shared implementation host for GDS approval, draft Q, repository registry, context, validation, audit, and adapters
     canonical_root: C:/GitHub/ghost-development-system-runtime
     root_policy: fixed
@@ -120,7 +120,7 @@ entries:
     remote_identity: https://github.com/tanatyucom/ghost-development-system-runtime.git
     last_verified: "2026-07-25"
     verification_status: Verified
-    verification_method: local_remote_git_identity_verification
+    verification_method: runtime_validator_and_local_remote_git_identity_verification
     verified_by: Codex
     provenance:
       - Q_GDS-IMPLEMENTATION-HOST-RUNTIME-ARCHITECTURE-001
@@ -131,10 +131,14 @@ entries:
       - Q_GDS-RUNTIME-ORIGIN-CONFIGURATION-001
       - Q_GDS-RUNTIME-REPOSITORY-IDENTITY-VERIFICATION-001
       - Q_GDS-RUNTIME-REGISTRY-PLANNED-ENTRY-001
+      - Q_GDS-RUNTIME-REPOSITORY-REGISTRY-VALIDATOR-IMPLEMENTATION-001
+      - Q_GDS-RUNTIME-REGISTRY-ACTIVATION-COMPLETION-001
     notes:
-      - Lifecycle remains Planned; repository identity verification does not grant Active status or execution authority.
+      - Activated on 2026-07-25 after all ten activation preconditions were revalidated and explicit Human Approval was received.
+      - Active status means eligible only within explicit Q authority; it grants no autonomous mutation, commit, push, tag, release, or Human Approval substitution.
       - Remote owner tanatyucom; visibility Human-verified Private; tracking branch origin/main.
-      - Local, origin/main, and remote main verified at 5cc7ad9ec72c018ccd6a36b3e422d60a17726532 with ahead/behind 0/0.
+      - Local, origin/main, and remote main verified at 0ee760dd801ef10bd84a6354f5cbf5fb1d586a62 with ahead/behind 0/0.
+      - Executable Repository Registry Validator, typed Decision Result, approved dependency lock, full Draft 2020-12 fixtures, runtime tests, and security boundary passed.
       - GDS-DOCS Artifact Contract 1.0.0 is pinned at a12f360806b832415d24bb6ccaaa3ddf5f7b1d79.
       - GitHub numeric repository ID and exact created_at were not captured and must not be inferred.
       - "Activation prerequisite 1: Canonical Registry Entry validation passes."
