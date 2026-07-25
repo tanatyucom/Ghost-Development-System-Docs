@@ -152,6 +152,55 @@ entries:
       - "Activation prerequisite 9: Security boundary passes."
       - "Activation prerequisite 10: Active and Verified transition receives explicit Human Approval."
       - GDS-DOCS and GameGhost are not implementation hosts for this runtime.
+  - repository_id: GHOST-DEVELOPMENT-ORCHESTRATOR-PROVISIONAL
+    name: Ghost Development Orchestrator
+    type: AI Development Orchestration Platform
+    status: Planned
+    purpose: Independent GDS policy consumer and future durable operational state owner for artifact, event, attempt, receipt, recovery, and effect coordination
+    canonical_root: C:/GitHub/ghost-development-orchestrator
+    root_policy: fixed
+    machine_roots: []
+    default_branch_basis: explicit
+    default_branch: main
+    supported_roles: [TARGET, OUTPUT, VALIDATION, REFERENCE]
+    mutation_class: NONE
+    owner: Project Owner
+    hosting: GitHub
+    remote_identity: https://github.com/tanatyucom/ghost-development-orchestrator.git
+    last_verified: "2026-07-25"
+    verification_status: Verified
+    verification_method: authenticated_github_and_local_remote_git_identity_verification
+    verified_by: Codex
+    provenance:
+      - ADR-GDS-013
+      - Q_AI-DEVELOPMENT-ORCHESTRATOR-REPOSITORY-BOOTSTRAP-001
+      - Q_AI-DEVELOPMENT-ORCHESTRATOR-REMOTE-REPOSITORY-CREATION-001
+      - Q_AI-DEVELOPMENT-ORCHESTRATOR-ORIGIN-CONFIGURATION-001
+      - Q_AI-DEVELOPMENT-ORCHESTRATOR-INITIAL-PUSH-001
+      - Q_AI-DEVELOPMENT-ORCHESTRATOR-REPOSITORY-IDENTITY-VERIFICATION-001
+      - Q_AI-DEVELOPMENT-ORCHESTRATOR-REGISTRY-PLANNED-ENTRY-001
+    notes:
+      - Short name GDO; remote owner tanatyucom; Human-verified Private visibility.
+      - Repository numeric ID 1311606319; exact GitHub created_at was not captured and is not inferred.
+      - Local, origin/main, and remote main verified at a77703aa129bd9c4474f456400d1849bedb97fcc with ahead/behind 0/0.
+      - GDS-DOCS Artifact Contract 1.0.0 is pinned at a12f360806b832415d24bb6ccaaa3ddf5f7b1d79.
+      - GDS-DOCS owns governance and contract semantics; GDS-RUNTIME-PROVISIONAL is the deterministic policy provider.
+      - GDO is not an executable orchestration target until Phase 1 capability and a separately approved Active transition are complete.
+      - "Activation prerequisite 1: Canonical Registry Entry validation passes."
+      - "Activation prerequisite 2: Repository identity remains consistent."
+      - "Activation prerequisite 3: Local and remote main remain synchronized."
+      - "Activation prerequisite 4: GDO bootstrap boundary remains valid."
+      - "Activation prerequisite 5: Phase 1 architecture and storage decision is approved."
+      - "Activation prerequisite 6: Durable Artifact Exchange vertical slice is implemented."
+      - "Activation prerequisite 7: Manual approved package registration is implemented."
+      - "Activation prerequisite 8: Completion return and acknowledgement are implemented."
+      - "Activation prerequisite 9: Duplicate detection and idempotency are implemented."
+      - "Activation prerequisite 10: Immutable audit and attempt records are implemented."
+      - "Activation prerequisite 11: Restart and backup recovery validation passes."
+      - "Activation prerequisite 12: GDS Runtime Policy Client integration is validated."
+      - "Activation prerequisite 13: Contract fixture validation passes."
+      - "Activation prerequisite 14: Runtime and security tests pass."
+      - "Activation prerequisite 15: Active transition receives explicit Human Approval."
 validation_rules:
   - rule_id: repository.unique_id
     statement: repository_id must be unique.
