@@ -1,7 +1,7 @@
 registry_id: gds.repository_registry
 version: "1.0"
 status: Active
-last_updated: "2026-07-24"
+last_updated: "2026-07-25"
 owner: GDS
 human_authority: Project Owner
 source_of_truth: docs/registries/repository_registry.yaml
@@ -104,29 +104,49 @@ entries:
     notes:
       - Provisional identity; not an execution target.
   - repository_id: GDS-RUNTIME-PROVISIONAL
-    name: GDS Runtime
+    name: Ghost Development System Runtime
     type: Platform Tooling Runtime
     status: Planned
     purpose: Shared implementation host for GDS approval, draft Q, repository registry, context, validation, audit, and adapters
-    canonical_root: null
-    root_policy: unresolved
+    canonical_root: C:/GitHub/ghost-development-system-runtime
+    root_policy: fixed
     machine_roots: []
-    default_branch_basis: unresolved
-    default_branch: null
+    default_branch_basis: explicit
+    default_branch: main
     supported_roles: [TARGET, OUTPUT, VALIDATION, REFERENCE]
     mutation_class: NONE
     owner: Project Owner
-    hosting: null
-    remote_identity: null
-    last_verified: "2026-07-24"
-    verification_status: Pending
-    verification_method: approved_architecture_decision_no_repository_claim
+    hosting: GitHub
+    remote_identity: https://github.com/tanatyucom/ghost-development-system-runtime.git
+    last_verified: "2026-07-25"
+    verification_status: Verified
+    verification_method: local_remote_git_identity_verification
     verified_by: Codex
     provenance:
       - Q_GDS-IMPLEMENTATION-HOST-RUNTIME-ARCHITECTURE-001
       - ADR-GDS-012
+      - ADR-GDS-013
+      - Q_GDS-RUNTIME-REPOSITORY-BOOTSTRAP-001
+      - Q_GDS-RUNTIME-REMOTE-REPOSITORY-CREATION-001
+      - Q_GDS-RUNTIME-ORIGIN-CONFIGURATION-001
+      - Q_GDS-RUNTIME-REPOSITORY-IDENTITY-VERIFICATION-001
+      - Q_GDS-RUNTIME-REGISTRY-PLANNED-ENTRY-001
     notes:
-      - Provisional identity; bootstrap and Planned-to-Active transition require separate approval.
+      - Lifecycle remains Planned; repository identity verification does not grant Active status or execution authority.
+      - Remote owner tanatyucom; visibility Human-verified Private; tracking branch origin/main.
+      - Local, origin/main, and remote main verified at 5cc7ad9ec72c018ccd6a36b3e422d60a17726532 with ahead/behind 0/0.
+      - GDS-DOCS Artifact Contract 1.0.0 is pinned at a12f360806b832415d24bb6ccaaa3ddf5f7b1d79.
+      - GitHub numeric repository ID and exact created_at were not captured and must not be inferred.
+      - "Activation prerequisite 1: Canonical Registry Entry validation passes."
+      - "Activation prerequisite 2: Repository identity remains consistent."
+      - "Activation prerequisite 3: Local and remote main remain synchronized."
+      - "Activation prerequisite 4: GDS Runtime bootstrap boundary remains valid."
+      - "Activation prerequisite 5: Required Policy Module implementation sequence is approved."
+      - "Activation prerequisite 6: Approved dependency set exists."
+      - "Activation prerequisite 7: Draft 2020-12 full fixture validation passes."
+      - "Activation prerequisite 8: Runtime validation suite passes."
+      - "Activation prerequisite 9: Security boundary passes."
+      - "Activation prerequisite 10: Active and Verified transition receives explicit Human Approval."
       - GDS-DOCS and GameGhost are not implementation hosts for this runtime.
 validation_rules:
   - rule_id: repository.unique_id
