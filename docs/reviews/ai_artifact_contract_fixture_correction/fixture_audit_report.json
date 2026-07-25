@@ -1,0 +1,16 @@
+{
+  "contract_version": "1.0.1",
+  "schema_count": 9,
+  "fixture_count": 10,
+  "payload_integrity_fixtures": [
+    {"path":"docs/examples/ai_artifact_contract_execution_started_event.json","schema":"event-envelope","declared_payload_size":null,"actual_payload_size":19,"actual_payload_digest":"sha256:e478dcde912579e0d9e1abc96e88f4bfa95a66016bebf22c406bb32fe4d0760d","size_match":true,"digest_match":true,"schema_valid":true},
+    {"path":"docs/examples/ai_artifact_contract_tag_recommendation_artifact.json","schema":"artifact-envelope","declared_payload_size":28,"actual_payload_size":28,"actual_payload_digest":"sha256:29699213258ba6b101bb52416908ea74002595ccecc53b76e2a3d0c53c523c51","size_match":true,"digest_match":true,"schema_valid":true}
+  ],
+  "other_valid_fixtures": 7,
+  "expected_invalid_fixtures": 1,
+  "unexpected_schema_results": 0,
+  "schema_bundle_digest": "sha256:8b6c859acce1c6deba169323e1ac30d49c7bb4836c469a4c436adfcd0649c93b",
+  "fixture_bundle_digest": "sha256:ec6416e79b462e5e16919c992f1b7080deae3489982bd8390d9b87bb9f8fbde0",
+  "contract_bundle_digest": "sha256:c3dcb3dd056616ec1fa72fe221e23e5d2815111fde830ca192710822680d752c",
+  "result": "PASS"
+}

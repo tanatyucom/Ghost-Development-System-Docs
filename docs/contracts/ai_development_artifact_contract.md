@@ -2,7 +2,7 @@
 
 Status: Canonical
 
-Contract version: 1.0.0
+Contract version: 1.0.1
 
 Schema dialect: JSON Schema Draft 2020-12
 
