@@ -1762,6 +1762,41 @@ Phase 6: Governed Automation
   notification delivery, Silent Dogfooding operation, Improvement Candidate
   automation, and Q Draft generation.
 
+### GDO Phase 2 Architecture Realignment
+
+- Status: canonical planning direction; operational implementation not started.
+- Mission: `INTENT_DRIVEN_LOCAL_AI_ASSISTED_DEVELOPMENT_ORCHESTRATION`.
+- Initial scope: `PHASE2_INTENT_DRIVEN_READ_ONLY_PROPOSAL_AND_CODEX_PACKAGE_ORCHESTRATION`.
+- Canonical sequence:
+
+```text
+Intent Engine
+  -> Capability Registry
+  -> Local AI Gateway
+  -> Repository / SQLite Read-Only Analysis
+  -> Summary / Classification / Draft
+  -> Human Decision / Approval
+  -> Q / Codex Package
+  -> Codex Change
+  -> Validation
+  -> Commit / Push Approval
+  -> Git Effect
+```
+
+- Intent Sources are closed to `DIRECT_USER_INTENT`, `NEWS_PROPOSAL`,
+  `REPOSITORY_FINDING`, `REVIEW_FINDING`, and
+  `EXTERNAL_RESEARCH_FINDING` until a separately approved contract revision.
+- `NEWS_PROPOSAL` is a non-authoritative Proposal Candidate. It does not imply
+  a Decision, approved Q, implementation authority, or Canonical truth.
+- The prior Git-effect-first Phase 2 plan is preserved as valid historical
+  planning superseded before commit. Its Git Effect concepts move to the
+  downstream post-validation sub-roadmap.
+- First implementation Q:
+  `Q_AI-DEVELOPMENT-ORCHESTRATOR-PHASE2-INTENT-ENGINE-FOUNDATION-001`.
+- Registry remains at `PHASE1_BOUNDED_LOCAL_ORCHESTRATION` until an implemented
+  vertical slice passes E2E, activation assessment, Human Approval, and a
+  separate Registry mutation Q.
+
 ### Guard
 
 - No REST API runtime implementation in this roadmap item.

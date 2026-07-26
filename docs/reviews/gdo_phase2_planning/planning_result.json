@@ -1,0 +1,21 @@
+{
+  "result_schema_id": "urn:gdo:phase2-planning-result:1.0.0",
+  "result_contract_id": "GDO_PHASE2_PLANNING_RESULT",
+  "result_contract_version": "1.0.0",
+  "result_id": "gdo-phase2-plan:35a5687d66affdb04b9c036d3705b5e13660b375add26b097dffd3644e0b1f83",
+  "phase_id": "GDO_PHASE2",
+  "phase1_tag": "gdo-phase1-complete",
+  "phase1_tag_target": "b207fc9e1c56ca019d99384173e672f065c7557e",
+  "phase2_mission": "HUMAN_APPROVED_BOUNDED_GIT_EFFECT_ORCHESTRATION",
+  "phase2_scope": "PHASE2_BOUNDED_HUMAN_APPROVED_SINGLE_REPOSITORY_GIT_EFFECTS",
+  "first_vertical_slice": "HUMAN_APPROVED_SINGLE_REPOSITORY_COMMIT",
+  "sequence_count": 15,
+  "schema_decision": "SCHEMA_V8_REQUIRED_BEFORE_COMMIT_EFFECT",
+  "registry_scope_decision": "UPDATE_AFTER_COMMIT_SLICE_E2E_AND_ACTIVATION_ASSESSMENT",
+  "codex_invocation_decision": "DEFER_UNTIL_COMMIT_EFFECT_VALIDATED",
+  "cross_repository_decision": "DEFER_UNTIL_SINGLE_REPOSITORY_EFFECT_VALIDATED",
+  "planning_result": "PASS_WITH_WARNING",
+  "execution_authority": false,
+  "registry_mutation_executed": false,
+  "phase2_implementation_started": false
+}

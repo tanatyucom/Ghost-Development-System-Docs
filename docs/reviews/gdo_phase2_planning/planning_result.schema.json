@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gdo:phase2-planning-result:1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["result_schema_id", "result_contract_id", "result_contract_version", "result_id", "phase_id", "phase1_tag", "phase1_tag_target", "phase2_mission", "phase2_scope", "first_vertical_slice", "sequence_count", "schema_decision", "registry_scope_decision", "codex_invocation_decision", "cross_repository_decision", "planning_result", "execution_authority", "registry_mutation_executed", "phase2_implementation_started"],
+  "properties": {
+    "result_schema_id": {"const": "urn:gdo:phase2-planning-result:1.0.0"},
+    "result_contract_id": {"const": "GDO_PHASE2_PLANNING_RESULT"},
+    "result_contract_version": {"const": "1.0.0"},
+    "result_id": {"pattern": "^gdo-phase2-plan:[0-9a-f]{64}$"},
+    "phase_id": {"const": "GDO_PHASE2"},
+    "phase1_tag": {"const": "gdo-phase1-complete"},
+    "phase1_tag_target": {"const": "b207fc9e1c56ca019d99384173e672f065c7557e"},
+    "phase2_mission": {"const": "HUMAN_APPROVED_BOUNDED_GIT_EFFECT_ORCHESTRATION"},
+    "phase2_scope": {"const": "PHASE2_BOUNDED_HUMAN_APPROVED_SINGLE_REPOSITORY_GIT_EFFECTS"},
+    "first_vertical_slice": {"const": "HUMAN_APPROVED_SINGLE_REPOSITORY_COMMIT"},
+    "sequence_count": {"const": 15},
+    "schema_decision": {"const": "SCHEMA_V8_REQUIRED_BEFORE_COMMIT_EFFECT"},
+    "registry_scope_decision": {"const": "UPDATE_AFTER_COMMIT_SLICE_E2E_AND_ACTIVATION_ASSESSMENT"},
+    "codex_invocation_decision": {"const": "DEFER_UNTIL_COMMIT_EFFECT_VALIDATED"},
+    "cross_repository_decision": {"const": "DEFER_UNTIL_SINGLE_REPOSITORY_EFFECT_VALIDATED"},
+    "planning_result": {"enum": ["PASS", "PASS_WITH_WARNING", "FAIL", "BLOCKED"]},
+    "execution_authority": {"const": false},
+    "registry_mutation_executed": {"const": false},
+    "phase2_implementation_started": {"const": false}
+  }
+}

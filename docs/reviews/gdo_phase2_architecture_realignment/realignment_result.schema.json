@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gdo:phase2-architecture-realignment-result:1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["result_schema_id", "result_contract_id", "result_contract_version", "result_id", "phase_id", "previous_planning_q_id", "previous_planning_status", "previous_planning_commit_state", "new_mission", "new_scope", "intent_sources", "first_implementation_q", "sequence_count", "news_proposal_adopted", "git_effect_repositioned", "schema_migration_executed", "registry_mutation_executed", "phase2_operational_implementation_started", "realignment_result"],
+  "properties": {
+    "result_schema_id": {"const": "urn:gdo:phase2-architecture-realignment-result:1.0.0"},
+    "result_contract_id": {"const": "GDO_PHASE2_ARCHITECTURE_REALIGNMENT_RESULT"},
+    "result_contract_version": {"const": "1.0.0"},
+    "result_id": {"pattern": "^gdo-phase2-realignment:[0-9a-f]{64}$"},
+    "phase_id": {"const": "GDO_PHASE2"},
+    "previous_planning_q_id": {"const": "Q_AI-DEVELOPMENT-ORCHESTRATOR-PHASE2-PLANNING-001"},
+    "previous_planning_status": {"const": "SUPERSEDED_BEFORE_COMMIT"},
+    "previous_planning_commit_state": {"const": "NOT_COMMITTED"},
+    "new_mission": {"const": "INTENT_DRIVEN_LOCAL_AI_ASSISTED_DEVELOPMENT_ORCHESTRATION"},
+    "new_scope": {"const": "PHASE2_INTENT_DRIVEN_READ_ONLY_PROPOSAL_AND_CODEX_PACKAGE_ORCHESTRATION"},
+    "intent_sources": {"type": "array", "prefixItems": [{"const": "DIRECT_USER_INTENT"}, {"const": "NEWS_PROPOSAL"}, {"const": "REPOSITORY_FINDING"}, {"const": "REVIEW_FINDING"}, {"const": "EXTERNAL_RESEARCH_FINDING"}], "items": false, "minItems": 5, "maxItems": 5},
+    "first_implementation_q": {"const": "Q_AI-DEVELOPMENT-ORCHESTRATOR-PHASE2-INTENT-ENGINE-FOUNDATION-001"},
+    "sequence_count": {"const": 24},
+    "news_proposal_adopted": {"const": true},
+    "git_effect_repositioned": {"const": true},
+    "schema_migration_executed": {"const": false},
+    "registry_mutation_executed": {"const": false},
+    "phase2_operational_implementation_started": {"const": false},
+    "realignment_result": {"enum": ["PASS", "PASS_WITH_WARNING", "FAIL", "BLOCKED"]}
+  }
+}
