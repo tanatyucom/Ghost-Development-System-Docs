@@ -571,6 +571,10 @@ Required fields:
 - Generated entry count:
 - Index validation command:
 - Index validation result:
+- Index freshness result: PASS / FAIL / NOT_APPLICABLE
+- Deterministic regeneration result: PASS / FAIL / NOT_APPLICABLE
+- Encoding Regression Validation result: PASS / FAIL / NOT_APPLICABLE
+- Freshness not applicable reason:
 - `docs/ai_repository_index.md` changed:
 - Index diff included in Safe Commit Set:
 - `git diff --check` result:

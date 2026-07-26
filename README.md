@@ -1305,6 +1305,12 @@ Iterations、Documentation Reuse、Knowledge Promotion Count、Automation Rate �
 
 GDS-QUALITY-005 defines the completion gate for keeping the Canonical AI Repository Index synchronized when index-target Knowledge Assets change.
 
+The enforceable freshness standard is
+`docs/standards/ai_repository_index_freshness_gate.md`. It distinguishes
+structural validity, deterministic generation, and freshness. CI regenerates
+the Index and fails with `AI_REPOSITORY_INDEX_STALE` when the committed output
+does not match the Canonical generator.
+
 Start from:
 
 - [`templates/Q_TEMPLATE.md`](templates/Q_TEMPLATE.md)

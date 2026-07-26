@@ -69,6 +69,15 @@ Required sections checked:
 ## AI Repository Knowledge Access
 
 - AI Repository Index update decision: Yes / No / Review Required
+- Canonical Index generation command:
+- Canonical Index generation passed:
+- Generated entry count:
+- Index structural validation passed:
+- Index freshness passed:
+- Deterministic regeneration passed:
+- Encoding Regression Validation passed:
+- `git diff --check` passed:
+- Freshness not applicable reason:
 - Public AI knowledge entry points changed:
 - `docs/ai_repository_index.md` update required:
 - `docs/ai_repository_index.md` updated:

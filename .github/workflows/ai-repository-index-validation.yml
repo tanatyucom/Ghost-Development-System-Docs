@@ -22,10 +22,24 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Validate AI Repository Index
+      # The validators use only the Python standard library. There are no
+      # third-party validation dependencies to install or leave unpinned.
+      - name: Generate canonical AI Repository Index
+        run: python scripts/generate_ai_repository_index.py --write
+
+      - name: Validate AI Repository Index structure
         run: python scripts/generate_ai_repository_index.py --validate
 
-      - name: Check generated index is up to date
+      - name: Validate encoding regression
+        run: python scripts/validate_encoding_regression.py --all
+
+      - name: Check generated diff formatting
+        run: git diff --check
+
+      - name: Check generated index freshness
+        shell: bash
         run: |
-          python scripts/generate_ai_repository_index.py --write
-          git diff --exit-code -- docs/ai_repository_index.md
+          if ! git diff --exit-code -- docs/ai_repository_index.md; then
+            echo "::error title=AI_REPOSITORY_INDEX_STALE::The AI Repository Index is stale. Run 'python scripts/generate_ai_repository_index.py --write', review docs/ai_repository_index.md, validate it, and include the regenerated file in the commit."
+            exit 1
+          fi

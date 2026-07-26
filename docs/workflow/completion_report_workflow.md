@@ -222,6 +222,9 @@ Knowledge Asset changed
 Failure action:
 
 - If generation or validation fails, apply SCW and do not mark the Q complete.
+- If canonical regeneration changes `docs/ai_repository_index.md`, report
+  `AI_REPOSITORY_INDEX_STALE`; review and include the regenerated file in the
+  Safe Commit Set before PASS.
 - If repository boundary, canonical path, duplicate entry, missing entry, or dirty workspace scope is unclear, stop and request review.
 - Do not continue by relying on memory or inferred Raw URLs.
 
@@ -235,3 +238,8 @@ Raw retrieval -> public Canonical Index / Artifact availability
 ```
 
 This gate complements Startup / Q Creation Gate. Startup proves canonical knowledge was readable before work starts; AI Repository Index Update Gate proves repository changes were reflected before completion.
+
+Required applicable evidence is Canonical generation, generated entry count,
+structural validation, freshness, deterministic regeneration, Encoding
+Regression Validation, and `git diff --check`. `NOT_APPLICABLE` is permitted
+only with an explicit reason proving that Index membership cannot be affected.
