@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gdo:phase1-post-activation-result:1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["result_schema_id", "result_contract_id", "result_contract_version", "result_id", "registry_id", "registry_record_digest", "gds_docs_head", "gdo_head", "runtime_provider_revision", "registry_validation", "gdo_lookup_validation", "runtime_compatibility", "strict_verification", "smoke_validation", "authority_boundary", "warning_preservation", "reversibility", "phase1_scope", "overall_result", "execution_authority", "registry_mutation_executed", "result_digest"],
+  "properties": {
+    "result_schema_id": {"const": "urn:gdo:phase1-post-activation-result:1.0.0"},
+    "result_contract_id": {"const": "GDO_PHASE1_POST_ACTIVATION_RESULT"},
+    "result_contract_version": {"const": "1.0.0"},
+    "result_id": {"pattern": "^gdo-post-activation:[0-9a-f]{64}$"},
+    "registry_id": {"const": "GHOST-DEVELOPMENT-ORCHESTRATOR-PROVISIONAL"},
+    "registry_record_digest": {"$ref": "#/$defs/digest"},
+    "gds_docs_head": {"$ref": "#/$defs/commit"},
+    "gdo_head": {"$ref": "#/$defs/commit"},
+    "runtime_provider_revision": {"$ref": "#/$defs/digest"},
+    "registry_validation": {"$ref": "#/$defs/pass"},
+    "gdo_lookup_validation": {"$ref": "#/$defs/pass"},
+    "runtime_compatibility": {"$ref": "#/$defs/pass"},
+    "strict_verification": {"$ref": "#/$defs/pass"},
+    "smoke_validation": {"$ref": "#/$defs/pass"},
+    "authority_boundary": {"$ref": "#/$defs/pass"},
+    "warning_preservation": {"$ref": "#/$defs/pass"},
+    "reversibility": {"$ref": "#/$defs/pass"},
+    "phase1_scope": {"const": "PHASE1_BOUNDED_LOCAL_ORCHESTRATION"},
+    "overall_result": {"enum": ["PASS", "PASS_WITH_WARNING", "FAIL", "BLOCKED"]},
+    "execution_authority": {"const": false},
+    "registry_mutation_executed": {"const": false},
+    "result_digest": {"$ref": "#/$defs/digest"}
+  },
+  "$defs": {
+    "digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "pass": {"const": "PASS"}
+  }
+}
