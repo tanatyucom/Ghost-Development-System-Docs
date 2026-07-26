@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gdo:phase1-closure-result:1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["result_schema_id", "result_contract_id", "result_contract_version", "result_id", "phase_id", "phase_status", "gdo_head", "gds_docs_head", "registry_id", "registry_status", "registry_record_digest", "schema_version", "completed_sequence_count", "capability_scope", "post_activation_result", "remaining_warnings", "tag_recommendation", "release_recommendation", "phase2_entry_status", "closure_result", "execution_authority", "registry_mutation_executed", "tag_executed", "release_executed"],
+  "properties": {
+    "result_schema_id": {"const": "urn:gdo:phase1-closure-result:1.0.0"},
+    "result_contract_id": {"const": "GDO_PHASE1_CLOSURE_RESULT"},
+    "result_contract_version": {"const": "1.0.0"},
+    "result_id": {"type": "string", "pattern": "^gdo-phase1-closure:[0-9a-f]{64}$"},
+    "phase_id": {"const": "GDO_PHASE1"},
+    "phase_status": {"const": "CLOSED"},
+    "gdo_head": {"$ref": "#/$defs/commit"},
+    "gds_docs_head": {"$ref": "#/$defs/commit"},
+    "registry_id": {"const": "GHOST-DEVELOPMENT-ORCHESTRATOR-PROVISIONAL"},
+    "registry_status": {"const": "Active"},
+    "registry_record_digest": {"$ref": "#/$defs/digest"},
+    "schema_version": {"const": 7},
+    "completed_sequence_count": {"const": 14},
+    "capability_scope": {"const": "PHASE1_BOUNDED_LOCAL_ORCHESTRATION"},
+    "post_activation_result": {"type": "object", "additionalProperties": false, "required": ["result_id", "result_digest", "overall_result"], "properties": {"result_id": {"pattern": "^gdo-post-activation:[0-9a-f]{64}$"}, "result_digest": {"$ref": "#/$defs/digest"}, "overall_result": {"const": "PASS_WITH_WARNING"}}},
+    "remaining_warnings": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"$ref": "#/$defs/warning"}},
+    "tag_recommendation": {"const": "TAG_RECOMMENDED_SEPARATE_APPROVAL_REQUIRED"},
+    "release_recommendation": {"const": "RELEASE_NOT_RECOMMENDED_FOR_PHASE1_CLOSURE"},
+    "phase2_entry_status": {"const": "ENTRY_CONDITIONS_DEFINED_NOT_AUTHORIZED"},
+    "closure_result": {"enum": ["PASS", "PASS_WITH_WARNING", "FAIL", "BLOCKED"]},
+    "execution_authority": {"const": false},
+    "registry_mutation_executed": {"const": false},
+    "tag_executed": {"const": false},
+    "release_executed": {"const": false}
+  },
+  "$defs": {
+    "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "warning": {"type": "object", "additionalProperties": false, "required": ["warning_class", "owner", "scope", "impact", "workaround", "follow_up_trigger", "activation_safe", "fail_behavior"], "properties": {"warning_class": {"const": "LOCAL_ENVIRONMENT_DEPENDENCY"}, "owner": {"const": "Project Owner"}, "scope": {"const": "in-process Runtime provider dependency environment"}, "impact": {"const": "Provider Startup requires the pinned dependency environment."}, "workaround": {"const": "Use the approved runtime-policy extra or Runtime .policy-deps."}, "follow_up_trigger": {"const": "Before first operational Phase 1 use."}, "activation_safe": {"const": true}, "fail_behavior": {"const": "FAIL_CLOSED"}}}
+  }
+}
