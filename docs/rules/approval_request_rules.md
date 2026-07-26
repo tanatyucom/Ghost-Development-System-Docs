@@ -45,6 +45,13 @@ Approval is a governed state transition. Conversational wording alone does not
 create approval unless it binds to a current, visible, unambiguous Approval
 Request and Approval Unit.
 
+Bounded Q implementation is the documented exception: an explicit request to
+create and proceed with an implementation Q binds to the Q's visible bounded
+scope, and the generated Q is the durable Approval Record. It authorizes
+Startup through Completion Review only. Repository actions and external
+effects remain independent Approval Units under this rule. Draft-only or
+ambiguous Q intent never uses this exception.
+
 Codex and ChatGPT provide recommendations only. Human remains the final
 approval authority.
 

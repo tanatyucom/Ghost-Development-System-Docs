@@ -55,6 +55,18 @@ AI は直接実装へ進まず、次を確認します。
 Read-only review は Human Approval なしで進められます。編集、commit、push、tag、
 release、外部公開は別途 Human Approval が必要です。
 
+## Q Creation Intent Classification
+
+An explicit request to create and proceed with a bounded implementation Q
+grants implementation approval at creation. An explicit draft-only, review-only,
+or no-implementation request does not. Genuinely ambiguous wording requires one
+clarification or `SCW_REQUIRED`.
+
+Approved-at-creation authority covers Startup, Implementation, Validation,
+Documentation, and Completion Review only. It never includes Commit, Push, Tag,
+Release, Registry mutation, cross-repository mutation, external effects, or
+scope expansion.
+
 ## Workflow Selection
 
 | User Intent | Workflow |

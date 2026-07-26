@@ -22,8 +22,9 @@ Idea
   -> Decide AI Repository Index Gate
   -> Save Task Artifact Workspace
   -> Verify request.md exists
+  -> Intent Classification
   -> Template Validation
-  -> Approved Q
+  -> Approved Q or Draft Only Q
   -> Codex / AI Execution
 ```
 
@@ -151,7 +152,8 @@ Run `templates/q_template_validation_checklist.md` after saving the draft and
 before issuing it as executable.
 
 ```text
-ISSUE_OK       -> Human Approval -> Approved Q
+ISSUE_OK + implementation intent -> Approved Q (approval granted at creation)
+ISSUE_OK + draft-only intent      -> Draft Only Q (implementation prohibited)
 ISSUE_NG       -> return to Draft
 SCW_REQUIRED   -> Stop / Call / Wait
 ```
@@ -160,12 +162,25 @@ Validate each repository separately. Capability availability is evidence, not
 permission. Material repository-state or scope changes invalidate the related
 approval.
 
+Before Issue, classify the user's Q creation intent:
+
+- explicit implementation-oriented and bounded: `APPROVED FOR IMPLEMENTATION`;
+- explicit draft/review-only or no-implementation: `DRAFT ONLY`;
+- genuinely ambiguous: clarification or `SCW_REQUIRED`.
+
+An approved-at-creation Q records `GRANTED AT Q CREATION`, the user request as
+Approval Basis, and `Additional Approval Phrase: NOT REQUIRED`. It does not
+authorize Commit, Push, Tag, Release, Registry mutation, external effects, or
+scope expansion. See
+`docs/standards/q_creation_implementation_approval_standard.md`.
+
 ## Step 7: Verify Before Execution
 
 Before execution:
 
 - `request.md` exists.
 - Template Validation result is `ISSUE_OK`.
+- Intent Classification and Approval State are explicit and consistent.
 - Repository identity, workspace boundary, and Working Directory are explicit.
 - Target / Non-Target scope is explicit.
 - Commit / Push / Tag / Release policy is explicit.

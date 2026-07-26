@@ -243,3 +243,20 @@ Required applicable evidence is Canonical generation, generated entry count,
 structural validation, freshness, deterministic regeneration, Encoding
 Regression Validation, and `git diff --check`. `NOT_APPLICABLE` is permitted
 only with an explicit reason proving that Index membership cannot be affected.
+
+## Q Implementation Approval Evidence
+
+When implementation authority was granted at Q creation, Completion Review
+records:
+
+```text
+Q implementation approval: Granted at Q creation
+Commit authority: Not granted unless separately approved
+Push authority: Not granted unless separately approved
+Tag / Release authority: Not granted
+Registry mutation authority: Not granted
+```
+
+Only a PASS verdict may recommend the later Commit Approval Unit. Completion
+Review never promotes Q implementation approval into repository-action
+authority.

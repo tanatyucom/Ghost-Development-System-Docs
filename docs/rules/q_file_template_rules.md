@@ -36,6 +36,17 @@ Validation occurs before Issue and returns `ISSUE_OK`, `ISSUE_NG`, or
 Draft -> Template Validation -> Approved Q -> Execution -> Completion Review -> Archive
 ```
 
+`ISSUE_OK` does not by itself grant approval. Approval comes from intent:
+
+- an explicit bounded implementation Q request grants
+  `GRANTED AT Q CREATION` through Completion Review;
+- a draft-only request remains `DRAFT ONLY` and prohibits implementation;
+- ambiguous intent requires clarification or `SCW_REQUIRED`.
+
+The Q must record Status, Approval State, Approval Basis, Authorized Flow, and
+whether an additional approval phrase is required. Commit, Push, Tag, Release,
+Registry mutation, external effects, and scope expansion remain separate.
+
 Capability availability never grants authority. `FULL` Mutation Authority is
 bounded and does not authorize unrestricted destructive operations. Material
 repository-state or scope changes invalidate the applicable approval. See

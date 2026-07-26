@@ -473,6 +473,11 @@ Do not add one-off request details to templates. Add only reusable structure.
 
 ## AI Repository Index Update Gate
 
+`Q_TEMPLATE.md` supports both `APPROVED FOR IMPLEMENTATION` and `DRAFT ONLY`.
+Use the user's explicit creation intent to populate Approval State and never
+promote Q implementation approval into Commit, Push, Tag, Release, Registry, or
+external-effect authority.
+
 GDS-QUALITY-005 adds a stronger completion gate for AI Repository Index freshness.
 
 If a Q changes index-target Knowledge Assets, the Q and Completion Report templates must require:

@@ -833,6 +833,12 @@ Completion Checklist は Startup Checklist の対になる終了時ゲートで�
 
 ## Pre-Response Verification Gate
 
+Bounded implementation Q creation uses
+`docs/standards/q_creation_implementation_approval_standard.md`. An explicit
+request to create and proceed with a Q grants implementation authority through
+Completion Review; repository actions and external effects remain separately
+approved.
+
 AI が最終回答を出す直前に、成果物、検証結果、repository scope、出力形式、
 Human Approval boundary、Commit / Push 状態が回答内容と一致しているか確認します。
 

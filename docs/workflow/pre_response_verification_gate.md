@@ -41,6 +41,11 @@ Artifact Generation / Documentation Update
 - Download link or artifact path format correct, when required.
 - Revision-first policy respected.
 - Human Approval boundary respected.
+- Q creation intent classification and Approval Metadata are consistent.
+- Approved-at-creation implementation authority is not mistaken for Commit,
+  Push, Tag, Release, Registry, cross-repository, or external-effect authority.
+- A valid approved-at-creation Q is not blocked solely for lack of a repeated
+  approval phrase.
 - Commit / Push boundary respected.
 - Execution Authority Registry checked when Approval Request, execution,
   mutation, delegation, or external side effect is being recommended.

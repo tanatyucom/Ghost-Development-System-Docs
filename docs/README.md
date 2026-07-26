@@ -259,6 +259,10 @@ Reference points:
 - Command Center: `docs/architecture/command_center_architecture.md`
 - Completion Report Workflow: `docs/workflow/completion_report_workflow.md`
 - Pre-Response Verification Gate: `docs/workflow/pre_response_verification_gate.md`
+- Q Creation Implementation Approval Standard:
+  `docs/standards/q_creation_implementation_approval_standard.md`
+- Q Creation Implementation Approval Standard:
+  `docs/standards/q_creation_implementation_approval_standard.md`
 
 Core boundary:
 

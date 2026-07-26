@@ -1,6 +1,6 @@
 # Draft Q Generation Standard
 
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Adopted
 
 ## Inputs
@@ -20,7 +20,12 @@ Generator Metadata. Unknown critical fields remain explicit and block approval.
 
 Required: generator version, template version, generated time, source
 provenance, inherited/generated/corrected/missing/invalidated fields, warnings,
-draft status, and `execution_authority: NONE`.
+intent classification, approval state, and approval basis.
+
+For `DRAFT_ONLY`, record `execution_authority: NONE`. For a bounded Q created
+from an explicit implementation-oriented Q request, record
+`APPROVED FOR IMPLEMENTATION`, `GRANTED AT Q CREATION`, and the user request as
+the durable approval basis. This authority ends at Completion Review.
 
 ## Question Rule
 
@@ -31,5 +36,8 @@ free-text option, and blocking state.
 
 ## Guarantee
 
-Generation never approves, executes, commits, pushes, activates a Planned
-repository, elevates authority, or guesses critical input.
+Generation never infers approval from ambiguous or draft-only intent and never
+approves Commit, Push, Tag, Release, Registry mutation, cross-repository
+mutation, or scope expansion. An explicit request to create and proceed with a
+bounded implementation Q grants implementation authority only as defined by
+`q_creation_implementation_approval_standard.md`.

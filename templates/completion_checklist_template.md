@@ -180,6 +180,11 @@ Required sections checked:
 
 ## Commit / Tag / Release
 
+- Q implementation approval source:
+- Approved-at-creation metadata validated:
+- Q implementation authority ended at Completion Review:
+- Implementation approval kept separate from repository-action authority:
+
 - Commit Required:
 - Commit Executed:
 - Commit Hash:

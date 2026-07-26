@@ -44,6 +44,10 @@ Verification
 - Title:
 - Version:
 - Status:
+- Approval State: `<GRANTED AT Q CREATION / NOT GRANTED>`
+- Approval Basis: `<explicit implementation Q request / none>`
+- Additional Approval Phrase Required: `<NO / YES>`
+- Authorized Flow: `<Startup -> Implementation -> Validation -> Documentation -> Completion Review -> STOP / DRAFT ONLY>`
 - Priority: `<Critical / High / Medium / Low>`
 - Risk: `<SAFE / NORMAL / HIGH / CRITICAL>`
 - Category:
@@ -139,8 +143,20 @@ Q_GG-STEAM-OCR-003_human_review_gate_clearance_JP.md
 使用できるStatus:
 
 ```text
-Draft / Approved / In Progress / Review / Completed / Archived / Rejected
+DRAFT ONLY / APPROVED FOR IMPLEMENTATION / In Progress / Review / Completed / Archived / Rejected
 ```
+
+Intent rules:
+
+- explicit bounded implementation Q request: `APPROVED FOR IMPLEMENTATION`,
+  `GRANTED AT Q CREATION`, additional phrase `NO`;
+- explicit draft/review-only or no-implementation request: `DRAFT ONLY`,
+  `NOT GRANTED`, additional approval `YES`;
+- ambiguous intent: clarification or `SCW_REQUIRED`.
+
+Approval at creation ends at Completion Review and does not authorize Commit,
+Push, Tag, Release, Registry mutation, cross-repository mutation, external
+effects, or scope expansion.
 
 推奨folder:
 

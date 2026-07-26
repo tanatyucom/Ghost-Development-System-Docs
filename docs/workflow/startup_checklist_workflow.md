@@ -155,6 +155,19 @@ Target Project に Project Profile がある場合は、Q 実行前に読みま�
 
 ### Q / Artifact Confirmation
 
+For Q execution, confirm Approval Metadata before treating a repeated phrase as
+a missing prerequisite:
+
+- `APPROVED FOR IMPLEMENTATION` plus `GRANTED AT Q CREATION` permits Startup
+  through Completion Review within the bounded Q scope;
+- `DRAFT ONLY` prohibits implementation;
+- missing or inconsistent metadata requires clarification or SCW;
+- the absence of a later repeated approval phrase is not an SCW reason for a
+  valid approved-at-creation Q.
+
+Commit, Push, Tag, Release, Registry mutation, external effects, and expanded
+scope remain separately governed.
+
 確認する項目:
 
 - Q が Artifact First 対象か。

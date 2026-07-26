@@ -203,6 +203,17 @@ git status --short --untracked-files=all
 Safe Commit Set must match Changed Files, or explain every exclusion.
 ```
 
+## Q Implementation Approval
+
+- Q implementation approval: Granted at Q creation / Separately granted / Not granted / Not applicable
+- Approval basis:
+- Additional implementation approval phrase required:
+- Commit authority: Separately approved / Not granted / Not applicable
+- Push authority: Separately approved / Not granted / Not applicable
+- Tag / Release authority: Separately approved / Not granted / Not applicable
+- Registry mutation authority: Separately approved / Not granted / Not applicable
+- Scope expansion authority: Separately approved / Not granted / Not applicable
+
 ## Execution Status
 
 Use `docs/standards/repository_action_status_and_recommendation_model.md` for
