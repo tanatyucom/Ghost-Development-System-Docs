@@ -122,6 +122,13 @@ Record:
 
 If the Q says `Do not commit`, the report must say `Commit executed: No`.
 
+When the Completion Criteria names an execution subject, the report must also
+name the actual executor. Codex execution, manual user execution, instruction
+preparation, and ChatGPT verification must not be reported as direct ChatGPT
+execution. Use `INCOMPLETE` or `BLOCKED_BY_EXECUTION_SURFACE` when the required
+production path has not run. See
+`../standards/codex-non-substitution-and-fallback-disclosure.md`.
+
 ## Project Edit Status Rule
 
 The report must state whether target and non-target projects were edited.

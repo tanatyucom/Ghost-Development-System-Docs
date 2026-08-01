@@ -52,6 +52,20 @@
 - Minimum Successful Flow:
 - Explicit Non-Goals:
 - Active Trust Profile: `<PERSONAL_LOCAL / ENTERPRISE_SHARED / other defined profile>`
+- Required Execution Subject: `<CHATGPT / CODEX / OTHER / NOT_APPLICABLE>`
+- Execution Subject Fallback: `<PROHIBITED / SEPARATE_EXPLICIT_APPROVAL / NOT_APPLICABLE>`
+- Fallback Approval State: `<APPROVED / NOT_APPROVED / NOT_REQUIRED>`
+
+Effect approval does not approve a change of execution subject. Apply
+`docs/standards/codex-non-substitution-and-fallback-disclosure.md` when the
+required executor or no-manual-transfer UX is part of the goal.
+- Required Execution Subject: `<CHATGPT / CODEX / OTHER / NOT_APPLICABLE>`
+- Execution Subject Fallback: `<PROHIBITED / SEPARATE_EXPLICIT_APPROVAL / NOT_APPLICABLE>`
+- Fallback Approval State: `<APPROVED / NOT_APPROVED / NOT_REQUIRED>`
+
+Effect approval does not approve a change of execution subject. Apply
+`docs/standards/codex-non-substitution-and-fallback-disclosure.md` when the
+required executor or no-manual-transfer UX is part of the goal.
 
 ## Complexity Budget
 

@@ -102,6 +102,10 @@ Using Codex as an internal executor is allowed; requiring the user to relay an
 approval from ChatGPT to Codex is a user-visible workflow change and requires
 explicit approval before adoption.
 
+The canonical non-substitution and fallback procedure is defined in
+`codex-non-substitution-and-fallback-disclosure.md`. An execution-subject change
+is not authorized by approval of the underlying effect.
+
 ## Complexity Budget
 
 Each Q declares `COMPLEXITY_BUDGET`. The `PERSONAL_LOCAL` default is:

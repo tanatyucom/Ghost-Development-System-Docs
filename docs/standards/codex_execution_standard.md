@@ -33,6 +33,9 @@ destructive action, or make a major canonical Notion update.
 - Human reviewers own final approval for governed actions.
 - Codex may investigate, edit within approved scope, validate, review, and
   recommend. Capability does not imply authority.
+- When a User Intent Anchor names ChatGPT or another required production actor,
+  Codex must follow `codex-non-substitution-and-fallback-disclosure.md`; Codex
+  availability does not authorize silent production-executor substitution.
 
 ## Canonical Knowledge Priority
 

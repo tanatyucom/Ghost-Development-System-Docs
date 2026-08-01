@@ -45,6 +45,11 @@ are distinct units. Approval for one does not approve another. A changed commit
 set invalidates Commit approval; a changed local/remote relationship invalidates
 Push approval.
 
+When a fallback changes the execution subject, effect approval and fallback
+approval are also separate units. Approval of Commit or Push does not approve
+Codex or another non-equivalent executor. See
+`codex-non-substitution-and-fallback-disclosure.md`.
+
 ## Audit Evidence
 
 Record operation, repository, target, classification, default, risk override,

@@ -53,6 +53,11 @@ repository-state or scope changes invalidate the applicable approval. See
 `docs/standards/execution_context_standard.md` and
 `templates/q_template_validation_checklist.md`.
 
+When the User Intent Anchor names a required execution subject or prohibits
+manual transfer, the Q must record the required subject, fallback policy, and
+fallback approval independently from effect approval. Apply
+`docs/standards/codex-non-substitution-and-fallback-disclosure.md`.
+
 ## Identity
 
 Required fields:

@@ -7,7 +7,7 @@
 
 ## 要約
 
-- 生成日時: `2026-08-01T13:01:27Z`
+- 生成日時: `2026-08-01T22:39:13Z`
 - Repository: `Ghost-Development-System-Docs`
 - Overall Repository Health: `Green`
 - 通過したチェック: `12`
@@ -36,7 +36,7 @@
 
 - Status: `PASS`
 - Details:
-  - 1054 Markdown files を UTF-8 として読み取れました。
+  - 1064 Markdown files を UTF-8 として読み取れました。
 
 ### Mojibake Audit
 
@@ -54,7 +54,7 @@
 
 - Status: `PASS`
 - Details:
-  - OK: 1054 Markdown files が index に登録されています。
+  - OK: 1064 Markdown files が index に登録されています。
 
 ### GDS Health Validation
 

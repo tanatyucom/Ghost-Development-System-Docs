@@ -35,6 +35,9 @@ workflow or template.
   Intent Anchor, META-SCW precedence, prerequisite limit, self-referential
   workflow prohibition, trust-profile isolation, minimum viable governance,
   complexity budget, and Keep / Defer / Delete review.
+- `codex-non-substitution-and-fallback-disclosure.md` prohibits silent executor
+  substitution, separates effect approval from fallback approval, and preserves
+  honest completion status when the intended execution surface is unavailable.
 
 ## Contains
 
