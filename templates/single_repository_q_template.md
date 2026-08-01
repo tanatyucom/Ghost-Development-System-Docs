@@ -45,6 +45,23 @@
 
 ## Objective
 
+## User Intent Anchor
+
+- Original User Goal:
+- Expected User Experience:
+- Minimum Successful Flow:
+- Explicit Non-Goals:
+- Active Trust Profile: `<PERSONAL_LOCAL / ENTERPRISE_SHARED / other defined profile>`
+
+## Complexity Budget
+
+- New Approval Boundaries:
+- New Projection Layers:
+- New Generation-Specific Tables:
+- Consecutive Prerequisite Implementations:
+- Purpose Classification: `<DIRECTLY_ADVANCES_INTENT / OPTIONAL_ENHANCEMENT / ENTERPRISE_DEFERRED / UNRELATED / PURPOSE_DRIFT>`
+- META-SCW Check: `<PASS / PURPOSE_DRIFT / SELF_REFERENTIAL_BOOTSTRAP / COMPLEXITY_BUDGET_EXCEEDED / TRUST_PROFILE_CONTAMINATION / EXECUTION_SUBJECT_DRIFT / REPEATED_PREREQUISITE_EXPANSION / USER_CONFUSION_SIGNAL>`
+
 ## Scope
 
 ## Out Of Scope

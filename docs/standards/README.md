@@ -29,6 +29,13 @@
 This folder stores documentation standards that are broader than a single
 workflow or template.
 
+## Purpose and Complexity Control
+
+- `purpose-drift-and-workflow-complexity-control.md` defines the mandatory User
+  Intent Anchor, META-SCW precedence, prerequisite limit, self-referential
+  workflow prohibition, trust-profile isolation, minimum viable governance,
+  complexity budget, and Keep / Defer / Delete review.
+
 ## Contains
 
 - `codex_execution_standard.md`: adopted v1.1 execution contract for AI
